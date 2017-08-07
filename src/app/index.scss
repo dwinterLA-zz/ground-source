@@ -22,12 +22,19 @@ body {
   font-family: $font-brand;
 }
 
-#background-header {
+.background-header {
   width: 100%;
   height: 760px;
-  background-image: url(../images/background.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+#header-home {
+  background-image: url(../images/background.png);
+}
+
+#header-listings {
+  background-image: url(../images/listings-bg.jpg);
 }
 
 #header-logo {
@@ -64,6 +71,11 @@ body {
 #item-top {
   margin-top: -442px;
   background-color: $background-color;
+}
+
+#container-listings {
+  background-color: #4c4c4c;
+  height: 6837px;
 }
 
 .section-header {
