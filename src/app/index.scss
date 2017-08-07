@@ -5,14 +5,21 @@
 // bower:scss
 // endbower
 
+$logo-small: 16px;
+$medium-image-height: 621px;
+$col-width: 530px;
+$font-brand: Lato, sans-serif;
+$background-color: white;
+
 html {
-  font-family: 'Helvetica Light', sans-serif;
+  font-family: $font-brand;
 }
 
 body {
   background-color: #fff;
   margin: 0;
   width: 100%;
+  font-family: $font-brand;
 }
 
 #background-header {
@@ -24,20 +31,84 @@ body {
 }
 
 #header-logo {
-  position: relative;
-  left: 43%;
+  max-height: 90%;
+  max-width: 90%;
+  position: absolute;
+  top: 292px;
+  left: 0;
+  right: 0;
+  margin: auto;
   height: 30px;
-  padding-top: 334px;
 }
 
 #header-text {
-  position: relative;
-  left: 46%;
-  margin: 12px;
-  font-family: Lato, sans-serif;
+  max-height: 90%;
+  max-width: 90%;
+  position: absolute;
+  top: 336px;
+  width: 220px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-family: $font-brand;
   color: #858585;
 }
 
+#content {
+  position: absolute;
+  top: 706px;
+  width: 100%;
+}
+
+#item-top {
+  margin-top: -442px;
+  background-color: $background-color;
+}
+
+.section-header {
+  font-family: Lato, sans-serif !important;
+  color: #b4b3b3;
+  letter-spacing: 0.5px;
+  color: #858585;
+  font-size: 125%;
+}
+
+.col-content {
+  font-family: Lato, sans-serif !important;
+  color: #b4b3b3;
+  letter-spacing: 0.5px;
+  color: #858585;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.item {
+  width: $col-width;
+  margin: 16px;
+}
+
+.logo-small {
+  height: $logo-small;
+}
+
+.image-medium {
+  height: $medium-image-height;
+  width: auto;
+}
+
+@media screen and (max-width: 1130px) {
+  #content {
+    top: 1062px;
+  }
+}
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
