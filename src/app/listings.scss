@@ -1,7 +1,13 @@
-$dark-background-color: #4c4c4c;
+@import "variables.scss";
 
 #container-listings {
   background-color: $dark-background-color;
+
+	#listings-content {
+	  position: relative;
+    margin-top: -979px;
+  }
+
 	#gallery-arrow-left {
 	  width: 44%;
 	  margin-right: -5px;
@@ -32,4 +38,171 @@ $dark-background-color: #4c4c4c;
 	.gallery-info {
 	  width: 270px;
 	}
+
+	#header-listings {
+	  background-image: url(../images/listings-bg.jpg);
+	  &:after {
+	  	display: block;
+	  	content: " ";
+	  	position: absolute;
+	  	bottom: 0;
+	  	left: 0;
+	  	height: 100px;
+	  	width: 100%;
+	  	background-image: linear-gradient(to bottom, rgba($dark-background-color, 0), rgba($dark-background-color, 1));
+	  }
+  }
+
+  #header-text-listings {
+		max-width: 90%;
+	  text-align: center;
+	  font-family: $font-brand;
+	  color: $background-color;
+	  font-size: 300%;
+  }
+
+  #listings-sidebar {
+	  width: 33%;
+	  padding: 0 12px;
+  }
+
+  #listings-info {
+    width: 66%;
+    padding: 0 12px;
+  }
+
+  .sidebar-header {
+    margin: 0;
+    padding: 16px;
+    padding-bottom: 10px;
+    font-weight: lighter;
+  }
+
+  .menu-top {
+    background-image: url(../images/listings-cta-bg.jpg);
+    padding-top: 4px;
+    padding-bottom: 14px;
+  }
+
+  .menu {
+	  background-color: $primary-color;
+	  padding-bottom: 12px;
+	  font-weight: lighter;
+  }
+
+  .light-line {
+	  border-style: solid;
+	  opacity: .9;
+	  width: 90%;
+  }
+
+  .logo-upper-left {
+	  position: absolute;
+	  top: 37px;
+	  left: 37px;
+	  height: 11px;
+	  z-index: 2;
+  }
+
+  .bond-list {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  > li {
+	    padding-left: 16px;
+	    padding-top: 8px;
+	    padding-bottom: 8px;
+	    font-size: small;
+	    font-weight: lighter;
+	  }
+
+	  > hr {
+	    border-color: #c35440;
+	    opacity: .5;
+	    width: 90%;
+	    border-style: solid;
+	  }
+  }
+
+  .menu {
+	  color: $background-color;
+	  font-family: $font-brand;
+	  letter-spacing: $title-letter-spacing;
+  }
+
+  .info-text {
+	  float: left;
+	  font-weight: lighter;
+	  width: 50%;
+	}
+
+	.info-box {
+	  background-color: $primary-color;
+	  display: block;
+	  padding: 12px;
+	  color: white;
+	  overflow: hidden;
+	  margin-bottom: 24px;
+	}
+
+	.nav {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  position: absolute;
+	  z-index: 2;
+	  top: 37px;
+	  right: 37px;
+	  height: 11px;
+	  font-size: 77%;
+	  > li {
+	    display: inline;
+	    margin-right: 22px;
+	    > a {
+	      text-decoration: none;
+	      color: $primary-color;
+	      &:hover {
+	        color: white;
+	      }
+	    }
+	  }
+  }
+
+  .cool-button {
+	  display: block;
+	  margin-left: auto;
+	  margin-right: auto;
+	  padding: 14px 8px;
+	  margin: 20px 12px 12px 12px;
+	  color: #fff;
+	  border: 2px solid #fff;
+	  text-align: center;
+	  outline: none;
+	  text-decoration: none;
+	  font-size: small;
+  }
+
+  @media screen and (max-width: 1130px) {
+  #content {
+    top: 1062px;
+  }
+
+  #listings-content {
+    margin-top: -1700px;
+  }
+
+  .nav {
+    > li {
+      display: block;
+    }
+  }
+
+  #listings-sidebar {
+    width: 90%;
+  }
+
+  #listings-info {
+    width: 90%;
+  }
+}
 }
