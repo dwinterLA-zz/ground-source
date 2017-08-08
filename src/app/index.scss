@@ -220,28 +220,25 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 8px;
+  padding: 14px 8px;
   margin: 20px 12px 12px 12px;
   color: #fff;
   border: 2px solid #fff;
   text-align: center;
   outline: none;
   text-decoration: none;
-  font-size: xx-small;
+  font-size: small;
 }
 
 .info-text {
   float: left;
   font-weight: lighter;
-  width: 300px;
+  width: 50%;
 }
 
 .info-image-gallery {
+	width: 50%;
   float: right;
-}
-
-.gallery-images {
-  width: 400px;
 }
 
 .gallery-info {
