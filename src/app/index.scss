@@ -8,10 +8,10 @@
 $logo-small: 16px;
 $medium-image-height: 621px;
 $col-width: 530px;
-$col-width-wider: 600px;
+$col-width-wider: 700px;
 $font-brand: Lato, sans-serif;
 $background-color: white;
-$primary-color: #d46049
+$primary-color: #d46049;
 
 html {
   font-family: $font-brand;
@@ -96,8 +96,11 @@ body {
 }
 
 #listings-sidebar {
-  // background-color: $primary-color;
   width: 450px;
+}
+
+#listings-info {
+  width: 700px;
 }
 
 .menu-top {
@@ -197,6 +200,22 @@ body {
   text-decoration: none;
   margin-top: 12px;
   font-size: xx-small;
+}
+
+.info-text {
+  float: left;
+}
+
+.info-image-gallery {
+  float: right;
+}
+
+.gallery-images {
+  width: 400px;
+}
+
+.gallery-info {
+  width: 270px;
 }
 
 
