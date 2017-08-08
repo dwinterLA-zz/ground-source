@@ -9,9 +9,11 @@ $logo-small: 16px;
 $medium-image-height: 621px;
 $col-width: 530px;
 $col-width-wider: 700px;
-$font-brand: Lato, sans-serif;
+$font-brand: Montserrat;
 $background-color: white;
 $primary-color: #d46049;
+$title-letter-spacing: 1.3px;
+$listings-flex-height: 1500px;
 
 html {
   font-family: $font-brand;
@@ -69,14 +71,14 @@ body {
   max-width: 90%;
   position: absolute;
   top: 343px;
-  width: 302px;
+  width: 428px;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
   font-family: $font-brand;
   color: $background-color;
-  font-size: 200%;
+  font-size: 300%;
 }
 
 #content {
@@ -97,10 +99,12 @@ body {
 
 #listings-sidebar {
   width: 450px;
+  height: $listings-flex-height;
 }
 
 #listings-info {
-  width: 700px;
+  width: $col-width-wider;
+  height: $listings-flex-height;
 }
 
 .menu-top {
@@ -125,11 +129,11 @@ body {
 }
 
 #listings-content {
-  margin-top: -373px;
+  margin-top: -350px;
 }
 
 .section-header {
-  font-family: Lato, sans-serif !important;
+  font-family: $font-brand;
   color: #b4b3b3;
   letter-spacing: 0.5px;
   color: #858585;
@@ -137,7 +141,7 @@ body {
 }
 
 .col-content {
-  font-family: Lato, sans-serif !important;
+  font-family: $font-brand;
   color: #b4b3b3;
   letter-spacing: 0.5px;
   color: #858585;
@@ -183,8 +187,8 @@ body {
 
 .menu {
   color: $background-color;
-  font-family: Lato, sans-serif !important;
-  letter-spacing: 1.5px;
+  font-family: $font-brand;
+  letter-spacing: $title-letter-spacing;
 }
 
 .cool-button {
@@ -204,6 +208,7 @@ body {
 
 .info-text {
   float: left;
+  width: 300px;
 }
 
 .info-image-gallery {
@@ -218,10 +223,55 @@ body {
   width: 270px;
 }
 
+.info-box {
+  background-color: $primary-color;
+  display: block;
+  padding: 12px;
+  color: white;
+  width: 700px;
+  overflow: hidden;
+  margin: 12px;
+}
+
+.title {
+  letter-spacing: $title-letter-spacing;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 37px;
+  right: 37px;
+  height: 11px;
+  font-size: 77%;
+  > li {
+    display: inline;
+    margin-right: 22px;
+    > a {
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+}
+
 
 @media screen and (max-width: 1130px) {
   #content {
     top: 1062px;
+  }
+
+  #listings-content {
+    margin-top: -300px;
+  }
+
+  #listings-info {
+    height: inherit;
+  }
+
+  #listings-sidebar {
+    height: inherit;
   }
 }
 /**
