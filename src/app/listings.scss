@@ -138,6 +138,7 @@
     float: left;
     font-weight: lighter;
     width: 50%;
+    padding-right: 15px;
   }
 
   .info-box {
@@ -147,6 +148,9 @@
     color: white;
     overflow: hidden;
     margin-bottom: 24px;
+    h2:first-child {
+      margin-top: 0;
+    }
   }
 
   .cool-button {
