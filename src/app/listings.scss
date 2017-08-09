@@ -60,10 +60,11 @@
 
   #header-text-listings {
     max-width: 90%;
-    text-align: center;
+    text-align: left;
     font-family: $font-brand;
     color: $background-color;
     font-size: 6em;
+    margin-left: 44px;
   }
 
   #listings-sidebar {
@@ -169,6 +170,7 @@
 
     #listings-content {
       margin-top: -1700px;
+      margin-top: -110vh;
     }
 
     #listings-sidebar {
