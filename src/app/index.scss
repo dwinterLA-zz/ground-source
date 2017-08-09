@@ -20,6 +20,10 @@ body {
   font-family: $font-brand;
 }
 
+strong, b {
+  font-weight: 700
+}
+
 .background-header {
   position: relative;
   width: 100%;
