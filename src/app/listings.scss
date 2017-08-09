@@ -1,6 +1,7 @@
 @import "variables.scss";
 
 #container-listings {
+  font-size: 0.8vw;
   background-color: $dark-background-color;
 
   strong {
@@ -62,7 +63,7 @@
     text-align: center;
     font-family: $font-brand;
     color: $background-color;
-    font-size: 4em;
+    font-size: 6em;
   }
 
   #listings-sidebar {
@@ -101,21 +102,13 @@
     opacity: .9;
   }
 
-  .logo-upper-left {
-    position: absolute;
-    top: 37px;
-    left: 37px;
-    height: 11px;
-    z-index: 2;
-  }
-
   .bond-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
     > li {
       padding: 14px;
-      font-size: small;
+      font-size: 1em;
       font-weight: lighter;
       opacity: .8;
     }
@@ -162,14 +155,14 @@
     text-align: center;
     outline: none;
     text-decoration: none;
-    font-size: small;
+    font-size: 1em;
     &:hover {
       color: $primary-color;
       background-color: white;
     }
   }
 
-  @media screen and (max-width: 1130px) {
+  @media screen and (max-width: 768px) {
     #content {
       top: 1062px;
     }
