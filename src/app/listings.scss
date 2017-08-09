@@ -154,29 +154,6 @@
 	  margin-bottom: 24px;
 	}
 
-	.nav {
-	  list-style-type: none;
-	  margin: 0;
-	  padding: 0;
-	  position: absolute;
-	  z-index: 2;
-	  top: 37px;
-	  right: 37px;
-	  height: 11px;
-	  font-size: 77%;
-	  > li {
-	    display: inline;
-	    margin-right: 22px;
-	    > a {
-	      text-decoration: none;
-	      color: $primary-color;
-	      &:hover {
-	        color: white;
-	      }
-	    }
-	  }
-  }
-
   .cool-button {
 	  display: block;
 	  margin-left: auto;
@@ -192,26 +169,26 @@
   }
 
   @media screen and (max-width: 1130px) {
-  #content {
-    top: 1062px;
-  }
+	  #content {
+	    top: 1062px;
+	  }
 
-  #listings-content {
-    margin-top: -1700px;
-  }
+	  #listings-content {
+	    margin-top: -1700px;
+	  }
 
-  .nav {
-    > li {
-      display: block;
-    }
-  }
+	  .nav {
+	    > li {
+	      display: block;
+	    }
+	  }
 
-  #listings-sidebar {
-    width: 90%;
-  }
+	  #listings-sidebar {
+	    width: 90%;
+	  }
 
-  #listings-info {
-    width: 90%;
+	  #listings-info {
+	    width: 90%;
+	  }
   }
-}
 }
