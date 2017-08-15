@@ -46,42 +46,42 @@
       padding-top: 5em;
       text-align: center;
       .agent {
-	position: relative;
-	text-align: center;
-	margin: 0.8em;
-	box-shadow: 0px 0px 2em gainsboro;
-	width: 15%;
-	display: inline-block;
-	.bio-image {
-	  position: relative;
-	  img { width: 100%; }
-	  .image-title {
-	    font-size: 1.2em;
-	    span {font-weight: bold;}
-	    color: white;
-	    position: absolute;
-	    bottom: 1em;
-	    width: 100%;
-	    text-align: left;
-	    margin-left: 1em
-	  }
-	}
-	.short-bio {
-	  margin: 1em 1.5em;
-	  line-height: 1.8;
-	}
-	.bio-button {
-	  display: inline-block;
-	  color: $primary-color;
-	  border: 1px solid $primary-color;
-	  padding: 0.4em 1em;
-	  border-radius: 1em;
-	  margin-bottom: 1em;
-	}
-	.bio-contact {
-	  margin-bottom: 1em;
-	  line-height: 1.8;
-	}
+				position: relative;
+				text-align: center;
+				margin: 0.8em;
+				box-shadow: 0px 0px 2em gainsboro;
+				width: 15%;
+				display: inline-block;
+				.bio-image {
+				  position: relative;
+				  img { width: 100%; }
+				  .image-title {
+				    font-size: 1.2em;
+				    span {font-weight: bold;}
+				    color: white;
+				    position: absolute;
+				    bottom: 1em;
+				    width: 100%;
+				    text-align: left;
+				    margin-left: 1em
+				  }
+				}
+				.short-bio {
+				  margin: 1em 1.5em;
+				  line-height: 1.8;
+				}
+				.bio-button {
+				  display: inline-block;
+				  color: $primary-color;
+				  border: 1px solid $primary-color;
+				  padding: 0.4em 1em;
+				  border-radius: 1em;
+				  margin-bottom: 1em;
+				}
+				.bio-contact {
+				  margin-bottom: 1em;
+				  line-height: 1.8;
+				}
       }
     }
   }
@@ -141,7 +141,7 @@
       }
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-small) {
     #header-about {
       .header-image {
         display: none;
