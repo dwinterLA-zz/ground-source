@@ -24,6 +24,26 @@ strong, b {
   font-weight: 700
 }
 
+.left {
+  float: left;
+  width: 49%;
+  padding-right: 15px;
+}
+
+.right {
+  float: right;
+  width: 49%;
+  padding-left: 15px;
+}
+
+.property-slideshow {
+  padding-top: 12px;
+}
+
+.preview-contents {
+  padding: 8px;
+}
+
 #home-image {
   vertical-align: middle;
 }
@@ -108,12 +128,32 @@ strong, b {
   }
 }
 
-.col-45 {
+.col-medium {
   width: 45%;
   font-family: $font-brand;
   color: #b4b3b3;
   letter-spacing: 0.5px;
   color: #858585;
+  overflow: hidden;
+}
+
+.property-preview {
+  background-image: url(../images/carousel/property-preview-background.jpg);
+  width: 30%;
+  height: 350px;
+  margin: 22px;
+  overflow: hidden;
+  font-family: $font-brand;
+  font-weight: lighter;
+}
+
+.preview-header {
+  height: 50%;
+  width: 100%;
+}
+
+.padding-80 {
+  padding: 80px;
 }
 
 #header-home {
@@ -123,7 +163,7 @@ strong, b {
 }
 
 #header-content {
-  padding-top: 330px;
+  padding-top: 17%;
 }
 
 #header-logo {
@@ -132,7 +172,7 @@ strong, b {
 
 .scroll-arrow {
   width: 34px;
-  padding-top: 250px;
+  padding-top: 5%;
 }
 
 #header-text {
@@ -154,7 +194,7 @@ strong, b {
   font-size: 125%;
 }
 
-.container {
+.flexbox {
   display: flex;
   flex-direction: row;
   flex-flow: row wrap;
@@ -184,6 +224,14 @@ strong, b {
 .img-responsive {
 	display: block;
 	max-width: 100%;
+}
+
+.horizontal-break {
+  background-color: $primary-color-darker;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 20px 12px;
 }
 
 #footer {
@@ -221,6 +269,24 @@ strong, b {
 }
 
 @media screen and (max-width: $breakpoint-small) {
+  #header-home {
+   background-color: white;
+   background-image: none;
+   height: 250px;
+  }
+
+  .col-medium {
+    width: 80%;
+  }
+
+  .padding-80 {
+    padding: 10px;
+  }
+
+  .header-overlap {
+    margin-top: 0;
+  }
+
   .small-hidden {
     display: none;
   }
@@ -252,6 +318,9 @@ strong, b {
     width: 2em;
   }
 
+  .property-preview {
+    width: 90%;
+  }
 }
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
