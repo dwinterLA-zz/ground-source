@@ -28,6 +28,11 @@ strong, b {
   vertical-align: middle;
 }
 
+.header-overlap {
+  margin-top: -35px;
+  background-color: white;
+}
+
 .logo-upper-left {
   position: absolute;
   top: 15px;
@@ -103,16 +108,13 @@ strong, b {
   }
 }
 
-
-
-// .background-header {
-//   position: relative;
-//   width: 100%;
-//   height: 155vh;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: center center;
-// }
+.col-45 {
+  width: 45%;
+  font-family: $font-brand;
+  color: #b4b3b3;
+  letter-spacing: 0.5px;
+  color: #858585;
+}
 
 #header-home {
   background-image: url(../images/background.png);
@@ -125,25 +127,18 @@ strong, b {
 }
 
 #header-logo {
-  max-height: 90%;
-  max-width: 90%;
-  position: absolute;
-  top: 292px;
-  left: 0;
-  right: 0;
-  margin: auto;
   height: 30px;
+}
+
+.scroll-arrow {
+  width: 34px;
+  padding-top: 250px;
 }
 
 #header-text {
   font-family: $font-brand;
   color: #858585;
-}
-
-#content {
-  position: absolute;
-  top: 706px;
-  width: 100%;
+  padding-top: 8px;
 }
 
 #item-top {
@@ -159,18 +154,12 @@ strong, b {
   font-size: 125%;
 }
 
-.col-content {
-  font-family: $font-brand;
-  color: #b4b3b3;
-  letter-spacing: 0.5px;
-  color: #858585;
-}
-
 .container {
   display: flex;
   flex-direction: row;
   flex-flow: row wrap;
   justify-content: center;
+  margin: 0 auto;
   max-width: 1800px;
 }
 
@@ -185,7 +174,6 @@ strong, b {
 
 .image-medium {
   height: $medium-image-height;
-  width: auto;
 }
 
 .title {
