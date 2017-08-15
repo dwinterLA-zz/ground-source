@@ -44,6 +44,28 @@ strong, b {
   padding: 8px;
 }
 
+.preview-map {
+  width: 230px;
+  position: absolute;
+  margin-top: -30px;
+
+}
+
+
+.preview-title {
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  margin-top: -65px;
+  margin-left: 31px;
+}
+
+.preview-text {
+  font-size: .75em;
+  font-weight: lighter;
+  color: #858585;
+}
+
 #home-image {
   vertical-align: middle;
 }
