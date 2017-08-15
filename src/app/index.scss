@@ -235,7 +235,11 @@ strong, b {
   }
 }
 
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: $breakpoint-small) {
+  .small-hidden {
+    display: none;
+  }
+
   #content {
     top: 1062px;
   }
@@ -257,6 +261,12 @@ strong, b {
   #listings-info {
     width: 90%;
   }
+
+  .ham-menu {
+    height: 2em;
+    width: 2em;
+  }
+
 }
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
