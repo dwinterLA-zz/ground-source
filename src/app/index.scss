@@ -24,10 +24,34 @@ strong, b {
   font-weight: 700
 }
 
+a {
+  color: inherit;
+}
+
 #contact-us {
   background-image: url(../images/contact-map.jpg);
   width: 100%;
   height: 500px;
+  color: $grey;
+  .contact-content {
+    width: 42%;
+    position: relative;
+    top: 85px;
+    left: 297px;
+    .contact-header {
+      font-size: 2.2em;
+      background-color: white;
+      padding: 30px;
+    }
+    .contact-body {
+      background: rgba(255, 255, 255, 0.6);
+      padding: 53px;
+      > ul {
+        list-style-type: none;
+        margin: 0;
+      }
+    }
+  }
 }
 
 .left {
@@ -378,6 +402,11 @@ strong, b {
       a {padding: 0.5em;}
     }
   }
+}
+
+.icon-small {
+  width: 38px;
+  margin-right: 15px;
 }
 
 @media screen and (max-width: $breakpoint-small) {
