@@ -51,6 +51,15 @@ strong, b {
 
 }
 
+.property-preview-2 {
+  // why wont this work?
+  &:before {
+    content: url(../images/carousel/lefdddddt.png)
+  }
+  &:after {
+    content: url(../images/carousel/right.png)
+  }
+}
 
 .preview-title {
   color: white;
@@ -161,12 +170,18 @@ strong, b {
 
 .property-preview {
   background-image: url(../images/carousel/property-preview-background.jpg);
-  width: 30%;
+  width: 28%;
   height: 350px;
   margin: 22px;
   overflow: hidden;
   font-family: $font-brand;
   font-weight: lighter;
+  margin: 25px 42px;
+  opacity: .4;
+  &.selected {
+    transform: scale(1.3);
+    opacity: 1;
+  }
 }
 
 .preview-header {
@@ -342,6 +357,10 @@ strong, b {
 
   .property-preview {
     width: 90%;
+    opacity: 1;
+    &.selected {
+      transform: scale(1);
+    }
   }
 }
 /**
