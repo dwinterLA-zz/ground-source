@@ -63,7 +63,7 @@ a {
 .right {
   float: right;
   width: 49%;
-  padding-left: 15px;
+  padding-left: 1px;
 }
 
 .property-slideshow {
@@ -285,6 +285,7 @@ a {
 
 .logo-small {
   height: $logo-small;
+  margin-bottom: 4px;
 }
 
 .image-medium {
@@ -417,6 +418,16 @@ a {
   width: 300px;
 }
 
+@media screen and (max-width: $breakpoint-medium) {
+  .property-preview {
+    width: 90%;
+    opacity: 1;
+    position: relative;
+    &.selected {
+      transform: scale(1);
+    }
+  }
+}
 @media screen and (max-width: $breakpoint-small) {
   // hidden elements
   &.listings-arrow {
@@ -474,15 +485,6 @@ a {
   .ham-menu {
     height: 2em;
     width: 2em;
-  }
-
-  .property-preview {
-    width: 90%;
-    opacity: 1;
-    position: relative;
-    &.selected {
-      transform: scale(1);
-    }
   }
 
   .services-info {
