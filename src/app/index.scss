@@ -360,6 +360,7 @@ a {
   float: left;
   width: 50%;
   height: 300px;
+  overflow: scroll;
   background-color: $primary-color-darker-darker;
 }
 
@@ -367,6 +368,7 @@ a {
   float: right;
   width: 50%;
   height: 300px;
+  overflow: scroll;
   background-color: $primary-color-lighter;
 }
 
@@ -472,7 +474,7 @@ a {
   }
 
   .services-info {
-    width: 90%;
+    width: 100%;
   }
 }
 /**
