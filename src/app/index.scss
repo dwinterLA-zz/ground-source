@@ -291,8 +291,12 @@ strong, b {
 .tennant-rep {
   float: left;
   width: 50%;
-  height: 70%;
+  height: 66%;
   background-color: $primary-color-darker-darker;
+}
+
+.learn-more {
+  max-width: 35%;
 }
 
 .padded-text {
@@ -303,7 +307,7 @@ strong, b {
 .landlord-rep {
   float: right;
   width: 50%;
-  height: 70%;
+  height: 66%;
   background-color: $primary-color-lighter;
 }
 
