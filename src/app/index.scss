@@ -419,10 +419,16 @@ a {
 }
 
 @media screen and (max-width: $breakpoint-medium) {
+  &.listings-arrow {
+    display: none;
+  }
+
   .property-preview {
-    width: 90%;
+    width: 69%;
     opacity: 1;
     position: relative;
+    font-size: 1.3em;
+    overflow: scroll;
     &.selected {
       transform: scale(1);
     }
@@ -430,16 +436,17 @@ a {
 }
 @media screen and (max-width: $breakpoint-small) {
   // hidden elements
-  &.listings-arrow {
-    display: none;
-  }
-
   .small-hidden {
     display: none;
   }
 
   .services-img {
     display: none;
+  }
+
+  .property-preview {
+    width: 90%;
+    font-size: 1em;
   }
 
   #header-home {
