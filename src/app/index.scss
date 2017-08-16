@@ -69,6 +69,17 @@ strong, b {
   margin-left: 31px;
 }
 
+.medium-white-text {
+  color: white;
+  font-size: 1.5em;
+}
+
+.medium-white-text {
+  color: white;
+  font-size: 1.2em;
+  opacity: .95;
+}
+
 .preview-text {
   font-size: .75em;
   font-weight: lighter;
@@ -240,6 +251,12 @@ strong, b {
   max-width: 1800px;
 }
 
+.flexbox-full {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+
 .item {
   width: $col-width;
   margin: 16px;
@@ -269,6 +286,54 @@ strong, b {
   text-align: center;
   font-size: 1.5em;
   padding: 20px 12px;
+}
+
+.tennant-rep {
+  float: left;
+  width: 50%;
+  height: 70%;
+  background-color: $primary-color-darker-darker;
+}
+
+.padded-text {
+  padding: 25px;
+  opacity: .9;
+}
+
+.landlord-rep {
+  float: right;
+  width: 50%;
+  height: 70%;
+  background-color: $primary-color-lighter;
+}
+
+.services-img {
+  width: 42%;
+  > img {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+.services-info {
+  width: 58%;
+  color: white;
+  > .flexbox {
+    height: 70%;
+  }
+  > .header {
+    height: 30%;
+    padding-top: 45px;
+    background-color: $primary-color;
+    font-size: 2em;
+    > p {
+      padding: 16px;
+      margin: 0;
+      font-size: .75em;
+      opacity: .82;
+      line-spacing: 1.5;
+    }
+  }
 }
 
 #footer {
