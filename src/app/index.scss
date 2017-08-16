@@ -476,6 +476,27 @@ a {
   .services-info {
     width: 100%;
   }
+
+  #contact-us {
+    background-color: white;
+    background-image: none;
+    height: 340px;
+    .contact-content {
+      width: 100%;
+      top: 0;
+      left: 0;
+      font-size: 1.4em;
+      .contact-header {
+        text-align: center;
+      }
+      .contact-body {
+        padding: 0;
+        > ul {
+          padding-left: 50px;
+        }
+      }
+    }
+  }
 }
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
