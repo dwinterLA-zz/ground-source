@@ -9,132 +9,181 @@
 
     img.image-left {
       display: inline-block;
-      width: 50%;
+      width: 100%;
+    }
+
+    .header-image {
+      width: 40%;
     }
 
     .description {
       display: inline-block;
-      width: 40%;
+      width: 45%;
       vertical-align: bottom;
       padding: 0 2em;
 
       .head-title {
-	font-size: 2.3em;
-	span {
-	  font-weight: bold;
-	  color: $primary-color;
-	}
+	      font-size: 2.3em;
+	      text-align: center;
+	      span {
+	        font-weight: bold;
+	        color: $primary-color;
+ 	      }
       }
 
       .head-subtitle {
-	font-size: 1.6em;
-	&.top {
-	  color: $primary-color;
-	  font-weight: bold;
-	  margin-top: 2em;
-	}
-	&.bottom { margin-bottom: 2em; }
+			  font-size: 1.6em;
+				&.top {
+	  		  color: $primary-color;
+	  		  font-weight: bold;
+	  		  margin-top: 2em;
+				}
+				&.bottom { margin-bottom: 2em; }
       }
 
       p { margin: 0; }
     }
-
-    .agents {
-      padding-top: 5em;
-      text-align: center;
-      .agent {
-	position: relative;
-	text-align: center;
-	margin: 0.8em;
-	box-shadow: 0px 0px 2em gainsboro;
-	width: 15%;
-	display: inline-block;
-	.bio-image {
-	  position: relative;
-	  img { width: 100%; }
-	  .image-title {
-	    font-size: 1.2em;
-	    span {font-weight: bold;}
-	    color: white;
-	    position: absolute;
-	    bottom: 1em;
-	    width: 100%;
-	    text-align: left;
-	    margin-left: 1em
-	  }
-	}
-	.short-bio {
-	  margin: 1em 1.5em;
-	  line-height: 1.8;
-	}
-	.bio-button {
-	  display: inline-block;
-	  color: $primary-color;
-	  border: 1px solid $primary-color;
-	  padding: 0.4em 1em;
-	  border-radius: 1em;
-	  margin-bottom: 1em;
-	}
-	.bio-contact {
-	  margin-bottom: 1em;
-	  line-height: 1.8;
-	}
-      }
-    }
+  }
+  .agents {
+    padding-top: 5em;
+    text-align: center;
+  }
+  .agent {
+    position: relative;
+    text-align: center;
+    margin: 0.8em;
+    box-shadow: 0px 0px 2em gainsboro;
+    width: 25%;
+    display: inline-block;
+    .bio-image {
+      position: relative;
+		  img { width: 100%; }
+		  .image-title {
+				font-size: 1.2em;
+				span {font-weight: bold;}
+				color: white;
+				position: absolute;
+				bottom: 1em;
+				width: 100%;
+				text-align: left;
+				margin-left: 1em
+		  }
+		}
+		.short-bio {
+		  margin: 1em 1.5em;
+		  line-height: 1.8;
+		}
+		.bio-button {
+		  display: inline-block;
+		  color: $primary-color;
+		  border: 1px solid $primary-color;
+		  padding: 0.4em 1em;
+		  border-radius: 1em;
+		  margin-bottom: 1em;
+		}
+		.bio-contact {
+		  margin-bottom: 1em;
+		  line-height: 1.8;
+		}
   }
 
-  #about-content {
-    .specialty {
-      background: white;
-      margin-top: 3em;
-      background: white;
-      width: 100%;
+  .section-header {
+		padding: 3em 0 6em;
+		background: $primary-color;
+		text-align: center;
+		color: white;
+		.title {
+		  font-size: 2em;
+		  font-weight: bold;
+		}
+		.subtitle {
+		  width: 58%;
+		  margin: 0 auto;
+		  font-size: 1.2em;
+		}
+  }
 
-      .section-header {
-	padding: 3em 0 6em;
-	background: $primary-color;
-	text-align: center;
-	color: white;
-	.title {
-	  font-size: 2em;
-	  font-weight: bold;
-	}
-	.subtitle {
-	  width: 58%;
-	  margin: 0 auto;
-	  font-size: 1.2em;
-	}
+  .specialty {
+	  background: white;
+	  margin-top: 3em;
+	  background: white;
+	  width: 100%;
+  }
+
+  .section-content {
+		padding-bottom: 8em;
+		.description {
+		  display: inline-block;
+		  padding-top: 2em;
+		  padding-left: 23%;
+		  text-align: left;
+		  font-size: 1.4em;
+		  width: 40%;
+		  ul {
+		    list-style: none;
+		    padding-left: 0;
+		    li { line-height: 1.6; }
+		    li::before {
+		      content: "• ";
+		      font-size: 1.5em;
+		      line-height: 0;
+		      color: $primary-color;
+		    }
+		  }
+	  }
+	  .gmap-container {
+	    width: 55%;
+	  }
+		.gmap {
+		  margin-top: -4%;
+		  float: right;
+		  width: 100%;
+		  display: inline-block;
+		  vertical-align: top;
+		  box-shadow: 4px 4px 1em gainsboro;
+		}
+  }
+  @media screen and (max-width: $breakpoint-small) {
+    .ham-menu {
+      background-size: 94%;
+    }
+    #header-about {
+      .header-image {
+        display: none;
       }
 
-      .section-content {
-	padding-bottom: 8em;
-	.description {
-	  display: inline-block;
-	  padding-top: 2em;
-	  padding-left: 23%;
-	  text-align: left;
-	  font-size: 1.4em;
-	  width: 40%;
-	  ul {
-	    list-style: none;
-	    padding-left: 0;
-	    li { line-height: 1.6; }
-	    li::before {
-	      content: "• ";
-	      font-size: 1.5em;
-	      line-height: 0;
-	      color: $primary-color;
-	    }
-	  }
-	}
-	img.gmap {
-	  margin-top: -4%;
-	  float: right;
-	  width: 55%;
-	  display: inline-block;
-	  vertical-align: top;
-	  box-shadow: 4px 4px 1em gainsboro;
-	}
+      .description {
+        width: 90%;
+        font-size: 3em;
+      }
+    }
+
+    .agent {
+      width: 90%;
+    }
+    .section-content {
+    	.description {
+    	  width: 100%;
+    	  padding: 8px;
+    	  text-align: center;
+    	  font-size: 3em;
+    	  ul {
+		    list-style: none;
+		    padding-left: 0;
+		    li {
+		      line-height: 3;
+		      text-align: center;
+		    }
+		    li::before {
+		      content: "";
+		      font-size: 1.5em;
+		      line-height: 0;
+		      color: $primary-color;
+		    }
+		  }
+    	}
+      .gmap-container {
+        width: 90%;
       }
     }
   }
