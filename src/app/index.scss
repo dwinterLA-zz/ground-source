@@ -506,14 +506,15 @@ a {
       width: 100%;
       top: 0;
       left: 0;
-      font-size: 1.4em;
+      font-size: 1.2em;
       .contact-header {
         text-align: center;
       }
       .contact-body {
         padding: 0;
         > ul {
-          padding-left: 50px;
+          padding-left: 20px;
+          font-size: .75em;
         }
       }
     }
