@@ -54,6 +54,21 @@ a {
   }
 }
 
+#review-navigator {
+  div {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    color: $primary-color;
+    display: inline-block;
+    &.selected {
+      background-color: $primary-color;
+    }
+  }
+}
+
 .left {
   float: left;
   width: 49%;
@@ -303,10 +318,11 @@ a {
 }
 
 .horizontal-break {
-  background-color: $primary-color-darker;
+  background: linear-gradient(to bottom, #fbf9fa, #d4d2d3);
   color: white;
   text-align: center;
   font-size: 1.5em;
+  height: 300px;
   padding: 20px 12px;
 }
 
