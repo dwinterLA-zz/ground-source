@@ -18,7 +18,7 @@
     }
 
     .description {
-      width: 45%;
+      width: 40%;
       vertical-align: bottom;
       padding: 0 2em;
 
@@ -94,11 +94,6 @@
 		  font-size: 2em;
 		  font-weight: bold;
 		}
-		.subtitle {
-		  width: 58%;
-		  margin: 0 auto;
-		  font-size: 1.2em;
-		}
   }
 
   .specialty {
@@ -109,38 +104,32 @@
   }
 
   .section-content {
-		padding-bottom: 8em;
-		.description {
-		  padding-top: 2em;
-		  padding-left: 23%;
-		  text-align: left;
-		  font-size: 1.4em;
-		  width: 40%;
-		  ul {
-		    list-style: none;
-		    padding-left: 0;
-		    li { line-height: 1.6; }
-		    li::before {
-		      content: "• ";
-		      font-size: 1.5em;
-		      line-height: 0;
-		      color: $primary-color;
-		    }
-		  }
-	  }
-	  .gmap-container {
-	    width: 55%;
-	  }
-		.gmap {
-		  margin-top: -4%;
-		  float: right;
-		  width: 100%;
-		  display: inline-block;
-		  vertical-align: top;
-		  box-shadow: 4px 4px 1em gainsboro;
-		}
+    margin-top: -3%;
+    margin-bottom: 142px;
+    .about {
+      position: relative;
+      margin: 0 auto;
+      width: 874px;
+
+      .about-pic {
+        display: block;
+      }
+      .map {
+        position: absolute;
+        top: 418px;
+        left: 575px;
+        width: 400px;
+
+      }
+    }
   }
+
   @media screen and (max-width: $breakpoint-small) {
+    .section-content {
+      .map {
+        display: none;
+      }
+    }
     .ham-menu {
       background-size: 94%;
     }
@@ -157,31 +146,6 @@
 
     .agent {
       width: 90%;
-    }
-    .section-content {
-    	.description {
-    	  width: 100%;
-    	  padding: 8px;
-    	  text-align: center;
-    	  font-size: 3em;
-    	  ul {
-		    list-style: none;
-		    padding-left: 0;
-		    li {
-		      line-height: 3;
-		      text-align: center;
-		    }
-		    li::before {
-		      content: "";
-		      font-size: 1.5em;
-		      line-height: 0;
-		      color: $primary-color;
-		    }
-		  }
-    	}
-      .gmap-container {
-        width: 90%;
-      }
     }
   }
 }
