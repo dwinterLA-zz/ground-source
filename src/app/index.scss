@@ -435,7 +435,10 @@ a {
   }
 }
 @media screen and (max-width: $breakpoint-small) {
-  // hidden elements
+  .logo-upper-left {
+    width: 33%;
+  }
+
   .small-hidden {
     display: none;
   }

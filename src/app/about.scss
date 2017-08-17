@@ -127,6 +127,7 @@
 
   @media screen and (max-width: $breakpoint-small) {
     .section-content {
+      margin-top: 0;
       .about {
         width: 100%;
       }
@@ -150,6 +151,7 @@
 
     .agent {
       width: 90%;
+      font-size: 4em;
     }
   }
 }
