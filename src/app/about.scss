@@ -36,7 +36,20 @@
     }
   }
   .about-text {
-    position: relative;
+    width: 100%;
+    text-align: center;
+    .header-image {
+      width: 50%;
+      text-align: left;
+      display: inline-block;
+      vertical-align: bottom;
+    }
+    .description {
+      width: 50%;
+      text-align: left;
+      display: inline-block;
+      vertical-align: bottom;
+    }
   }
   .agents {
     padding: 5em 0;
