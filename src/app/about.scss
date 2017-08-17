@@ -113,6 +113,7 @@
 
       .about-pic {
         display: block;
+        width: 100%;
       }
       .map {
         position: absolute;
@@ -126,6 +127,9 @@
 
   @media screen and (max-width: $breakpoint-small) {
     .section-content {
+      .about {
+        width: 100%;
+      }
       .map {
         display: none;
       }
