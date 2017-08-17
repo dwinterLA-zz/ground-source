@@ -378,10 +378,13 @@ a {
     vertical-align: top;
     margin-right: 5%;
     .title {font-weight: bold}
+    opacity: .9;
     a {
       text-decoration: none;
       color: inherit;
       display: block;
+      opacity: .85;
+      font-size: 85%;
       img {
 	color: white;
 	width: 1em;
