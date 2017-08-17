@@ -134,12 +134,13 @@
 
   @media screen and (max-width: $breakpoint-small) {
     .section-content {
-      margin-top: 0;
+      margin: 0;
       .about {
         width: 100%;
-      }
-      .map {
-        display: none;
+        .map {
+          position: static;
+          width: 100%;
+        }
       }
     }
     .ham-menu {
