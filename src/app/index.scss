@@ -260,6 +260,7 @@ a {
 
 .flexbox {
   display: flex;
+  position: relative;
   flex-direction: row;
   flex-flow: row wrap;
   justify-content: center;
@@ -297,10 +298,8 @@ a {
 	max-width: 100%;
 }
 
-.review {
-  display: inline-block;
-}
 #review-navigator {
+  width: 100%;
   div {
     height: 15px;
     width: 15px;
@@ -317,8 +316,9 @@ a {
 }
 
 .navigation-arrows {
-  border: solid $primary-color;
   position: absolute;
+  top: 50%;
+  border: solid $primary-color;
   border-width: 0 3px 3px 0;
   padding: 3px;
   font-size: 4em;
@@ -328,33 +328,31 @@ a {
 
 #navigator-arrow-left {
   transform: rotate(135deg);
-  top: 50%;
-  left: 20%;
+  left: 0px;
 }
 
 #navigator-arrow-right {
   transform: rotate(-45deg);
-  top: 50%;
-  left: 80%;
+  right: 0px;
 }
 
 .review-slideshow {
   background: linear-gradient(to bottom, #fbf9fa, #d4d2d3);
-  position: relative;
   color: gray;
   text-align: center;
   font-size: 1.5em;
-  height: 300px;
   padding: 43px 12px;
-  review {
+  .review {
     display: none;
   }
-  selected {
+  .selected {
     display: inline-block;
+    width: 70%;
   }
 
   p {
-    width: 840px;
+    max-width: 800px;
+    padding: 12px 0;
     text-align: left;
     display: inline-block;
     strong {
