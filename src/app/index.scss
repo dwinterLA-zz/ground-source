@@ -397,10 +397,22 @@ a {
 }
 
 .services-info {
-  width: 75%;
+  position: relative;
+  background-color: $primary-color;
   color: white;
-  > .flexbox {
-    height: 70%;
+  display: flex;
+  .services-img {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    background-image: url(../images/services.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  .services-text {
+    margin-left: 33%;
+    max-width: 1200px;
+    height: 100%;
   }
   > .header {
     height: 10px;
@@ -416,17 +428,13 @@ a {
   }
 }
 
-.services-img {
-  width: 25%;
-  > img {
-    height: 400px;
-    width: 100%;
-  }
-}
-
 .services-row {
   display: flex;
   align-items: stretch;
+}
+
+.flexbox2 {
+  display: flex;
 }
 
 .services-header {
