@@ -31,13 +31,10 @@ a {
 #contact-us {
   background-image: url(../images/contact-map.jpg);
   width: 100%;
-  height: 553px;
+  padding: 20px;
   color: $grey;
   .contact-content {
-    width: 57%;
-    position: relative;
-    top: 20px;
-    left: 22px;
+    width: 50%;
     .contact-header {
       font-size: 3.45em;
       background-color: white;
@@ -198,13 +195,16 @@ a {
   }
 }
 
-.col-medium {
+.home-intro {
   width: 45%;
   font-family: $font-brand;
   color: #b4b3b3;
   letter-spacing: 0.5px;
   color: #858585;
   overflow: hidden;
+  > div {
+    padding: 80px;
+  }
 }
 
 .property-preview {
@@ -229,18 +229,25 @@ a {
   width: 100%;
 }
 
-.padding-80 {
-  padding: 80px;
-}
+// .padding-80 {
+//   padding: 80px;
+// }
 
 #header-home {
+  position: relative;
   background-image: url(../images/background.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   text-align: center;
-  height: 556px;
+  height: 40vh;
 }
 
 #header-content {
-  padding-top: 17%;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 #header-logo {
@@ -396,7 +403,7 @@ a {
     height: 70%;
   }
   > .header {
-    height: 100px;
+    height: 10px;
     padding-top: 45px;
     background-color: $primary-color;
     font-size: 2em;
@@ -417,19 +424,28 @@ a {
   }
 }
 
+.services-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.services-header {
+  width: 100%;
+  background-color: $primary-color;
+  font-size: 3em;
+}
+
 .tennant-rep {
   float: left;
   width: 50%;
-  height: 300px;
-  overflow: scroll;
+  min-height: 300px;
   background-color: $primary-color-darker-darker;
 }
 
 .landlord-rep {
   float: right;
   width: 50%;
-  height: 300px;
-  overflow: scroll;
+  min-height: 300px;
   background-color: $primary-color-lighter;
 }
 
@@ -492,6 +508,13 @@ a {
     display: none;
   }
 
+  .tennant-rep {
+    width: 100%;
+  }
+
+  .landlord-rep {
+    width: 100%;
+  }
   .property-preview {
     width: 69%;
     opacity: 1;
@@ -519,17 +542,14 @@ a {
   }
 
   #header-home {
-   background-color: white;
-   background-image: none;
-   height: 250px;
+   height: 80vh;
   }
 
-  .col-medium {
+  .home-intro {
     width: 80%;
-  }
-
-  .padding-80 {
-    padding: 10px;
+    > div {
+      padding: 10px;
+    }
   }
 
   .header-overlap {
