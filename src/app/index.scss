@@ -376,12 +376,13 @@ a {
 }
 
 .padded-text {
-  padding: 25px;
+  padding: 36px;
+  margin-right: 60px;
   opacity: .9;
 }
 
 .services-info {
-  width: 58%;
+  width: 75%;
   color: white;
   > .flexbox {
     height: 70%;
@@ -392,16 +393,17 @@ a {
     background-color: $primary-color;
     font-size: 2em;
     > p {
-      padding: 16px;
       margin: 0;
-      font-size: .75em;
-      opacity: .82;
+      margin-top: -5px;
+      margin-left: 34px;
+      font-size: 1.1em;
+      // opacity: .82;
     }
   }
 }
 
 .services-img {
-  width: 42%;
+  width: 25%;
   > img {
     height: 400px;
     width: 100%;
