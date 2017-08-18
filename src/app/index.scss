@@ -390,12 +390,6 @@ a {
   max-width: 35%;
 }
 
-.padded-text {
-  padding: 36px;
-  margin-right: 60px;
-  opacity: .9;
-}
-
 .services-info {
   position: relative;
   background-color: $primary-color;
@@ -409,23 +403,16 @@ a {
     background-size: cover;
     background-position: center center;
   }
-  .services-text {
+  .services-content {
     margin-left: 33%;
     max-width: 1200px;
     height: 100%;
   }
-  > .header {
-    height: 10px;
-    padding-top: 45px;
-    background-color: $primary-color;
-    font-size: 2em;
-    > p {
-      margin: 0;
-      margin-top: -5px;
-      margin-left: 34px;
-      font-size: 1.1em;
-    }
-  }
+}
+
+.services-header {
+  padding-left: 33px;
+  font-size: 3em;
 }
 
 .services-row {
@@ -433,27 +420,18 @@ a {
   align-items: stretch;
 }
 
-.flexbox2 {
-  display: flex;
-}
-
-.services-header {
-  width: 100%;
-  background-color: $primary-color;
-  font-size: 3em;
+.services-text {
+  padding: 36px;
+  opacity: .9;
+  min-height: 360px;
+  width: 50%;
 }
 
 .tennant-rep {
-  float: left;
-  width: 50%;
-  min-height: 300px;
   background-color: $primary-color-darker-darker;
 }
 
 .landlord-rep {
-  float: right;
-  width: 50%;
-  min-height: 300px;
   background-color: $primary-color-lighter;
 }
 
@@ -516,13 +494,6 @@ a {
     display: none;
   }
 
-  .tennant-rep {
-    width: 100%;
-  }
-
-  .landlord-rep {
-    width: 100%;
-  }
   .property-preview {
     width: 69%;
     opacity: 1;
@@ -538,6 +509,20 @@ a {
   // hidden elements
   .small-hidden {
     display: none;
+  }
+
+  .services-info {
+    width: 100%;
+    .services-content {
+      margin-left: 0;
+    }
+  }
+
+  .services-row {
+    display: block;
+    .services-text {
+      width: 100%;
+    }
   }
 
   .services-img {
@@ -591,9 +576,6 @@ a {
     width: 2em;
   }
 
-  .services-info {
-    width: 100%;
-  }
 
   #contact-us {
     background-color: white;
