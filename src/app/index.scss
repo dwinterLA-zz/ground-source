@@ -259,18 +259,20 @@ a {
 }
 
 #header-logo {
-  height: 30px;
+  height: 47px;
 }
 
 .scroll-arrow {
-  width: 34px;
-  padding-top: 5%;
+  position: absolute;
+  width: 54px;
+  bottom: 5%;
 }
 
 #header-text {
   font-family: $font-brand;
   color: #858585;
-  padding-top: 8px;
+  font-size: 1.5em;
+  padding-top: 25px;
 }
 
 #item-top {
