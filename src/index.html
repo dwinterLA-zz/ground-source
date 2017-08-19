@@ -190,6 +190,10 @@
             $('.ham-menu').hide();
           }
         })
+        $(".scroll-arrow").click(function() {
+          window.scrollTo(0, $('#header-home').height());
+        });
+
         $('.ham-menu, .menu-close').click(function(){
           $('.nav-modal').fadeToggle();
         });

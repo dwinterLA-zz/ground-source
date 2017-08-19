@@ -248,7 +248,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  height: 40vh;
+  height: 50vh;
 }
 
 #header-content {
@@ -520,7 +520,7 @@ a {
       font-size: 1.2em;
       width: 100%;
       .contact-header {
-        padding: 8px 0 0 0;
+        padding: 25px 0 0 0;
         font-size: 2.3em;
         text-align: center;
         background: rgba(255, 255, 255, 0.8);
@@ -529,7 +529,7 @@ a {
         padding: 12px 0 0 0;
         background: rgba(255, 255, 255, 0.8);
         > ul {
-          padding-left: 20px;
+          padding: 0 0 17px 20px;
           font-size: .75em;
         }
       }
