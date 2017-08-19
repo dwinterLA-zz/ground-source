@@ -28,6 +28,10 @@ a {
   color: inherit;
 }
 
+.content {
+  position: relative;
+}
+
 #contact-us {
   background-image: url(../images/contact-map.jpg);
   background-size: cover;
@@ -213,6 +217,7 @@ a {
 
 .home-intro-left {
   width: 50%;
+  margin-top: -36px;
   min-height: 300px;
   background-color: white;
   font-family: $font-brand;
@@ -225,6 +230,8 @@ a {
     padding: 80px;
     > p {
       min-height: 300px;
+      font-size: 1.05em;
+      opacity: .95;
     }
   }
 }
@@ -265,7 +272,7 @@ a {
 .scroll-arrow {
   position: absolute;
   width: 54px;
-  bottom: 5%;
+  bottom: 10%;
 }
 
 #header-text {
@@ -285,7 +292,7 @@ a {
   color: #b4b3b3;
   letter-spacing: 0.5px;
   color: #858585;
-  font-size: 125%;
+  font-size: 1.8em;
 }
 
 .flexbox {
@@ -542,6 +549,14 @@ a {
     display: none;
   }
 
+  .home-intro-left {
+    width: 100%;
+  }
+
+  .home-intro-right {
+    width: 50%;
+  }
+
   .services-info {
     width: 100%;
     .services-content {
@@ -575,10 +590,6 @@ a {
     > div {
       padding: 10px;
     }
-  }
-
-  #content {
-    top: 1062px;
   }
 
   #listings-content {
