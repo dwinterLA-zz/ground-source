@@ -3,10 +3,10 @@
 #container-listings {
   // background-image: url(../images/listings/background.png);
   // opacity: .1;
+  // background-color: lightgray;
   .content {
     max-width: 1800px;
     margin: 0 auto;
-
   }
   .ham-menu {
     display: block;
@@ -48,8 +48,12 @@
     display: inline-block;
   }
 
+  .listings {
+    margin-top: 22px;
+  }
+
   .listing-preview {
-    width: 30%;
+    width: 22%;
     margin: 18px;
     color: gray;
     border: solid;
@@ -68,6 +72,9 @@
         background-color: $primary-color;
         color: white;
         padding: 3px;
+      }
+      .lease {
+        background-color: $brand-blue;
       }
       .address {
         position: absolute;
@@ -105,3 +112,17 @@
     line-height: 110%;
   }
 }
+
+@media screen and (max-width: $breakpoint-small) {
+  #container-listings {
+    .listing-preview {
+      width: 92%;
+    }
+  }
+}
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
