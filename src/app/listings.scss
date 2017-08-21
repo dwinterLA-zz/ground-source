@@ -111,6 +111,27 @@
     font-family: $font-brand;
     line-height: 110%;
   }
+
+  .paginator {
+    text-align: center;
+    position: relative;
+    font-size: 1.4em;
+    color: lightgray;
+    margin: 20px 0 25px 0;
+    > div {
+      display: inline-block;
+      padding: 12px;
+    }
+    .pages {
+      > a {
+        padding: 12px;
+        text-decoration: none;
+      }
+    }
+   .navigate {
+     color: $primary-color;
+   }
+  }
 }
 
 @media screen and (max-width: $breakpoint-small) {
