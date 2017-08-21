@@ -48,8 +48,54 @@
     display: inline-block;
   }
 
-  .listings-preview {
+  .listing-preview {
     width: 30%;
+    margin: 18px;
+    color: gray;
+    border: solid;
+    border-width: thin;
+    border-color: lightgray;
+    .header {
+      background-image: url(../images/carousel/prop2-header.jpg);
+      background-size: cover;
+      height: 232px;
+      margin: 0;
+      position: relative;
+      .label {
+        position: absolute;
+        top: 8px;
+        left: -7px;
+        background-color: $primary-color;
+        color: white;
+        padding: 3px;
+      }
+      .address {
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        color: white;
+        text-align: left;
+        padding: 0 0 12px 12px;
+        font-size: 1.4em;
+      }
+    }
+    .content {
+      padding: 18px;
+    }
+    .footer {
+      border-top: solid;
+      border-width: thin;
+      border-color: lightgray;
+      opacity: .9;
+      padding: 18px;
+    }
+  }
+
+  .amenities {
+    > p {
+      display: inline-block;
+      width: 45%;
+    }
   }
 
   ::-webkit-input-placeholder {
