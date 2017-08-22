@@ -8,6 +8,7 @@
 @import "vendor/sanitize.scss";
 @import "listings.scss";
 @import "variables.scss";
+@import "mixins.scss";
 
 html {
   font-family: $font-brand;
@@ -30,6 +31,10 @@ a {
 
 .content {
   position: relative;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 #contact-us {
@@ -151,19 +156,11 @@ a {
 }
 .ham-menu {
   display: none;
-  background-color: white;
-  background-image: url(../images/ham-menu.png);
-  background-size: 40%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 5em;
-  width: 5em;
-  padding: 2em;
-  cursor: pointer;
-  z-index: 2;
-  position: fixed;
-  right: 10px;
-  top: 10px;
+  @include hamburger-menu;
+}
+
+.ham-menu-mobile {
+  @include hamburger-menu;
 }
 
 .nav-modal {
@@ -523,6 +520,18 @@ a {
   }
 }
 @media screen and (max-width: $breakpoint-small) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  #header-logo {
+    height: 28px;
+  }
+
   #contact-us {
     padding: 0;
     .contact-content {

@@ -28,26 +28,44 @@
     });</script>
   </head>
   <body>
-     <div id="top-nav">
-      <ul>
-        <li><a href="/listings.html">LISTINGS</a></li>
-        <li><a href="/experience.html">EXPERIENCE</a></li>
-        <li><a href="/about.html">ABOUT</a</li>
-        <li><a href="#">CONTACT<a/></li>
-      </ul>
-    </div>
-    <div class="ham-menu"></div>
-    <div class="nav-modal">
-      <div class="inner">
-        <img src="images/logo.png" class="modal-logo"/>
-        <div class="menu-close"></div>
-        <ul class="nav">
-          <li><a class="active" href="/">HOME</a></li>
-          <li><a href="/about.html">ABOUT</a></li>
+    <div class="desktop-nav">
+      <div id="top-nav">
+        <ul>
           <li><a href="/listings.html">LISTINGS</a></li>
-          <li><a href="#">EXPERIENCE</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a href="/experience.html">EXPERIENCE</a></li>
+          <li><a href="/about.html">ABOUT</a</li>
+          <li><a href="#">CONTACT<a/></li>
         </ul>
+      </div>
+      <div class="ham-menu"></div>
+      <div class="nav-modal">
+        <div class="inner">
+          <img src="images/logo.png" class="modal-logo"/>
+          <div class="menu-close"></div>
+          <ul class="nav">
+            <li><a class="active" href="/">HOME</a></li>
+            <li><a href="/about.html">ABOUT</a></li>
+            <li><a href="/listings.html">LISTINGS</a></li>
+            <li><a href="#">EXPERIENCE</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <div class="ham-menu-mobile"></div>
+      <div class="nav-modal">
+        <div class="inner">
+          <img src="images/logo.png" class="modal-logo"/>
+          <div class="menu-close"></div>
+          <ul class="nav">
+            <li><a class="active" href="/">HOME</a></li>
+            <li><a href="/about.html">ABOUT</a></li>
+            <li><a href="/listings.html">LISTINGS</a></li>
+            <li><a href="#">EXPERIENCE</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -196,7 +214,7 @@
           window.scrollTo(0, $('#header-home').height());
         });
 
-        $('.ham-menu, .menu-close').click(function(){
+        $('.ham-menu, .ham-menu-mobile, .menu-close').click(function(){
           $('.nav-modal').fadeToggle();
         });
     });
