@@ -167,6 +167,24 @@ a {
   top: 10px;
 }
 
+.contact-us-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .9;
+  background: white;
+  z-index: 10;
+  .contact-form {
+    text-align: center;
+    border-style: solid;
+    border-width: thin;
+    background-color: white;
+  }
+}
+
 .nav-modal {
   display: none;
   position: fixed;
