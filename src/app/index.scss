@@ -521,7 +521,8 @@ a {
       transform: scale(1);
     }
   }
-
+}
+@media screen and (max-width: $breakpoint-small) {
   #contact-us {
     padding: 0;
     .contact-content {
@@ -543,9 +544,6 @@ a {
       }
     }
   }
-}
-@media screen and (max-width: $breakpoint-small) {
-  // hidden elements
   .small-hidden {
     display: none;
   }
