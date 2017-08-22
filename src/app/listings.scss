@@ -119,11 +119,17 @@
     }
   }
 
-  input.orange-placeholder::-webkit-input-placeholder{
-    color: $listings-text;
-    font-size:1.1em;
-    font-family: $font-brand;
-    line-height: 110%;
+  .listings-search {
+    border-style: solid;
+    border-color: lightgray;
+  }
+
+  input.listings-search::-webkit-input-placeholder{
+  color: $listings-text;
+  font-size:1.1em;
+  font-family: $font-brand;
+  line-height: 110%;
+  opacity: .7;
   }
 
   .paginator {
