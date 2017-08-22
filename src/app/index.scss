@@ -73,6 +73,10 @@ a {
   padding-left: 1px;
 }
 
+.contact-us-link {
+  cursor: pointer;
+}
+
 .property-slideshow {
   padding-top: 12px;
 }
@@ -168,6 +172,7 @@ a {
 }
 
 .contact-us-modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -177,17 +182,50 @@ a {
   z-index: 10;
   .contact-form {
     width: 443px;
-    height: 251px;
     margin: 112px auto 0 auto;
     text-align: center;
     border-style: solid;
     border-width: thin;
+    border-color: lightgray;
     background-color: white;
+    box-shadow: 5px 6px 14px #888888;
+    position: relative;
+    .contact-close {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      color: $primary-color;
+      width: 13px;
+      height: 21px;
+      cursor: pointer;
+    }
     .form {
+      margin: 36px;
+      > p {
+        font-size: 2em;
+        font-weight: 100;
+        color: #777777;
+      }
       > input {
         display: block;
-        // margin: 0 auto;
-        margin: 0 auto 8px auto;
+        margin: 0 auto 12px auto;
+        width: 72%;
+        height: 30px;
+        box-shadow: none !important;
+        border-style: solid;
+        border-width: thin;
+        border-color: #efefef;
+        background-color: #fcfcfc !important;
+      }
+      > button {
+        width: 72%;
+        border-radius: 12px;
+        margin-top: 4px;
+        font-weight: 500;
+        font-size: .9em;
+        color: $primary-color-darker-darker;
+        border-color: $primary-color-darker-darker;
+        border-width: thin;
       }
     }
   }

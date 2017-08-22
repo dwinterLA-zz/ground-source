@@ -119,7 +119,7 @@
     }
   }
 
-  ::-webkit-input-placeholder {
+  input.orange-placeholder::-webkit-input-placeholder{
     color: $listings-text;
     font-size:1.1em;
     font-family: $font-brand;
