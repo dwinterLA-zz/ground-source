@@ -8,33 +8,42 @@
     max-width: 1800px;
     margin: 0 auto;
   }
+
   .ham-menu {
+    position: fixed;
     display: block;
+    top: -14px;
+    right: -1px;
   }
+
   .header {
-    margin-top: 200px;
+    margin-top: 100px;
     text-align: center;
     > h4 {
-      font-size: 2.5em;
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #514d4c;
     }
     > p {
-      font-size: 1.2em;
+      font-size: 1.8em;
       margin: 0 15% 0 15%;
-      opacity: .9;
+      opacity: .95;
+      color: gray;
     }
     > input {
       margin-top: 40px;
       border-radius: 30px;
-      width: 350px;
-      height: 45px;
+      width: 420px;
+      height: 50px;
     }
   }
 
   .submenu {
-    margin-top: 22px;
+    margin-top: 15px;
     color: grey;
+    font-size: .8em;
     .plus-sign {
-      margin-right: 15px;
+      margin-right: 8px;
     }
   }
 
@@ -49,12 +58,13 @@
   }
 
   .listings {
-    margin-top: 22px;
+    margin-top: 63px;
   }
 
   .listing-preview {
-    width: 22%;
-    margin: 18px;
+    width: 350px;
+    margin-right: 15px;
+    margin-bottom: 34px;
     color: gray;
     border: solid;
     border-width: thin;
@@ -62,32 +72,37 @@
     .header {
       background-image: url(../images/carousel/prop2-header.jpg);
       background-size: cover;
-      height: 232px;
+      height: 235px;
       margin: 0;
       position: relative;
       .label {
         position: absolute;
         top: 8px;
-        left: -7px;
+        left: -6px;
         background-color: $primary-color;
         color: white;
         padding: 3px;
+        font-size: 1em;
       }
       .lease {
         background-color: $brand-blue;
       }
       .address {
         position: absolute;
-        left: 5px;
-        bottom: 5px;
+        left: 14px;
+        bottom: 14px;
         color: white;
         text-align: left;
         padding: 0 0 12px 12px;
-        font-size: 1.4em;
+        font-size: 1.2em;
       }
     }
     .content {
-      padding: 18px;
+      font-size: 1.1em;
+      line-height: 135%;
+      padding-left: 27px;
+      padding-right: 27px;
+      padding-bottom: 10px;
     }
     .footer {
       border-top: solid;
@@ -101,7 +116,7 @@
   .amenities {
     > p {
       display: inline-block;
-      width: 45%;
+      width: 49%;
     }
   }
 
@@ -138,6 +153,14 @@
   #container-listings {
     .listing-preview {
       width: 92%;
+    }
+    .header {
+      > p {
+        margin: 1px;
+      }
+      > input {
+        width: 94%;
+      }
     }
   }
 }
