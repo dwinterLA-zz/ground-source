@@ -168,20 +168,28 @@ a {
 }
 
 .contact-us-modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: .9;
-  background: white;
+  background: rgba(255, 255, 255, 0.8);
   z-index: 10;
   .contact-form {
+    width: 443px;
+    height: 251px;
+    margin: 112px auto 0 auto;
     text-align: center;
     border-style: solid;
     border-width: thin;
     background-color: white;
+    .form {
+      > input {
+        display: block;
+        // margin: 0 auto;
+        margin: 0 auto 8px auto;
+      }
+    }
   }
 }
 
@@ -230,7 +238,6 @@ a {
 	&.active {color: $primary-color;}
       }
     }
-
   }
 }
 
