@@ -1,9 +1,8 @@
 @import "variables.scss";
 
 #container-listings {
+  // need the actual asset
   // background-image: url(../images/listings/background.png);
-  // opacity: .1;
-  // background-color: lightgray;
   .content {
     max-width: 1800px;
     margin: 0 auto;
@@ -132,10 +131,10 @@
     position: relative;
     font-size: 1.4em;
     color: lightgray;
-    margin: 20px 0 25px 0;
+    margin: 4px 0 25px 0;
     > div {
       display: inline-block;
-      padding: 12px;
+      padding: 3px;
     }
     .pages {
       > a {
@@ -150,6 +149,15 @@
 }
 
 @media screen and (max-width: $breakpoint-small) {
+  .listing-preview {
+    margin-right: 0px !important;
+  }
+
+  .paginator {
+    > div {
+      padding: 3px;
+    }
+  }
   #container-listings {
     .listing-preview {
       width: 92%;
