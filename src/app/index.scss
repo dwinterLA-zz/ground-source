@@ -146,7 +146,7 @@ a {
 
 .nav-modal {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -450,6 +450,23 @@ a {
   }
 }
 @media screen and (max-width: $breakpoint-small) {
+  .ham-menu {
+    font-size: 4em;
+  }
+
+  .nav-modal {
+    .inner {
+      .modal-logo {
+        width: 36%;
+      }
+      ul.nav {
+        margin-top: 42px;
+      }
+    }
+  }
+  .nav-modal {
+    font-size: 5em;
+  }
   .logo-upper-left {
     width: 33%;
   }
