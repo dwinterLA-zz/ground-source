@@ -33,7 +33,75 @@
  	      }
       }
     }
-  }
+	}
+
+	.rounded-red-button {
+		border-radius: 12px;
+		margin-top: 4px;
+		font-weight: 500;
+		font-size: .9em;
+		color: $primary-color-darker-darker;
+		border-color: $primary-color-darker-darker;
+		border-style: solid;
+		border-width: thin;
+		padding: 5px 20px;
+	}
+
+	.agent-details {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 10;
+		background: rgba(255, 255, 255, 0.8);
+		.content {
+			background-color: white;
+			width: 60vw;
+			margin: 300px auto 0 auto;
+			position: relative;
+			height: 600px;
+			.bio-pic {
+				position: absolute;
+				top: -3px;
+				left: -3px;
+				width: 200px;
+				height: 150px;
+			}
+			.contact {
+				margin: 0 auto;
+				max-width: 250px;
+				font-size: 1.4em;
+				> h4 {
+					color: black;
+					font-size: 1.8em;
+					padding-top: 32px;
+				}
+			}
+			.bio {
+				margin: 0 36px 25px 36px;
+			}
+			.footer {
+				background-color: $primary-color;
+				color: white;
+				text-align: center;
+				font-size: 2em;
+				padding-top: 1px;
+				.featured-listings {
+					width: 100%;
+					height: 100%;
+					margin: 0 auto;
+					.agent-featured-listing {
+						width: 33.3333333%;
+						float: left;
+						height: 100%;
+						// margin: -3px;
+					}
+				}
+			}
+		}
+	}
+
   .about-text {
     width: 100%;
     padding-top: 167px;
