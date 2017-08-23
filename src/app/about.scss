@@ -12,7 +12,11 @@
       width: 100%;
     }
 
-    .header-image {
+		.mobile-bg-hide {
+		  display: none;
+		}
+
+		.header-image {
       width: 40%;
     }
 
@@ -228,7 +232,12 @@
           width: 100%;
         }
       }
-    }
+		}
+
+		.mobile-bg-hide {
+			height: 0;
+		  overflow: hidden;
+		}
     .ham-menu {
       background-size: 94%;
     }
