@@ -56,8 +56,9 @@
 	}
 
 	.agent-details {
-		// display: none;
+		display: none;
 		position: fixed;
+		overflow-y: auto;
 		top: 0;
 		left: 0;
 		right: 0;
@@ -65,32 +66,34 @@
 		z-index: 10;
 		background: rgba(255, 255, 255, 0.8);
 		.content {
-			background-color: white;
-			width: 60vw;
-			margin: 300px auto 0 auto;
 			position: relative;
+			max-width: 1400px;
+			background-color: white;
+			width: 85vw;
+			margin: 200px auto 0 auto;
 			box-shadow: 0px 0px 2em gainsboro;
+			font-size: 1.2em;
 			.header {
 				position: relative;
 				margin-bottom: 5%;
 				.bio-pic {
 					position: absolute;
-					top: -3px;
-					left: -3px;
+					left: -10px;
 					height: 100%;
 				}
 				.contact {
-					margin-left: 38%;
+					margin-left: 34%;
 					font-size: 1.4em;
 					display: inline-block;
 					> h4 {
 						color: black;
 						font-size: 1.8em;
+						margin-bottom: 5px;
 					}
 				}
 			}
 			.bio {
-				margin: 0 36px 25px 36px;
+				margin: 0 30px 25px 30px;
 				color: black;
 				opacity: .55;
 				font-size: 1.3em;
@@ -232,6 +235,10 @@
           width: 100%;
         }
       }
+		}
+
+		.simple-close {
+			font-size: 7em;
 		}
 
 		.mobile-bg-hide {
