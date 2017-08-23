@@ -423,6 +423,17 @@ a {
   width: 300px;
 }
 
+.simple-close {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   color: $primary-color;
+   width: 13px;
+   height: 21px;
+   cursor: pointer;
+   font-size: 2em;
+}
+
 @media screen and (max-width: $breakpoint-medium) {
   &.listings-arrow {
     display: none;

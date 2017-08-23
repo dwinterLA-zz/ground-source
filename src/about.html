@@ -40,14 +40,17 @@
     <div id="container-about">
       <div class="agent-details">
         <div class="content">
-          <img src="images/about/agent-bio.png" class="bio-pic" />
-          <div class="contact">
-            <h4>JONATHAN DOE</h4>
-            <p>Licensed Real Estate Salesperson</p>
-            <p><a href="mailto:jonathan@groundsource.com">jonathan@groundsource.com</a>></p>
-            <p>M: 310.333.3333</p>
+          <div class="header">
+            <div class="simple-close close-agent-detail">X</div>
+            <img src="images/about/agent-bio.png" class="bio-pic" />
+            <div class="contact">
+              <h4>JONATHAN DOE</h4>
+              <p>Licensed Real Estate Salesperson</p>
+              <p><a href="mailto:jonathan@groundsource.com">jonathan@groundsource.com</a>></p>
+              <p>M: 310.333.3333</p>
 
-            <button class="rounded-red-button">WORK WITH JONATHAN</buton>
+              <button class="rounded-red-button">WORK WITH JONATHAN</buton>
+            </div>
           </div>
           <div class="bio">
             <h2>ABOUT JONATHAN</h2>
@@ -176,6 +179,12 @@
         $('.ham-menu, .menu-close').click(function(){
           $('.nav-modal').fadeToggle();
         });
+        $('.close-agent-detail').click(function() {
+          $('.agent-details').fadeOut();
+        })
+        $('.bio-button').click(function() {
+          $('.agent-details').fadeIn();
+        })
     });
     </script>
   </body>
