@@ -175,6 +175,7 @@ a {
     }
   }
 }
+
 .ham-menu {
   display: none;
   @include hamburger-menu;
@@ -543,8 +544,8 @@ a {
       opacity: .85;
       font-size: 85%;
       img {
-	color: white;
-	width: 1em;
+        color: white;
+        width: 1em;
       }
     }
     &.copyright {
@@ -606,7 +607,6 @@ a {
   }
 }
 @media screen and (max-width: $breakpoint-small) {
-<<<<<<< HEAD
   .ham-menu {
     font-size: 4em;
   }
@@ -628,7 +628,8 @@ a {
     width: 46%;
     top: 18px;
     left: 14px;
-=======
+  }
+
   .desktop-nav {
     display: none;
   }
@@ -664,7 +665,6 @@ a {
   }
   .small-hidden {
     display: none;
->>>>>>> master
   }
 
   .contact-us-modal {
@@ -746,7 +746,6 @@ a {
     height: 2em;
     width: 2em;
   }
-<<<<<<< HEAD
 
   .services-info {
     width: 100%;
@@ -813,8 +812,6 @@ a {
       }
     }
   }
-=======
->>>>>>> master
 }
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
