@@ -20,6 +20,7 @@ body {
   margin: 0;
   width: 100%;
   font-family: $font-brand;
+  font-size: .8vw;
 }
 
 strong, b {
@@ -66,6 +67,9 @@ a {
   }
 }
 
+.black {
+  color: black;
+}
 .left {
   float: left;
   width: 49%;
@@ -132,11 +136,23 @@ a {
 
 .logo-upper-left {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  height: 11px;
-  width: 18%;
+  top: 35px;
+  left: 35px;
+  width: 278px;
   height: auto;
+  z-index: 2;
+}
+
+.ham-menu {
+  background-color: white;
+  background-image: url(../images/ham-menu.png);
+  background-size: 40%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 5em;
+  width: 6em;
+  padding: 2em;
+  cursor: pointer;
   z-index: 2;
 }
 
@@ -247,15 +263,7 @@ a {
       top: 15px; left: 15px;
     }
     .menu-close {
-      background-color: white;
-      background-image: url(../images/menu-close.png);
-      background-size: 20px 20px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      cursor: pointer;
-      padding: 30px;
-      position: absolute;
-      top: 0; right: 0;
+      @include close-button;
     }
 
     ul.nav {
@@ -512,12 +520,14 @@ a {
 }
 
 #footer {
+  .inner {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
   position: relative;
   background: $primary-color;
-  padding: 2%;
-  padding-bottom: 10%;
+  padding: 1%;
   color: white;
-  font-size: 0.8vw;
   & > * { line-height: 2.2; }
   .column {
     font-size: 1.2em;
@@ -525,14 +535,22 @@ a {
     vertical-align: top;
     margin-right: 5%;
     .title {font-weight: bold}
+    opacity: .9;
     a {
       text-decoration: none;
       color: inherit;
       display: block;
+      opacity: .85;
+      font-size: 85%;
       img {
 	color: white;
 	width: 1em;
       }
+    }
+    &.copyright {
+      display: block;
+      padding-top: 30px;
+      opacity: .7;
     }
     &.social {
       float: right;
@@ -565,6 +583,12 @@ a {
   width: 300px;
 }
 
+.simple-close {
+  z-index: 10;
+  cursor: pointer;
+  @include close-button;
+}
+
 @media screen and (max-width: $breakpoint-medium) {
   &.listings-arrow {
     display: none;
@@ -582,6 +606,29 @@ a {
   }
 }
 @media screen and (max-width: $breakpoint-small) {
+<<<<<<< HEAD
+  .ham-menu {
+    font-size: 4em;
+  }
+
+  .nav-modal {
+    .inner {
+      .modal-logo {
+        width: 36%;
+      }
+      ul.nav {
+        margin-top: 42px;
+      }
+    }
+  }
+  .nav-modal {
+    font-size: 5em;
+  }
+  .logo-upper-left {
+    width: 46%;
+    top: 18px;
+    left: 14px;
+=======
   .desktop-nav {
     display: none;
   }
@@ -617,6 +664,7 @@ a {
   }
   .small-hidden {
     display: none;
+>>>>>>> master
   }
 
   .contact-us-modal {
@@ -698,6 +746,75 @@ a {
     height: 2em;
     width: 2em;
   }
+<<<<<<< HEAD
+
+  .services-info {
+    width: 100%;
+  }
+
+  #contact-us {
+    background-color: white;
+    background-image: none;
+    height: 340px;
+    .contact-content {
+      width: 100%;
+      top: 0;
+      left: 0;
+      font-size: 1.2em;
+      .contact-header {
+        text-align: center;
+      }
+      .contact-body {
+        padding: 0;
+        > ul {
+          padding-left: 20px;
+          font-size: .75em;
+        }
+      }
+    }
+  }
+  #footer {
+    position: relative;
+    background: $primary-color;
+    padding: 2%;
+    color: white;
+    font-size: 4em !important;
+    & > * { line-height: 2.2; }
+    .column {
+      font-size: 1.2em;
+      display: block;
+      margin-right: 5%;
+      .title {font-weight: bold}
+      margin-left: 5%;
+      opacity: .9;
+      &.copyright {
+        margin-top: 10%;
+        margin-left: 3%;
+      }
+      &.social {
+        margin: 0;
+        display: block;
+        float: left;
+        > a {
+          float: left;
+          font-size: 1.5em;
+          padding-right: 2px;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        opacity: .85;
+        img {
+          color: white;
+          width: 1em;
+        }
+      }
+    }
+  }
+=======
+>>>>>>> master
 }
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
