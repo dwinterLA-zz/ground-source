@@ -23,6 +23,18 @@
   </head>
   <body>
     <img src="images/logo.png" class="logo-upper-left"/>
+    <div class="contact-us-modal">
+      <div class="contact-form">
+        <div class="contact-close"><span>X</span></div>
+        <div class="form">
+          <p>CONTACT US</p>
+          <input type="text" placeholder=" Name">
+          <input type="text" placeholder=" Address">
+          <input type="text" placeholder=" Email">
+          <button>SUBMIT</button>
+        </div>
+      </div>
+    </div>
     <div class="ham-menu"></div>
     <div class="nav-modal">
       <div class="inner">
@@ -33,13 +45,13 @@
           <li><a class="active" href="/about.html">ABOUT</a></li>
           <li><a href="/listings.html">LISTINGS</a></li>
           <li><a href="#">PROJECTS</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a class="contact-us-link">CONTACT</a></li>
         </ul>
       </div>
     </div>
     <div id="container-about">
       <div id="header-about">
-        <div class="container">
+        <div class="flexbox">
           <div class="header-image">
             <img class="image-left" src="images/about/hero.jpg" />
           </div>
@@ -62,7 +74,7 @@
         </div>
       </div>
       <div class="agents">
-        <div class="container">
+        <div class="flexbox">
           <div class="agent">
             <div class="bio-image">
               <img src="images/about/agent-01.jpg"/>
@@ -175,6 +187,13 @@
       $(document).ready(function(){
         $('.ham-menu, .menu-close').click(function(){
           $('.nav-modal').fadeToggle();
+        });
+        $('.contact-close').click(function() {
+          $('.contact-us-modal').fadeToggle();
+        });
+        $('.contact-us-link').click(function() {
+          $('.nav-modal').fadeToggle();
+          $('.contact-us-modal').fadeToggle();
         });
     });
     </script>
