@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -28,44 +29,38 @@
     });</script>
   </head>
   <body>
-    <div class="desktop-nav">
-      <div id="top-nav">
-        <ul>
-          <li><a href="/listings.html">LISTINGS</a></li>
-          <li><a href="/experience.html">EXPERIENCE</a></li>
-          <li><a href="/about.html">ABOUT</a</li>
-          <li><a href="#">CONTACT<a/></li>
-        </ul>
-      </div>
-      <div class="ham-menu"></div>
-      <div class="nav-modal">
-        <div class="inner">
-          <img src="images/logo.png" class="modal-logo"/>
-          <div class="menu-close"></div>
-          <ul class="nav">
-            <li><a class="active" href="/">HOME</a></li>
-            <li><a href="/about.html">ABOUT</a></li>
-            <li><a href="/listings.html">LISTINGS</a></li>
-            <li><a href="#">EXPERIENCE</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </ul>
+    <div class="contact-us-modal">
+      <div class="contact-form">
+        <div class="contact-close"><span>X</span></div>
+        <div class="form">
+          <p class="contact-us">CONTACT US</p>
+          <input type="text" placeholder=" Name">
+          <input type="text" placeholder=" Address">
+          <input type="text" placeholder=" Email">
+          <button>SUBMIT</button>
         </div>
       </div>
     </div>
-    <div class="mobile-nav">
-      <div class="ham-menu-mobile"></div>
-      <div class="nav-modal">
-        <div class="inner">
-          <img src="images/logo.png" class="modal-logo"/>
-          <div class="menu-close"></div>
-          <ul class="nav">
-            <li><a class="active" href="/">HOME</a></li>
-            <li><a href="/about.html">ABOUT</a></li>
-            <li><a href="/listings.html">LISTINGS</a></li>
-            <li><a href="#">EXPERIENCE</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </ul>
-        </div>
+    <div id="top-nav">
+      <ul>
+        <li><a href="/listings.html">LISTINGS</a></li>
+        <li><a href="/experience.html">EXPERIENCE</a></li>
+        <li><a href="/about.html">ABOUT</a</li>
+        <li><a class="contact-us-link">CONTACT</a></li>
+      </ul>
+    </div>
+    <div class="ham-menu"></div>
+    <div class="nav-modal">
+      <div class="inner">
+        <img src="images/logo.png" class="modal-logo"/>
+        <div class="menu-close"></div>
+        <ul class="nav">
+          <li><a class="active" href="/">HOME</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/listings.html">LISTINGS</a></li>
+          <li><a href="#">EXPERIENCE</a></li>
+          <li><a class="contact-us-link">CONTACT</a></li>
+        </ul>
       </div>
     </div>
 
@@ -94,34 +89,55 @@
         <div class="home-intro-right"></div>
       </div>
       <div class="review-slideshow">
-        <div class="flexbox">
-        <div id="navigator-arrow-left" class="navigation-arrows"></div>
-         <div id="review1" class="review">
+        <div class="navigation-arrow-left navigation-arrows"></div>
+        <div class="review-carousel">
+          <div class="review">
+            <img src="images/sample-person.png" />
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+              <br />
+              <br />
+              <strong>- Jane Doe1</strong>
+            </p>
+          </div>
+          <div class="review">
+            <img src="images/sample-person.png" />
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+              <br />
+              <br />
+              <strong>- Jane Doe2</strong>
+            </p>
+          </div>
+          <div class="review selected">
+            <img src="images/sample-person.png" />
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+              <br />
+              <br />
+              <strong>- Jane Doe3</strong>
+            </p>
+          </div>
+          <div class="review">
+            <img src="images/sample-person.png" />
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+              <br />
+              <br />
+              <strong>- Jane Doe4</strong>
+            </p>
+          </div>
+          <div class="review">
+            <img src="images/sample-person.png" />
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
+              <br />
+              <br />
+              <strong>- Jane Doe5</strong>
+            </p>
+          </div>
         </div>
-        <div id="review2" class="review">
-        </div>
-        <div id="review3" class="review selected">
-          <img src="images/sample-person.png" />
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium
-            <br />
-            <br />
-            <strong>- Jane Doe</strong>
-          </p>
-        </div>
-         <div id="review4" class="review">
-        </div>
-        <div id="review5" class="review">
-        </div>
-        <div id="navigator-arrow-right" class="navigation-arrows"></div>
-        <div id="review-navigator">
-          <div></div>
-          <div></div>
-          <div class="selected"></div>
-          <div></div>
-          <div></div>
-        </div>
-        </div>
+        <div class="navigation-arrow-right navigation-arrows"></div>
       </div>
       <div class="services-info">
         <div class="services-img"></div>
@@ -198,8 +214,15 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
+        $('.review-carousel').slick({
+          "autoplay": false,
+          "draggable": false,
+          "prevArrow": $('.navigation-arrow-left'),
+          "nextArrow": $('.navigation-arrow-right')
+        })
         $(window).scroll(function() {
           if (window.pageYOffset >= 67) {
             $('#top-nav').hide();
@@ -214,7 +237,14 @@
           window.scrollTo(0, $('#header-home').height());
         });
 
-        $('.ham-menu, .ham-menu-mobile, .menu-close').click(function(){
+        $('.contact-close').click(function() {
+          $('.contact-us-modal').fadeToggle();
+        });
+        $('.contact-us-link').click(function() {
+          $('.contact-us-modal').fadeToggle();
+          $('.nav-modal').fadeOut();
+        });
+        $('.ham-menu, .menu-close').click(function(){
           $('.nav-modal').fadeToggle();
         });
     });
