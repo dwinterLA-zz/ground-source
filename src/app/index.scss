@@ -8,6 +8,7 @@
 @import "vendor/sanitize.scss";
 @import "listings.scss";
 @import "variables.scss";
+@import "mixins.scss";
 
 html {
   font-family: $font-brand;
@@ -384,6 +385,11 @@ a {
 	width: 1em;
       }
     }
+    &.copyright {
+      display: block;
+      padding-top: 30px;
+      opacity: .7;
+    }
     &.social {
       float: right;
       margin-right: 0;
@@ -416,6 +422,8 @@ a {
 }
 
 .simple-close {
+  z-index: 10;
+  cursor: pointer;
   @include close-button;
 }
 
@@ -534,6 +542,46 @@ a {
         > ul {
           padding-left: 20px;
           font-size: .75em;
+        }
+      }
+    }
+  }
+  #footer {
+    position: relative;
+    background: $primary-color;
+    padding: 2%;
+    padding-bottom: 20%;
+    color: white;
+    font-size: 4em !important;
+    & > * { line-height: 2.2; }
+    .column {
+      font-size: 1.2em;
+      display: block;
+      margin-right: 5%;
+      .title {font-weight: bold}
+      margin-left: 5%;
+      opacity: .9;
+      &.copyright {
+        margin-top: 30px;
+      }
+      &.social {
+        margin: 0;
+        display: block;
+        float: left;
+        > a {
+          float: left;
+          font-size: 1.5em;
+          padding-right: 2px;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        opacity: .85;
+        img {
+          color: white;
+          width: 1em;
         }
       }
     }
