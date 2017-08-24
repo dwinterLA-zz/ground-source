@@ -9,8 +9,7 @@
 
   #listings-content {
     position: relative;
-    margin-top: -1046px;
-    margin-top: -110vh;
+    margin-top: -100px;
   }
 
   #gallery-arrow-left {
@@ -20,6 +19,10 @@
 
   #gallery-arrow-right {
     width: 44%;
+  }
+
+  .container {
+    display: flex;
   }
 
   .gallery-controls {
@@ -45,7 +48,14 @@
   }
 
   #header-listings {
+    height: 50vh;
+    position: relative;
     background-image: url(../images/listings-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    text-align: center;
+
     &:after {
       display: block;
       content: " ";
@@ -59,12 +69,10 @@
   }
 
   #header-text-listings {
-    max-width: 90%;
-    text-align: left;
+    text-align: center;
     font-family: $font-brand;
     color: $background-color;
     font-size: 6em;
-    margin-left: 44px;
   }
 
   #listings-sidebar {
