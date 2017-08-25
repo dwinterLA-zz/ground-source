@@ -25,4 +25,18 @@ $(document).ready(function() {
   $('.ham-menu, .menu-close').click(function(){
     $('.nav-modal').fadeToggle();
   });
+
+  $('.close-agent-detail').click(function() {
+    $('.agent-details').fadeOut();
+    $('.main').removeClass('mobile-bg-hide');
+  })
+  $('.bio-button').click(function() {
+    $('.agent-details').fadeIn();
+    $('.main').addClass('mobile-bg-hide');
+  })
+
+  $('.listing-carousel').slick({
+    "prevArrow": $('.gallery-arrow-left'),
+    "nextArrow": $('.gallery-arrow-right')
+  })
 })
