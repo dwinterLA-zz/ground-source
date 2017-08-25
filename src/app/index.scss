@@ -622,7 +622,7 @@ a {
   .review-slideshow {
     .inner {
       .carousel-container {
-        padding: 0 80px;
+        padding: 0 60px;
       }
     }
   }
@@ -683,6 +683,9 @@ a {
 
   .home-intro-left {
     width: 100%;
+    > div {
+      padding: 80px 20px 0 20px;
+    }
   }
 
   .home-intro-right {
