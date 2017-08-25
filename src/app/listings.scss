@@ -3,6 +3,7 @@
 #container-listings {
   // need the actual asset
   // background-image: url(../images/listings/background.png);
+  background-color: #fbfbfb;
   .content {
     max-width: 1800px;
     margin: 0 auto;
@@ -60,6 +61,25 @@
     margin-top: 63px;
     > a {
       text-decoration: none;
+    }
+  }
+
+  .listing-filters {
+    padding: 22px;
+    background-color: white;
+    max-width: 1050px;
+    > * {
+      height: 33px;
+      width: 20%;
+      margin: 8px;
+      border-color: lightgrey;
+      border-style: solid;
+      border-width: thin;
+    }
+    > button {
+      background-color: #d3553f;
+      color: white;
+      border: none;
     }
   }
 

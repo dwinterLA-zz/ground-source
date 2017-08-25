@@ -33,7 +33,7 @@
       <img src="images/logo.png" class="logo-upper-left"/>
       <div class="contact-us-modal">
         <div class="contact-form">
-          <div class="contact-close"><span>X</span></div>
+          <div class="contact-close"></div>
           <div class="form">
             <p>CONTACT US</p>
             <input type="text" placeholder=" Name">
@@ -62,9 +62,37 @@
           <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
           </p>
-          <input type="text" placeholder="    Search properties" class="listings-search">
+          <!-- <input type="text" placeholder="    Search properties" class="listings-search"> -->
           <div class="submenu">
-            <div class="plus-sign">+</div>LOOKING FOR CERTAIN FEATURES
+            <!-- <div class="plus-sign">+</div>LOOKING FOR CERTAIN FEATURES -->
+          </div>
+          <div class="listings flexbox listing-filters">
+            <select name="location">
+              <option value="playa-vista">PLAYA VISTA</option>
+              <option value="playa-vista">MARINA DEL REY</option>
+              <option value="playa-vista">SANTA MONICA</option>
+              <option value="playa-vista">PLAYA VISTA</option>
+              <option value="playa-vista">MARINA DEL REY</option>
+              <option value="playa-vista">PLAYA VISTA</option>
+            </select>
+            <select name="status">
+              <option value="foobar">Foobar</option>
+              <option value="goobar">Goobar</option>
+            </select>
+            <select name="type">
+              <option value="rent">Rent</option>
+              <option value="lease">Lease</option>
+            </select>
+            <select name="min-rooms">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <input type="text" placeholder=" Min. Size">
+            <input type="text" placeholder=" Keyword(e.g 'office')">
+            <input type="text" placeholder=" Price">
+            <button type"submit">SEARCH</button>
           </div>
         </div>
         <div class="flexbox listings">
