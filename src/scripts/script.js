@@ -39,4 +39,10 @@ $(document).ready(function() {
     "prevArrow": $('.gallery-arrow-left'),
     "nextArrow": $('.gallery-arrow-right')
   })
+  $('.review-carousel').slick({
+    "autoplay": false,
+    "draggable": false,
+    "prevArrow": $('.navigation-arrow-left'),
+    "nextArrow": $('.navigation-arrow-right')
+  })
 })
