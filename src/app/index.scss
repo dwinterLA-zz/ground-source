@@ -130,6 +130,10 @@ a {
   color: #858585;
 }
 
+.review {
+  outline: none;
+}
+
 #home-image {
   vertical-align: middle;
 }
@@ -458,6 +462,7 @@ a {
   img {
     display: inline-block;
     margin-right: 22px;
+    margin-top: -73px;
   }
 }
 
@@ -623,6 +628,9 @@ a {
     .inner {
       .carousel-container {
         padding: 0 60px;
+      }
+      img {
+        margin-top: 0;
       }
     }
   }
