@@ -188,13 +188,15 @@
   }
 
   .section-header {
-		padding: 3em 0 6em;
+		padding: 5% 1%;
 		background: $primary-color;
 		text-align: center;
 		color: white;
 		.title {
-		  font-size: 1.5em;
-		  font-weight: bold;
+			max-width: 1800px;
+			margin: 0 auto;
+			font-weight: bold;
+			font-size: 1.4em;
 		}
   }
 
@@ -239,6 +241,11 @@
       }
 		}
 
+		.section-header {
+		  .title {
+			  font-size: 1em;
+			}
+		}
 		.mobile-bg-hide {
 			height: 0;
 		  overflow: hidden;
