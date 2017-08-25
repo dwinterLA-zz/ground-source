@@ -16,10 +16,12 @@ $(document).ready(function() {
   $('.contact-close').click(function() {
     $('.contact-us-modal').fadeToggle();
   });
+
   $('.contact-us-link').click(function() {
-    $('.contact-us-modal').fadeToggle();
+    $('.contact-us-modal').fadeIn();
     $('.nav-modal').fadeOut();
   });
+
   $('.ham-menu, .menu-close').click(function(){
     $('.nav-modal').fadeToggle();
   });
