@@ -2,11 +2,11 @@ $(document).ready(function() {
   $(window).scroll(function() {
     if (window.pageYOffset >= 67) {
       $('#top-nav').hide();
-      $('.ham-menu').show();
+      $('.ham-menu-home').show();
     }
     if (window.pageYOffset < 67) {
       $('#top-nav').show();
-      $('.ham-menu').hide();
+      $('.ham-menu-home').hide();
     }
   })
   $(".scroll-arrow").click(function() {
