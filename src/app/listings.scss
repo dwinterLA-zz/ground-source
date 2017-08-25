@@ -58,6 +58,9 @@
 
   .listings {
     margin-top: 63px;
+    > a {
+      text-decoration: none;
+    }
   }
 
   .listing-preview {
@@ -68,6 +71,9 @@
     border: solid;
     border-width: thin;
     border-color: lightgray;
+    > a {
+      text-decoration: none;
+    }
     .header {
       background-image: url(../images/carousel/prop2-header.jpg);
       background-size: cover;
