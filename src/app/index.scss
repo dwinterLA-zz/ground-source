@@ -601,6 +601,13 @@ a {
     font-size: .9em;
   }
 
+  .ham-menu {
+    display: block !important;
+  }
+
+  #top-nav {
+    display: none !important;
+  }
   .nav-modal {
     .inner {
       .modal-logo {
