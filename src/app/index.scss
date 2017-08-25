@@ -171,6 +171,10 @@ a {
   @include hamburger-menu;
 }
 
+.ham-menu-home {
+  display: none;
+}
+
 .contact-us-modal {
   display: none;
   position: fixed;
