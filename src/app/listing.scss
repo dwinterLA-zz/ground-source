@@ -19,7 +19,6 @@
     flex-flow: row wrap;
   }
 
-
   .listing-image-gallery {
     width: 50%;
     float: right;
@@ -183,20 +182,12 @@
   }
 
   @media screen and (max-width: 768px) {
-    .container {
-      font-size: 3.4em;
-    }
-
     #content {
       top: 1062px;
     }
 
     #listings-content {
       margin-top: -200px;
-    }
-
-    #header-text-listings {
-      font-size: 10em;
     }
 
     #listings-sidebar {

@@ -593,8 +593,8 @@ a {
   }
 }
 @media screen and (max-width: $breakpoint-small) {
-  .ham-menu {
-    font-size: 4em;
+  body {
+    font-size: 1.4em;
   }
 
   .nav-modal {
@@ -607,9 +607,7 @@ a {
       }
     }
   }
-  .nav-modal {
-    font-size: 5em;
-  }
+
   .logo-upper-left {
     width: 46%;
     top: 18px;
@@ -631,11 +629,9 @@ a {
   #contact-us {
     padding: 0;
     .contact-content {
-      font-size: 1.2em;
       width: 100%;
       .contact-header {
         padding: 25px 0 0 0;
-        font-size: 2.3em;
         text-align: center;
         background: rgba(255, 255, 255, 0.8);
       }
@@ -644,7 +640,6 @@ a {
         background: rgba(255, 255, 255, 0.8);
         > ul {
           padding: 0 0 17px 20px;
-          font-size: .75em;
         }
       }
     }
@@ -658,7 +653,6 @@ a {
       width: 100%;
       height: 100%;
       margin-top: -33px;
-      font-size: 5em;
       .form {
         margin: 0;
         > p {
@@ -696,7 +690,6 @@ a {
 
   .property-preview {
     width: 90%;
-    font-size: 1em;
   }
 
   #header-home {
@@ -742,7 +735,6 @@ a {
       width: 100%;
       top: 0;
       left: 0;
-      font-size: 1.2em;
       .contact-header {
         text-align: center;
       }
@@ -750,7 +742,6 @@ a {
         padding: 0;
         > ul {
           padding-left: 20px;
-          font-size: .75em;
         }
       }
     }
@@ -760,10 +751,8 @@ a {
     background: $primary-color;
     padding: 2%;
     color: white;
-    font-size: 4em !important;
     & > * { line-height: 2.2; }
     .column {
-      font-size: 1.2em;
       display: block;
       margin-right: 5%;
       .title {font-weight: bold}
@@ -779,7 +768,6 @@ a {
         float: left;
         > a {
           float: left;
-          font-size: 1.5em;
           padding-right: 2px;
         }
       }

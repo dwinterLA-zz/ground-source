@@ -101,7 +101,6 @@
 				margin: 0 30px 25px 30px;
 				color: black;
 				opacity: .55;
-				font-size: 1.3em;
 				line-height: 110%;
 				> h2 {
 					font-size: 1.8em;
@@ -112,7 +111,6 @@
 				background-color: $primary-color;
 				color: white;
 				text-align: center;
-				font-size: 2em;
 				padding-top: 1px;
 				.featured-listings {
 					width: 100%;
@@ -159,7 +157,6 @@
       position: relative;
       img { width: 100%; }
       .image-title {
-        font-size: 2em;
         span {font-weight: bold;}
         color: white;
         position: absolute;
@@ -242,10 +239,6 @@
       }
 		}
 
-		.simple-close {
-			font-size: 7em;
-		}
-
 		.mobile-bg-hide {
 			height: 0;
 		  overflow: hidden;
@@ -260,20 +253,15 @@
 
       .description {
         width: 100%;
-        font-size: 3em;
         padding-top: 0;
         .head-title {
           text-align: center;
-        }
-        > p {
-         font-size: 1.2em;
         }
       }
     }
 
     .agent {
       width: 90%;
-      font-size: 4em;
 		}
 
 		.bio-pic-mobile {
@@ -297,12 +285,10 @@
 					}
 					.contact {
 						width: 100%;
-						font-size: 3em;
 						margin: 0 auto;
 						text-align: center;
 						> h4 {
 							color: black;
-							font-size: 1.8em;
 						}
 					}
 				}
@@ -311,7 +297,6 @@
 					padding: 0;
 					color: black;
 					opacity: .55;
-					font-size: 2.5em;
 					line-height: 110%;
 					> h2 {
 						opacity: 1;
@@ -321,7 +306,6 @@
 					background-color: $primary-color;
 					color: white;
 					text-align: center;
-					font-size: 2em;
 					padding-top: 1px;
 					.featured-listings {
 						width: 100%;
