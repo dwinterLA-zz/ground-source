@@ -441,11 +441,11 @@ a {
   text-align: center;
   font-size: 1.5em;
   padding: 43px 12px;
-  .selected {
-    display: inline-block;
-    width: 70%;
+  .inner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-
   p {
     max-width: 800px;
     padding: 12px 0;
@@ -615,6 +615,14 @@ a {
       }
       ul.nav {
         margin-top: 42px;
+      }
+    }
+  }
+
+  .review-slideshow {
+    .inner {
+      .carousel-container {
+        padding: 0 80px;
       }
     }
   }
