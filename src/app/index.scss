@@ -144,16 +144,7 @@ a {
 }
 
 .ham-menu {
-  background-color: white;
-  background-image: url(../images/ham-menu.png);
-  background-size: 40%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 5em;
-  width: 6em;
-  padding: 2em;
-  cursor: pointer;
-  z-index: 2;
+  @include hamburger-menu;
 }
 
 #top-nav {
@@ -174,11 +165,6 @@ a {
       }
     }
   }
-}
-
-.ham-menu {
-  display: none;
-  @include hamburger-menu;
 }
 
 .ham-menu-mobile {
