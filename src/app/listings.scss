@@ -58,7 +58,8 @@
   }
 
   .listings {
-    margin-top: 63px;
+    margin: 63px auto 0;
+    width: 66%;
     > a {
       text-decoration: none;
     }
@@ -70,7 +71,7 @@
     max-width: 1050px;
     > * {
       height: 33px;
-      width: 20%;
+      width: 20%; // TODO: 100% wide on mobile
       margin: 8px;
       border-color: lightgrey;
       border-style: solid;
@@ -84,7 +85,7 @@
   }
 
   .listing-preview {
-    width: 350px;
+    width: calc(33% - 15px);
     margin-right: 15px;
     margin-bottom: 34px;
     color: gray;
@@ -178,19 +179,22 @@
      color: $primary-color;
    }
   }
-}
 
-@media screen and (max-width: $breakpoint-small) {
-  .listing-preview {
-    margin-right: 0px !important;
-  }
-
-  .paginator {
-    > div {
-      padding: 3px;
+  @media screen and (max-width: $breakpoint-small) {
+    .listings {
+      width: 90%;
     }
-  }
-  #container-listings {
+
+    .listing-preview {
+      margin-right: 0px !important;
+    }
+
+    .paginator {
+      > div {
+        padding: 3px;
+      }
+    }
+
     .listing-preview {
       width: 92%;
     }

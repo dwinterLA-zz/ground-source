@@ -20,7 +20,7 @@ body {
   margin: 0;
   width: 100%;
   font-family: $font-brand;
-  font-size: .8vw;
+  font-size: 1vw;
 }
 
 strong, b {
@@ -49,9 +49,9 @@ a {
   .contact-content {
     width: 50%;
     .contact-header {
-      font-size: 3.45em;
+      font-size: 3em;
       background-color: white;
-      padding: 46px;
+      padding: 1em;
     }
     .contact-body {
       background: rgba(255, 255, 255, 0.8);
@@ -116,11 +116,6 @@ a {
 .medium-white-text {
   color: white;
   font-size: 1.5em;
-}
-
-.medium-white-text {
-  color: white;
-  font-size: 1.2em;
   opacity: .95;
 }
 
@@ -132,6 +127,7 @@ a {
 
 .review {
   outline: none;
+  padding: 0 60px;
 }
 
 #home-image {
@@ -189,11 +185,12 @@ a {
   background: rgba(255, 255, 255, 0.8);
   z-index: 10;
   .contact-form {
-    width: 443px;
+    width: 70%;
     margin: 112px auto 0 auto;
+    padding-bottom: 10px;
     text-align: center;
     background-color: white;
-    box-shadow: 5px 6px 14px #888888;
+    box-shadow: 0px 0px 18px 6px #f2f2f2;
     position: relative;
     .contact-close {
       @include close-button;
@@ -208,33 +205,37 @@ a {
     .form {
       margin: 36px;
       > p {
-        font-size: 2em;
-        padding-top: 36px;
-        font-weight: 100;
+        font-size: 5em;
+        padding-top: 75px;
+        font-weight: 50;
+        margin-bottom: 42px;
         color: #777777;
+        opacity: .9;
       }
       > input {
         display: block;
-        margin: 0 auto 12px auto;
+        margin: 0 auto 18px auto;
         width: 72%;
-        height: 30px;
+        height: 2.8em;
         opacity: .8;
         border-style: solid;
         border-width: thin;
         border-color: #efefef;
         background-color: #fcfcfc !important;
+        font-size: 1.6em;
       }
       > button {
         width: 72%;
-        border-radius: 12px;
-        margin-top: 4px;
-        font-weight: 500;
-        font-size: .9em;
+        height: 2.5em;
+        border-radius: 500px;
+        margin-top: 8px;
+        font-weight: 800;
+        font-size: 1.6em;
         color: $primary-color-darker-darker;
         border-color: $primary-color-darker-darker;
         border-style: solid;
-        border-width: thin;
-        margin-bottom: 50px;
+        margin-bottom: 80px;
+        margin-top: 20px;
       }
     }
   }
@@ -263,18 +264,18 @@ a {
     }
 
     ul.nav {
-      padding-top: 8%;
+      padding: 8% 0 0;
       list-style: none;
       font-size: 2em;
       text-align: center;
       margin: 0;
       li a {
-	display: block;
-	color: #888;
-	line-height: 2;
-	font-size: 0.8em;
-	text-decoration: none;
-	&.active {color: $primary-color;}
+        display: block;
+        color: #888;
+        line-height: 2;
+        font-size: 0.8em;
+        text-decoration: none;
+        &.active {color: $primary-color;}
       }
     }
   }
@@ -283,7 +284,6 @@ a {
 .home-intro-left {
   width: 50%;
   margin-top: -36px;
-  min-height: 300px;
   background-color: white;
   font-family: $font-brand;
   color: #b4b3b3;
@@ -294,8 +294,6 @@ a {
     margin-top: -35px;
     padding: 80px;
     > p {
-      min-height: 300px;
-      font-size: 1.05em;
       opacity: .95;
     }
   }
@@ -321,7 +319,7 @@ a {
   background-repeat: no-repeat;
   background-position: center 0;
   text-align: center;
-  height: 50vh;
+  height: 75vh;
 }
 
 #header-content {
@@ -338,7 +336,9 @@ a {
 .scroll-arrow {
   position: absolute;
   width: 54px;
+  margin-left: -(54px/2);
   bottom: 10%;
+  left: 50%;
 }
 
 #header-text {
@@ -359,6 +359,9 @@ a {
   letter-spacing: 0.5px;
   color: #858585;
   font-size: 1.8em;
+  > span {
+    color: $primary-color;
+  }
 }
 
 .flexbox {
@@ -452,7 +455,7 @@ a {
     margin: 0 auto;
   }
   p {
-    max-width: 800px;
+    max-width: calc(100% - 200px - 120px); // 200px img, 60px*2 padding
     padding: 12px 0;
     text-align: left;
     display: inline-block;
@@ -502,10 +505,15 @@ a {
 }
 
 .services-text {
-  padding: 36px;
+  padding: 3em;
   opacity: .9;
   min-height: 360px;
   width: 50%;
+}
+
+.service-description {
+  opacity: 0.8;
+  padding: 1.5em 0;
 }
 
 .tennant-rep {
@@ -584,6 +592,12 @@ a {
   z-index: 10;
   cursor: pointer;
   @include close-button;
+}
+
+@media screen and (min-width: $page-max-width) {
+  body {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: $breakpoint-medium) {

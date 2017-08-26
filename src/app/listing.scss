@@ -1,7 +1,7 @@
 @import "variables.scss";
 
 #container-listing {
-  background-color: $dark-background-color;
+  background-color: #eee;
 
   strong {
     font-weight: 700;
@@ -9,7 +9,7 @@
 
   #listings-content {
     position: relative;
-    margin-top: -100px;
+    margin-top: -25vh;
   }
 
   .container {
@@ -58,7 +58,7 @@
   }
 
   #header-listings {
-    height: 50vh;
+    height: 75vh;
     position: relative;
     background-image: url(../images/listings-bg.jpg);
     background-size: cover;
@@ -74,7 +74,7 @@
       left: 0;
       height: 100px;
       width: 100%;
-      background-image: linear-gradient(to bottom, rgba($dark-background-color, 0), rgba($dark-background-color, 1));
+      background-image: linear-gradient(to bottom, rgba(#eee, 0), rgba(#eee, 1));
     }
   }
 
@@ -83,6 +83,8 @@
     font-family: $font-brand;
     color: $background-color;
     font-size: 6em;
+    padding-bottom: 0.5em;
+    text-shadow: 0px 3px 20px rgba(0,0,0,0.75);
   }
 
   #listings-sidebar {
@@ -181,13 +183,9 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) { // TODO: Use a size variable here
     #content {
       top: 1062px;
-    }
-
-    #listings-content {
-      margin-top: -200px;
     }
 
     #listings-sidebar {
@@ -202,7 +200,7 @@
       padding: 0;
     }
     #header-text-listings {
-      font-size: 4em;
+      font-size: 2.5em;
     }
     .listing-image-gallery {
       width: 100%;
