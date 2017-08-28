@@ -640,11 +640,14 @@ a {
 
   .review-slideshow {
     .inner {
-      .carousel-container {
-        padding: 0 60px;
-      }
       img {
         margin-top: 0;
+        width: 100%;
+        max-width: 90%;
+      }
+      p {
+        width: 100%;
+        max-width: 100%;
       }
     }
   }
