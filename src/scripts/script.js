@@ -9,6 +9,16 @@ $(document).ready(function() {
       $('.ham-menu-home').hide();
     }
   })
+  $("#features-toggle").click(function() {
+    $(".filters").toggle();
+    if ($(this).hasClass("plus-sign")) {
+      $(this).removeClass("plus-sign")
+      $(this).addClass("minus-sign")
+    } else {
+      $(this).removeClass("minus-sign")
+      $(this).addClass("plus-sign")
+    }
+  })
   $(".scroll-arrow").click(function() {
     window.scrollTo(0, $('#header-home').height());
   });
