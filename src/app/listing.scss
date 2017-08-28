@@ -27,36 +27,37 @@
     position: relative;
     .gallery-arrow-container {
       position: absolute;
-      width: 15%;
-      height: 15%;
+      width: 13%;
+      height: 13%;
+      font-size: .5em;
       max-width: 81px;
       max-height: 52px;
       bottom: 0;
       right: 0;
       margin: 12px;
       border: solid;
-      border-width: 2.5px;
+      border-width: 1.05px;
     }
     .gallery-navigation {
       position: absolute;
       bottom: 10px;
       border: solid;
-      border-width: 0 2px 2px 0;
+      border-width: 0 1.075px 1.075px 0;
       padding: 3px;
       font-size: 4em;
       width: .35em;
       max-width: 25px;
       height: .35em;
       max-height: 25px;
-      top: 25%;
+      top: 33%;
       z-index: 200;
     }
     .gallery-arrow-right {
-      right: 13%;
+      right: 20%;
       transform: rotate(-45deg);
     }
     .gallery-arrow-left {
-      left: 13%;
+      left: 20%;
       transform: rotate(135deg);
     }
   }
