@@ -2,26 +2,17 @@
 
 #container-listings {
   // need the actual asset
-  // background-image: url(../images/listings/background.png);
-  background-color: #fbfbfb;
+  background-image: url(../images/about/fs-bg.jpg);
+  background-size: cover;
   .content {
-    max-width: $page-max-width;
-    margin: 0 auto;
+    padding-top: 12vh;
   }
-
-  .ham-menu {
-    position: fixed;
-    display: block;
-    top: -14px;
-    right: -1px;
-  }
-
   .header {
-    margin-top: 100px;
     text-align: center;
     > h4 {
       font-size: 3em;
       margin-bottom: 20px;
+      margin: 0 0 20px 0;
       color: #514d4c;
     }
     > p {
@@ -129,6 +120,9 @@
       padding-left: 25px;
       padding-right: 25px;
       padding-bottom: 10px;
+      .header {
+        background-image: url(../images/about/fs-bg.jpg);
+      }
     }
     .footer {
       border-top: solid;
