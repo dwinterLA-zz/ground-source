@@ -9,7 +9,8 @@
 
   #listings-content {
     position: relative;
-    margin-top: -25vh;
+    margin: -25vh auto 0 auto;
+    max-width: $page-max-width;
   }
 
   .container {
