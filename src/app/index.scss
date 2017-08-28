@@ -371,7 +371,7 @@ a {
   flex-flow: row wrap;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1800px;
+  max-width: $page-max-width'
 }
 
 .flexbox-full {
@@ -525,7 +525,7 @@ a {
 
 .footer {
   .inner {
-    max-width: 1800px;
+    max-width: $page-max-width;
     margin: 0 auto;
   }
   position: relative;
