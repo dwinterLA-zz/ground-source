@@ -62,7 +62,7 @@
     max-width: 1050px;
     > * {
       height: 33px;
-      width: 20%; // TODO: 100% wide on mobile
+      width: 20%;
       margin: 8px;
       border-color: lightgrey;
       border-style: solid;
@@ -199,6 +199,11 @@
       }
       > input {
         width: 94%;
+      }
+    }
+    .listing-filters {
+      > * {
+        width: 100%;
       }
     }
   }
