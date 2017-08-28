@@ -630,7 +630,7 @@ a {
   .nav-modal {
     .inner {
       .modal-logo {
-        width: 36%;
+        @include mobile-logo;
       }
       ul.nav {
         margin-top: 42px;
@@ -653,9 +653,7 @@ a {
   }
 
   .logo-upper-left {
-    width: 46%;
-    top: 18px;
-    left: 14px;
+    @include mobile-logo;
   }
 
   .desktop-nav {
