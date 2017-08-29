@@ -2,7 +2,7 @@
 
 #container-listing {
   background-color: #eee;
-  font-size: 1.15em;
+  // font-size: 1.1em;
 
   strong {
     font-weight: 700;
@@ -27,38 +27,39 @@
     position: relative;
     .gallery-arrow-container {
       position: absolute;
-      width: 13%;
-      height: 13%;
+      width: 19%;
+      height: 17%;
       font-size: .5em;
-      max-width: 81px;
-      max-height: 52px;
-      bottom: 0;
-      right: 0;
+      opacity: .88;
+      bottom: 3px;
+      right: 8px;
       margin: 12px;
       border: solid;
-      border-width: 1.05px;
+      border-width: .35em;
     }
     .gallery-navigation {
       position: absolute;
       bottom: 10px;
       border: solid;
-      border-width: 0 1.075px 1.075px 0;
+      border-width: 0 .045em .045em 0;
       padding: 3px;
-      font-size: 4em;
+      font-size: 6em;
       width: .35em;
       max-width: 25px;
       height: .35em;
       max-height: 25px;
-      top: 33%;
+      top: 50%;
+      vertical-align: middle;
       z-index: 200;
     }
     .gallery-arrow-right {
-      right: 20%;
-      transform: rotate(-45deg);
+      right: 27%;
+      transform: translateY(-50%) rotate(-45deg);
     }
     .gallery-arrow-left {
-      left: 20%;
-      transform: rotate(135deg);
+      left: 27%;
+      top: 50%;
+      transform: translateY(-50%) rotate(135deg);
     }
   }
 
@@ -71,7 +72,7 @@
 
   #about-google-map {
     width: 100%;
-    height: 757px;
+    height: 647px;
   }
 
   .gallery-info {
@@ -134,7 +135,8 @@
   }
 
   .menu {
-    background-color: $primary-color;
+    background-color: $bg-color-listing;
+    opacity: .95;
     padding-bottom: 12px;
     font-weight: lighter;
   }
@@ -177,7 +179,8 @@
   }
 
   .info-box {
-    background-color: $primary-color;
+    background-color: $bg-color-listing;
+    opacity: .95;
     display: block;
     padding: 30px;
     color: white;
