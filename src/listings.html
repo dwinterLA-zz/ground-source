@@ -66,11 +66,12 @@
           <input type="text" placeholder="    Search properties" class="listings-search">
           <div class="submenu">
             <div id="features-toggle" class="plus-sign"></div>
-            LOOKING FOR CERTAIN FEATURES
+            <span class="subdued">LOOKING FOR CERTAIN FEATURES</span>
           </div>
         </div>
         <div class="flexbox listings filters">
           <select name="location">
+            <option value="playa-vista">Any Location</option>
             <option value="playa-vista">PLAYA VISTA</option>
             <option value="playa-vista">MARINA DEL REY</option>
             <option value="playa-vista">SANTA MONICA</option>
@@ -79,22 +80,25 @@
             <option value="playa-vista">PLAYA VISTA</option>
           </select>
           <select name="status">
+            <option value="foobar">Any Status</option>
             <option value="foobar">Foobar</option>
             <option value="goobar">Goobar</option>
           </select>
           <select name="type">
+            <option value="rent">Any Type</option>
             <option value="rent">Rent</option>
             <option value="lease">Lease</option>
           </select>
           <select name="min-rooms">
+            <option value="2">Min. Rooms</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <input type="text" placeholder=" Min. Size">
-          <input type="text" placeholder=" Keyword(e.g 'office')">
-          <input type="text" placeholder=" Price">
+          <input type="text" placeholder=" Min. Size" class="subdued">
+          <input type="text" placeholder=" Keyword(e.g 'office')" class="subdued">
+          <input type="text" placeholder=" Price" class="subdued">
           <button type"submit">SEARCH</button>
         </div>
         <div class="flexbox listings">
@@ -118,7 +122,7 @@
                   <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
                 </div>
               </div>
-              <div class="footer">
+              <div class="listing-preview-footer">
                 <strong>$4,500</strong> per month
               </div>
             </a>
@@ -143,7 +147,7 @@
                   <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
                 </div>
               </div>
-              <div class="footer">
+              <div class="listing-preview-footer">
                 <strong>$4,500</strong> per month
               </div>
             </a>
@@ -168,7 +172,7 @@
                   <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
                 </div>
               </div>
-              <div class="footer">
+              <div class="listing-preview-footer">
                 <strong>$4,500</strong> per month
               </div>
             </div>
@@ -195,7 +199,7 @@
                   <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
                 </div>
               </div>
-              <div class="footer">
+              <div class="listing-preview-footer">
                 <strong>$4,500</strong> per month
               </div>
             </a>
@@ -220,7 +224,7 @@
                   <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
                 </div>
               </div>
-              <div class="footer">
+              <div class="listing-preview-footer">
                 <strong>$4,500</strong> per month
               </div>
             </a>
@@ -245,7 +249,7 @@
                   <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
                 </div>
               </div>
-              <div class="footer">
+              <div class="listing-preview-footer">
                 <strong>$4,500</strong> per month
               </div>
             </a>
@@ -254,7 +258,7 @@
         <div class="paginator">
           <div class="navigate">&lt;-</div>
           <div class="pages">
-            <a href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">...</a>
+            <a href="#" class="selected">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">...</a>
           </div>
             <div class="navigate">-&gt;</div>
         </div>
