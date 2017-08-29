@@ -79,7 +79,7 @@
     font-size: .7em;
     width: 65vw;
     > * {
-      height: 33px;
+      height: 23px;
       width: 22%;
       margin: 6px 7px;
       border-color: lightgrey;
@@ -87,7 +87,6 @@
       border-width: thin;
     }
     > button {
-      // background-color: #d3553f;
       background-color: $primary-color-darker;
       color: white;
       border: none;
