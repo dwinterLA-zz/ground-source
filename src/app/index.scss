@@ -44,14 +44,26 @@ a {
 }
 
 #contact-us {
-  background-image: url(../images/contact-map.jpg);
+  // background-image: url(../images/contact-map.jpg);
+  position: relative;
   background-size: cover;
   background-position: center center;
   width: 100%;
   padding: 20px;
   color: $grey;
+  height: 473px;
+  #contact-us-gmap {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
   .contact-content {
     width: 50%;
+    z-index: 2;
+    position: absolute;
     .contact-header {
       font-size: 3em;
       background-color: white;
