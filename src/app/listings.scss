@@ -33,9 +33,6 @@
     margin-top: 15px;
     color: grey;
     font-size: .8em;
-    .plus-sign {
-      margin-right: 8px;
-    }
   }
 
   #features-toggle {
@@ -45,6 +42,9 @@
     border-width: thin;
     height:20px;
     width: 20px;
+    margin-right: 8px;
+    text-align: center;
+    vertical-align: middle;
     display: inline-block;
   }
 
@@ -70,14 +70,16 @@
   }
 
   .filters {
+    justify-content: center;
     background-color: white;
     display: none;
     box-shadow: 0px 0px 18px 6px #f2f2f2;
     padding: 15px 0;
+    text-align: center;
     > * {
       height: 33px;
       width: 22%;
-      margin: 11px;
+      margin: 6px 7px;
       border-color: lightgrey;
       border-style: solid;
       border-width: thin;
@@ -214,7 +216,7 @@
     }
     .filters {
       > * {
-        width: 100%;
+        width: 90%;
       }
     }
   }
