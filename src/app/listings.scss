@@ -87,7 +87,8 @@
       border-width: thin;
     }
     > button {
-      background-color: #d3553f;
+      // background-color: #d3553f;
+      background-color: $primary-color-darker;
       color: white;
       border: none;
     }
