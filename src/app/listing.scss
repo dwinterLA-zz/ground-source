@@ -180,12 +180,17 @@
 
   .info-box {
     background-color: $bg-color-listing;
-    opacity: .95;
     display: block;
     padding: 30px;
     color: white;
     overflow: hidden;
     margin-bottom: 24px;
+    opacity: .95;
+    .info-text {
+      > p {
+        opacity: .8;
+      }
+    }
     h2:first-child {
       margin-top: 0;
     }
