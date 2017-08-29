@@ -97,17 +97,15 @@
     width: calc(33% - 10px);
     margin-right: 10px;
     color: gray;
-    border: solid;
-    border-width: thin;
-    border-color: lightgray;
     background-color: white;
+    box-shadow: 0px 0px 18px 6px #f2f2f2;
     > a {
       text-decoration: none;
     }
     .header {
       background-image: url(../images/carousel/prop2-header.jpg);
       background-size: cover;
-      height: 235px;
+      height: 190px;
       margin: 0;
       position: relative;
       .label {
@@ -116,8 +114,8 @@
         left: -6px;
         background-color: $primary-color;
         color: white;
-        padding: 3px;
-        font-size: 1em;
+        padding: 3px 5px;
+        font-size: 1.1em;
       }
       .lease {
         background-color: $brand-blue;
@@ -133,16 +131,27 @@
       }
     }
     .listing-content {
-      font-size: 1.1em;
       line-height: 135%;
       padding-left: 25px;
       padding-right: 25px;
       padding-bottom: 10px;
+      opacity: .8;
+      .amenities {
+        font-size: .9em;
+        > p {
+          > img {
+            padding-right: 3px;
+          }
+        }
+      }
+      > p {
+        font-size: .8em;
+      }
     }
     .listing-preview-footer {
       border-top: solid;
-      border-width: thin;
-      border-color: lightgray;
+      border-width: 1.5px;
+      border-color: #f3f3f3;
       opacity: .9;
       padding: 18px;
     }

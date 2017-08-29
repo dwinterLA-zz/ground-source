@@ -67,6 +67,8 @@ a {
   }
   .contact-content {
     width: 50%;
+    max-width: 733px;
+    max-height: 432px;
     z-index: 2;
     position: absolute;
     .contact-header {
