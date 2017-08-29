@@ -168,12 +168,15 @@
         </div>
       </div>
     </div>
-    <div id="map"></div>
     <script>
-      function initMap() {
+      function initListingMap() {
         var uluru = {lat: 33.979449, lng: -118.413002};
         var map = new google.maps.Map(document.getElementById('about-google-map'), {
           zoom: 12,
+          scrollwheel: false,
+          navigationControl: false,
+          mapTypeControl: false,
+          scaleControl: false,
           center: uluru
         });
         var marker = new google.maps.Marker({
@@ -187,7 +190,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <!-- TODO replace API key -->
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoAiw62lFQnHpIqeqYJVu1KfRkcitEN0&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoAiw62lFQnHpIqeqYJVu1KfRkcitEN0&callback=initListingMap">
     </script>
 
     <!-- build:js(src) scripts/vendor.js -->
