@@ -1,0 +1,260 @@
+@import "variables.scss";
+
+#container-listings {
+  // need the actual asset
+  background-image: url(../images/about/fs-bg.jpg);
+  background-size: cover;
+  .content {
+    padding-top: 12vh;
+  }
+  .header {
+    text-align: center;
+    > h4 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      margin: 0 0 20px 0;
+      color: #514d4c;
+    }
+    > p {
+      font-size: 1.8em;
+      margin: 0 15% 0 15%;
+      opacity: .95;
+      color: gray;
+    }
+    > input {
+      margin-top: 40px;
+      border-radius: 30px;
+      width: 420px;
+      height: 50px;
+    }
+  }
+
+  .submenu {
+    margin-top: 15px;
+    color: grey;
+    font-size: .8em;
+  }
+
+  #features-toggle {
+    border-color: lightgrey;
+    color: lightgrey;
+    border-style: solid;
+    border-width: thin;
+    height:20px;
+    width: 20px;
+    margin-right: 8px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .plus-sign {
+    &:after {
+      content: "+"
+    }
+  }
+
+  .minus-sign {
+    &:after {
+      content: "-"
+    }
+  }
+
+  .listings {
+    margin: 42px auto 0;
+    width: 70vw;
+    max-width: $page-max-width;
+    > a {
+      text-decoration: none;
+    }
+  }
+
+  .filters {
+    justify-content: center;
+    background-color: white;
+    display: none;
+    box-shadow: 0px 0px 18px 6px #f2f2f2;
+    padding: 15px 0;
+    text-align: center;
+    font-size: .7em;
+    width: 70vw;
+    > * {
+      height: 23px;
+      width: 22%;
+      margin: 6px 7px;
+      border-color: lightgrey;
+      border-style: solid;
+      border-width: thin;
+    }
+    > button {
+      background-color: $primary-color-darker;
+      color: white;
+      border: none;
+    }
+  }
+
+  .listing-preview {
+    width: calc(33% - 10px);
+    margin-right: 10px;
+    color: gray;
+    background-color: white;
+    box-shadow: 0px 0px 18px 6px #f2f2f2;
+    > a {
+      text-decoration: none;
+    }
+    .header {
+      background-image: url(../images/carousel/prop2-header.jpg);
+      background-size: cover;
+      height: 190px;
+      margin: 0;
+      position: relative;
+      .label {
+        position: absolute;
+        top: 8px;
+        left: -6px;
+        background-color: $primary-color;
+        color: white;
+        padding: 3px 5px;
+        font-size: 1.1em;
+      }
+      .lease {
+        background-color: $brand-blue;
+      }
+      .address {
+        position: absolute;
+        left: 14px;
+        bottom: 14px;
+        color: white;
+        text-align: left;
+        padding: 0 0 12px 12px;
+        font-size: 1.2em;
+      }
+    }
+    .listing-content {
+      line-height: 135%;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-bottom: 10px;
+      opacity: .8;
+      .amenities {
+        font-size: .9em;
+        > p {
+          > img {
+            padding-right: 3px;
+          }
+        }
+      }
+      > p {
+        font-size: .8em;
+      }
+    }
+    .listing-preview-footer {
+      border-top: solid;
+      border-width: 1.5px;
+      border-color: #f3f3f3;
+      opacity: .9;
+      padding: 18px;
+    }
+  }
+
+  .amenities {
+    > p {
+      display: inline-block;
+      width: 49%;
+      white-space: nowrap;
+    }
+  }
+
+  .listings-search {
+    border-style: solid;
+    border-color: lightgray;
+  }
+
+  input.listings-search::-webkit-input-placeholder{
+  color: $listings-text;
+  font-size:1.1em;
+  font-family: $font-brand;
+  line-height: 110%;
+  opacity: .7;
+  }
+
+  .paginator {
+    text-align: center;
+    position: relative;
+    font-size: .9em;
+    color: #959595;
+    margin: 35px 0 35px 0;
+    > div {
+      display: inline-block;
+      padding: 3px;
+    }
+    .pages {
+      .selected {
+        background-color: #e6e6e6;
+        border-style: none;
+        border-width: thin;
+        opacity: 1;
+        box-shadow: 0px 0px 2em gainsboro;
+      }
+      .next {
+        display: inline;
+      }
+      > a {
+        margin: 0px;
+        padding: 0px 11px 0px 11px;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        line-height: 28px;
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+      }
+    }
+   .navigate-page {
+     color: $primary-color;
+
+   }
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    .listings {
+      width: 90%;
+    }
+
+    .listing-preview {
+      margin-right: 0px !important;
+    }
+
+    .paginator {
+      margin-top: 0;
+      > div {
+        padding: 3px;
+      }
+    }
+
+    .listing-preview {
+      width: 92%;
+      margin-bottom: 34px;
+    }
+    .header {
+      > p {
+        margin: 1px;
+      }
+      > input {
+        width: 94%;
+      }
+    }
+    .filters {
+      > * {
+        width: 90%;
+      }
+    }
+  }
+}
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

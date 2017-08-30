@@ -1,0 +1,870 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import "vendor/sanitize.scss";
+@import "listing.scss";
+@import "listings.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+html {
+  font-family: $font-brand;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  width: 100%;
+  font-family: $font-brand;
+  font-size: 1vw;
+}
+
+strong, b {
+  font-weight: 700
+}
+
+a {
+  color: inherit;
+}
+
+.content {
+  position: relative;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.subdued {
+  opacity: .5;
+}
+
+#contact-us-gmap {
+  width: 100%;
+  height: 100%;
+}
+
+#contact-us-home-section {
+  position: relative;
+  color: $grey;
+  min-height: 473px;
+  .contact-us-gmap-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .contact-content {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1%;
+    width: 55%;
+    z-index: 2;
+    position: absolute;
+    .contact-header {
+      font-size: 3em;
+      background-color: white;
+      padding: 1em;
+    }
+    .contact-body {
+      font-size: 1.3em;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px 0;
+      > ul {
+        list-style-type: none;
+        margin: 0;
+        > li {
+          padding: 12px;
+        }
+      }
+    }
+  }
+}
+
+.black {
+  color: black;
+}
+.left {
+  float: left;
+  width: 49%;
+  padding-right: 15px;
+}
+
+.right {
+  float: right;
+  width: 49%;
+  padding-left: 1px;
+}
+
+.contact-us-link {
+  cursor: pointer;
+}
+
+.property-slideshow {
+  padding-top: 12px;
+}
+
+.preview-contents {
+  padding: 8px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.preview-map {
+  width: 230px;
+  position: absolute;
+  margin-top: -30px;
+
+}
+
+.preview-title {
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  margin-top: -65px;
+  margin-left: 31px;
+}
+
+.medium-white-text {
+  color: white;
+  font-size: 1.5em;
+  opacity: .95;
+}
+
+.preview-text {
+  font-size: .75em;
+  font-weight: lighter;
+  color: #858585;
+}
+
+.review {
+  outline: none;
+  padding: 0 60px;
+}
+
+#home-image {
+  vertical-align: middle;
+}
+
+.logo-upper-left {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  width: 278px;
+  height: auto;
+  z-index: 2;
+}
+
+.ham-menu {
+  @include hamburger-menu;
+}
+
+#top-nav {
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  > ul {
+    list-style-type: none;
+    margin: 30px 30px 0 0;
+    > li {
+      display: inline;
+      font-size: 1.2em;
+      padding: 8px;
+      > a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.ham-menu-mobile {
+  @include hamburger-menu;
+}
+
+.ham-menu-home {
+  display: none;
+}
+
+.contact-us-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  .contact-form {
+    width: 70%;
+    margin: 112px auto 0 auto;
+    font-size: 1.6em;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 18px 6px #f2f2f2;
+    position: relative;
+    max-width: 1200px;
+    .contact-close {
+      @include close-button;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      color: $primary-color;
+      width: 13px;
+      height: 21px;
+      cursor: pointer;
+    }
+    .form {
+      margin: 36px;
+      > p {
+        padding-top: 75px;
+        font-weight: 50;
+        margin-bottom: 42px;
+        color: #777777;
+        opacity: .9;
+        font-size: 2em;
+      }
+      > input {
+        display: block;
+        margin: 0 auto 18px auto;
+        width: 72%;
+        height: 2.8em;
+        opacity: .8;
+        border-style: solid;
+        border-width: thin;
+        border-color: #efefef;
+        background-color: #fcfcfc !important;
+      }
+      > button {
+        width: 72%;
+        height: 2.5em;
+        border-radius: 500px;
+        margin-top: 8px;
+        font-weight: 800;
+        color: $primary-color-darker-darker;
+        border-color: $primary-color-darker-darker;
+        border-style: solid;
+        margin-bottom: 80px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.nav-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 10;
+  text-align: center;
+  .inner {
+    padding: 15px;
+    position: relative;
+    .modal-logo {
+      width: 278px;
+      position: absolute;
+      top: 35px; left: 35px;
+    }
+    .menu-close {
+      @include close-button;
+    }
+
+    ul.nav {
+      padding: 8% 0 0;
+      list-style: none;
+      font-size: 2em;
+      text-align: center;
+      margin: 0;
+      li a {
+        display: block;
+        color: #888;
+        line-height: 2;
+        font-size: 0.8em;
+        text-decoration: none;
+        &.active {color: $primary-color;}
+      }
+    }
+  }
+}
+
+.home-intro-left {
+  width: 50%;
+  margin-top: -36px;
+  background-color: white;
+  font-family: $font-brand;
+  color: #b4b3b3;
+  letter-spacing: 0.5px;
+  color: #858585;
+  overflow: hidden;
+  > div {
+    margin-top: -35px;
+    padding: 80px;
+    > p {
+      opacity: .95;
+    }
+  }
+}
+
+.home-intro-right {
+  width: 50%;
+  background-image: url("../images/about-us.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.preview-header {
+  height: 50%;
+  width: 100%;
+}
+
+#header-home {
+  position: relative;
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  text-align: center;
+  height: 75vh;
+}
+
+#header-content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#header-logo {
+  height: 47px;
+}
+
+.scroll-arrow {
+  position: absolute;
+  width: 54px;
+  margin-left: -(54px/2);
+  bottom: 10%;
+  left: 50%;
+}
+
+#header-text {
+  font-family: $font-brand;
+  color: #858585;
+  font-size: 1.5em;
+  padding-top: 25px;
+}
+
+#item-top {
+  margin-top: -442px;
+  background-color: $background-color;
+}
+
+.section-header {
+  font-family: $font-brand;
+  color: #b4b3b3;
+  letter-spacing: 0.5px;
+  color: #858585;
+  font-size: 1.8em;
+  > span {
+    color: $primary-color;
+  }
+}
+
+.flexbox {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: $page-max-width;
+}
+
+.flexbox-full {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+
+.item {
+  width: $col-width;
+  margin: 16px;
+}
+
+.logo-small {
+  height: $logo-small;
+  margin-bottom: 4px;
+}
+
+.image-medium {
+  height: $medium-image-height;
+}
+
+.title {
+  letter-spacing: $title-letter-spacing;
+  font-weight: lighter;
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+}
+
+#review-navigator {
+  width: 100%;
+  div {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    color: $primary-color-darker-darker;
+    display: inline-block;
+    &.selected {
+      background-color: $primary-color-darker-darker;
+      box-shadow: -2px 2px 1px #888888;
+    }
+  }
+}
+
+.navigation-arrows {
+  position: absolute;
+  top: 47%;
+  border: solid $primary-color;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  font-size: 4em;
+  width: 18px;
+  height: 18px;
+  z-index: 2;
+}
+
+.navigation-arrow-left {
+  transform: rotate(135deg);
+  left: 5%;
+}
+
+.navigation-arrow-right {
+  transform: rotate(-45deg);
+  right: 5%;
+}
+
+.review-slideshow {
+  background: linear-gradient(to bottom, #fbf9fa, #d4d2d3);
+  color: gray;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 43px 12px;
+  .inner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  p {
+    max-width: calc(100% - 200px - 120px); // 200px img, 60px*2 padding
+    padding: 12px 0;
+    text-align: left;
+    display: inline-block;
+    strong {
+      text-transform: uppercase;
+    }
+  }
+  img {
+    display: inline-block;
+    margin-right: 22px;
+    margin-top: -7%;
+    z-index: 25;
+    width: 100px;
+    border-style: solid;
+    border-radius: 500px;
+    border-color: white;
+  }
+}
+
+.learn-more {
+  max-width: 35%;
+}
+
+.services-info {
+  position: relative;
+  background-color: $primary-color;
+  color: white;
+  display: flex;
+  .services-img {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    background-image: url(../images/services.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+  .services-content {
+    margin-left: 33%;
+    max-width: 1200px;
+    height: 100%;
+  }
+}
+
+.services-header {
+  padding-left: 33px;
+  font-size: 3em;
+}
+
+.services-row {
+  display: flex;
+  align-items: stretch;
+}
+
+.services-text {
+  padding: 3em;
+  opacity: .9;
+  width: 50%;
+}
+
+.service-description {
+  opacity: 0.8;
+  padding: 1.5em 0;
+}
+
+.tennant-rep {
+  background-color: $primary-color-darker-darker;
+}
+
+.landlord-rep {
+  background-color: $primary-color-lighter;
+}
+
+.footer {
+  .inner {
+    max-width: $page-max-width;
+    margin: 0 auto;
+  }
+  position: relative;
+  background: $primary-color;
+  padding: 1% 1% 0 1%;
+  color: white;
+  & > * { line-height: 2.2; }
+  .column {
+    font-size: 1.2em;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5%;
+    .title {font-weight: bold}
+    opacity: .9;
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      opacity: .85;
+      font-size: 85%;
+      img {
+        color: white;
+        width: 1em;
+      }
+    }
+    &.copyright {
+      display: block;
+      padding-top: 30px;
+      opacity: .7;
+    }
+    &.social {
+      float: right;
+      margin-right: 0;
+      font-size: 1.5em;
+      text-align: right;
+      line-height: 1;
+      a {padding: 0.5em;}
+    }
+  }
+}
+
+.icon-small {
+  width: 38px;
+  margin-right: 15px;
+}
+
+#listings-arrow-left {
+  left: -158px;
+  top: 66px;
+}
+
+#listings-arrow-right {
+  left: 374px;
+  top: 66px;
+}
+
+.listings-arrow {
+  position: absolute;
+  width: 300px;
+}
+
+.simple-close {
+  z-index: 10;
+  cursor: pointer;
+  @include close-button;
+}
+
+@media screen and (min-width: $page-max-width) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  // &.listings-arrow {
+  //   display: none;
+  // }
+
+  .property-preview {
+    width: 69%;
+    opacity: 1;
+    position: relative;
+    font-size: 1.3em;
+    overflow: scroll;
+    &.selected {
+      transform: scale(1);
+    }
+  }
+}
+@media screen and (max-width: $breakpoint-small) {
+  body {
+    font-size: .9em;
+  }
+
+  .ham-menu {
+    display: block !important;
+  }
+
+  #top-nav {
+    display: none !important;
+  }
+  .nav-modal {
+    .inner {
+      .modal-logo {
+        @include mobile-logo;
+      }
+      ul.nav {
+        margin-top: 42px;
+      }
+    }
+  }
+
+  .review-slideshow {
+    .inner {
+      img {
+        margin-top: 0;
+        max-width: 35%;
+      }
+      p {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .logo-upper-left {
+    @include mobile-logo;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  #header-logo {
+    height: 28px;
+  }
+
+  #contact-us {
+    padding: 0;
+    .contact-us-gmap-container {
+      position: static;
+      display: none;
+      width: 100%;
+      height: 300px;
+    }
+    .contact-content {
+      width: 100%;
+      position: static;
+      .contact-header {
+        padding: 25px 0 0 0;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.8);
+      }
+      .contact-body {
+        padding: 12px 0 0 0;
+        background: rgba(255, 255, 255, 0.8);
+        > ul {
+          padding: 0 0 17px 20px;
+        }
+      }
+    }
+  }
+  .small-hidden {
+    display: none;
+  }
+
+  .contact-us-modal {
+    .contact-form {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+      .form {
+        margin: 0;
+        > p {
+          padding-top: 20px;
+          font-size: 1.8em;
+        }
+      }
+    }
+  }
+
+  .home-intro-left {
+    width: 100%;
+    > div {
+      padding: 80px 20px 0 20px;
+    }
+  }
+
+  .home-intro-right {
+    width: 50%;
+  }
+
+  .services-info {
+    width: 100%;
+    .services-content {
+      margin-left: 0;
+    }
+  }
+
+  .services-row {
+    display: block;
+    .services-text {
+      width: 100%;
+    }
+  }
+
+  .services-img {
+    display: none;
+  }
+
+  .property-preview {
+    width: 90%;
+  }
+
+  #header-home {
+   height: 80vh;
+  }
+
+  .home-intro {
+    width: 80%;
+    margin-top: 0;
+    > div {
+      padding: 10px;
+    }
+  }
+
+  .nav {
+    > li {
+      display: block;
+    }
+  }
+
+  #listings-sidebar {
+    width: 90%;
+  }
+
+  #listings-info {
+    width: 90%;
+  }
+
+  .ham-menu {
+    height: 2em;
+    width: 2em;
+  }
+
+  .services-info {
+    width: 100%;
+  }
+
+  #contact-us {
+    background-color: white;
+    background-image: none;
+    height: 340px;
+    .contact-content {
+      width: 100%;
+      top: 0;
+      left: 0;
+      .contact-header {
+        text-align: center;
+      }
+      .contact-body {
+        padding: 0;
+        > ul {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+  .footer {
+    background: $primary-color;
+    padding: 2%;
+    color: white;
+    & > * { line-height: 2.2; }
+    .column {
+      display: block;
+      margin-right: 5%;
+      .title {font-weight: bold}
+      margin-left: 5%;
+      opacity: .9;
+      &.copyright {
+        margin-top: 10%;
+        margin-left: 3%;
+      }
+      &.social {
+        margin: 0 0 0 9px;
+        display: block;
+        float: left;
+        > a {
+          float: left;
+          padding-right: 2px;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        opacity: .85;
+        img {
+          color: white;
+          width: 1em;
+        }
+      }
+    }
+  }
+}
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
