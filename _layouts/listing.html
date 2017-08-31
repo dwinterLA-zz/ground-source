@@ -44,7 +44,7 @@
       <img src="images/logo.png" class="logo-upper-left"/>
       <div id="header-listings" class="background-header"></div>
       <div id="listings-content">
-        <div id="header-text-listings"><strong>PLAYA</strong> JEFFERSON</div>
+        <div id="header-text-listings">{{ page.location }}</div>
         <div class="container">
           <div id="listings-sidebar">
             <div class="menu-top">
@@ -57,30 +57,16 @@
               <h2 class="sidebar-header"><span class="subdued"><strong>PROPERTY</strong> HIGHLIGHTS</span></h2>
               <hr class ="light-line">
               <ul class="bond-list">
-                <li>200,000 SQ FT</li>
-                <hr>
-                <li>CENTRAL LOCATION</li>
-                <hr>
-                <li>INSPIRING ARCHITECTURE</li>
-                <hr>
-                <li>GREEN FRIENDLY</li>
-                <hr>
+                {% for highlight in page.highlights %}
+                  <li>{{ highlight }}</li>
+                  <hr>
+                {% endfor %}
               </ul>
               <h2 class="sidebar-header"><strong>AMENITIES</strong></h2>
               <hr class="light-line">
               <ul class="bond-list">
-                <li>FIBER INTERNET</li>
-                <hr>
-                <li>COMMUNAL BIKES</li>
-                <hr>
-                <li>OUTDOOR MEETING / DINING</li>
-                <hr>
-                <li>VIBRANT LANDSCAPING</li>
-                <hr>
-                <li>ONSITE SECURITY</li>
-                <hr>
-
-                <li>COMPLIMENTARY CLEANING SERVICE</li>
+                {% for amenity in page.amenities %}
+                <li>{{ amenity }}</li>
                 <hr>
               </ul>
             </div>

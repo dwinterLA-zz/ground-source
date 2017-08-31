@@ -30,8 +30,13 @@ theme: minima
 plugins:
   - jekyll-feed
 collections:
-  - testimonials
+  listings:
+    output: true
+    permalink: /:collection/:path
+    values:
+      layout: index
 
+  testimonials:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
