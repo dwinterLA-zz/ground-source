@@ -31,10 +31,9 @@ plugins:
   - jekyll-feed
 collections:
   listings:
+    layout: listing
     output: true
     permalink: /:collection/:path
-    values:
-      layout: index
 
   testimonials:
 # Exclude from processing.
