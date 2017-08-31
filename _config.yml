@@ -31,9 +31,11 @@ plugins:
   - jekyll-feed
 collections:
   listings:
-    layout: listing
     output: true
-    permalink: /:collection/:path
+    scope:
+     permalink: /:collection/:path
+    values:
+     layout: listing
 
   testimonials:
 # Exclude from processing.
