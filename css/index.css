@@ -1,0 +1,1868 @@
+/*! sanitize.css v5.0.0 | CC0 License | github.com/jonathantneal/sanitize.css */
+/* Document (https://html.spec.whatwg.org/multipage/semantics.html#semantics)
+   ========================================================================== */
+/**
+ * 1. Remove repeating backgrounds in all browsers (opinionated).
+ * 2. Add box sizing inheritence in all browsers (opinionated).
+ */
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  /* 1 */
+  box-sizing: inherit;
+  /* 2 */ }
+
+/**
+ * 1. Add text decoration inheritance in all browsers (opinionated).
+ * 2. Add vertical alignment inheritence in all browsers (opinionated).
+ */
+::before,
+::after {
+  text-decoration: inherit;
+  /* 1 */
+  vertical-align: inherit;
+  /* 2 */ }
+
+/**
+ * 1. Add border box sizing in all browsers (opinionated).
+ * 2. Add the default cursor in all browsers (opinionated).
+ * 3. Prevent font size adjustments after orientation changes in IE and iOS.
+ */
+html {
+  box-sizing: border-box;
+  /* 1 */
+  cursor: default;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/* Sections (https://html.spec.whatwg.org/multipage/semantics.html#sections)
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+/* Grouping content (https://html.spec.whatwg.org/multipage/semantics.html#grouping-content)
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * Remove the list style on navigation lists in all browsers (opinionated).
+ */
+nav ol,
+nav ul {
+  list-style: none; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics (https://html.spec.whatwg.org/multipage/semantics.html#text-level-semantics)
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ffff00;
+  color: #000000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -.25em; }
+
+sup {
+  top: -.5em; }
+
+/*
+ * Remove the text shadow on text selections (opinionated).
+ * 1. Restore the coloring undone by defining the text shadow (opinionated).
+ */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* 1 */
+  color: #000000;
+  /* 1 */
+  text-shadow: none; }
+
+::selection {
+  background-color: #b3d4fc;
+  /* 1 */
+  color: #000000;
+  /* 1 */
+  text-shadow: none; }
+
+/* Embedded content (https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content)
+   ========================================================================== */
+/*
+ * Change the alignment on media elements in all browers (opinionated).
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
+svg {
+  fill: currentColor; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Tabular data (https://html.spec.whatwg.org/multipage/tables.html#tables)
+   ========================================================================== */
+/**
+ * Collapse border spacing
+ */
+table {
+  border-collapse: collapse; }
+
+/* Forms (https://html.spec.whatwg.org/multipage/forms.html#forms)
+   ========================================================================== */
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0; }
+
+/**
+ * Inherit styling in all browsers (opinionated).
+ */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * 1. Remove the default vertical scrollbar in IE.
+ * 2. Change the resize direction on textareas in all browsers (opinionated).
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  resize: vertical;
+  /* 2 */ }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive elements (https://html.spec.whatwg.org/multipage/forms.html#interactive-elements)
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting (https://html.spec.whatwg.org/multipage/scripting.html#scripting-3)
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* User interaction (https://html.spec.whatwg.org/multipage/interaction.html#editing)
+   ========================================================================== */
+/*
+ * Remove the tapping delay on clickable elements (opinionated).
+ * 1. Remove the tapping delay in IE 10.
+ */
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  /* 1 */
+  touch-action: manipulation; }
+
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+/* ARIA (https://w3c.github.io/html-aria/)
+   ========================================================================== */
+/**
+ * Change the cursor on busy elements (opinionated).
+ */
+[aria-busy="true"] {
+  cursor: progress; }
+
+/*
+ * Change the cursor on control elements (opinionated).
+ */
+[aria-controls] {
+  cursor: pointer; }
+
+/*
+ * Change the display on visually hidden accessible elements (opinionated).
+ */
+[aria-hidden="false"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute; }
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements (opinionated).
+ */
+[aria-disabled] {
+  cursor: default; }
+
+#container-listing {
+  background-color: #eee; }
+  #container-listing strong {
+    font-weight: 700; }
+  #container-listing #listings-content {
+    position: relative;
+    margin: -25vh auto 0 auto;
+    max-width: 1800px; }
+  #container-listing .container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-flow: row wrap; }
+  #container-listing .listing-image-gallery {
+    width: 50%;
+    float: right;
+    position: relative; }
+    #container-listing .listing-image-gallery .gallery-arrow-container {
+      position: absolute;
+      width: 19%;
+      height: 17%;
+      font-size: .5em;
+      opacity: .88;
+      bottom: 3px;
+      right: 8px;
+      margin: 12px;
+      border: solid;
+      border-width: .35em; }
+    #container-listing .listing-image-gallery .gallery-navigation {
+      position: absolute;
+      bottom: 10px;
+      border: solid;
+      border-width: 0 .045em .045em 0;
+      padding: 3px;
+      font-size: 6em;
+      width: .35em;
+      max-width: 25px;
+      height: .35em;
+      max-height: 25px;
+      top: 50%;
+      vertical-align: middle;
+      z-index: 200; }
+    #container-listing .listing-image-gallery .gallery-arrow-right {
+      right: 27%;
+      transform: translateY(-50%) rotate(-45deg); }
+    #container-listing .listing-image-gallery .gallery-arrow-left {
+      left: 27%;
+      top: 50%;
+      transform: translateY(-50%) rotate(135deg); }
+  #container-listing .gallery-controls {
+    width: 14%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px; }
+  #container-listing #about-google-map {
+    width: 100%;
+    height: 647px; }
+  #container-listing .gallery-info {
+    width: 270px; }
+  #container-listing #header-listings {
+    height: 75vh;
+    position: relative;
+    background-image: url(../images/listings-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    text-align: center; }
+    #container-listing #header-listings:after {
+      display: block;
+      content: " ";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100px;
+      width: 100%;
+      background-image: linear-gradient(to bottom, rgba(238, 238, 238, 0), #eeeeee); }
+  #container-listing #header-text-listings {
+    text-align: center;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 6em;
+    padding-bottom: 0.5em;
+    text-shadow: 0px 3px 20px rgba(0, 0, 0, 0.75); }
+  #container-listing #listings-sidebar {
+    width: 33%;
+    padding: 0 12px; }
+  #container-listing #listings-info {
+    width: 66%;
+    padding: 0 12px; }
+  #container-listing .sidebar-header {
+    margin: 0;
+    padding: 10px 0;
+    font-weight: lighter; }
+  #container-listing .subdued {
+    opacity: .90; }
+  #container-listing .menu-top {
+    background-image: url(../images/listings-cta-bg.jpg);
+    padding: 30px; }
+  #container-listing .menu {
+    background-color: #d8614b;
+    opacity: .95;
+    padding-bottom: 12px;
+    font-weight: lighter; }
+  #container-listing .light-line {
+    border-style: solid;
+    opacity: .9; }
+  #container-listing .bond-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    #container-listing .bond-list > li {
+      padding: 14px;
+      font-size: 1em;
+      font-weight: lighter;
+      opacity: .8; }
+    #container-listing .bond-list > hr {
+      border-color: #c35440;
+      opacity: .5;
+      border-style: solid; }
+  #container-listing .menu {
+    color: white;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    letter-spacing: 1.3px;
+    padding: 30px; }
+  #container-listing .info-text {
+    float: left;
+    font-weight: lighter;
+    width: 50%;
+    padding-right: 15px; }
+  #container-listing .info-box {
+    background-color: #d8614b;
+    display: block;
+    padding: 30px;
+    color: white;
+    overflow: hidden;
+    margin-bottom: 24px;
+    opacity: .95; }
+    #container-listing .info-box .info-text > p {
+      opacity: .8; }
+    #container-listing .info-box h2:first-child {
+      margin-top: 0; }
+  #container-listing .cool-button {
+    display: block;
+    padding: 14px 8px;
+    margin: 10px 0;
+    color: #fff;
+    border: 2px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    font-size: 1em; }
+    #container-listing .cool-button:hover {
+      color: #d46049;
+      background-color: white; }
+  @media screen and (max-width: 768px) {
+    #container-listing #content {
+      top: 1062px; }
+    #container-listing #listings-sidebar {
+      width: 100%;
+      margin: 10px 0 0 0;
+      padding: 0; }
+    #container-listing #listings-info {
+      width: 100%;
+      margin: 0;
+      padding: 0; }
+    #container-listing #header-text-listings {
+      font-size: 2.5em; }
+    #container-listing #about-google-map {
+      height: 378px; }
+    #container-listing .listing-image-gallery {
+      width: 100%; }
+    #container-listing .info-text {
+      width: 100%;
+      margin-bottom: 5px; }
+    #container-listing .info-box {
+      margin-top: 24px; } }
+
+#container-listings {
+  background-image: url(../images/about/fs-bg.jpg);
+  background-size: cover; }
+  #container-listings .content {
+    padding-top: 12vh; }
+  #container-listings .header {
+    text-align: center; }
+    #container-listings .header > h4 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      margin: 0 0 20px 0;
+      color: #514d4c; }
+    #container-listings .header > p {
+      font-size: 1.8em;
+      margin: 0 15% 0 15%;
+      opacity: .95;
+      color: gray; }
+    #container-listings .header > input {
+      margin-top: 40px;
+      border-radius: 30px;
+      width: 420px;
+      height: 50px; }
+  #container-listings .submenu {
+    margin-top: 15px;
+    color: grey;
+    font-size: .8em; }
+  #container-listings #features-toggle {
+    border-color: lightgrey;
+    color: lightgrey;
+    border-style: solid;
+    border-width: thin;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block; }
+  #container-listings .plus-sign:after {
+    content: "+"; }
+  #container-listings .minus-sign:after {
+    content: "-"; }
+  #container-listings .listings {
+    margin: 42px auto 0;
+    width: 70vw;
+    max-width: 1800px; }
+    #container-listings .listings > a {
+      text-decoration: none; }
+  #container-listings .filters {
+    justify-content: center;
+    background-color: white;
+    display: none;
+    box-shadow: 0px 0px 18px 6px #f2f2f2;
+    padding: 15px 0;
+    text-align: center;
+    font-size: .7em;
+    width: 70vw; }
+    #container-listings .filters > * {
+      height: 23px;
+      width: 22%;
+      margin: 6px 7px;
+      border-color: lightgrey;
+      border-style: solid;
+      border-width: thin; }
+    #container-listings .filters > button {
+      background-color: #d35540;
+      color: white;
+      border: none; }
+  #container-listings .listing-preview {
+    width: calc(33% - 10px);
+    margin-right: 10px;
+    color: gray;
+    background-color: white;
+    box-shadow: 0px 0px 18px 6px #f2f2f2; }
+    #container-listings .listing-preview > a {
+      text-decoration: none; }
+    #container-listings .listing-preview .header {
+      background-image: url(../images/carousel/prop2-header.jpg);
+      background-size: cover;
+      height: 190px;
+      margin: 0;
+      position: relative; }
+      #container-listings .listing-preview .header .label {
+        position: absolute;
+        top: 8px;
+        left: -6px;
+        background-color: #d46049;
+        color: white;
+        padding: 3px 5px;
+        font-size: 1.1em; }
+      #container-listings .listing-preview .header .lease {
+        background-color: #387ac8; }
+      #container-listings .listing-preview .header .address {
+        position: absolute;
+        left: 14px;
+        bottom: 14px;
+        color: white;
+        text-align: left;
+        padding: 0 0 12px 12px;
+        font-size: 1.2em; }
+    #container-listings .listing-preview .listing-content {
+      line-height: 135%;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-bottom: 10px;
+      opacity: .8; }
+      #container-listings .listing-preview .listing-content .amenities {
+        font-size: .9em; }
+        #container-listings .listing-preview .listing-content .amenities > p > img {
+          padding-right: 3px; }
+      #container-listings .listing-preview .listing-content > p {
+        font-size: .8em; }
+    #container-listings .listing-preview .listing-preview-footer {
+      border-top: solid;
+      border-width: 1.5px;
+      border-color: #f3f3f3;
+      opacity: .9;
+      padding: 18px; }
+  #container-listings .amenities > p {
+    display: inline-block;
+    width: 49%;
+    white-space: nowrap; }
+  #container-listings .listings-search {
+    border-style: solid;
+    border-color: lightgray; }
+  #container-listings input.listings-search::-webkit-input-placeholder {
+    color: #de6c62;
+    font-size: 1.1em;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    line-height: 110%;
+    opacity: .7; }
+  #container-listings .paginator {
+    text-align: center;
+    position: relative;
+    font-size: .9em;
+    color: #959595;
+    margin: 35px 0 35px 0; }
+    #container-listings .paginator > div {
+      display: inline-block;
+      padding: 3px; }
+    #container-listings .paginator .pages .selected {
+      background-color: #e6e6e6;
+      border-style: none;
+      border-width: thin;
+      opacity: 1;
+      box-shadow: 0px 0px 2em gainsboro; }
+    #container-listings .paginator .pages .next {
+      display: inline; }
+    #container-listings .paginator .pages > a {
+      margin: 0px;
+      padding: 0px 11px 0px 11px;
+      text-align: center;
+      vertical-align: middle;
+      text-decoration: none;
+      line-height: 28px;
+      display: inline-block;
+      width: 25px;
+      height: 25px; }
+    #container-listings .paginator .navigate-page {
+      color: #d46049; }
+  @media screen and (max-width: 768px) {
+    #container-listings .listings {
+      width: 90%; }
+    #container-listings .listing-preview {
+      margin-right: 0px !important; }
+    #container-listings .paginator {
+      margin-top: 0; }
+      #container-listings .paginator > div {
+        padding: 3px; }
+    #container-listings .listing-preview {
+      width: 92%;
+      margin-bottom: 34px; }
+    #container-listings .header > p {
+      margin: 1px; }
+    #container-listings .header > input {
+      width: 94%; }
+    #container-listings .filters > * {
+      width: 90%; } }
+
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+#about-header .ham-menu {
+  display: block; }
+
+#container-about {
+  color: #b0b0b0;
+  margin: 0 auto; }
+  #container-about #header-about {
+    margin-top: -3%;
+    background-image: url(../images/about/fs-bg.jpg);
+    background-size: cover;
+    width: 100%; }
+    #container-about #header-about img.image-left {
+      display: inline-block;
+      width: 100%; }
+    #container-about #header-about .mobile-bg-hide {
+      display: none; }
+    #container-about #header-about .header-image {
+      width: 40%; }
+    #container-about #header-about .description {
+      width: 40%;
+      vertical-align: bottom;
+      padding: 0 2em;
+      padding-top: 181px; }
+      #container-about #header-about .description > p {
+        padding-top: 15px; }
+      #container-about #header-about .description .head-title {
+        font-size: 2.2em; }
+        #container-about #header-about .description .head-title span {
+          font-weight: bold;
+          color: #d46049; }
+  #container-about .rounded-red-button {
+    border-radius: 500px;
+    margin-top: 4px;
+    font-weight: 500;
+    font-size: .9em;
+    color: #c04d3a;
+    border-color: #c04d3a;
+    border-style: solid;
+    border-width: thin;
+    padding: 5px 20px; }
+  #container-about .bio-pic-mobile {
+    display: none; }
+  #container-about .agent-details {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8); }
+    #container-about .agent-details .content {
+      position: relative;
+      max-width: 1400px;
+      background-color: white;
+      width: 60vw;
+      margin: 200px auto 0 auto;
+      box-shadow: 0px 0px 2em gainsboro;
+      font-size: 1.2em; }
+      #container-about .agent-details .content .header {
+        position: relative;
+        margin-bottom: 5%; }
+        #container-about .agent-details .content .header .bio-pic {
+          position: absolute;
+          left: -10px;
+          height: 100%; }
+        #container-about .agent-details .content .header .contact {
+          margin-left: 34%;
+          display: inline-block; }
+          #container-about .agent-details .content .header .contact > h4 {
+            color: #3e3e3e;
+            font-weight: 100;
+            font-size: 1.8em;
+            margin-bottom: 5px; }
+      #container-about .agent-details .content .bio {
+        margin: 0 30px 25px 30px;
+        color: black;
+        opacity: .55;
+        line-height: 110%; }
+        #container-about .agent-details .content .bio > h2 {
+          font-size: 1.8em;
+          opacity: 1; }
+      #container-about .agent-details .content .footer {
+        background-color: #d46049;
+        color: white;
+        text-align: center;
+        padding: 1px 0 0 0; }
+        #container-about .agent-details .content .footer .featured-listings {
+          width: 100%;
+          height: 100%;
+          margin: 0 auto;
+          display: flex; }
+          #container-about .agent-details .content .footer .featured-listings .agent-featured-listing {
+            width: 33.33%;
+            height: 200px; }
+  #container-about .about-text {
+    width: 100%;
+    padding-top: 167px; }
+    #container-about .about-text .header-image {
+      width: 50%;
+      display: inline-block;
+      vertical-align: bottom; }
+    #container-about .about-text .description {
+      width: 50%;
+      line-height: 1.4;
+      display: inline-block;
+      vertical-align: bottom; }
+  #container-about .agents {
+    padding: 5em 0;
+    text-align: center; }
+  #container-about .agent {
+    position: relative;
+    text-align: center;
+    margin: 0.8em;
+    box-shadow: 0px 0px 2em gainsboro;
+    width: 22%;
+    padding-bottom: 19px;
+    border: 1px solid #c7c7c7; }
+    #container-about .agent .bio-image {
+      position: relative; }
+      #container-about .agent .bio-image img {
+        width: 100%; }
+      #container-about .agent .bio-image .image-title {
+        color: white;
+        position: absolute;
+        bottom: 1em;
+        text-align: left;
+        margin-left: 1em; }
+        #container-about .agent .bio-image .image-title span {
+          font-weight: bold; }
+    #container-about .agent .short-bio {
+      margin: 1em 1.5em;
+      line-height: 1.8;
+      padding: 28px 12px 2px 12px;
+      text-align: left; }
+    #container-about .agent .bio-button {
+      display: inline-block;
+      color: #d46049;
+      border: 1px solid #d46049;
+      font-size: 1.1em;
+      padding: 0.4em 1em;
+      border-radius: 500px;
+      margin-bottom: 1em;
+      cursor: pointer; }
+    #container-about .agent .bio-contact {
+      margin-bottom: 1em;
+      line-height: 1.8; }
+  #container-about .section-header {
+    padding: 5% 1%;
+    background: #d46049;
+    text-align: center;
+    color: white; }
+    #container-about .section-header .title {
+      max-width: 1800px;
+      margin: 0 auto;
+      font-weight: bold;
+      font-size: 1.4em; }
+  #container-about .specialty {
+    background: white;
+    margin-top: 3em;
+    background: white;
+    width: 100%; }
+  #container-about .section-content {
+    margin-top: -3%;
+    margin-bottom: 142px; }
+    #container-about .section-content .about {
+      position: relative;
+      margin: 0 auto;
+      width: 874px; }
+      #container-about .section-content .about .about-pic {
+        display: block;
+        width: 100%; }
+      #container-about .section-content .about .map {
+        position: absolute;
+        top: 418px;
+        left: 575px;
+        width: 400px; }
+  @media screen and (max-width: 768px) {
+    #container-about .section-content {
+      margin: 0; }
+      #container-about .section-content .about {
+        width: 100%; }
+        #container-about .section-content .about .map {
+          position: static;
+          width: 100%; }
+    #container-about .section-header .title {
+      font-size: 1em; }
+    #container-about .mobile-bg-hide {
+      height: 0;
+      overflow: hidden; }
+    #container-about .ham-menu {
+      background-size: 94%; }
+    #container-about #header-about .header-image {
+      display: none; }
+    #container-about #header-about .description {
+      width: 100%;
+      padding-top: 0; }
+      #container-about #header-about .description .head-title {
+        text-align: center; }
+    #container-about .agent {
+      width: 90%; }
+    #container-about .bio-pic-mobile {
+      display: block;
+      width: 88%;
+      margin: 0 auto; }
+    #container-about .agent-details {
+      overflow: scroll; }
+      #container-about .agent-details .content {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        box-shadow: 0px 0px 2em gainsboro; }
+        #container-about .agent-details .content .header {
+          margin-bottom: 5%; }
+          #container-about .agent-details .content .header .bio-pic {
+            display: none; }
+          #container-about .agent-details .content .header .contact {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center; }
+            #container-about .agent-details .content .header .contact > h4 {
+              color: black; }
+        #container-about .agent-details .content .bio {
+          margin: 25px;
+          padding: 0;
+          color: black;
+          opacity: .55;
+          line-height: 110%; }
+          #container-about .agent-details .content .bio > h2 {
+            opacity: 1; }
+        #container-about .agent-details .content .footer {
+          background-color: #d46049;
+          color: white;
+          text-align: center;
+          padding-top: 1px; }
+          #container-about .agent-details .content .footer .featured-listings {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            flex-flow: row wrap;
+            justify-content: center; }
+            #container-about .agent-details .content .footer .featured-listings .agent-featured-listing {
+              width: 100%;
+              height: 15%; } }
+
+html {
+  font-family: Montserrat, Helvetica, Arial, sans-serif; }
+
+body {
+  background-color: #fff;
+  margin: 0;
+  width: 100%;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: 1vw; }
+
+strong, b {
+  font-weight: 700; }
+
+a {
+  color: inherit; }
+
+.content {
+  position: relative; }
+
+.mobile-nav {
+  display: none; }
+
+.subdued {
+  opacity: .5; }
+
+#contact-us-gmap {
+  width: 100%;
+  height: 100%; }
+
+#contact-us-home-section {
+  position: relative;
+  color: #858585;
+  min-height: 473px; }
+  #contact-us-home-section .contact-us-gmap-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+  #contact-us-home-section .contact-content {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1%;
+    width: 55%;
+    z-index: 2;
+    position: absolute; }
+    #contact-us-home-section .contact-content .contact-header {
+      font-size: 3em;
+      background-color: white;
+      padding: 1em; }
+    #contact-us-home-section .contact-content .contact-body {
+      font-size: 1.3em;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 8px 0; }
+      #contact-us-home-section .contact-content .contact-body > ul {
+        list-style-type: none;
+        margin: 0; }
+        #contact-us-home-section .contact-content .contact-body > ul > li {
+          padding: 12px; }
+
+.black {
+  color: black; }
+
+.left {
+  float: left;
+  width: 49%;
+  padding-right: 15px; }
+
+.right {
+  float: right;
+  width: 49%;
+  padding-left: 1px; }
+
+.contact-us-link {
+  cursor: pointer; }
+
+.property-slideshow {
+  padding-top: 12px; }
+
+.preview-contents {
+  padding: 8px; }
+
+.underline {
+  text-decoration: underline; }
+
+.preview-map {
+  width: 230px;
+  position: absolute;
+  margin-top: -30px; }
+
+.preview-title {
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  margin-top: -65px;
+  margin-left: 31px; }
+
+.medium-white-text {
+  color: white;
+  font-size: 1.5em;
+  opacity: .95; }
+
+.preview-text {
+  font-size: .75em;
+  font-weight: lighter;
+  color: #858585; }
+
+.review {
+  outline: none;
+  padding: 0 60px; }
+
+#home-image {
+  vertical-align: middle; }
+
+.logo-upper-left {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  width: 278px;
+  height: auto;
+  z-index: 2; }
+
+.ham-menu {
+  background-color: white;
+  background-image: url(../images/ham-menu.png);
+  background-size: 2em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 3em;
+  width: 3em;
+  padding: 2em;
+  cursor: pointer;
+  z-index: 2;
+  position: fixed;
+  right: 10px;
+  top: 10px; }
+
+#top-nav {
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3; }
+  #top-nav > ul {
+    list-style-type: none;
+    margin: 30px 30px 0 0; }
+    #top-nav > ul > li {
+      display: inline;
+      font-size: 1.2em;
+      padding: 8px; }
+      #top-nav > ul > li > a {
+        text-decoration: none; }
+
+.ham-menu-mobile {
+  background-color: white;
+  background-image: url(../images/ham-menu.png);
+  background-size: 2em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 3em;
+  width: 3em;
+  padding: 2em;
+  cursor: pointer;
+  z-index: 2;
+  position: fixed;
+  right: 10px;
+  top: 10px; }
+
+.ham-menu-home {
+  display: none; }
+
+.contact-us-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10; }
+  .contact-us-modal .contact-form {
+    width: 70%;
+    margin: 112px auto 0 auto;
+    font-size: 1.6em;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 18px 6px #f2f2f2;
+    position: relative;
+    max-width: 1200px; }
+    .contact-us-modal .contact-form .contact-close {
+      background-color: white;
+      background-image: url(../images/menu-close.png);
+      background-size: 20px 20px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      padding: 30px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      color: #d46049;
+      width: 13px;
+      height: 21px;
+      cursor: pointer; }
+    .contact-us-modal .contact-form .form {
+      margin: 36px; }
+      .contact-us-modal .contact-form .form > p {
+        padding-top: 75px;
+        font-weight: 50;
+        margin-bottom: 42px;
+        color: #777777;
+        opacity: .9;
+        font-size: 2em; }
+      .contact-us-modal .contact-form .form > input {
+        display: block;
+        margin: 0 auto 18px auto;
+        width: 72%;
+        height: 2.8em;
+        opacity: .8;
+        border-style: solid;
+        border-width: thin;
+        border-color: #efefef;
+        background-color: #fcfcfc !important; }
+      .contact-us-modal .contact-form .form > button {
+        width: 72%;
+        height: 2.5em;
+        border-radius: 500px;
+        margin-top: 8px;
+        font-weight: 800;
+        color: #c04d3a;
+        border-color: #c04d3a;
+        border-style: solid;
+        margin-bottom: 80px;
+        margin-top: 20px; }
+
+.nav-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 10;
+  text-align: center; }
+  .nav-modal .inner {
+    padding: 15px;
+    position: relative; }
+    .nav-modal .inner .modal-logo {
+      width: 278px;
+      position: absolute;
+      top: 35px;
+      left: 35px; }
+    .nav-modal .inner .menu-close {
+      background-color: white;
+      background-image: url(../images/menu-close.png);
+      background-size: 20px 20px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      padding: 30px;
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+    .nav-modal .inner ul.nav {
+      padding: 8% 0 0;
+      list-style: none;
+      font-size: 2em;
+      text-align: center;
+      margin: 0; }
+      .nav-modal .inner ul.nav li a {
+        display: block;
+        color: #888;
+        line-height: 2;
+        font-size: 0.8em;
+        text-decoration: none; }
+        .nav-modal .inner ul.nav li a.active {
+          color: #d46049; }
+
+.home-intro-left {
+  width: 50%;
+  margin-top: -36px;
+  background-color: white;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  color: #b4b3b3;
+  letter-spacing: 0.5px;
+  color: #858585;
+  overflow: hidden; }
+  .home-intro-left > div {
+    margin-top: -35px;
+    padding: 80px; }
+    .home-intro-left > div > p {
+      opacity: .95; }
+
+.home-intro-right {
+  width: 50%;
+  background-image: url("../images/about-us.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.preview-header {
+  height: 50%;
+  width: 100%; }
+
+#header-home {
+  position: relative;
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  text-align: center;
+  height: 75vh; }
+
+#header-content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%); }
+
+#header-logo {
+  height: 47px; }
+
+.scroll-arrow {
+  position: absolute;
+  width: 54px;
+  margin-left: -27px;
+  bottom: 10%;
+  left: 50%; }
+
+#header-text {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  color: #858585;
+  font-size: 1.5em;
+  padding-top: 25px; }
+
+#item-top {
+  margin-top: -442px;
+  background-color: white; }
+
+.section-header {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  color: #b4b3b3;
+  letter-spacing: 0.5px;
+  color: #858585;
+  font-size: 1.8em; }
+  .section-header > span {
+    color: #d46049; }
+
+.flexbox {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1800px; }
+
+.flexbox-full {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap; }
+
+.item {
+  width: 530px;
+  margin: 16px; }
+
+.logo-small {
+  height: 22px;
+  margin-bottom: 4px; }
+
+.image-medium {
+  height: 415px; }
+
+.title {
+  letter-spacing: 1.3px;
+  font-weight: lighter; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%; }
+
+#review-navigator {
+  width: 100%; }
+  #review-navigator div {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    color: #c04d3a;
+    display: inline-block; }
+    #review-navigator div.selected {
+      background-color: #c04d3a;
+      box-shadow: -2px 2px 1px #888888; }
+
+.navigation-arrows {
+  position: absolute;
+  top: 47%;
+  border: solid #d46049;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  font-size: 4em;
+  width: 18px;
+  height: 18px;
+  z-index: 2; }
+
+.navigation-arrow-left {
+  transform: rotate(135deg);
+  left: 5%; }
+
+.navigation-arrow-right {
+  transform: rotate(-45deg);
+  right: 5%; }
+
+.review-slideshow {
+  background: linear-gradient(to bottom, #fbf9fa, #d4d2d3);
+  color: gray;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 43px 12px; }
+  .review-slideshow .inner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto; }
+  .review-slideshow p {
+    max-width: calc(100% - 200px - 120px);
+    padding: 12px 0;
+    text-align: left;
+    display: inline-block; }
+    .review-slideshow p strong {
+      text-transform: uppercase; }
+  .review-slideshow img {
+    display: inline-block;
+    margin-right: 22px;
+    margin-top: -7%;
+    z-index: 25;
+    width: 100px;
+    border-style: solid;
+    border-radius: 500px;
+    border-color: white; }
+
+.learn-more {
+  max-width: 35%; }
+
+.services-info {
+  position: relative;
+  background-color: #d46049;
+  color: white;
+  display: flex; }
+  .services-info .services-img {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    background-image: url(../images/services.jpg);
+    background-size: cover;
+    background-position: center center; }
+  .services-info .services-content {
+    margin-left: 33%;
+    max-width: 1200px;
+    height: 100%; }
+
+.services-header {
+  padding-left: 33px;
+  font-size: 3em; }
+
+.services-row {
+  display: flex;
+  align-items: stretch; }
+
+.services-text {
+  padding: 3em;
+  opacity: .9;
+  width: 50%; }
+
+.service-description {
+  opacity: 0.8;
+  padding: 1.5em 0; }
+
+.tennant-rep {
+  background-color: #c04d3a; }
+
+.landlord-rep {
+  background-color: #c8513d; }
+
+.footer {
+  position: relative;
+  background: #d46049;
+  padding: 1% 1% 0 1%;
+  color: white; }
+  .footer .inner {
+    max-width: 1800px;
+    margin: 0 auto; }
+  .footer > * {
+    line-height: 2.2; }
+  .footer .column {
+    font-size: 1.2em;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5%;
+    opacity: .9; }
+    .footer .column .title {
+      font-weight: bold; }
+    .footer .column a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      opacity: .85;
+      font-size: 85%; }
+      .footer .column a img {
+        color: white;
+        width: 1em; }
+    .footer .column.copyright {
+      display: block;
+      padding-top: 30px;
+      opacity: .7; }
+    .footer .column.social {
+      float: right;
+      margin-right: 0;
+      font-size: 1.5em;
+      text-align: right;
+      line-height: 1; }
+      .footer .column.social a {
+        padding: 0.5em; }
+
+.icon-small {
+  width: 38px;
+  margin-right: 15px; }
+
+#listings-arrow-left {
+  left: -158px;
+  top: 66px; }
+
+#listings-arrow-right {
+  left: 374px;
+  top: 66px; }
+
+.listings-arrow {
+  position: absolute;
+  width: 300px; }
+
+.simple-close {
+  z-index: 10;
+  cursor: pointer;
+  background-color: white;
+  background-image: url(../images/menu-close.png);
+  background-size: 20px 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  padding: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+
+@media screen and (min-width: 1800px) {
+  body {
+    font-size: 18px; } }
+@media screen and (max-width: 1600px) {
+  .property-preview {
+    width: 69%;
+    opacity: 1;
+    position: relative;
+    font-size: 1.3em;
+    overflow: scroll; }
+    .property-preview.selected {
+      transform: scale(1); } }
+@media screen and (max-width: 768px) {
+  body {
+    font-size: .9em; }
+
+  .ham-menu {
+    display: block !important; }
+
+  #top-nav {
+    display: none !important; }
+
+  .nav-modal .inner .modal-logo {
+    width: 46%;
+    top: 18px;
+    left: 14px; }
+  .nav-modal .inner ul.nav {
+    margin-top: 42px; }
+
+  .review-slideshow .inner img {
+    margin-top: 0;
+    max-width: 35%; }
+  .review-slideshow .inner p {
+    width: 100%;
+    max-width: 100%; }
+
+  .logo-upper-left {
+    width: 46%;
+    top: 18px;
+    left: 14px; }
+
+  .desktop-nav {
+    display: none; }
+
+  .mobile-nav {
+    display: block; }
+
+  #header-logo {
+    height: 28px; }
+
+  #contact-us {
+    padding: 0; }
+    #contact-us .contact-us-gmap-container {
+      position: static;
+      display: none;
+      width: 100%;
+      height: 300px; }
+    #contact-us .contact-content {
+      width: 100%;
+      position: static; }
+      #contact-us .contact-content .contact-header {
+        padding: 25px 0 0 0;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.8); }
+      #contact-us .contact-content .contact-body {
+        padding: 12px 0 0 0;
+        background: rgba(255, 255, 255, 0.8); }
+        #contact-us .contact-content .contact-body > ul {
+          padding: 0 0 17px 20px; }
+
+  .small-hidden {
+    display: none; }
+
+  .contact-us-modal .contact-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0; }
+    .contact-us-modal .contact-form .form {
+      margin: 0; }
+      .contact-us-modal .contact-form .form > p {
+        padding-top: 20px;
+        font-size: 1.8em; }
+
+  .home-intro-left {
+    width: 100%; }
+    .home-intro-left > div {
+      padding: 80px 20px 0 20px; }
+
+  .home-intro-right {
+    width: 50%; }
+
+  .services-info {
+    width: 100%; }
+    .services-info .services-content {
+      margin-left: 0; }
+
+  .services-row {
+    display: block; }
+    .services-row .services-text {
+      width: 100%; }
+
+  .services-img {
+    display: none; }
+
+  .property-preview {
+    width: 90%; }
+
+  #header-home {
+    height: 80vh; }
+
+  .home-intro {
+    width: 80%;
+    margin-top: 0; }
+    .home-intro > div {
+      padding: 10px; }
+
+  .nav > li {
+    display: block; }
+
+  #listings-sidebar {
+    width: 90%; }
+
+  #listings-info {
+    width: 90%; }
+
+  .ham-menu {
+    height: 2em;
+    width: 2em; }
+
+  .services-info {
+    width: 100%; }
+
+  #contact-us {
+    background-color: white;
+    background-image: none;
+    height: 340px; }
+    #contact-us .contact-content {
+      width: 100%;
+      top: 0;
+      left: 0; }
+      #contact-us .contact-content .contact-header {
+        text-align: center; }
+      #contact-us .contact-content .contact-body {
+        padding: 0; }
+        #contact-us .contact-content .contact-body > ul {
+          padding-left: 20px; }
+
+  .footer {
+    background: #d46049;
+    padding: 2%;
+    color: white; }
+    .footer > * {
+      line-height: 2.2; }
+    .footer .column {
+      display: block;
+      margin-right: 5%;
+      margin-left: 5%;
+      opacity: .9; }
+      .footer .column .title {
+        font-weight: bold; }
+      .footer .column.copyright {
+        margin-top: 10%;
+        margin-left: 3%; }
+      .footer .column.social {
+        margin: 0 0 0 9px;
+        display: block;
+        float: left; }
+        .footer .column.social > a {
+          float: left;
+          padding-right: 2px; }
+      .footer .column a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        opacity: .85; }
+        .footer .column a img {
+          color: white;
+          width: 1em; } }
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
