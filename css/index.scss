@@ -72,15 +72,16 @@ a {
       font-size: 3em;
       background-color: white;
       padding: 1em;
+      padding-left: 29.2px;
     }
     .contact-body {
       font-size: 1.3em;
       background: rgba(255, 255, 255, 0.9);
-      padding: 8px 22;
+      padding: 15px 22px;
       > ul {
         list-style-type: none;
         margin: 0;
-        padding-left: 20px;
+        padding-left: 0;
         > li {
           padding: 12px;
         }
@@ -516,7 +517,7 @@ a {
 
 .services-header {
   font-size: 3em;
-  padding-left: 1em;
+  padding-left: 80px;
 }
 
 .services-row {
@@ -525,7 +526,7 @@ a {
 }
 
 .services-text {
-  padding: 3em;
+  padding: 3em 3em 3em 80px;
   opacity: .9;
   width: 33%;
 }
