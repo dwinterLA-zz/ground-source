@@ -61,8 +61,6 @@ a {
   }
   .contact-content {
     max-width: $page-max-width;
-    // padding-left: $contact-home-padding(3em);
-    padding-left: calc(80px - 48px);
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
@@ -510,7 +508,6 @@ a {
   color: white;
   display: flex;
   .services-content {
-    padding-left: 80px;
     max-width: 1800px;
     margin: 0 auto;
     height: 100%;
@@ -519,6 +516,7 @@ a {
 
 .services-header {
   font-size: 3em;
+  padding-left: 1em;
 }
 
 .services-row {
@@ -529,12 +527,7 @@ a {
 .services-text {
   padding: 3em;
   opacity: .9;
-  width: 50%;
-}
-
-.services-1 {
-  margin-left: -200px;
-  padding-left: 200px;
+  width: 33%;
 }
 
 .service-description {
@@ -690,18 +683,6 @@ a {
     height: 28px;
   }
 
-  // .services-info {
-  //   position: relative;
-  //   background-color: $primary-color;
-  //   color: white;
-  //   display: flex;
-  //   .services-content {
-  //     padding-left: 80px;
-  //     max-width: 1800px;
-  //     margin: 0 auto;
-  //     height: 100%;
-  //   }
-  // }
   #contact-us-home-section {
     position: relative;
     .contact-us-gmap-container {
