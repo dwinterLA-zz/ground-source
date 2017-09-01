@@ -496,7 +496,7 @@ a {
 }
 
 .learn-more {
-  max-width: 35%;
+  max-width: 55%;
 }
 
 .services-info {
@@ -504,16 +504,7 @@ a {
   background-color: $primary-color;
   color: white;
   display: flex;
-  .services-img {
-    position: absolute;
-    width: 33%;
-    height: 100%;
-    background-image: url(../images/services.jpg);
-    background-size: cover;
-    background-position: center center;
-  }
   .services-content {
-    margin-left: 33%;
     max-width: 1200px;
     height: 100%;
   }
@@ -540,11 +531,11 @@ a {
   padding: 1.5em 0;
 }
 
-.tennant-rep {
+.services-1 {
   background-color: $primary-color-darker-darker;
 }
 
-.landlord-rep {
+.services-2 {
   background-color: $primary-color-lighter;
 }
 
@@ -625,10 +616,6 @@ a {
 }
 
 @media screen and (max-width: $breakpoint-medium) {
-  // &.listings-arrow {
-  //   display: none;
-  // }
-
   .property-preview {
     width: 69%;
     opacity: 1;
@@ -692,17 +679,13 @@ a {
     height: 28px;
   }
 
-  #contact-us {
-    padding: 0;
+  #contact-us-home-section {
     .contact-us-gmap-container {
-      position: static;
       display: none;
-      width: 100%;
-      height: 300px;
     }
     .contact-content {
+      position: absolute;
       width: 100%;
-      position: static;
       .contact-header {
         padding: 25px 0 0 0;
         text-align: center;
