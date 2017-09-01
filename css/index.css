@@ -1165,7 +1165,7 @@ a {
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
-    left: 1%;
+    left: 12px;
     width: 55%;
     z-index: 2;
     position: absolute; }
@@ -1173,7 +1173,7 @@ a {
       font-size: 3em;
       background-color: white;
       padding: 1em;
-      padding-left: calc(80px - 1%); }
+      padding-left: calc(80px - 12px;); }
     #contact-us-home-section .contact-content .contact-body {
       font-size: 1.3em;
       background: rgba(255, 255, 255, 0.9);
@@ -1181,7 +1181,7 @@ a {
       #contact-us-home-section .contact-content .contact-body > ul {
         list-style-type: none;
         margin: 0;
-        padding-left: calc(30px - 1%); }
+        padding-left: calc(30px - 12px;); }
         #contact-us-home-section .contact-content .contact-body > ul > li {
           padding: 12px; }
 
