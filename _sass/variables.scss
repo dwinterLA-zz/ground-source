@@ -16,5 +16,21 @@ $breakpoint-small: 768px;
 $breakpoint-medium: 1600px;
 $page-max-width: 1800px;
 $listings-text: #de6c62;
-$brand-blue: #387ac8
+$brand-blue: #387ac8;
+$left-align-home: 80px;
+
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+@function px($ems, $context: $browser-context) {
+  @return #{$ems * $context}px
+}
+
+@function contact-home-padding($em-padding) {
+  @return (px($em-padding) - $left-align-home)
+}
 
