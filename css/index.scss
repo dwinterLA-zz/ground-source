@@ -72,7 +72,7 @@ a {
       font-size: 3em;
       background-color: white;
       padding: 1em;
-      padding-left: 29.2px;
+      padding-left: calc(80px - 1%);
     }
     .contact-body {
       font-size: 1.3em;
@@ -81,7 +81,7 @@ a {
       > ul {
         list-style-type: none;
         margin: 0;
-        padding-left: 0;
+        padding-left: calc(30px - 1%);
         > li {
           padding: 12px;
         }
