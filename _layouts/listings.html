@@ -60,14 +60,11 @@
           </div>
         </div>
         <div class="flexbox listings filters">
-          <select name="location">
-            <option value="playa-vista">Any Location</option>
-            <option value="playa-vista">PLAYA VISTA</option>
-            <option value="playa-vista">MARINA DEL REY</option>
-            <option value="playa-vista">SANTA MONICA</option>
-            <option value="playa-vista">PLAYA VISTA</option>
-            <option value="playa-vista">MARINA DEL REY</option>
-            <option value="playa-vista">PLAYA VISTA</option>
+          {% assign locations = site.listings |map: "address-line-2"| |uniq| %}
+          <select name="location" id="location-filter">
+            {% for location in locations %}
+              <option value={{location}}>{{location}}</option>
+             {% endfor %}
           </select>
           <select name="status">
             <option value="foobar">Any Status</option>
@@ -89,17 +86,17 @@
           <input type="text" placeholder=" Min. Size" class="subdued">
           <input type="text" placeholder=" Keyword(e.g 'office')" class="subdued">
           <input type="text" placeholder=" Price" class="subdued">
-          <button type"submit">SEARCH</button>
+          <button type"submit" id="listing-search">SEARCH</button>
         </div>
         <div class="flexbox listings">
           {% for listing in site.listings %}
-            <div class="listing-preview">
+             <div class="listing-preview" data-location={{listing.address-line-2}}>
               <a href={{listing.url}}>
                 <div class="header">
                   <div class="label">{{listing.label}}</div>
                   <div class="address">
                     <div>{{listing.address-line-1}}</div>
-                     <div>{{listing.address-line-2}}</div>
+                    <div>{{listing.address-line-2}}</div>
                   </div>
                 </div>
                 <div class="listing-content">

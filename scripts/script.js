@@ -1,4 +1,14 @@
 $(document).ready(function() {
+  $("#listing-search").click(function() {
+    var listings = $('.listing-preview')
+    $(listings).hide();
+
+    var locationFilter = $('#location-filter').find(":selected").text();
+    $('.listing-preview').filter(function() {
+      return $(this).data("location") === locationFilter;
+    }).show();
+
+  })
   $(window).scroll(function() {
     if (window.pageYOffset >= 67) {
       $('#top-nav').hide();
@@ -55,6 +65,7 @@ $(document).ready(function() {
     "prevArrow": $('.navigation-arrow-left'),
     "nextArrow": $('.navigation-arrow-right')
   })
+
   function initMap() {
     var uluru = {lat: -25.363, lng: 131.044};
     var map = new google.maps.Map(document.getElementById('map'), {
