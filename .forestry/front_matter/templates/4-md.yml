@@ -1,0 +1,98 @@
+---
+hide_body: false
+fields:
+- name: location
+  label: Location
+  type: text
+  hidden: false
+  default: ''
+- name: address-line-1
+  label: Address line 1
+  type: text
+  hidden: false
+  default: ''
+- name: address-line-2
+  label: Address line 2
+  type: text
+  hidden: false
+  default: ''
+- name: short-caption
+  label: Short caption
+  type: textarea
+  hidden: false
+  default: ''
+- name: rooms
+  label: Rooms
+  type: text
+  hidden: false
+  default: ''
+- name: baths
+  label: Baths
+  type: text
+  hidden: false
+  default: ''
+- name: bedrooms
+  label: Bedrooms
+  type: text
+  hidden: false
+  default: ''
+- name: sq-footage
+  label: Sq footage
+  type: text
+  hidden: false
+  default: ''
+- name: price
+  label: Price
+  type: text
+  hidden: false
+  default: ''
+- name: highlights
+  label: Highlights
+  type: list
+  hidden: false
+  default: ''
+- name: amenities
+  label: Amenities
+  type: list
+  hidden: false
+  default: ''
+- name: gallery-images
+  label: Gallery images
+  type: image_gallery
+  hidden: false
+  default: ''
+- name: latitude
+  label: Latitude
+  type: text
+  hidden: false
+  default: ''
+- name: longitude
+  label: Longitude
+  type: text
+  hidden: false
+  default: ''
+- name: info-title
+  label: Info title
+  type: text
+  hidden: false
+  default: ''
+- name: info-text
+  label: Info text
+  type: textarea
+  hidden: false
+  default: ''
+- name: floorplan-image
+  label: Floorplan image
+  type: file
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: ''
