@@ -1,5 +1,6 @@
 ---
 pages:
+- _listings/2.md
 - _listings/1.md
 hide_body: false
 fields:
