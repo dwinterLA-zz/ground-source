@@ -3,11 +3,23 @@ $(document).ready(function() {
     var listings = $('.listing-preview')
     $(listings).hide();
 
-    var locationFilter = $('#location-filter').find(":selected").text();
-    $('.listing-preview').filter(function() {
-      return $(this).data("location") === locationFilter;
-    }).show();
+    var locationFilter = $('#location-filter').find(":selected").val();
+    var statusFilter = $('#status-filter').find(":selected").val();
+    var typeFilter = $('#type-filter').find(":selected").val().toLowerCase();
+    var keywordFilter = $('#keyword-filter').val().toLowerCase();
+    var minRoomFilter = parseInt($('#min-rooms').find(":selected").val());
+    var minSizeFilter = parseInt($('#min-size').val());
+    var maxPriceFilter = parseInt($('#max-price').val());
 
+    $('.listing-preview').filter(function() {
+      return ($(this).data("available").toString() === statusFilter || statusFilter ==="n/a") &&
+        ($(this).data("location") === locationFilter || locationFilter === "n/a") &&
+        ($(this).data("type").toLowerCase() === typeFilter || typeFilter === "n/a") &&
+        ($(this).text().toLowerCase().indexOf(keywordFilter) > 0 || keywordFilter === "") &&
+        parseInt($(this).data("rooms")) >= minRoomFilter &&
+        (parseInt($(this).data("size").replace(",", "")) >= minSizeFilter || minSizeFilter === "") &&
+        (parseInt($(this).data("price").replace(",", "")) <= maxPriceFilter || maxPriceFilter === "")
+    }).show();
   })
   $(window).scroll(function() {
     if (window.pageYOffset >= 67) {

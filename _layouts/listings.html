@@ -61,39 +61,42 @@
         </div>
         <div class="flexbox listings filters">
           {% assign locations = site.listings |map: "address-line-2"| |uniq| %}
+          {% assign statuses = site.listings |map: "status"| |uniq| %}
+          {% assign type = site.listings |map: "type"| |uniq| %}
           <select name="location" id="location-filter">
+            <option value="n/a">Any Location</option>
             {% for location in locations %}
               <option value={{location}}>{{location}}</option>
-             {% endfor %}
+            {% endfor %}
           </select>
-          <select name="status">
-            <option value="foobar">Any Status</option>
-            <option value="foobar">Foobar</option>
-            <option value="goobar">Goobar</option>
+          <select name="status" id="status-filter">
+            <option value="n/a">Any Type</option>
+            <option value="true">Available Now</option>
+            <option value="false">Not Available</option>
           </select>
-          <select name="type">
-            <option value="rent">Any Type</option>
+          <select name="type" id="type-filter">
+            <option value="n/a">Any Type</option>
             <option value="rent">Rent</option>
             <option value="lease">Lease</option>
           </select>
-          <select name="min-rooms">
-            <option value="2">Min. Rooms</option>
+          <select name="min-rooms" id="min-rooms">
+            <option value="1">Min. Rooms</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <input type="text" placeholder=" Min. Size" class="subdued">
-          <input type="text" placeholder=" Keyword(e.g 'office')" class="subdued">
-          <input type="text" placeholder=" Price" class="subdued">
+          <input id="min-size" type="text" placeholder=" Min. Size" class="subdued">
+          <input id="keyword-filter" type="text" placeholder=" Keyword(e.g 'office')" class="subdued">
+          <input id="max-price" type="text" placeholder=" Price" class="subdued">
           <button type"submit" id="listing-search">SEARCH</button>
         </div>
         <div class="flexbox listings">
           {% for listing in site.listings %}
-             <div class="listing-preview" data-location={{listing.address-line-2}}>
+             <div class="listing-preview" data-location={{listing.address-line-2}} data-available={{listing.available}} data-type={{listing.type}} data-rooms={{listing.rooms}} data-size={{listing.sq-footage}} data-price={{listing.price}}>
               <a href={{listing.url}}>
                 <div class="header">
-                  <div class="label">{{listing.label}}</div>
+                  <div class="label">{{listing.type}}</div>
                   <div class="address">
                     <div>{{listing.address-line-1}}</div>
                     <div>{{listing.address-line-2}}</div>
