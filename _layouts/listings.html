@@ -53,7 +53,7 @@
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
           </p>
 
-          <input type="text" placeholder="    Search properties" class="listings-search">
+          <input type="text" placeholder="    Search properties" class="listings-search" id="listings-text-search">
           <div class="submenu">
             <div id="features-toggle" class="plus-sign"></div>
             <span class="subdued">LOOKING FOR CERTAIN FEATURES</span>
@@ -66,7 +66,7 @@
           <select name="location" id="location-filter">
             <option value="n/a">Any Location</option>
             {% for location in locations %}
-              <option value={{location}}>{{location}}</option>
+              <option value="{{location}}">{{location}}</option>
             {% endfor %}
           </select>
           <select name="status" id="status-filter">
@@ -93,7 +93,7 @@
         </div>
         <div class="flexbox listings">
           {% for listing in site.listings %}
-             <div class="listing-preview" data-location={{listing.address-line-2}} data-available={{listing.available}} data-type={{listing.type}} data-rooms={{listing.rooms}} data-size={{listing.sq-footage}} data-price={{listing.price}}>
+             <div class="listing-preview" data-location="{{listing.address-line-2}}" data-available="{{listing.available}}" data-type="{{listing.type}}" data-rooms="{{listing.rooms}}" data-size="{{listing.sq-footage}}" data-price="{{listing.price}}">
               <a href={{listing.url}}>
                 <div class="header">
                   <div class="label">{{listing.type}}</div>

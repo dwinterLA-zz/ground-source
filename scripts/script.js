@@ -1,10 +1,20 @@
 $(document).ready(function() {
+  $("#listings-text-search").keydown(function() {
+    var listings = $('.listing-preview')
+    $(listings).hide();
+
+    var searchContent = $(this).val().toLowerCase();
+
+    $('.listing-preview').filter(function(preview) {
+      return $(this).text().toLowerCase().indexOf(searchContent) > 0 || searchContent === ""
+    }).show();
+  })
   $("#listing-search").click(function() {
     var listings = $('.listing-preview')
     $(listings).hide();
 
-    var locationFilter = $('#location-filter').find(":selected").val();
-    var statusFilter = $('#status-filter').find(":selected").val();
+    var locationFilter = $('#location-filter').find(":selected").val().toLowerCase();
+    var statusFilter = $('#status-filter').find(":selected").val().toLowerCase();
     var typeFilter = $('#type-filter').find(":selected").val().toLowerCase();
     var keywordFilter = $('#keyword-filter').val().toLowerCase();
     var minRoomFilter = parseInt($('#min-rooms').find(":selected").val());
@@ -13,12 +23,12 @@ $(document).ready(function() {
 
     $('.listing-preview').filter(function() {
       return ($(this).data("available").toString() === statusFilter || statusFilter ==="n/a") &&
-        ($(this).data("location") === locationFilter || locationFilter === "n/a") &&
+        ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") &&
         ($(this).data("type").toLowerCase() === typeFilter || typeFilter === "n/a") &&
         ($(this).text().toLowerCase().indexOf(keywordFilter) > 0 || keywordFilter === "") &&
         parseInt($(this).data("rooms")) >= minRoomFilter &&
-        (parseInt($(this).data("size").replace(",", "")) >= minSizeFilter || minSizeFilter === "") &&
-        (parseInt($(this).data("price").replace(",", "")) <= maxPriceFilter || maxPriceFilter === "")
+        (parseInt($(this).data("size").replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) &&
+        (parseInt($(this).data("price").replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter))
     }).show();
   })
   $(window).scroll(function() {
