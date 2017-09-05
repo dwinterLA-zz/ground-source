@@ -1,4 +1,36 @@
 $(document).ready(function() {
+  $("#listings-text-search").keydown(function() {
+    var listings = $('.listing-preview')
+    $(listings).hide();
+
+    var searchContent = $(this).val().toLowerCase();
+
+    $('.listing-preview').filter(function(preview) {
+      return $(this).text().toLowerCase().indexOf(searchContent) > 0 || searchContent === ""
+    }).show();
+  })
+  $("#listing-search").click(function() {
+    var listings = $('.listing-preview')
+    $(listings).hide();
+
+    var locationFilter = $('#location-filter').find(":selected").val().toLowerCase();
+    var statusFilter = $('#status-filter').find(":selected").val().toLowerCase();
+    var typeFilter = $('#type-filter').find(":selected").val().toLowerCase();
+    var keywordFilter = $('#keyword-filter').val().toLowerCase();
+    var minRoomFilter = parseInt($('#min-rooms').find(":selected").val());
+    var minSizeFilter = parseInt($('#min-size').val());
+    var maxPriceFilter = parseInt($('#max-price').val());
+
+    $('.listing-preview').filter(function() {
+      return ($(this).data("available").toString() === statusFilter || statusFilter ==="n/a") &&
+        ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") &&
+        ($(this).data("type").toLowerCase() === typeFilter || typeFilter === "n/a") &&
+        ($(this).text().toLowerCase().indexOf(keywordFilter) > 0 || keywordFilter === "") &&
+        parseInt($(this).data("rooms")) >= minRoomFilter &&
+        (parseInt($(this).data("size").replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) &&
+        (parseInt($(this).data("price").replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter))
+    }).show();
+  })
   $(window).scroll(function() {
     if (window.pageYOffset >= 67) {
       $('#top-nav').hide();
@@ -55,6 +87,7 @@ $(document).ready(function() {
     "prevArrow": $('.navigation-arrow-left'),
     "nextArrow": $('.navigation-arrow-right')
   })
+
   function initMap() {
     var uluru = {lat: -25.363, lng: 131.044};
     var map = new google.maps.Map(document.getElementById('map'), {
