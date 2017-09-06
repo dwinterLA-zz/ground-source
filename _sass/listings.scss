@@ -4,6 +4,11 @@
   // need the actual asset
   background-image: url(../images/about/fs-bg.jpg);
   background-size: cover;
+  #properties {
+    > div {
+      display: none;
+    }
+  }
   .content {
     padding-top: 12vh;
   }

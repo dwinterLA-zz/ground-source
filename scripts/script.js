@@ -1,4 +1,33 @@
 $(document).ready(function() {
+  var page = 0
+  var perPage = 6
+
+  $('#properties').children().slice(page, perPage).show()
+
+  $("#listings-next").click(function() {
+    $('.pages').children().eq(page).removeClass('selected');
+    page += 1;
+    $('#properties').children().hide();
+    var start = page * perPage + 1
+    $('#properties').children().slice(start, start + perPage).show()
+    $('.pages').children().eq(page).addClass('selected');
+  })
+
+  $("#listings-prev").click(function() {
+    if (page === 0) {
+      return;
+    }
+
+    $('.pages').children().eq(page).removeClass('selected');
+
+    page -= 1;
+    $('#properties').children().hide();
+    var start = page * perPage + 1
+    $('#properties').children().slice(start, start + perPage).show()
+
+    $('.pages').children().eq(page).addClass('selected');
+  })
+
   $("#listings-text-search").keydown(function() {
     var listings = $('.listing-preview')
     $(listings).hide();
