@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  paginate();
+  paginate($('#properties').children());
 
   $("#listings-text-search").keydown(function() {
     var listings = $('.listing-preview')
@@ -10,7 +10,7 @@ $(document).ready(function() {
     $('.listing-preview').filter(function(preview) {
       return $(this).text().toLowerCase().indexOf(searchContent) > 0 || searchContent === ""
     }).show();
-    paginate();
+    paginate($('#properties').children(':visible'));
   })
   $("#listing-search").click(function() {
     var listings = $('.listing-preview')
@@ -104,9 +104,8 @@ $(document).ready(function() {
   }
 })
 
-function paginate() {
+function paginate(properties) {
   $('.pages').html('<a id="1" class="selected">1</a>')
-  properties = $('#properties').children(':visible');
   var page = 0;
   var perPage = 6;
   var totalPages = parseInt(properties.length / perPage)
@@ -120,18 +119,18 @@ function paginate() {
   $("#listings-next").click(function() {
     $('.pages').children().eq(page).removeClass('selected');
     page = page === totalPages ? 0 : page += 1;
-    $('#properties').children().hide();
+    properties.hide();
     var start = page * perPage
-    $('#properties').children().slice(start, start + perPage).show()
+    properties.slice(start, start + perPage).show()
     $('.pages').children().eq(page).addClass('selected');
   })
 
   $("#listings-prev").click(function() {
     $('.pages').children().eq(page).removeClass('selected');
     page = page === 0 ? totalPages : page -= 1;
-    $('#properties').children().hide();
+    properties.hide();
     var start = page * perPage;
-    $('#properties').children().slice(start, start + perPage).show()
+    properties.slice(start, start + perPage).show()
     $('.pages').children().eq(page).addClass('selected');
   })
 }
