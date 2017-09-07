@@ -1,0 +1,20 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+
+@import "vendor/sanitize.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "index.scss";
+@import "listing.scss";
+@import "listings.scss";
+@import "about.scss";
+
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

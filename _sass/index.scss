@@ -1,15 +1,3 @@
----
-# this ensures Jekyll reads the file to be transformed into CSS later
-# only Main files contain this front matter, not partials.
----
-
-@import "vendor/sanitize.scss";
-@import "listing.scss";
-@import "listings.scss";
-@import "about.scss";
-@import "variables.scss";
-@import "mixins.scss";
-
 html {
   font-family: $font-brand;
 }
@@ -526,7 +514,7 @@ a {
 
 .services-text {
   padding: 3em 3em 3em 80px;
-  opacity: .9;
+  opacity: .9 ;
   width: 33%;
 }
 
