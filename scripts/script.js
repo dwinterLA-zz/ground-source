@@ -1,3 +1,5 @@
+const PER_PAGE = 6
+
 $(document).ready(function() {
   paginate($('#properties').children());
 
@@ -108,14 +110,19 @@ $(document).ready(function() {
 })
 
 function paginate(properties) {
+  var page = 0;
+  var totalPages = parseInt(properties.length / PER_PAGE)
+
   $("#listings-next").off("click");
   $("#listings-prev").off("click");
   $('.pages').html('<a data-page="1" id="page-1" class="selected">1</a>')
 
-  var page = 0;
-  var perPage = 6;
-  var totalPages = parseInt(properties.length / perPage)
+  $(properties).hide();
+  $(properties).slice(page, PER_PAGE).show();
+
+  // create page buttons
   for(var i=0; i < totalPages; i++){
+    // we start at page 2 because page 1 already exists
     var unit = i + 2;
     var newPage = "<a id=page-" + unit + " data-page=" + unit + ">" + unit + "</a>"
     $(".pages").append(newPage);
@@ -144,8 +151,8 @@ function paginate(properties) {
     $('.pages').children().eq(page).removeClass('selected');
     page = page === totalPages ? 0 : page += 1;
     properties.hide();
-    var start = page * perPage
-    properties.slice(start, start + perPage).show()
+    var start = page * PER_PAGE
+    properties.slice(start, start + PER_PAGE).show()
     $('.pages').children().eq(page).addClass('selected');
   })
 
@@ -153,8 +160,9 @@ function paginate(properties) {
     $('.pages').children().eq(page).removeClass('selected');
     page = page === 0 ? totalPages : page -= 1;
     properties.hide();
-    var start = page * perPage;
-    properties.slice(start, start + perPage).show()
+    var start = page * PER_PAGE;
+    properties.slice(start, start + PER_PAGE).show()
+    // highlight the selected page number
     $('.pages').children().eq(page).addClass('selected');
   })
 }
