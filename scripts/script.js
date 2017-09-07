@@ -7,10 +7,11 @@ $(document).ready(function() {
 
     var searchContent = $(this).val().toLowerCase();
 
-    $('.listing-preview').filter(function(preview) {
+    var filteredListings = $('.listing-preview').filter(function(preview) {
       return $(this).text().toLowerCase().indexOf(searchContent) > 0 || searchContent === ""
-    }).show();
-    paginate($('#properties').children(':visible'));
+    })
+
+    paginate(filteredListings);
   })
   $("#listing-search").click(function() {
     var listings = $('.listing-preview')
@@ -105,6 +106,8 @@ $(document).ready(function() {
 })
 
 function paginate(properties) {
+  $("#listings-next").off("click");
+  $("#listings-prev").off("click");
   $('.pages').html('<a id="1" class="selected">1</a>')
   var page = 0;
   var perPage = 6;
