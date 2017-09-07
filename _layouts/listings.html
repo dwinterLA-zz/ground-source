@@ -95,12 +95,16 @@
           {% for listing in site.listings %}
              <div class="listing-preview" data-location="{{listing.address-line-2}}" data-available="{{listing.available}}" data-type="{{listing.type}}" data-rooms="{{listing.rooms}}" data-size="{{listing.sq-footage}}" data-price="{{listing.price}}">
               <a href={{listing.url}}>
-                <div class="header">
-                  <div class="label">{{listing.type}}</div>
-                  <div class="address">
-                    <div>{{listing.address-line-1}}</div>
-                    <div>{{listing.address-line-2}}</div>
-                  </div>
+                {% if listing.property-preview-image %}
+                  <div class="header" style="background-image:url({{listing.property-preview-image}})">
+                {% else %}
+                  <div class="header">
+                {% endif %}
+                <div class="label">{{listing.type}}</div>
+                <div class="address">
+                  <div>{{listing.address-line-1}}</div>
+                  <div>{{listing.address-line-2}}</div>
+                </div>
                 </div>
                 <div class="listing-content">
                   <p>
