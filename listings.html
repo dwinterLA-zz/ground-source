@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -47,9 +47,9 @@
         <img src="images/logo.png" class="modal-logo"/>
         <div class="menu-close"></div>
         <ul class="nav">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a class="active" href="listings.html">LISTINGS</a></li>
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a class="active" href="/listings.html">LISTINGS</a></li>
           <li><a href="#">EXPERIENCE</a></li>
           <li><a class="contact-us-link">CONTACT</a></li>
         </ul>
@@ -78,11 +78,11 @@
           <select name="location" id="location-filter">
             <option value="n/a">Any Location</option>
             
-              <option value="<strong>PLAYA</strong> VISTA"><strong>PLAYA</strong> VISTA</option>
+              <option value="PLAYA VISTA">PLAYA VISTA</option>
             
               <option value="VENICE">VENICE</option>
             
-              <option value="PLAYA VISTA">PLAYA VISTA</option>
+              <option value="Playa Hermosa">Playa Hermosa</option>
             
           </select>
           <select name="status" id="status-filter">
@@ -107,15 +107,15 @@
           <input id="max-price" type="text" placeholder=" Price" class="subdued">
           <button type"submit" id="listing-search">SEARCH</button>
         </div>
-        <div class="flexbox listings">
+        <div id="properties" class="flexbox listings">
           
-             <div class="listing-preview" data-location="<strong>PLAYA</strong> VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
               <a href=/listings/1.html>
                 <div class="header">
                   <div class="label">LEASE</div>
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
-                    <div><strong>PLAYA</strong> VISTA</div>
+                    <div>PLAYA VISTA</div>
                   </div>
                 </div>
                 <div class="listing-content">
@@ -146,8 +146,7 @@
                 </div>
                 <div class="listing-content">
                   <p>
-                    The Department of Homeland Security will stop processing any new applications for the program as of Tuesday and rescinded the Obama administration policy, Deferred Action for Childhood Arrivals.
-"I am here today to announce that the program known as DACA that was effectuated under the Obama administration is being rescinded," Attorney General Jeff Sessions said Tuesday at the Justice Department.
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
                   </p>
                   <div class="amenities">
                     <p><img src="images/icons/door.png" /> 9 Rooms</p>
@@ -214,13 +213,39 @@
               </a>
              </div>
           
+             <div class="listing-preview" data-location="Playa Hermosa" data-available="true" data-type="" data-rooms="2" data-size="2400" data-price="1500">
+              <a href=/listings/5-md.html>
+                <div class="header">
+                  <div class="label"></div>
+                  <div class="address">
+                    <div>1234 Hickory Lane</div>
+                    <div>Playa Hermosa</div>
+                  </div>
+                </div>
+                <div class="listing-content">
+                  <p>
+                    The Hermosa Beach Community Theatre is a 502-seat theatre that has quickly become the favorite venue for Youth Musical Theatre groups, film premieres, dance productions, and a variety of shows that offer residents of Hermosa Beach to experience the wonders of cultural arts.
+                  </p>
+                  <div class="amenities">
+                    <p><img src="images/icons/door.png" /> 2 Rooms</p>
+                    <p><img src="images/icons/tub.png" /> 5 Baths</p>
+                    <p><img src="images/icons/bed.png" /> 9 Bedrooms</p>
+                    <p><img src="images/icons/ruler.png" /> 2400 Sq ft</p>
+                  </div>
+                </div>
+                <div class="listing-preview-footer">
+                  <strong>1500</strong> per month
+                </div>
+              </a>
+             </div>
+          
         </div>
         <div class="paginator">
-          <div class="navigate-page">&lt;-</div>
+          <div id="listings-prev" class="navigate-page">&lt;-</div>
           <div class="pages">
-            <a href="#" class="selected">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#" class="next"><strong>. . .</strong></a>
+            <a id="1" class="selected">1</a>
           </div>
-          <div class="navigate-page">-&gt;</div>
+          <div id="listings-next" class="navigate-page">-&gt;</div>
         </div>
       </div>
     </div>

@@ -1,13 +1,19 @@
+const PER_PAGE = 6
+
 $(document).ready(function() {
+  paginate($('#properties').children());
+
   $("#listings-text-search").keydown(function() {
     var listings = $('.listing-preview')
     $(listings).hide();
 
     var searchContent = $(this).val().toLowerCase();
 
-    $('.listing-preview').filter(function(preview) {
+    var filteredListings = $('.listing-preview').filter(function(preview) {
       return $(this).text().toLowerCase().indexOf(searchContent) > 0 || searchContent === ""
-    }).show();
+    })
+
+    paginate(filteredListings);
   })
   $("#listing-search").click(function() {
     var listings = $('.listing-preview')
@@ -21,7 +27,7 @@ $(document).ready(function() {
     var minSizeFilter = parseInt($('#min-size').val());
     var maxPriceFilter = parseInt($('#max-price').val());
 
-    $('.listing-preview').filter(function() {
+    var filteredListings = $('.listing-preview').filter(function() {
       return ($(this).data("available").toString() === statusFilter || statusFilter ==="n/a") &&
         ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") &&
         ($(this).data("type").toLowerCase() === typeFilter || typeFilter === "n/a") &&
@@ -29,7 +35,9 @@ $(document).ready(function() {
         parseInt($(this).data("rooms")) >= minRoomFilter &&
         (parseInt($(this).data("size").replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) &&
         (parseInt($(this).data("price").replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter))
-    }).show();
+    });
+
+    paginate(filteredListings);
   })
   $(window).scroll(function() {
     if (window.pageYOffset >= 67) {
@@ -100,3 +108,60 @@ $(document).ready(function() {
     });
   }
 })
+
+function paginate(properties) {
+  var page = 0;
+  var totalPages = parseInt(properties.length / PER_PAGE)
+
+  $("#listings-next").off("click");
+  $("#listings-prev").off("click");
+  $('.pages').html('<a data-page="1" id="page-1" class="selected">1</a>')
+
+  $(properties).hide();
+  $(properties).slice(page, PER_PAGE).show();
+
+  // create page buttons
+  for(var i=0; i < totalPages; i++){
+    // we start at page 2 because page 1 already exists
+    var unit = i + 2;
+    var newPage = "<a id=page-" + unit + " data-page=" + unit + ">" + unit + "</a>"
+    $(".pages").append(newPage);
+    $("#page-" + unit).click(function() {
+      pageClickListener(this);
+    });
+  }
+
+  $("#page-1").click(function() {
+    pageClickListener(this)
+  })
+
+  function pageClickListener(clickedPage) {
+    $(".pages").children().eq(page).removeClass("selected");
+    page = $(clickedPage).data("page") - 1;
+    paginateHelper(page);
+  }
+
+  $(properties).hide();
+  $(properties).slice(page, PER_PAGE).show();
+
+  $("#listings-next").click(function() {
+    $('.pages').children().eq(page).removeClass('selected');
+    page = page === totalPages ? 0 : page += 1;
+    paginateHelper(page);
+  })
+
+  $("#listings-prev").click(function() {
+    $('.pages').children().eq(page).removeClass('selected');
+    page = page === 0 ? totalPages : page -= 1;
+    properties.hide();
+    paginateHelper(page);
+  })
+
+  function paginateHelper(newPage) {
+    properties.hide();
+    var start = newPage * PER_PAGE;
+    properties.slice(start, start + PER_PAGE).show()
+    // highlight the selected page number
+    $('.pages').children().eq(newPage).addClass('selected');
+  }
+}
