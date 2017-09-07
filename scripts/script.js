@@ -136,33 +136,32 @@ function paginate(properties) {
   })
 
   function pageClickListener(clickedPage) {
-    $('.pages').children().eq(page).removeClass('selected');
-    page = $(clickedPage).data('page') - 1;
-    var start = page * perPage;
-    properties.hide();
-    properties.slice(start, start + perPage).show();
-    $('.pages').children().eq(page).addClass('selected');
+    $(".pages").children().eq(page).removeClass("selected");
+    page = $(clickedPage).data("page") - 1;
+    paginateHelper(page);
   }
 
   $(properties).hide();
-  $(properties).slice(page, perPage).show();
+  $(properties).slice(page, PER_PAGE).show();
 
   $("#listings-next").click(function() {
     $('.pages').children().eq(page).removeClass('selected');
     page = page === totalPages ? 0 : page += 1;
-    properties.hide();
-    var start = page * PER_PAGE
-    properties.slice(start, start + PER_PAGE).show()
-    $('.pages').children().eq(page).addClass('selected');
+    paginateHelper(page);
   })
 
   $("#listings-prev").click(function() {
     $('.pages').children().eq(page).removeClass('selected');
     page = page === 0 ? totalPages : page -= 1;
     properties.hide();
-    var start = page * PER_PAGE;
+    paginateHelper(page);
+  })
+
+  function paginateHelper(newPage) {
+    properties.hide();
+    var start = newPage * PER_PAGE;
     properties.slice(start, start + PER_PAGE).show()
     // highlight the selected page number
-    $('.pages').children().eq(page).addClass('selected');
-  })
+    $('.pages').children().eq(newPage).addClass('selected');
+  }
 }
