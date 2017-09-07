@@ -1,0 +1,8 @@
+---
+hide_body: false
+fields:
+- type: textarea
+  config:
+    wysiwyg: true
+  label: Intro Paragraph
+  name: intro_paragraph
