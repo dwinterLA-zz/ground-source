@@ -110,12 +110,31 @@ $(document).ready(function() {
 function paginate(properties) {
   $("#listings-next").off("click");
   $("#listings-prev").off("click");
-  $('.pages').html('<a id="1" class="selected">1</a>')
+  $('.pages').html('<a data-page="1" id="page-1" class="selected">1</a>')
+
   var page = 0;
   var perPage = 6;
   var totalPages = parseInt(properties.length / perPage)
   for(var i=0; i < totalPages; i++){
-    $('.pages').append("<a>" + (i + 2) + "</a>")
+    var unit = i + 2;
+    var newPage = "<a id=page-" + unit + " data-page=" + unit + ">" + unit + "</a>"
+    $(".pages").append(newPage);
+    $("#page-" + unit).click(function() {
+      pageClickListener(this);
+    });
+  }
+
+  $("#page-1").click(function() {
+    pageClickListener(this)
+  })
+
+  function pageClickListener(clickedPage) {
+    $('.pages').children().eq(page).removeClass('selected');
+    page = $(clickedPage).data('page') - 1;
+    var start = page * perPage;
+    properties.hide();
+    properties.slice(start, start + perPage).show();
+    $('.pages').children().eq(page).addClass('selected');
   }
 
   $(properties).hide();
