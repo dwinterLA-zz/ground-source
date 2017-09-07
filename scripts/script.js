@@ -1,30 +1,5 @@
 $(document).ready(function() {
-  var page = 0;
-  var perPage = 10;
-  var totalPages = parseInt($('#properties').children().length / perPage)
-  for(var i=0; i < totalPages; i++){
-    $('.pages').append("<a>" + (i + 2) + "</a>")
-  }
-
-  $('#properties').children().slice(page, perPage).show()
-
-  $("#listings-next").click(function() {
-    $('.pages').children().eq(page).removeClass('selected');
-    page = page === totalPages ? 0 : page += 1;
-    $('#properties').children().hide();
-    var start = page * perPage
-    $('#properties').children().slice(start, start + perPage).show()
-    $('.pages').children().eq(page).addClass('selected');
-  })
-
-  $("#listings-prev").click(function() {
-    $('.pages').children().eq(page).removeClass('selected');
-    page = page === 0 ? totalPages : page -= 1;
-    $('#properties').children().hide();
-    var start = page * perPage;
-    $('#properties').children().slice(start, start + perPage).show()
-    $('.pages').children().eq(page).addClass('selected');
-  })
+  paginate();
 
   $("#listings-text-search").keydown(function() {
     var listings = $('.listing-preview')
@@ -35,6 +10,7 @@ $(document).ready(function() {
     $('.listing-preview').filter(function(preview) {
       return $(this).text().toLowerCase().indexOf(searchContent) > 0 || searchContent === ""
     }).show();
+    paginate();
   })
   $("#listing-search").click(function() {
     var listings = $('.listing-preview')
@@ -127,3 +103,35 @@ $(document).ready(function() {
     });
   }
 })
+
+function paginate() {
+  $('.pages').html('<a id="1" class="selected">1</a>')
+  properties = $('#properties').children(':visible');
+  var page = 0;
+  var perPage = 6;
+  var totalPages = parseInt(properties.length / perPage)
+  for(var i=0; i < totalPages; i++){
+    $('.pages').append("<a>" + (i + 2) + "</a>")
+  }
+
+  $(properties).hide();
+  $(properties).slice(page, perPage).show();
+
+  $("#listings-next").click(function() {
+    $('.pages').children().eq(page).removeClass('selected');
+    page = page === totalPages ? 0 : page += 1;
+    $('#properties').children().hide();
+    var start = page * perPage
+    $('#properties').children().slice(start, start + perPage).show()
+    $('.pages').children().eq(page).addClass('selected');
+  })
+
+  $("#listings-prev").click(function() {
+    $('.pages').children().eq(page).removeClass('selected');
+    page = page === 0 ? totalPages : page -= 1;
+    $('#properties').children().hide();
+    var start = page * perPage;
+    $('#properties').children().slice(start, start + perPage).show()
+    $('.pages').children().eq(page).addClass('selected');
+  })
+}
