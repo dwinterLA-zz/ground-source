@@ -25,7 +25,7 @@ $(document).ready(function() {
     var minSizeFilter = parseInt($('#min-size').val());
     var maxPriceFilter = parseInt($('#max-price').val());
 
-    $('.listing-preview').filter(function() {
+    var filteredListings = $('.listing-preview').filter(function() {
       return ($(this).data("available").toString() === statusFilter || statusFilter ==="n/a") &&
         ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") &&
         ($(this).data("type").toLowerCase() === typeFilter || typeFilter === "n/a") &&
@@ -33,7 +33,9 @@ $(document).ready(function() {
         parseInt($(this).data("rooms")) >= minRoomFilter &&
         (parseInt($(this).data("size").replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) &&
         (parseInt($(this).data("price").replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter))
-    }).show();
+    });
+
+    paginate(filteredListings);
   })
   $(window).scroll(function() {
     if (window.pageYOffset >= 67) {
