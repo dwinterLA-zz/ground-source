@@ -17,6 +17,8 @@ fields:
   name: email
   label: email
 - type: text
+  label: phone
+  name: phone
 - type: file
   name: avatar
   label: Avatar
@@ -35,3 +37,7 @@ fields:
   description: The bio that will appear on the agent's popup modal
   config:
     wysiwyg: true
+- type: number
+- type: text
+  name: phone
+  label: phone
