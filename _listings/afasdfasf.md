@@ -13,6 +13,7 @@ price: 1200
 available: true
 layout: listing
 gallery-images:
+- "/uploads/2017/09/08/hermosa_beach_real_estate_720.jpg"
 - "/uploads/2017/09/07/hermosa_beach_real_estate_720.jpg"
 highlights: []
 amenities: []
