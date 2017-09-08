@@ -62,18 +62,46 @@ a {
       padding: 1em;
       padding-left: calc(80px - 12px);
     }
-    .contact-body {
-      font-size: 1.3em;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 15px 22px;
-      > ul {
-        list-style-type: none;
-        margin: 0;
-        padding-left: calc(30px - 12px;);
-        > li {
-          padding: 12px;
-        }
-      }
+  }
+}
+
+.contact-table {
+  text-align: left;
+  margin-left: 52px;
+  > td {
+    width: 50%;
+  }
+}
+.contact-body {
+  font-size: .9em;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px 22px;
+  color: #858585;
+  .contact-row {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-left: 50px;
+    font-size: .7em;
+    text-align: left;
+    padding-left: 50px;
+    > div {
+      width: 44%;
+    }
+  }
+  > ul {
+    display: inline-block;
+    width: 48%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    // padding-left: calc(30px - 12px);
+    display: inline-block;
+    text-align: left;
+    > li {
+      width: 80%;
+      padding: 6px;
     }
   }
 }
@@ -197,9 +225,9 @@ a {
   background: rgba(255, 255, 255, 0.8);
   z-index: 10;
   .contact-form {
-    width: 70%;
+    width: 50%;
     margin: 112px auto 0 auto;
-    font-size: 1.6em;
+    font-size: 1.3em;
     padding-bottom: 10px;
     text-align: center;
     background-color: white;
@@ -239,14 +267,13 @@ a {
       }
       > button {
         width: 72%;
-        height: 2.5em;
+        height: 2em;
         border-radius: 500px;
         margin-top: 8px;
         font-weight: 800;
         color: $primary-color-darker-darker;
         border-color: $primary-color-darker-darker;
         border-style: solid;
-        margin-bottom: 80px;
         margin-top: 20px;
       }
     }
@@ -624,6 +651,20 @@ a {
     font-size: .9em;
   }
 
+  // contact-table {
+  //   text-align: left;
+  //   margin-left: 52px;
+  //   > td {
+  //     width: 100%;
+  //   }
+  // }
+
+  .contact-row {
+    > {
+      width: 100%;
+    }
+  }
+
   .ham-menu {
     display: block !important;
   }
@@ -684,12 +725,15 @@ a {
         text-align: center;
         background: rgba(255, 255, 255, 0.8);
       }
-      .contact-body {
-        padding: 12px 0 0 0;
-        background: rgba(255, 255, 255, 0.8);
-        > ul {
-          padding: 0 0 17px 20px;
-        }
+    }
+  }
+
+  .contact-body {
+    padding: 50px 0 0 0;
+    background: rgba(255, 255, 255, 0.8);
+    .contact-row {
+      > div {
+        width: 100%;
       }
     }
   }
