@@ -53,6 +53,7 @@ $(document).ready(function() {
     }
   })
   $("#features-toggle").click(function() {
+    $('#listings-text-search').toggle();
     $(".filters").toggle();
     if ($(this).hasClass("plus-sign")) {
       $(this).removeClass("plus-sign")
