@@ -1,4 +1,6 @@
 ---
+pages:
+- _agents/licensed-real-estate-salesperson.md
 hide_body: false
 fields:
 - type: text
