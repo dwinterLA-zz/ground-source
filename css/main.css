@@ -1729,7 +1729,8 @@ a {
         line-height: 110%; }
         #container-about .agent-details .content .bio > h2 {
           font-size: 1.8em;
-          opacity: 1; }
+          opacity: 1;
+          text-transform: uppercase; }
       #container-about .agent-details .content .footer {
         background-color: #d46049;
         color: white;
