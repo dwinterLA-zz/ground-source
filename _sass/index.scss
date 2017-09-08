@@ -35,6 +35,16 @@ a {
   height: 100%;
 }
 
+
+
+.contact-table {
+  text-align: left;
+  margin-left: 52px;
+  > td {
+    width: 50%;
+  }
+}
+
 #contact-us-home-section {
   position: relative;
   color: $grey;
@@ -62,11 +72,10 @@ a {
       padding: 1em;
       padding-left: calc(80px - 12px);
     }
-    // overrides for the contact links that are located in the home page map area
     .contact-body {
       font-size: 1.3em;
       background: rgba(255, 255, 255, 0.9);
-      padding: 15px 22px !important;
+      padding: 15px 22px;
       > ul {
         list-style-type: none;
         margin: 0;
@@ -79,14 +88,7 @@ a {
   }
 }
 
-.contact-table {
-  text-align: left;
-  margin-left: 52px;
-  > td {
-    width: 50%;
-  }
-}
-.contact-body {
+.contact-info-body {
   font-size: .9em;
   background: rgba(255, 255, 255, 0.9);
   padding: 15px 22px 34px 22px;
@@ -101,20 +103,6 @@ a {
     padding: 0 0 9px 26px;
     > div {
       width: 46%;
-    }
-  }
-  > ul {
-    display: inline-block;
-    width: 48%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    // padding-left: calc(30px - 12px);
-    display: inline-block;
-    text-align: left;
-    > li {
-      width: 80%;
-      padding: 6px;
     }
   }
 }
