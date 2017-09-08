@@ -41,3 +41,7 @@ fields:
 - type: text
   name: phone
   label: phone
+- type: text
+  name: position
+  label: position
+  description: Job position / title of the agent
