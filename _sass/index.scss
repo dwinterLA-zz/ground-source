@@ -62,6 +62,14 @@ a {
       padding: 1em;
       padding-left: calc(80px - 12px);
     }
+    // overrides for the contact links that are located in the home page map area
+    .contact-body {
+      padding: 32px 14px !important;
+      .contact-row {
+        padding-left: 0px !important;
+        font-size: 1em !important;
+      }
+    }
   }
 }
 
@@ -75,19 +83,18 @@ a {
 .contact-body {
   font-size: .9em;
   background: rgba(255, 255, 255, 0.9);
-  padding: 15px 22px;
+  padding: 15px 22px 34px 22px;
   color: #858585;
   .contact-row {
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
     justify-content: center;
-    padding-left: 50px;
     font-size: .7em;
     text-align: left;
-    padding-left: 50px;
+    padding: 0 0 9px 26px;
     > div {
-      width: 44%;
+      width: 46%;
     }
   }
   > ul {
