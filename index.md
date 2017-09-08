@@ -9,6 +9,9 @@ intro_paragraph: GROUNDSOURCE is a Los Angeles-based full-service commercial rea
   close the deal the right way. For us, good business is about a connection, not a
   commission which is why at GROUNDSOURCE we’re by your side from the fact-finding
   to the lease signing and every step along the way.<br><br><br>
+tennant_service_text: Effective tenant representation is based on experience and knowledge and at GROUNDSOURCE we know more about Los Angeles than anyone else -- we know the market conditions, the infrastructures, comparable deals and the people who made them. This is our city.
+landlord_service_text: We provide efficient, effective landlord representation, ensuring that each transaction is hands-on, locally informed and detail-oriented. We know the value of a broker lies in our transparent integrity and commitment to a seamless experience.
+investment_service_text: Effective tenant representation is based on experience and knowledge and at GROUNDSOURCE we know more about Los Angeles than anyone else -- we know the market conditions, the infrastructures, comparable deals and the people who made them. This is our city.
 layout: index
 ---
 
