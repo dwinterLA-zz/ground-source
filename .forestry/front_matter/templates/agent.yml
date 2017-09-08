@@ -1,0 +1,35 @@
+---
+hide_body: false
+fields:
+- type: text
+  name: first_name
+  label: First Name
+  config:
+    required: true
+- type: text
+  name: last_name
+  label: Last Name
+  config:
+    required: true
+- type: text
+  name: email
+  label: email
+- type: text
+- type: file
+  name: avatar
+  label: Avatar
+- type: text
+  label: title
+  name: title
+- type: textarea
+  name: short_bio
+  label: Short Bio
+  description: The bio that will appear on the about us page
+  config:
+    wysiwyg: true
+- type: textarea
+  label: Full Bio
+  name: full_bio
+  description: The bio that will appear on the agent's popup modal
+  config:
+    wysiwyg: true
