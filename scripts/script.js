@@ -46,6 +46,7 @@ $(document).ready(function () {
     }
   });
   $("#features-toggle").click(function () {
+    $('#listings-text-search').toggle();
     $(".filters").toggle();
     if ($(this).hasClass("plus-sign")) {
       $(this).removeClass("plus-sign");
@@ -77,7 +78,8 @@ $(document).ready(function () {
     $('.main').removeClass('mobile-bg-hide');
   });
   $('.bio-button').click(function () {
-    $('.agent-details').fadeIn();
+    var agent = $(this).data('agent');
+    $("#agent-" + agent).fadeIn();
     $('.main').addClass('mobile-bg-hide');
   });
 

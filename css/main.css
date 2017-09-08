@@ -1345,7 +1345,7 @@ a {
   #container-listing #header-listings {
     height: 75vh;
     position: relative;
-    background-image: url(../images/listings-bg.jpg);
+    background-image: url(../images/placeholder-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
@@ -1533,14 +1533,14 @@ a {
   #container-listings .listing-preview {
     width: calc(33% - 10px);
     margin: 0 12px 12px 0;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
     color: gray;
     background-color: white;
     box-shadow: 0px 0px 18px 6px #f2f2f2; }
     #container-listings .listing-preview > a {
       text-decoration: none; }
     #container-listings .listing-preview .header {
-      background-image: url(../images/carousel/prop2-header.jpg);
+      background-image: url(../images/placeholder-thumbnail.jpg);
       background-size: cover;
       height: 190px;
       margin: 0;
@@ -1685,7 +1685,8 @@ a {
     border-color: #c04d3a;
     border-style: solid;
     border-width: thin;
-    padding: 5px 20px; }
+    padding: 5px 20px;
+    text-transform: uppercase; }
   #container-about .bio-pic-mobile {
     display: none; }
   #container-about .agent-details {
