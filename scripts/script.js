@@ -85,7 +85,8 @@ $(document).ready(function() {
     $('.main').removeClass('mobile-bg-hide');
   })
   $('.bio-button').click(function() {
-    $('.agent-details').fadeIn();
+    let agent = $(this).data('agent');
+    $("#agent-" + agent).fadeIn();
     $('.main').addClass('mobile-bg-hide');
   })
 
