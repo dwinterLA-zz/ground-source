@@ -64,10 +64,16 @@ a {
     }
     // overrides for the contact links that are located in the home page map area
     .contact-body {
-      padding: 32px 14px !important;
-      .contact-row {
-        padding-left: 0px !important;
-        font-size: 1em !important;
+      font-size: 1.3em;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px 22px !important;
+      > ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: calc(30px - 12px);
+        > li {
+          padding: 12px;
+        }
       }
     }
   }
