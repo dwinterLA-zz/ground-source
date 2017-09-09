@@ -40,7 +40,6 @@ fields:
   description: The bio that will appear on the agent's popup modal
   config:
     wysiwyg: true
-- type: number
 - type: text
   name: phone
   label: phone
