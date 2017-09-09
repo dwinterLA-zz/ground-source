@@ -8,3 +8,21 @@ fields:
     wysiwyg: true
   label: Intro Paragraph
   name: intro_paragraph
+- type: textarea
+  name: tennant_services_text
+  label: Tennant Services Text
+  config:
+    wysiwyg: true
+- type: textarea
+  name: landlord_services_text
+  label: Landlord Services Text
+  config:
+    wysiwyg: true
+- type: text
+  name: investment_services_text
+  label: Investment Services Text
+- type: file
+  name: home_into_image
+  label: Home Into Image
+  description: This is the image that is directly to the right of the first block
+    of text on the home page.
