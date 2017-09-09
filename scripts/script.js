@@ -1,5 +1,6 @@
 ---
 ---
+// do not remove the dashes above, they are required for babel to work
 
 const PER_PAGE = 6
 
@@ -36,8 +37,8 @@ $(document).ready(function() {
         ($(this).data("type").toLowerCase() === typeFilter || typeFilter === "n/a") &&
         ($(this).text().toLowerCase().indexOf(keywordFilter) > 0 || keywordFilter === "") &&
         parseInt($(this).data("rooms")) >= minRoomFilter &&
-        (parseInt($(this).data("size").replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) &&
-        (parseInt($(this).data("price").replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter))
+        (parseInt($(this).data("size").toString().replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) &&
+        (parseInt($(this).data("price").toString().replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter))
     });
 
     paginate(filteredListings);

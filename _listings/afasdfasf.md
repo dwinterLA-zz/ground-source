@@ -19,6 +19,6 @@ longitude: ''
 price: 1200
 rooms: 3
 short-caption: asd;lfkjasdf;lk
-sq-footage: 1344000
+sq-footage: "1344000"
 title: afasdfasf
 ---
