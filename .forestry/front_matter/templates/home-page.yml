@@ -22,7 +22,7 @@ fields:
   name: investment_services_text
   label: Investment Services Text
 - type: file
-  name: home_into_image
-  label: Home Into Image
+  name: intro_image
+  label: Intro Image
   description: This is the image that is directly to the right of the first block
     of text on the home page.
