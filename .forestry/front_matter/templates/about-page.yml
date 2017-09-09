@@ -1,0 +1,8 @@
+---
+hide_body: false
+fields:
+- type: textarea
+  name: main_text
+  label: Main Text
+  config:
+    wysiwyg: true
