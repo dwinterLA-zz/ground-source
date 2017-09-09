@@ -1,4 +1,6 @@
 ---
+pages:
+- listings.md
 hide_body: false
 fields:
 - type: textarea
