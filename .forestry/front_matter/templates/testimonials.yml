@@ -1,7 +1,7 @@
 ---
 pages:
-- _testimonials/5-md.md
 - _testimonials/4.md
+- _testimonials/5-md.md
 hide_body: false
 fields:
 - type: text

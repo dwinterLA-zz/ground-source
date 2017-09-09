@@ -1,10 +1,10 @@
 ---
 pages:
-- _agents/jane1.md
-- _agents/jane2.md
-- _agents/jon1.md
-- _agents/jon2.md
 - _agents/licensed-real-estate-salesperson.md
+- _agents/jon2.md
+- _agents/jon1.md
+- _agents/jane2.md
+- _agents/jane1.md
 hide_body: false
 fields:
 - type: text
