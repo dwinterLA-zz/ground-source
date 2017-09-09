@@ -2,11 +2,6 @@
   // need the actual asset
   background-image: url(../images/about/fs-bg.jpg);
   background-size: cover;
-  // #properties {
-  //   > div {
-  //     display: none;
-  //   }
-  // }
   .content {
     padding-top: 12vh;
   }
@@ -40,11 +35,12 @@
 
   #features-toggle {
     border-color: lightgrey;
-    color: lightgrey;
+    color: $listings-text;
     border-style: solid;
     border-width: thin;
-    height:20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
+    font-size: 1.6em;
     margin-right: 8px;
     text-align: center;
     vertical-align: middle;
