@@ -1,0 +1,13 @@
+---
+hide_body: false
+fields:
+- type: textarea
+  name: header
+  label: header
+  config:
+    wysiwyg: true
+- type: textarea
+  name: subheader
+  label: Sub-header
+  config:
+    wysiwyg: true
