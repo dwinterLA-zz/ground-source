@@ -1,6 +1,6 @@
 ---
 avatar: images/about/agent-bio.png
-date: 2017-09-08 10:11:24 -0700
+date: 2017-09-08 17:11:24 +0000
 email: agent@groundsource.com
 first_name: JIM
 full_bio: Contrary to popular belief, Lorem Ipsum is not simply random text. It has
@@ -17,7 +17,7 @@ last_name: DOE
 phone: 558.555.5555
 short_bio: Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
   sit amet. Stet clita kasdgubergren, no sea takimata sanctus est Lorem ipsum dolor
-  sit amet.
+  sit amet.d
 title: Licensed Real Estate Salesperson
 position: Licensed Real Estate Salesperson
 undefined: ''
