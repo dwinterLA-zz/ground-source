@@ -19,6 +19,5 @@ position: Licensed Real Estate Salesperson
 short_bio: Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
   sit amet. Stet clita kasdgubergren, no sea takimata sanctus est Lorem ipsum dolor
   sit amet.dda
-title: Licensed Real Estate Salesperson
 undefined: ''
 ---

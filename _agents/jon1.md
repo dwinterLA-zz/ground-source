@@ -18,7 +18,6 @@ phone: 555.555.5555
 short_bio: Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
   sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
   sit amet.
-title: Licensed Real Estate Salesperson
 position: Licensed Real Estate Salesperson
 undefined: ''
 featured_listings: ["1"]
