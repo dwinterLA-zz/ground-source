@@ -110,7 +110,8 @@
         }
       }
       .bio {
-        margin: 0 30px 25px 30px;
+        margin: 0 30px;
+        padding-bottom: 12px;
         color: black;
         opacity: .55;
         line-height: 110%;
@@ -130,6 +131,7 @@
           height: 100%;
           margin: 0 auto;
           display: flex;
+          justify-content: center;
           .agent-featured-listing {
             width: 33.33%;
             height: 200px;
@@ -139,8 +141,8 @@
             .view-listing-button {
               position: absolute;
               text-decoration: none;
-              left: 25%;
-              top: 38%;
+              left: 92px;
+              top: 79px;
             }
           }
         }
