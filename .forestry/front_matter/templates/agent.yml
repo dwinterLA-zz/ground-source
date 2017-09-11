@@ -50,4 +50,5 @@ fields:
 - type: list
   name: featured_listings
   label: Featured Listings
-  description: Place the title of each listing you would like to be featured here.
+  description: Place the title of each listing you would like to be featured here
+    (must match exactly).
