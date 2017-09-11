@@ -1720,6 +1720,15 @@ a {
     border-width: thin;
     padding: 5px 20px;
     text-transform: uppercase; }
+  #container-about .view-listing-button {
+    border-radius: 500px;
+    color: white;
+    border-style: solid;
+    border-width: thin;
+    margin-top: 4px;
+    font-weight: 500;
+    font-size: .6em;
+    padding: 3px 18px; }
   #container-about .bio-pic-mobile {
     display: none; }
   #container-about .agent-details {
@@ -1756,7 +1765,8 @@ a {
             font-size: 1.8em;
             margin-bottom: 5px; }
       #container-about .agent-details .content .bio {
-        margin: 0 30px 25px 30px;
+        margin: 0 30px;
+        padding-bottom: 12px;
         color: black;
         opacity: .55;
         line-height: 110%; }
@@ -1775,10 +1785,21 @@ a {
           margin: 0 auto;
           display: -webkit-box;
           display: -ms-flexbox;
-          display: flex; }
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center; }
           #container-about .agent-details .content .footer .featured-listings .agent-featured-listing {
             width: 33.33%;
-            height: 200px; }
+            height: 200px;
+            position: relative;
+            background-image: url("/images/placeholder-thumbnail.jpg");
+            background-size: cover; }
+            #container-about .agent-details .content .footer .featured-listings .agent-featured-listing .view-listing-button {
+              position: absolute;
+              text-decoration: none;
+              left: 92px;
+              top: 79px; }
   #container-about .about-text {
     width: 100%;
     padding-top: 167px; }
@@ -1791,6 +1812,9 @@ a {
       line-height: 1.4;
       display: inline-block;
       vertical-align: bottom; }
+  #container-about .agent-listing {
+    display: inherit;
+    position: relative; }
   #container-about .agents {
     padding: 5em 0;
     text-align: center; }
