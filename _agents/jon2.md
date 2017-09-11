@@ -15,10 +15,10 @@ full_bio: Contrary to popular belief, Lorem Ipsum is not simply random text. It 
   in section 1.10.32.
 last_name: DOE
 phone: 558.555.5555
+position: Licensed Real Estate Salesperson
 short_bio: Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
   sit amet. Stet clita kasdgubergren, no sea takimata sanctus est Lorem ipsum dolor
-  sit amet.d
+  sit amet.dda
 title: Licensed Real Estate Salesperson
-position: Licensed Real Estate Salesperson
 undefined: ''
 ---
