@@ -303,7 +303,11 @@
     .bio-pic-mobile {
       display: block;
       width: 88%;
-      margin: 0 auto;
+      margin: 30px auto 0 auto;
+    }
+
+    .bio-pic {
+      display: none;
     }
 
     .agent-details {
@@ -353,7 +357,9 @@
             justify-content: center;
             .agent-featured-listing {
               width: 100%;
-              height: 15%;
+              .view-listing-button {
+                left: 146px;
+              }
             }
           }
         }
