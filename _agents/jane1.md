@@ -21,4 +21,5 @@ short_bio: Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum do
 title: Licensed Real Estate Salesperson
 position: Licensed Real Estate Salesperson
 undefined: ''
+featured_listings: [1, 2, 3]
 ---
