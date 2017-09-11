@@ -67,11 +67,13 @@
               <div class="featured-listings">
                 {% for agent_listing in agent.featured_listings %}
                   {% assign listing = site.listings | where: "title", agent_listing | first %}
-                    {% if listing.property-preview-image %}
-                      <img src="{{listing.property-preview-image}}" class="agent-featured-listing"/>
-                    {% else %}
-                      <img src="/images/placeholder-thumbnail.jpg" class="agent-featured-listing"/>
-                    {% endif %}
+                  {% if listing.property-preview-image %}
+                    <div class="agent-featured-listing" style="background-image: url('{{listing.property-preview-image}}')">
+                  {% else %}
+                    <div class="agent-featured-listing">
+                  {% endif %}
+                    <a class="view-listing-button" href="{{listing.url}}">View Property<a/>
+                   </div>
                 {% endfor %}
               </div>
             </div>

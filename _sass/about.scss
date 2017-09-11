@@ -57,6 +57,17 @@
     text-transform: uppercase;
   }
 
+  .view-listing-button {
+    border-radius: 500px;
+    color: white;
+    border-style: solid;
+    border-width: thin;
+    margin-top: 4px;
+    font-weight: 500;
+    font-size: .6em;
+    padding: 3px 18px;
+  }
+
   .bio-pic-mobile {
     display: none;
   }
@@ -122,6 +133,15 @@
           .agent-featured-listing {
             width: 33.33%;
             height: 200px;
+            position: relative;
+            background-image: url("/images/placeholder-thumbnail.jpg");
+            background-size: cover;
+            .view-listing-button {
+              position: absolute;
+              text-decoration: none;
+              left: 25%;
+              top: 38%;
+            }
           }
         }
       }
@@ -142,6 +162,11 @@
       display: inline-block;
       vertical-align: bottom;
     }
+  }
+
+  .agent-listing {
+    display: inherit;
+    position: relative;
   }
   .agents {
     padding: 5em 0;
