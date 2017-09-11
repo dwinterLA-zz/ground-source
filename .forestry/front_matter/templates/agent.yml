@@ -1,9 +1,9 @@
 ---
 pages:
+- _agents/jane1.md
 - _agents/jon2.md
 - _agents/jon1.md
 - _agents/jane2.md
-- _agents/jane1.md
 hide_body: false
 fields:
 - type: text
@@ -47,3 +47,7 @@ fields:
   name: position
   label: position
   description: Job position / title of the agent
+- type: list
+  name: featured_listings
+  label: Featured Listings
+  description: Place the title of each listing you would like to be featured here.
