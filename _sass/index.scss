@@ -245,6 +245,11 @@ a {
   display: none;
 }
 
+#thankyou_message {
+  padding: 40px;
+  display: none;
+}
+
 .contact-us-modal {
   display: none;
   position: fixed;
@@ -283,6 +288,15 @@ a {
         color: #777777;
         opacity: .9;
         font-size: 2em;
+      }
+      .validation {
+        display: block;
+        margin: 0 auto 18px auto;
+        width: 72%;
+        opacity: .8;
+        display: none;
+        text-align: left;
+        color: $primary-color;
       }
       > input {
         display: block;

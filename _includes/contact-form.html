@@ -1,13 +1,18 @@
 <div class="contact-us-modal">
   <div class="contact-form">
     <div class="contact-close"></div>
-    <form id="gform" class="form" method="POST" action="https://script.google.com/macros/s/AKfycbwjlQ6lCGpwQG3t_9qTlzNnkf2qzPB-q5ZHZzDGlXPv00HRcGao/exec">
+    <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
       <input name="name" type="text" placeholder="Name">
       <input name="email" type="text" placeholder="Email">
+      <div id="email-invalid" class="validation">Please use a valid email address</div>
       <input name="phone" type="text" placeholder="Phone Number">
       <button id="submit-contact-form">SUBMIT</button>
     </form>
+    <div id="thankyou_message">
+      <img src="/images/icons/okay.png" />
+      <p>Thanks! We'll be in touch</p>
+    </div>
     {% include contact-info.html %}
   </div>
 </div>
