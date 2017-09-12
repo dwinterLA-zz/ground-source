@@ -19,6 +19,7 @@ $(document).ready(function () {
 
     paginate(filteredListings);
   });
+
   $("#listing-search").click(function () {
     var listings = $('.listing-preview');
     $(listings).hide();
@@ -92,6 +93,7 @@ $(document).ready(function () {
   $('.review-carousel').slick({
     "autoplay": false,
     "draggable": false,
+    "dots": true,
     "prevArrow": $('.navigation-arrow-left'),
     "nextArrow": $('.navigation-arrow-right')
   });
