@@ -2,6 +2,10 @@
 avatar: images/about/agent-bio.png
 date: 2017-09-08 17:11:24 +0000
 email: agent@groundsource.com
+featured_listings:
+- '3'
+- '2'
+- '1'
 first_name: JONATHAN
 full_bio: Contrary to popular belief, Lorem Ipsum is not simply random text. It has
   roots in a piece of classical Latin literature from 45 BC, making it over 2000 years
@@ -12,17 +16,13 @@ full_bio: Contrary to popular belief, Lorem Ipsum is not simply random text. It 
   Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
   This book is a treatise on the theory of ethics, very popular during the Renaissance.
   The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
-  in section 1.10.32.
+  in section 1.10.32. Fa fa fa fa fa fa fa.
 last_name: DOE
 phone: 555.555.5555
+position: Licensed Real Estate Salesperson
 short_bio: Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
   sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
   sit amet.
-position: Licensed Real Estate Salesperson
-undefined: ''
-featured_listings:
-- '3'
-- '2'
-- '1'
 title: ''
+undefined: ''
 ---
