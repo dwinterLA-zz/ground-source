@@ -64,7 +64,9 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
   */
 
   if( !validEmail(data.email) ) {   // if email is not valid show error
-    document.getElementById('email-invalid').style.display = 'block';
+    $("#gform").show();
+    $("#form-submit-loader").hide();
+    $("#email-invalid").show();
     return false;
   } else {
     var url = "https://script.google.com/macros/s/AKfycbwjlQ6lCGpwQG3t_9qTlzNnkf2qzPB-q5ZHZzDGlXPv00HRcGao/exec";
@@ -79,6 +81,10 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
       success: function() {
         document.getElementById('form-submit-loader').style.display = 'none';
         document.getElementById('thankyou_message').style.display = 'block';
+      },
+      fail: function() {
+        document.getElementById('form-submit-loader').style.display = 'none';
+        document.getElementById('error_message').style.display = 'block';
       }
     })
   }
