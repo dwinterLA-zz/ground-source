@@ -33,13 +33,18 @@
     <div class="contact-us-modal">
   <div class="contact-form">
     <div class="contact-close"></div>
-    <form id="gform" class="form" method="POST" action="https://script.google.com/macros/s/AKfycbwjlQ6lCGpwQG3t_9qTlzNnkf2qzPB-q5ZHZzDGlXPv00HRcGao/exec">
+    <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
       <input name="name" type="text" placeholder="Name">
       <input name="email" type="text" placeholder="Email">
+      <div id="email-invalid" class="validation">Please use a valid email address</div>
       <input name="phone" type="text" placeholder="Phone Number">
       <button id="submit-contact-form">SUBMIT</button>
     </form>
+    <div id="thankyou_message">
+      <img src="/images/icons/okay.png" />
+      <p>Thanks! We'll be in touch</p>
+    </div>
     <div class="contact-info-body">
    <div class="contact-row">
     <div><img src="/images/phone-icon.png" class="icon-small"/>(555)555-5555</div>
@@ -253,6 +258,7 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/formSubmit.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
     <!-- TODO replace API key -->
     <script async defer
