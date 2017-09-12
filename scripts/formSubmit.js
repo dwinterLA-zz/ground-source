@@ -55,7 +55,8 @@ function getFormData() {
 function handleFormSubmit(event) {  // handles form submit withtout any jquery
   event.preventDefault();           // we are submitting via xhr below
   var data = getFormData();         // get the values submitted in the form
-
+  $("#gform").hide();
+  $("#form-submit-loader").show();
   /* OPTION: Remove this comment to enable SPAM prevention, see README.md
   if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
     return false;
@@ -67,22 +68,19 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     return false;
   } else {
     var url = "https://script.google.com/macros/s/AKfycbwjlQ6lCGpwQG3t_9qTlzNnkf2qzPB-q5ZHZzDGlXPv00HRcGao/exec";
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', url);
-    // xhr.withCredentials = true;
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onreadystatechange = function() {
-        console.log( xhr.status, xhr.statusText )
-        console.log(xhr.responseText);
-        document.getElementById('gform').style.display = 'none'; // hide form
-        document.getElementById('thankyou_message').style.display = 'block';
-        return;
-    };
-    // url encode form data for sending as post data
     var encoded = Object.keys(data).map(function(k) {
-        return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-    }).join('&')
-    xhr.send(encoded);
+      return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+  }).join('&')
+
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: encoded,
+      success: function() {
+        document.getElementById('form-submit-loader').style.display = 'none';
+        document.getElementById('thankyou_message').style.display = 'block';
+      }
+    })
   }
 }
 function loaded() {
