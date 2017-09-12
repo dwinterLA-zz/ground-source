@@ -99,6 +99,7 @@ $(document).ready(function() {
   $('.review-carousel').slick({
     "autoplay": false,
     "draggable": false,
+    "dots": true,
     "prevArrow": $('.navigation-arrow-left'),
     "nextArrow": $('.navigation-arrow-right')
   })

@@ -18,6 +18,32 @@ a {
   color: inherit;
 }
 
+.slick-dots {
+  display: inline-block;
+  list-style-type: none;
+  > li {
+    display: inline-block;
+    position: relative;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    &.slick-active {
+      > button {
+        background-color: $primary-color-darker;
+        box-shadow: -2px 2px 1px #888888;
+      }
+    }
+    > button {
+      width: 20px;
+      height: 20px;
+      border-radius: 500px;
+      border-style: solid;
+      border-color: $primary-color-darker;
+      color: transparent;
+    }
+  }
+}
+
 .content {
   position: relative;
 }
