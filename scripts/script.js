@@ -19,6 +19,7 @@ $(document).ready(function() {
 
     paginate(filteredListings);
   })
+
   $("#listing-search").click(function() {
     var listings = $('.listing-preview')
     $(listings).hide();

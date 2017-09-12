@@ -1,13 +1,14 @@
 <div class="contact-us-modal">
   <div class="contact-form">
     <div class="contact-close"></div>
-    <form action="mailto:TODO" class="form">
+    <form id="gform" class="form" method="POST" action="https://script.google.com/macros/s/AKfycbwjlQ6lCGpwQG3t_9qTlzNnkf2qzPB-q5ZHZzDGlXPv00HRcGao/exec">
       <p class="contact-us">CONTACT US</p>
-      <input type="text" placeholder="Name">
-      <input type="text" placeholder="Email">
-      <input type="text" placeholder="Phone Number">
-      <button>SUBMIT</button>
+      <input name="name" type="text" placeholder="Name">
+      <input name="email" type="text" placeholder="Email">
+      <input name="phone" type="text" placeholder="Phone Number">
+      <button id="submit-contact-form">SUBMIT</button>
     </form>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSciESwJZkEYBzwP1mYwzdXLzbiJN0UxUqvcJ3lcy9yFHB5trQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     {% include contact-info.html %}
   </div>
 </div>
