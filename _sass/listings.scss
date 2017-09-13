@@ -40,7 +40,7 @@
     border-width: thin;
     height: 30px;
     width: 30px;
-    font-size: 1.6em;
+    font-size: 21px;
     margin-right: 8px;
     text-align: center;
     vertical-align: middle;
@@ -168,6 +168,8 @@
   .listings-search {
     border-style: solid;
     border-color: lightgray;
+    text-indent: 18px;
+    outline: none;
   }
 
   input.listings-search::-webkit-input-placeholder{
