@@ -30,7 +30,6 @@ a {
     padding: 0;
     width: 15px;
     height: 15px;
-    cursor: pointer;
     &.slick-active {
       > button {
         background-color: $primary-color-darker;
@@ -45,6 +44,7 @@ a {
       color: transparent;
       padding: 0;
       outline: none;
+      cursor: pointer;
     }
   }
 }
@@ -132,7 +132,7 @@ a {
     text-align: left;
     padding: 0 0 9px 26px;
     > div {
-      width: 46%;
+      width: 50%;
     }
   }
 }
@@ -565,6 +565,7 @@ a {
   width: 18px;
   height: 18px;
   z-index: 2;
+  cursor: pointer;
 }
 
 .navigation-arrow-left {
@@ -745,6 +746,18 @@ a {
     font-size: .9em;
   }
 
+  .contact-info-body {
+    font-size: .9em;
+    margin-top: 12px;
+    .contact-row {
+      padding-left: 0;
+      margin: 0 auto;
+      width: 80%;
+      > div {
+        width: 100%;
+      }
+    }
+  }
   .navigation-arrow-right {
     right: 5%;
   }
