@@ -1160,7 +1160,7 @@ a {
       opacity: .7; }
     .footer .column.social {
       float: right;
-      margin-right: 0;
+      margin-right: 3px;
       font-size: 1.5em;
       text-align: right;
       line-height: 1; }
@@ -1619,9 +1619,11 @@ a {
       width: 420px;
       height: 50px; }
   #container-listings .submenu {
-    margin-top: 15px;
+    display: inline;
     color: grey;
     font-size: .8em; }
+    #container-listings .submenu > span {
+      vertical-align: middle; }
   #container-listings #features-toggle {
     border-color: lightgrey;
     color: #de6c62;
@@ -1629,11 +1631,14 @@ a {
     border-width: thin;
     height: 30px;
     width: 30px;
-    font-size: 1.6em;
-    margin-right: 8px;
+    font-size: 21px;
+    margin-right: 2px;
     text-align: center;
     vertical-align: middle;
-    display: inline-block; }
+    display: inline-block;
+    cursor: pointer; }
+  #container-listings #show-less-filters {
+    display: none; }
   #container-listings .plus-sign:after {
     content: "+"; }
   #container-listings .minus-sign:after {
@@ -1665,11 +1670,14 @@ a {
     #container-listings .filters > button {
       background-color: #d35540;
       color: white;
-      border: none; }
+      border: none;
+      cursor: pointer; }
+      #container-listings .filters > button#listing-clear-filters {
+        background-color: #514d4c; }
   #container-listings .listing-preview {
-    width: calc(33% - 10px);
-    margin: 0 12px 12px 0;
-    margin-bottom: 18px;
+    width: 31%;
+    margin: 0 18px 18px 0;
+    margin-bottom: 36px;
     color: gray;
     background-color: white;
     box-shadow: 0px 0px 18px 6px #f2f2f2; }
@@ -1723,7 +1731,9 @@ a {
     white-space: nowrap; }
   #container-listings .listings-search {
     border-style: solid;
-    border-color: lightgray; }
+    border-color: lightgray;
+    text-indent: 18px;
+    outline: none; }
   #container-listings input.listings-search::-webkit-input-placeholder {
     color: #de6c62;
     font-size: 1.1em;
@@ -1735,7 +1745,7 @@ a {
     position: relative;
     font-size: .9em;
     color: #959595;
-    margin: 35px 0 35px 0; }
+    margin: 14px 0 35px 0; }
     #container-listings .paginator > div {
       display: inline-block;
       padding: 3px; }
@@ -1753,12 +1763,14 @@ a {
       text-align: center;
       vertical-align: middle;
       text-decoration: none;
+      cursor: pointer;
       line-height: 28px;
       display: inline-block;
       width: 28px;
       height: 26px; }
     #container-listings .paginator .navigate-page {
-      color: #d46049; }
+      color: #d46049;
+      cursor: pointer; }
   @media screen and (max-width: 768px) {
     #container-listings .listings {
       width: 90%; }

@@ -27,16 +27,28 @@ $(document).ready(function () {
     var locationFilter = $('#location-filter').find(":selected").val().toLowerCase();
     var statusFilter = $('#status-filter').find(":selected").val().toLowerCase();
     var typeFilter = $('#type-filter').find(":selected").val().toLowerCase();
-    var keywordFilter = $('#keyword-filter').val().toLowerCase();
     var minRoomFilter = parseInt($('#min-rooms').find(":selected").val());
     var minSizeFilter = parseInt($('#min-size').val());
     var maxPriceFilter = parseInt($('#max-price').val());
 
     var filteredListings = $('.listing-preview').filter(function () {
-      return ($(this).data("available").toString() === statusFilter || statusFilter === "n/a") && ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") && ($(this).data("type").toLowerCase() === typeFilter || typeFilter === "n/a") && ($(this).text().toLowerCase().indexOf(keywordFilter) > 0 || keywordFilter === "") && parseInt($(this).data("rooms")) >= minRoomFilter && (parseInt($(this).data("size").toString().replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) && (parseInt($(this).data("price").toString().replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter));
+      return ($(this).data("available").toString() === statusFilter || statusFilter === "n/a") && ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") && ($(this).data("type").toLowerCase() === typeFilter || typeFilter === "n/a") && parseInt($(this).data("rooms")) >= minRoomFilter && (parseInt($(this).data("size").toString().replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) && (parseInt($(this).data("price").toString().replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter));
     });
 
     paginate(filteredListings);
+  });
+
+  $("#listing-clear-filters").click(function () {
+    console.info("clicked!");
+    var listings = $('.listing-preview');
+    $("#listings-text-search").val("");
+    $("#location-filter").val("n/a");
+    $("#status-filter").val("n/a");
+    $("#type-filter").val("n/a");
+    $("#min-rooms").val("1");
+    $("#min-size").val("");
+    $("#max-price").val("");
+    paginate(listings);
   });
   $(window).scroll(function () {
     if (window.pageYOffset >= 67) {
@@ -49,7 +61,8 @@ $(document).ready(function () {
     }
   });
   $("#features-toggle").click(function () {
-    $('#listings-text-search').toggle();
+    $('#show-more-filters').toggle();
+    $('#show-less-filters').toggle();
     $(".filters").toggle();
     if ($(this).hasClass("plus-sign")) {
       $(this).removeClass("plus-sign");
@@ -86,10 +99,6 @@ $(document).ready(function () {
     $('.main').addClass('mobile-bg-hide');
   });
 
-  $('.listing-carousel').slick({
-    "prevArrow": $('.gallery-arrow-left'),
-    "nextArrow": $('.gallery-arrow-right')
-  });
   $('.review-carousel').slick({
     "autoplay": false,
     "draggable": false,
