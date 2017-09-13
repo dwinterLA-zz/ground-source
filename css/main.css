@@ -531,15 +531,15 @@ a {
 .slick-dots {
   display: inline-block;
   list-style-type: none;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  padding-left: 0; }
   .slick-dots > li {
     display: inline-block;
     position: relative;
     margin: 0 5px;
     padding: 0;
     width: 15px;
-    height: 15px;
-    cursor: pointer; }
+    height: 15px; }
     .slick-dots > li.slick-active > button {
       background-color: #d35540; }
     .slick-dots > li > button {
@@ -550,7 +550,8 @@ a {
       border-color: #d35540;
       color: transparent;
       padding: 0;
-      outline: none; }
+      outline: none;
+      cursor: pointer; }
 
 .content {
   position: relative; }
@@ -574,7 +575,7 @@ a {
 #contact-us-home-section {
   position: relative;
   color: #858585;
-  min-height: 473px; }
+  min-height: 349px; }
   #contact-us-home-section .contact-us-gmap-container {
     width: 100%;
     height: 100%;
@@ -629,7 +630,7 @@ a {
     text-align: left;
     padding: 0 0 9px 26px; }
     .contact-info-body .contact-row > div {
-      width: 46%; }
+      width: 50%; }
 
 .black {
   color: black; }
@@ -810,14 +811,14 @@ a {
     .contact-us-modal .contact-form .contact-close {
       background-color: white;
       background-image: url(../images/menu-close.png);
-      background-size: 20px 20px;
+      background-size: 12px 12px;
       background-position: center center;
       background-repeat: no-repeat;
       cursor: pointer;
-      padding: 30px;
+      padding: 16px;
       position: absolute;
-      top: 10px;
-      right: 10px;
+      top: 0;
+      right: 0;
       position: absolute;
       top: 5px;
       right: 5px;
@@ -884,14 +885,14 @@ a {
     .nav-modal .inner .menu-close {
       background-color: white;
       background-image: url(../images/menu-close.png);
-      background-size: 20px 20px;
+      background-size: 12px 12px;
       background-position: center center;
       background-repeat: no-repeat;
       cursor: pointer;
-      padding: 30px;
+      padding: 16px;
       position: absolute;
-      top: 10px;
-      right: 10px; }
+      top: 0;
+      right: 0; }
     .nav-modal .inner ul.nav {
       padding: 8% 0 0;
       list-style: none;
@@ -1047,7 +1048,8 @@ a {
   font-size: 4em;
   width: 18px;
   height: 18px;
-  z-index: 2; }
+  z-index: 2;
+  cursor: pointer; }
 
 .navigation-arrow-left {
   -webkit-transform: rotate(135deg);
@@ -1072,14 +1074,13 @@ a {
     margin: 0 auto; }
   .review-slideshow p {
     max-width: calc(100% - 200px - 120px);
-    padding: 12px 0;
+    padding: 12px;
     text-align: left;
     display: inline-block; }
     .review-slideshow p strong {
       text-transform: uppercase; }
   .review-slideshow img {
     display: inline-block;
-    margin-right: 22px;
     margin-top: -4%;
     z-index: 25;
     width: 100px;
@@ -1187,14 +1188,14 @@ a {
   cursor: pointer;
   background-color: white;
   background-image: url(../images/menu-close.png);
-  background-size: 20px 20px;
+  background-size: 12px 12px;
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
-  padding: 30px;
+  padding: 16px;
   position: absolute;
-  top: 10px;
-  right: 10px; }
+  top: 0;
+  right: 0; }
 
 @media screen and (min-width: 1800px) {
   body {
@@ -1212,6 +1213,22 @@ a {
 @media screen and (max-width: 768px) {
   body {
     font-size: .9em; }
+
+  .contact-info-body {
+    font-size: .9em;
+    margin-top: 12px; }
+    .contact-info-body .contact-row {
+      padding-left: 0;
+      margin: 0 auto;
+      width: 80%; }
+      .contact-info-body .contact-row > div {
+        width: 100%; }
+
+  .navigation-arrow-right {
+    right: 5%; }
+
+  .navigation-arrow-left {
+    left: 5%; }
 
   .contact-row > {
     width: 100%; }
@@ -1238,7 +1255,9 @@ a {
     max-width: 35%; }
   .review-slideshow .inner p {
     width: 100%;
-    max-width: 100%; }
+    max-width: 100%;
+    text-align: center;
+    padding: 0; }
 
   .logo-upper-left {
     width: 46%;
@@ -1260,7 +1279,9 @@ a {
       display: none; }
     #contact-us-home-section .contact-content {
       position: absolute;
-      width: 100%; }
+      width: 100%;
+      left: 0;
+      top: 47%; }
       #contact-us-home-section .contact-content .contact-header {
         padding: 25px 0 0 0;
         text-align: center;
@@ -1356,6 +1377,8 @@ a {
     background: #d46049;
     padding: 2%;
     color: white; }
+    .footer .inner {
+      margin-left: 0; }
     .footer > * {
       line-height: 2.2; }
     .footer .column {
@@ -1791,15 +1814,16 @@ a {
           color: #d46049; }
   #container-about .rounded-red-button {
     border-radius: 500px;
-    margin-top: 4px;
+    margin-top: 13px;
     font-weight: 500;
-    font-size: .9em;
+    font-size: .7em;
     color: #c04d3a;
     border-color: #c04d3a;
     border-style: solid;
     border-width: thin;
     padding: 5px 20px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-decoration: none; }
   #container-about .view-listing-button {
     border-radius: 500px;
     color: white;
@@ -1825,8 +1849,8 @@ a {
       position: relative;
       max-width: 1400px;
       background-color: white;
-      width: 60vw;
-      margin: 200px auto 0 auto;
+      width: 50vw;
+      margin: 10vh auto 0 auto;
       box-shadow: 0px 0px 2em gainsboro;
       font-size: 1.2em; }
       #container-about .agent-details .content .header {
@@ -1835,30 +1859,45 @@ a {
         #container-about .agent-details .content .header .bio-pic {
           position: absolute;
           left: -10px;
-          height: 100%; }
+          height: 127px; }
         #container-about .agent-details .content .header .contact {
-          margin-left: 34%;
+          margin-left: 36%;
           display: inline-block; }
+          #container-about .agent-details .content .header .contact a {
+            text-decoration: none; }
+          #container-about .agent-details .content .header .contact > p {
+            margin-top: 0;
+            margin-bottom: 0; }
+            #container-about .agent-details .content .header .contact > p > a {
+              text-decoration: underline; }
           #container-about .agent-details .content .header .contact > h4 {
             color: #3e3e3e;
             font-weight: 100;
             font-size: 1.8em;
-            margin-bottom: 5px; }
+            margin-bottom: 0;
+            margin-top: 12px; }
       #container-about .agent-details .content .bio {
-        margin: 0 30px;
+        margin: 0 25px;
         padding-bottom: 12px;
+        padding-top: 1px;
         color: black;
         opacity: .55;
-        line-height: 110%; }
+        line-height: 110%;
+        font-size: .9em; }
         #container-about .agent-details .content .bio > h2 {
           font-size: 1.8em;
           opacity: 1;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          margin-top: 8px; }
       #container-about .agent-details .content .footer {
         background-color: #d46049;
         color: white;
         text-align: center;
-        padding: 1px 0 0 0; }
+        padding: 1px 0 0 0;
+        line-height: 1.5; }
+        #container-about .agent-details .content .footer > p {
+          margin: 7px;
+          font-size: 1.4em; }
         #container-about .agent-details .content .footer .featured-listings {
           width: 100%;
           height: 100%;
@@ -1871,15 +1910,15 @@ a {
                   justify-content: center; }
           #container-about .agent-details .content .footer .featured-listings .agent-featured-listing {
             width: 33.33%;
-            height: 200px;
+            height: 140px;
             position: relative;
             background-image: url("/images/placeholder-thumbnail.jpg");
             background-size: cover; }
             #container-about .agent-details .content .footer .featured-listings .agent-featured-listing .view-listing-button {
               position: absolute;
               text-decoration: none;
-              left: 92px;
-              top: 79px; }
+              left: 24%;
+              top: 54px; }
   #container-about .about-text {
     width: 100%;
     padding-top: 55px; }
@@ -2045,7 +2084,7 @@ a {
             #container-about .agent-details .content .footer .featured-listings .agent-featured-listing {
               width: 100%; }
               #container-about .agent-details .content .footer .featured-listings .agent-featured-listing .view-listing-button {
-                left: 146px; } }
+                left: 32%; } }
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
