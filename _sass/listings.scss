@@ -28,9 +28,12 @@
   }
 
   .submenu {
-    margin-top: 15px;
+    display: inline;
     color: grey;
     font-size: .8em;
+    > span {
+      vertical-align: middle;
+    }
   }
 
   #features-toggle {
@@ -41,10 +44,15 @@
     height: 30px;
     width: 30px;
     font-size: 21px;
-    margin-right: 8px;
+    margin-right: 2px;
     text-align: center;
     vertical-align: middle;
     display: inline-block;
+    cursor: pointer;
+  }
+
+  #show-less-filters {
+    display: none;
   }
 
   .plus-sign {
@@ -89,6 +97,10 @@
       background-color: $primary-color-darker;
       color: white;
       border: none;
+      cursor: pointer;
+        &#listing-clear-filters {
+          background-color: #514d4c;
+        }
     }
   }
 
@@ -207,6 +219,7 @@
         text-align: center;
         vertical-align: middle;
         text-decoration: none;
+        cursor: pointer;
         line-height: 28px;
         display: inline-block;
         width: 28px;
@@ -215,7 +228,7 @@
     }
    .navigate-page {
      color: $primary-color;
-
+     cursor: pointer;
    }
   }
 

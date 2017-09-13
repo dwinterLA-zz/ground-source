@@ -54,6 +54,11 @@
           </p>
 
           <input type="text" placeholder="Search properties" class="listings-search" id="listings-text-search">
+          <div class="submenu">
+            <div id="features-toggle" class="plus-sign"></div>
+            <span id="show-more-filters" class="subdued">OPTIONS</span>
+            <span id="show-less-filters" class="subdued">LESS OPTIONS</span>
+          </div>
           <div class="flexbox listings filters">
             {% assign locations = site.listings |map: "address-line-2"| |uniq| %}
             {% assign statuses = site.listings |map: "status"| |uniq| %}
@@ -65,7 +70,7 @@
               {% endfor %}
             </select>
             <select name="status" id="status-filter">
-              <option value="n/a">Any Type</option>
+              <option value="n/a">Any Status</option>
               <option value="true">Available Now</option>
               <option value="false">Not Available</option>
             </select>
@@ -82,13 +87,9 @@
               <option value="5">5</option>
             </select>
             <input id="min-size" type="text" placeholder=" Min. Size" class="subdued">
-            <input id="keyword-filter" type="text" placeholder=" Keyword(e.g 'office')" class="subdued">
             <input id="max-price" type="text" placeholder=" Price" class="subdued">
+            <button type"submit" id="listing-clear-filters">CLEAR OPTIONS</button>
             <button type"submit" id="listing-search">SEARCH</button>
-          </div>
-          <div class="submenu">
-            <div id="features-toggle" class="plus-sign"></div>
-            <span class="subdued">LOOKING FOR CERTAIN FEATURES</span>
           </div>
         </div>
         <div id="properties" class="flexbox listings">
