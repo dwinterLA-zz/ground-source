@@ -33,7 +33,6 @@ a {
     &.slick-active {
       > button {
         background-color: $primary-color-darker;
-        box-shadow: -2px 2px 1px #888888;
       }
     }
     > button {
@@ -44,6 +43,7 @@ a {
       border-color: $primary-color-darker;
       color: transparent;
       padding: 0;
+      outline: none;
     }
   }
 }
@@ -430,6 +430,7 @@ a {
     padding: 80px;
     > p {
       opacity: .95;
+      margin-top: 26px;
     }
   }
 }
@@ -477,7 +478,7 @@ a {
 
 #header-text {
   font-family: $font-brand;
-  color: #858585;
+  color: white;
   font-size: 1.5em;
   padding-top: 25px;
 }
@@ -550,7 +551,6 @@ a {
     display: inline-block;
     &.selected {
       background-color: $primary-color-darker-darker;
-      box-shadow: -2px 2px 1px #888888;
     }
   }
 }
