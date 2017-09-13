@@ -530,7 +530,8 @@ a {
 
 .slick-dots {
   display: inline-block;
-  list-style-type: none; }
+  list-style-type: none;
+  margin-bottom: 0; }
   .slick-dots > li {
     display: inline-block;
     position: relative;
@@ -540,8 +541,7 @@ a {
     height: 15px;
     cursor: pointer; }
     .slick-dots > li.slick-active > button {
-      background-color: #d35540;
-      box-shadow: -2px 2px 1px #888888; }
+      background-color: #d35540; }
     .slick-dots > li > button {
       width: 100%;
       height: 100%;
@@ -549,7 +549,8 @@ a {
       border-style: solid;
       border-color: #d35540;
       color: transparent;
-      padding: 0; }
+      padding: 0;
+      outline: none; }
 
 .content {
   position: relative; }
@@ -587,15 +588,14 @@ a {
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    left: 12px;
-    width: 55%;
+    left: 80px;
+    width: 42%;
     z-index: 2;
     position: absolute; }
     #contact-us-home-section .contact-content .contact-header {
       font-size: 3em;
       background-color: white;
-      padding: 1em;
-      padding-left: calc(80px - 12px); }
+      padding: .5em 47px; }
     #contact-us-home-section .contact-content .contact-body {
       font-size: 1.3em;
       background: rgba(255, 255, 255, 0.9);
@@ -605,7 +605,7 @@ a {
         margin: 0;
         padding-left: calc(30px - 12px); }
         #contact-us-home-section .contact-content .contact-body > ul > li {
-          padding: 12px; }
+          padding: 6px; }
 
 .contact-info-body {
   font-size: .9em;
@@ -743,7 +743,7 @@ a {
 .ham-menu-home {
   display: none; }
 
-#thankyou_message {
+.contact-form-status {
   padding: 40px;
   display: none; }
 
@@ -785,6 +785,9 @@ a {
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
+#submit-contact-form {
+  cursor: pointer; }
+
 .contact-us-modal {
   display: none;
   position: fixed;
@@ -898,8 +901,8 @@ a {
       .nav-modal .inner ul.nav li a {
         display: block;
         color: #888;
-        line-height: 2;
-        font-size: 0.8em;
+        line-height: 1.875;
+        font-size: 1.125em;
         text-decoration: none; }
         .nav-modal .inner ul.nav li a.active {
           color: #d46049; }
@@ -917,7 +920,8 @@ a {
     margin-top: -35px;
     padding: 80px; }
     .home-intro-left > div > p {
-      opacity: .95; }
+      opacity: .95;
+      margin-top: 26px; }
 
 .home-intro-right {
   width: 50%;
@@ -957,7 +961,7 @@ a {
 
 #header-text {
   font-family: Montserrat, Helvetica, Arial, sans-serif;
-  color: #858585;
+  color: white;
   font-size: 1.5em;
   padding-top: 25px; }
 
@@ -1032,12 +1036,11 @@ a {
     color: #c04d3a;
     display: inline-block; }
     #review-navigator div.selected {
-      background-color: #c04d3a;
-      box-shadow: -2px 2px 1px #888888; }
+      background-color: #c04d3a; }
 
 .navigation-arrows {
   position: absolute;
-  top: 47%;
+  top: 35%;
   border: solid #d46049;
   border-width: 0 2px 2px 0;
   padding: 3px;
@@ -1049,12 +1052,12 @@ a {
 .navigation-arrow-left {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
-  left: 5%; }
+  left: 14%; }
 
 .navigation-arrow-right {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  right: 5%; }
+  right: 14%; }
 
 .review-slideshow {
   background: -webkit-linear-gradient(top, #fbf9fa, #d4d2d3);
@@ -1062,7 +1065,7 @@ a {
   color: gray;
   text-align: center;
   font-size: 1.5em;
-  padding: 43px 12px; }
+  padding: 28px 12px; }
   .review-slideshow .inner {
     position: relative;
     max-width: 1200px;
@@ -1077,7 +1080,7 @@ a {
   .review-slideshow img {
     display: inline-block;
     margin-right: 22px;
-    margin-top: -7%;
+    margin-top: -4%;
     z-index: 25;
     width: 100px;
     border-style: solid;
@@ -1127,11 +1130,10 @@ a {
 .footer {
   position: relative;
   background: #d46049;
-  padding: 1% 1% 0 1%;
   color: white; }
   .footer .inner {
     max-width: 1800px;
-    margin: 0 auto; }
+    margin-left: 80px; }
   .footer > * {
     line-height: 2.2; }
   .footer .column {
@@ -1715,11 +1717,11 @@ a {
       display: inline-block;
       padding: 3px; }
     #container-listings .paginator .pages .selected {
-      background-color: #e6e6e6;
+      background-color: #d46049;
+      color: white;
       border-style: none;
       border-width: thin;
-      opacity: 1;
-      box-shadow: 0px 0px 2em gainsboro; }
+      opacity: 1; }
     #container-listings .paginator .pages .next {
       display: inline; }
     #container-listings .paginator .pages > a {
@@ -1730,8 +1732,8 @@ a {
       text-decoration: none;
       line-height: 28px;
       display: inline-block;
-      width: 25px;
-      height: 25px; }
+      width: 28px;
+      height: 26px; }
     #container-listings .paginator .navigate-page {
       color: #d46049; }
   @media screen and (max-width: 768px) {
@@ -1776,9 +1778,9 @@ a {
     #container-about #header-about .header-image {
       width: 40%; }
     #container-about #header-about .description {
-      width: 40%;
+      width: 50%;
       vertical-align: bottom;
-      padding: 0 2em;
+      padding-left: 14vw;
       padding-top: 181px; }
       #container-about #header-about .description > p {
         padding-top: 15px; }
@@ -1880,7 +1882,7 @@ a {
               top: 79px; }
   #container-about .about-text {
     width: 100%;
-    padding-top: 167px; }
+    padding-top: 55px; }
     #container-about .about-text .header-image {
       width: 50%;
       display: inline-block;
