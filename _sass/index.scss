@@ -406,8 +406,8 @@ a {
       li a {
         display: block;
         color: #888;
-        line-height: 2;
-        font-size: 0.8em;
+        line-height: 2.5;
+        font-size: 1.5em;
         text-decoration: none;
         &.active {color: $primary-color;}
       }
