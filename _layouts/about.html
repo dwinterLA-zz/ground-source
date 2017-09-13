@@ -51,9 +51,9 @@
               <div class="contact">
                 <h4>{{agent.first_name}} {{agent.last_name}}</h4>
                 <img src="{{agent.avatar}}" class="bio-pic-mobile"/>
-                <p>{{agent.position}}</p>
-                <p><a href="mailto:{{agent.email}}">{{agent.email}}</a></p>
-                <p>M: {{agent.phone}}</p>
+                <p class="no-margin">{{agent.position}}</p>
+                <p class="no-margin"><a href="mailto:{{agent.email}}">{{agent.email}}</a></p>
+                <p class="no-margin">M: {{agent.phone}}</p>
 
                 <button class="rounded-red-button">work with {{agent.first_name}}</buton>
               </div>
@@ -77,7 +77,7 @@
                   {% else %}
                     <div class="agent-featured-listing">
                   {% endif %}
-                    <a class="view-listing-button" href="{{listing.url}}">View Property<a/>
+                    <a class="view-listing-button" href="{{listing.url}}">View Property</a>
                    </div>
                 {% endfor %}
               </div>

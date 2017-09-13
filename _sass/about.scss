@@ -86,8 +86,8 @@
       position: relative;
       max-width: 1400px;
       background-color: white;
-      width: 60vw;
-      margin: 200px auto 0 auto;
+      width: 50vw;
+      margin: 10vh auto 0 auto;
       box-shadow: 0px 0px 2em gainsboro;
       font-size: 1.2em;
       .header {
@@ -101,6 +101,10 @@
         .contact {
           margin-left: 34%;
           display: inline-block;
+          > p {
+            margin-top: 0;
+            margin-bottom: 0;
+          }
           > h4 {
             color: #3e3e3e;
             font-weight: 100;
@@ -110,11 +114,12 @@
         }
       }
       .bio {
-        margin: 0 30px;
+        margin: 0 50px;
         padding-bottom: 12px;
         color: black;
         opacity: .55;
         line-height: 110%;
+        font-size: .9em;
         > h2 {
           font-size: 1.8em;
           opacity: 1;
@@ -134,15 +139,15 @@
           justify-content: center;
           .agent-featured-listing {
             width: 33.33%;
-            height: 200px;
+            height: 160px;
             position: relative;
             background-image: url("/images/placeholder-thumbnail.jpg");
             background-size: cover;
             .view-listing-button {
               position: absolute;
               text-decoration: none;
-              left: 92px;
-              top: 79px;
+              left: 24%;
+              top: 60px;
             }
           }
         }
