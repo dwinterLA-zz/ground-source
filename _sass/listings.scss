@@ -190,11 +190,11 @@
     }
     .pages {
       .selected {
-        background-color: #e6e6e6;
+        background-color: $primary-color;
+        color: white;
         border-style: none;
         border-width: thin;
         opacity: 1;
-        box-shadow: 0px 0px 2em gainsboro;
       }
       .next {
         display: inline;
@@ -207,8 +207,8 @@
         text-decoration: none;
         line-height: 28px;
         display: inline-block;
-        width: 25px;
-        height: 25px;
+        width: 28px;
+        height: 26px;
       }
     }
    .navigate-page {
