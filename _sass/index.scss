@@ -92,15 +92,14 @@ a {
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
-    left: 12px;
-    width: 55%;
+    left: $left-align-home;
+    width: 42%;
     z-index: 2;
     position: absolute;
     .contact-header {
       font-size: 3em;
       background-color: white;
-      padding: 1em;
-      padding-left: calc(80px - 12px);
+      padding: .5em 47px;
     }
     .contact-body {
       font-size: 1.3em;
@@ -111,7 +110,7 @@ a {
         margin: 0;
         padding-left: calc(30px - 12px);
         > li {
-          padding: 12px;
+          padding: 6px;
         }
       }
     }
@@ -657,11 +656,10 @@ a {
 .footer {
   .inner {
     max-width: $page-max-width;
-    margin: 0 auto;
+    margin-left: $left-align-home;
   }
   position: relative;
   background: $primary-color;
-  padding: 1% 1% 0 1%;
   color: white;
   & > * { line-height: 2.2; }
   .column {
