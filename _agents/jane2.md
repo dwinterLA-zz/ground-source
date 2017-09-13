@@ -14,11 +14,14 @@ full_bio: Contrary to popular belief, Lorem Ipsum is not simply random text. It 
   The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
   in section 1.10.32.
 last_name: DOE
-phone: 555.555.5555
+phone: 555.555.5552
 short_bio: Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
   sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
   sit amet.
 position: Licensed Real Estate Salesperson
 undefined: ''
-featured_listings: ["1", "2"]
+featured_listings:
+- '1'
+- '2'
+title: ''
 ---
