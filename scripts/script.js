@@ -7,6 +7,10 @@ const PER_PAGE = 6
 $(document).ready(function() {
   paginate($('#properties').children());
 
+  $("#print-brochure").click(function() {
+    window.print();
+  })
+
   $("#listings-text-search").keydown(function() {
     var listings = $('.listing-preview')
     $(listings).hide();
