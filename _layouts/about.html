@@ -62,7 +62,7 @@
               <h2>about {{agent.first_name}}</h2>
               <p>{{agent.full_bio}}</p>
             </div>
-            {% if agent.featured_listings %}
+            {% if agent.featured_listings[0] %}
             <div class="footer">
               {% if agent.featured_listings[1] %}
                 <p>FEATURED LISTINGS</p>
