@@ -111,8 +111,10 @@
                 <div class="short-bio">
                   {{agent.short_bio}}
                 </div>
-                <div class="bio-button" data-agent="{{forloop.index}}">VIEW FULL BIO</div>
-                <div class="bio-contact"><span class="black">{{agent.email}}</span><br>{{agent.phone}}</div>
+                <div class="agent-info-bottom">
+                  <div class="bio-button" data-agent="{{forloop.index}}">VIEW FULL BIO</div>
+                  <div class="bio-contact"><span class="black">{{agent.email}}</span><br>{{agent.phone}}</div>
+                </div>
               </div>
             {% endfor %}
           </div>
