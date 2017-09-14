@@ -1,11 +1,15 @@
 // do not remove the dashes above, they are required for babel to work
 
-'use strict';
+"use strict";
 
 var PER_PAGE = 6;
 
 $(document).ready(function () {
   paginate($('#properties').children());
+
+  $("#print-brochure").click(function () {
+    window.print();
+  });
 
   $("#listings-text-search").keydown(function () {
     var listings = $('.listing-preview');
@@ -97,14 +101,6 @@ $(document).ready(function () {
     var agent = $(this).data('agent');
     $("#agent-" + agent).fadeIn();
     $('.main').addClass('mobile-bg-hide');
-  });
-
-  $('.review-carousel').slick({
-    "autoplay": false,
-    "draggable": false,
-    "dots": true,
-    "prevArrow": $('.navigation-arrow-left'),
-    "nextArrow": $('.navigation-arrow-right')
   });
 
   function initMap() {
