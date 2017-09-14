@@ -1861,6 +1861,9 @@ a {
       color: #d46049;
       cursor: pointer; }
   @media screen and (max-width: 768px) {
+    #container-listings .submenu {
+      display: block;
+      margin-top: 14px; }
     #container-listings .listings {
       width: 90%; }
     #container-listings .listing-preview {

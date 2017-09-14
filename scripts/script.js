@@ -1,6 +1,6 @@
 // do not remove the dashes above, they are required for babel to work
 
-"use strict";
+'use strict';
 
 var PER_PAGE = 6;
 
@@ -9,6 +9,12 @@ $(document).ready(function () {
 
   $("#print-brochure").click(function () {
     window.print();
+  });
+
+  $('.scroll-listings-top').click(function () {
+    var top = $("#properties").offset().top;
+
+    $('html, body').animate({ scrollTop: top }, 1000);
   });
 
   $("#listings-text-search").keydown(function () {
@@ -122,7 +128,7 @@ function paginate(properties) {
 
   $("#listings-next").off("click");
   $("#listings-prev").off("click");
-  $('.pages').html('<a data-page="1" id="page-1" class="selected">1</a>');
+  $('.pages').html('<a data-page="1" id="page-1" class="scroll-listings-top selected">1</a>');
 
   $(properties).hide();
   $(properties).slice(page, PER_PAGE).show();
@@ -131,7 +137,7 @@ function paginate(properties) {
   for (var i = 0; i < totalPages; i++) {
     // we start at page 2 because page 1 already exists
     var unit = i + 2;
-    var newPage = "<a id=page-" + unit + " data-page=" + unit + ">" + unit + "</a>";
+    var newPage = "<a class=scroll-listings-top id=page-" + unit + " data-page=" + unit + ">" + unit + "</a>";
     $(".pages").append(newPage);
     $("#page-" + unit).click(function () {
       pageClickListener(this);
