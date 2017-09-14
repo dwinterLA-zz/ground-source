@@ -204,7 +204,9 @@
     border: 1px solid #c7c7c7;
     .bio-image {
       position: relative;
-      img { width: 100%; }
+      > img {
+        width: 100%;
+      }
       .image-title {
         span {font-weight: bold;}
         color: white;

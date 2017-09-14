@@ -47,10 +47,10 @@
           <div class="content">
             <div class="simple-close close-agent-detail"></div>
             <div class="header">
-              {% if agent.avatar %}
-                {% assign avatar = agent.avatar%}
-              {% else %}
+              {% if agent.avatar == blank %}
                 {% assign avatar = "/images/agent_placeholder.png" %}
+              {% else %}
+                {% assign avatar = agent.avatar%}
               {% endif %}
               <img src="{{avatar}}" class="bio-pic"/>
               <div class="contact">
@@ -113,7 +113,7 @@
                   {% if agent.avatar %}
                     <img src="{{agent.avatar}}"/>
                   {% else %}
-                  <img src="/images/agent_placeholder.png"/>
+                    <img src="/images/agent_placeholder.png"/>
                   {% endif %}
                   <div class="image-title"><span>{{agent.first_name}}</span> {{agent.last_name}}</div>
                 </div>
