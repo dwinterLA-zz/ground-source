@@ -233,6 +233,11 @@
   }
 
   @media screen and (max-width: $breakpoint-small) {
+    .submenu {
+      display: block;
+      margin-top: 14px;
+    }
+
     .listings {
       width: 90%;
     }
