@@ -18,9 +18,15 @@
       <div class="content">
         <div class="listing-name">{{page.name}}</div>
           <div class="gallery">
-            <img src={{ page.gallery-images[0] }} class="img-responsive listing-image"/>
-            <img src={{ page.gallery-images[1] }} class="img-responsive listing-image"/>
-            <img src={{ page.gallery-images[2] }} class="img-responsive listing-image"/>
+            {% if page.gallery-images[0] %}
+              <img src={{ page.gallery-images[0] }} class="img-responsive listing-image"/>
+            {% endif %}
+            {% if page.gallery-images[1] %}
+              <img src={{ page.gallery-images[1] }} class="img-responsive listing-image"/>
+            {% endif %}
+            {% if page.gallery-images[1] %}
+              <img src={{ page.gallery-images[2] }} class="img-responsive listing-image"/>
+            {% endif %}
           </div>
         </div>
         <div class="information">
@@ -130,10 +136,13 @@
                     <img src={{ img-src }} class="img-responsive listing-image"/>
                     {% endfor %}
                   </div>
-                  <div class="gallery-arrow-container">
-                    <div class="gallery-arrow-left gallery-navigation"></div>
-                    <div class="gallery-arrow-right gallery-navigation"></div>
-                  </div>
+                  <!-- only display the navigation arrows if there are more than one image -->
+                  {% if page.gallery-images[1] %}
+                    <div class="gallery-arrow-container">
+                      <div class="gallery-arrow-left gallery-navigation"></div>
+                      <div class="gallery-arrow-right gallery-navigation"></div>
+                    </div>
+                  {% endif %}
                 </div>
               </div>
               <div class="info-box">
