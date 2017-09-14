@@ -1,9 +1,4 @@
 ---
-pages:
-- _agents/jane2.md
-- _agents/jane1.md
-- _agents/jon2.md
-- _agents/jon1.md
 hide_body: false
 fields:
 - type: text
@@ -40,9 +35,6 @@ fields:
   description: The bio that will appear on the agent's popup modal
   config:
     wysiwyg: true
-- type: text
-  name: phone
-  label: phone
 - type: text
   name: position
   label: position
