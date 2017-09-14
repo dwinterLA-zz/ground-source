@@ -1,4 +1,5 @@
 ---
+avatar: ''
 date: 2017-09-08 17:11:24 +0000
 email: jfinestone@groundsource.net
 featured_listings: []
