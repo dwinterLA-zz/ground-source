@@ -13,7 +13,7 @@ last_name: FINESTONE
 phone: 310.339.9775
 position: partner
 short_bio: John Finestone has over 12 years of experience in the leasing and investment
-  of commercial, retail and industrial properties.
+  of commercial, retail and industrial properties.&nbsp;
 title: ''
 undefined: ''
 ---
