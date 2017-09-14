@@ -361,7 +361,8 @@
 }
 
 @media print {
-  display: block;
+  .print {
+    display: block;
   }
   .web {
     display: none;
