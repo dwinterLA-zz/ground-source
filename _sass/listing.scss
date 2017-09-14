@@ -1,6 +1,77 @@
+// print only
+.print {
+  padding: 30px;
+  .header {
+    position: relative;
+  }
+  .logo {
+    width: 381px;
+  }
+  .contact {
+    position: absolute;
+    left: 431px;
+    bottom: 0;
+  }
+  .content {
+    margin-top: 60px;
+    .listing-name {
+      text-transform: uppercase;
+      font-size: 53px;
+    }
+  }
+  .gallery {
+    margin-top: 12px;
+    >img {
+      display: inline-block;
+      width: 220px;
+      height: 200px;
+    }
+  }
+  .information {
+    overflow: hidden;
+  }
+  .text {
+    float: left;
+    width: 50%;
+  }
+  .location {
+    float: right;
+    padding: 20px;
+    border-style: solid;
+    border-width: thin;
+    .location-header {
+      font-weight: 800;
+      font-size: 18px;
+    }
+    > ul {
+      padding-left: 0;
+      margin-top: 16px;
+      > li {
+        list-style-type: none;
+        margin-bottom: 7px;
+      }
+    }
+  }
+  .highlights {
+    width: 50%;
+    float: left;
+  }
+  .amenities {
+    float: right;
+    width: 50%;
+  }
+
+  > hr {
+    opacity: .8;
+  }
+
+}
+.web {
+  display: none !important;
+}
+
 #container-listing {
   background-color: #eee;
-  // font-size: 1.1em;
 
   strong {
     font-weight: 700;
