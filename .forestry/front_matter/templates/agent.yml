@@ -1,5 +1,6 @@
 ---
 pages:
+- _agents/patrick.md
 - _agents/robert.md
 hide_body: false
 fields:
