@@ -687,6 +687,9 @@ a {
   vertical-align: middle; }
 
 .logo-upper-left {
+  width: 46%;
+  top: 18px;
+  left: 14px;
   position: absolute;
   top: 35px;
   left: 35px;
@@ -1258,11 +1261,6 @@ a {
     max-width: 100%;
     text-align: center;
     padding: 0; }
-
-  .logo-upper-left {
-    width: 46%;
-    top: 18px;
-    left: 14px; }
 
   .desktop-nav {
     display: none; }
@@ -2024,7 +2022,7 @@ a {
               top: 54px; }
   #container-about .about-text {
     width: 100%;
-    padding-top: 55px; }
+    padding-top: 82px; }
     #container-about .about-text .header-image {
       width: 50%;
       display: inline-block;
