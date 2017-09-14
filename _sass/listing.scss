@@ -1,3 +1,10 @@
+.subdued {
+  opacity: .9;
+}
+
+.moreSubdued {
+  opacity: .6;
+}
 // print only
 .print {
   padding: 30px;
@@ -5,11 +12,11 @@
     position: relative;
   }
   .logo {
-    width: 381px;
+    width: 349px;
   }
   .contact {
     position: absolute;
-    left: 431px;
+    left: 380px;
     bottom: 0;
   }
   .content {
@@ -29,16 +36,29 @@
   }
   .information {
     overflow: hidden;
+    opacity: .7;
   }
   .text {
     float: left;
-    width: 50%;
+    width: 60%;
+    > h4 {
+      font-size: 20px;
+      font-weight: 100;
+    }
+    > p {
+      line-height: 14px;
+      font-size: 12px;
+    }
   }
   .location {
     float: right;
     padding: 20px;
     border-style: solid;
     border-width: thin;
+    // box-shadow: 0px 0px 18px 6px #f2f2f2;
+    margin-right: 18px;
+    margin-top: 17px;
+    opacity: .7;
     .location-header {
       font-weight: 800;
       font-size: 18px;
@@ -49,22 +69,43 @@
       > li {
         list-style-type: none;
         margin-bottom: 7px;
+        font-size: 110%;
       }
     }
   }
+
+  .features {
+    margin-top: 25px;
+  }
   .highlights {
-    width: 50%;
+    width: 275px;
     float: left;
+    opacity: .7;
+    > h2 {
+      font-size: 16px;
+    }
   }
   .amenities {
+    width: 275px;
     float: right;
-    width: 50%;
+    margin-right: 16px;
+    opacity: .7;
+    > h2 {
+      font-size: 16px;
+    }
   }
 
-  > hr {
-    opacity: .8;
+  .list {
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 23px;
+    > hr {
+      border-style: solid;
+      border-width: thin;
+      border-color: #ededed;
+    }
   }
-
 }
 .web {
   display: none !important;
@@ -197,10 +238,6 @@
     font-weight: lighter;
   }
 
-  .subdued {
-    opacity: .90;
-  }
-
   .menu-top {
     background-image: url(../images/listings-cta-bg.jpg);
     padding: 30px;
@@ -321,3 +358,11 @@
     }
   }
 }
+
+// @media print {
+//   .location {
+//     box-shadow: 0px 0px 18px 6px #f2f2f2;
+//     -webkit-filter: drop-shadow(4px 4px 1px #f2f2f2);
+//     text-shadow: 4px 4px 1px #ccc;
+//   }
+// }

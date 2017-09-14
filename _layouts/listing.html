@@ -13,7 +13,7 @@
     <div class="print">
       <div class="header">
         <img class="logo" src="/images/logo.png"/>
-        <span class="contact"> {{page.address-line-1}} &nbsp; {{page.address-line-2}} | {{page.phone}} | {{page.hours}}
+        <span class="contact moreSubdued"> {{page.address-line-1}} &nbsp; {{page.address-line-2}} | {{page.phone}} | {{page.hours}}
       </div>
       <div class="content">
         <div class="listing-name">{{page.name}}</div>
@@ -25,7 +25,7 @@
         </div>
         <div class="information">
           <div class="text">
-            <h4>{{page.info-title}}</h4>
+            <h4>{{page.info-title-print}}</h4>
             <p>{{page.info-text}}</p>
           </div>
           <div class="location">
@@ -40,8 +40,8 @@
         <div class="features">
           <div class="menu">
             <div class="highlights">
-              <h2 class="sidebar-header"><span class="subdued"><strong>PROPERTY</strong> HIGHLIGHTS</span></h2>
-              <ul class="bond-list">
+              <h2 class="sidebar-header"><strong>PROPERTY</strong><span class="subdued"> HIGHLIGHTS</span></h2>
+              <ul class="list">
                 {% for highlight in page.highlights %}
                   <li>{{ highlight }}</li>
                   <hr>
@@ -50,7 +50,7 @@
             </div>
             <div class="amenities">
               <h2 class="sidebar-header"><strong>AMENITIES</strong></h2>
-              <ul class="bond-list">
+              <ul class="list">
                 {% for amenity in page.amenities %}
                 <li>{{ amenity }}</li>
                 <hr>
