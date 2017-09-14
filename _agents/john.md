@@ -1,5 +1,5 @@
 ---
-avatar: ''
+avatar: false
 date: 2017-09-08 17:11:24 +0000
 featured_listings: []
 first_name: JOHN
