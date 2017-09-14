@@ -1,5 +1,5 @@
 ---
-avatar: images/agent_placeholder.jpg
+avatar:
 date: 2017-09-08 17:11:24 +0000
 first_name: PATRICK
 last_name: SHEEKEY

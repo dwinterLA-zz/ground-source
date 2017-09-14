@@ -47,9 +47,14 @@
           <div class="content">
             <div class="simple-close close-agent-detail"></div>
             <div class="header">
-              <img src="{{agent.avatar}}" class="bio-pic"/>
+              {% if agent.avatar %}
+                {% assign avatar = agent.avatar%}
+              {% else %}
+                {% assign avatar = "/images/agent_placeholder.png" %}
+              {% endif %}
+              <img src="{{avatar}}" class="bio-pic"/>
               <div class="contact">
-                <img src="{{agent.avatar}}" class="bio-pic-mobile"/>
+                <img src="{{avatar}}" class="bio-pic-mobile"/>
                 <h4>{{agent.first_name}} {{agent.last_name}}</h4>
                 <p class="no-margin">{{agent.position}}</p>
                 <br />
@@ -105,7 +110,11 @@
             {% for agent in site.agents %}
               <div class="agent">
                 <div class="bio-image">
-                  <img src="{{agent.avatar}}"/>
+                  {% if agent.avatar %}
+                    <img src="{{agent.avatar}}"/>
+                  {% else %}
+                  <img src="/images/agent_placeholder.png"/>
+                  {% endif %}
                   <div class="image-title"><span>{{agent.first_name}}</span> {{agent.last_name}}</div>
                 </div>
                 <div class="short-bio">
