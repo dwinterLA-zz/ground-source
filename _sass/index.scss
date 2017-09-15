@@ -747,6 +747,25 @@ a {
     font-size: .9em;
   }
 
+  .logo-upper-left {
+    @include mobile-logo;
+    position: absolute;
+    top: 18px;
+    left: 14px;
+    width: 46%;
+    height: auto;
+    z-index: 2;
+  }
+
+  .nav-modal {
+    .inner {
+      .menu-close {
+        background-size: 18px 18px;
+        padding: 31px;
+      }
+    }
+  }
+
   .contact-info-body {
     font-size: .9em;
     margin-top: 12px;
@@ -778,6 +797,8 @@ a {
   }
   .ham-menu {
     display: block !important;
+    padding: 1.5em;
+    background-size: 1.5em;
   }
 
   #top-nav {

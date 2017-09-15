@@ -108,6 +108,7 @@
           > p {
             margin-top: 0;
             margin-bottom: 0;
+            text-transform: uppercase;
             > a {
               text-decoration: underline;
             }
@@ -327,7 +328,7 @@
     .bio-pic-mobile {
       display: block;
       width: 88%;
-      margin: 30px auto 0 auto;
+      margin: 40px auto 0 auto;
     }
 
     .bio-pic {

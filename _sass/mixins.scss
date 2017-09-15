@@ -1,11 +1,9 @@
 @mixin hamburger-menu {
   background-color: white;
   background-image: url(../images/ham-menu.png);
-  background-size: 2em;;
+  background-size: 2em;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 3em;
-  width: 3em;
   padding: 2em;
   cursor: pointer;
   z-index: 2;
