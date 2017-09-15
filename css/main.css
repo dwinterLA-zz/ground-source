@@ -703,8 +703,6 @@ a {
   background-size: 2em;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 3em;
-  width: 3em;
   padding: 2em;
   cursor: pointer;
   z-index: 2;
@@ -735,8 +733,6 @@ a {
   background-size: 2em;
   background-position: center center;
   background-repeat: no-repeat;
-  height: 3em;
-  width: 3em;
   padding: 2em;
   cursor: pointer;
   z-index: 2;
@@ -1217,6 +1213,21 @@ a {
   body {
     font-size: .9em; }
 
+  .logo-upper-left {
+    width: 46%;
+    top: 18px;
+    left: 14px;
+    position: absolute;
+    top: 18px;
+    left: 14px;
+    width: 46%;
+    height: auto;
+    z-index: 2; }
+
+  .nav-modal .inner .menu-close {
+    background-size: 18px 18px;
+    padding: 31px; }
+
   .contact-info-body {
     font-size: .9em;
     margin-top: 12px; }
@@ -1241,7 +1252,9 @@ a {
     padding-top: 12px; }
 
   .ham-menu {
-    display: block !important; }
+    display: block !important;
+    padding: 1.5em;
+    background-size: 1.5em; }
 
   #top-nav {
     display: none !important; }
@@ -1971,7 +1984,8 @@ a {
             text-decoration: none; }
           #container-about .agent-details .content .header .contact > p {
             margin-top: 0;
-            margin-bottom: 0; }
+            margin-bottom: 0;
+            text-transform: uppercase; }
             #container-about .agent-details .content .header .contact > p > a {
               text-decoration: underline; }
           #container-about .agent-details .content .header .contact > h4 {
@@ -2128,7 +2142,7 @@ a {
       display: none; }
     #container-about #header-about .description {
       width: 100%;
-      padding-top: 0; }
+      padding: 38px 20px 0 20px; }
       #container-about #header-about .description .head-title {
         text-align: center; }
     #container-about .agent {
@@ -2136,7 +2150,7 @@ a {
     #container-about .bio-pic-mobile {
       display: block;
       width: 88%;
-      margin: 30px auto 0 auto; }
+      margin: 40px auto 0 auto; }
     #container-about .bio-pic {
       display: none; }
     #container-about .agent-details {
