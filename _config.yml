@@ -46,6 +46,7 @@ collections:
 
   testimonials:
   agents:
+  case_studies:
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

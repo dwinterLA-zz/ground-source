@@ -1,0 +1,75 @@
+#container-experience {
+  .contact-us-link {
+    border-radius: 500px;
+    border-style: solid;
+    border-width: thin;
+    margin-top: 5px;
+    padding: 3px 12px;
+    outline: none;
+  }
+  .top {
+    background-image: url(../images/experience/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    height: 49vh;
+    max-width: $page-max-width;
+  }
+  .bottom {
+    background-image: url(../images/experience/building.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    height: 33vh;
+    position: relative;
+    max-width: $page-max-width;
+  }
+  .footer {
+    height: 18vh;
+    max-width: $page-max-width;
+  }
+  .text {
+    > h4 {
+      font-size: 1.7em;
+    }
+    > p {
+      font-size: .9em;
+      opacity: .8;
+    }
+    color: white;
+    width: 43vw;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 15%;
+  }
+
+  .study-carousel {
+    width: 40vw;
+    padding: 85px 46px;
+    text-align: center;
+    height: 100%;
+    background-color: white;
+    opacity: .85;
+    margin: 0 auto;
+    > p {
+      opacity: .9;
+    }
+    .header {
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      > p {
+        margin: 0 0 2px 0;
+        opacity: .9
+      }
+    }
+    .name {
+      font-size: 1.75em;
+      margin-bottom: 0;
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: 16px;
+      left: 42%;
+    }
+  }
+}

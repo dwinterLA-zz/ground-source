@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GROUNDSOURCE</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div id="about-header">
+      <img src="images/logo.png" class="logo-upper-left"/>
+      {% include contact-form.html %}
+      <div class="ham-menu"></div>
+      <div class="nav-modal">
+        <div class="inner">
+          <img src="images/logo.png" class="modal-logo"/>
+          <div class="menu-close"></div>
+          <ul class="nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="listings.html">LISTINGS</a></li>
+            <li><a class="active" href="experience.html">EXPERIENCE</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a class="contact-us-link">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="container-experience">
+      <div class="top">
+        <div class="text">
+          <h4>{{page.text_title}}</h4>
+          <p>{{page.text_body}}</p>
+            <button class="contact-us-link">CONTACT US</button>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="study-carousel">
+          {% for study in site.case_studies %}
+            <div class="study">
+              <div class="header">
+                <p class="name">{{study.name}}</h3>
+                <p>{{study.address_line_1}}</p>
+                <p>{{study.address_line_2}}</p>
+              </div>
+              <p>{{study.text}}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% include footer.html %}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="scripts/formSubmit.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.study-carousel').slick({
+        "autoplay": true,
+        "draggable": false,
+        "dots": true,
+        "arrows": false
+        })
+      })
+    </script>
+  </body>
+</html>
+
+
