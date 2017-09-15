@@ -396,6 +396,7 @@ a {
       top: 35px; left: 35px;
     }
     .menu-close {
+      z-index: 10;
       @include close-button;
     }
 
@@ -719,9 +720,12 @@ a {
 }
 
 .simple-close {
-  z-index: 10;
-  cursor: pointer;
   @include close-button;
+  z-index: 10;
+  background-size: 18px 18px;
+  padding: 20px;
+  cursor: pointer;
+
 }
 
 @media screen and (min-width: $page-max-width) {

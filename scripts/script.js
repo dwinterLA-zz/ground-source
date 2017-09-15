@@ -108,6 +108,7 @@ $(document).ready(function() {
     $('.agent-details').fadeOut();
     $('.main').removeClass('mobile-bg-hide');
   })
+
   $('.bio-button').click(function() {
     let agent = $(this).data('agent');
     $("#agent-" + agent).fadeIn();
