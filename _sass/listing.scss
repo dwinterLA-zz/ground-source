@@ -7,10 +7,6 @@
 }
 // print only
 .print {
-  @page {
-    size: A4;
-  }
-
   padding: 30px;
   .header {
     position: relative;
@@ -366,6 +362,12 @@
 }
 
 @media print {
+  @page {
+    size: A4;
+    // disables the nasty automatic header and footer (at least in Chrome)
+    margin: 0;
+    body {margin: 1.6cm;}
+  }
   .print {
     display: block;
   }
