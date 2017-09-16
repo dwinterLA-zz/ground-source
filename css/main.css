@@ -1435,30 +1435,32 @@ a {
   .print .header {
     position: relative; }
   .print .logo {
-    width: 349px; }
+    width: 9cm; }
   .print .contact {
     position: absolute;
-    left: 380px;
-    bottom: 0; }
+    left: 10cm;
+    bottom: 0;
+    font-size: 5pt; }
   .print .content {
     margin-top: 60px; }
     .print .content .listing-name {
       text-transform: uppercase;
-      font-size: 53px; }
+      font-size: 24pt; }
   .print .gallery {
-    margin-top: 12px; }
+    margin-top: 12px;
+    width: 100%; }
     .print .gallery > img {
       display: inline-block;
-      width: 220px;
+      width: 32.5%;
       height: 200px; }
   .print .information {
     overflow: hidden;
     opacity: .7; }
   .print .text {
     float: left;
-    width: 60%; }
+    width: 10cm; }
     .print .text > h4 {
-      font-size: 20px;
+      font-size: 15pt;
       font-weight: 100; }
     .print .text > p {
       line-height: 14px;
@@ -1466,36 +1468,36 @@ a {
   .print .location {
     float: right;
     padding: 20px;
+    width: 33%;
+    margin-right: .25cm;
     border-style: solid;
     border-width: thin;
-    margin-right: 18px;
     margin-top: 17px;
     opacity: .7; }
     .print .location .location-header {
       font-weight: 800;
-      font-size: 18px; }
+      font-size: 12pt; }
     .print .location > ul {
       padding-left: 0;
-      margin-top: 16px; }
+      margin-top: .5cm; }
       .print .location > ul > li {
         list-style-type: none;
         margin-bottom: 7px;
-        font-size: 110%; }
+        font-size: 8pt; }
   .print .features {
-    margin-top: 25px; }
+    margin-top: 1cm; }
   .print .highlights {
-    width: 275px;
+    width: 8cm;
     float: left;
     opacity: .7; }
     .print .highlights > h2 {
-      font-size: 16px; }
+      font-size: 12pt; }
   .print .amenities {
-    width: 275px;
+    width: 8cm;
     float: right;
-    margin-right: 16px;
     opacity: .7; }
     .print .amenities > h2 {
-      font-size: 16px; }
+      font-size: 12pt; }
   .print .list {
     list-style-type: none;
     padding-left: 0;
@@ -1696,6 +1698,11 @@ a {
       margin-top: 24px; } }
 
 @media print {
+  @page {
+    size: A4;
+    margin: 0;
+    body {
+      margin: 1.6cm; } }
   .print {
     display: block; }
 
@@ -2209,6 +2216,76 @@ a {
               width: 100%; }
               #container-about .agent-details .content .footer .featured-listings .agent-featured-listing .view-listing-button {
                 left: 32%; } }
+
+#container-experience .contact-us-link {
+  border-radius: 500px;
+  border-style: solid;
+  border-width: thin;
+  margin-top: 5px;
+  padding: 3px 12px;
+  outline: none; }
+#container-experience .top {
+  background-image: url(../images/experience/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  height: 49vh; }
+#container-experience .bottom {
+  background-image: url(../images/experience/building.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  height: 33vh;
+  position: relative; }
+#container-experience .footer {
+  height: 18vh; }
+#container-experience .text {
+  max-width: 1800px;
+  position: relative;
+  color: white;
+  width: 43vw;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  padding-top: 1%; }
+  #container-experience .text > h4 {
+    font-size: 1.7em; }
+  #container-experience .text > p {
+    font-size: .9em;
+    opacity: .8; }
+#container-experience .study-carousel {
+  max-width: 1800px;
+  width: 40vw;
+  padding: 85px 46px;
+  text-align: center;
+  height: 100%;
+  background-color: white;
+  opacity: .85;
+  margin: 0 auto; }
+  #container-experience .study-carousel > p {
+    opacity: .9; }
+  #container-experience .study-carousel .header {
+    text-transform: uppercase;
+    margin-bottom: 22px; }
+    #container-experience .study-carousel .header > p {
+      margin: 0 0 2px 0;
+      opacity: 0.9; }
+  #container-experience .study-carousel .name {
+    font-size: 1.75em;
+    margin-bottom: 0; }
+  #container-experience .study-carousel .slick-dots {
+    position: absolute;
+    bottom: 16px;
+    left: 42%; }
+@media screen and (max-width: 768px) {
+  #container-experience .text {
+    width: 94vw; }
+  #container-experience .study-carousel {
+    width: 100vw; }
+  #container-experience .footer {
+    height: 100%; } }
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
