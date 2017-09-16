@@ -13,7 +13,6 @@
     background-repeat: no-repeat;
     background-position: center 0;
     height: 49vh;
-    max-width: $page-max-width;
   }
   .bottom {
     background-image: url(../images/experience/building.jpg);
@@ -22,13 +21,20 @@
     background-position: center 0;
     height: 33vh;
     position: relative;
-    max-width: $page-max-width;
   }
   .footer {
     height: 18vh;
-    max-width: $page-max-width;
   }
   .text {
+    max-width: $page-max-width;
+    position: relative;
+    color: white;
+    width: 43vw;
+    text-align: center;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    top: 50%;
+    padding-top: 1%;
     > h4 {
       font-size: 1.7em;
     }
@@ -36,14 +42,10 @@
       font-size: .9em;
       opacity: .8;
     }
-    color: white;
-    width: 43vw;
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 15%;
   }
 
   .study-carousel {
+    max-width: $page-max-width;
     width: 40vw;
     padding: 85px 46px;
     text-align: center;
@@ -70,6 +72,17 @@
       position: absolute;
       bottom: 16px;
       left: 42%;
+    }
+  }
+  @media screen and (max-width: $breakpoint-small) {
+    .text {
+      width: 94vw;
+    }
+    .study-carousel {
+      width: 100vw;
+    }
+    .footer {
+      height: 100%;
     }
   }
 }
