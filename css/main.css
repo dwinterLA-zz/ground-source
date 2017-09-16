@@ -2258,7 +2258,7 @@ a {
 #container-experience .study-carousel {
   max-width: 1800px;
   width: 40vw;
-  padding: 85px 46px;
+  padding: 66px 46px 85px 46px;
   text-align: center;
   height: 100%;
   background-color: white;
@@ -2279,6 +2279,9 @@ a {
     position: absolute;
     bottom: 16px;
     left: 42%; }
+@media screen and (max-width: 1000px) {
+  #container-experience .text > p {
+    font-size: 1.3em; } }
 @media screen and (max-width: 768px) {
   #container-experience .text {
     width: 94vw; }
