@@ -47,7 +47,7 @@
   .study-carousel {
     max-width: $page-max-width;
     width: 40vw;
-    padding: 85px 46px;
+    padding: 66px 46px 85px 46px;
     text-align: center;
     height: 100%;
     background-color: white;
@@ -72,6 +72,13 @@
       position: absolute;
       bottom: 16px;
       left: 42%;
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .text {
+      > p {
+        font-size: 1.3em;
+      }
     }
   }
   @media screen and (max-width: $breakpoint-small) {
