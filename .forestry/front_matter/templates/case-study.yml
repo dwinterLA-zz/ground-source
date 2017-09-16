@@ -1,0 +1,18 @@
+---
+hide_body: false
+fields:
+- type: text
+  name: name
+  label: name
+  description: Name / Header of case study
+- type: text
+  name: address_line_1
+  label: Address Line 1
+- type: text
+  name: address_line_2
+  label: Address Line 2
+- type: textarea
+  config:
+    wysiwyg: true
+  label: Text
+  name: text
