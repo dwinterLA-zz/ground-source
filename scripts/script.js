@@ -87,15 +87,18 @@ $(document).ready(function () {
   });
 
   $('.contact-close').click(function () {
+    $('body').removeClass('modal-open');
     $('.contact-us-modal').fadeToggle();
   });
 
   $('.contact-us-link').click(function () {
+    $('body').addClass('modal-open');
     $('.contact-us-modal').fadeIn();
     $('.nav-modal').fadeOut();
   });
 
   $('.ham-menu, .menu-close').click(function () {
+    $('body').toggleClass('modal-open');
     $('.nav-modal').fadeToggle();
   });
 
