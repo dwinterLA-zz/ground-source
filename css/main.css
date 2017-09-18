@@ -553,6 +553,9 @@ a {
       outline: none;
       cursor: pointer; }
 
+.scroll-arrow {
+  cursor: pointer; }
+
 .content {
   position: relative; }
 
@@ -810,7 +813,7 @@ a {
     .contact-us-modal .contact-form .contact-close {
       background-color: white;
       background-image: url(../images/menu-close.png);
-      background-size: 12px 12px;
+      background-size: 22px 22px;
       background-position: center center;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -885,7 +888,7 @@ a {
       z-index: 10;
       background-color: white;
       background-image: url(../images/menu-close.png);
-      background-size: 12px 12px;
+      background-size: 22px 22px;
       background-position: center center;
       background-repeat: no-repeat;
       cursor: pointer;
@@ -1054,12 +1057,12 @@ a {
 .navigation-arrow-left {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
-  left: 14%; }
+  left: 8%; }
 
 .navigation-arrow-right {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  right: 14%; }
+  right: 8%; }
 
 .review-slideshow {
   background: -webkit-linear-gradient(top, #fbf9fa, #d4d2d3);
@@ -1141,7 +1144,7 @@ a {
     font-size: 1.2em;
     display: inline-block;
     vertical-align: top;
-    margin-right: 5%;
+    margin: 1% 5% 0 0;
     opacity: .9; }
     .footer .column .title {
       font-weight: bold; }
@@ -1186,7 +1189,7 @@ a {
 .simple-close {
   background-color: white;
   background-image: url(../images/menu-close.png);
-  background-size: 12px 12px;
+  background-size: 22px 22px;
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -1549,6 +1552,7 @@ a {
       border-width: .35em; }
     #container-listing .listing-image-gallery .gallery-navigation {
       position: absolute;
+      cursor: pointer;
       bottom: 10px;
       border: solid;
       border-width: 0 .045em .045em 0;
