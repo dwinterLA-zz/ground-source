@@ -14,7 +14,7 @@ $(document).ready(function() {
   $('.scroll-listings-top').click(function() {
     var top = $("#properties").offset().top;
 
-    $('html, body').animate({scrollTop: top}, 1000);
+    $('html, body').animate({scrollTop: top}, 250);
   })
 
   $("#listings-text-search").keydown(function() {
