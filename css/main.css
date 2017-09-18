@@ -523,7 +523,8 @@ body {
   font-size: 1vw; }
 
 .modal-open {
-  overflow: hidden; }
+  overflow: hidden;
+  pointer-events: none; }
 
 strong, b {
   font-weight: 700; }
