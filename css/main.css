@@ -523,6 +523,7 @@ body {
   font-size: 1vw; }
 
 .modal-open {
+  display: none;
   overflow: hidden; }
 
 strong, b {
