@@ -87,20 +87,17 @@ $(document).ready(function () {
   });
 
   $('.contact-close').click(function () {
-    $('body').removeClass('modal-open');
     $('.main').toggleClass('modal-open');
     $('.contact-us-modal').fadeToggle();
   });
 
   $('.contact-us-link').click(function () {
-    $('body').addClass('modal-open');
     $('.main').addClass('modal-open');
     $('.contact-us-modal').fadeIn();
     $('.nav-modal').fadeOut();
   });
 
   $('.ham-menu, .menu-close').click(function () {
-    $('body').toggleClass('modal-open');
     $('.main').toggleClass('modal-open');
     $('.nav-modal').fadeToggle();
   });
