@@ -12,7 +12,7 @@ $(document).ready(function () {
   });
 
   $('.scroll-listings-top').click(function () {
-    var top = $("#properties").offset().top;
+    var top = $(".header").offset().top;
 
     $('html, body').animate({ scrollTop: top }, 250);
   });
