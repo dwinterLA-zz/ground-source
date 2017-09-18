@@ -776,6 +776,10 @@ a {
     }
   }
 
+  .modal-open {
+    display: none;
+  }
+
   .contact-info-body {
     font-size: .9em;
     margin-top: 12px;
@@ -1022,6 +1026,7 @@ a {
       opacity: .9;
       &.copyright {
         margin-top: 10%;
+        margin-bottom: 0;
         width: 100%;
       }
       &.social {
