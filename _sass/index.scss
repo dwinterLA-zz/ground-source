@@ -11,7 +11,6 @@ body {
 }
 
 .modal-open {
-  display: none;
   overflow: hidden;
 }
 
@@ -101,17 +100,17 @@ a {
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
-    left: $left-align-home;
+    left: 20px;
     width: 42%;
     z-index: 2;
     position: absolute;
     .contact-header {
-      font-size: 3em;
+      font-size: 34px;
       background-color: white;
       padding: .5em 47px;
     }
     .contact-body {
-      font-size: 1.3em;
+      font-size: 16px;
       background: rgba(255, 255, 255, 0.9);
       padding: 15px 22px;
       > ul {
@@ -792,6 +791,9 @@ a {
     right: 5%;
   }
 
+  #header-text {
+    font-size: 1.2em;
+  }
   .navigation-arrow-left {
     left: 5%;
   }
@@ -804,6 +806,7 @@ a {
   .services-header {
     margin-top: 0;
     padding-top: 12px;
+    padding-left: $left-align-home-mobile;
   }
   .ham-menu {
     display: block !important;
@@ -825,7 +828,12 @@ a {
     }
   }
 
+  .slick-dots {
+    margin-top: 0;
+  }
+
   .review-slideshow {
+    padding: 14px;
     .inner {
       img {
         margin-top: 0;
@@ -849,7 +857,7 @@ a {
   }
 
   #header-logo {
-    height: 28px;
+    height: 29px;
   }
 
   #contact-us-home-section {
@@ -859,23 +867,22 @@ a {
     }
     .contact-content {
       position: absolute;
+      top: 47%;
       width: 100%;
       left: 0;
-      top: 47%;
       .contact-header {
-        padding: 25px 0 0 0;
+        padding: 25px 0 19px 0;
         text-align: center;
         background: rgba(255, 255, 255, 0.8);
+        font-size: 52px;
       }
-    }
-  }
-
-  .contact-body {
-    padding: 50px 0 0 0;
-    background: rgba(255, 255, 255, 0.8);
-    .contact-row {
-      > div {
-        width: 100%;
+      .contact-body {
+        padding: 0;
+        font-size: .95em;
+        padding-left: 12px;
+        > ul {
+          padding-left: 0;
+        }
       }
     }
   }
@@ -926,6 +933,7 @@ a {
     display: block;
     .services-text {
       width: 100%;
+      padding-left: $left-align-home-mobile;
     }
   }
 
@@ -993,7 +1001,8 @@ a {
   }
   .footer {
     background: $primary-color;
-    padding: 2%;
+    padding: 0;
+    padding: $left-align-home-mobile 0 0 $left-align-home-mobile;
     color: white;
     .inner {
       margin-left: 0;
@@ -1002,17 +1011,20 @@ a {
       line-height: 2.2;
     }
     .column {
-      display: block;
+      display: inline-block;
+      width: 43%;
       margin-right: 5%;
+      margin-bottom: 10px;
+      margin: 0 0 10px 0;
       .title {font-weight: bold}
-      margin-left: 5%;
+      margin-left: 0%;
       opacity: .9;
       &.copyright {
         margin-top: 10%;
-        margin-left: 3%;
+        width: 100%;
       }
       &.social {
-        margin: 0 0 0 9px;
+        margin: 25px 0 0 -9px;
         display: block;
         float: left;
         > a {
