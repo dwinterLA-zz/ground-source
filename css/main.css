@@ -711,7 +711,7 @@ a {
   background-repeat: no-repeat;
   padding: 2em;
   cursor: pointer;
-  z-index: 100;
+  z-index: 2;
   position: fixed;
   right: 10px;
   top: 10px; }
@@ -741,7 +741,7 @@ a {
   background-repeat: no-repeat;
   padding: 2em;
   cursor: pointer;
-  z-index: 100;
+  z-index: 2;
   position: fixed;
   right: 10px;
   top: 10px; }
