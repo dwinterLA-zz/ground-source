@@ -29,7 +29,6 @@
     });</script>
   </head>
   <body>
-    <div class="web">
     <div class="contact-us-modal">
   <div class="contact-form">
     <div class="contact-close"></div>
@@ -78,466 +77,467 @@
         </ul>
       </div>
     </div>
-    <div id="container-listings">
-      <img src="images/logo.png" class="logo-upper-left"/>
-      <div class="ham-menu"></div>
-      <div class="content">
-        <div class="header">
-          <h4>LISTINGS</h4>
-          <p>
-            Find all of our listings here…
-          </p>
+    <div class="main">
+      <div id="container-listings">
+        <img src="images/logo.png" class="logo-upper-left"/>
+        <div class="ham-menu"></div>
+        <div class="content">
+          <div class="header">
+            <h4>LISTINGS</h4>
+            <p>
+              Find all of our listings here…
+            </p>
 
-          <input type="text" placeholder="Search properties" class="listings-search" id="listings-text-search">
-          <div class="submenu">
-            <div id="features-toggle" class="plus-sign"></div>
-            <span id="show-more-filters" class="subdued">OPTIONS</span>
-            <span id="show-less-filters" class="subdued">LESS OPTIONS</span>
+            <input type="text" placeholder="Search properties" class="listings-search" id="listings-text-search">
+            <div class="submenu">
+              <div id="features-toggle" class="plus-sign"></div>
+              <span id="show-more-filters" class="subdued">OPTIONS</span>
+              <span id="show-less-filters" class="subdued">LESS OPTIONS</span>
+            </div>
+            <div class="flexbox listings filters">
+              
+              
+              
+              <select name="location" id="location-filter">
+                <option value="n/a">Any Location</option>
+                
+                  <option value="<strong>PLAYA</strong> VISTA"><strong>PLAYA</strong> VISTA</option>
+                
+                  <option value="PLAYA VISTA">PLAYA VISTA</option>
+                
+                  <option value="VENICE">VENICE</option>
+                
+                  <option value="Hermosa Beach">Hermosa Beach</option>
+                
+              </select>
+              <select name="status" id="status-filter">
+                <option value="n/a">Any Status</option>
+                <option value="true">Available Now</option>
+                <option value="false">Not Available</option>
+              </select>
+              <select name="type" id="type-filter">
+                <option value="n/a">Any Type</option>
+                <option value="rent">Rent</option>
+                <option value="lease">Lease</option>
+              </select>
+              <select name="min-rooms" id="min-rooms">
+                <option value="1">Min. Rooms</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <input id="min-size" type="text" placeholder=" Min. Size" class="subdued">
+              <input id="max-price" type="text" placeholder=" Price" class="subdued">
+              <button type"submit" id="listing-clear-filters">CLEAR OPTIONS</button>
+              <button type"submit" id="listing-search">SEARCH</button>
+            </div>
           </div>
-          <div class="flexbox listings filters">
+          <div id="properties" class="flexbox listings">
             
+              <div class="listing-preview" data-location="<strong>PLAYA</strong> VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/1.html>
+                  
+                    <div class="header" style="background-image:url(/images/generic.jpg)">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div><strong>PLAYA</strong> VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos pool ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
             
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/10.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
             
-            <select name="location" id="location-filter">
-              <option value="n/a">Any Location</option>
-              
-                <option value="<strong>PLAYA</strong> VISTA"><strong>PLAYA</strong> VISTA</option>
-              
-                <option value="PLAYA VISTA">PLAYA VISTA</option>
-              
-                <option value="VENICE">VENICE</option>
-              
-                <option value="Hermosa Beach">Hermosa Beach</option>
-              
-            </select>
-            <select name="status" id="status-filter">
-              <option value="n/a">Any Status</option>
-              <option value="true">Available Now</option>
-              <option value="false">Not Available</option>
-            </select>
-            <select name="type" id="type-filter">
-              <option value="n/a">Any Type</option>
-              <option value="rent">Rent</option>
-              <option value="lease">Lease</option>
-            </select>
-            <select name="min-rooms" id="min-rooms">
-              <option value="1">Min. Rooms</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-            <input id="min-size" type="text" placeholder=" Min. Size" class="subdued">
-            <input id="max-price" type="text" placeholder=" Price" class="subdued">
-            <button type"submit" id="listing-clear-filters">CLEAR OPTIONS</button>
-            <button type"submit" id="listing-search">SEARCH</button>
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/11.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et adele iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/12.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/13.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="VENICE" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/2.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>123 Venice Blvd,</div>
+                    <div>VENICE</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos mississippi et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="4" data-size="3,500" data-price="4,500">
+                <a href=/listings/3.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et gaga iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 4 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="4" data-size="3,500" data-price="4,500">
+                <a href=/listings/4.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et madonna iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 4 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/5.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus jackson et iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/6.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>123 RIVERSIDE DRIVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et adele iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/7.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/8.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
+                <a href=/listings/9.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label">LEASE</div>
+                  <div class="address">
+                    <div>2467 JEFFERSON AVE,</div>
+                    <div>PLAYA VISTA</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 9 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 2 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>4,500</strong> per month
+                  </div>
+                </a>
+              </div>
+            
+              <div class="listing-preview" data-location="Hermosa Beach" data-available="true" data-type="" data-rooms="3" data-size="1344000" data-price="1200">
+                <a href=/listings/afasdfasf.html>
+                  
+                    <div class="header">
+                  
+                  <div class="label"></div>
+                  <div class="address">
+                    <div>asdfasdf</div>
+                    <div>Hermosa Beach</div>
+                  </div>
+                  </div>
+                  <div class="listing-content">
+                    <p>
+                      asd;lfkjasdf;lk
+                    </p>
+                    <div class="amenities">
+                      <p><img src="images/icons/door.png" /> 3 Rooms</p>
+                      <p><img src="images/icons/tub.png" /> 34 Baths</p>
+                      <p><img src="images/icons/bed.png" /> 4 Bedrooms</p>
+                      <p><img src="images/icons/ruler.png" /> 1344000 Sq ft</p>
+                    </div>
+                  </div>
+                  <div class="listing-preview-footer">
+                    <strong>1200</strong> per month
+                  </div>
+                </a>
+              </div>
+            
           </div>
-        </div>
-        <div id="properties" class="flexbox listings">
-          
-             <div class="listing-preview" data-location="<strong>PLAYA</strong> VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/1.html>
-                
-                  <div class="header" style="background-image:url(/images/generic.jpg)">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div><strong>PLAYA</strong> VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos pool ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/10.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/11.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et adele iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/12.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/13.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="VENICE" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/2.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>123 Venice Blvd,</div>
-                  <div>VENICE</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos mississippi et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="4" data-size="3,500" data-price="4,500">
-              <a href=/listings/3.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et gaga iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 4 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="4" data-size="3,500" data-price="4,500">
-              <a href=/listings/4.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et madonna iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 4 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/5.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus jackson et iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/6.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>123 RIVERSIDE DRIVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et adele iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/7.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/8.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="4,500">
-              <a href=/listings/9.html>
-                
-                  <div class="header">
-                
-                <div class="label">LEASE</div>
-                <div class="address">
-                  <div>2467 JEFFERSON AVE,</div>
-                  <div>PLAYA VISTA</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis At vero eos et accusamus et iusto odio dignissimos ducimusquiblanditiis
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 9 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 2 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 8 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 3,500 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>4,500</strong> per month
-                </div>
-              </a>
-             </div>
-          
-             <div class="listing-preview" data-location="Hermosa Beach" data-available="true" data-type="" data-rooms="3" data-size="1344000" data-price="1200">
-              <a href=/listings/afasdfasf.html>
-                
-                  <div class="header">
-                
-                <div class="label"></div>
-                <div class="address">
-                  <div>asdfasdf</div>
-                  <div>Hermosa Beach</div>
-                </div>
-                </div>
-                <div class="listing-content">
-                  <p>
-                    asd;lfkjasdf;lk
-                  </p>
-                  <div class="amenities">
-                    <p><img src="images/icons/door.png" /> 3 Rooms</p>
-                    <p><img src="images/icons/tub.png" /> 34 Baths</p>
-                    <p><img src="images/icons/bed.png" /> 4 Bedrooms</p>
-                    <p><img src="images/icons/ruler.png" /> 1344000 Sq ft</p>
-                  </div>
-                </div>
-                <div class="listing-preview-footer">
-                  <strong>1200</strong> per month
-                </div>
-              </a>
-             </div>
-          
-        </div>
-        <div class="paginator">
-          <div id="listings-prev" class="navigate-page scroll-listings-top">&lt;-</div>
-          <div class="pages">
-            <a id="1" class="selected scroll-listings-top">1</a>
+          <div class="paginator">
+            <div id="listings-prev" class="navigate-page scroll-listings-top">&lt;-</div>
+            <div class="pages">
+              <a id="1" class="selected scroll-listings-top">1</a>
+            </div>
+            <div id="listings-next" class="navigate-page scroll-listings-top">-&gt;</div>
           </div>
-          <div id="listings-next" class="navigate-page scroll-listings-top">-&gt;</div>
         </div>
       </div>
-    </div>
-    <div class="footer">
+      <div class="footer">
   <div class="inner">
     <div class="column">
       <div class="title">LISTINGS</div>
@@ -574,6 +574,7 @@
   </div>
 </div>
 
+    </div>
    </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
       <script type="text/javascript" src="scripts/script.js"></script>
