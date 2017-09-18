@@ -328,12 +328,9 @@ a {
     .contact-close {
       @include close-button;
       position: absolute;
-      top: 5px;
-      right: 5px;
       color: $primary-color;
-      width: 13px;
-      height: 21px;
       cursor: pointer;
+      padding: 21px;
     }
     .form {
       margin: 36px;
@@ -767,8 +764,7 @@ a {
   .nav-modal {
     .inner {
       .menu-close {
-        background-size: 18px 18px;
-        padding: 31px;
+        padding: 21px;
       }
     }
   }

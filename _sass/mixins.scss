@@ -19,9 +19,10 @@
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
-  padding: 16px;
+  padding: 2em;
   position: absolute;
-  top: 0; right: 0;
+  top: 8px;
+  right: 8px;
 }
 
 @mixin mobile-logo {
