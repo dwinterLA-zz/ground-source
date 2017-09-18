@@ -817,17 +817,14 @@ a {
       background-position: center center;
       background-repeat: no-repeat;
       cursor: pointer;
-      padding: 16px;
+      padding: 2em;
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 8px;
+      right: 8px;
       position: absolute;
-      top: 5px;
-      right: 5px;
       color: #d46049;
-      width: 13px;
-      height: 21px;
-      cursor: pointer; }
+      cursor: pointer;
+      padding: 21px; }
     .contact-us-modal .contact-form .form {
       margin: 36px; }
       .contact-us-modal .contact-form .form > p {
@@ -892,10 +889,10 @@ a {
       background-position: center center;
       background-repeat: no-repeat;
       cursor: pointer;
-      padding: 16px;
+      padding: 2em;
       position: absolute;
-      top: 0;
-      right: 0; }
+      top: 8px;
+      right: 8px; }
     .nav-modal .inner ul.nav {
       padding: 8% 0 0;
       list-style: none;
@@ -1193,10 +1190,10 @@ a {
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
-  padding: 16px;
+  padding: 2em;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
   z-index: 10;
   background-size: 18px 18px;
   padding: 31px;
@@ -1231,8 +1228,7 @@ a {
     z-index: 2; }
 
   .nav-modal .inner .menu-close {
-    background-size: 18px 18px;
-    padding: 31px; }
+    padding: 21px; }
 
   .contact-info-body {
     font-size: .9em;
@@ -2287,12 +2283,22 @@ a {
   #container-experience .text > p {
     font-size: 1.3em; } }
 @media screen and (max-width: 768px) {
-  #container-experience .text {
-    width: 94vw; }
-  #container-experience .study-carousel {
-    width: 100vw; }
+  #container-experience .top {
+    height: 100%; }
+  #container-experience .bottom {
+    height: 100%; }
   #container-experience .footer {
-    height: 100%; } }
+    height: 100%; }
+  #container-experience .text {
+    position: static;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    top: 0%;
+    width: 94vw;
+    height: 100%;
+    padding: 40px 20px; }
+  #container-experience .study-carousel {
+    width: 100vw; } }
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
