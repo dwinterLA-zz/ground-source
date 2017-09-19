@@ -308,8 +308,25 @@
       background-size: 94%;
     }
 
+    .agent {
+      width: 44%;
+    }
+
     .agents {
-      padding-top: 2em;
+      padding: 1em;
+      .short-bio {
+        display: none;
+      }
+      .agent-info-bottom {
+        .bio-contact {
+          display: none;
+        }
+        .bio-button {
+          font-size: .8em;
+          margin-bottom: 0;
+          margin-top: 14px;
+        }
+      }
     }
 
     #header-about {
@@ -327,7 +344,7 @@
     }
 
     .agent {
-      width: 90%;
+      width: 43%;
     }
 
     .bio-pic-mobile {
