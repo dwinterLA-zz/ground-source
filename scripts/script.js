@@ -106,13 +106,13 @@ $(document).ready(function() {
 
   $('.ham-menu').click(function(){
     modalOffset = window.pageYOffset;
-    console.info('setting modal offset to this:')
-    console.info(modalOffset);
+    $('body').addClass('overflow-hidden');
     $('.main').addClass('modal-open')
     $('.nav-modal').fadeIn();
   });
 
   $('.menu-close').click(function(){
+    $('body').removeClass('overflow-hidden');
     $('.main').removeClass('modal-open')
     $('.nav-modal').fadeOut();
     window.scrollTo(0, modalOffset)

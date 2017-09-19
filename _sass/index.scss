@@ -12,7 +12,10 @@ body {
 
 .modal-open {
   overflow: hidden;
-  pointer-events: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 strong, b {
