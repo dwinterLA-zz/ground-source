@@ -102,7 +102,8 @@
                   {% else %}
                     <div class="header">
                   {% endif %}
-                  {% if listing.type == "LEASE" %}
+                  {% assign listingType = listing.type | downcase %}
+                  {% if listingType == "lease" %}
                     <div class="label lease-label">{{listing.type}}</div>
                   {% else %}
                     <div class="label rent-label">{{listing.type}}</div>

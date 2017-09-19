@@ -129,6 +129,7 @@
   .container {
     display: flex;
     position: relative;
+    z-index: 5;
     flex-direction: row;
     flex-flow: row wrap;
   }
@@ -216,6 +217,7 @@
       left: 0;
       height: 100px;
       width: 100%;
+      z-index: 5;
       background-image: linear-gradient(to bottom, rgba(#eee, 0), rgba(#eee, 1));
     }
   }
@@ -227,6 +229,21 @@
     font-size: 6em;
     padding-bottom: 0.5em;
     text-shadow: 0px 3px 20px rgba(0,0,0,0.75);
+    .location {
+      position: relative;
+      z-index: 2;
+    }
+    &:after {
+      display: block;
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 300px;
+      width: 100%;
+      z-index: 1;
+      background-image: linear-gradient(to bottom, rgba(#eee, 0), #080808);
+    }
   }
 
   #listings-sidebar {
@@ -346,6 +363,23 @@
     }
     #header-text-listings {
       font-size: 2.5em;
+      z-index: 2;
+      color: white;
+      .location {
+        position: relative;
+        z-index: 2;
+      }
+      &:after {
+        display: block;
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 73px;
+        width: 100%;
+        z-index: 1;
+        background-image: linear-gradient(to bottom, rgba(#eee, 0), #080808);
+      }
     }
 
     #about-google-map {
