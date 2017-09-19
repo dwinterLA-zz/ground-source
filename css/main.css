@@ -1934,7 +1934,12 @@ a {
     #container-listings .header > input {
       width: 94%; }
     #container-listings .filters > * {
-      width: 90%; } }
+      width: 90%;
+      font-size: 1.2em;
+      height: 39px; }
+    #container-listings .filters > button {
+      height: 39px;
+      font-size: 1.3em; } }
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
