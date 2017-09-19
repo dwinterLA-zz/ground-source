@@ -18,11 +18,7 @@ $(document).ready(function () {
     window.print();
   });
 
-  $('.scroll-listings-top').click(function () {
-    var top = $(".header").offset().top;
-
-    $('html, body').animate({ scrollTop: top }, 250);
-  });
+  addScrollListener();
 
   $("#listings-text-search").keydown(function () {
     var listings = $('.listing-preview');
@@ -56,7 +52,6 @@ $(document).ready(function () {
   });
 
   $("#listing-clear-filters").click(function () {
-    console.info("clicked!");
     var listings = $('.listing-preview');
     $("#listings-text-search").val("");
     $("#location-filter").val("n/a");
@@ -175,6 +170,8 @@ function paginate(properties) {
     paginateHelper(page);
   }
 
+  addScrollListener();
+
   $(properties).hide();
   $(properties).slice(page, PER_PAGE).show();
 
@@ -198,4 +195,12 @@ function paginate(properties) {
     // highlight the selected page number
     $('.pages').children().eq(newPage).addClass('selected');
   }
+}
+
+function addScrollListener() {
+  $('.scroll-listings-top').click(function () {
+    var top = $(".header").offset().top;
+
+    $('html, body').animate({ scrollTop: top }, 250);
+  });
 }
