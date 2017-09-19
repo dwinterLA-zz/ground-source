@@ -523,8 +523,10 @@ body {
   font-size: 1vw; }
 
 .modal-open {
-  overflow: hidden;
-  pointer-events: none; }
+  overflow: hidden; }
+
+.overflow-hidden {
+  overflow: hidden; }
 
 strong, b {
   font-weight: 700; }
@@ -803,7 +805,7 @@ a {
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.8);
-  z-index: 10; }
+  z-index: 101; }
   .contact-us-modal .contact-form {
     width: 50%;
     margin: 112px auto 0 auto;
@@ -1237,8 +1239,8 @@ a {
     padding: 21px; }
 
   .modal-open {
-    overflow: hidden;
-    height: 100%; }
+    display: none;
+    height: 0; }
 
   .contact-info-body {
     font-size: .9em;

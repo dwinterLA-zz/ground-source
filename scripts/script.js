@@ -5,6 +5,7 @@
 var PER_PAGE = 6;
 
 $(document).ready(function () {
+  var modalOffset = 0;
   paginate($('#properties').children());
 
   $("#print-brochure").click(function () {
@@ -87,21 +88,29 @@ $(document).ready(function () {
   });
 
   $('.contact-close').click(function () {
-    $('.main').toggleClass('modal-open');
-    $('.contact-us-modal').fadeToggle();
+    $('.main').removeClass('modal-open');
+    $('.contact-us-modal').fadeOut();
+    window.scrollTo(0, modalOffset);
   });
 
   $('.contact-us-link').click(function () {
-    // $('.main').addClass('modal-open');
-    $('body').addClass('modal-open');
+    $('.main').addClass('modal-open');
     $('.contact-us-modal').fadeIn();
     $('.nav-modal').fadeOut();
   });
 
-  $('.ham-menu, .menu-close').click(function () {
-    $('body').toggleClass('modal-open');
-    // $('.main').toggleClass('modal-open')
-    $('.nav-modal').fadeToggle();
+  $('.ham-menu').click(function () {
+    modalOffset = window.pageYOffset;
+    $('body').addClass('overflow-hidden');
+    $('.main').addClass('modal-open');
+    $('.nav-modal').fadeIn();
+  });
+
+  $('.menu-close').click(function () {
+    $('body').removeClass('overflow-hidden');
+    $('.main').removeClass('modal-open');
+    $('.nav-modal').fadeOut();
+    window.scrollTo(0, modalOffset);
   });
 
   $('.close-agent-detail').click(function () {
