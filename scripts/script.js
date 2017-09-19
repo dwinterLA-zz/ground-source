@@ -90,6 +90,7 @@ $(document).ready(function () {
 
   $('.contact-close').click(function () {
     $('.main').removeClass('modal-open');
+    $('body').removeClass('overflow-hidden');
     $('.contact-us-modal').fadeOut();
     window.scrollTo(0, modalOffset);
   });
