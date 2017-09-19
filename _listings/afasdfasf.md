@@ -21,4 +21,5 @@ rooms: 3
 short-caption: asd;lfkjasdf;lk
 sq-footage: "1344000"
 title: afasdfasf
+type: RENT
 ---

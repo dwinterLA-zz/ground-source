@@ -134,11 +134,19 @@
         position: absolute;
         top: 8px;
         left: -6px;
-        background-color: $primary-color;
         color: white;
         padding: 3px 5px;
         font-size: 1.1em;
       }
+
+      .rent-label {
+        background-color: #3678c6;
+      }
+
+      .lease-label {
+        background-color: $primary-color;
+      }
+
       .lease {
         background-color: $brand-blue;
       }

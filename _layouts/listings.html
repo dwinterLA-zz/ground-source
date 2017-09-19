@@ -102,7 +102,11 @@
                   {% else %}
                     <div class="header">
                   {% endif %}
-                  <div class="label">{{listing.type}}</div>
+                  {% if listing.type == "LEASE" %}
+                    <div class="label lease-label">{{listing.type}}</div>
+                  {% else %}
+                    <div class="label rent-label">{{listing.type}}</div>
+                  {% endif %}
                   <div class="address">
                     <div>{{listing.address-line-1}}</div>
                     <div>{{listing.address-line-2}}</div>
