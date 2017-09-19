@@ -1288,9 +1288,9 @@ a {
     margin-top: 0; }
 
   .review-slideshow {
-    padding: 28px 14px; }
+    padding: 28px 12px; }
     .review-slideshow .inner img {
-      margin-top: 0;
+      margin-top: 3px;
       max-width: 35%; }
     .review-slideshow .inner p {
       width: 100%;
