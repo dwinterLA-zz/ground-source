@@ -777,7 +777,8 @@ a {
   }
 
   .modal-open {
-    display: none;
+    visibility: hidden;
+    overflow: hidden;
   }
 
   .contact-info-body {
