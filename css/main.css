@@ -1238,7 +1238,8 @@ a {
 
   .modal-open {
     visibility: hidden;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 100%; }
 
   .contact-info-body {
     font-size: .9em;
