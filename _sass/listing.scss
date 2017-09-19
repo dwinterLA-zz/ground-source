@@ -196,7 +196,7 @@
   }
 
   #header-listings {
-    height: 75vh;
+    height: 55vh;
     position: relative;
     background-image: url(../images/placeholder-header.jpg);
     background-size: cover;
@@ -324,7 +324,7 @@
     }
   }
 
-  @media screen and (max-width: 768px) { // TODO: Use a size variable here
+  @media screen and (max-width: $breakpoint-small) {
     #content {
       top: 1062px;
     }
@@ -348,6 +348,11 @@
       height: 378px;
     }
 
+    .bond-list {
+      > li {
+        padding: 7px;
+      }
+    }
     .listing-image-gallery {
       width: 100%;
     }
@@ -358,6 +363,10 @@
 
     .info-box {
       margin-top: 24px;
+      padding-top: 20px;
+      .title {
+        margin-bottom: 20px;
+      }
     }
   }
 }
