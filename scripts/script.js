@@ -92,13 +92,15 @@ $(document).ready(function () {
   });
 
   $('.contact-us-link').click(function () {
-    $('.main').addClass('modal-open');
+    // $('.main').addClass('modal-open');
+    $('body').addClass('modal-open');
     $('.contact-us-modal').fadeIn();
     $('.nav-modal').fadeOut();
   });
 
   $('.ham-menu, .menu-close').click(function () {
-    $('.main').toggleClass('modal-open');
+    $('body').toggleClass('modal-open');
+    // $('.main').toggleClass('modal-open')
     $('.nav-modal').fadeToggle();
   });
 
