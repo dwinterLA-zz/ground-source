@@ -134,7 +134,11 @@
   }
 
   .listing-image {
-    height: 365px;
+    padding-top: 56.25%;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   .listing-image-gallery {
     width: 50%;
