@@ -107,15 +107,15 @@ $(document).ready(function() {
   $('.ham-menu').click(function(){
     modalOffset = window.pageYOffset;
     $('body').addClass('overflow-hidden');
-    // $('.main').addClass('modal-open')
+    $('.main').addClass('modal-open')
     $('.nav-modal').fadeIn();
   });
 
   $('.menu-close').click(function(){
     $('body').removeClass('overflow-hidden');
-    // $('.main').removeClass('modal-open')
+    $('.main').removeClass('modal-open')
     $('.nav-modal').fadeOut();
-    // window.scrollTo(0, modalOffset)
+    window.scrollTo(0, modalOffset)
   });
 
   $('.close-agent-detail').click(function() {
