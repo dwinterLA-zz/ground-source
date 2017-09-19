@@ -8,19 +8,18 @@
   .header {
     text-align: center;
     > h4 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      margin: 0 0 20px 0;
+      font-size: 2.5em;
+      margin: 0 0 5px 0;
       color: #514d4c;
     }
     > p {
-      font-size: 1.8em;
+      font-size: 1.4em;
       margin: 0 15% 0 15%;
       opacity: .95;
       color: gray;
     }
     > input {
-      margin-top: 40px;
+      margin-top: 30px;
       border-radius: 30px;
       width: 420px;
       height: 50px;
@@ -120,6 +119,16 @@
       height: 190px;
       margin: 0;
       position: relative;
+        &:after {
+        display: block;
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(#eee, 0), #303030);
+      }
       .label {
         position: absolute;
         top: 8px;
@@ -233,6 +242,13 @@
   }
 
   @media screen and (max-width: $breakpoint-small) {
+    #listings-text-search {
+      width: 90%;
+    }
+    .amenities {
+      display: none;
+    }
+
     .submenu {
       display: block;
       margin-top: 14px;
@@ -240,10 +256,6 @@
 
     .listings {
       width: 90%;
-    }
-
-    .listing-preview {
-      margin-right: 0px !important;
     }
 
     .paginator {
@@ -254,15 +266,29 @@
     }
 
     .listing-preview {
-      width: 92%;
-      margin-bottom: 34px;
-    }
-    .header {
-      > p {
-        margin: 1px;
+      width: 44%;
+      margin: 7px 6px;
+      .listing-content {
+        padding: 0 8px;
+        .amenities {
+          display: none;
+        }
       }
-      > input {
-        width: 94%;
+      .listing-preview-footer {
+        padding: 8px 0;
+        text-align: center;
+      }
+      .header {
+        .address {
+          padding: 0;
+          font-size: 1em;
+        }
+        > p {
+          margin: 1px;
+        }
+        > input {
+          width: 94%;
+        }
       }
     }
     .filters {
