@@ -1237,7 +1237,8 @@ a {
     padding: 21px; }
 
   .modal-open {
-    display: none; }
+    visibility: hidden;
+    overflow: hidden; }
 
   .contact-info-body {
     font-size: .9em;
