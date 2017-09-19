@@ -104,7 +104,7 @@ a {
     margin: 0 auto;
     top: 50%;
     transform: translateY(-50%);
-    left: 20px;
+    left: $left-align-home;
     width: 42%;
     z-index: 2;
     position: absolute;
@@ -208,7 +208,7 @@ a {
 
 .review {
   outline: none;
-  padding: 0 60px;
+  padding: 6px 60px;
 }
 
 #home-image {
@@ -839,6 +839,7 @@ a {
 
   .slick-dots {
     margin-top: 0;
+    padding-bottom: 6px;
   }
 
   .review-slideshow {
@@ -881,9 +882,9 @@ a {
       left: 0;
       .contact-header {
         padding: 25px 0 19px 0;
-        text-align: center;
         background: rgba(255, 255, 255, 0.8);
         font-size: 52px;
+        margin-left: $left-align-home-mobile;
       }
       .contact-body {
         padding: 0;
@@ -1022,9 +1023,8 @@ a {
     .column {
       display: inline-block;
       width: 43%;
-      margin-right: 5%;
+      margin-right: 6%;
       margin-bottom: 10px;
-      margin: 0 0 10px 0;
       .title {font-weight: bold}
       margin-left: 0%;
       opacity: .9;
