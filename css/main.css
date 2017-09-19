@@ -1237,7 +1237,6 @@ a {
     padding: 21px; }
 
   .modal-open {
-    visibility: hidden;
     overflow: hidden;
     height: 100%; }
 
