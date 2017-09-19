@@ -268,6 +268,12 @@
     .filters {
       > * {
         width: 90%;
+        font-size: 1.2em;
+        height: 39px;
+      }
+      > button {
+        height: 39px;
+        font-size: 1.3em;
       }
     }
   }

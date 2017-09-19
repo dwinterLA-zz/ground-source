@@ -8,6 +8,12 @@ $(document).ready(function() {
   var modalOffset = 0;
   paginate($('#properties').children());
 
+  $("#listings-text-search").keypress(function(e) {
+    var that = this;
+    if (e.keyCode === 13) {
+      $(that).blur();
+    }
+  })
   $("#print-brochure").click(function() {
     window.print();
   })
