@@ -142,6 +142,9 @@ a {
     font-size: .7em;
     text-align: left;
     padding: 0 0 9px 26px;
+    > img {
+      float: left;
+    }
     > div {
       width: 50%;
     }
@@ -714,7 +717,7 @@ a {
 
 .icon-small {
   width: 38px;
-  margin-right: 15px;
+  margin-right: 8px;
 }
 
 #listings-arrow-left {
@@ -815,6 +818,15 @@ a {
       width: 80%;
       > div {
         width: 100%;
+        margin-bottom: 8px;
+        > img {
+          float: left;
+          margin-top: -12px;
+          margin-bottom: 8px;
+        }
+        > span {
+          margin-top: 10px;
+        }
       }
     }
   }
