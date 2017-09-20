@@ -738,6 +738,21 @@ a {
 
 }
 
+.arrow-up {
+  position: fixed;
+  bottom: 7px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  display: none;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+
+  border-bottom: 25px solid $primary-color;
+  z-index: 2;
+}
+
 @media screen and (min-width: $page-max-width) {
   body {
     font-size: 18px;
@@ -761,6 +776,9 @@ a {
     font-size: .9em;
   }
 
+  .arrow-up {
+    bottom: 330px;
+  }
   .logo-upper-left {
     @include mobile-logo;
     position: absolute;
