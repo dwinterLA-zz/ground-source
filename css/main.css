@@ -1207,18 +1207,23 @@ a {
   padding: 31px;
   cursor: pointer; }
 
-.arrow-up {
-  position: fixed;
-  bottom: 7px;
-  right: 12px;
-  width: 0;
-  height: 0;
+.to-top {
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  z-index: 104;
+  width: 60px;
   cursor: pointer;
-  display: none;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
-  border-bottom: 25px solid #d46049;
-  z-index: 2; }
+  overflow: hidden; }
+  .to-top:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2); }
+
+.arrow-up {
+  width: 100%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  overflow: hidden; }
 
 @media screen and (min-width: 1800px) {
   body {
@@ -2003,7 +2008,7 @@ a {
       display: block;
       margin-top: 18px; }
     #container-listings .listings {
-      width: 90%;
+      width: 100%;
       margin-top: 18px;
       margin-bottom: 22px; }
     #container-listings .paginator {
@@ -2012,10 +2017,14 @@ a {
       #container-listings .paginator > div {
         padding: 3px; }
     #container-listings .listing-preview {
-      width: 44%;
+      width: 45%;
       margin: 7px 6px; }
+      #container-listings .listing-preview .header {
+        height: 171px; }
       #container-listings .listing-preview .listing-content {
         padding: 0 8px; }
+        #container-listings .listing-preview .listing-content > p {
+          line-height: 1.25; }
         #container-listings .listing-preview .listing-content .amenities {
           display: none; }
       #container-listings .listing-preview .listing-preview-footer {
