@@ -1207,6 +1207,19 @@ a {
   padding: 31px;
   cursor: pointer; }
 
+.arrow-up {
+  position: fixed;
+  bottom: 7px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  display: none;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid #d46049;
+  z-index: 2; }
+
 @media screen and (min-width: 1800px) {
   body {
     font-size: 18px; } }
@@ -1223,6 +1236,9 @@ a {
 @media screen and (max-width: 768px) {
   body {
     font-size: .9em; }
+
+  .arrow-up {
+    bottom: 330px; }
 
   .logo-upper-left {
     width: 46%;
@@ -1783,6 +1799,14 @@ a {
 #container-listings {
   background-image: url(../images/about/fs-bg.jpg);
   background-size: cover; }
+  #container-listings .navigation-arrows {
+    position: static;
+    width: 14px;
+    height: 14px; }
+  #container-listings #navigation-arrow-right {
+    margin-left: 8px; }
+  #container-listings #navigation-arrow-left {
+    margin-right: 8px; }
   #container-listings .content {
     padding-top: 12vh; }
   #container-listings .header {
@@ -1968,7 +1992,8 @@ a {
       height: 26px; }
     #container-listings .paginator .navigate-page {
       color: #d46049;
-      cursor: pointer; }
+      cursor: pointer;
+      vertical-align: middle; }
   @media screen and (max-width: 768px) {
     #container-listings #listings-text-search {
       width: 90%; }
