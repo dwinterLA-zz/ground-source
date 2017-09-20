@@ -700,11 +700,14 @@ a {
     }
     &.social {
       float: right;
-      margin-right: 3px;
+      margin-right: 20px;
       font-size: 1.5em;
       text-align: right;
       line-height: 1;
-      a {padding: 0.5em;}
+      a {
+        padding: 0.5em;
+        padding-right: 0;
+      }
     }
   }
 }
@@ -739,16 +742,13 @@ a {
 }
 
 .to-top {
-  position: absolute;
-  bottom: 5px;
-  right: 0px;
-  z-index: 104;
-  width: 60px;
-  cursor: pointer;
-  overflow: hidden;
-  &:hover {
-    transform: scale(1.2);
-  }
+  @include hamburger-menu;
+  background-image: url(../images/scroll-arrow-up.png);
+  position: absolute !important;
+  top: auto;
+  bottom: 10px !important;
+  right: 10px !important;
+  height: 2em;
 }
 
 .arrow-up {
