@@ -1285,7 +1285,8 @@ a {
 
   .contact-info-body {
     font-size: .9em;
-    margin-top: 12px; }
+    margin-top: 12px;
+    width: 100%; }
     .contact-info-body .contact-row {
       padding-left: 0;
       margin: 0 auto;
