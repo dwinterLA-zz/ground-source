@@ -279,7 +279,7 @@
     }
 
     .listings {
-      width: 90%;
+      width: 100%;
       margin-top: 18px;
       margin-bottom: 22px;
     }
@@ -293,10 +293,16 @@
     }
 
     .listing-preview {
-      width: 44%;
+      width: 45%;
       margin: 7px 6px;
+      .header {
+        height: 171px;
+      }
       .listing-content {
         padding: 0 8px;
+        > p {
+          line-height: 1.25;
+        }
         .amenities {
           display: none;
         }

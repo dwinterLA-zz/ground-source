@@ -8,7 +8,7 @@ $(document).ready(function() {
   var modalOffset = 0;
   paginate($('#properties').children());
 
-  $('.arrow-up').click(function() {
+  $('.to-top').click(function() {
     window.scrollTo(0,0);
   })
   $("#listings-text-search").keypress(function(e) {
@@ -74,23 +74,15 @@ $(document).ready(function() {
     var footerOffset = $('.footer').offset().top
     var bodyHeight = $('body').height()
     var difference = bodyHeight - footerOffset;
-    var footerHeight = $(".footer").height() + 5;
+    var footerHeight = $(".footer").outerHeight() + 5;
 
     if (window.pageYOffset >= 67) {
       $('#top-nav').hide();
       $('.ham-menu-home').show();
-      $('.arrow-up').show();
     }
     if (window.pageYOffset < 67) {
       $('#top-nav').show();
       $('.ham-menu-home').hide();
-      $('.arrow-up').hide();
-    }
-
-    if (window.pageYOffset >= difference) {
-      $('.arrow-up').css("bottom", parseInt(footerHeight) + "px");
-    } else {
-      $('.arrow-up').css("bottom", "5px")
     }
   })
   $("#features-toggle").click(function() {

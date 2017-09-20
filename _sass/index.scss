@@ -738,19 +738,23 @@ a {
 
 }
 
-.arrow-up {
-  position: fixed;
-  bottom: 7px;
-  right: 12px;
-  width: 0;
-  height: 0;
+.to-top {
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  z-index: 104;
+  width: 60px;
   cursor: pointer;
-  display: none;
-  border-left: 25px solid transparent;
-  border-right: 25px solid transparent;
+  overflow: hidden;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
 
-  border-bottom: 25px solid $primary-color;
-  z-index: 2;
+.arrow-up {
+  width: 100%;
+  transform: rotate(180deg);
+  overflow: hidden;
 }
 
 @media screen and (min-width: $page-max-width) {
