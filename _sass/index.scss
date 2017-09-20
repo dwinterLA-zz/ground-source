@@ -677,10 +677,23 @@ a {
   background-color: $primary-color-lighter;
 }
 
+.social {
+  position: absolute;
+  right: 20px;
+  bottom: 60px;
+  font-size: 1.5em;
+  text-align: right;
+  line-height: 1;
+  a {
+    padding: 0.5em;
+    padding-right: 0;
+  }
+}
 .footer {
   .inner {
     max-width: $page-max-width;
-    margin-left: $left-align-home;
+    margin: 0 auto;
+    padding-left: $left-align-home;
   }
   position: relative;
   background: $primary-color;
