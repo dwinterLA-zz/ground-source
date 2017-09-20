@@ -621,7 +621,10 @@ a {
   font-size: .9em;
   background: rgba(255, 255, 255, 0.9);
   padding: 15px 22px 34px 22px;
-  color: #858585; }
+  color: #858585;
+  width: 72%;
+  text-align: center;
+  margin: 0 auto; }
   .contact-info-body .contact-row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -637,9 +640,15 @@ a {
             justify-content: center;
     font-size: .7em;
     text-align: left;
-    padding: 0 0 9px 26px; }
+    padding-bottom: 9px; }
     .contact-info-body .contact-row > div {
       width: 50%; }
+      .contact-info-body .contact-row > div > img {
+        float: left;
+        margin-top: -12px;
+        margin-bottom: 8px; }
+      .contact-info-body .contact-row > div > span {
+        margin-top: 10px; }
 
 .black {
   color: black; }
@@ -1180,7 +1189,7 @@ a {
 
 .icon-small {
   width: 38px;
-  margin-right: 15px; }
+  margin-right: 8px; }
 
 #listings-arrow-left {
   left: -158px;
@@ -1282,7 +1291,14 @@ a {
       margin: 0 auto;
       width: 80%; }
       .contact-info-body .contact-row > div {
-        width: 100%; }
+        width: 100%;
+        margin-bottom: 8px; }
+        .contact-info-body .contact-row > div > img {
+          float: left;
+          margin-top: -12px;
+          margin-bottom: 8px; }
+        .contact-info-body .contact-row > div > span {
+          margin-top: 10px; }
 
   .navigation-arrow-right {
     right: 5%; }
