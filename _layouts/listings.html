@@ -118,14 +118,19 @@
                       {{listing.short-caption}}
                     </p>
                     <div class="amenities">
-                      <p><img src="images/icons/door.png" /> {{listing.rooms}} Rooms</p>
-                      <p><img src="images/icons/tub.png" /> {{listing.baths}} Baths</p>
-                      <p><img src="images/icons/bed.png" /> {{listing.bedrooms}} Bedrooms</p>
-                      <p><img src="images/icons/ruler.png" /> {{listing.sq-footage}} Sq ft</p>
+                      {% if listing.available == true %}
+                        <p><img src="images/icons/check.png" /><span class="success">Available</span></p>
+                      {% else %}
+                        <p><img src="images/icons/x.png" /><span class="error">Unavailable</span></p>
+                      {% endif %}
+                      {% if listing.rate == 0 or listing.rate == "0" or listing.rate == nil %}
+                        <p><img src="images/icons/money.png"/>Please Call</p>
+                      {% else %}
+                        <p><img src="images/icons/money.png"/>${{listing.rate}}</p>
+                      {% endif %}
+                      <p><img src="images/icons/ruler.png" /> {{listing.sq-footage}} Sq. ft.</p>
+                      <p><img src="images/icons/cars.png" /> {{listing.parking}} Parking</p>
                     </div>
-                  </div>
-                  <div class="listing-preview-footer">
-                    <strong>{{listing.price}}</strong> per month
                   </div>
                 </a>
               </div>

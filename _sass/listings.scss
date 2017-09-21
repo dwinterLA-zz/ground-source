@@ -182,6 +182,9 @@
       opacity: .8;
       .amenities {
         font-size: .9em;
+        > span {
+          margin-left: 2px;
+        }
         > p {
           > img {
             padding-right: 3px;
