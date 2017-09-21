@@ -2,8 +2,10 @@
 ---
 // do not remove the dashes above, they are required for babel to work
 
-const PER_PAGE = 6
+const PER_PAGE = 6;
+const SITE_PASSWORD = "xzC8Y1";
 
+authenticate();
 $(document).ready(function() {
   var modalOffset = 0;
   paginate($('#properties').children());
@@ -218,4 +220,34 @@ function addScrollListener() {
 
     $('html, body').animate({scrollTop: top}, 250);
   })
+}
+
+function authenticate() {
+  var storePassword = localStorage.getItem("password")
+  if (checkPassword(storePassword)) {
+    displaySite();
+  } else {
+    login();
+    return;
+  }
+}
+
+function checkPassword(password) {
+  return password === SITE_PASSWORD;
+}
+
+function displaySite() {
+  $('body').show();
+}
+
+function login() {
+  var enteredPassword = prompt("Please enter the password");
+  if (checkPassword(enteredPassword)) {
+    displaySite();
+    localStorage.setItem("password", SITE_PASSWORD);
+    return;
+  } else {
+    alert("Incorrect Credentials");
+    return;
+  }
 }
