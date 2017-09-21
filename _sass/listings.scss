@@ -117,6 +117,7 @@
   }
 
   .listing-preview {
+    position: relative;
     width: 31%;
     margin: 0 18px 18px 0;
     margin-bottom: 36px;
@@ -176,18 +177,17 @@
     }
     .listing-content {
       line-height: 135%;
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-bottom: 10px;
+      padding: 0 12px 10px 12px;
       opacity: .8;
       .amenities {
         font-size: .9em;
         > table {
+          width: 95%;
           margin: 0 auto;
           > tbody {
             > tr {
               > td {
-                padding: 10px;
+                padding: 6px;
               }
             }
           }
@@ -202,9 +202,6 @@
             margin-right: 5px;
             width: 35px;
           }
-          // > span {
-          //   float: right;
-          // }
         }
         > span {
           margin-left: 2px;
@@ -296,7 +293,7 @@
     #listings-text-search {
       width: 90%;
     }
-    .amenities {
+    .short-caption {
       display: none;
     }
 
@@ -326,12 +323,23 @@
         height: 171px;
       }
       .listing-content {
-        padding: 0 8px;
+        padding: 8px 1px;
         > p {
-          line-height: 1.25;
+          line-height: 1;
         }
         .amenities {
-          display: none;
+          font-size: .8em;
+          > table {
+            width: 100%;
+            margin: 0 auto;
+            > tbody {
+              > tr {
+                > td {
+                  padding: 4px;
+                }
+              }
+            }
+          }
         }
       }
       .header {
