@@ -3,10 +3,10 @@
 // do not remove the dashes above, they are required for babel to work
 
 const PER_PAGE = 6;
-const SITE_PASSWORD = "xzC8Y1";
+const PASSWORDS = ["kller+groundsource2017"];
 
-authenticate();
 $(document).ready(function() {
+  authenticate();
   var modalOffset = 0;
   paginate($('#properties').children());
 
@@ -223,8 +223,10 @@ function addScrollListener() {
 }
 
 function authenticate() {
-  var storePassword = localStorage.getItem("password")
-  if (checkPassword(storePassword)) {
+  var storeCredentials = localStorage.getItem("credentials")
+
+  if (checkCredentials(storeCredentials)) {
+    $("#dialog").hide();
     displaySite();
   } else {
     login();
@@ -232,22 +234,39 @@ function authenticate() {
   }
 }
 
-function checkPassword(password) {
-  return password === SITE_PASSWORD;
+function checkCredentials(credentials) {
+  return PASSWORDS.indexOf(credentials) >= 0
 }
 
 function displaySite() {
-  $('body').show();
+  $('.main').show();
 }
 
 function login() {
-  var enteredPassword = prompt("Please enter the password");
-  if (checkPassword(enteredPassword)) {
-    displaySite();
-    localStorage.setItem("password", SITE_PASSWORD);
-    return;
-  } else {
-    alert("Incorrect Credentials");
-    return;
-  }
+  var credentials;
+
+  $("#dialog").dialog({
+    buttons: [
+      {
+        text: "Submit",
+        type: "submit",
+        click: function() {
+          $(this).dialog("close");
+        }
+      }
+    ],
+    close: function(event, ui) {
+      credentials = $("#user").val() + "+" + $("#password").val();
+
+      if (checkCredentials(credentials)) {
+        $("#dialog").hide();
+        displaySite();
+        localStorage.setItem("credentials", credentials);
+        return;
+      } else {
+        alert("Incorrect Credentials");
+        return;
+      }
+    }
+  });
 }
