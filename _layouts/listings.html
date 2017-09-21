@@ -118,18 +118,38 @@
                       {{listing.short-caption}}
                     </p>
                     <div class="amenities">
-                      {% if listing.available == true %}
-                        <p><img src="images/icons/check.png" /><span class="success">Available</span></p>
-                      {% else %}
-                        <p><img src="images/icons/x.png" /><span class="error">Unavailable</span></p>
-                      {% endif %}
-                      {% if listing.rate == 0 or listing.rate == "0" or listing.rate == nil %}
-                        <p><img src="images/icons/money.png"/>Please Call</p>
-                      {% else %}
-                        <p><img src="images/icons/money.png"/>${{listing.rate}}</p>
-                      {% endif %}
-                      <p><img src="images/icons/ruler.png" /> {{listing.sq-footage}} Sq. ft.</p>
-                      <p><img src="images/icons/cars.png" /> {{listing.parking}} Parking</p>
+                      <table class="amenity-table">
+                        <tr>
+                          <td>
+                            {% if listing.available == true %}
+                              <img src="images/icons/check.svg" />
+                              <span class="success">Available</span>
+                            {% else %}
+                              <img src="images/icons/x.svg" />
+                              <span class="error">Unavailable</span>
+                            {% endif %}
+                          </td>
+                          <td>
+                            {% if listing.rate == 0 or listing.rate == "0" or listing.rate == nil %}
+                              <img src="images/icons/money.svg"/>
+                              <span>Please Call</span>
+                            {% else %}
+                              <img src="images/icons/money.svg"/>
+                              <span>{{listing.rate}}</span>
+                            {% endif %}
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <img src="images/icons/ruler.png" />
+                            <span>{{listing.sq-footage}} Sq. ft.</span>
+                          </td>
+                          <td>
+                            <img src="images/icons/car.svg" />
+                            <span>{{listing.parking}} Parking</span>
+                          </td>
+                        </tr>
+                      </table>
                     </div>
                   </div>
                 </a>

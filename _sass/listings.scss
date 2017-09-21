@@ -182,6 +182,30 @@
       opacity: .8;
       .amenities {
         font-size: .9em;
+        > table {
+          margin: 0 auto;
+          > tbody {
+            > tr {
+              > td {
+                padding: 10px;
+              }
+            }
+          }
+        }
+        > div {
+          display: inline-block;
+          width: 46%;
+          margin-bottom: 15px;
+          text-align: center;
+          height: 35px;
+          > img {
+            margin-right: 5px;
+            width: 35px;
+          }
+          // > span {
+          //   float: right;
+          // }
+        }
         > span {
           margin-left: 2px;
         }
@@ -309,10 +333,6 @@
         .amenities {
           display: none;
         }
-      }
-      .listing-preview-footer {
-        padding: 8px 0;
-        text-align: center;
       }
       .header {
         .address {
