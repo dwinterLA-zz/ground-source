@@ -516,12 +516,24 @@ html {
   font-family: Montserrat, Helvetica, Arial, sans-serif; }
 
 body {
-  display: none;
   background-color: #fff;
   margin: 0;
   width: 100%;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   font-size: 1vw; }
+
+form.login > label {
+  float: left;
+  margin-bottom: 15px; }
+form.login > input {
+  float: right;
+  margin-bottom: 15px; }
+
+.ui-dialog {
+  width: 450px; }
+
+.main {
+  display: none; }
 
 .modal-open {
   overflow: hidden; }
