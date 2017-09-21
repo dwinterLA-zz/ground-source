@@ -516,6 +516,7 @@ html {
   font-family: Montserrat, Helvetica, Arial, sans-serif; }
 
 body {
+  display: none;
   background-color: #fff;
   margin: 0;
   width: 100%;
@@ -1147,13 +1148,25 @@ a {
 .services-2 {
   background-color: #c8513d; }
 
+.social {
+  position: absolute;
+  right: 20px;
+  bottom: 60px;
+  font-size: 1.5em;
+  text-align: right;
+  line-height: 1; }
+  .social a {
+    padding: 0.5em;
+    padding-right: 0; }
+
 .footer {
   position: relative;
   background: #d46049;
   color: white; }
   .footer .inner {
     max-width: 1800px;
-    margin-left: 80px; }
+    margin: 0 auto;
+    padding-left: 80px; }
   .footer > * {
     line-height: 2.2; }
   .footer .column {
