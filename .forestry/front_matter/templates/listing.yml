@@ -32,23 +32,13 @@ fields:
   type: text
   hidden: false
   default: ''
-- name: baths
-  label: Baths
-  type: text
-  hidden: false
-  default: ''
-- name: bedrooms
-  label: Bedrooms
-  type: text
-  hidden: false
-  default: ''
 - name: sq-footage
   label: Sq footage
   type: text
   hidden: false
   default: ''
-- name: price
-  label: Price
+- name: rate
+  label: rate
   type: text
   hidden: false
   default: ''
@@ -106,3 +96,6 @@ fields:
   name: available
   label: Available
   description: Set true if listing is available, false if it is not
+- type: text
+  name: parking
+  label: parking
