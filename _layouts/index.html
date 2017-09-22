@@ -156,21 +156,22 @@
           "prevArrow": $('.navigation-arrow-left'),
           "nextArrow": $('.navigation-arrow-right')
         })
-        function initHomeMap() {
-          var uluru = {lat: 33.979449, lng: -118.413002};
-          var map = new google.maps.Map(document.getElementById('contact-us-gmap'), {
-            zoom: 14,
-            scrollwheel: false,
-            disableDefaultUI: true,
-            // center: uluru
-            center: {lat: 33.979449, lng: -118.44}
+      })
+      function initHomeMap() {
+        var uluru = {lat: 33.979449, lng: -118.413002};
+        var map = new google.maps.Map(document.getElementById('contact-us-gmap'), {
+          zoom: 14,
+          scrollwheel: false,
+          disableDefaultUI: true,
+          // center: uluru
+          center: {lat: 33.979449, lng: -118.44}
         });
+
         var marker = new google.maps.Marker({
           position: uluru,
           map: map
         });
-        }
-      })
+      }
     </script>
     <!-- TODO replace API key -->
     <script async defer
