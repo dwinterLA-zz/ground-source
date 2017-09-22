@@ -4,7 +4,6 @@ pages:
 - _listings/3.md
 - _listings/4.md
 - _listings/2.md
-- _listings/afasdfasf.md
 hide_body: false
 fields:
 - name: location
