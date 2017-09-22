@@ -271,8 +271,8 @@ function login() {
         localStorage.setItem("credentials", credentials);
         return;
       } else {
-        alert("Incorrect Credentials");
-        return;
+        alert("Invalid Credentials");
+        login();
       }
     }
   });
