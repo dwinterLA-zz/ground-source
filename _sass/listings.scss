@@ -317,25 +317,26 @@
     }
 
     .listing-preview {
-      width: 45%;
-      margin: 7px 6px;
+      width: 46%;
+      margin: 7px 5px;
       .header {
-        height: 171px;
+        height: 145px;
       }
       .listing-content {
-        padding: 8px 1px;
+        padding: 8px 0;
         > p {
           line-height: 1;
         }
         .amenities {
-          font-size: .8em;
+          font-size: .5em;
+          padding: 1px;
           > table {
             width: 100%;
             margin: 0 auto;
             > tbody {
               > tr {
                 > td {
-                  padding: 4px;
+                  padding: 1px 0px;
                 }
               }
             }
