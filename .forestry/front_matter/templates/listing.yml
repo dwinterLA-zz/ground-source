@@ -96,3 +96,6 @@ fields:
   name: available
   label: Available
   description: Set true if listing is available, false if it is not
+- type: text
+  name: parking
+  label: parking
