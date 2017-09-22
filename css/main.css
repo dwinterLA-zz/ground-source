@@ -529,6 +529,12 @@ form.login > input {
   float: right;
   margin-bottom: 15px; }
 
+.success {
+  color: green; }
+
+.error {
+  color: red; }
+
 .ui-dialog {
   width: 450px; }
 
@@ -1493,7 +1499,8 @@ a {
     padding: 25px 0 0 25px;
     color: white; }
     .footer .inner {
-      margin-left: 0; }
+      margin-left: 0;
+      padding-left: 0; }
     .footer > * {
       line-height: 2.2; }
     .footer .column {
@@ -1940,6 +1947,7 @@ a {
       #container-listings .filters > button#listing-clear-filters {
         background-color: #514d4c; }
   #container-listings .listing-preview {
+    position: relative;
     width: 31%;
     margin: 0 18px 18px 0;
     margin-bottom: 36px;
@@ -1989,12 +1997,26 @@ a {
         z-index: 2; }
     #container-listings .listing-preview .listing-content {
       line-height: 135%;
-      padding-left: 25px;
-      padding-right: 25px;
-      padding-bottom: 10px;
+      padding: 0 12px 10px 12px;
       opacity: .8; }
       #container-listings .listing-preview .listing-content .amenities {
         font-size: .9em; }
+        #container-listings .listing-preview .listing-content .amenities > table {
+          width: 95%;
+          margin: 0 auto; }
+          #container-listings .listing-preview .listing-content .amenities > table > tbody > tr > td {
+            padding: 6px; }
+        #container-listings .listing-preview .listing-content .amenities > div {
+          display: inline-block;
+          width: 46%;
+          margin-bottom: 15px;
+          text-align: center;
+          height: 35px; }
+          #container-listings .listing-preview .listing-content .amenities > div > img {
+            margin-right: 5px;
+            width: 35px; }
+        #container-listings .listing-preview .listing-content .amenities > span {
+          margin-left: 2px; }
         #container-listings .listing-preview .listing-content .amenities > p > img {
           padding-right: 3px; }
       #container-listings .listing-preview .listing-content > p {
@@ -2055,7 +2077,7 @@ a {
   @media screen and (max-width: 768px) {
     #container-listings #listings-text-search {
       width: 90%; }
-    #container-listings .amenities {
+    #container-listings .short-caption {
       display: none; }
     #container-listings .submenu {
       display: block;
@@ -2070,19 +2092,22 @@ a {
       #container-listings .paginator > div {
         padding: 3px; }
     #container-listings .listing-preview {
-      width: 45%;
-      margin: 7px 6px; }
+      width: 46%;
+      margin: 7px 5px; }
       #container-listings .listing-preview .header {
-        height: 171px; }
+        height: 145px; }
       #container-listings .listing-preview .listing-content {
-        padding: 0 8px; }
+        padding: 8px 0; }
         #container-listings .listing-preview .listing-content > p {
-          line-height: 1.25; }
+          line-height: 1; }
         #container-listings .listing-preview .listing-content .amenities {
-          display: none; }
-      #container-listings .listing-preview .listing-preview-footer {
-        padding: 8px 0;
-        text-align: center; }
+          font-size: .5em;
+          padding: 1px; }
+          #container-listings .listing-preview .listing-content .amenities > table {
+            width: 100%;
+            margin: 0 auto; }
+            #container-listings .listing-preview .listing-content .amenities > table > tbody > tr > td {
+              padding: 1px 0px; }
       #container-listings .listing-preview .header .address {
         padding: 0;
         font-size: 1em; }
