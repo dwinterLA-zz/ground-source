@@ -69,7 +69,7 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
     $("#email-invalid").show();
     return false;
   } else {
-    var url = "https://script.google.com/macros/u/3/s/AKfycbyVOqoUIi-StxIdFR2Ff2AkQ7n2rLXfk012yeIqBJGDAcjvoiOc/exec";
+    var url = "https://script.google.com/a/groundsource.net/macros/s/AKfycbyVOqoUIi-StxIdFR2Ff2AkQ7n2rLXfk012yeIqBJGDAcjvoiOc/exec";
     var encoded = Object.keys(data).map(function(k) {
       return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
   }).join('&')
