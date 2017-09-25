@@ -126,19 +126,23 @@
           </div>
         </div>
         <div id="contact-us-home-section">
-          <div class="contact-content">
-            <div class="contact-header">
-              <strong>CONTACT</strong> US
+          <div class="contact-container">
+            <div class="contact-subcontainer">
+              <div class="contact-content">
+                <div class="contact-header">
+                  <strong>CONTACT</strong> US
+                </div>
+                <div class="contact-body">
+                  <ul>
+                    <li><img src="images/phone-icon.png" class="icon-small"/>{{site.data.contact.phone}}</li>
+                    <li><img src="images/email-icon.png" class="icon-small"/><a href="mailto:{{site.data.email}}">{{site.data.contact.email}}</a></li>
+                    <li><img src="images/location-icon.png" class="icon-small"/><span class="underline">{{site.data.contact.address}}</span></li>
+                    <li><img src="images/ig-icon.png" class="icon-small"/><a href="https://www.instagram.com/{{site.data.instagram}}">@{{site.data.contact.instagram}}</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="contact-body">
-              <ul>
-                <li><img src="images/phone-icon.png" class="icon-small"/>{{site.data.contact.phone}}</li>
-                <li><img src="images/email-icon.png" class="icon-small"/><a href="mailto:{{site.data.email}}">{{site.data.contact.email}}</a></li>
-                <li><img src="images/location-icon.png" class="icon-small"/><span class="underline">{{site.data.contact.address}}</span></li>
-                <li><img src="images/ig-icon.png" class="icon-small"/><a href="https://www.instagram.com/{{site.data.instagram}}">@{{site.data.contact.instagram}}</a></li>
-              </ul>
-            </div>
-          </div>
+           </div>
           <div class="contact-us-gmap-container">
             <div id="contact-us-gmap"></div>
           </div>
