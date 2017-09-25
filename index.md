@@ -1,5 +1,5 @@
 ---
-intro_image: "/images/home-temp/mobile-about-img.png"
+intro_image: "/images/mobile-about-img.png"
 intro_paragraph: GROUNDSOURCE is a Los Angeles-based full-service commercial real
   estate firm that specializes in representing tenants, landlords and investors. Our
   forty-fiveyears of collective experience in the L.A. marketplace lets us combine
