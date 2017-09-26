@@ -31,6 +31,33 @@
     {% include login.html %}
     {% include contact-form.html %}
     <div class="main">
+      <div id="tenant-service-modal" class="service-detail">
+        <div class="inner">
+          <div class="services-modal-content">
+            <div class="service-detail-close"></div>
+            <h1>Tenant Representation</h1>
+            <p>{{page.tenant_services_text}}<p>
+          </div>
+        </div>
+      </div>
+      <div id="landlord-service-modal" class="service-detail">
+        <div class="inner">
+          <div class="services-modal-content">
+            <div class="service-detail-close"></div>
+            <h1>Landlord Representation</h1>
+            <p>{{page.landlord_services_text}}<p>
+          </div>
+        </div>
+      </div>
+      <div id="investment-service-modal" class="service-detail">
+        <div class="inner">
+          <div class="services-modal-content">
+            <div class="service-detail-close"></div>
+            <h1>Investment Sales</h1>
+            <p>{{page.investment_services_text}}<p>
+          </div>
+        </div>
+      </div>
       <div id="top-nav">
         <ul>
           <li><a href="listings.html">LISTINGS</a></li>
@@ -108,21 +135,21 @@
                   <div class="service-description">
                     {{ page.tenant_services_blurb }}
                   </div>
-                  <a href="#"><img src="images/learnmore_cta.png" class="learn-more"/></a>
+                  <img src="images/learnmore_cta.png" id="tenant-service-modal-button"class="learn-more"/>
                 </div>
               <div class="services-2 services-text">
                 <div class="medium-white-text"><strong>LANDLORD</strong> REPRESENTATION</div>
                 <div class="service-description">
                     {{ page.landlord_services_blurb }}
                 </div>
-                <a href="#"><img src="images/learnmore_cta.png" class="learn-more"/></a>
+                <img src="images/learnmore_cta.png" id="landlord-service-modal-button" class="learn-more"/>
               </div>
               <div class="services-text">
                 <div class="medium-white-text"><strong>INVESTMENT</strong> SALES</div>
                 <div class="service-description">
                   {{ page.investment_services_blurb }}
                 </div>
-                <a href="#"><img src="images/learnmore_cta.png" class="learn-more"/></a>
+                <img src="images/learnmore_cta.png" id="investment-service-modal-button" class="learn-more"/>
               </div>
             </div>
           </div>

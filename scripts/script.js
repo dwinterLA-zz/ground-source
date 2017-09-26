@@ -110,6 +110,34 @@ $(document).ready(function() {
     window.scrollTo(0, modalOffset);
   });
 
+  $("#tenant-service-modal-button").click(function() {
+    modalOffset = window.pageYOffset;
+    $(".main").addClass('modal-open');
+    $(".main").addClass('mobile-bg-hide');
+    $("#tenant-service-modal").fadeIn();
+  })
+
+  $("#investment-service-modal-button").click(function() {
+    modalOffset = window.pageYOffset;
+    $("#investment-service-modal").fadeIn();
+    $(".main").addClass("modal-open");
+    $(".main").addClass("mobile-bg-hide");
+  })
+
+  $("#landlord-service-modal-button").click(function() {
+    modalOffset = window.pageYOffset;
+    $("#landlord-service-modal").fadeIn();
+    $(".main").addClass("modal-open");
+    $('.main').addClass('mobile-bg-hide');
+  })
+
+  $('.service-detail-close').click(function() {
+    $('.main').removeClass('modal-open');
+    $('body').removeClass('overflow-hidden');
+    $('.service-detail').fadeOut();
+    window.scrollTo(0, modalOffset);
+  });
+
   $('.contact-us-link').click(function() {
     $('.main').addClass('modal-open');
     $('.contact-us-modal').fadeIn();
