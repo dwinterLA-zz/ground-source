@@ -3,7 +3,7 @@
 // do not remove the dashes above, they are required for babel to work
 
 const PER_PAGE = 6;
-const PASSWORDS = ["kller+groundsource2017"];
+const PASSWORDS = ["keller+groundsource2017"];
 
 $(document).ready(function() {
   authenticate();
@@ -250,8 +250,11 @@ function displaySite() {
 }
 
 function login() {
-  var credentials;
-
+  $("#dialog").keypress(function(e) {
+    if (e.keyCode === 13 ) {
+      $("#dialog").dialog("close");
+    }
+  })
   $("#dialog").dialog({
     buttons: [
       {
@@ -263,12 +266,12 @@ function login() {
       }
     ],
     close: function(event, ui) {
-      credentials = $("#user").val() + "+" + $("#password").val();
+      var credentials = $("#user").val() + "+" + $("#password").val();
 
       if (checkCredentials(credentials)) {
+        localStorage.setItem("credentials", credentials);
         $("#dialog").hide();
         displaySite();
-        localStorage.setItem("credentials", credentials);
         return;
       } else {
         alert("Invalid Credentials");
