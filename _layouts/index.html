@@ -153,6 +153,13 @@
     {% include include-scripts.html %}
     <script>
       $(document).ready(function() {
+        var logo = $("#header-logo");
+
+        $(logo).addClass("prepareSlideUp");
+        setTimeout(function () {
+          $("#header-logo").addClass("slideUp");
+        }, 1000);
+
         $('.review-carousel').slick({
           "autoplay": false,
           "draggable": false,
