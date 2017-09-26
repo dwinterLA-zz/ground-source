@@ -105,4 +105,4 @@ fields:
 - type: boolean
   description: Is the listing available for sale?
   label: Sale
-  name: sale
+  name: buy
