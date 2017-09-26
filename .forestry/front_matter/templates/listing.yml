@@ -98,3 +98,11 @@ fields:
 - type: text
   name: parking
   label: parking
+- type: boolean
+  name: lease
+  label: lease
+  description: Is the listing available for lease?
+- type: boolean
+  description: Is the listing available for sale?
+  label: Sale
+  name: sale
