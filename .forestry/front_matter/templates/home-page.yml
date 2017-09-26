@@ -20,9 +20,21 @@ fields:
     wysiwyg: true
 - type: text
   name: investment_services_text
-  label: Investment Services Text
+  label: Investment Service Text
 - type: file
   name: intro_image
   label: Intro Image
   description: This is the image that is directly to the right of the first block
     of text on the home page.
+- type: text
+  name: tenant_service__blurb
+  label: Tenant Service (blurb)
+  description: 'Tenant service blurb that appear on the home page '
+- type: text
+  name: landlord_service_blurb
+  label: Landlord Service Blurb
+  description: Landlord service blurb that appears on the home page
+- type: text
+  name: investment_service_blurb
+  label: Investment Service Blurb
+  description: Investment service blurb that appears on the homepage
