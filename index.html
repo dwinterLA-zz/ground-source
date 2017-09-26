@@ -215,19 +215,23 @@
           </div>
         </div>
         <div id="contact-us-home-section">
-          <div class="contact-content">
-            <div class="contact-header">
-              <strong>CONTACT</strong> US
+          <div class="contact-container">
+            <div class="contact-subcontainer">
+              <div class="contact-content">
+                <div class="contact-header">
+                  <strong>CONTACT</strong> US
+                </div>
+                <div class="contact-body">
+                  <ul>
+                    <li><img src="images/phone-icon.png" class="icon-small"/>(555)555-5555</li>
+                    <li><img src="images/email-icon.png" class="icon-small"/><a href="mailto:">your-email@example.com</a></li>
+                    <li><img src="images/location-icon.png" class="icon-small"/><span class="underline">1157 Highland Ave, Los Angeles, CA 90028</span></li>
+                    <li><img src="images/ig-icon.png" class="icon-small"/><a href="https://www.instagram.com/">@groundsourcela</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="contact-body">
-              <ul>
-                <li><img src="images/phone-icon.png" class="icon-small"/>(555)555-5555</li>
-                <li><img src="images/email-icon.png" class="icon-small"/><a href="mailto:">your-email@example.com</a></li>
-                <li><img src="images/location-icon.png" class="icon-small"/><span class="underline">1157 Highland Ave, Los Angeles, CA 90028</span></li>
-                <li><img src="images/ig-icon.png" class="icon-small"/><a href="https://www.instagram.com/">@groundsourcela</a></li>
-              </ul>
-            </div>
-          </div>
+           </div>
           <div class="contact-us-gmap-container">
             <div id="contact-us-gmap"></div>
           </div>
@@ -290,6 +294,13 @@
 
     <script>
       $(document).ready(function() {
+        var logo = $("#header-logo");
+
+        $(logo).addClass("prepareSlideUp");
+        setTimeout(function () {
+          $("#header-logo").addClass("slideUp");
+        }, 1000);
+
         $('.review-carousel').slick({
           "autoplay": false,
           "draggable": false,
