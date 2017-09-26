@@ -13,28 +13,64 @@ fields:
   label: Tenant Services Text
   config:
     wysiwyg: true
+  default: Effective tenant representation is based on experience and knowledge and
+    at GROUNDSOURCE we know more about Los Angeles than anyone else -- we know the
+    market conditions, the infrastructures, comparable deals and the people who made
+    them. This is our city.
+- type: textarea
+  name: tenant_services_blurb
+  label: Tenant Services Blurb
+  description: ''
+  config:
+    wysiwyg: true
+  default: Effective tenant representation is based on experience and knowledge and
+    at GROUNDSOURCE we know more about Los Angeles than anyone else -- we know the
+    market conditions, the infrastructures, comparable deals and the people who made
+    them. This is our city.
 - type: textarea
   name: landlord_services_text
   label: Landlord Services Text
   config:
     wysiwyg: true
-- type: text
+  default: We provide efficient, effective landlord representation, ensuring that
+    each transaction is hands-on, locally informed and detail-oriented. We know the
+    value of a broker lies in our transparent integrity and commitment to a seamless
+    experience.
+- type: textarea
+  name: landlord_services_blurb
+  label: Landlord Services Blurb
+  config:
+    wysiwyg: true
+  default: We provide efficient, effective landlord representation, ensuring that
+    each transaction is hands-on, locally informed and detail-oriented. We know the
+    value of a broker lies in our transparent integrity and commitment to a seamless
+    experience.
+- type: textarea
   name: investment_services_text
-  label: Investment Service Text
+  label: Investment/Sales Services Text
+  config:
+    wysiwyg: true
+  default: Market intelligence and key relationships are the catalysts which drive
+    our investment services team.&nbsp; We provide in-depth&nbsp;&nbsp;investment
+    advisory and capitalization strategies over a broad spectrum of property types
+    based on comprehensive market insight and a research-based approach to risk mitigation.&nbsp;
+    To us, strategy and analysis are the key factors when determining the best course
+    of action, whether it be divesting from distressed or well-positioned assets,
+    or determining the short and/or long-term value of an acquisition.&nbsp; We work
+    hand-in-hand with investors that are looking to achieve maximum value for their
+    interests in the marketplace, resulting in long-lasting partnerships and a reputation
+    of trust.
+- type: textarea
+  name: investment_services_blurb
+  label: Investment/Sales Services Blurb
+  config:
+    wysiwyg: true
+  default: Market intelligence and key relationships are the catalysts which drive
+    our investment services team.&nbsp; We provide in-depth&nbsp;&nbsp;investment
+    advisory and capitalization strategies based on comprehensive market insight,
+    working hand-in-hand with investors looking to achieve maximum value.
 - type: file
   name: intro_image
   label: Intro Image
   description: This is the image that is directly to the right of the first block
     of text on the home page.
-- type: text
-  name: tenant_service__blurb
-  label: Tenant Service (blurb)
-  description: 'Tenant service blurb that appear on the home page '
-- type: text
-  name: landlord_service_blurb
-  label: Landlord Service Blurb
-  description: Landlord service blurb that appears on the home page
-- type: text
-  name: investment_service_blurb
-  label: Investment Service Blurb
-  description: Investment service blurb that appears on the homepage
