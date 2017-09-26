@@ -9,8 +9,8 @@ fields:
   label: Intro Paragraph
   name: intro_paragraph
 - type: textarea
-  name: tennant_services_text
-  label: Tennant Services Text
+  name: tenant_services_text
+  label: Tenant Services Text
   config:
     wysiwyg: true
 - type: textarea
