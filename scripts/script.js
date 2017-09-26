@@ -50,9 +50,10 @@ $(document).ready(function() {
     var maxPriceFilter = parseInt($('#max-price').val());
 
     var filteredListings = $('.listing-preview').filter(function() {
+      var lease = $(this).data("lease")
       return ($(this).data("available").toString() === statusFilter || statusFilter ==="n/a") &&
         ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") &&
-        ($(this).data("type").toLowerCase() === typeFilter || typeFilter === "n/a") &&
+        ($(this).data("lease") === (typeFilter === "lease") || $(this).data("buy") === (typeFilter === "buy") || typeFilter === "n/a" || $(this).data("lease") && $(this).data("buy")) &&
         parseInt($(this).data("rooms")) >= minRoomFilter &&
         (parseInt($(this).data("size").toString().replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) &&
         (parseInt($(this).data("price").toString().replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter))

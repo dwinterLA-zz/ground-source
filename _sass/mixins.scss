@@ -41,6 +41,20 @@
   right: 20px;
 }
 
+@mixin close-button-small {
+  background-color: white;
+  background-image: url(../images/menu-close.png);
+  background-size: 18px 18px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 1em;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
 @mixin mobile-logo {
   width: 46%;
   top: 18px;

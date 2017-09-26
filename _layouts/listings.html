@@ -64,7 +64,7 @@
             <div class="flexbox listings filters">
               {% assign locations = site.listings |map: "address-line-2"| |uniq| %}
               {% assign statuses = site.listings |map: "status"| |uniq| %}
-              {% assign type = site.listings |map: "type"| |uniq| %}
+              <!-- {% assign type = site.listings |map: "type"| |uniq| %} -->
               <select name="location" id="location-filter">
                 <option value="n/a">Any Location</option>
                 {% for location in locations %}
@@ -78,8 +78,8 @@
               </select>
               <select name="type" id="type-filter">
                 <option value="n/a">Any Type</option>
-                <option value="rent">Rent</option>
                 <option value="lease">Lease</option>
+                <option value="buy">Buy</option>
               </select>
               <select name="min-rooms" id="min-rooms">
                 <option value="1">Min. Rooms</option>
@@ -96,18 +96,23 @@
           </div>
           <div id="properties" class="flexbox listings">
             {% for listing in site.listings %}
-              <div class="listing-preview" data-location="{{listing.address-line-2}}" data-available="{{listing.available}}" data-type="{{listing.type}}" data-rooms="{{listing.rooms}}" data-size="{{listing.sq-footage}}" data-price="{{listing.price}}">
+              <div class="listing-preview" data-location="{{listing.address-line-2}}" data-available="{{listing.available}}" data-lease="{{listing.lease}}" data-buy="{{listing.buy}}" data-rooms="{{listing.rooms}}" data-size="{{listing.sq-footage}}" data-price="{{listing.price}}">
                 <a href={{listing.url}}>
                   {% if listing.property-preview-image %}
                     <div class="header" style="background-image:url({{listing.property-preview-image}})">
                   {% else %}
                     <div class="header">
                   {% endif %}
-                  {% assign listingType = listing.type | downcase %}
-                  {% if listingType == "lease" %}
-                    <div class="label lease-label">{{listing.type}}</div>
+                  {% if listing.lease and listing.buy %}
+                    <div class="label rent-label">BUY</div>
+                    <div class="label lease-label" style="top: 40px">LEASE</div>
                   {% else %}
-                    <div class="label rent-label">{{listing.type}}</div>
+                    {% if listing.lease %}
+                      <div class="label lease-label">LEASE</div>
+                    {% endif %}
+                    {% if listing.buy %}
+                      <div class="label rent-label">BUY</div>
+                    {% endif %}
                   {% endif %}
                   <div class="address">
                     <div>{{listing.address-line-1}}</div>

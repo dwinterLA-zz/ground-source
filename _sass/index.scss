@@ -390,7 +390,7 @@ a {
   color: #777777;
   text-align: left;
   .service-detail-close {
-    @include close-button;
+    @include close-button-small;
   }
   > h1 {
     margin: 0;
@@ -891,6 +891,10 @@ a {
   padding: 31px;
   cursor: pointer;
 
+}
+
+.simple-close-small {
+  @include close-button-small;
 }
 
 .to-top {
