@@ -3,7 +3,7 @@
 'use strict';
 
 var PER_PAGE = 6;
-var PASSWORDS = ["kller+groundsource2017"];
+var PASSWORDS = ["keller+groundsource2017"];
 
 $(document).ready(function () {
   authenticate();
@@ -244,8 +244,11 @@ function displaySite() {
 }
 
 function login() {
-  var credentials;
-
+  $("#dialog").keypress(function (e) {
+    if (e.keyCode === 13) {
+      $("#dialog").dialog("close");
+    }
+  });
   $("#dialog").dialog({
     buttons: [{
       text: "Submit",
@@ -255,12 +258,12 @@ function login() {
       }
     }],
     close: function close(event, ui) {
-      credentials = $("#user").val() + "+" + $("#password").val();
+      var credentials = $("#user").val() + "+" + $("#password").val();
 
       if (checkCredentials(credentials)) {
+        localStorage.setItem("credentials", credentials);
         $("#dialog").hide();
         displaySite();
-        localStorage.setItem("credentials", credentials);
         return;
       } else {
         alert("Invalid Credentials");
