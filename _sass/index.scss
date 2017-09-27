@@ -582,6 +582,11 @@ a {
   transform: translateY(-50%);
 }
 
+#header-text {
+  transition-property: all;
+  transition-duration: .4s;
+}
+
 #header-logo {
   height: 47px;
   // setup like this in case browser isnt js enabled
@@ -1065,6 +1070,10 @@ a {
 
   .slick-dots {
     margin-top: 0;
+    > li {
+      width: 10px;
+      height: 10px;
+    }
   }
 
   .review-slideshow {

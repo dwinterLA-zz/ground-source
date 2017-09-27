@@ -197,9 +197,13 @@
         var logo = $("#header-logo");
 
         $(logo).addClass("prepareSlideUp");
+        $("#header-text").css("opacity", 0);
         setTimeout(function () {
           $("#header-logo").addClass("slideUp");
         }, 1000);
+        setTimeout(function () {
+          $("#header-text").css("opacity", 1);
+        }, 2000);
 
         $('.review-carousel').slick({
           "autoplay": false,
