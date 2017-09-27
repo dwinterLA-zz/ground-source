@@ -388,39 +388,22 @@ a {
     padding-bottom: 0;
   }
 }
-.content-tenant {
-  background-color: $primary-color-darker-darker;
-}
-.content-landlord {
-  background-color: $primary-color-darker;
-}
-.content-investment {
-  background-color: $primary-color;
-}
 
 .services-modal-content {
-  color: white;
+  color: #858585;
   text-align: left;
   .service-detail-close {
     @include close-button-small;
+    top: 28px;
+    right: 25px;
   }
   .header {
     background-color: $primary-color;
     padding: 25px;
-    opacity: .8;
+    color: white;
     > h1 {
       margin: 0;
     }
-  }
-  .content-tenant {
-    background-color: $primary-color-darker-darker;
-  }
-  .content-landlord {
-    background-color: $primary-color-darker;
-  }
-
-  .content-investment {
-    background-color: $primary-color;
   }
 
   .content {
