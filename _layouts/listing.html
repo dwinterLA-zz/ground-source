@@ -165,9 +165,15 @@
    </div>
     {% include include-scripts.html %}
     <script>
-      $('.listing-carousel').slick({
-        "prevArrow": $('.gallery-arrow-left'),
-        "nextArrow": $('.gallery-arrow-right')
+      $(document).ready(function() {
+        $('.listing-carousel').slick({
+          "prevArrow": $('.gallery-arrow-left'),
+          "nextArrow": $('.gallery-arrow-right')
+        })
+
+        window.sr = ScrollReveal();
+        sr.reveal(".info-box");
+        sr.reveal(".img-responsive");
       })
       function initListingMap() {
         var uluru = {lat: {{page.latitude}}, lng: {{page.longitude}}};

@@ -187,6 +187,8 @@
             $("#type-filter").val(typeQuery);
             listingsSearch();
           }
+          window.sr = ScrollReveal();
+          sr.reveal(".listing-preview");
         })
         function showFilters() {
           $('#show-more-filters').hide();
