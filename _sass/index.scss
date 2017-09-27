@@ -738,7 +738,19 @@ a {
   transform: rotate(135deg);
   left: 8%;
   &:hover {
-    transform: rotate(135deg) scale(1.3);
+    // transform: rotate(135deg) scale(1.3);
+    animation-name: navigation-arrow-left;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes navigation-arrow-left {
+  50% {
+    left: 7%;
+  }
+  100% {
+    left: 7.5%;
   }
 }
 
@@ -746,7 +758,18 @@ a {
   transform: rotate(-45deg);
   right: 8%;
   &:hover {
-    transform: rotate(-45deg) scale(1.3);
+    animation-name: navigation-arrow-right;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes navigation-arrow-right {
+  50% {
+    right: 7%;
+  }
+  100% {
+    right: 7.5%;
   }
 }
 
@@ -783,7 +806,7 @@ a {
 }
 
 .learn-more {
-  max-width: 45%;
+  max-width: 164px;
   cursor: pointer;
 }
 
