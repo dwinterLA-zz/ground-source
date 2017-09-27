@@ -98,3 +98,9 @@ fields:
 - type: number
   name: parking
   label: parking
+- type: file
+  name: property-preview-image
+  label: Property Preview Image
+- type: file
+  name: property-header
+  label: Property Header Image
