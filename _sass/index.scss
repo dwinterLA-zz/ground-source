@@ -625,26 +625,17 @@ a {
   left: 50%;
   &:hover {
     animation-name: scrollDown;
-    animation-duration: .7s;
+    animation-duration: .4s;
     animation-fill-mode: forwards;
   }
 }
 
 @keyframes scrollDown {
-  20% {
+  60% {
     bottom: 7%;
-    opacity: .9;
   }
-  70% {
-    bottom: 8.5%;
-  }
-  80% {
-    bottom: 7.5%;
-  }
-
   100% {
     bottom: 8.5%;
-    opacity: 1;
   }
 }
 
@@ -1147,6 +1138,10 @@ a {
         }
       }
     }
+  }
+
+  .services-modal-content {
+    height: 100%;
   }
 
   .service-detail {
