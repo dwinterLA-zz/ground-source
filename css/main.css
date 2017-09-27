@@ -1100,8 +1100,8 @@ a {
     top: 0;
     -webkit-transition-property: all;
     transition-property: all;
-    -webkit-transition-duration: .8s;
-            transition-duration: .8s; }
+    -webkit-transition-duration: .6s;
+            transition-duration: .6s; }
 
 .scroll-arrow {
   cursor: pointer;
@@ -2161,6 +2161,19 @@ a {
       cursor: pointer; }
       #container-listings .filters > button#listing-clear-filters {
         background-color: #514d4c; }
+  #container-listings .listing-label {
+    top: 8px;
+    left: -6px;
+    color: white;
+    padding: 3px 5px;
+    font-size: 1.1em;
+    width: 80%; }
+  #container-listings .rent-label {
+    background-color: #3678c6; }
+  #container-listings .lease-label {
+    background-color: #d46049; }
+  #container-listings .lease {
+    background-color: #387ac8; }
   #container-listings .listing-preview {
     position: relative;
     width: 31%;
@@ -2188,19 +2201,6 @@ a {
         z-index: 1;
         background-image: -webkit-linear-gradient(top, rgba(238, 238, 238, 0), #303030);
         background-image: linear-gradient(to bottom, rgba(238, 238, 238, 0), #303030); }
-      #container-listings .listing-preview .header .label {
-        position: absolute;
-        top: 8px;
-        left: -6px;
-        color: white;
-        padding: 3px 5px;
-        font-size: 1.1em; }
-      #container-listings .listing-preview .header .rent-label {
-        background-color: #3678c6; }
-      #container-listings .listing-preview .header .lease-label {
-        background-color: #d46049; }
-      #container-listings .listing-preview .header .lease {
-        background-color: #387ac8; }
       #container-listings .listing-preview .header .address {
         position: absolute;
         left: 14px;
