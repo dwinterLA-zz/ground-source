@@ -384,16 +384,49 @@ a {
 
 .service-detail {
   @include modal;
+  .inner {
+    padding-bottom: 0;
+  }
 }
+.content-tenant {
+  background-color: $primary-color-darker-darker;
+}
+.content-landlord {
+  background-color: $primary-color-darker;
+}
+.content-investment {
+  background-color: $primary-color;
+}
+
 .services-modal-content {
-  padding: 36px;
-  color: #777777;
+  color: white;
   text-align: left;
   .service-detail-close {
     @include close-button-small;
   }
-  > h1 {
-    margin: 0;
+  .header {
+    background-color: $primary-color;
+    padding: 25px;
+    opacity: .8;
+    > h1 {
+      margin: 0;
+    }
+  }
+  .content-tenant {
+    background-color: $primary-color-darker-darker;
+  }
+  .content-landlord {
+    background-color: $primary-color-darker;
+  }
+
+  .content-investment {
+    background-color: $primary-color;
+  }
+
+  .content {
+    opacity: .8;
+    padding: 25px;
+    font-size: .8em;
   }
 }
 .contact-us-modal {
@@ -573,14 +606,12 @@ a {
     position: relative;
     top: 104px;
     opacity: 0;
-    transform: scale(.9);
   }
   &.slideUp {
     opacity: 1;
     top: 0;
     transition-property: all;
     transition-duration: .8s;
-    transform: scale(1);
   }
 }
 
@@ -832,7 +863,17 @@ a {
     display: inline-block;
     vertical-align: top;
     margin: 1% 5% 0 0;
-    .title {font-weight: bold}
+    .title {
+      font-weight: bold;
+      > a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        font-size: 100%;
+        opacity: 1;
+        font-weight: bold;
+      }
+    }
     opacity: .9;
     a {
       text-decoration: none;
@@ -1234,7 +1275,9 @@ a {
       width: 43%;
       margin-right: 6%;
       margin-bottom: 10px;
-      .title {font-weight: bold}
+      .title {
+        font-weight: bold;
+      }
       margin-left: 0%;
       opacity: .9;
       &.copyright {

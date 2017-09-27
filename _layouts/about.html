@@ -127,6 +127,14 @@
     </div>
     {% include include-scripts.html %}
   </body>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
+      if (sectionQuery === "team") {
+        document.body.scrollTop(0, $('.agents').offset().top);
+      }
+    })
+  </script>
 </html>
 
 
