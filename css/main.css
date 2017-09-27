@@ -547,16 +547,6 @@ form.login > input {
 .overflow-hidden {
   overflow: hidden; }
 
-.before-scroll {
-  display: none; }
-
-.after-scroll {
-  display: block;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: .8s;
-          transition-duration: .8s; }
-
 strong, b {
   font-weight: 700; }
 

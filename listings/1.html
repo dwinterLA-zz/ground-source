@@ -342,9 +342,15 @@
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
     <script>
-      $('.listing-carousel').slick({
-        "prevArrow": $('.gallery-arrow-left'),
-        "nextArrow": $('.gallery-arrow-right')
+      $(document).ready(function() {
+        $('.listing-carousel').slick({
+          "prevArrow": $('.gallery-arrow-left'),
+          "nextArrow": $('.gallery-arrow-right')
+        })
+
+        window.sr = ScrollReveal();
+        sr.reveal(".info-box");
+        sr.reveal(".img-responsive");
       })
       function initListingMap() {
         var uluru = {lat: 33.979449, lng: -118.413002};
