@@ -116,6 +116,27 @@
     }
   }
 
+  .listing-label {
+    top: 8px;
+    left: -6px;
+    color: white;
+    padding: 3px 5px;
+    font-size: 1.1em;
+    width: 80%;
+  }
+
+  .rent-label {
+    background-color: #3678c6;
+  }
+
+  .lease-label {
+    background-color: $primary-color;
+  }
+
+  .lease {
+    background-color: $brand-blue;
+  }
+
   .listing-preview {
     position: relative;
     width: 31%;
@@ -143,26 +164,6 @@
         width: 100%;
         z-index: 1;
         background-image: linear-gradient(to bottom, rgba(#eee, 0), #303030);
-      }
-      .label {
-        position: absolute;
-        top: 8px;
-        left: -6px;
-        color: white;
-        padding: 3px 5px;
-        font-size: 1.1em;
-      }
-
-      .rent-label {
-        background-color: #3678c6;
-      }
-
-      .lease-label {
-        background-color: $primary-color;
-      }
-
-      .lease {
-        background-color: $brand-blue;
       }
       .address {
         position: absolute;

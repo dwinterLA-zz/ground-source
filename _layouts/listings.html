@@ -103,17 +103,6 @@
                   {% else %}
                     <div class="header">
                   {% endif %}
-                  {% if listing.lease and listing.buy %}
-                    <div class="label rent-label">BUY</div>
-                    <div class="label lease-label" style="top: 40px">LEASE</div>
-                  {% else %}
-                    {% if listing.lease %}
-                      <div class="label lease-label">LEASE</div>
-                    {% endif %}
-                    {% if listing.buy %}
-                      <div class="label rent-label">BUY</div>
-                    {% endif %}
-                  {% endif %}
                   <div class="address">
                     <div>{{listing.address-line-1}}</div>
                     <div>{{listing.address-line-2}}</div>
@@ -127,12 +116,16 @@
                       <table class="amenity-table">
                         <tr>
                           <td>
-                            {% if listing.available == true %}
-                              <img src="images/icons/check.svg" />
-                              <span class="success">Available</span>
+                            {% if listing.lease and listing.buy %}
+                              <div class="listing-label rent-label">For Sale</div>
+                              <div class="label lease-label" style="top: 40px">For Lease</div>
                             {% else %}
-                              <img src="images/icons/x.svg" />
-                              <span class="error">Unavailable</span>
+                              {% if listing.lease %}
+                                <div class="listing-label lease-label">For Lease</div>
+                              {% endif %}
+                              {% if listing.sale %}
+                                <div class="listing-label rent-label">For Sale</div>
+                              {% endif %}
                             {% endif %}
                           </td>
                           <td>
@@ -141,7 +134,7 @@
                               <span>Please Call</span>
                             {% else %}
                               <img src="images/icons/money.svg"/>
-                              <span>{{listing.rate}}</span>
+                              <span>{{listing.rate}}/month</span>
                             {% endif %}
                           </td>
                         </tr>
