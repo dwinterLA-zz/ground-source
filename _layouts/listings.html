@@ -178,4 +178,24 @@
       {% include footer.html %}
     </div>
       {% include include-scripts.html %}
+      <script type="text/javascript">
+        $(document).ready(function() {
+          var typeQuery = (location.search.match(new RegExp('type' + "=(.*?)($|\&)", "i")) || [])[1]
+
+          if (typeQuery) {
+            showFilters();
+            $("#type-filter").val(typeQuery);
+            listingsSearch();
+          }
+        })
+        function showFilters() {
+          $('#show-more-filters').hide();
+          $('#show-less-filters').show();
+          $(".filters").show();
+          var toggleBtn = $("#features-toggle")
+
+          toggleBtn.removeClass("plus-sign")
+          toggleBtn.addClass("minus-sign")
+        }
+      </script>
     </body>
