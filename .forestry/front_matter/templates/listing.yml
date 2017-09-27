@@ -1,9 +1,6 @@
 ---
 pages:
 - _listings/1.md
-- _listings/3.md
-- _listings/4.md
-- _listings/2.md
 hide_body: false
 fields:
 - name: location
@@ -24,11 +21,6 @@ fields:
 - name: short-caption
   label: Short caption
   type: textarea
-  hidden: false
-  default: ''
-- name: rooms
-  label: Rooms
-  type: text
   hidden: false
   default: ''
 - name: sq-footage
@@ -95,9 +87,6 @@ fields:
   name: available
   label: Available
   description: Set true if listing is available, false if it is not
-- type: text
-  name: parking
-  label: parking
 - type: boolean
   name: lease
   label: lease
@@ -106,3 +95,6 @@ fields:
   description: Is the listing available for sale?
   label: Sale
   name: buy
+- type: number
+  name: parking
+  label: parking
