@@ -295,6 +295,9 @@
     <div class="column">
       <div class="title contact-us-link">CONTACT</div>
     </div>
+    <div class="column">
+      <div class="title "><a href="https://ws.onehub.com/" target="_blank">DOCUMENTS</a></div>
+    </div>
 
     <!-- <div class="column social">
       <a href="https://www.instagram.com/groundsourcela" target="_blank">
@@ -331,15 +334,28 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/formSubmit.js"></script>
 <script type="text/javascript" src="/scripts/script.js"></script>
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
     <script>
       $(document).ready(function() {
         var logo = $("#header-logo");
 
         $(logo).addClass("prepareSlideUp");
+        $("#header-text").css("opacity", 0);
         setTimeout(function () {
           $("#header-logo").addClass("slideUp");
         }, 1000);
+        setTimeout(function () {
+          $("#header-text").css("opacity", 1);
+        }, 2000);
+
+        window.sr = ScrollReveal();
+        sr.reveal(".home-intro-left");
+        sr.reveal(".home-intro-right");
+        sr.reveal(".services-header");
+        sr.reveal(".review-slideshow");
+        sr.reveal(".services-text");
+        sr.reveal("#contact-us-home-section");
 
         $('.review-carousel').slick({
           "autoplay": false,
@@ -368,5 +384,5 @@
     <!-- TODO replace API key -->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoAiw62lFQnHpIqeqYJVu1KfRkcitEN0&callback=initHomeMap">
-  </script>
+</script>
   </body>

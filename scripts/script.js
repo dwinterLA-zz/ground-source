@@ -248,13 +248,6 @@ function checkCredentials(credentials) {
 
 function displaySite() {
   $('.main').show();
-  $('.review-carousel').slick({
-    "autoplay": false,
-    "draggable": false,
-    "dots": true,
-    "prevArrow": $('.navigation-arrow-left'),
-    "nextArrow": $('.navigation-arrow-right')
-  });
 }
 
 function login() {
