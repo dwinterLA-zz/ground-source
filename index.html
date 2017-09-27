@@ -43,7 +43,7 @@
 </div>
 
     <div class="contact-us-modal">
-  <div class="contact-form">
+  <div class="inner">
     <div class="contact-close"></div>
     <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
@@ -90,6 +90,45 @@
 </div>
 
     <div class="main">
+      <div id="tenant-service-modal" class="service-detail">
+        <div class="inner">
+          <div class="services-modal-content content-tenant">
+            <div class="service-detail-close"></div>
+            <div class="header">
+              <h1>Tenant Representation</h1>
+            </div>
+            <div class="content content-tenant">
+              <p>Effective tenant representation is based on experience and knowledge and at GROUNDSOURCE we know more about Los Angeles than anyone else -- we know the market conditions, the infrastructures, comparable deals and the people who made them. This is our city. Most importantly, we listen to our clients. We understand their needs and goals. Our process is multifold but includes investing the time to see how their space is used, troubleshooting areas of improvement,  promoting proactive tenant advocacy and discussing occupancy costs to determine how to mitigate risk with respect to a new location or renewal of an existing lease. At GROUNDSOURCE proven data drives every decision we make. It’s our job to turn your real estate challenge into an opportunity and we pride ourselves on our reputation of success.<p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="landlord-service-modal" class="service-detail">
+        <div class="inner">
+          <div class="services-modal-content content-landlord">
+            <div class="service-detail-close"></div>
+            <div class="header">
+              <h1>Landlord Representation</h1>
+            </div>
+            <div class="content content-landlord">
+              <p>We provide efficient, effective landlord representation, ensuring that each transaction is hands-on, locally informed and detail-oriented. We know the value of a broker lies in our transparent integrity and commitment to a seamless experience. You deserve a broker that is one hundred percent invested in the market where your property or project is located. We always use neighborhood expertise to determine and deliver the highest yield. We offer intimate accessibility, a far cry from our corporate competitors. Our commitment is based on addressing the comprehensive lease-up of the space, building or project in order to ensure a seamless execution of the objectives of the client. We will provide a proactive asset strategy, determine and implement a marketing plan, create a competitive environment for your space, determine a tenant's creditworthiness and execute a lease based on our predetermined goals. Lastly, we are not inhibited by any company do not call lists, we will call anyone and everyone.<p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="investment-service-modal" class="service-detail">
+        <div class="inner">
+          <div class="services-modal-content content-investments">
+            <div class="service-detail-close"></div>
+            <div class="header">
+              <h1>Investment Sales</h1>
+            </div>
+            <div class="content content-investment">
+              <p>Market intelligence and key relationships are the catalysts which drive our investment services team.  We provide in-depth  investment advisory and capitalization strategies over a broad spectrum of property types based on comprehensive market insight and a research-based approach to risk mitigation.  To us, strategy and analysis are the key factors when determining the best course of action, whether it be divesting from distressed or well-positioned assets, or determining the short and/or long-term value of an acquisition.  We work hand-in-hand with investors that are looking to achieve maximum value for their interests in the marketplace, resulting in long-lasting partnerships and a reputation of trust.<p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="top-nav">
         <ul>
           <li><a href="listings.html">LISTINGS</a></li>
@@ -197,21 +236,21 @@
                   <div class="service-description">
                     Effective tenant representation is based on experience and knowledge and at GROUNDSOURCE we know more about Los Angeles than anyone else -- we know the market conditions, the infrastructures, comparable deals and the people who made them. This is our city.
                   </div>
-                  <a href="#"><img src="images/learnmore_cta.png" class="learn-more"/></a>
+                  <img src="images/learnmore_cta.png" id="tenant-service-modal-button"class="learn-more"/>
                 </div>
               <div class="services-2 services-text">
                 <div class="medium-white-text"><strong>LANDLORD</strong> REPRESENTATION</div>
                 <div class="service-description">
                     We provide efficient, effective landlord representation, ensuring that each transaction is hands-on, locally informed and detail-oriented. We know the value of a broker lies in our transparent integrity and commitment to a seamless experience.
                 </div>
-                <a href="#"><img src="images/learnmore_cta.png" class="learn-more"/></a>
+                <img src="images/learnmore_cta.png" id="landlord-service-modal-button" class="learn-more"/>
               </div>
               <div class="services-text">
                 <div class="medium-white-text"><strong>INVESTMENT</strong> SALES</div>
                 <div class="service-description">
-                  Effective tenant representation is based on experience and knowledge and at GROUNDSOURCE we know more about Los Angeles than anyone else -- we know the market conditions, the infrastructures, comparable deals and the people who made them. This is our city.
+                  Market intelligence and key relationships are the catalysts which drive our investment services team.  We provide in-depth  investment advisory and capitalization strategies based on comprehensive market insight, working hand-in-hand with investors looking to achieve maximum value.
                 </div>
-                <a href="#"><img src="images/learnmore_cta.png" class="learn-more"/></a>
+                <img src="images/learnmore_cta.png" id="investment-service-modal-button" class="learn-more"/>
               </div>
             </div>
           </div>
@@ -241,21 +280,20 @@
         <div class="footer">
   <div class="inner">
     <div class="column">
-      <div class="title">LISTINGS</div>
-      <a href="#">Properties For Sale</a>
-      <a href="#">Properties For Lease</a>
+      <div class="title"><a href="/listings.html">LISTINGS</a></div>
+      <a href="/listings.html?type=buy">Properties For Sale</a>
+      <a href="/listings.html?type=lease">Properties For Lease</a>
     </div>
     <div class="column">
-      <div class="title">EXPERIENCE</div>
-      <a href="#">Case Studies</a>
-      <a href="#">Testimonials</a>
+      <div class="title"><a href="/experience.html">EXPERIENCE</a></div>
+      <a href="href=/experience.html">Case Studies</a>
     </div>
     <div class="column">
-      <div class="title">ABOUT</div>
-      <a href="#">Meet the Team</a>
+      <div class="title"><a href="/about.html">ABOUT</a></div>
+      <a href="/about.html?section=team">Meet the Team</a>
     </div>
     <div class="column">
-      <div class="title">CONTACT</div>
+      <div class="title contact-us-link">CONTACT</div>
     </div>
 
     <!-- <div class="column social">

@@ -40,7 +40,7 @@
       <div id="about-header">
           <img src="images/logo.png" class="logo-upper-left"/>
           <div class="contact-us-modal">
-  <div class="contact-form">
+  <div class="inner">
     <div class="contact-close"></div>
     <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
@@ -106,7 +106,7 @@
         
           <div class="agent-details" id="agent-1">
             <div class="content">
-              <div class="simple-close close-agent-detail"></div>
+              <div class="simple-close-small close-agent-detail"></div>
               <div class="header">
                 <img src="/images/agent_placeholder.png" class="bio-pic"/>
                 <div class="contact">
@@ -129,7 +129,7 @@
         
           <div class="agent-details" id="agent-2">
             <div class="content">
-              <div class="simple-close close-agent-detail"></div>
+              <div class="simple-close-small close-agent-detail"></div>
               <div class="header">
                 <img src="/images/agent_placeholder.png" class="bio-pic"/>
                 <div class="contact">
@@ -152,7 +152,7 @@
         
           <div class="agent-details" id="agent-3">
             <div class="content">
-              <div class="simple-close close-agent-detail"></div>
+              <div class="simple-close-small close-agent-detail"></div>
               <div class="header">
                 <img src="/images/agent_placeholder.png" class="bio-pic"/>
                 <div class="contact">
@@ -175,7 +175,7 @@
         
           <div class="agent-details" id="agent-4">
             <div class="content">
-              <div class="simple-close close-agent-detail"></div>
+              <div class="simple-close-small close-agent-detail"></div>
               <div class="header">
                 <img src="/images/agent_placeholder.png" class="bio-pic"/>
                 <div class="contact">
@@ -274,21 +274,20 @@
           <div class="footer">
   <div class="inner">
     <div class="column">
-      <div class="title">LISTINGS</div>
-      <a href="#">Properties For Sale</a>
-      <a href="#">Properties For Lease</a>
+      <div class="title"><a href="/listings.html">LISTINGS</a></div>
+      <a href="/listings.html?type=buy">Properties For Sale</a>
+      <a href="/listings.html?type=lease">Properties For Lease</a>
     </div>
     <div class="column">
-      <div class="title">EXPERIENCE</div>
-      <a href="#">Case Studies</a>
-      <a href="#">Testimonials</a>
+      <div class="title"><a href="/experience.html">EXPERIENCE</a></div>
+      <a href="href=/experience.html">Case Studies</a>
     </div>
     <div class="column">
-      <div class="title">ABOUT</div>
-      <a href="#">Meet the Team</a>
+      <div class="title"><a href="/about.html">ABOUT</a></div>
+      <a href="/about.html?section=team">Meet the Team</a>
     </div>
     <div class="column">
-      <div class="title">CONTACT</div>
+      <div class="title contact-us-link">CONTACT</div>
     </div>
 
     <!-- <div class="column social">
@@ -329,6 +328,14 @@
 <script type="text/javascript" src="/scripts/script.js"></script>
 
   </body>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
+      if (sectionQuery === "team") {
+        document.body.scrollTop(0, $('.agents').offset().top);
+      }
+    })
+  </script>
 </html>
 
 

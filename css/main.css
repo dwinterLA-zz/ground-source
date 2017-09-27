@@ -851,16 +851,16 @@ a {
 #submit-contact-form {
   cursor: pointer; }
 
-.contact-us-modal {
+.service-detail {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.8);
-  z-index: 101; }
-  .contact-us-modal .contact-form {
+  z-index: 101;
+  background: rgba(255, 255, 255, 0.8); }
+  .service-detail .inner {
     width: 50%;
     margin: 112px auto 0 auto;
     font-size: 1.3em;
@@ -870,58 +870,122 @@ a {
     box-shadow: 0px 0px 18px 6px #f2f2f2;
     position: relative;
     max-width: 1200px; }
-    .contact-us-modal .contact-form .contact-close {
-      background-color: white;
-      background-image: url(../images/menu-close.png);
-      background-size: 22px 22px;
-      background-position: center center;
-      background-repeat: no-repeat;
-      cursor: pointer;
-      padding: 2em;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      position: absolute;
-      color: #d46049;
-      cursor: pointer;
-      padding: 21px; }
-    .contact-us-modal .contact-form .form {
-      margin: 36px; }
-      .contact-us-modal .contact-form .form > p {
-        padding-top: 75px;
-        font-weight: 50;
-        margin-bottom: 42px;
-        color: #777777;
-        opacity: .9;
-        font-size: 2em; }
-      .contact-us-modal .contact-form .form .validation {
-        display: block;
-        margin: 0 auto 18px auto;
-        width: 72%;
-        opacity: .8;
-        display: none;
-        text-align: left;
-        color: #d46049; }
-      .contact-us-modal .contact-form .form > input {
-        display: block;
-        margin: 0 auto 18px auto;
-        width: 72%;
-        height: 2.8em;
-        opacity: .8;
-        border-style: solid;
-        border-width: thin;
-        border-color: #efefef;
-        background-color: #fcfcfc !important; }
-      .contact-us-modal .contact-form .form > button {
-        width: 72%;
-        height: 2em;
-        border-radius: 500px;
-        margin-top: 8px;
-        font-weight: 800;
-        color: #c04d3a;
-        border-color: #c04d3a;
-        border-style: solid;
-        margin-top: 20px; }
+  .service-detail .inner {
+    padding-bottom: 0; }
+
+.content-tenant {
+  background-color: #c04d3a; }
+
+.content-landlord {
+  background-color: #d35540; }
+
+.content-investment {
+  background-color: #d46049; }
+
+.services-modal-content {
+  color: white;
+  text-align: left; }
+  .services-modal-content .service-detail-close {
+    background-color: white;
+    background-image: url(../images/menu-close.png);
+    background-size: 18px 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 1em;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    z-index: 2; }
+  .services-modal-content .header {
+    background-color: #d46049;
+    padding: 25px;
+    opacity: .8; }
+    .services-modal-content .header > h1 {
+      margin: 0; }
+  .services-modal-content .content-tenant {
+    background-color: #c04d3a; }
+  .services-modal-content .content-landlord {
+    background-color: #d35540; }
+  .services-modal-content .content-investment {
+    background-color: #d46049; }
+  .services-modal-content .content {
+    opacity: .8;
+    padding: 25px;
+    font-size: .8em; }
+
+.contact-us-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  background: rgba(255, 255, 255, 0.8); }
+  .contact-us-modal .inner {
+    width: 50%;
+    margin: 112px auto 0 auto;
+    font-size: 1.3em;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 18px 6px #f2f2f2;
+    position: relative;
+    max-width: 1200px; }
+  .contact-us-modal .contact-close {
+    background-color: white;
+    background-image: url(../images/menu-close.png);
+    background-size: 22px 22px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 2em;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+    position: absolute;
+    color: #d46049;
+    cursor: pointer;
+    padding: 21px; }
+  .contact-us-modal .form {
+    margin: 36px; }
+    .contact-us-modal .form > p {
+      padding-top: 75px;
+      font-weight: 50;
+      margin-bottom: 42px;
+      color: #777777;
+      opacity: .9;
+      font-size: 2em; }
+    .contact-us-modal .form .validation {
+      display: block;
+      margin: 0 auto 18px auto;
+      width: 72%;
+      opacity: .8;
+      display: none;
+      text-align: left;
+      color: #d46049; }
+    .contact-us-modal .form > input {
+      display: block;
+      margin: 0 auto 18px auto;
+      width: 72%;
+      height: 2.8em;
+      opacity: .8;
+      border-style: solid;
+      border-width: thin;
+      border-color: #efefef;
+      background-color: #fcfcfc !important; }
+    .contact-us-modal .form > button {
+      width: 72%;
+      height: 2em;
+      border-radius: 500px;
+      margin-top: 8px;
+      font-weight: 800;
+      color: #c04d3a;
+      border-color: #c04d3a;
+      border-style: solid;
+      margin-top: 20px; }
 
 .nav-modal {
   display: none;
@@ -954,7 +1018,8 @@ a {
       padding: 2em;
       position: absolute;
       top: 20px;
-      right: 20px; }
+      right: 20px;
+      z-index: 30; }
     .nav-modal .inner ul.nav {
       padding: 8% 0 0;
       list-style: none;
@@ -1036,18 +1101,14 @@ a {
   #header-logo.prepareSlideUp {
     position: relative;
     top: 104px;
-    opacity: 0;
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9); }
+    opacity: 0; }
   #header-logo.slideUp {
     opacity: 1;
     top: 0;
     -webkit-transition-property: all;
     transition-property: all;
     -webkit-transition-duration: .8s;
-            transition-duration: .8s;
-    -webkit-transform: scale(1);
-            transform: scale(1); }
+            transition-duration: .8s; }
 
 .scroll-arrow {
   cursor: pointer;
@@ -1060,34 +1121,22 @@ a {
   .scroll-arrow:hover {
     -webkit-animation-name: scrollDown;
             animation-name: scrollDown;
-    -webkit-animation-duration: .7s;
-            animation-duration: .7s;
+    -webkit-animation-duration: .4s;
+            animation-duration: .4s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards; }
 
 @-webkit-keyframes scrollDown {
-  20% {
-    bottom: 7%;
-    opacity: .9; }
-  70% {
-    bottom: 8.5%; }
-  80% {
-    bottom: 7.5%; }
+  60% {
+    bottom: 7%; }
   100% {
-    bottom: 8.5%;
-    opacity: 1; } }
+    bottom: 8.5%; } }
 
 @keyframes scrollDown {
-  20% {
-    bottom: 7%;
-    opacity: .9; }
-  70% {
-    bottom: 8.5%; }
-  80% {
-    bottom: 7.5%; }
+  60% {
+    bottom: 7%; }
   100% {
-    bottom: 8.5%;
-    opacity: 1; } }
+    bottom: 8.5%; } }
 #header-text {
   position: relative;
   z-index: 2;
@@ -1226,7 +1275,8 @@ a {
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5); }
 
 .learn-more {
-  max-width: 45%; }
+  max-width: 45%;
+  cursor: pointer; }
 
 .services-info {
   position: relative;
@@ -1293,6 +1343,13 @@ a {
     opacity: .9; }
     .footer .column .title {
       font-weight: bold; }
+      .footer .column .title > a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        font-size: 100%;
+        opacity: 1;
+        font-weight: bold; }
     .footer .column a {
       text-decoration: none;
       color: inherit;
@@ -1343,10 +1400,24 @@ a {
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 30;
   z-index: 10;
   background-size: 18px 18px;
   padding: 31px;
   cursor: pointer; }
+
+.simple-close-small {
+  background-color: white;
+  background-image: url(../images/menu-close.png);
+  background-size: 18px 18px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 1em;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  z-index: 2; }
 
 .to-top {
   background-color: white;
@@ -1513,16 +1584,36 @@ a {
     width: 100%;
     height: 100%;
     overflow: scroll; }
-    .contact-us-modal .contact-form {
+    .contact-us-modal .inner {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       margin-top: 0; }
-      .contact-us-modal .contact-form .form {
+      .contact-us-modal .inner .form {
         margin: 0; }
-        .contact-us-modal .contact-form .form > p {
+        .contact-us-modal .inner .form > p {
+          padding-top: 20px;
+          font-size: 1.8em; }
+
+  .services-modal-content {
+    height: 100%; }
+
+  .service-detail {
+    width: 100%;
+    height: 100%;
+    overflow: scroll; }
+    .service-detail .inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin-top: 0; }
+      .service-detail .inner .form {
+        margin: 0; }
+        .service-detail .inner .form > p {
           padding-top: 20px;
           font-size: 1.8em; }
 
@@ -1832,7 +1923,7 @@ a {
       left: 0;
       height: 300px;
       width: 100%;
-      z-index: 1;
+      z-index: -1;
       background-image: -webkit-linear-gradient(top, rgba(238, 238, 238, 0), #080808);
       background-image: linear-gradient(to bottom, rgba(238, 238, 238, 0), #080808); }
   #container-listing #listings-sidebar {

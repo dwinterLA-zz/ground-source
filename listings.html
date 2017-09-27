@@ -43,7 +43,7 @@
 </div>
 
     <div class="contact-us-modal">
-  <div class="contact-form">
+  <div class="inner">
     <div class="contact-close"></div>
     <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
@@ -123,7 +123,7 @@
             <div class="flexbox listings filters">
               
               
-              
+              <!--  -->
               <select name="location" id="location-filter">
                 <option value="n/a">Any Location</option>
                 
@@ -143,8 +143,8 @@
               </select>
               <select name="type" id="type-filter">
                 <option value="n/a">Any Type</option>
-                <option value="rent">Rent</option>
                 <option value="lease">Lease</option>
+                <option value="buy">Buy</option>
               </select>
               <select name="min-rooms" id="min-rooms">
                 <option value="1">Min. Rooms</option>
@@ -161,14 +161,14 @@
           </div>
           <div id="properties" class="flexbox listings">
             
-              <div class="listing-preview" data-location="<strong>PLAYA</strong> VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="<strong>PLAYA</strong> VISTA" data-available="true" data-lease="true" data-buy="true" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/1.html>
                   
                     <div class="header" style="background-image:url(/images/generic.jpg)">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    <div class="label rent-label">BUY</div>
+                    <div class="label lease-label" style="top: 40px">LEASE</div>
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -211,14 +211,14 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="" data-buy="" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/10.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    
+                    
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -261,14 +261,14 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="" data-buy="" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/11.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    
+                    
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -311,14 +311,14 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="" data-buy="" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/12.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    
+                    
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -361,14 +361,14 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="" data-buy="" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/13.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    
+                    
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -411,14 +411,16 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="VENICE" data-available="false" data-type="RENT" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="VENICE" data-available="false" data-lease="true" data-buy="" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/2.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label rent-label">RENT</div>
+                    
+                      <div class="label lease-label">LEASE</div>
+                    
+                    
                   
                   <div class="address">
                     <div>123 Venice Blvd,</div>
@@ -461,14 +463,16 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="RENT" data-rooms="4" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="" data-buy="true" data-rooms="4" data-size="3,500" data-price="">
                 <a href=/listings/3.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label rent-label">RENT</div>
+                    
+                    
+                      <div class="label rent-label">BUY</div>
+                    
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -511,14 +515,16 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="4" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="true" data-buy="" data-rooms="4" data-size="3,500" data-price="">
                 <a href=/listings/4.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    
+                      <div class="label lease-label">LEASE</div>
+                    
+                    
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -561,14 +567,14 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="true" data-buy="true" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/5.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    <div class="label rent-label">BUY</div>
+                    <div class="label lease-label" style="top: 40px">LEASE</div>
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -611,14 +617,14 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="" data-buy="" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/6.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    
+                    
                   
                   <div class="address">
                     <div>123 RIVERSIDE DRIVE,</div>
@@ -661,14 +667,14 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="" data-buy="" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/7.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    
+                    
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -711,14 +717,14 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="" data-buy="" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/8.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    
+                    
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -761,14 +767,14 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-type="LEASE" data-rooms="9" data-size="3,500" data-price="">
+              <div class="listing-preview" data-location="PLAYA VISTA" data-available="true" data-lease="" data-buy="" data-rooms="9" data-size="3,500" data-price="">
                 <a href=/listings/9.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label lease-label">LEASE</div>
+                    
+                    
                   
                   <div class="address">
                     <div>2467 JEFFERSON AVE,</div>
@@ -811,14 +817,14 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="Hermosa Beach" data-available="true" data-type="RENT" data-rooms="3" data-size="1344000" data-price="1200">
+              <div class="listing-preview" data-location="Hermosa Beach" data-available="true" data-lease="" data-buy="" data-rooms="3" data-size="1344000" data-price="1200">
                 <a href=/listings/14.html>
                   
                     <div class="header">
                   
                   
-                  
-                    <div class="label rent-label">RENT</div>
+                    
+                    
                   
                   <div class="address">
                     <div>asdfasdf</div>
@@ -878,21 +884,20 @@
       <div class="footer">
   <div class="inner">
     <div class="column">
-      <div class="title">LISTINGS</div>
-      <a href="#">Properties For Sale</a>
-      <a href="#">Properties For Lease</a>
+      <div class="title"><a href="/listings.html">LISTINGS</a></div>
+      <a href="/listings.html?type=buy">Properties For Sale</a>
+      <a href="/listings.html?type=lease">Properties For Lease</a>
     </div>
     <div class="column">
-      <div class="title">EXPERIENCE</div>
-      <a href="#">Case Studies</a>
-      <a href="#">Testimonials</a>
+      <div class="title"><a href="/experience.html">EXPERIENCE</a></div>
+      <a href="href=/experience.html">Case Studies</a>
     </div>
     <div class="column">
-      <div class="title">ABOUT</div>
-      <a href="#">Meet the Team</a>
+      <div class="title"><a href="/about.html">ABOUT</a></div>
+      <a href="/about.html?section=team">Meet the Team</a>
     </div>
     <div class="column">
-      <div class="title">CONTACT</div>
+      <div class="title contact-us-link">CONTACT</div>
     </div>
 
     <!-- <div class="column social">
@@ -930,4 +935,24 @@
 <script type="text/javascript" src="/scripts/formSubmit.js"></script>
 <script type="text/javascript" src="/scripts/script.js"></script>
 
+      <script type="text/javascript">
+        $(document).ready(function() {
+          var typeQuery = (location.search.match(new RegExp('type' + "=(.*?)($|\&)", "i")) || [])[1]
+
+          if (typeQuery) {
+            showFilters();
+            $("#type-filter").val(typeQuery);
+            listingsSearch();
+          }
+        })
+        function showFilters() {
+          $('#show-more-filters').hide();
+          $('#show-less-filters').show();
+          $(".filters").show();
+          var toggleBtn = $("#features-toggle")
+
+          toggleBtn.removeClass("plus-sign")
+          toggleBtn.addClass("minus-sign")
+        }
+      </script>
     </body>

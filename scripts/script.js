@@ -39,21 +39,7 @@ $(document).ready(function () {
   });
 
   $("#listing-search").click(function () {
-    var listings = $('.listing-preview');
-    $(listings).hide();
-
-    var locationFilter = $('#location-filter').find(":selected").val().toLowerCase();
-    var statusFilter = $('#status-filter').find(":selected").val().toLowerCase();
-    var typeFilter = $('#type-filter').find(":selected").val().toLowerCase();
-    var minRoomFilter = parseInt($('#min-rooms').find(":selected").val());
-    var minSizeFilter = parseInt($('#min-size').val());
-    var maxPriceFilter = parseInt($('#max-price').val());
-
-    var filteredListings = $('.listing-preview').filter(function () {
-      return ($(this).data("available").toString() === statusFilter || statusFilter === "n/a") && ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") && ($(this).data("type").toLowerCase() === typeFilter || typeFilter === "n/a") && parseInt($(this).data("rooms")) >= minRoomFilter && (parseInt($(this).data("size").toString().replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) && (parseInt($(this).data("price").toString().replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter));
-    });
-
-    paginate(filteredListings);
+    listingsSearch();
   });
 
   $("#listing-clear-filters").click(function () {
@@ -102,6 +88,34 @@ $(document).ready(function () {
     $('.main').removeClass('modal-open');
     $('body').removeClass('overflow-hidden');
     $('.contact-us-modal').fadeOut();
+    window.scrollTo(0, modalOffset);
+  });
+
+  $("#tenant-service-modal-button").click(function () {
+    modalOffset = window.pageYOffset;
+    $(".main").addClass('modal-open');
+    $(".main").addClass('mobile-bg-hide');
+    $("#tenant-service-modal").fadeIn();
+  });
+
+  $("#investment-service-modal-button").click(function () {
+    modalOffset = window.pageYOffset;
+    $("#investment-service-modal").fadeIn();
+    $(".main").addClass("modal-open");
+    $(".main").addClass("mobile-bg-hide");
+  });
+
+  $("#landlord-service-modal-button").click(function () {
+    modalOffset = window.pageYOffset;
+    $("#landlord-service-modal").fadeIn();
+    $(".main").addClass("modal-open");
+    $('.main').addClass('mobile-bg-hide');
+  });
+
+  $('.service-detail-close').click(function () {
+    $('.main').removeClass('modal-open');
+    $('body').removeClass('overflow-hidden');
+    $('.service-detail').fadeOut();
     window.scrollTo(0, modalOffset);
   });
 
@@ -271,4 +285,23 @@ function login() {
       }
     }
   });
+}
+
+function listingsSearch() {
+  var listings = $('.listing-preview');
+  $(listings).hide();
+
+  var locationFilter = $('#location-filter').find(":selected").val().toLowerCase();
+  var statusFilter = $('#status-filter').find(":selected").val().toLowerCase();
+  var typeFilter = $('#type-filter').find(":selected").val().toLowerCase();
+  var minRoomFilter = parseInt($('#min-rooms').find(":selected").val());
+  var minSizeFilter = parseInt($('#min-size').val());
+  var maxPriceFilter = parseInt($('#max-price').val());
+
+  var filteredListings = $('.listing-preview').filter(function () {
+    var lease = $(this).data("lease");
+    return ($(this).data("available").toString() === statusFilter || statusFilter === "n/a") && ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") && ($(this).data("lease") === (typeFilter === "lease") || $(this).data("buy") === (typeFilter === "buy") || typeFilter === "n/a" || $(this).data("lease") && $(this).data("buy")) && parseInt($(this).data("rooms")) >= minRoomFilter && (parseInt($(this).data("size").toString().replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) && (parseInt($(this).data("price").toString().replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter));
+  });
+
+  paginate(filteredListings);
 }
