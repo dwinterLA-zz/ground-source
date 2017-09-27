@@ -133,6 +133,11 @@
       if (sectionQuery === "team") {
         document.body.scrollTop(0, $('.agents').offset().top);
       }
+
+      window.sr = ScrollReveal();
+      sr.reveal(".header-image");
+      sr.reveal(".description");
+      sr.reveal(".agents");
     })
   </script>
 </html>

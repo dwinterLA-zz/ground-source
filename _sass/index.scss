@@ -46,6 +46,16 @@ form.login {
   overflow: hidden;
 }
 
+.before-scroll {
+  display: none;
+}
+
+.after-scroll {
+  display: block;
+  transition-property: all;
+  transition-duration: .8s;
+}
+
 strong, b {
   font-weight: 700
 }
@@ -711,7 +721,7 @@ a {
 
 .navigation-arrows {
   position: absolute;
-  top: 35%;
+  top: 49%;
   border: solid $primary-color;
   border-width: 0 2px 2px 0;
   padding: 3px;

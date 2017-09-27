@@ -205,6 +205,14 @@
           $("#header-text").css("opacity", 1);
         }, 2000);
 
+        window.sr = ScrollReveal();
+        sr.reveal(".home-intro-left");
+        sr.reveal(".home-intro-right");
+        sr.reveal(".services-header");
+        sr.reveal(".review-slideshow");
+        sr.reveal(".services-text");
+        sr.reveal("#contact-us-home-section");
+
         $('.review-carousel').slick({
           "autoplay": false,
           "draggable": false,
@@ -232,5 +240,5 @@
     <!-- TODO replace API key -->
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoAiw62lFQnHpIqeqYJVu1KfRkcitEN0&callback=initHomeMap">
-  </script>
+</script>
   </body>
