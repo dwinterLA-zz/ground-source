@@ -1,4 +1,8 @@
 #container-experience {
+  .experience-section-header {
+    @include header;
+    color: white;
+  }
   .contact-us-link-top {
     border-radius: 500px;
     border-style: solid;

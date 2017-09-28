@@ -168,7 +168,6 @@
 
   .description {
     width: 47%;
-    line-height: 1.4;
     display: inline-block;
     text-align: left;
     vertical-align: middle;
@@ -178,7 +177,7 @@
       padding-top: 15px;
     }
     .head-title {
-      font-size: 2.2em;
+      @include header;
       span {
         font-weight: bold;
         color: $primary-color;
@@ -201,7 +200,7 @@
   .agent {
     position: relative;
     text-align: center;
-    margin: .8em;
+    margin: .3em;
     box-shadow: 0px 0px 2em gainsboro;
     width: 23%;
     padding-bottom: 19px;

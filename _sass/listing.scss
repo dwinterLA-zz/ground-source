@@ -38,7 +38,6 @@
   }
   .information {
     overflow: hidden;
-    opacity: .7;
   }
   .text {
     float: left;
@@ -60,7 +59,6 @@
     border-style: solid;
     border-width: thin;
     margin-top: 17px;
-    opacity: .7;
     .location-header {
       font-weight: 800;
       font-size: 12pt;
@@ -82,7 +80,6 @@
   .highlights {
     width: 8cm;
     float: left;
-    opacity: .7;
     > h2 {
       font-size: 12pt;
     }
@@ -90,7 +87,6 @@
   .amenities {
     width: 8cm;
     float: right;
-    opacity: .7;
     > h2 {
       font-size: 12pt;
     }
@@ -269,7 +265,6 @@
 
   .menu {
     background-color: $bg-color-listing;
-    opacity: .95;
     padding-bottom: 12px;
     font-weight: lighter;
   }
@@ -287,7 +282,7 @@
       padding: 14px;
       font-size: 1em;
       font-weight: lighter;
-      opacity: .8;
+      opacity: 1;
     }
 
     > hr {
@@ -318,12 +313,6 @@
     color: white;
     overflow: hidden;
     margin-bottom: 24px;
-    opacity: .95;
-    .info-text {
-      > p {
-        opacity: .8;
-      }
-    }
     h2:first-child {
       margin-top: 0;
     }

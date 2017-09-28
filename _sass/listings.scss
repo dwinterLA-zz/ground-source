@@ -1,4 +1,7 @@
 #container-listings {
+  .listings-header {
+    @include header;
+  }
   .navigation-arrows {
     position: static;
     width: 14px;
@@ -28,7 +31,6 @@
     > p {
       font-size: 1.4em;
       margin: 0 15% 0 15%;
-      opacity: .95;
       color: gray;
     }
     > input {
@@ -179,7 +181,6 @@
     .listing-content {
       line-height: 135%;
       padding: 0 12px 10px 12px;
-      opacity: .8;
       .amenities {
         font-size: .9em;
         > table {
@@ -221,7 +222,6 @@
       border-top: solid;
       border-width: 1.5px;
       border-color: #f3f3f3;
-      opacity: .9;
       padding: 18px;
     }
   }

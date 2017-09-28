@@ -638,11 +638,10 @@ a {
 }
 
 .section-header {
+  @include header;
   font-family: $font-brand;
   color: #b4b3b3;
-  letter-spacing: 0.5px;
   color: #858585;
-  font-size: 1.8em;
   > span {
     color: $primary-color;
   }
@@ -781,6 +780,7 @@ a {
     margin-top: -4%;
     z-index: 25;
     width: 100px;
+    height: 100px;
     border-style: solid;
     border-radius: 500px;
     border-color: white;
