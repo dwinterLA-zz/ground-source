@@ -519,8 +519,7 @@ body {
   background-color: #fff;
   margin: 0;
   width: 100%;
-  font-family: Montserrat, Helvetica, Arial, sans-serif;
-  font-size: 1vw; }
+  font-family: Montserrat, Helvetica, Arial, sans-serif; }
 
 form.login > label {
   float: left;
@@ -710,8 +709,7 @@ a {
 
 .medium-white-text {
   color: white;
-  font-size: 1.5em;
-  opacity: .95; }
+  font-size: 1.5em; }
 
 .preview-text {
   font-size: .75em;
@@ -896,7 +894,6 @@ a {
     .services-modal-content .header > h1 {
       margin: 0; }
   .services-modal-content .content {
-    opacity: .8;
     padding: 25px;
     font-size: .8em; }
 
@@ -941,7 +938,6 @@ a {
       font-weight: 50;
       margin-bottom: 42px;
       color: #777777;
-      opacity: .9;
       font-size: 2em; }
     .contact-us-modal .form .validation {
       display: block;
@@ -1052,7 +1048,6 @@ a {
     margin-top: -35px;
     padding: 80px; }
     .home-intro-left > div > p {
-      opacity: .95;
       margin-top: 26px; }
 
 .home-intro-right {
@@ -1326,7 +1321,6 @@ a {
   width: 33%; }
 
 .service-description {
-  opacity: 0.8;
   padding: 1.5em 0; }
 
 .services-1 {
@@ -1360,8 +1354,7 @@ a {
     font-size: 1.2em;
     display: inline-block;
     vertical-align: top;
-    margin: 1% 5% 0 0;
-    opacity: .9; }
+    margin: 1% 5% 0 0; }
     .footer .column .title {
       font-weight: bold; }
       .footer .column .title > a {
@@ -1375,7 +1368,6 @@ a {
       text-decoration: none;
       color: inherit;
       display: block;
-      opacity: .85;
       font-size: 85%; }
       .footer .column a img {
         color: white;
@@ -1739,8 +1731,7 @@ a {
       .footer .column a {
         text-decoration: none;
         color: inherit;
-        display: block;
-        opacity: .85; }
+        display: block; }
         .footer .column a img {
           color: white;
           width: 1em; } }
@@ -2693,7 +2684,7 @@ a {
               #container-about .agent-details .content .footer .featured-listings .agent-featured-listing .view-listing-button {
                 left: 32%; } }
 
-#container-experience .contact-us-link {
+#container-experience .contact-us-link-top {
   border-radius: 500px;
   border-style: solid;
   border-width: thin;
@@ -2713,8 +2704,6 @@ a {
   background-position: center 0;
   height: 33vh;
   position: relative; }
-#container-experience .footer {
-  height: 18vh; }
 #container-experience .text {
   max-width: 1800px;
   position: relative;
@@ -2728,9 +2717,6 @@ a {
   padding-top: 1%; }
   #container-experience .text > h4 {
     font-size: 1.7em; }
-  #container-experience .text > p {
-    font-size: .9em;
-    opacity: .8; }
 #container-experience .study-carousel {
   max-width: 1800px;
   width: 40vw;
