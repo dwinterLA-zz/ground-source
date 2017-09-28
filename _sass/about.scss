@@ -24,24 +24,6 @@
     .header-image {
       width: 40%;
     }
-
-    .description {
-      width: 50%;
-      vertical-align: bottom;
-      padding-left: 14vw;
-      padding-top: 181px;
-
-      > p {
-        padding-top: 15px;
-      }
-      .head-title {
-        font-size: 2.2em;
-        span {
-          font-weight: bold;
-          color: $primary-color;
-        }
-      }
-    }
   }
 
   .rounded-red-button {
@@ -172,18 +154,44 @@
   }
 
   .about-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 5em 60px;
+    position: relative;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    max-width: $page-max-width;
+
     width: 100%;
-    padding-top: 82px;
+    max-width: $page-max-width;
+    padding-top: 132px;
+    margin: 0 auto;
+    position: relative;
     .header-image {
-      width: 50%;
+      width: 47% !important;
       display: inline-block;
       vertical-align: bottom;
     }
-    .description {
-      width: 50%;
-      line-height: 1.4;
-      display: inline-block;
-      vertical-align: bottom;
+  }
+
+  .description {
+    width: 47%;
+    line-height: 1.4;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    align-self: center;
+
+    > p {
+      padding-top: 15px;
+    }
+    .head-title {
+      font-size: 2.2em;
+      span {
+        font-weight: bold;
+        color: $primary-color;
+      }
     }
   }
 
@@ -192,15 +200,19 @@
     position: relative;
   }
   .agents {
-    padding: 5em 0;
+    // padding: 5em 60px;
     text-align: center;
+    .flex-agents {
+      justify-content: space-between;
+      padding: 5em 60px;
+    }
   }
   .agent {
     position: relative;
     text-align: center;
-    margin: 0.8em;
+    margin: .8em;
     box-shadow: 0px 0px 2em gainsboro;
-    width: 17%;
+    width: 23%;
     padding-bottom: 19px;
     border: 1px solid #c7c7c7;
     .bio-image {
@@ -219,9 +231,8 @@
     }
     .short-bio {
       margin: 1em 1em;
-      padding: 28px 0 2px 0;
+      padding: 28px 0 12px 0;
       text-align: left;
-      height: 160px;
       font-size: .95em;
     }
 
@@ -284,6 +295,15 @@
   }
 
   @media screen and (max-width: $breakpoint-small) {
+    .about-text {
+      margin-bottom: -120px;
+      padding: 5em 5px;
+    }
+
+    .description {
+      padding-top: 0 !important;
+    }
+
     .section-content {
       margin: 0;
       .about {
@@ -314,6 +334,9 @@
 
     .agents {
       padding: 1em;
+      .flex-agents {
+        padding: 5em 5px;
+      }
       .short-bio {
         display: none;
       }
@@ -336,7 +359,7 @@
 
       .description {
         width: 100%;
-        padding: 38px 30px 0 30px;
+        padding: 115px 30px 0 30px;
         .head-title {
           text-align: center;
         }

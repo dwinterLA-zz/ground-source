@@ -96,14 +96,14 @@
               </div>
               <div class="description">
                 <div class="title head-title">ABOUT GROUNDSOURCE</div>
-                <p>
+                <p class="about-main-text">
                   {{page.main_text}}
                 </p>
               </div>
             </div>
           </div>
           <div class="agents">
-            <div class="flexbox">
+            <div class="flexbox flex-agents">
               {% for agent in site.agents %}
                 <div class="agent">
                   <div class="bio-image">
@@ -136,7 +136,8 @@
 
       window.sr = ScrollReveal();
       sr.reveal(".header-image");
-      sr.reveal(".description");
+      sr.reveal(".head-title");
+      sr.reveal(".about-main-text");
       sr.reveal(".agents");
     })
   </script>
