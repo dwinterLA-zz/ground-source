@@ -25,23 +25,24 @@
       width: 40%;
     }
 
-    .description {
-      width: 50%;
-      vertical-align: bottom;
-      padding-left: 14vw;
-      padding-top: 181px;
+    // .description {
+    //   width: 50%;
+    //   vertical-align: bottom;
+    //   padding-left: 8vw;
+    //   padding-top: 90px;
+    //   padding-bottom: 90px;
 
-      > p {
-        padding-top: 15px;
-      }
-      .head-title {
-        font-size: 2.2em;
-        span {
-          font-weight: bold;
-          color: $primary-color;
-        }
-      }
-    }
+    //   > p {
+    //     padding-top: 15px;
+    //   }
+    //   .head-title {
+    //     font-size: 2.2em;
+    //     span {
+    //       font-weight: bold;
+    //       color: $primary-color;
+    //     }
+    //   }
+    // }
   }
 
   .rounded-red-button {
@@ -174,16 +175,21 @@
   .about-text {
     width: 100%;
     padding-top: 82px;
+    position: relative;
     .header-image {
       width: 50%;
       display: inline-block;
       vertical-align: bottom;
     }
     .description {
+      position: absolute;
+      padding-left: 8vw;
+      top: 57%;
+      transform: translateY(-50%);
       width: 50%;
       line-height: 1.4;
       display: inline-block;
-      vertical-align: bottom;
+      // vertical-align: center;
     }
   }
 
