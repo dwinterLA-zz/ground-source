@@ -56,22 +56,13 @@
   }
 
   .agent-details {
-    display: none;
-    position: fixed;
-    overflow-y: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 102;
-    background: rgba(255, 255, 255, 0.8);
+    @include modal;
     .content {
       position: relative;
       max-width: 1400px;
       background-color: white;
       width: 50vw;
       margin: 10vh auto 0 auto;
-      box-shadow: 0px 0px 2em gainsboro;
       font-size: 1.2em;
       .header {
         position: relative;
@@ -382,6 +373,7 @@
 
     .agent-details {
       overflow: scroll;
+      background-color: white;
       .content {
         background-color: white;
         width: 100%;
