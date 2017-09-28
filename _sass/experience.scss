@@ -1,5 +1,5 @@
 #container-experience {
-  .contact-us-link {
+  .contact-us-link-top {
     border-radius: 500px;
     border-style: solid;
     border-width: thin;
@@ -22,9 +22,6 @@
     height: 33vh;
     position: relative;
   }
-  .footer {
-    height: 18vh;
-  }
   .text {
     max-width: $page-max-width;
     position: relative;
@@ -37,10 +34,6 @@
     padding-top: 1%;
     > h4 {
       font-size: 1.7em;
-    }
-    > p {
-      font-size: .9em;
-      opacity: .8;
     }
   }
 

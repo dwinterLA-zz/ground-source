@@ -7,7 +7,6 @@ body {
   margin: 0;
   width: 100%;
   font-family: $font-brand;
-  font-size: 1vw;
 }
 
 form.login {
@@ -240,7 +239,6 @@ a {
 .medium-white-text {
   color: white;
   font-size: 1.5em;
-  opacity: .95;
 }
 
 .preview-text {
@@ -407,7 +405,6 @@ a {
   }
 
   .content {
-    opacity: .8;
     padding: 25px;
     font-size: .8em;
   }
@@ -428,7 +425,6 @@ a {
       font-weight: 50;
       margin-bottom: 42px;
       color: #777777;
-      opacity: .9;
       font-size: 2em;
     }
     .validation {
@@ -547,7 +543,6 @@ a {
     margin-top: -35px;
     padding: 80px;
     > p {
-      opacity: .95;
       margin-top: 26px;
     }
   }
@@ -826,7 +821,6 @@ a {
 }
 
 .service-description {
-  opacity: 0.8;
   padding: 1.5em 0;
 }
 
@@ -876,12 +870,10 @@ a {
         font-weight: bold;
       }
     }
-    opacity: .9;
     a {
       text-decoration: none;
       color: inherit;
       display: block;
-      opacity: .85;
       font-size: 85%;
       img {
         color: white;
@@ -1308,7 +1300,6 @@ a {
         text-decoration: none;
         color: inherit;
         display: block;
-        opacity: .85;
         img {
           color: white;
           width: 1em;
