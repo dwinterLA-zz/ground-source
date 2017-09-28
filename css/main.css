@@ -859,7 +859,7 @@ a {
   right: 0;
   bottom: 0;
   z-index: 101;
-  background: rgba(255, 255, 255, 0.8); }
+  background: rgba(86, 85, 84, 0.8); }
   .service-detail .inner {
     width: 50%;
     margin: 112px auto 0 auto;
@@ -867,7 +867,6 @@ a {
     padding-bottom: 10px;
     text-align: center;
     background-color: white;
-    box-shadow: 0px 0px 18px 6px #f2f2f2;
     position: relative;
     max-width: 1200px; }
   .service-detail .inner {
@@ -909,7 +908,7 @@ a {
   right: 0;
   bottom: 0;
   z-index: 101;
-  background: rgba(255, 255, 255, 0.8); }
+  background: rgba(86, 85, 84, 0.8); }
   .contact-us-modal .inner {
     width: 50%;
     margin: 112px auto 0 auto;
@@ -917,7 +916,6 @@ a {
     padding-bottom: 10px;
     text-align: center;
     background-color: white;
-    box-shadow: 0px 0px 18px 6px #f2f2f2;
     position: relative;
     max-width: 1200px; }
   .contact-us-modal .contact-close {
@@ -2386,20 +2384,27 @@ a {
   #container-about .agent-details {
     display: none;
     position: fixed;
-    overflow-y: auto;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 102;
-    background: rgba(255, 255, 255, 0.8); }
+    z-index: 101;
+    background: rgba(86, 85, 84, 0.8); }
+    #container-about .agent-details .inner {
+      width: 50%;
+      margin: 112px auto 0 auto;
+      font-size: 1.3em;
+      padding-bottom: 10px;
+      text-align: center;
+      background-color: white;
+      position: relative;
+      max-width: 1200px; }
     #container-about .agent-details .content {
       position: relative;
       max-width: 1400px;
       background-color: white;
       width: 50vw;
       margin: 10vh auto 0 auto;
-      box-shadow: 0px 0px 2em gainsboro;
       font-size: 1.2em; }
       #container-about .agent-details .content .header {
         position: relative;
@@ -2636,7 +2641,8 @@ a {
     #container-about .bio-pic {
       display: none; }
     #container-about .agent-details {
-      overflow: scroll; }
+      overflow: scroll;
+      background-color: white; }
       #container-about .agent-details .content {
         background-color: white;
         width: 100%;
