@@ -2360,18 +2360,6 @@ a {
       display: none; }
     #container-about #header-about .header-image {
       width: 40%; }
-    #container-about #header-about .description {
-      width: 50%;
-      vertical-align: bottom;
-      padding-left: 14vw;
-      padding-top: 181px; }
-      #container-about #header-about .description > p {
-        padding-top: 15px; }
-      #container-about #header-about .description .head-title {
-        font-size: 2.2em; }
-        #container-about #header-about .description .head-title span {
-          font-weight: bold;
-          color: #d46049; }
   #container-about .rounded-red-button {
     border-radius: 500px;
     margin-top: 13px;
@@ -2481,29 +2469,62 @@ a {
               left: 24%;
               top: 54px; }
   #container-about .about-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 5em 60px;
+    position: relative;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    margin: 0 auto;
+    max-width: 1800px;
     width: 100%;
-    padding-top: 82px; }
+    max-width: 1800px;
+    padding-top: 132px;
+    margin: 0 auto;
+    position: relative; }
     #container-about .about-text .header-image {
-      width: 50%;
+      width: 47% !important;
       display: inline-block;
       vertical-align: bottom; }
-    #container-about .about-text .description {
-      width: 50%;
-      line-height: 1.4;
-      display: inline-block;
-      vertical-align: bottom; }
+  #container-about .description {
+    width: 47%;
+    line-height: 1.4;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    -ms-flex-item-align: center;
+        align-self: center; }
+    #container-about .description > p {
+      padding-top: 15px; }
+    #container-about .description .head-title {
+      font-size: 2.2em; }
+      #container-about .description .head-title span {
+        font-weight: bold;
+        color: #d46049; }
   #container-about .agent-listing {
     display: inherit;
     position: relative; }
   #container-about .agents {
-    padding: 5em 0;
     text-align: center; }
+    #container-about .agents .flex-agents {
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding: 5em 60px; }
   #container-about .agent {
     position: relative;
     text-align: center;
-    margin: 0.8em;
+    margin: .8em;
     box-shadow: 0px 0px 2em gainsboro;
-    width: 17%;
+    width: 23%;
     padding-bottom: 19px;
     border: 1px solid #c7c7c7; }
     #container-about .agent .bio-image {
@@ -2520,9 +2541,8 @@ a {
           font-weight: bold; }
     #container-about .agent .short-bio {
       margin: 1em 1em;
-      padding: 28px 0 2px 0;
+      padding: 28px 0 12px 0;
       text-align: left;
-      height: 160px;
       font-size: .95em; }
     #container-about .agent .bio-button {
       display: inline-block;
@@ -2567,6 +2587,11 @@ a {
         left: 575px;
         width: 400px; }
   @media screen and (max-width: 768px) {
+    #container-about .about-text {
+      margin-bottom: -120px;
+      padding: 5em 5px; }
+    #container-about .description {
+      padding-top: 0 !important; }
     #container-about .section-content {
       margin: 0; }
       #container-about .section-content .about {
@@ -2585,6 +2610,8 @@ a {
       width: 44%; }
     #container-about .agents {
       padding: 1em; }
+      #container-about .agents .flex-agents {
+        padding: 5em 5px; }
       #container-about .agents .short-bio {
         display: none; }
       #container-about .agents .agent-info-bottom .bio-contact {
@@ -2597,7 +2624,7 @@ a {
       display: none; }
     #container-about #header-about .description {
       width: 100%;
-      padding: 38px 30px 0 30px; }
+      padding: 115px 30px 0 30px; }
       #container-about #header-about .description .head-title {
         text-align: center; }
     #container-about .agent {

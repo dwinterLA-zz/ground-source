@@ -144,7 +144,7 @@
               <div id="listings-sidebar">
                 <div class="menu-top">
                   <div class="buttons">
-                    <a href="#" class="cool-button">CHECK AVAILABILITY</a>
+                    <a class="cool-button contact-us-link">CHECK AVAILABILITY</a>
                     <a id="print-brochure" href="#" class="cool-button">PRINT BROCHURE</a>
                   </div>
                 </div>
@@ -179,12 +179,7 @@
                     
                   </div>
                 </div>
-                <div class="info-box">
-                  <h2 class="title">LOCATION</h2>
-                  <div id="about-google-map"></div>
-                  <h2 class="title">FLOORPLAN</h2>
-                  <img src="" class="img-responsive" />
-                </div>
+                
               </div>
             </div>
           </div>
@@ -260,17 +255,7 @@
         sr.reveal(".img-responsive");
       })
       function initListingMap() {
-        var uluru = {lat: , lng: };
-        var map = new google.maps.Map(document.getElementById('about-google-map'), {
-          zoom: 12,
-          scrollwheel: false,
-          disableDefaultUI: true,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
+        
       }
     </script>
     <!-- TODO replace API key -->
