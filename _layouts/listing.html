@@ -18,13 +18,13 @@
         <div class="listing-name">{{page.name}}</div>
           <div class="gallery">
             {% if page.gallery-images[0] %}
-              <img src={{ page.gallery-images[0] }} class="img-responsive listing-image"/>
+              <img src="{{ page.gallery-images[0] }}" class="img-responsive listing-image"/>
             {% endif %}
             {% if page.gallery-images[1] %}
-              <img src={{ page.gallery-images[1] }} class="img-responsive listing-image"/>
+              <img src="{{ page.gallery-images[1] }}" class="img-responsive listing-image"/>
             {% endif %}
-            {% if page.gallery-images[1] %}
-              <img src={{ page.gallery-images[2] }} class="img-responsive listing-image"/>
+            {% if page.gallery-images[2] %}
+              <img src="{{ page.gallery-images[2] }}" class="img-responsive listing-image"/>
             {% endif %}
           </div>
         </div>
@@ -138,7 +138,6 @@
                         <div class="listing-image-slide">
                           <div class="listing-image" style="background-image: url({{ img-src }})"></div>
                         </div>
-                      <!-- <img src={{ img-src }} class="img-responsive listing-image"/> -->
                       {% endfor %}
                     </div>
                     <!-- only display the navigation arrows if there are more than one image -->
@@ -150,12 +149,19 @@
                     {% endif %}
                   </div>
                 </div>
-                <div class="info-box">
-                  <h2 class="title">LOCATION</h2>
-                  <div id="about-google-map"></div>
-                  <h2 class="title">FLOORPLAN</h2>
-                  <img src="{{ page.floorplan-image }}" class="img-responsive" />
-                </div>
+                {% if (page.latitude and page.longitude) or page.floorplan-image %}
+                  <div class="info-box">
+                    {% if page.latitude and page.longitude %}
+                      <h2 class="title">LOCATION</h2>
+                      <div id="about-google-map"></div>
+                    {% endif %}
+
+                    {% if page.floorplan-image %}
+                      <h2 class="title">FLOORPLAN</h2>
+                      <img src="{{ page.floorplan-image }}" class="img-responsive" />
+                    {% endif %}
+                  </div>
+                {% endif %}
               </div>
             </div>
           </div>
@@ -176,17 +182,19 @@
         sr.reveal(".img-responsive");
       })
       function initListingMap() {
-        var uluru = {lat: {{page.latitude}}, lng: {{page.longitude}}};
-        var map = new google.maps.Map(document.getElementById('about-google-map'), {
-          zoom: 12,
-          scrollwheel: false,
-          disableDefaultUI: true,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
+        {% if page.latitude and page.longitude %}
+          var uluru = {lat: {{page.latitude}}, lng: {{page.longitude}}};
+          var map = new google.maps.Map(document.getElementById('about-google-map'), {
+            zoom: 12,
+            scrollwheel: false,
+            disableDefaultUI: true,
+            center: uluru
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        {% endif %}
       }
     </script>
     <!-- TODO replace API key -->
