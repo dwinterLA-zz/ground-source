@@ -1136,11 +1136,11 @@ a {
   background-color: white; }
 
 .section-header {
+  font-size: 1.8em;
+  letter-spacing: .5;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   color: #b4b3b3;
-  letter-spacing: 0.5px;
-  color: #858585;
-  font-size: 1.8em; }
+  color: #858585; }
   .section-header > span {
     color: #d46049; }
 
@@ -1285,6 +1285,7 @@ a {
     margin-top: -4%;
     z-index: 25;
     width: 100px;
+    height: 100px;
     border-style: solid;
     border-radius: 500px;
     border-color: white;
@@ -1769,8 +1770,7 @@ a {
       width: 32.5%;
       height: 200px; }
   .print .information {
-    overflow: hidden;
-    opacity: .7; }
+    overflow: hidden; }
   .print .text {
     float: left;
     width: 10cm; }
@@ -1787,8 +1787,7 @@ a {
     margin-right: .25cm;
     border-style: solid;
     border-width: thin;
-    margin-top: 17px;
-    opacity: .7; }
+    margin-top: 17px; }
     .print .location .location-header {
       font-weight: 800;
       font-size: 12pt; }
@@ -1803,14 +1802,12 @@ a {
     margin-top: 1cm; }
   .print .highlights {
     width: 8cm;
-    float: left;
-    opacity: .7; }
+    float: left; }
     .print .highlights > h2 {
       font-size: 12pt; }
   .print .amenities {
     width: 8cm;
-    float: right;
-    opacity: .7; }
+    float: right; }
     .print .amenities > h2 {
       font-size: 12pt; }
   .print .list {
@@ -1956,7 +1953,6 @@ a {
     padding: 30px; }
   #container-listing .menu {
     background-color: #d8614b;
-    opacity: .95;
     padding-bottom: 12px;
     font-weight: lighter; }
   #container-listing .light-line {
@@ -1970,7 +1966,7 @@ a {
       padding: 14px;
       font-size: 1em;
       font-weight: lighter;
-      opacity: .8; }
+      opacity: 1; }
     #container-listing .bond-list > hr {
       border-color: #c35440;
       opacity: .5;
@@ -1991,10 +1987,7 @@ a {
     padding: 30px;
     color: white;
     overflow: hidden;
-    margin-bottom: 24px;
-    opacity: .95; }
-    #container-listing .info-box .info-text > p {
-      opacity: .8; }
+    margin-bottom: 24px; }
     #container-listing .info-box h2:first-child {
       margin-top: 0; }
   #container-listing .cool-button {
@@ -2068,6 +2061,9 @@ a {
 #container-listings {
   background-image: url(../images/about/fs-bg.jpg);
   background-size: cover; }
+  #container-listings .listings-header {
+    font-size: 1.8em;
+    letter-spacing: .5; }
   #container-listings .navigation-arrows {
     position: static;
     width: 14px;
@@ -2087,7 +2083,6 @@ a {
     #container-listings .header > p {
       font-size: 1.4em;
       margin: 0 15% 0 15%;
-      opacity: .95;
       color: gray; }
     #container-listings .header > input {
       margin-top: 30px;
@@ -2201,8 +2196,7 @@ a {
         z-index: 2; }
     #container-listings .listing-preview .listing-content {
       line-height: 135%;
-      padding: 0 12px 10px 12px;
-      opacity: .8; }
+      padding: 0 12px 10px 12px; }
       #container-listings .listing-preview .listing-content .amenities {
         font-size: .9em; }
         #container-listings .listing-preview .listing-content .amenities > table {
@@ -2229,7 +2223,6 @@ a {
       border-top: solid;
       border-width: 1.5px;
       border-color: #f3f3f3;
-      opacity: .9;
       padding: 18px; }
   #container-listings .amenities > p {
     display: inline-block;
@@ -2492,7 +2485,6 @@ a {
       vertical-align: bottom; }
   #container-about .description {
     width: 47%;
-    line-height: 1.4;
     display: inline-block;
     text-align: left;
     vertical-align: middle;
@@ -2501,7 +2493,8 @@ a {
     #container-about .description > p {
       padding-top: 15px; }
     #container-about .description .head-title {
-      font-size: 2.2em; }
+      font-size: 1.8em;
+      letter-spacing: .5; }
       #container-about .description .head-title span {
         font-weight: bold;
         color: #d46049; }
@@ -2518,7 +2511,7 @@ a {
   #container-about .agent {
     position: relative;
     text-align: center;
-    margin: .8em;
+    margin: .3em;
     box-shadow: 0px 0px 2em gainsboro;
     width: 23%;
     padding-bottom: 19px;
@@ -2684,6 +2677,10 @@ a {
               #container-about .agent-details .content .footer .featured-listings .agent-featured-listing .view-listing-button {
                 left: 32%; } }
 
+#container-experience .experience-section-header {
+  font-size: 1.8em;
+  letter-spacing: .5;
+  color: white; }
 #container-experience .contact-us-link-top {
   border-radius: 500px;
   border-style: solid;
