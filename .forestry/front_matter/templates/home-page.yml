@@ -50,3 +50,7 @@ fields:
   label: Intro Image
   description: This is the image that is directly to the right of the first block
     of text on the home page.
+- type: text
+  name: layout
+  label: layout
+  default: index
