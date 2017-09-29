@@ -2344,7 +2344,7 @@ a {
       width: 40%; }
   #container-about .rounded-red-button {
     border-radius: 500px;
-    margin-top: 13px;
+    margin-top: 22px;
     font-weight: 500;
     font-size: .7em;
     color: #c04d3a;
@@ -2387,7 +2387,7 @@ a {
       position: relative;
       max-width: 1400px;
       background-color: white;
-      width: 50vw;
+      width: 65vw;
       margin: 10vh auto 0 auto;
       font-size: 1.2em; }
       #container-about .agent-details .content .header {
@@ -2396,16 +2396,27 @@ a {
         #container-about .agent-details .content .header .bio-pic {
           position: absolute;
           left: -10px;
-          height: 127px; }
+          height: 267px; }
         #container-about .agent-details .content .header .contact {
-          margin-left: 36%;
+          margin-left: 33%;
           display: inline-block; }
+          #container-about .agent-details .content .header .contact h4 {
+            padding-top: 16px;
+            font-weight: bold; }
           #container-about .agent-details .content .header .contact a {
             text-decoration: none; }
+          #container-about .agent-details .content .header .contact .position {
+            color: #d46049; }
+          #container-about .agent-details .content .header .contact .email {
+            padding-top: 69px; }
+          #container-about .agent-details .content .header .contact .secondary-contact {
+            font-size: .7em;
+            font-weight: bold; }
           #container-about .agent-details .content .header .contact > p {
             margin-top: 0;
             margin-bottom: 0;
-            text-transform: uppercase; }
+            text-transform: uppercase;
+            font-size: .85em; }
             #container-about .agent-details .content .header .contact > p > a {
               text-decoration: underline; }
           #container-about .agent-details .content .header .contact > h4 {
@@ -2415,9 +2426,8 @@ a {
             margin-bottom: 0;
             margin-top: 12px; }
       #container-about .agent-details .content .bio {
-        margin: 0 25px;
+        margin: 0 31px;
         padding-bottom: 12px;
-        padding-top: 1px;
         color: black;
         opacity: .55;
         line-height: 110%;
@@ -2426,7 +2436,8 @@ a {
           font-size: 1.8em;
           opacity: 1;
           text-transform: uppercase;
-          margin-top: 8px; }
+          margin-bottom: 25px;
+          margin-top: 0; }
       #container-about .agent-details .content .footer {
         background-color: #d46049;
         color: white;
@@ -2509,14 +2520,17 @@ a {
               justify-content: space-between;
       padding: 5em 60px; }
   #container-about .agent {
-    position: relative;
+    width: 23%;
     text-align: center;
     margin: .3em;
     box-shadow: 0px 0px 2em gainsboro;
-    width: 23%;
-    padding-bottom: 19px;
     border: 1px solid #c7c7c7; }
+    #container-about .agent .agent-info-bottom {
+      margin-top: auto;
+      padding-bottom: 4px;
+      padding-top: 4px; }
     #container-about .agent .bio-image {
+      font-size: 1.4em;
       position: relative; }
       #container-about .agent .bio-image > img {
         width: 100%; }
@@ -2532,12 +2546,13 @@ a {
       margin: 1em 1em;
       padding: 28px 0 12px 0;
       text-align: left;
-      font-size: .95em; }
+      font-size: .85em;
+      height: 90px; }
     #container-about .agent .bio-button {
       display: inline-block;
       color: #d46049;
       border: 1px solid #d46049;
-      font-size: .95em;
+      font-size: .9em;
       padding: 0.4em 1em;
       border-radius: 500px;
       margin-bottom: 1em;
