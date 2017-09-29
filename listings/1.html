@@ -96,9 +96,12 @@
     <div class="contact-close"></div>
     <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
+      <label class="contact-labels" for="name">Name</label>
       <input name="name" type="text" placeholder="Name">
+      <label class="contact-labels" for="email">Email</label>
       <input name="email" type="text" placeholder="Email">
       <div id="email-invalid" class="validation">Please use a valid email address</div>
+      <label class="contact-labels" for="phone">Phone</label>
       <input name="phone" type="text" placeholder="Phone Number">
       <button id="submit-contact-form">SUBMIT</button>
     </form>
@@ -304,6 +307,7 @@
 <script type="text/javascript" src="/scripts/formSubmit.js"></script>
 <script type="text/javascript" src="/scripts/script.js"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/scripts/flexibility.js"></script>
 
     <script>
       $(document).ready(function() {
@@ -312,9 +316,11 @@
           "nextArrow": $('.gallery-arrow-right')
         })
 
-        window.sr = ScrollReveal();
-        sr.reveal(".info-box");
-        sr.reveal(".img-responsive");
+        if (compatibleBrowser()) {
+          window.sr = ScrollReveal();
+          sr.reveal(".info-box");
+          sr.reveal(".img-responsive");
+        }
       })
       function initListingMap() {
         

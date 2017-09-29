@@ -6,6 +6,11 @@ var PER_PAGE = 6;
 var PASSWORDS = ["keller+groundsource2017"];
 
 $(document).ready(function () {
+  if (!compatibleBrowser()) {
+    flexibility(document);
+    $('.contact-info-body').hide();
+    $('.contact-labels').show();
+  }
   authenticate();
   var modalOffset = 0;
   paginate($('#properties').children());
@@ -297,4 +302,8 @@ function listingsSearch() {
   });
 
   paginate(filteredListings);
+}
+
+function compatibleBrowser() {
+  return !(navigator.userAgent.indexOf("MSIE 9") > -1);
 }
