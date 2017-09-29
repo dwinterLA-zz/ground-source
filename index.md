@@ -1,5 +1,5 @@
 ---
-intro_image: "/images/home-temp/mobile-about-img.png"
+intro_image: "/images/mobile-about-img.png"
 intro_paragraph: GROUNDSOURCE is a Los Angeles-based full-service commercial real
   estate firm that specializes in representing tenants, landlords and investors. Our
   forty-five years of collective experience in the L.A. marketplace lets us combine
@@ -20,13 +20,19 @@ investment_services_text: Market intelligence and key relationships are the cata
   determining the short and/or long-term value of an acquisition.&nbsp; We work hand-in-hand
   with investors that are looking to achieve maximum value for their interests in
   the marketplace, resulting in long-lasting partnerships and a reputation of trust.
-landlord_services_text: We provide efficient, effective landlord representation, ensuring
-  that each transaction is hands-on, locally informed and detail-oriented. We know
-  the value of a broker lies in our transparent integrity and commitment to a seamless
-  experience.<br><br>You deserve a broker that is one hundred percent invested in
-  the market where your property or project is located. We always use neighborhood
+landlord_services_text: 'We provide efficient, effective landlord representation,
+  ensuring that each transaction is hands-on, locally informed and detail-oriented.
+  We know the value of a broker lies in our transparent integrity and commitment to
+  a seamless experience.<br><br>You deserve a broker that is one hundred percent invested
+  in the market where your property or project is located. We always use neighborhood
   expertise to determine and deliver the highest yield. We offer intimate accessibility,
-  a far cry from our corporate competitors.
+  a far cry from our corporate competitors.<br>Our commitment is based on addressing
+  the comprehensive lease-up of the space, building or project in order to ensure
+  a seamless execution of the objectives of the client. We will provide a proactive
+  asset strategy, determine and implement a marketing plan, create a competitive environment
+  for your space, determine a tenant''s creditworthiness and execute a lease based
+  on our predetermined goals. Lastly, we are not inhibited by any company do not call
+  lists, we will call anyone and everyone.&nbsp;<br><br> '
 layout: index
 tenant_services_blurb: Effective tenant representation is based on experience and
   knowledge and at GROUNDSOURCE we know more about Los Angeles than anyone else --
@@ -35,7 +41,13 @@ tenant_services_blurb: Effective tenant representation is based on experience an
 tenant_services_text: Effective tenant representation is based on experience and knowledge
   and at GROUNDSOURCE we know more about Los Angeles than anyone else -- we know the
   market conditions, the infrastructures, comparable deals and the people who made
-  them. This is our city.
+  them. This is our city.<br>Most importantly, we listen to our clients. We understand
+  their needs and goals. Our process is multifold but includes investing the time
+  to see how their space is used, troubleshooting areas of improvement,&nbsp;&nbsp;promoting
+  proactive tenant advocacy and discussing occupancy costs to determine how to mitigate
+  risk with respect to a new location or renewal of an existing lease.<br>At GROUNDSOURCE
+  proven data drives every decision we make. It’s our job to turn your real estate
+  challenge into an opportunity and we pride ourselves on our reputation of success.
 tennant_services_text: Effective tenant representation is based on experience and
   knowledge and at GROUNDSOURCE we know more about Los Angeles than anyone else --
   we know the market conditions, the infrastructures, comparable deals and the people
