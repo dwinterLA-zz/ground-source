@@ -5,11 +5,11 @@ pages:
 hide_body: false
 fields:
 - type: text
-  name: text
-  label: Text
-- type: text
   name: name
   label: Name
 - type: text
+  name: text
+  label: Text
+- type: file
   name: userImg
-  label: User image
+  label: Author Image
