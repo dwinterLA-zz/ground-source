@@ -177,9 +177,11 @@
           "nextArrow": $('.gallery-arrow-right')
         })
 
-        window.sr = ScrollReveal();
-        sr.reveal(".info-box");
-        sr.reveal(".img-responsive");
+        if (compatibleBrowser()) {
+          window.sr = ScrollReveal();
+          sr.reveal(".info-box");
+          sr.reveal(".img-responsive");
+        }
       })
       function initListingMap() {
         {% if page.latitude and page.longitude %}

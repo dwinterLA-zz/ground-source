@@ -75,9 +75,11 @@
         "dots": true,
         "arrows": false
         });
-        window.sr = ScrollReveal();
-        sr.reveal(".top");
-        sr.reveal(".bottom");
+        if (compatibleBrowser()) {
+          window.sr = ScrollReveal();
+          sr.reveal(".top");
+          sr.reveal(".bottom");
+        }
       })
     </script>
   </body>

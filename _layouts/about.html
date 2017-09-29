@@ -44,50 +44,6 @@
           </div>
         </div>
       <div id="container-about">
-        {% for agent in site.agents %}
-          <div class="agent-details" id="agent-{{forloop.index}}">
-            <div class="content">
-              <div class="simple-close-small close-agent-detail"></div>
-              <div class="header">
-                <img src="{{agent.avatar}}" class="bio-pic"/>
-                <div class="contact">
-                  <img src="{{agent.avatar}}" class="bio-pic-mobile"/>
-                  <h4>{{agent.first_name}} {{agent.last_name}}</h4>
-                  <p class="no-margin position">{{agent.position}}</p>
-                  <br />
-                  <p class="no-margin email secondary-contact"><a href="mailto:{{agent.email}}">{{agent.email}}</a></p>
-                  <p class="no-margin secondary-contact">M: {{agent.phone}}</p>
-                  <a href="mailto:{{agent.email}}"><button class="rounded-red-button">work with {{agent.first_name}}</buton></a>
-                </div>
-              </div>
-              <div class="bio">
-                <h2>about {{agent.first_name}}</h2>
-                <p>{{agent.full_bio}}</p>
-              </div>
-              {% if agent.featured_listings[0] %}
-              <div class="footer">
-                {% if agent.featured_listings[1] %}
-                  <p>FEATURED LISTINGS</p>
-                {% else %}
-                  <p>FEATURED LISTING</p>
-                {% endif %}
-                <div class="featured-listings">
-                  {% for agent_listing in agent.featured_listings %}
-                    {% assign listing = site.listings | where: "title", agent_listing | first %}
-                    {% if listing.property-preview-image %}
-                      <div class="agent-featured-listing" style="background-image: url('{{listing.property-preview-image}}')">
-                    {% else %}
-                      <div class="agent-featured-listing">
-                    {% endif %}
-                      <a class="view-listing-button" href="{{listing.url}}">View Property</a>
-                    </div>
-                  {% endfor %}
-                </div>
-              </div>
-              {% endif %}
-            </div>
-          </div>
-        {% endfor %}
         <div class="main">
           <div id="header-about">
             <div class="about-text">
@@ -95,6 +51,7 @@
                 <img class="image-left" src="images/about/hero.jpg" />
               </div>
               <div class="description">
+                <h1>About stuff</h1>
                 <div class="title head-title">ABOUT <span>GROUND</span>SOURCE</div>
                 <p class="about-main-text">
                   {{page.main_text}}
@@ -123,6 +80,50 @@
           </div>
           {% include footer.html %}
         </div>
+        {% for agent in site.agents %}
+        <div class="agent-details" id="agent-{{forloop.index}}">
+          <div class="content">
+            <div class="simple-close-small close-agent-detail"></div>
+            <div class="header">
+              <img src="{{agent.avatar}}" class="bio-pic"/>
+              <div class="contact">
+                <img src="{{agent.avatar}}" class="bio-pic-mobile"/>
+                <h4>{{agent.first_name}} {{agent.last_name}}</h4>
+                <p class="no-margin position">{{agent.position}}</p>
+                <br />
+                <p class="no-margin email secondary-contact"><a href="mailto:{{agent.email}}">{{agent.email}}</a></p>
+                <p class="no-margin secondary-contact">M: {{agent.phone}}</p>
+                <a href="mailto:{{agent.email}}"><button class="rounded-red-button">work with {{agent.first_name}}</buton></a>
+              </div>
+            </div>
+            <div class="bio">
+              <h2>about {{agent.first_name}}</h2>
+              <p>{{agent.full_bio}}</p>
+            </div>
+            {% if agent.featured_listings[0] %}
+            <div class="footer">
+              {% if agent.featured_listings[1] %}
+                <p>FEATURED LISTINGS</p>
+              {% else %}
+                <p>FEATURED LISTING</p>
+              {% endif %}
+              <div class="featured-listings">
+                {% for agent_listing in agent.featured_listings %}
+                  {% assign listing = site.listings | where: "title", agent_listing | first %}
+                  {% if listing.property-preview-image %}
+                    <div class="agent-featured-listing" style="background-image: url('{{listing.property-preview-image}}')">
+                  {% else %}
+                    <div class="agent-featured-listing">
+                  {% endif %}
+                    <a class="view-listing-button" href="{{listing.url}}">View Property</a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
       </div>
     </div>
     {% include include-scripts.html %}
@@ -134,11 +135,13 @@
         document.body.scrollTop(0, $('.agents').offset().top);
       }
 
-      window.sr = ScrollReveal();
-      sr.reveal(".header-image");
-      sr.reveal(".head-title");
-      sr.reveal(".about-main-text");
-      sr.reveal(".agents");
+      if (compatibleBrowser()) {
+        window.sr = ScrollReveal();
+        sr.reveal(".header-image");
+        sr.reveal(".head-title");
+        sr.reveal(".about-main-text");
+        sr.reveal(".agents");
+      }
     })
   </script>
 </html>

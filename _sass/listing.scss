@@ -123,6 +123,7 @@
   }
 
   .container {
+    -js-display: flex;
     display: flex;
     position: relative;
     z-index: 5;
@@ -172,11 +173,13 @@
     .gallery-arrow-right {
       right: 27%;
       transform: translateY(-50%) rotate(-45deg);
+      -ms-transform: translateY(-50%) rotate(-45deg);
     }
     .gallery-arrow-left {
       left: 27%;
       top: 50%;
       transform: translateY(-50%) rotate(135deg);
+      -ms-transform: translateY(-50%) rotate(135deg);
     }
   }
 

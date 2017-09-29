@@ -61,6 +61,7 @@
               <span id="show-more-filters" class="subdued">OPTIONS</span>
               <span id="show-less-filters" class="subdued">LESS OPTIONS</span>
             </div>
+            <div class="filter-container">
             <div class="flexbox listings filters">
               {% assign locations = site.listings |map: "address-line-2"| |uniq| %}
               {% assign statuses = site.listings |map: "status"| |uniq| %}
@@ -93,6 +94,7 @@
               <button type"submit" id="listing-clear-filters">CLEAR OPTIONS</button>
               <button type"submit" id="listing-search">SEARCH</button>
             </div>
+          </div>
           </div>
           <div id="properties" class="flexbox listings">
             {% for listing in site.listings %}
@@ -180,8 +182,11 @@
             $("#type-filter").val(typeQuery);
             listingsSearch();
           }
-          window.sr = ScrollReveal();
-          sr.reveal(".listing-preview");
+
+          if (compatibleBrowser()) {
+            window.sr = ScrollReveal();
+            sr.reveal(".listing-preview");
+          }
         })
         function showFilters() {
           $('#show-more-filters').hide();
