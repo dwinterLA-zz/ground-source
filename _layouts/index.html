@@ -205,13 +205,15 @@
           $("#header-text").css("opacity", 1);
         }, 700);
 
-        window.sr = ScrollReveal();
-        sr.reveal(".home-intro-left");
-        sr.reveal(".home-intro-right");
-        sr.reveal(".services-header");
-        sr.reveal(".review-slideshow");
-        sr.reveal(".services-text");
-        sr.reveal("#contact-us-home-section");
+        if (compatibleBrowser()) {
+          window.sr = ScrollReveal();
+          sr.reveal(".home-intro-left");
+          sr.reveal(".home-intro-right");
+          sr.reveal(".services-header");
+          sr.reveal(".review-slideshow");
+          sr.reveal(".services-text");
+          sr.reveal("#contact-us-home-section");
+        }
 
         $('.review-carousel').slick({
           "autoplay": false,

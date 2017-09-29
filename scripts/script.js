@@ -306,3 +306,7 @@ function listingsSearch() {
 
   paginate(filteredListings);
 }
+
+function compatibleBrowser() {
+  return !(navigator.userAgent.indexOf("MSIE 9") > -1);
+}
