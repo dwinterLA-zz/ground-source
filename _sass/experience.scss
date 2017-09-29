@@ -44,12 +44,16 @@
   .study-carousel {
     max-width: $page-max-width;
     width: 40vw;
-    padding: 66px 46px 85px 46px;
+    padding: 0 46px;
     text-align: center;
     height: 100%;
     background-color: white;
     opacity: .85;
     margin: 0 auto;
+    .study {
+      vertical-align: middle;
+      padding-top: 50px;
+    }
     > p {
       opacity: .9;
     }
@@ -71,6 +75,17 @@
       left: 42%;
     }
   }
+
+  @media screen and (max-height: 900px) {
+    .top {
+      height: 100vh;
+    }
+
+    .bottom {
+      height: 60vh;
+    }
+  }
+
   @media screen and (max-width: 1000px) {
     .text {
       > p {

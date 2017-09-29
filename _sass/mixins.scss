@@ -76,6 +76,7 @@
   z-index: 101;
   background: rgba(86, 85, 84, 0.8);
   .inner {
+    overflow: scroll;
     width: 50%;
     margin: 112px auto 0 auto;
     font-size: 1.3em;
