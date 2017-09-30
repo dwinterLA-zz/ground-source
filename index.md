@@ -2,15 +2,15 @@
 intro_image: "/images/mobile-about-img-1.png"
 intro_paragraph: GROUNDSOURCE is a Los Angeles-based full-service commercial real
   estate firm that specializes in representing tenants, landlords and investors. Our
-  forty-five years of collective experience in the L.A. marketplace lets us combine
+  forty-fiveyears of collective experience in the L.A. marketplace lets us combine
   extensive insider knowledge with trusted partnerships to create unparalleled value.
-  We’re a boutique firm that offers clients the prestigious service they deserve with
-  a nintimate, hands-on approach.<br><br>We believe it isn’t just about satisfied
-  clients, it’s about repeat clients. Therefore, we always spend as much time as it
-  takes to close the deal the right way. For us, good business is about a connection,
-  not a commission which is why at GROUNDSOURCE we’re by your side from the fact-finding
-  to the lease (or purchase and sale agreement) signing and every step along the way.
-  <br><br><br><br>
+  We’rea boutique firm that offers clients the prestigious service they deserve with
+  anintimate, hands-on approach.<br><br>We believe it isn’t just about satisfied clients,
+  it’s about repeat clients. Therefore, we always spend as much time as it takes to
+  close the deal the right way. For us, good business is about a connection, not a
+  commission which is why at GROUNDSOURCE we’re by your side from the fact-finding
+  to the lease or purchase&nbsp;signing, as well as every critical step along the
+  way.&nbsp;
 investment_services_blurb: Market intelligence and key relationships are the catalysts
   which drive our investment services team.&nbsp; We provide in-depth&nbsp;&nbsp;investment
   advisory and capitalization strategies based on comprehensive market insight, working
