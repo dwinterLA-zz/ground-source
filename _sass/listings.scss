@@ -1,4 +1,13 @@
 #container-listings {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  background-image: url(../images/about/fs-bg.jpg);
+  background-size: cover;
   .listings-header {
     @include header;
   }
@@ -16,8 +25,6 @@
     margin-right: 8px;
   }
 
-  background-image: url(../images/about/fs-bg.jpg);
-  background-size: cover;
   .content {
     padding-top: 12vh;
   }
@@ -182,9 +189,9 @@
       line-height: 135%;
       padding: 0 12px 10px 12px;
       .amenities {
-        font-size: .9em;
+        font-size: .8em;
         > table {
-          width: 95%;
+          width: 99%;
           margin: 0 auto;
           > tbody {
             > tr {

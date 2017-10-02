@@ -892,6 +892,7 @@ a {
     padding-left: $left-align-home;
   }
   position: relative;
+  width: 100%;
   background: $primary-color;
   color: white;
   & > * { line-height: 2.2; }
