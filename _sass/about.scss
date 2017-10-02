@@ -212,12 +212,14 @@
     text-align: center;
     .flex-agents {
       justify-content: space-between;
-      padding: 5em 60px;
+      padding: 0 60px 1em 60px;
     }
   }
   .agent {
     width: 23%;
+    min-width: 235px;
     text-align: center;
+    margin-top: 12px;
     margin: .3em;
     box-shadow: 0px 0px 2em gainsboro;
     border: 1px solid #c7c7c7;
@@ -246,7 +248,7 @@
       padding: 28px 0 12px 0;
       text-align: left;
       font-size: .85em;
-      height: 90px;
+      min-height: 90px;
     }
 
     .bio-button {
@@ -308,6 +310,10 @@
   }
 
   @media screen and (max-width: $breakpoint-small) {
+    .rounded-red-button {
+      margin-bottom: 12px;
+    }
+
     .about-text {
       margin-bottom: -120px;
       padding: 5em 5px;
@@ -342,13 +348,17 @@
     }
 
     .agent {
-      width: 44%;
+      width: 98%;
     }
 
     .agents {
       padding: 1em;
       .flex-agents {
         padding: 5em 5px;
+        .agent {
+          width: 93%;
+          margin-left: 14px;
+        }
       }
       .short-bio {
         display: none;
@@ -359,8 +369,7 @@
         }
         .bio-button {
           font-size: .8em;
-          margin-bottom: 0;
-          margin-top: 14px;
+          margin: 14px 0;
         }
       }
     }
@@ -411,6 +420,9 @@
             margin: 0 auto;
             text-align: center;
             margin-top: 25px;
+            .secondary-contact {
+              padding-top: 5px;
+            }
             > h4 {
               color: black;
             }
