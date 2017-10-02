@@ -152,7 +152,7 @@
     </div>
     <div class="column">
       <div class="title"><a href="/experience.html">EXPERIENCE</a></div>
-      <a href="href=/experience.html">Case Studies</a>
+      <a href="/experience.html?section=studies">Case Studies</a>
     </div>
     <div class="column">
       <div class="title"><a href="/about.html">ABOUT</a></div>
@@ -205,6 +205,15 @@
 
     <script type="text/javascript">
       $(document).ready(function() {
+
+      var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
+
+      if (sectionQuery === "studies") {
+        window.setTimeout(function() {
+          window.scrollTo(0, $('.bottom').offset().top);
+        }, 500)
+      }
+
         $('.study-carousel').slick({
         "autoplay": true,
         "draggable": false,

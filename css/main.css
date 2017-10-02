@@ -627,15 +627,15 @@ a {
     #contact-us-home-section .contact-content .contact-header {
       font-size: 34px;
       background-color: white;
-      padding: .5em 47px; }
+      padding: .5em 18px; }
     #contact-us-home-section .contact-content .contact-body {
       font-size: 16px;
       background: rgba(255, 255, 255, 0.9);
-      padding: 15px 22px; }
+      padding: 15px 0; }
       #contact-us-home-section .contact-content .contact-body > ul {
         list-style-type: none;
         margin: 0;
-        padding-left: calc(30px - 12px); }
+        padding-left: 11px; }
         #contact-us-home-section .contact-content .contact-body > ul > li {
           padding: 6px; }
 
@@ -694,22 +694,6 @@ a {
 
 .preview-contents {
   padding: 8px; }
-
-.slick-slide {
-  text-align: center; }
-
-.slick-slide::before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle; }
-
-.slick-slide div {
-  vertical-align: middle;
-  display: inline-block; }
-
-.slick-track {
-  height: 150px; }
 
 .underline {
   text-decoration: underline; }
@@ -913,7 +897,7 @@ a {
     padding: 25px;
     color: white; }
     .services-modal-content .header > h1 {
-      margin: 0 18px 0 0; }
+      margin: 0 24px 0 0; }
   .services-modal-content .content {
     padding: 25px;
     font-size: .8em; }
@@ -1294,8 +1278,17 @@ a {
     position: relative;
     max-width: 1200px;
     margin: 0 auto; }
+  .review-slideshow .review::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  .review-slideshow .review div {
+    vertical-align: middle;
+    display: inline-block; }
   .review-slideshow .review {
-    padding-top: 33px; }
+    padding-top: 33px;
+    text-align: center; }
     .review-slideshow .review p {
       max-width: 800px;
       vertical-align: middle;
@@ -1516,24 +1509,21 @@ a {
     height: auto;
     z-index: 2; }
 
-  .slick-slide::before {
+  .review::before {
     content: '';
     display: inline-block;
     height: 100%;
     vertical-align: middle; }
 
-  .slick-slide img {
+  .review img {
     display: block; }
 
-  .slick-slide p {
+  .review p {
     display: inline-block;
     height: 100%; }
 
   .slick-track {
     height: inherit; }
-
-  .slick-track {
-    height: 400px; }
 
   .nav-modal .inner .menu-close {
     padding: 21px; }
