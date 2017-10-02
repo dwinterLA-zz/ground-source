@@ -1368,6 +1368,7 @@ a {
 
 .footer {
   position: relative;
+  width: 100%;
   background: #d46049;
   color: white; }
   .footer .inner {
@@ -2108,6 +2109,11 @@ a {
 #container-listings {
   background-image: url(../images/about/fs-bg.jpg);
   background-size: cover; }
+  #container-listings .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
   #container-listings .listings-header {
     font-size: 1.8em;
     letter-spacing: .5; }
@@ -2245,9 +2251,9 @@ a {
       line-height: 135%;
       padding: 0 12px 10px 12px; }
       #container-listings .listing-preview .listing-content .amenities {
-        font-size: .9em; }
+        font-size: .8em; }
         #container-listings .listing-preview .listing-content .amenities > table {
-          width: 95%;
+          width: 99%;
           margin: 0 auto; }
           #container-listings .listing-preview .listing-content .amenities > table > tbody > tr > td {
             padding: 6px; }
@@ -2569,10 +2575,12 @@ a {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      padding: 5em 60px; }
+      padding: 0 60px 1em 60px; }
   #container-about .agent {
     width: 23%;
+    min-width: 235px;
     text-align: center;
+    margin-top: 12px;
     margin: .3em;
     box-shadow: 0px 0px 2em gainsboro;
     border: 1px solid #c7c7c7; }
@@ -2598,7 +2606,7 @@ a {
       padding: 28px 0 12px 0;
       text-align: left;
       font-size: .85em;
-      height: 90px; }
+      min-height: 90px; }
     #container-about .agent .bio-button {
       display: inline-block;
       color: #d46049;
@@ -2642,6 +2650,8 @@ a {
         left: 575px;
         width: 400px; }
   @media screen and (max-width: 768px) {
+    #container-about .rounded-red-button {
+      margin-bottom: 12px; }
     #container-about .about-text {
       margin-bottom: -120px;
       padding: 5em 5px; }
@@ -2662,19 +2672,21 @@ a {
     #container-about .ham-menu {
       background-size: 94%; }
     #container-about .agent {
-      width: 44%; }
+      width: 98%; }
     #container-about .agents {
       padding: 1em; }
       #container-about .agents .flex-agents {
         padding: 5em 5px; }
+        #container-about .agents .flex-agents .agent {
+          width: 93%;
+          margin-left: 14px; }
       #container-about .agents .short-bio {
         display: none; }
       #container-about .agents .agent-info-bottom .bio-contact {
         display: none; }
       #container-about .agents .agent-info-bottom .bio-button {
         font-size: .8em;
-        margin-bottom: 0;
-        margin-top: 14px; }
+        margin: 14px 0; }
     #container-about #header-about .header-image {
       display: none; }
     #container-about #header-about .description {
@@ -2707,6 +2719,8 @@ a {
             margin: 0 auto;
             text-align: center;
             margin-top: 25px; }
+            #container-about .agent-details .content .header .contact .secondary-contact {
+              padding-top: 5px; }
             #container-about .agent-details .content .header .contact > h4 {
               color: black; }
         #container-about .agent-details .content .bio {
