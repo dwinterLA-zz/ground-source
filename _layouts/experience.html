@@ -69,6 +69,15 @@
     {% include include-scripts.html %}
     <script type="text/javascript">
       $(document).ready(function() {
+
+      var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
+
+      if (sectionQuery === "studies") {
+        window.setTimeout(function() {
+          window.scrollTo(0, $('.bottom').offset().top);
+        }, 500)
+      }
+
         $('.study-carousel').slick({
         "autoplay": true,
         "draggable": false,

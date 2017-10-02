@@ -130,8 +130,12 @@
   <script type="text/javascript">
     $(document).ready(function() {
       var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
+
       if (sectionQuery === "team") {
-        document.body.scrollTop(0, $('.agents').offset().top);
+        window.setTimeout(function() {
+          console.info('scrollllinnnggggg')
+          window.scrollTo(0, $('.agents').offset().top);
+        }, 500)
       }
 
       if (compatibleBrowser()) {
