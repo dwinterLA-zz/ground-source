@@ -122,6 +122,7 @@
               <div class="review-carousel">
                 {% for testimonial in site.testimonials %}
                   <div class="review">
+                    <div class="inner-review">
                     <img src="{{ testimonial.userImg }}" />
                     <p>
                       {{ testimonial.text }}
@@ -129,6 +130,7 @@
                       <br />
                       <strong>- {{ testimonial.name }}</strong>
                     </p>
+                  </div>
                   </div>
                 {% endfor %}
               </div>

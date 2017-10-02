@@ -220,6 +220,26 @@ a {
   padding: 8px;
 }
 
+.slick-slide {
+  text-align: center;
+}
+
+.slick-slide::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.slick-slide div {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.slick-track {
+  height: 150px;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -774,7 +794,7 @@ a {
   color: gray;
   text-align: center;
   font-size: 1.5em;
-  padding: 28px 12px;
+  padding: 16px 12px;
   .inner {
     position: relative;
     max-width: 1200px;
@@ -783,7 +803,8 @@ a {
   .review {
     padding-top: 33px;
     p {
-      max-width: calc(100% - 200px - 120px); // 200px img, 60px*2 padding
+      max-width: 800px;
+      // max-width: calc(100% - 200px - 120px); // 200px img, 60px*2 padding
       vertical-align: middle;
       font-size: .5em;
       padding: 12px;
@@ -1002,6 +1023,30 @@ a {
     width: 46%;
     height: auto;
     z-index: 2;
+  }
+
+  .slick-slide::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .slick-slide img {
+    display: block;
+  }
+
+  .slick-slide p {
+    display: inline-block;
+    height: 100%;
+  }
+
+  .slick-track {
+    height: inherit;
+  }
+
+  .slick-track {
+    height: 400px;
   }
 
   .nav-modal {
