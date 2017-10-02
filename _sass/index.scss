@@ -144,16 +144,16 @@ a {
     .contact-header {
       font-size: 34px;
       background-color: white;
-      padding: .5em 47px;
+      padding: .5em 18px;
     }
     .contact-body {
       font-size: 16px;
       background: rgba(255, 255, 255, 0.9);
-      padding: 15px 22px;
+      padding: 15px 0;
       > ul {
         list-style-type: none;
         margin: 0;
-        padding-left: calc(30px - 12px);
+        padding-left: 11px;
         > li {
           padding: 6px;
         }
@@ -404,7 +404,7 @@ a {
     padding: 25px;
     color: white;
     > h1 {
-      margin: 0 18px 0 0;
+      margin: 0 24px 0 0;
     }
   }
 
@@ -781,13 +781,6 @@ a {
     margin: 0 auto;
   }
 
-<<<<<<< HEAD
-=======
-  // .slick-slide {
-  //   text-align: center;
-  // }
-
->>>>>>> d3989857a0df2836fc9cd80d8c7cf20f40244419
   .review::before {
     content: '';
     display: inline-block;
