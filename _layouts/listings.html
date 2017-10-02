@@ -30,21 +30,21 @@
   <body>
     {% include login.html %}
     {% include contact-form.html %}
-    <div class="nav-modal">
-      <div class="inner">
-        <img src="images/logo.png" class="modal-logo"/>
-        <div class="menu-close"></div>
-        <ul class="nav">
-          <li><a href="index.html">HOME</a></li>
-          <li><a class="active" href="listings.html">LISTINGS</a></li>
-          <li><a href="experience.html">EXPERIENCE</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a</li>
-          <li><a class="contact-us-link">CONTACT</a></li>
-        </ul>
-      </div>
-    </div>
     <div class="main">
+      <div class="nav-modal">
+        <div class="inner">
+          <img src="images/logo.png" class="modal-logo"/>
+          <div class="menu-close"></div>
+          <ul class="nav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a class="active" href="listings.html">LISTINGS</a></li>
+            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a</li>
+            <li><a class="contact-us-link">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
       <div id="container-listings">
         <img src="images/logo.png" class="logo-upper-left"/>
         <div class="ham-menu"></div>
@@ -135,19 +135,25 @@
                               <img src="images/icons/money.svg"/>
                               <span>Please Call</span>
                             {% else %}
-                              <img src="images/icons/money.svg"/>
-                              <span>{{listing.rate}}/month</span>
+                              <div class="wrapped-text">
+                                <img src="images/icons/money.svg"/>
+                                <span>{{listing.rate}}/month</span>
+                              </div>
                             {% endif %}
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <img src="images/icons/square.svg" />
-                            <span>{{listing.sq-footage}} Sq. ft.</span>
+                            <div class="wrapped-text">
+                              <img src="images/icons/square.svg" />
+                              <span>{{listing.sq-footage}} Sq. ft.</span>
+                            </div>
                           </td>
                           <td>
-                            <img src="images/icons/car.svg" />
-                            <span>{{listing.parking}} Spots</span>
+                            <div class="wrapped-text">
+                              <img src="images/icons/car.svg" />
+                              <span>{{listing.parking}} Spots</span>
+                            </div>
                           </td>
                         </tr>
                       </table>

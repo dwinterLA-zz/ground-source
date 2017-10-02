@@ -207,6 +207,17 @@
     background-repeat: no-repeat;
     background-position: center 0;
     text-align: center;
+    &:before {
+      display: block;
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100px;
+      width: 100%;
+      z-index: 1;
+      background-image: linear-gradient(to bottom, rgba(#fff, 1), rgba(#fff, 1));
+    }
 
     &:after {
       display: block;
@@ -222,14 +233,15 @@
   }
 
   #header-text-listings {
-    text-align: center;
     font-family: $font-brand;
     color: $background-color;
-    font-size: 6em;
+    font-size: 4em;
     padding-bottom: 0.5em;
-    text-shadow: 0px 3px 20px rgba(0,0,0,0.75);
+    text-shadow: 0px 3px 20px rgba(0,0,0,1);
     .location {
       position: relative;
+      text-align: left;
+      padding-left: 12px;
       z-index: 2;
     }
     &:after {
