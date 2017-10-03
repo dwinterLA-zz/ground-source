@@ -733,9 +733,6 @@ a {
   left: 8%;
   &:hover {
     transform: rotate(135deg) scale(1.3);
-    // animation-name: navigation-arrow-left;
-    // animation-duration: .5s;
-    // animation-fill-mode: forwards;
   }
 }
 
@@ -754,9 +751,6 @@ a {
   right: 8%;
   &:hover {
     transform: rotate(-45deg) scale(1.3);
-    // animation-name: navigation-arrow-right;
-    // animation-duration: .5s;
-    // animation-fill-mode: forwards;
   }
 }
 
@@ -798,13 +792,11 @@ a {
     text-align: center;
     p {
       max-width: 800px;
-      // max-width: calc(100% - 200px - 120px); // 200px img, 60px*2 padding
       vertical-align: middle;
       font-size: .5em;
       padding: 12px;
       text-align: left;
       display: inline-block;
-      // font-size: .5em;
       strong {
         text-transform: uppercase;
       }
