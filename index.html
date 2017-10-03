@@ -136,8 +136,8 @@
         <ul>
           <li><a href="listings.html">LISTINGS</a></li>
           <li><a href="experience.html">EXPERIENCE</a></li>
-          <li><a href="about.html">ABOUT</a</li>
-            <li><a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a</li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a></li>
           <li><a class="contact-us-link">CONTACT</a></li>
         </ul>
       </div>
@@ -175,7 +175,9 @@
               </p>
             </div>
           </div>
-          <div class="home-intro-right" style="background-image: url('/images/mobile-about-img-1.png')"></div>
+          <div class="home-intro-right">
+            <img src="/images/mobile-about-img-1.png" />
+          </div>
         </div>
         <div class="review-slideshow">
           <div class="inner">
@@ -183,7 +185,7 @@
             <div class="carousel-container">
               <div class="review-carousel">
                 
-                  <div class="review slick-center">
+                  <div class="review">
                     <div class="inner-review">
                     <img src="images/stock_business.jpg" />
                     <p>
@@ -195,7 +197,7 @@
                   </div>
                   </div>
                 
-                  <div class="review slick-center">
+                  <div class="review">
                     <div class="inner-review">
                     <img src="/images/businesswoman2.jpg" />
                     <p>
@@ -207,7 +209,7 @@
                   </div>
                   </div>
                 
-                  <div class="review slick-center">
+                  <div class="review">
                     <div class="inner-review">
                     <img src="images/stock_business.jpg" />
                     <p>
@@ -219,7 +221,7 @@
                   </div>
                   </div>
                 
-                  <div class="review slick-center">
+                  <div class="review">
                     <div class="inner-review">
                     <img src="/images/stock_businesswoman.jpg" />
                     <p>
@@ -231,7 +233,7 @@
                   </div>
                   </div>
                 
-                  <div class="review slick-center">
+                  <div class="review">
                     <div class="inner-review">
                     <img src="/images/seth_phillips.jpg" />
                     <p>
@@ -382,14 +384,6 @@
           sr.reveal(".services-text");
           sr.reveal("#contact-us-home-section");
         }
-
-        $('.review-carousel').slick({
-          "autoplay": false,
-          "draggable": false,
-          "dots": true,
-          "prevArrow": $('.navigation-arrow-left'),
-          "nextArrow": $('.navigation-arrow-right')
-        })
       })
       function initHomeMap() {
         var uluru = {lat: 33.979449, lng: -118.413002};
