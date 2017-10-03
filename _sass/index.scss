@@ -428,6 +428,10 @@ a {
 
 .contact-us-modal {
   @include modal;
+  .inner {
+    overflow: scroll;
+    height: 60%;
+  }
   .contact-close {
     @include close-button;
     position: absolute;
