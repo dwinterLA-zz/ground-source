@@ -236,6 +236,7 @@ function addScrollListener() {
 }
 
 function authenticate() {
+  $("#dialog").css("opacity", 1);
   var storeCredentials = localStorage.getItem("credentials")
 
   if (checkCredentials(storeCredentials)) {
@@ -253,6 +254,13 @@ function checkCredentials(credentials) {
 
 function displaySite() {
   $('.main').show();
+  $('.review-carousel').slick({
+    "autoplay": false,
+    "draggable": false,
+    "dots": true,
+    "prevArrow": $('.navigation-arrow-left'),
+    "nextArrow": $('.navigation-arrow-right')
+  })
 }
 
 function login() {

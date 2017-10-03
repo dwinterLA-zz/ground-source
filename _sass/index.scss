@@ -11,6 +11,10 @@ body {
   letter-spacing: .5px;
 }
 
+#dialog {
+  opacity: 0;
+}
+
 form.login {
   > label {
     float: left;
