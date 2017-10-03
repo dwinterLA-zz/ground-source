@@ -14,6 +14,9 @@ $(document).ready(function() {
   var modalOffset = 0;
   paginate($('#properties').children());
 
+  $('.logo-upper-left').click(function() {
+    window.location.href = "/index.html";
+  })
   $('.to-top').click(function() {
     window.scrollTo(0,0);
   })
@@ -252,7 +255,7 @@ function checkCredentials(credentials) {
   return PASSWORDS.indexOf(credentials) >= 0
 }
 
-function displaySite() {
+function displaySite  () {
   $('.main').show();
   $('.review-carousel').slick({
     "autoplay": false,

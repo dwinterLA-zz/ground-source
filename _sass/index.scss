@@ -271,6 +271,7 @@ a {
 
 .logo-upper-left {
   @include mobile-logo;
+  cursor: pointer;
   position: absolute;
   top: 35px;
   left: 35px;
