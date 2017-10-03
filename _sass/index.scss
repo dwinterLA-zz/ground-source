@@ -250,6 +250,12 @@ a {
   color: #858585;
 }
 
+.review-carousel {
+  .slick-track {
+    height: 150px;
+  }
+}
+
 .review {
   outline: none;
   padding: 6px 60px;
