@@ -984,6 +984,27 @@ a {
   overflow: hidden;
 }
 
+@media screen and (max-height: 650px) {
+  .service-detail {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: scroll;
+    .inner {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      .form {
+        margin: 0;
+        > p {
+          padding-top: 20px;
+          font-size: 1.8em;
+        }
+      }
+    }
+  }
+}
 @media screen and (min-width: $page-max-width) {
   body {
     font-size: 18px;
