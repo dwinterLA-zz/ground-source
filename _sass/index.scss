@@ -171,7 +171,6 @@ a {
   text-align: center;
   margin: 0 auto;
   .contact-row {
-    -js-display: flex;
     display: flex;
     flex-direction: row;
     flex-flow: row wrap;
@@ -180,6 +179,7 @@ a {
     text-align: left;
     padding-bottom: 9px;
     > div {
+      display: inline-block;
       width: 50%;
       > img {
       float: left;
@@ -548,7 +548,8 @@ a {
 }
 
 .home-intro-left {
-  width: 50%;
+  display: inline-block;
+  width: 48%;
   margin-top: -36px;
   background-color: white;
   font-family: $font-brand;
@@ -566,10 +567,14 @@ a {
 }
 
 .home-intro-right {
-  width: 50%;
+  display: inline-block;
+  width: 48%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  > img {
+    display: inline-block;
+  }
 }
 
 .preview-header {
@@ -665,7 +670,6 @@ a {
 }
 
 .flexbox {
-  -js-display: flex;
   display: flex;
   position: relative;
   flex-direction: row;
@@ -676,7 +680,6 @@ a {
 }
 
 .flexbox-full {
-  -js-display: flex;
   display: flex;
   flex-direction: row;
   flex-flow: row wrap;
@@ -844,12 +847,12 @@ a {
 }
 
 .services-row {
-  -js-display: flex;
   display: flex;
   align-items: stretch;
 }
 
 .services-text {
+  display: inline-block;
   padding: 3em 3em 3em 80px;
   opacity: .9 ;
   width: 33%;
@@ -1250,6 +1253,7 @@ a {
   }
 
   .home-intro-left {
+    display: inline-block;
     width: 100%;
     > div {
       padding: 80px 20px 0 20px;
@@ -1257,7 +1261,9 @@ a {
   }
 
   .home-intro-right {
+    display: inline-block;
     width: 50%;
+    height: 400px;
   }
 
   .services-info {

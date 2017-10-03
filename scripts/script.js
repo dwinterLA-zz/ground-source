@@ -7,8 +7,7 @@ const PASSWORDS = ["keller+groundsource2017"];
 
 $(document).ready(function() {
   if (!compatibleBrowser()) {
-    flexibility(document);
-    $('.contact-info-body').hide();
+    // show labels on ie9 because it doesnt support placeholder text
     $('.contact-labels').show();
   }
   authenticate();
