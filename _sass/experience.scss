@@ -50,6 +50,9 @@
     background-color: white;
     opacity: .85;
     margin: 0 auto;
+    .slick-track {
+      height: 390px;
+    }
     .study {
       vertical-align: middle;
       padding-top: 50px;
@@ -77,6 +80,16 @@
   }
 
   @media screen and (max-height: 900px) {
+    .top {
+      height: 100vh;
+    }
+
+    .bottom {
+      height: 60vh;
+    }
+  }
+
+  @media screen and (max-width: 1080px) {
     .top {
       height: 100vh;
     }
