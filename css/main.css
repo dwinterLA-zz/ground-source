@@ -1679,19 +1679,20 @@ a {
     .services-modal-content .service-detail-close {
       background-color: white;
       background-image: url(../images/menu-close.png);
-      background-size: 18px 18px;
+      background-size: 22px 22px;
       background-position: center center;
       background-repeat: no-repeat;
-      padding: 1em;
-      position: absolute;
-      top: 5px;
-      right: 5px;
       cursor: pointer;
-      z-index: 2;
-      top: 15px;
-      right: 15px; }
+      padding: 2em;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 30;
+      padding: 21px; }
     .services-modal-content .header {
       font-size: .8em; }
+      .services-modal-content .header > h1 {
+        padding-right: 30px; }
     .services-modal-content .content {
       background-color: white; }
 
