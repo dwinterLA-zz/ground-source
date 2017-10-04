@@ -1550,8 +1550,8 @@ a {
     display: inline-block;
     height: 100%; }
 
-  .slick-track {
-    height: inherit; }
+  .review-carousel .slick-track {
+    height: 350px; }
 
   .nav-modal .inner .menu-close {
     padding: 21px; }
@@ -1679,8 +1679,27 @@ a {
 
   .services-modal-content {
     height: 100%; }
+    .services-modal-content .service-detail-close {
+      background-color: white;
+      background-image: url(../images/menu-close.png);
+      background-size: 18px 18px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding: 1em;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+      z-index: 2;
+      top: 15px;
+      right: 15px; }
+    .services-modal-content .header {
+      font-size: .8em; }
+    .services-modal-content .content {
+      background-color: white; }
 
   .service-detail {
+    min-width: 1px;
     width: 100%;
     height: 100%;
     overflow: scroll; }
@@ -1704,9 +1723,7 @@ a {
       padding: 80px 20px 0 20px; }
 
   .home-intro-right {
-    display: inline-block;
-    width: 50%;
-    height: 400px; }
+    display: none; }
 
   .services-info {
     width: 100%; }
@@ -2879,7 +2896,7 @@ a {
     top: 0%;
     width: 94vw;
     height: 100%;
-    padding: 40px 20px; }
+    padding: 80px 20px 40px 20px; }
   #container-experience .study-carousel {
     width: 100vw; } }
 
