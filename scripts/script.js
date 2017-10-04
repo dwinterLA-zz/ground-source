@@ -149,9 +149,11 @@ $(document).ready(function() {
   $('.close-agent-detail').click(function() {
     $('.agent-details').fadeOut();
     $('.main').removeClass('mobile-bg-hide');
+    window.scrollTo(0, modalOffset);
   })
 
   $('.bio-button').click(function() {
+    modalOffset = window.pageYOffset;
     let agent = $(this).data('agent');
     $("#agent-" + agent).fadeIn();
     $('.main').addClass('mobile-bg-hide');
