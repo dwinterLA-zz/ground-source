@@ -1650,13 +1650,13 @@ a {
       left: 0; }
       #contact-us-home-section .contact-content .contact-header {
         padding: 23px 0 19px 0;
+        margin-left: 0;
+        text-align: center;
         background: rgba(255, 255, 255, 0.8);
-        font-size: 52px;
-        margin-left: 25px; }
+        font-size: 52px; }
       #contact-us-home-section .contact-content .contact-body {
         padding: 0;
-        font-size: .95em;
-        padding-left: 12px; }
+        font-size: .95em; }
         #contact-us-home-section .contact-content .contact-body > ul {
           padding-left: 0; }
 
