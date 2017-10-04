@@ -127,7 +127,7 @@
                     <div class="inner-review">
                     <img src="{{ testimonial.userImg }}" />
                     <p>
-                      {{ testimonial.text }}
+                      <span class="testimonial-text">{{ testimonial.text }}</span>
                       <br />
                       <br />
                       <strong>- {{ testimonial.name }}</strong>
@@ -199,6 +199,15 @@
     <script>
       $(document).ready(function() {
         var logo = $("#header-logo");
+
+        $(".testimonial-text").each(function() {
+          var text = $(this).text();
+          if (text.length > 150) {
+            var shortenedText = $(this).text().slice(0,150);
+            shortenedText += " ..."
+            $(this).text(shortenedText);
+          }
+        });
 
         $(logo).addClass("prepareSlideUp");
         $("#header-text").css("opacity", 0);
