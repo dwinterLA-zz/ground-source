@@ -1304,7 +1304,7 @@ a {
     .review-slideshow .review p {
       max-width: 800px;
       vertical-align: middle;
-      font-size: .5em;
+      font-size: .7em;
       padding: 12px;
       text-align: left;
       display: inline-block; }
@@ -1532,7 +1532,7 @@ a {
     height: 100%; }
 
   .review-carousel .slick-track {
-    height: 375px; }
+    height: 300px; }
 
   .nav-modal .inner .menu-close {
     padding: 21px; }
@@ -1598,7 +1598,7 @@ a {
       height: 10px; }
 
   .review-slideshow {
-    padding: 28px 12px; }
+    padding: 12px; }
     .review-slideshow .review {
       display: -webkit-box;
       display: -ms-flexbox;

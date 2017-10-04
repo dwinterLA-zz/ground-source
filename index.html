@@ -189,7 +189,7 @@
                     <div class="inner-review">
                     <img src="images/stock_business.jpg" />
                     <p>
-                      I found that I could be way more productive at GroundSource!
+                      <span class="testimonial-text">I found that I could be way more productive at GroundSource!</span>
                       <br />
                       <br />
                       <strong>- Lance Doe</strong>
@@ -201,7 +201,7 @@
                     <div class="inner-review">
                     <img src="/images/businesswoman2.jpg" />
                     <p>
-                      GroundSource helped me find great space to lease.
+                      <span class="testimonial-text">GroundSource helped me find great space to lease.</span>
                       <br />
                       <br />
                       <strong>- Linda Doe</strong>
@@ -213,7 +213,7 @@
                     <div class="inner-review">
                     <img src="images/stock_business.jpg" />
                     <p>
-                      GroundSource leasing agents were both professional and friendly.
+                      <span class="testimonial-text">GroundSource leasing agents were both professional and friendly.</span>
                       <br />
                       <br />
                       <strong>- Bob Doe</strong>
@@ -225,7 +225,7 @@
                     <div class="inner-review">
                     <img src="/images/stock_businesswoman.jpg" />
                     <p>
-                      GroundSource is great! My experience has been wonderful!!
+                      <span class="testimonial-text">GroundSource is great! My experience has been wonderful!!</span>
                       <br />
                       <br />
                       <strong>- Jane</strong>
@@ -237,7 +237,7 @@
                     <div class="inner-review">
                     <img src="/images/seth_phillips.jpg" />
                     <p>
-                      I work with GROUNDSOURCE because they deliver — the best market insight, the most direct relationships, and, ultimately, the best deal.  And they do it with integrity.  No bait-and-switch, no sweetheart deals, no one’s best interest over mine.  For over a decade, I have trusted them on deals from 1,000 sq/ft to 100,000 sq/ft and everything in between — no one works harder or knows more.  These are professionals worthy of your time, and more importantly, your TRUST.
+                      <span class="testimonial-text">I work with GROUNDSOURCE because they deliver — the best market insight, the most direct relationships, and, ultimately, the best deal.  And they do it with integrity.  No bait-and-switch, no sweetheart deals, no one’s best interest over mine.  For over a decade, I have trusted them on deals from 1,000 sq/ft to 100,000 sq/ft and everything in between — no one works harder or knows more.  These are professionals worthy of your time, and more importantly, your TRUST.</span>
                       <br />
                       <br />
                       <strong>- Seth Phillips Althoff</strong>
@@ -365,6 +365,15 @@
     <script>
       $(document).ready(function() {
         var logo = $("#header-logo");
+
+        $(".testimonial-text").each(function() {
+          var text = $(this).text();
+          if (text.length > 150) {
+            var shortenedText = $(this).text().slice(0,150);
+            shortenedText += " ..."
+            $(this).text(shortenedText);
+          }
+        });
 
         $(logo).addClass("prepareSlideUp");
         $("#header-text").css("opacity", 0);
