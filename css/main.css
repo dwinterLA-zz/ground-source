@@ -1451,19 +1451,6 @@ a {
   padding: 31px;
   cursor: pointer; }
 
-.simple-close-small {
-  background-color: white;
-  background-image: url(../images/menu-close.png);
-  background-size: 18px 18px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  padding: 1em;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  cursor: pointer;
-  z-index: 2; }
-
 .to-top {
   background-color: white;
   background-image: url(../images/ham-menu.png);
@@ -2468,6 +2455,22 @@ a {
     padding: 3px 18px; }
   #container-about .bio-pic-mobile {
     display: none; }
+  #container-about .close-agent-detail {
+    background-color: white;
+    background-image: url(../images/menu-close.png);
+    background-size: 22px 22px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    padding: 2em;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 30;
+    position: absolute;
+    color: #d46049;
+    cursor: pointer;
+    padding: 21px; }
   #container-about .agent-details {
     display: none;
     position: fixed;
