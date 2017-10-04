@@ -1249,12 +1249,14 @@ a {
   .services-modal-content {
     height: 100%;
     .service-detail-close {
-      @include close-button-small;
-      top: 15px;
-      right: 15px;
+      @include close-button;
+      padding: 21px;
     }
     .header {
       font-size: .8em;
+      > h1 {
+        padding-right: 30px;
+      }
     }
     .content {
       background-color: white;
