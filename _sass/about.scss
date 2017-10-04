@@ -432,6 +432,9 @@
           color: black;
           opacity: .55;
           line-height: 110%;
+          > p {
+            padding-bottom: 30px;
+          }
           > h2 {
             opacity: 1;
           }
