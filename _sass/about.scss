@@ -54,6 +54,13 @@
     display: none;
   }
 
+  .close-agent-detail {
+    @include close-button;
+    position: absolute;
+    color: $primary-color;
+    cursor: pointer;
+    padding: 21px;
+  }
   .agent-details {
     @include modal;
     .content {

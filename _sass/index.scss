@@ -976,10 +976,6 @@ a {
 
 }
 
-.simple-close-small {
-  @include close-button-small;
-}
-
 .to-top {
   @include hamburger-menu;
   background-image: url(../images/scroll-arrow-up.png);
