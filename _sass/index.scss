@@ -1069,8 +1069,10 @@ a {
     height: 100%;
   }
 
-  .slick-track {
-    height: inherit;
+  .review-carousel {
+    .slick-track {
+      height: 350px;
+    }
   }
 
   .nav-modal {
@@ -1238,9 +1240,21 @@ a {
 
   .services-modal-content {
     height: 100%;
+    .service-detail-close {
+      @include close-button-small;
+      top: 15px;
+      right: 15px;
+    }
+    .header {
+      font-size: .8em;
+    }
+    .content {
+      background-color: white;
+    }
   }
 
   .service-detail {
+    min-width: 1px;
     width: 100%;
     height: 100%;
     overflow: scroll;
@@ -1270,9 +1284,7 @@ a {
   }
 
   .home-intro-right {
-    display: inline-block;
-    width: 50%;
-    height: 400px;
+    display: none;
   }
 
   .services-info {
