@@ -1292,8 +1292,9 @@ a {
     margin: 0 auto; }
   .review-slideshow .review::before {
     content: '';
-    display: inline;
-    vertical-align: middle; }
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; }
   .review-slideshow .review div {
     vertical-align: middle;
     display: inline-block; }
@@ -1611,6 +1612,15 @@ a {
 
   .review-slideshow {
     padding: 28px 12px; }
+    .review-slideshow .review {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .review-slideshow .review::before {
+      display: none; }
     .review-slideshow .inner img {
       margin-top: 3px;
       max-width: 35%; }
