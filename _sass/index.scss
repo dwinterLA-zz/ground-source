@@ -797,8 +797,9 @@ a {
 
   .review::before {
     content: '';
-    display: inline;
+    display: inline-block;
     vertical-align: middle;
+    height: 100%;
   }
 
   .review div {
@@ -1152,6 +1153,13 @@ a {
   }
 
   .review-slideshow {
+    .review {
+      display: flex;
+      align-items: center;
+    }
+    .review::before {
+      display: none;
+    }
     padding: 28px 12px;
     .inner {
       img {
