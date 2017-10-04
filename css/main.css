@@ -2775,6 +2775,8 @@ a {
           color: black;
           opacity: .55;
           line-height: 110%; }
+          #container-about .agent-details .content .bio > p {
+            padding-bottom: 30px; }
           #container-about .agent-details .content .bio > h2 {
             opacity: 1; }
         #container-about .agent-details .content .footer {
