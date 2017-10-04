@@ -1197,23 +1197,25 @@ a {
     .contact-us-gmap-container {
       display: none;
     }
-    .contact-content {
-      position: absolute;
-      top: 47%;
-      width: 100%;
-      left: 0;
-      .contact-header {
-        padding: 23px 0 19px 0;
-        margin-left: 0;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.8);
-        font-size: 52px;
-      }
-      .contact-body {
-        padding-left: 12px;
-        font-size: .95em;
-        > ul {
-          padding-left: 0;
+    .contact-subcontainer {
+      padding-left: 0;
+      .contact-content {
+        position: static;
+        width: 100%;
+        padding-top: 0;
+        .contact-header {
+          padding: 23px 0 19px 0;
+          margin-left: 0;
+          text-align: center;
+          background: rgba(255, 255, 255, 0.8);
+          font-size: 52px;
+        }
+        .contact-body {
+          padding-left: 12px;
+          font-size: .95em;
+          > ul {
+            padding-left: 0;
+          }
         }
       }
     }
