@@ -41,10 +41,8 @@ collections:
     output: true
     layout: listing
     scope:
-     permalink: /:collection/:path
     values:
      layout: listing
-
   testimonials:
   agents:
   case_studies:

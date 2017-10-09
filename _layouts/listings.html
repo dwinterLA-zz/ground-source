@@ -97,7 +97,8 @@
           </div>
           </div>
           <div id="properties" class="flexbox listings">
-            {% for listing in site.listings %}
+            {% assign listings = site.listings | where: "layout", "listing" %}
+            {% for listing in listings %}
               <div class="listing-preview" data-location="{{listing.address-line-2}}" data-available="{{listing.available}}" data-lease="{{listing.lease}}" data-buy="{{listing.buy}}" data-rooms="{{listing.rooms}}" data-size="{{listing.sq-footage}}" data-price="{{listing.price}}">
                 <a href={{listing.url}}>
                   {% if listing.property-preview-image %}
