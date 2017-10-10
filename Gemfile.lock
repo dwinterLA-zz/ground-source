@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/groundsourceLA/multipost-jekyll.git
+  revision: 0bc7dff7645b272d6eb2efff1b336fd90f963a13
+  specs:
+    jekyll-multipost (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -64,6 +70,7 @@ DEPENDENCIES
   jekyll-autoprefixer
   jekyll-babel
   jekyll-feed (~> 0.6)
+  jekyll-multipost!
   minima (~> 2.0)
   tzinfo-data
 
