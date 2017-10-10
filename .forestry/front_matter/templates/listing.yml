@@ -104,3 +104,10 @@ fields:
 - type: file
   name: property-header
   label: Property Header Image
+- type: list
+  name: layout
+  label: layout
+  hidden: true
+  default:
+  - newsletter
+  - listing
