@@ -78,11 +78,6 @@ fields:
   type: datetime
   hidden: false
   default: ''
-- name: layout
-  label: Layout
-  type: text
-  hidden: false
-  default: "[listing, newsletter]"
 - type: boolean
   name: available
   label: Available
@@ -104,3 +99,10 @@ fields:
 - type: file
   name: property-header
   label: Property Header Image
+- type: list
+  name: layout
+  label: layout
+  hidden: true
+  default:
+  - newsletter
+  - listing
