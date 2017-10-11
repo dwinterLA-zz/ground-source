@@ -11,19 +11,6 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!-- build:css({.tmp/serve,src}) styles/app.css -->
-    <!-- inject:css -->
-    <!-- css files will be automatically insert here -->
-    <!-- endinject -->
-    <!-- endbuild -->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
     <script type="text/javascript">WebFont.load({
     google: {
@@ -374,6 +361,18 @@
             $(this).text(shortenedText);
           }
         });
+
+        var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
+
+        if (sectionQuery === "testimonials") {
+          window.setTimeout(function() {
+            window.scrollTo(0, $('.review-slideshow').offset().top);
+          }, 500)
+        } else if (sectionQuery === "contact") {
+          $('.main').addClass('modal-open');
+          $('.contact-us-modal').fadeIn();
+          $('.nav-modal').fadeOut();
+        }
 
         $(logo).addClass("prepareSlideUp");
         $("#header-text").css("opacity", 0);
