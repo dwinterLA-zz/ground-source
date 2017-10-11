@@ -2165,7 +2165,7 @@ a {
     margin-right: 8px; }
   #container-listings .content {
     padding-top: 12vh;
-    min-height: 82vh; }
+    min-height: 85vh; }
   #container-listings .header {
     text-align: center; }
     #container-listings .header > h4 {
@@ -2947,14 +2947,11 @@ a {
   text-align: left; }
 
 .bodyContent {
-  color: #737373;
   font-family: 'Lato', sans-serif;
-  font-size: 20px;
   line-height: 140%;
   padding-top: 20px;
   padding-right: 50px;
   padding-bottom: 20px;
-  padding-left: 50px;
   /*@editable*/
   text-align: left; }
 
@@ -2983,20 +2980,18 @@ a {
   position: relative; }
 
 .details-button {
-  position: absolute;
-  bottom: 5px;
-  left: 33px;
-  width: 220px;
+  width: 251px;
   border-radius: 500px;
-  margin-top: 22px;
+  margin-top: -15px;
+  margin-bottom: 15px;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 19px;
   color: white;
   background-color: #d46049;
   border-color: #c04d3a;
   border-style: solid;
   border-width: thin;
-  padding: 16px 26px;
+  padding: 11px 26px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center; }
@@ -3039,7 +3034,6 @@ a {
     margin-right: 6px; }
 
 .highlights__table {
-  font-size: 22px;
   padding: 18px 0; }
 
 .table__footer {
@@ -3047,15 +3041,29 @@ a {
   font-size: 14px;
   color: white; }
 
+.table__caption {
+  background: -webkit-linear-gradient(top, #d4d2d3, white);
+  background: linear-gradient(to bottom, #d4d2d3, white); }
+
 .list-header {
-  font-weight: 800; }
+  font-weight: 800;
+  font-size: 16px; }
 
 .footer-header {
   font-weight: 800;
-  font-size: 18px; }
+  font-size: 16px; }
 
 .phone-icon {
   margin-right: 6px; }
+
+.padding-left {
+  padding-left: 24px; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.strong {
+  color: black; }
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
