@@ -2916,7 +2916,7 @@ a {
   #container-experience .study-carousel {
     width: 100vw; } }
 
-.address {
+.address-newsletter {
   color: #484747 !important;
   display: block;
   font-family: 'Lato', sans-serif;
@@ -3001,7 +3001,7 @@ a {
   text-decoration: none;
   text-align: center; }
 
-.listing-label {
+.listing-label-newsletter {
   position: absolute;
   right: 0px;
   top: -8px;
@@ -3017,7 +3017,8 @@ a {
   background-color: #3678c6; }
 
 .static-g-map {
-  width: 900px; }
+  width: 800px;
+  padding-bottom: 43px; }
 
 .border-bottom {
   border-bottom: solid thin #DCDCDC; }
