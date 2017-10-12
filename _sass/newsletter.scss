@@ -92,7 +92,6 @@
 }
 .static-g-map {
   width: 800px;
-  padding-bottom: 43px;
 }
 .border-bottom {
   border-bottom: solid thin #DCDCDC;
@@ -103,6 +102,7 @@
 
 .table {
   background-color:white;
+  margin: 16px 0;
 }
 
 .amenities__table {
@@ -126,9 +126,11 @@
   background-color: #d46049;
   font-size: 14px;
   color: white;
+  margin-bottom: 0;
 }
 
 .table__caption {
+  margin-top: 0;
   background: linear-gradient(to bottom, #d4d2d3, white);
 }
 
