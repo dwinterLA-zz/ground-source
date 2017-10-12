@@ -2986,8 +2986,8 @@ a {
   font-weight: 500;
   font-size: 19px;
   color: white;
-  background-color: #d46049;
-  border-color: #c04d3a;
+  background-color: #d85744;
+  border-color: #d85744;
   border-style: solid;
   border-width: thin;
   padding: 11px 26px;
@@ -3032,16 +3032,19 @@ a {
 .highlights__table {
   padding: 18px 0; }
 
-.table__footer {
-  background-color: #d46049;
-  font-size: 14px;
-  color: white;
-  margin-bottom: 0; }
-
 .table__caption {
   margin-top: 0;
   background: -webkit-linear-gradient(top, #d4d2d3, white);
   background: linear-gradient(to bottom, #d4d2d3, white); }
+
+.table__map {
+  margin-bottom: 50px; }
+
+.table__footer {
+  background-color: #d85744;
+  font-size: 14px;
+  color: white;
+  margin: 0; }
 
 .list-header {
   font-weight: 800;
