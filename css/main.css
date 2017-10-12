@@ -2919,7 +2919,6 @@ a {
 .address-newsletter {
   color: #484747 !important;
   display: block;
-  font-family: 'Lato', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: light;
@@ -2934,7 +2933,6 @@ a {
 .address_city {
   color: #484747 !important;
   display: block;
-  font-family: 'Lato', sans-serif;
   font-size: 42px;
   font-style: normal;
   font-weight: regular;
@@ -2947,22 +2945,24 @@ a {
   text-align: left; }
 
 .bodyContent {
-  font-family: 'Lato', sans-serif;
   line-height: 140%;
   padding-top: 20px;
   padding-bottom: 20px;
-  /*@editable*/
   text-align: left; }
+
+.newsletter-phone {
+  text-align: right; }
+
+.newsletter-property-header-image {
+  max-width: 900px; }
 
 .newsletter-amenities {
   color: #5e5e5e;
-  font-family: 'Lato', sans-serif;
   font-weight: 700;
   line-height: 140%; }
 
 .newsletter-amenities2 {
   color: #989899;
-  font-family: 'Lato', sans-serif;
   font-weight: 200;
   line-height: 140%;
   font-style: italic;
@@ -2997,7 +2997,6 @@ a {
   text-align: center; }
 
 .listing-label-newsletter {
-  font-family: 'Lato', sans-serif;
   font-size: 26px;
   color: white;
   padding: 8px 52px; }
@@ -3019,6 +3018,11 @@ a {
 
 .border-right {
   border-right: solid thin #DCDCDC; }
+
+.container-table {
+  margin: 0px auto;
+  padding: 0px;
+  background-color: white; }
 
 .table {
   background-color: white;
@@ -3049,6 +3053,8 @@ a {
   font-size: 14px;
   color: white;
   margin: 0; }
+  .table__footer td {
+    padding-bottom: 8px; }
 
 .list-header {
   font-weight: 800;
@@ -3070,6 +3076,9 @@ a {
   text-transform: uppercase;
   text-decoration: none !important;
   color: black !important; }
+  .newsletter-address a {
+    text-decoration: none;
+    color: black; }
 
 .newsletter-footer-header {
   font-weight: 800;
@@ -3077,7 +3086,7 @@ a {
   padding-top: 25px; }
 
 .newsletter-bottom-cell {
-  padding-bottom: 25px; }
+  padding-bottom: 25px !important; }
 
 .strong {
   color: black; }
