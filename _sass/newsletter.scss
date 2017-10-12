@@ -122,16 +122,20 @@
   padding: 18px 0;
 }
 
+.table__caption {
+  margin-top: 0;
+  background: linear-gradient(to bottom, #d4d2d3, white);
+}
+
+.table__map {
+  margin-bottom: 50px;
+}
+
 .table__footer {
   background-color: #d46049;
   font-size: 14px;
   color: white;
-  margin-bottom: 0;
-}
-
-.table__caption {
-  margin-top: 0;
-  background: linear-gradient(to bottom, #d4d2d3, white);
+  margin: 0;
 }
 
 .list-header {
