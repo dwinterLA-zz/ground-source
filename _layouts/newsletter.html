@@ -34,10 +34,10 @@
             <tr>
               <td valign="top" class="headerContent" colspan="5">
                 {% if page.lease %}
-                <div class="listing-label-newsletter lease-label">For Lease</div>
+                <div class="listing-label-newsletter lease-label">FOR LEASE</div>
                 {% endif %}
                 {% if page.sale %}
-                <div class="listing-label-newsletter rent-label">For Sale</div>
+                <div class="listing-label-newsletter rent-label">FOR SALE</div>
                 {% endif %}
                 <img src="{{page.property-header}}" style="max-width:900px;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
               </td>
@@ -107,12 +107,16 @@
                 <td width="50px"></td>
               </tr>
           </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
           <table border="0" cellpadding="0" cellspacing="0" width="900px" class="table highlights__table">
             <tr>
               <td width="50px"></td>
-              <td width="800px">
+              <td width="800px" class="padding-bottom">
                 <span class="list-header">BUILDING HIGHLIGHTS</span>
-                <ul>
+                <ul class="newsletter-highlights">
                   {% for highlight in page.highlights %}
                   <li>{{ highlight }}</li>
                   {% endfor %}
@@ -124,7 +128,7 @@
               <td width="50px"></td>
               <td width="800px">
                 <span class="list-header">AMENITIES</span>
-                <ul class="list">
+                <ul class="newsletter-highlights">
                   {% for amenity in page.amenities %}
                   <li>{{ amenity }}</li>
                   {% endfor %}
@@ -150,7 +154,7 @@
       </tr>
       <tr>
         <td align="center" valign="top">
-          <table border="0" cellpadding="8" cellspacing="0" width="800px" class="table table__footer">
+          <table border="0" cellpadding="8" cellspacing="0" width="900px" class="table table__footer">
             <tr>
               <td width="50px"></td>
               <td width="250px" class="newsletter-footer-header"><a href="{{site.contact.url}}/listings.html">LISTINGS</a></td>
