@@ -2950,7 +2950,6 @@ a {
   font-family: 'Lato', sans-serif;
   line-height: 140%;
   padding-top: 20px;
-  padding-right: 50px;
   padding-bottom: 20px;
   /*@editable*/
   text-align: left; }
@@ -2997,13 +2996,10 @@ a {
   text-align: center; }
 
 .listing-label-newsletter {
-  position: absolute;
-  right: 0px;
-  top: -8px;
   font-family: 'Lato', sans-serif;
   font-size: 26px;
   color: white;
-  padding: 8px 37px; }
+  padding: 8px 52px; }
 
 .rent-label {
   background-color: #d46049; }
@@ -3012,8 +3008,7 @@ a {
   background-color: #3678c6; }
 
 .static-g-map {
-  width: 800px;
-  padding-bottom: 43px; }
+  width: 800px; }
 
 .border-bottom {
   border-bottom: solid thin #DCDCDC; }
@@ -3022,7 +3017,8 @@ a {
   border-right: solid thin #DCDCDC; }
 
 .table {
-  background-color: white; }
+  background-color: white;
+  margin: 16px 0; }
 
 .amenities__table {
   padding: 18px 0; }
@@ -3039,9 +3035,11 @@ a {
 .table__footer {
   background-color: #d46049;
   font-size: 14px;
-  color: white; }
+  color: white;
+  margin-bottom: 0; }
 
 .table__caption {
+  margin-top: 0;
   background: -webkit-linear-gradient(top, #d4d2d3, white);
   background: linear-gradient(to bottom, #d4d2d3, white); }
 
