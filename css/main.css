@@ -2963,7 +2963,6 @@ a {
 .newsletter-amenities2 {
   color: #989899;
   font-family: 'Lato', sans-serif;
-  font-size: 22px;
   font-weight: 200;
   line-height: 140%;
   font-style: italic;
@@ -3002,6 +3001,9 @@ a {
   font-size: 26px;
   color: white;
   padding: 8px 52px; }
+
+.newsletter-highlights {
+  color: #666666; }
 
 .rent-label {
   background-color: #d46049; }
@@ -3060,6 +3062,9 @@ a {
 
 .padding-right {
   padding-left: 24px; }
+
+.padding-bottom {
+  padding-bottom: 18px; }
 
 .newsletter-address {
   text-transform: uppercase;
