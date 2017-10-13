@@ -50,13 +50,13 @@
           <table border="0" cellpadding="0" cellspacing="0" width="900px" class="table table__caption">
             <tr>
               <td width="50px"></td>
-              <td width="800px" valign="top" class="bodyContent">
+              <td width="800px" valign="top">
               <a href="{{site.data.contact.url}}/listings/{{page.title}}/listing.html">
                 <div class="details-button">View Details</div>
               </a>
               <span class="address-newsletter newsletter-address"><a>{{page.address-line-1}}</a></span>
-              <span class="address_city newsletter-address"><b><a>{{page.address-line-2}}</a></span>
-                {{page.info-text}}
+              <span class="address_city newsletter-address"><a><b>{{page.address-line-2}}</b></a></span>
+                <div class="newsletter-info-text">{{page.info-text}}</div>
               </td>
               <td width="50px"></td>
             </tr>
@@ -82,12 +82,12 @@
           <table class="table amenities__table" border="0" cellpadding="0" cellspacing="0" width="900px">
             <tr>
               <td width="50px"></td>
-              <td width="400px" valign="top" class="bodyContent border-right border-bottom padding-right">
+              <td width="400px" valign="top" class="bodyContent border-right border-bottom">
                 <img src="/images/newsletter/img/gs-newsletter-icon-1.png" width="45" height="45" alt="Rate" />
                 <span class="newsletter-amenities"><span class="strong">{{page.rate}}</span></span>
                 <div class="newsletter-amenities2">(taxes are $0.07 PSF)</div>
               </td>
-              <td width="400px" valign="top" class="bodyContent border-bottom padding-left">
+              <td width="400px" valign="top" class="bodyContent border-bottom">
                 <img src="/images/newsletter/img/gs-newsletter-icon-2.png" width="45" height="45" alt="Rate" />
                 <span class="newsletter-amenities"><span class="strong">{{page.sq-footage}}</span> Square Feet</span>
               </td>
@@ -95,12 +95,11 @@
             </tr>
             <tr>
               <td width="50px"></td>
-              <td width="400px" valign="top" class="bodyContent border-right padding-right">
+              <td width="400px" valign="top" class="bodyContent border-right">
                 <img src="/images/newsletter/img/gs-newsletter-icon-3.png" width="45" height="45" alt="Rate" />
                 <span class="newsletter-amenities"><span class="strong">Available:</span> January 1, 2018</span>
-                <span class="newsletter-amenities2"></span>
               </td>
-              <td width="400px" valign="top" class="bodyContent padding-left">
+              <td width="400px" valign="top" class="bodyContent">
                 <img src="/images/newsletter/img/gs-newsletter-icon-4.png" width="45" height="45" alt="Rate" />
                 <span class="newsletter-amenities"><strong><span class="strong">{{page.parking}}</span> Parking Spaces</span>
                 </td>
