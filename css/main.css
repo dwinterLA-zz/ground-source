@@ -2926,7 +2926,7 @@ a {
   letter-spacing: normal;
   margin-top: 0;
   margin-right: 0;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   margin-left: 0;
   text-align: left; }
 
@@ -2966,7 +2966,7 @@ a {
   font-weight: 200;
   line-height: 140%;
   font-style: italic;
-  padding-left: 67px;
+  padding-left: 30px;
   margin-top: -10px; }
 
 .column_image2 {
@@ -2982,8 +2982,8 @@ a {
 .details-button {
   width: 251px;
   border-radius: 500px;
-  margin-top: -15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   font-weight: 500;
   font-size: 19px;
   color: white;
@@ -3003,6 +3003,9 @@ a {
 
 .newsletter-highlights {
   color: #666666; }
+
+.newsletter-info-text {
+  padding-bottom: 20px; }
 
 .rent-label {
   background-color: #d46049; }
@@ -3031,7 +3034,8 @@ a {
 .amenities__table {
   padding: 18px 0; }
   .amenities__table td {
-    vertical-align: middle; }
+    vertical-align: middle;
+    text-align: center !important; }
   .amenities__table tr {
     height: 115px; }
   .amenities__table img {
