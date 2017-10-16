@@ -131,6 +131,16 @@
         sr.reveal(".about-main-text");
         sr.reveal(".agents");
       }
+
+      $(".short-bio").each(function() {
+        var cutoff = 200
+        var text = $(this).text();
+        if (text.length > cutoff) {
+          var shortenedText = $(this).text().slice(0,cutoff);
+          shortenedText += " ..."
+          $(this).text(shortenedText);
+        }
+      });
     })
   </script>
 </html>
