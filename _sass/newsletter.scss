@@ -154,9 +154,6 @@
   font-size: 14px;
   color: white;
   margin: 0;
-  td {
-    padding-bottom: 8px;
-  }
 }
 
 .list-header {
@@ -191,13 +188,17 @@
 }
 
 .newsletter-footer-header {
-  font-weight: 800;
-  font-size: 16px;
-  padding-top: 25px;
+  font-size: 22px;
+  padding-top: 24px;
+  font-weight: bold;
 }
 
-.newsletter-bottom-cell {
-  padding-bottom: 25px !important;
+.newsletter-footer-bottom {
+  padding: 24px 0;
+}
+
+.newsletter-home-link {
+  font-weight: bold;
 }
 
 .strong {
