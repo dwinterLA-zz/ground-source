@@ -1,11 +1,9 @@
 ---
-phone: (555)555-5555
+phone: "(555)555-5555"
 email: your-email@example.com
-address: 1157 Highland Ave, Los Angeles, CA 90028
+address: 12121 Wilshire Boulevard, Ste 900, Los Angeles, CA 90025
 instagram: groundsourcela
 twitter: groundsourcela
 facebook: groundsourcela
 url: https://groundsource.bondbeta.com
-# url: http://localhost:4000/
 staticGMap: AIzaSyB6EeWEnkg0W6sSgfcENm4V-ptnYG_WCFA
----
