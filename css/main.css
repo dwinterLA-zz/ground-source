@@ -3093,6 +3093,10 @@ a {
 .newsletter-home-link {
   font-weight: bold; }
 
+.email-link {
+  text-decoration: none;
+  color: white; }
+
 .strong {
   color: black; }
 
