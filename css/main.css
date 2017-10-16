@@ -1312,7 +1312,6 @@ a {
         text-transform: uppercase; }
     .review-slideshow .review img {
       display: inline-block;
-      margin-top: -4%;
       z-index: 25;
       width: 100px;
       border-style: solid;
@@ -2666,7 +2665,8 @@ a {
       padding: 28px 0 12px 0;
       text-align: left;
       font-size: .85em;
-      min-height: 90px; }
+      min-height: 90px;
+      min-height: 120px; }
     #container-about .agent .bio-button {
       display: inline-block;
       color: #d46049;

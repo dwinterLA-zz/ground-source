@@ -61,7 +61,7 @@
     </div>
     <div>
       <img src="/images/location-icon.png" class="icon-small address"/>
-      <span class="underline address-line">1157 Highland Ave, Los Angeles, CA 90028</span>
+      <span class="underline address-line">12121 Wilshire Boulevard, Ste 900, Los Angeles, CA 90025</span>
     </div>
   </div>
   <div class="contact-row">
@@ -278,7 +278,7 @@
                   <ul>
                     <li><img src="images/phone-icon.png" class="icon-small"/>(555)555-5555</li>
                     <li><img src="images/email-icon.png" class="icon-small"/><a href="mailto:">your-email@example.com</a></li>
-                    <li><img src="images/location-icon.png" class="icon-small"/><span class="underline">1157 Highland Ave, Los Angeles, CA 90028</span></li>
+                    <li><img src="images/location-icon.png" class="icon-small"/><span class="underline">12121 Wilshire Boulevard, Ste 900, Los Angeles, CA 90025</span></li>
                     <li><img src="images/ig-icon.png" class="icon-small"/><a href="https://www.instagram.com/">@groundsourcela</a></li>
                   </ul>
                 </div>
@@ -291,6 +291,10 @@
         </div>
         <div class="footer">
   <div class="inner">
+    <div class="column">
+      <div class="title"><a href="/index.html">HOME</a></div>
+      <a href="/index.html?section=services">Services</a>
+    </div>
     <div class="column">
       <div class="title"><a href="/listings.html">LISTINGS</a></div>
       <a href="/listings.html?type=buy">Properties For Sale</a>
@@ -372,6 +376,10 @@
           $('.main').addClass('modal-open');
           $('.contact-us-modal').fadeIn();
           $('.nav-modal').fadeOut();
+        } else if (sectionQuery === "services") {
+          window.setTimeout(function() {
+            window.scrollTo(0, $('.services-content').offset().top);
+          }, 500)
         }
 
         $(logo).addClass("prepareSlideUp");

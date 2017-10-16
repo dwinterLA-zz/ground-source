@@ -58,7 +58,7 @@
     </div>
     <div>
       <img src="/images/location-icon.png" class="icon-small address"/>
-      <span class="underline address-line">1157 Highland Ave, Los Angeles, CA 90028</span>
+      <span class="underline address-line">12121 Wilshire Boulevard, Ste 900, Los Angeles, CA 90025</span>
     </div>
   </div>
   <div class="contact-row">
@@ -170,6 +170,10 @@
           </div>
           <div class="footer">
   <div class="inner">
+    <div class="column">
+      <div class="title"><a href="/index.html">HOME</a></div>
+      <a href="/index.html?section=services">Services</a>
+    </div>
     <div class="column">
       <div class="title"><a href="/listings.html">LISTINGS</a></div>
       <a href="/listings.html?type=buy">Properties For Sale</a>
@@ -340,6 +344,16 @@
         sr.reveal(".about-main-text");
         sr.reveal(".agents");
       }
+
+      $(".short-bio").each(function() {
+        var cutoff = 200
+        var text = $(this).text();
+        if (text.length > cutoff) {
+          var shortenedText = $(this).text().slice(0,cutoff);
+          shortenedText += " ..."
+          $(this).text(shortenedText);
+        }
+      });
     })
   </script>
 </html>
