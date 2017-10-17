@@ -526,6 +526,9 @@ body {
 #dialog {
   opacity: 0; }
 
+.services-home-button {
+  cursor: pointer; }
+
 form.login > label {
   float: left;
   margin-bottom: 15px; }
