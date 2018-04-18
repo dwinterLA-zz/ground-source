@@ -937,6 +937,8 @@ a {
   .contact-us-modal .inner {
     overflow: scroll;
     height: 60%; }
+  .contact-us-modal .contact-us-modal__info {
+    margin-top: 85px; }
   .contact-us-modal .contact-close {
     background-color: white;
     background-image: url(../images/menu-close.png);
@@ -956,7 +958,6 @@ a {
   .contact-us-modal .form {
     margin: 36px; }
     .contact-us-modal .form > p {
-      padding-top: 75px;
       font-weight: 50;
       margin-bottom: 42px;
       color: #777777;

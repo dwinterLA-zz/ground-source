@@ -31,29 +31,8 @@
 
     <div class="contact-us-modal">
   <div class="inner">
-    <div class="contact-close"></div>
-    <form id="gform" class="form" method="POST">
-      <p class="contact-us">CONTACT US</p>
-      <label class="contact-labels" for="name">Name</label>
-      <input name="name" type="text" placeholder="Name">
-      <label class="contact-labels" for="email">Email</label>
-      <input name="email" type="text" placeholder="Email">
-      <div id="email-invalid" class="validation">Please use a valid email address</div>
-      <label class="contact-labels" for="phone">Phone</label>
-      <input name="phone" type="text" placeholder="Phone Number">
-      <button id="submit-contact-form">SUBMIT</button>
-    </form>
-    <div id="form-submit-loader">
-      <div class="loader">Loading...</div>
-    </div>
-    <div id="thankyou_message" class="contact-form-status">
-      <img src="/images/icons/okay.png" />
-      <p>Thanks! We'll be in touch</p>
-    </div>
-    <div id="error_message" class="contact-form-status">
-      <p>Sorry, an error occurred.</p>
-    </div>
-    <div class="contact-info-body">
+    <div class="contact-us-modal__info">
+      <div class="contact-info-body">
    <div class="contact-row">
     <div>
       <img src="/images/phone-icon.png" class="icon-small"/>
@@ -76,6 +55,29 @@
   </div>
 </div>
 
+    </div>
+    <div class="contact-close"></div>
+    <form id="gform" class="form" method="POST">
+      <p class="contact-us">CONTACT US</p>
+      <label class="contact-labels" for="name">Name</label>
+      <input name="name" type="text" placeholder="Name">
+      <label class="contact-labels" for="email">Email</label>
+      <input name="email" type="text" placeholder="Email">
+      <div id="email-invalid" class="validation">Please use a valid email address</div>
+      <label class="contact-labels" for="phone">Phone</label>
+      <input name="phone" type="text" placeholder="Phone Number">
+      <button id="submit-contact-form">SUBMIT</button>
+    </form>
+    <div id="form-submit-loader">
+      <div class="loader">Loading...</div>
+    </div>
+    <div id="thankyou_message" class="contact-form-status">
+      <img src="/images/icons/okay.png" />
+      <p>Thanks! We'll be in touch</p>
+    </div>
+    <div id="error_message" class="contact-form-status">
+      <p>Sorry, an error occurred.</p>
+    </div>
   </div>
 </div>
 
@@ -224,8 +226,8 @@
     </div>
     <div class="column">
       <div class="title"><a href="/listings.html">LISTINGS</a></div>
-      <a href="/listings.html?type=buy">Properties For Sale</a>
-      <a href="/listings.html?type=lease">Properties For Lease</a>
+      <a href="/listings.html?type=buy">Listings For Sale</a>
+      <a href="/listings.html?type=lease">Listings For Lease</a>
     </div>
     <div class="column">
       <div class="title"><a href="/experience.html">EXPERIENCE</a></div>
