@@ -171,7 +171,7 @@
                     <li><img src="images/phone-icon.png" class="icon-small"/>{{site.data.contact.phone}}</li>
                     <li><img src="images/email-icon.png" class="icon-small"/><a href="mailto:{{site.data.email}}">{{site.data.contact.email}}</a></li>
                     <li><img src="images/location-icon.png" class="icon-small"/><span class="underline">{{site.data.contact.address}}</span></li>
-                    <li><img src="images/ig-icon.png" class="icon-small"/><a href="https://www.instagram.com/{{site.data.instagram}}">@{{site.data.contact.instagram}}</a></li>
+                    <li><img src="images/ig-icon.png" class="icon-small"/><a href="https://www.instagram.com/{{site.data.instagram}}">{{site.data.contact.instagram}}</a></li>
                   </ul>
                 </div>
               </div>
@@ -243,8 +243,7 @@
           zoom: 14,
           scrollwheel: false,
           disableDefaultUI: true,
-          // center: uluru
-          center: {lat: 33.979449, lng: -118.44}
+          center: {lat: {{site.data.contact.latitude}}, lng: {{site.data.contact.longitude}}}
         });
 
         var marker = new google.maps.Marker({
