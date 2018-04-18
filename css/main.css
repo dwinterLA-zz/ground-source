@@ -648,7 +648,7 @@ a {
 .contact-info-body {
   font-size: .9em;
   background: rgba(255, 255, 255, 0.9);
-  padding: 15px 22px 34px 22px;
+  padding: 15px 0;
   color: #858585;
   width: 72%;
   text-align: center;
@@ -935,10 +935,8 @@ a {
     position: relative;
     max-width: 1200px; }
   .contact-us-modal .inner {
-    overflow: scroll;
+    overflow-y: auto;
     height: 60%; }
-  .contact-us-modal .contact-us-modal__info {
-    margin-top: 85px; }
   .contact-us-modal .contact-close {
     background-color: white;
     background-image: url(../images/menu-close.png);
@@ -976,6 +974,7 @@ a {
       width: 72%;
       height: 2.8em;
       opacity: .8;
+      text-indent: 18px;
       border-style: solid;
       border-width: thin;
       border-color: #efefef;
@@ -1663,7 +1662,7 @@ a {
   .contact-us-modal {
     width: 100%;
     height: 100%;
-    overflow: scroll; }
+    overflow-y: auto; }
     .contact-us-modal .inner {
       position: absolute;
       top: 0;
