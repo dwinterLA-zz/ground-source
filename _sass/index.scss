@@ -164,6 +164,15 @@ a {
         padding-left: 11px;
         > li {
           padding: 6px;
+          cursor: pointer;
+          &:hover {
+            > * {
+              text-decoration: underline;
+            }
+          }
+          > * {
+            text-decoration: none;
+          }
         }
       }
     }
