@@ -4,6 +4,7 @@ pages:
 - _case_studies/1.md
 - _case_studies/3.md
 hide_body: false
+is_partial: false
 fields:
 - type: text
   name: name
