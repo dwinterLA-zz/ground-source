@@ -100,7 +100,7 @@ fields:
 - type: list
   name: layout
   label: layout
-  hidden: ''
+  hidden: 'false'
   default:
   - newsletter
   - listing
