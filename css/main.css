@@ -643,7 +643,12 @@ a {
         margin: 0;
         padding-left: 11px; }
         #contact-us-home-section .contact-content .contact-body > ul > li {
-          padding: 6px; }
+          padding: 6px;
+          cursor: pointer; }
+          #contact-us-home-section .contact-content .contact-body > ul > li:hover > * {
+            text-decoration: underline; }
+          #contact-us-home-section .contact-content .contact-body > ul > li > * {
+            text-decoration: none; }
 
 .contact-info-body {
   font-size: .9em;
