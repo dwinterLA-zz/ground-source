@@ -1,11 +1,9 @@
 <div class="contact-us-modal">
   <div class="inner">
-    <div class="contact-us-modal__info">
-      {% include contact-info.html %}
-    </div>
     <div class="contact-close"></div>
     <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
+      {% include contact-info.html %}
       <label class="contact-labels" for="name">Name</label>
       <input name="name" type="text" placeholder="Name">
       <label class="contact-labels" for="email">Email</label>
