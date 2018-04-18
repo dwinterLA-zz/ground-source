@@ -1,5 +1,8 @@
 <div class="contact-us-modal">
   <div class="inner">
+    <div class="contact-us-modal__info">
+      {% include contact-info.html %}
+    </div>
     <div class="contact-close"></div>
     <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
@@ -22,6 +25,5 @@
     <div id="error_message" class="contact-form-status">
       <p>Sorry, an error occurred.</p>
     </div>
-    {% include contact-info.html %}
   </div>
 </div>

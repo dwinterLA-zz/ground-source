@@ -441,6 +441,9 @@ a {
     overflow: scroll;
     height: 60%;
   }
+  .contact-us-modal__info {
+    margin-top: 85px;
+  }
   .contact-close {
     @include close-button;
     position: absolute;
@@ -451,7 +454,6 @@ a {
   .form {
     margin: 36px;
     > p {
-      padding-top: 75px;
       font-weight: 50;
       margin-bottom: 42px;
       color: #777777;
