@@ -2638,9 +2638,6 @@ a {
   #container-about .agents {
     text-align: center; }
     #container-about .agents .flex-agents {
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
       padding: 0 60px 1em 60px; }
   #container-about .agent {
     display: inline-block;
