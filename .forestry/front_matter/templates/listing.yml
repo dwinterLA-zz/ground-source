@@ -1,8 +1,8 @@
 ---
 pages:
+- _listings/2.md
 - _listings/4-md.md
 - _listings/3-md.md
-- _listings/2.md
 hide_body: false
 is_partial: false
 fields:
