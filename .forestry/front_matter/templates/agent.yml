@@ -1,9 +1,6 @@
 ---
 pages:
-- _agents/john.md
 - _agents/chris.md
-- _agents/patrick.md
-- _agents/robert.md
 hide_body: false
 is_partial: false
 fields:
