@@ -18,8 +18,8 @@ amenities: []
 gallery-images: []
 info-text: ''
 floorplan-image: ''
-available: false
-lease: false
+available: true
+lease: true
 buy: false
 parking: ''
 property-preview-image: ''
