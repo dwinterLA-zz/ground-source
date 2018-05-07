@@ -1367,17 +1367,6 @@ a {
 .services-2 {
   background-color: #c8513d; }
 
-.social {
-  position: absolute;
-  right: 20px;
-  bottom: 60px;
-  font-size: 1.5em;
-  text-align: right;
-  line-height: 1; }
-  .social a {
-    padding: 0.5em;
-    padding-right: 0; }
-
 .footer {
   position: relative;
   width: 100%;
@@ -1416,8 +1405,9 @@ a {
       padding-top: 30px;
       opacity: .7; }
     .footer .column.social {
-      float: right;
-      margin-right: 20px;
+      position: absolute;
+      top: 0;
+      right: 0;
       font-size: 1.5em;
       text-align: right;
       line-height: 1; }
@@ -1813,7 +1803,10 @@ a {
       .footer .column.social {
         margin: 25px 0 0 -9px;
         display: block;
-        float: left; }
+        right: 20px;
+        bottom: 60px;
+        top: auto;
+        left: auto; }
         .footer .column.social > a {
           float: left;
           padding-right: 12px; }
