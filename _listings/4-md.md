@@ -17,8 +17,8 @@ gallery-images:
 latitude: 34.047746
 longitude: -118.463983
 info-title: Class A office space for lease in Brentwood
-info-text: 'Property features include impressive upgraded lobby, 2 elevators, valet
-  assisted visitor parking, on-site security, 2 private balconies, and subterranean
+info-text: 'Property features include impressive upgraded lobby, two elevators, valet
+  assisted visitor parking, on-site security, two private balconies, and subterranean
   parking. Prime location on Wilshire Boulevard and South Westgate Avenue in the Brentwood
   submarket. Easy access to the 405 and 10 freeways. '
 property-preview-image: "/images/11859_wilshire.jpg"
@@ -29,8 +29,8 @@ highlights:
   over-standard parking ratio."
 - Ocean views from floors 5 and 6
 amenities:
-- Great walkable amenities - within a half mile of the property, there are 49 restaurants,
-  7 coffee shops, 6 bars, 17 banks, 6 gyms and fitness studios, and 2 grocery stores.
+- Great walkable amenities to  restaurants, coffee shops, bars, banks, gyms, and grocery
+  stores within a half mile of the property
 available: true
 lease: true
 buy: false
