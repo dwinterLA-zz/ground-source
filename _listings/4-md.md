@@ -25,9 +25,9 @@ property-preview-image: "/images/11859_wilshire.jpg"
 property-header: "/images/11859_wilshire-1.jpg"
 rate: Negotiable
 highlights:
-- Ocean views from floors 5 and 6
 - "“Best of Class” high image office building located in Brentwood submarket with
   over-standard parking ratio."
+- Ocean views from floors 5 and 6
 amenities:
 - Great walkable amenities - within a half mile of the property, there are 49 restaurants,
   7 coffee shops, 6 bars, 17 banks, 6 gyms and fitness studios, and 2 grocery stores.
