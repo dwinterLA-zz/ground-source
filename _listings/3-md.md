@@ -20,10 +20,10 @@ highlights:
 amenities:
 - 'Walking distance to Hollywood’s best restaurants, retail, nightclubs and theaters '
 gallery-images:
-- "/images/6534_Sunset_01-1.jpg"
 - "/images/6534_Sunset_02.jpg"
 - "/images/6534_Sunset_03.jpg"
 - "/images/6534_Sunset_04.jpg"
+- "/images/6534_Sunset_01-1.jpg"
 info-text: 6534 W. Sunset Boulevard is going through a complete transformation and
   renovation. The anticipated delivery date is 4Q 2017. The project is prominently
   situated in the center of Hollywood on the corner of Sunset Boulevard and Seward
