@@ -4,7 +4,7 @@ layout:
 - newsletter
 - listing
 date: 2018-05-02 00:00:00 +0000
-location: 11859 Wilshire
+location: Wilshire
 address-line-1: 11859 Wilshire Blvd,
 address-line-2: Los Angeles, CA 90025
 short-caption: Class A office space for lease in Brentwood
