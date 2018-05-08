@@ -19,7 +19,11 @@ highlights:
   award winning New York restaurateur and Tocaya, a modern and organic Mexican fusion
 amenities:
 - 'Walking distance to Hollywood’s best restaurants, retail, nightclubs and theaters '
-gallery-images: []
+gallery-images:
+- "/images/Layer 1.png"
+- "/images/Layer 1 copy.png"
+- "/images/Layer 1 copy 2.jpg"
+- "/images/6534_Sunset_01.jpg"
 info-text: 6534 W. Sunset Boulevard is going through a complete transformation and
   renovation. The anticipated delivery date is 4Q 2017. The project is prominently
   situated in the center of Hollywood on the corner of Sunset Boulevard and Seward
@@ -27,11 +31,11 @@ info-text: 6534 W. Sunset Boulevard is going through a complete transformation a
   and theaters. The property features a large outdoor courtyard and two new restaurants
   including an award winning New York restaurateur and Tocaya, a modern and organic
   Mexican fusion, both anticipated to open 4th quarter 2017.
-floorplan-image: ''
+floorplan-image: "/images/6534_Sunset_floorplan.jpg"
 available: true
 lease: true
 buy: false
 parking: 2
-property-preview-image: ''
-property-header: ''
+property-preview-image: "/images/6534_Sunset_01-1.jpg"
+property-header: "/images/6534_Sunset_01-2.jpg"
 ---
