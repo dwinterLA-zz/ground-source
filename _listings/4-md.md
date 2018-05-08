@@ -11,6 +11,7 @@ short-caption: Class A office space for lease in Brentwood
 sq-footage: 47,698 SF
 floorplan-image: "/images/11859_wilshire_fp.jpg"
 gallery-images:
+- "/images/11859_wilshire-1.jpg"
 - "/images/11859_wilshire_03.jpg"
 - "/images/11859_wilshire_02.jpg"
 - "/images/11859_wilshire_01.jpg"
@@ -21,8 +22,8 @@ info-text: 'Property features include impressive upgraded lobby, two elevators, 
   assisted visitor parking, on-site security, two private balconies, and subterranean
   parking. Prime location on Wilshire Boulevard and South Westgate Avenue in the Brentwood
   submarket. Easy access to the 405 and 10 freeways. '
-property-preview-image: "/images/11859_wilshire.jpg"
-property-header: "/images/11859_wilshire-1.jpg"
+property-preview-image: "/images/11859_wilshire_.jpg"
+property-header: "/images/11859_wilshire_-1.jpg"
 rate: Negotiable
 highlights:
 - "“Best of Class” high image office building located in Brentwood submarket with
