@@ -36,13 +36,4 @@ lease: true
 buy: false
 parking: ''
 ---
-* Property features include impressive upgraded lobby, 2 elevators, valet assisted visitor parking, on-site security, 2 private balconies, and subterranean parking. 
-
-
-* Prime location on Wilshire Boulevard and South Westgate Avenue in the Brentwood submarket. 
-
-
-* Easy access to the 405 and 10 freeways 
-
-
-* Great walkable amenities - within a half mile of the property, there are 49 restaurants, 7 coffee shops, 6 bars, 17 banks, 6 gyms and fitness studios, and 2 grocery stores. 
+-
