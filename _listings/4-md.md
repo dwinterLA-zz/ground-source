@@ -11,10 +11,10 @@ short-caption: Class A office space for lease in Brentwood
 sq-footage: 47,698 SF
 floorplan-image: "/images/11859_wilshire_fp.jpg"
 gallery-images:
-- "/images/11859_wilshire-1.jpg"
 - "/images/11859_wilshire_03.jpg"
 - "/images/11859_wilshire_02.jpg"
 - "/images/11859_wilshire_01.jpg"
+- "/images/11859_wilshire-1.jpg"
 latitude: 34.047746
 longitude: -118.463983
 info-title: Class A office space for lease in Brentwood
