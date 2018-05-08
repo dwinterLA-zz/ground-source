@@ -34,6 +34,6 @@ amenities:
 available: true
 lease: true
 buy: false
-parking: ''
+parking: 3
 ---
 -
