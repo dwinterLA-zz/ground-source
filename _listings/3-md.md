@@ -4,8 +4,8 @@ layout:
 - newsletter
 - listing
 date: 2018-05-02 00:00:00 +0000
-location: 6534 Sunset
-address-line-1: 6534Sunset Blvd,
+location: Sunset Blvd
+address-line-1: 6534 Sunset Blvd,
 address-line-2: Los Angeles, CA 90028
 short-caption: Original Hollywood office space for lease
 sq-footage: '2,446'
