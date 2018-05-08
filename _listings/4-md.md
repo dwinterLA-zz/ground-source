@@ -16,7 +16,7 @@ gallery-images:
 - "/images/11859_wilshire_01.jpg"
 latitude: 34.047746
 longitude: -118.463983
-info-title: FPO - Free-standing building for lease in Los Angeles
+info-title: Class A office space for lease in Brentwood
 info-text: 'Property features include impressive upgraded lobby, 2 elevators, valet
   assisted visitor parking, on-site security, 2 private balconies, and subterranean
   parking. Prime location on Wilshire Boulevard and South Westgate Avenue in the Brentwood
