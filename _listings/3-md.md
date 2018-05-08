@@ -31,7 +31,7 @@ floorplan-image: ''
 available: true
 lease: true
 buy: false
-parking: ''
+parking: 2
 property-preview-image: ''
 property-header: ''
 ---
