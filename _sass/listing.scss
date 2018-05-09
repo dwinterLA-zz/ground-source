@@ -279,22 +279,22 @@
     opacity: .9;
   }
 
-  .bond-list {
+  .amenity-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    > li {
-      padding: 14px;
-      font-size: 1em;
-      font-weight: lighter;
-      opacity: 1;
-    }
-
     > hr {
       border-color: #c35440;
       opacity: .5;
       border-style: solid;
     }
+  }
+
+  .listing-info {
+    padding: 14px;
+    font-size: 1em;
+    font-weight: lighter;
+    opacity: 1;
   }
 
   .menu {
@@ -380,7 +380,7 @@
       height: 378px;
     }
 
-    .bond-list {
+    .amenity-list {
       > li {
         padding: 7px;
       }

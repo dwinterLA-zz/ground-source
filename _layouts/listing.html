@@ -105,19 +105,25 @@
                   </div>
                 </div>
                 <div class="menu">
+                  <h2 class="sidebar-header"><strong>ADDRESS</strong></h2>
+                  <hr class="light-line">
+                  <div class="listing-info">
+                    <div>{{page.address-line-1}}</div>
+                    <div>{{page.address-line-2}}</div>
+                  </div>
                   <h2 class="sidebar-header"><span class="subdued"><strong>PROPERTY</strong> HIGHLIGHTS</span></h2>
                   <hr class ="light-line">
-                  <ul class="bond-list">
+                  <ul class="amenity-list">
                     {% for highlight in page.highlights %}
-                      <li>{{ highlight }}</li>
+                      <li class="listing-info">{{ highlight }}</li>
                       <hr>
                     {% endfor %}
                   </ul>
                   <h2 class="sidebar-header"><strong>AMENITIES</strong></h2>
                   <hr class="light-line">
-                  <ul class="bond-list">
+                  <ul class="amenity-list">
                     {% for amenity in page.amenities %}
-                    <li>{{ amenity }}</li>
+                    <li class="listing-info">{{ amenity }}</li>
                     <hr>
                     {% endfor %}
                   </ul>
