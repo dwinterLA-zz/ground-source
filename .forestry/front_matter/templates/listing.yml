@@ -80,7 +80,7 @@ fields:
   label: Date
   type: datetime
   hidden: false
-  default: ''
+  default: Invalid date
 - type: boolean
   name: available
   label: Available
@@ -93,15 +93,13 @@ fields:
   description: Is the listing available for sale?
   label: Sale
   name: buy
-- type: number
-  name: parking
-  label: parking
 - type: file
   name: property-preview-image
   label: Property Preview Image
 - type: file
   name: property-header
   label: Property Header Image
+  description: Ideally, header images should be 1920x1080
 - type: list
   name: layout
   label: layout
@@ -109,3 +107,7 @@ fields:
   default:
   - newsletter
   - listing
+- type: textarea
+  name: parking
+  label: parking
+  default: ''
