@@ -35,6 +35,6 @@ amenities:
 available: true
 lease: true
 buy: false
-parking: 3
+parking: 3.3 / 1,000 RSF
 ---
 -
