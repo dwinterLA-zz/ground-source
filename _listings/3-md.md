@@ -3,7 +3,7 @@ title: 3.md
 layout:
 - newsletter
 - listing
-date: 2018-05-02 00:00:00 +0000
+date: 2018-05-02 15:34:41 -0700
 location: Sunset Blvd
 address-line-1: 6534 Sunset Blvd,
 address-line-2: Los Angeles, CA 90028
@@ -35,7 +35,7 @@ floorplan-image: "/images/6534_Sunset_floorplan.jpg"
 available: true
 lease: true
 buy: false
-parking: 2
+parking: 2/1,000 + Valet
 property-preview-image: "/images/6534_Sunset_01-3.jpg"
 property-header: "/images/6534_Sunset_01-4.jpg"
 ---
