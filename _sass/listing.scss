@@ -246,9 +246,16 @@
   }
 
   #listings-sidebar {
+    position: relative;
     display: inline-block;
     width: 33%;
     padding: 0 12px;
+    margin-bottom: 22px;
+  }
+
+  .listings-sidebar__inner {
+    position: sticky;
+    top: 12px;
   }
 
   #listings-info {
