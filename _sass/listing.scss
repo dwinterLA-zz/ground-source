@@ -256,6 +256,9 @@
   .listings-sidebar__inner {
     position: sticky;
     top: 12px;
+    @media screen and (max-width: $breakpoint-small) {
+      position: static;
+    }
   }
 
   #listings-info {
