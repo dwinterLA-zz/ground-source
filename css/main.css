@@ -2023,9 +2023,18 @@ a {
       background-image: -webkit-linear-gradient(top, rgba(238, 238, 238, 0), #080808);
       background-image: linear-gradient(to bottom, rgba(238, 238, 238, 0), #080808); }
   #container-listing #listings-sidebar {
+    position: relative;
     display: inline-block;
     width: 33%;
-    padding: 0 12px; }
+    padding: 0 12px;
+    margin-bottom: 22px; }
+  #container-listing .listings-sidebar__inner {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 12px; }
+    @media screen and (max-width: 768px) {
+      #container-listing .listings-sidebar__inner {
+        position: static; } }
   #container-listing #listings-info {
     display: inline-block;
     width: 66%;
@@ -2044,19 +2053,19 @@ a {
   #container-listing .light-line {
     border-style: solid;
     opacity: .9; }
-  #container-listing .bond-list {
+  #container-listing .amenity-list {
     list-style-type: none;
     margin: 0;
     padding: 0; }
-    #container-listing .bond-list > li {
-      padding: 14px;
-      font-size: 1em;
-      font-weight: lighter;
-      opacity: 1; }
-    #container-listing .bond-list > hr {
+    #container-listing .amenity-list > hr {
       border-color: #c35440;
       opacity: .5;
       border-style: solid; }
+  #container-listing .listing-info {
+    padding: 14px;
+    font-size: 1em;
+    font-weight: lighter;
+    opacity: 1; }
   #container-listing .menu {
     color: white;
     font-family: Montserrat, Helvetica, Arial, sans-serif;
@@ -2120,7 +2129,7 @@ a {
         background-image: linear-gradient(to bottom, rgba(238, 238, 238, 0), #080808); }
     #container-listing #about-google-map {
       height: 378px; }
-    #container-listing .bond-list > li {
+    #container-listing .amenity-list > li {
       padding: 7px; }
     #container-listing .listing-image-gallery {
       width: 100%; }
