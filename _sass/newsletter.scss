@@ -40,10 +40,18 @@
 .newsletter-property-header-image {
   max-width:900px;
 }
-.newsletter-amenities {
+
+.amenities__icon {
+  vertical-align: middle;
+}
+
+.amenities__text {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  max-width: 265px;
   color:#5e5e5e;
   font-weight:700;
-  line-height:140%;
 }
 .newsletter-amenities2 {
   color:#989899;
