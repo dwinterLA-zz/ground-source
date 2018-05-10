@@ -115,8 +115,8 @@
             <div class="flexbox listings filters">
               
               
-              <!--  -->
-              <select name="location" id="location-filter">
+              
+              <select class="listings__filter" name="location" id="location-filter">
                 <option value="n/a">Any Location</option>
                 
                   <option value="Sherman Oaks, CA 91423">Sherman Oaks, CA 91423</option>
@@ -128,27 +128,30 @@
                   <option value="Los Angeles, CA 90028">Los Angeles, CA 90028</option>
                 
               </select>
-              <select name="status" id="status-filter">
+              <input class="listings__filter" id="min-size" type="text" placeholder=" Min. Size" class="subdued">
+              <input class="listings__filter" id="max-price" type="text" placeholder=" Price" class="subdued">
+              <!-- Disabled filters... to enable, uncomment and alter the JS filter -->
+              <!-- <select name="status" id="status-filter">
                 <option value="n/a">Any Status</option>
                 <option value="true">Available Now</option>
                 <option value="false">Not Available</option>
-              </select>
-              <select name="type" id="type-filter">
+              </select> -->
+              <!-- <select name="type" id="type-filter">
                 <option value="n/a">Any Type</option>
                 <option value="lease">Lease</option>
                 <option value="buy">Buy</option>
-              </select>
-              <select name="min-rooms" id="min-rooms">
+              </select> -->
+              <!-- <select name="min-rooms" id="min-rooms">
                 <option value="1">Min. Rooms</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-              </select>
-              <input id="min-size" type="text" placeholder=" Min. Size" class="subdued">
-              <input id="max-price" type="text" placeholder=" Price" class="subdued">
-              <button type"submit" id="listing-clear-filters">CLEAR OPTIONS</button>
-              <button type"submit" id="listing-search">SEARCH</button>
+              </select> -->
+              <div>
+                <button class="listings__button listings__filter" type"submit" id="listing-clear-filters">CLEAR OPTIONS</button>
+                <button class="listings__button listings__filter" type"submit" id="listing-search">SEARCH</button>
+              </div>
             </div>
           </div>
           </div>
