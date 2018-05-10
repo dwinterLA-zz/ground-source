@@ -53,34 +53,37 @@
             <div class="flexbox listings filters">
               {% assign locations = site.listings |map: "address-line-2"| |uniq| %}
               {% assign statuses = site.listings |map: "status"| |uniq| %}
-              <!-- {% assign type = site.listings |map: "type"| |uniq| %} -->
-              <select name="location" id="location-filter">
+              {% assign type = site.listings |map: "type"| |uniq| %}
+              <select class="listings__filter" name="location" id="location-filter">
                 <option value="n/a">Any Location</option>
                 {% for location in locations %}
                   <option value="{{location}}">{{location}}</option>
                 {% endfor %}
               </select>
-              <select name="status" id="status-filter">
+              <input class="listings__filter" id="min-size" type="text" placeholder=" Min. Size" class="subdued">
+              <input class="listings__filter" id="max-price" type="text" placeholder=" Price" class="subdued">
+              <!-- Disabled filters... to enable, uncomment and alter the JS filter -->
+              <!-- <select name="status" id="status-filter">
                 <option value="n/a">Any Status</option>
                 <option value="true">Available Now</option>
                 <option value="false">Not Available</option>
-              </select>
-              <select name="type" id="type-filter">
+              </select> -->
+              <!-- <select name="type" id="type-filter">
                 <option value="n/a">Any Type</option>
                 <option value="lease">Lease</option>
                 <option value="buy">Buy</option>
-              </select>
-              <select name="min-rooms" id="min-rooms">
+              </select> -->
+              <!-- <select name="min-rooms" id="min-rooms">
                 <option value="1">Min. Rooms</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-              </select>
-              <input id="min-size" type="text" placeholder=" Min. Size" class="subdued">
-              <input id="max-price" type="text" placeholder=" Price" class="subdued">
-              <button type"submit" id="listing-clear-filters">CLEAR OPTIONS</button>
-              <button type"submit" id="listing-search">SEARCH</button>
+              </select> -->
+              <div>
+                <button class="listings__button listings__filter" type"submit" id="listing-clear-filters">CLEAR OPTIONS</button>
+                <button class="listings__button listings__filter" type"submit" id="listing-search">SEARCH</button>
+              </div>
             </div>
           </div>
           </div>

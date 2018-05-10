@@ -107,22 +107,24 @@
     text-align: center;
     font-size: .7em;
     width: 70vw;
-    > * {
-      height: 23px;
-      width: 22%;
-      margin: 6px 7px;
-      border-color: lightgrey;
-      border-style: solid;
-      border-width: thin;
-    }
-    > button {
-      background-color: $primary-color-darker;
-      color: white;
-      border: none;
-      cursor: pointer;
-        &#listing-clear-filters {
-          background-color: #514d4c;
-        }
+  }
+
+  .listings__filter {
+    height: 23px;
+    width: 22%;
+    margin: 6px 7px;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: thin;
+  }
+
+  .listings__button {
+    background-color: $primary-color-darker;
+    color: white;
+    border: none;
+    cursor: pointer;
+    &#listing-clear-filters {
+      background-color: #514d4c;
     }
   }
 
