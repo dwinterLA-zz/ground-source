@@ -12,7 +12,11 @@
     <div class="print">
       <div class="header">
         <img class="logo" src="/images/logo.png"/>
-        <span class="contact moreSubdued"> {{page.address-line-1}} &nbsp; {{page.address-line-2}} | {{page.phone}} | {{page.hours}}
+        <span class="contact moreSubdued">
+          {{page.address-line-1}} &nbsp; {{page.address-line-2}}
+          <div style="margin-top: 4px;">Chris Keller: {{site.data.contact.phone}}</div>
+        </span>
+
       </div>
       <div class="content">
         <div class="listing-name">{{page.name}}</div>
