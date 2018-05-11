@@ -107,7 +107,51 @@
                       {{listing.short-caption}}
                     </p>
                     <div class="amenities">
-                      <table class="amenity-table">
+                      <div class="amenity__table">
+                        <div class="amenity__row">
+                          <div class="amenity__cell">
+                            <div class="amenity__spacer">
+                              {% if listing.lease and listing.buy %}
+                                <div class="listing-label rent-label">For Sale</div>
+                                <div class="label lease-label" style="top: 40px">For Lease</div>
+                              {% else %}
+                                {% if listing.lease %}
+                                  <div class="listing-label lease-label">For Lease</div>
+                                {% endif %}
+                                {% if listing.sale %}
+                                  <div class="listing-label rent-label">For Sale</div>
+                                {% endif %}
+                              {% endif %}
+                            </div>
+                          </div>
+                          <div class="amenity__cell">
+                            <div class="amenity__spacer">
+                              {% if listing.rate == 0 or listing.rate == "0" or listing.rate == nil %}
+                                <img src="images/icons/money.svg"/>
+                                <span>Please Call</span>
+                              {% else %}
+                                <img class="amenity__icon" src="images/icons/money.svg"/>
+                                <span class="amenity__detail">{{listing.rate}}/month</span>
+                              {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="amenity__row">
+                          <div class="amenity__cell">
+                            <div class="amenity__spacer">
+                              <img class="amenity__icon" src="images/icons/square.svg" />
+                              <span class="amenity__detail">{{listing.sq-footage}} Sq. ft.</span>
+                            </div>
+                          </div>
+                          <div class="amenity__cell">
+                            <div class="amenity__spacer">
+                              <img class="amenity__icon" src="images/icons/car.svg" />
+                              <span class="amenity__detail">{{listing.parking}}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <table class="amenity-table">
                         <tr>
                           <td>
                             {% if listing.lease and listing.buy %}
@@ -129,10 +173,6 @@
                             {% else %}
                               <img class="amenity__icon" src="images/icons/money.svg"/>
                               <span class="amenity__detail">{{listing.rate}}/month</span>
-                              <!-- <div class="wrapped-text">
-                                <img src="images/icons/money.svg"/>
-                                <span>{{listing.rate}}/month</span>
-                              </div> -->
                             {% endif %}
                           </td>
                         </tr>
@@ -140,21 +180,13 @@
                           <td>
                             <img class="amenity__icon" src="images/icons/square.svg" />
                             <span class="amenity__detail">{{listing.sq-footage}} Sq. ft.</span>
-                            <!-- <div class="wrapped-text">
-                              <img src="images/icons/square.svg" />
-                              <span>{{listing.sq-footage}} Sq. ft.</span>
-                            </div> -->
                           </td>
                           <td>
                             <img class="amenity__icon" src="images/icons/car.svg" />
                             <span class="amenity__detail">{{listing.parking}}</span>
-                            <!-- <div class="wrapped-text">
-                              <img src="images/icons/car.svg" />
-                              <span>{{listing.parking}}</span>
-                            </div> -->
                           </td>
                         </tr>
-                      </table>
+                      </table> -->
                     </div>
                   </div>
                 </a>
