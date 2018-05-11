@@ -59,7 +59,13 @@
                   </div>
                   <div class="agent-info-bottom">
                     <div class="bio-button" data-agent="{{forloop.index}}">VIEW FULL BIO</div>
-                    <div class="bio-contact"><span class="black">{{agent.email}}</span><br>{{agent.phone}}</div>
+                    <div class="bio-contact">
+                      <span class="black">{{agent.email}}</span>
+                      <br />
+                      Cell: {{agent.phone}}
+                      <br />
+                      Landline: {{site.data.contact.phone}}
+                    </div>
                   </div>
                 </div>
               {% endfor %}
