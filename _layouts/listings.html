@@ -127,25 +127,31 @@
                               <img src="images/icons/money.svg"/>
                               <span>Please Call</span>
                             {% else %}
-                              <div class="wrapped-text">
+                              <img class="amenity__icon" src="images/icons/money.svg"/>
+                              <span class="amenity__detail">{{listing.rate}}/month</span>
+                              <!-- <div class="wrapped-text">
                                 <img src="images/icons/money.svg"/>
                                 <span>{{listing.rate}}/month</span>
-                              </div>
+                              </div> -->
                             {% endif %}
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <div class="wrapped-text">
+                            <img class="amenity__icon" src="images/icons/square.svg" />
+                            <span class="amenity__detail">{{listing.sq-footage}} Sq. ft.</span>
+                            <!-- <div class="wrapped-text">
                               <img src="images/icons/square.svg" />
                               <span>{{listing.sq-footage}} Sq. ft.</span>
-                            </div>
+                            </div> -->
                           </td>
                           <td>
-                            <div class="wrapped-text">
+                            <img class="amenity__icon" src="images/icons/car.svg" />
+                            <span class="amenity__detail">{{listing.parking}}</span>
+                            <!-- <div class="wrapped-text">
                               <img src="images/icons/car.svg" />
                               <span>{{listing.parking}}</span>
-                            </div>
+                            </div> -->
                           </td>
                         </tr>
                       </table>
