@@ -68,6 +68,12 @@
             </div>
           </div>
         </div>
+        <div class="floorplan">
+          {% if page.floorplan-image != "" and page.floorplan-image != null %}
+            <h4 class="sidebar-header"><strong>FLOOR PLAN</strong></h4>
+            <img src="{{ page.floorplan-image }}" class="printout__floorplan" />
+          {% endif %}
+        </div>
       </div>
     </div>
     <div class="web">

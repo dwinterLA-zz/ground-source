@@ -36,6 +36,9 @@
       height: 200px;
     }
   }
+  .floorplan {
+    clear: both;
+  }
   .information {
     overflow: hidden;
   }
@@ -72,6 +75,9 @@
         font-size: 8pt;
       }
     }
+  }
+  .printout__floorplan {
+    width: 400px;
   }
 
   .features {

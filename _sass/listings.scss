@@ -145,11 +145,7 @@
     display: table-cell;
     width: 50%;
     padding: 4px;
-    vertical-align: middle;
-  }
-
-  .amenity__spacer {
-    /* min-height: 72px; */
+    vertical-align: top;
   }
 
   .amenity__row {
@@ -223,11 +219,12 @@
         z-index: 2;
       }
     }
+    .short-caption {
+      height: 3.5em;
+      overflow: hidden;
+    }
+
     .listing-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      line-height: 135%;
       padding: 0 12px 10px 12px;
       height: calc(100% - 190px);
       .amenities {
