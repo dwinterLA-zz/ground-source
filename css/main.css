@@ -2845,8 +2845,9 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 0;
-  height: 49vh; }
+  height: 100vh; }
 #container-experience .bottom {
+  display: none;
   background-image: url(../images/experience/building.jpg);
   background-size: cover;
   background-repeat: no-repeat;
