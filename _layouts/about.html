@@ -62,9 +62,9 @@
                     <div class="bio-contact">
                       <span class="black">{{agent.email}}</span>
                       <br />
-                      Cell: {{agent.phone}}
+                      Land Line: {{site.data.contact.phone}}
                       <br />
-                      Landline: {{site.data.contact.phone}}
+                      Cell: {{agent.phone}}
                     </div>
                   </div>
                 </div>
@@ -85,8 +85,8 @@
                 <p class="no-margin position">{{agent.position}}</p>
                 <br />
                 <p class="no-margin email secondary-contact"><a href="mailto:{{agent.email}}">{{agent.email}}</a></p>
-                <p class="no-margin secondary-contact">Cell: {{agent.phone}}</p>
                 <p class="no-margin secondary-contact">Landline: {{site.data.contact.phone}}</p>
+                <p class="no-margin secondary-contact">Cell: {{agent.phone}}</p>
                 <a href="mailto:{{agent.email}}"><button class="rounded-red-button">work with {{agent.first_name}}</buton></a>
               </div>
             </div>
