@@ -1,7 +1,7 @@
 ---
 title: noah
 avatar: "/images/agent_placeholder.png"
-date: 2018-05-17 19:17:52 +0000
+date: 2018-05-17 12:17:52 -0700
 first_name: Noah
 last_name: Sall
 phone: 310.444.6102
@@ -16,6 +16,6 @@ full_bio: 'Noah Sall, a Los Angeles native, earned his Real Estate degree from t
   real estate developers. His diverse experience in the real estate industry, coupled
   with his knowledge of Los Angeles, make him a valuable asset to his clients.    '
 position: SALES
-email: ''
+email: nsall@groundsource.net
 featured_listings: []
 ---
