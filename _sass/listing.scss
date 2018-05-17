@@ -7,6 +7,7 @@
 }
 // print only
 .print {
+  display: none;
   padding: 30px;
   .header {
     position: relative;
@@ -17,8 +18,8 @@
   .contact {
     position: absolute;
     left: 10cm;
-    bottom: 0;
-    font-size: 5pt;
+    bottom: -3px;
+    font-size: 10pt;
   }
   .content {
     margin-top: 60px;
@@ -109,10 +110,6 @@
       border-color: #ededed;
     }
   }
-}
-
-.print {
-  display: none;
 }
 
 #container-listing {
