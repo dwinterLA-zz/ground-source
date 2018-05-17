@@ -1,5 +1,5 @@
 ---
 header: LISTINGS
-subheader: Find all of our listings here…
+subheader: Find our listings here…
 layout: listings
 ---
