@@ -114,7 +114,10 @@
                 {% for testimonial in site.testimonials %}
                   <div class="review">
                     <div class="inner-review">
-                    <img src="{{ testimonial.userImg }}" />
+                    {% if testimonial.userImg == "" or testimonial.userImg == nil or testimonial.userImg == blank %}
+                    {% else %}
+                      <img src="{{ testimonial.userImg }}" />
+                    {% endif %}
                     <p>
                       <span class="testimonial-text">{{ testimonial.text }}</span>
                       <br />
