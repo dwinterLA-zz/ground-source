@@ -1,5 +1,6 @@
 ---
 pages:
+- _agents/noah.md
 - _agents/chris.md
 hide_body: false
 is_partial: false
