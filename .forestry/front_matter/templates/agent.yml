@@ -21,6 +21,9 @@ fields:
 - type: text
   label: phone
   name: phone
+- type: text
+  label: Cell Phone
+  name: cell
 - type: file
   name: avatar
   label: Avatar
