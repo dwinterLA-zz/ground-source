@@ -1831,6 +1831,7 @@ a {
   opacity: .6; }
 
 .print {
+  display: none;
   padding: 30px; }
   .print .header {
     position: relative; }
@@ -1839,8 +1840,8 @@ a {
   .print .contact {
     position: absolute;
     left: 10cm;
-    bottom: 0;
-    font-size: 5pt; }
+    bottom: -3px;
+    font-size: 10pt; }
   .print .content {
     margin-top: 60px; }
     .print .content .listing-name {
@@ -1907,9 +1908,6 @@ a {
       border-style: solid;
       border-width: thin;
       border-color: #ededed; }
-
-.print {
-  display: none; }
 
 #container-listing {
   background-color: #eee; }
