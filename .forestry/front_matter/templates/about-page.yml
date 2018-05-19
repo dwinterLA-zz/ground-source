@@ -1,6 +1,4 @@
 ---
-pages:
-- about.md
 hide_body: false
 is_partial: false
 fields:
@@ -9,3 +7,5 @@ fields:
   label: Main Text
   config:
     wysiwyg: true
+pages:
+- about.md

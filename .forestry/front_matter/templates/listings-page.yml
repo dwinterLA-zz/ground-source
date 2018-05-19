@@ -1,6 +1,4 @@
 ---
-pages:
-- listings.md
 hide_body: false
 is_partial: false
 fields:
@@ -14,3 +12,5 @@ fields:
   label: Sub-header
   config:
     wysiwyg: true
+pages:
+- listings.md

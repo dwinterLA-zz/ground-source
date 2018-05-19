@@ -1,7 +1,4 @@
 ---
-pages:
-- _agents/noah.md
-- _agents/chris.md
 hide_body: false
 is_partial: false
 fields:
@@ -52,3 +49,6 @@ fields:
   label: Featured Listings
   description: Place the title of each listing you would like to be featured here
     (must match exactly).
+pages:
+- _agents/noah.md
+- _agents/chris.md

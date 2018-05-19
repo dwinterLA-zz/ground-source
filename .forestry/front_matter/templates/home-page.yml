@@ -1,6 +1,4 @@
 ---
-pages:
-- index.md
 hide_body: false
 is_partial: false
 fields:
@@ -55,3 +53,5 @@ fields:
   name: layout
   label: layout
   default: index
+pages:
+- index.md
