@@ -332,9 +332,10 @@
         var logo = $("#header-logo");
 
         $(".testimonial-text").each(function() {
+          var textLimit = 300
           var text = $(this).text();
-          if (text.length > 150) {
-            var shortenedText = $(this).text().slice(0,150);
+          if (text.length > textLimit) {
+            var shortenedText = $(this).text().slice(0,textLimit);
             shortenedText += " ..."
             $(this).text(shortenedText);
           }
