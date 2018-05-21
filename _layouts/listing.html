@@ -40,7 +40,10 @@
           <div class="location">
             <div class="location-header">Location</div>
             <ul>
-              <li>{{page.address-line-1}}&nbsp; {{page.address-line-2}}</li>
+              <li>
+                {{page.address-line-1}}<br />
+                {{page.address-line-2}}
+              </li>
               <li>{{page.phone}}</li>
               <li>{{page.hours}}</li>
             </ul>
@@ -70,7 +73,6 @@
         </div>
         <div class="floorplan">
           {% if page.floorplan-image != "" and page.floorplan-image != null %}
-            <h4 class="sidebar-header"><strong>FLOOR PLAN</strong></h4>
             <img src="{{ page.floorplan-image }}" class="printout__floorplan" />
           {% endif %}
         </div>

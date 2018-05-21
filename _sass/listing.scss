@@ -39,6 +39,7 @@
   }
   .floorplan {
     clear: both;
+    page-break-before: always;
   }
   .information {
     overflow: hidden;
@@ -78,7 +79,7 @@
     }
   }
   .printout__floorplan {
-    width: 400px;
+    width: 100%;
   }
 
   .features {
