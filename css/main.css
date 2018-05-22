@@ -1846,16 +1846,16 @@ a {
   opacity: .6; }
 
 .print {
-  display: none;
-  padding: 30px; }
+  display: none; }
   .print .header {
     position: relative; }
   .print .logo {
-    width: 9cm; }
+    width: 9cm;
+    padding-top: 1cm; }
   .print .contact {
     position: absolute;
     left: 10cm;
-    bottom: -3px;
+    bottom: -.3cm;
     font-size: 10pt; }
   .print .content {
     margin-top: 60px; }
@@ -2166,9 +2166,7 @@ a {
 @media print {
   @page {
     size: A4;
-    margin: 0;
-    body {
-      margin: 1.6cm; } }
+    margin: 1.75cm; }
   .print {
     display: block; }
 
