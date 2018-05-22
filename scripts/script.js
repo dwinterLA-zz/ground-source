@@ -241,16 +241,18 @@ function addScrollListener() {
 }
 
 function authenticate() {
-  $("#dialog").css("opacity", 1);
-  var storeCredentials = localStorage.getItem("credentials")
+  $("#dialog").hide();
+  displaySite();
+  // $("#dialog").css("opacity", 1);
+  // var storeCredentials = localStorage.getItem("credentials")
 
-  if (checkCredentials(storeCredentials)) {
-    $("#dialog").hide();
-    displaySite();
-  } else {
-    login();
-    return;
-  }
+  // if (checkCredentials(storeCredentials)) {
+  //   $("#dialog").hide();
+  //   displaySite();
+  // } else {
+  //   login();
+  //   return;
+  // }
 }
 
 function checkCredentials(credentials) {
