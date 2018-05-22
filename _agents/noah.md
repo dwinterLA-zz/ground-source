@@ -1,7 +1,7 @@
 ---
 title: noah
 avatar: "/images/agent_placeholder.png"
-date: 2018-05-17 12:17:52 -0700
+date: 2018-05-17 19:17:52 +0000
 first_name: Noah
 last_name: Sall
 phone: 310.444.6102
