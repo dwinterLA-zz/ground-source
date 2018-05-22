@@ -152,7 +152,8 @@ a {
   }
   .contact-content {
     width: 42%;
-    padding-top: 24px;
+    padding: 44px 0;
+    margin-left: -18px;
     .contact-header {
       font-size: 34px;
       background-color: white;
@@ -465,7 +466,6 @@ a {
   @include modal;
   .inner {
     overflow-y: auto;
-    height: 60%;
   }
   .contact-close {
     @include close-button;
@@ -587,9 +587,7 @@ a {
 }
 
 .home-intro-left {
-  display: inline-block;
-  width: 48%;
-  margin-top: -36px;
+  width: 50%;
   background-color: white;
   font-family: $font-brand;
   color: #b4b3b3;
@@ -597,7 +595,6 @@ a {
   color: #858585;
   overflow: hidden;
   > div {
-    margin-top: -35px;
     padding: 80px;
     > p {
       margin-top: 26px;
@@ -606,8 +603,7 @@ a {
 }
 
 .home-intro-right {
-  display: inline-block;
-  width: 48%;
+  width: 50%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -690,6 +686,7 @@ a {
   font-family: $font-brand;
   color: white;
   font-size: 1.5em;
+  letter-spacing: 0.16em;
   padding-top: 25px;
 }
 
@@ -866,6 +863,8 @@ a {
 .learn-more {
   max-width: 164px;
   cursor: pointer;
+  position: absolute;
+  bottom: 2em;
 }
 
 .services-info {
@@ -891,7 +890,7 @@ a {
 
 .services-text {
   display: inline-block;
-  padding: 3em 3em 3em 80px;
+  padding: 3em 3em 6em 80px;
   opacity: .9 ;
   width: 33%;
 }
@@ -916,6 +915,7 @@ a {
   }
   position: relative;
   width: 100%;
+  min-height: 170px;
   background: $primary-color;
   color: white;
   & > * { line-height: 2.2; }
@@ -947,8 +947,11 @@ a {
     }
     &.copyright {
       display: block;
-      padding-top: 30px;
+      position: absolute;
+      bottom: 0;
+      padding: 15px 0;
       opacity: .7;
+      font-size: 0.7em;
     }
     &.social {
       position: absolute;
@@ -1045,15 +1048,8 @@ a {
 
 @media screen and (max-height: 700px) {
   .service-detail {
-    width: 100% !important;
-    height: 100% !important;
     overflow: scroll;
     .inner {
-      max-width: 100%;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      padding: 0;
       .form {
         margin: 0;
         > p {
@@ -1067,6 +1063,9 @@ a {
 @media screen and (min-width: $page-max-width) {
   body {
     font-size: 18px;
+  }
+  #header-text {
+    letter-spacing: 0.07em;
   }
 }
 
@@ -1156,6 +1155,7 @@ a {
 
   #header-text {
     font-size: 1.2em;
+    letter-spacing: 0.05em;
   }
   .navigation-arrow-left {
     left: 5%;
@@ -1223,6 +1223,7 @@ a {
         position: static;
         width: 100%;
         padding-top: 0;
+        margin-left: 0;
         .contact-header {
           padding: 23px 0 14px 0;
           margin-left: 0;
@@ -1398,6 +1399,7 @@ a {
     padding: 0;
     padding: $left-align-home-mobile 0 0 $left-align-home-mobile;
     color: white;
+    min-height: 290px;
     .inner {
       margin-left: 0;
       padding-left: 0;
@@ -1423,10 +1425,10 @@ a {
       &.social {
         margin: 25px 0 0 -9px;
         display: block;
-        right: 20px;
+        right: auto;
         bottom: 60px;
         top: auto;
-        left: auto;
+        left: 25px;
         > a {
           float: left;
           padding-right: 12px;

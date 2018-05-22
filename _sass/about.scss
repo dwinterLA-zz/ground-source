@@ -64,12 +64,10 @@
   .agent-details {
     @include modal;
     .content {
-      position: relative;
       max-width: 1400px;
-      background-color: white;
       width: 65vw;
-      margin: 10vh auto 0 auto;
       font-size: 1.2em;
+      text-align: left;
       .header {
         position: relative;
         margin-bottom: 5%;
