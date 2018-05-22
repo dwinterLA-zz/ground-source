@@ -13,7 +13,8 @@
       <div class="header">
         <img class="logo" src="/images/logo.png"/>
         <span class="contact moreSubdued">
-          {{page.address-line-1}} &nbsp; {{page.address-line-2}}
+          {{page.address-line-1}}<br />
+          {{page.address-line-2}}
           <div style="margin-top: 4px;">Chris Keller: {{site.data.contact.phone}}</div>
         </span>
 
@@ -73,6 +74,7 @@
         </div>
         <div class="floorplan">
           {% if page.floorplan-image != "" and page.floorplan-image != null %}
+            <h4 class="sidebar-header"><strong>FLOOR PLAN</strong></h4>
             <img src="{{ page.floorplan-image }}" class="printout__floorplan" />
           {% endif %}
         </div>

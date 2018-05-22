@@ -8,17 +8,17 @@
 // print only
 .print {
   display: none;
-  padding: 30px;
   .header {
     position: relative;
   }
   .logo {
     width: 9cm;
+    padding-top: 1cm;
   }
   .contact {
     position: absolute;
     left: 10cm;
-    bottom: -3px;
+    bottom: -.3cm;
     font-size: 10pt;
   }
   .content {
@@ -420,9 +420,7 @@
 @media print {
   @page {
     size: A4;
-    // disables the nasty automatic header and footer (at least in Chrome)
-    margin: 0;
-    body {margin: 1.6cm;}
+    margin: 1.75cm;
   }
   .print {
     display: block;
