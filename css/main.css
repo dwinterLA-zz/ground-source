@@ -659,7 +659,7 @@ a {
   background: rgba(255, 255, 255, 0.9);
   padding: 15px 0;
   color: #858585;
-  width: 72%;
+  width: 80%;
   text-align: center;
   margin: 0 auto; }
   .contact-info-body .contact-row {
@@ -679,14 +679,18 @@ a {
     text-align: left;
     padding-bottom: 9px; }
     .contact-info-body .contact-row > div {
-      display: inline-block;
-      width: 50%; }
-      .contact-info-body .contact-row > div > img {
-        float: left;
-        margin-top: -12px;
-        margin-bottom: 8px; }
-      .contact-info-body .contact-row > div > span {
-        margin-top: 10px; }
+      position: relative;
+      float: left;
+      display: table;
+      width: 50%;
+      overflow: hidden;
+      word-wrap: break-word; }
+      .contact-info-body .contact-row > div > div {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%; }
+      .contact-info-body .contact-row > div > .icon-holder {
+        width: 46px; }
 
 .black {
   color: black; }
@@ -988,6 +992,7 @@ a {
         max-height: 100%;
         overflow-y: auto; } }
   .contact-us-modal .inner {
+    width: 67%;
     overflow-y: auto; }
   .contact-us-modal .contact-close {
     background-color: white;
@@ -1015,7 +1020,7 @@ a {
     .contact-us-modal .form .validation {
       display: block;
       margin: 0 auto 18px auto;
-      width: 72%;
+      width: 80%;
       opacity: .8;
       display: none;
       text-align: left;
@@ -1023,7 +1028,7 @@ a {
     .contact-us-modal .form > input {
       display: block;
       margin: 0 auto 18px auto;
-      width: 72%;
+      width: 80%;
       height: 2.8em;
       opacity: .8;
       text-indent: 18px;
@@ -1032,7 +1037,7 @@ a {
       border-color: #efefef;
       background-color: #fcfcfc !important; }
     .contact-us-modal .form > button {
-      width: 72%;
+      width: 80%;
       height: 2em;
       border-radius: 500px;
       margin-top: 8px;
