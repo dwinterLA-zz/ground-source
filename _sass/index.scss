@@ -189,7 +189,7 @@ a {
   background: rgba(255, 255, 255, 0.9);
   padding: 15px 0;
   color: #858585;
-  width: 72%;
+  width: 80%;
   text-align: center;
   margin: 0 auto;
   .contact-row {
@@ -201,15 +201,19 @@ a {
     text-align: left;
     padding-bottom: 9px;
     > div {
-      display: inline-block;
-      width: 50%;
-      > img {
+      position: relative;
       float: left;
-      margin-top: -12px;
-      margin-bottom: 8px;
+      display: table;
+      width: 50%;
+      overflow: hidden;
+      word-wrap: break-word;
+      > div {
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
       }
-      > span {
-        margin-top: 10px;
+      > .icon-holder {
+        width: 46px;
       }
     }
   }
@@ -465,6 +469,7 @@ a {
 .contact-us-modal {
   @include modal;
   .inner {
+    width: 67%;
     overflow-y: auto;
   }
   .contact-close {
@@ -485,7 +490,7 @@ a {
     .validation {
       display: block;
       margin: 0 auto 18px auto;
-      width: 72%;
+      width: 80%;
       opacity: .8;
       display: none;
       text-align: left;
@@ -494,7 +499,7 @@ a {
     > input {
       display: block;
       margin: 0 auto 18px auto;
-      width: 72%;
+      width: 80%;
       height: 2.8em;
       opacity: .8;
       text-indent: 18px;
@@ -504,7 +509,7 @@ a {
       background-color: #fcfcfc !important;
     }
     > button {
-      width: 72%;
+      width: 80%;
       height: 2em;
       border-radius: 500px;
       margin-top: 8px;

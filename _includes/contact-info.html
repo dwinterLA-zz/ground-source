@@ -1,24 +1,40 @@
 <div class="contact-info-body">
    <div class="contact-row">
     <div>
-      <img src="/images/phone-icon.png" class="icon-small"/>
-      <span>{{site.data.contact.phone}}</span>
+      <div class="icon-holder">
+        <img src="/images/phone-icon.png" class="icon-small"/>
+      </div>
+      <div>
+        <span>{{site.data.contact.phone}}</span>
+      </div>
     </div>
     <div>
-      <img src="/images/location-icon.png" class="icon-small address"/>
-      <span class="underline address-line">{{site.data.contact.address1}}</span><br />
-      <span class="underline address-line">{{site.data.contact.address2}}</span><br />
-      <span class="underline address-line">{{site.data.contact.address3}}</span>
+      <div class="icon-holder">
+        <img src="/images/location-icon.png" class="icon-small address"/>
+      </div>
+      <div>
+        <span class="underline address-line">{{site.data.contact.address1}}</span><br />
+        <span class="underline address-line">{{site.data.contact.address2}}</span><br />
+        <span class="underline address-line">{{site.data.contact.address3}}</span>
+      </div>
     </div>
   </div>
   <div class="contact-row">
     <div>
-      <img src="/images/email-icon.png" class="icon-small"/>
-      <span><a href="mailto:{{site.data.email}}">{{site.data.contact.email}}</a></span>
+      <div class="icon-holder">
+        <img src="/images/email-icon.png" class="icon-small"/>
+      </div>
+      <div>
+        <span><a href="mailto:{{site.data.email}}">{{site.data.contact.email}}</a></span>
+      </div>
     </div>
     <div>
-      <img src="/images/ig-icon.png" class="icon-small"/>
-      <span><a href="https://www.instagram.com/{{site.data.instagram}}">{{site.data.contact.instagram}}</a></span>
+      <div class="icon-holder">
+        <img src="/images/ig-icon.png" class="icon-small"/>
+      </div>
+      <div>
+        <span><a href="https://www.instagram.com/{{site.data.instagram}}">{{site.data.contact.instagram}}</a></span>
+      </div>
     </div>
   </div>
 </div>
