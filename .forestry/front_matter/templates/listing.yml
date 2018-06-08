@@ -107,5 +107,3 @@ fields:
   name: parking
   label: parking
   default: ''
-pages:
-- _listings/sample.md
