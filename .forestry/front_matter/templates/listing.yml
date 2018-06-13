@@ -111,5 +111,3 @@ fields:
   name: hidden
   label: hidden
   description: Set to true to hide the listing from the listings page
-pages:
-- _listings/test.md
