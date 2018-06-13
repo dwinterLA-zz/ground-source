@@ -13,4 +13,4 @@ fields:
   config:
     wysiwyg: true
 pages:
-- listings.md
+- _pages/listings.md

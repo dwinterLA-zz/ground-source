@@ -54,4 +54,4 @@ fields:
   label: layout
   default: index
 pages:
-- index.md
+- _pages/index.md

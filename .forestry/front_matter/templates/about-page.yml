@@ -8,4 +8,4 @@ fields:
   config:
     wysiwyg: true
 pages:
-- about.md
+- _pages/about.md
