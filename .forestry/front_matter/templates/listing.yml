@@ -113,4 +113,3 @@ fields:
   description: Set to true to hide the listing from the listings page
 pages:
 - _listings/5.md
-- _listings/test.md
