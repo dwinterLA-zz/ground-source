@@ -1,6 +1,6 @@
 ---
 title: test
-date: 2018-06-13 00:00:00 -0700
+date: 2018-06-01 00:00:00 -0700
 layout:
 - newsletter
 - listing
