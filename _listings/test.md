@@ -1,6 +1,6 @@
 ---
 title: test
-date: Invalid date
+date: 2018-06-13 00:00:00 -0700
 layout:
 - newsletter
 - listing
