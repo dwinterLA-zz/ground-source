@@ -107,3 +107,7 @@ fields:
   name: parking
   label: parking
   default: ''
+- type: boolean
+  name: hidden
+  label: hidden
+  description: Set to true to hide the listing from the listings page
