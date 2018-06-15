@@ -99,7 +99,7 @@
               <td width="50px"></td>
               <td width="400px" valign="top" class="bodyContent border-right">
                 <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-3.png" width="45" height="45" alt="Rate" />
-                <span class="amenities__text"><span class="strong">Available:</span> {{ page.date | date: "%m/%d/%Y" }}</span>
+                <span class="amenities__text"><span class="strong">Available:</span><span id="available-date" data-date="{{ page.date }}"> {{ page.date | date: "%m/%d/%Y" }}</span></span>
               </td>
               <td width="400px" valign="top" class="bodyContent">
                 <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-4.png" width="45" height="45" alt="Rate" />
@@ -168,5 +168,21 @@
         </td>
       </tr>
     </table>
+    <script>
+      (function() {
+        listingAvailable();
+      })();
+
+      function listingAvailable() {
+        var dateDiv = document.getElementById('available-date')
+        var availableDate = new Date(dateDiv.dataset.date)
+        var today = new Date()
+        var availableNow = today > availableDate
+
+        if (availableNow) {
+          dateDiv.innerHTML = " Immediately"
+        }
+      }
+    </script>
   </body>
 </html>
