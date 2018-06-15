@@ -86,6 +86,10 @@ fields:
   label: lease
   description: Is the listing available for lease?
 - type: boolean
+  name: sublease
+  label: sublease
+  description: Is the listing available for sublease?
+- type: boolean
   description: Is the listing available for sale?
   label: Sale
   name: buy
