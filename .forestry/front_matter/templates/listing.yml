@@ -76,7 +76,11 @@ fields:
   label: Date
   type: datetime
   hidden: false
-  default: Invalid date
+  default: ''
+- type: text
+  name: terms
+  label: terms
+  description: Enter the leasing/subleasing/sales terms here
 - type: boolean
   name: available
   label: Available
