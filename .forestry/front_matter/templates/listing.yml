@@ -72,19 +72,10 @@ fields:
   type: file
   hidden: false
   default: ''
-- name: date
-  label: Date
-  type: datetime
-  hidden: false
-  default: ''
 - type: text
   name: terms
   label: terms
   description: Enter the leasing/subleasing/sales terms here
-- type: boolean
-  name: available
-  label: Available
-  description: Set true if listing is available, false if it is not
 - type: boolean
   name: lease
   label: lease
@@ -119,5 +110,9 @@ fields:
   name: hidden
   label: hidden
   description: Set to true to hide the listing from the listings page
+- type: datetime
+  name: available
+  label: available
+  description: When is the listing available?
 pages:
 - _listings/5.md
