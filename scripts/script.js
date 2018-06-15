@@ -304,15 +304,16 @@ function listingsSearch() {
   $(listings).hide();
 
   // var statusFilter = $('#status-filter').find(":selected").val().toLowerCase();
-  // var typeFilter = $('#type-filter').find(":selected").val().toLowerCase();
   // var minRoomFilter = parseInt($('#min-rooms').find(":selected").val());
+  var typeFilter = $('#type-filter').find(":selected").val().toLowerCase();
   var locationFilter = $('#location-filter').find(":selected").val().toLowerCase();
   var minSizeFilter = parseInt($('#min-size').val());
   var maxPriceFilter = parseInt($('#max-price').val());
 
   var filteredListings = $('.listing-preview').filter(function () {
     var lease = $(this).data("lease");
-    return ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") && (parseInt($(this).data("size").toString().replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) && (parseInt($(this).data("price").toString().replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter));
+    var sublease = $(this).data("sublease");
+    return ($(this).data("location").toLowerCase() === locationFilter || locationFilter === "n/a") && ($(this).data("lease") === (typeFilter === "lease") || $(this).data("sublease") === (typeFilter === "sublease") || typeFilter === "n/a") && (parseInt($(this).data("size").toString().replace(",", "")) >= minSizeFilter || isNaN(minSizeFilter)) && (parseInt($(this).data("price").toString().replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter));
   });
 
   paginate(filteredListings);

@@ -150,16 +150,16 @@
               </select>
               <input class="listings__filter" id="min-size" type="text" placeholder=" Min. Size" class="subdued">
               <input class="listings__filter" id="max-price" type="text" placeholder=" Price" class="subdued">
+              <select name="type" id="type-filter" class="listings__filter">
+                <option value="n/a">Any Type</option>
+                <option value="lease">Lease</option>
+                <option value="sublease">Sublease</option>
+              </select>
               <!-- Disabled filters... to enable, uncomment and alter the JS filter -->
               <!-- <select name="status" id="status-filter">
                 <option value="n/a">Any Status</option>
                 <option value="true">Available Now</option>
                 <option value="false">Not Available</option>
-              </select> -->
-              <!-- <select name="type" id="type-filter">
-                <option value="n/a">Any Type</option>
-                <option value="lease">Lease</option>
-                <option value="buy">Buy</option>
               </select> -->
               <!-- <select name="min-rooms" id="min-rooms">
                 <option value="1">Min. Rooms</option>
@@ -178,7 +178,7 @@
           <div id="properties" class="flexbox listings">
             
             
-              <div class="listing-preview" data-location="Sherman Oaks, CA 91423 " data-available="true" data-lease="true" data-buy="false" data-rooms="" data-size="6433" data-price="">
+              <div class="listing-preview" data-location="Sherman Oaks, CA 91423 " data-available="true" data-lease="true" data-sublease="" data-buy="false" data-rooms="" data-size="6433" data-price="">
                 <a href=/listings/1/listing.html>
                   
                     <div class="header" style="background-image:url(/images/13400_ventura_blvd-1.jpg)">
@@ -201,6 +201,7 @@
                                 <div class="listing-label lease-label">For Lease</div>
                               
                               
+                              
                             
                           </div>
                           <div class="amenity__cell">
@@ -254,7 +255,7 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="Los Angeles, CA 90025" data-available="true" data-lease="true" data-buy="false" data-rooms="" data-size="47,698 SF" data-price="">
+              <div class="listing-preview" data-location="Los Angeles, CA 90025" data-available="true" data-lease="true" data-sublease="" data-buy="false" data-rooms="" data-size="47,698 SF" data-price="">
                 <a href=/listings/4/listing.html>
                   
                     <div class="header" style="background-image:url(/images/11859_wilshire_.jpg)">
@@ -277,6 +278,7 @@
                                 <div class="listing-label lease-label">For Lease</div>
                               
                               
+                              
                             
                           </div>
                           <div class="amenity__cell">
@@ -330,7 +332,7 @@
                 </a>
               </div>
             
-              <div class="listing-preview" data-location="Los Angeles, CA 90067" data-available="true" data-lease="true" data-buy="false" data-rooms="" data-size="13,149" data-price="">
+              <div class="listing-preview" data-location="Los Angeles, CA 90067" data-available="true" data-lease="true" data-sublease="" data-buy="false" data-rooms="" data-size="13,149" data-price="">
                 <a href=/listings/2/listing.html>
                   
                     <div class="header" style="background-image:url(/images/1875_century_park_east.jpg)">
@@ -351,6 +353,7 @@
                             
                               
                                 <div class="listing-label lease-label">For Lease</div>
+                              
                               
                               
                             

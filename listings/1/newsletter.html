@@ -41,6 +41,7 @@
                 <div class="listing-label-newsletter lease-label">FOR LEASE</div>
                 
                 
+                
                 <img src="/images/13400_ventura_blvd.jpg" class="newsletter-property-header-image" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
               </td>
             </tr>
@@ -98,7 +99,11 @@
               <td width="50px"></td>
               <td width="400px" valign="top" class="bodyContent border-right">
                 <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-3.png" width="45" height="45" alt="Rate" />
-                <span class="amenities__text"><span class="strong">Available:</span> 08/31/2017</span>
+                <span class="amenities__text">
+                  <div><span class="strong">Available:</span><span id="available-date" data-date="2017-08-31 15:14:57 -0700"> 08/31/2017</div>
+                  <!-- dont try to display terms if it's just an empty string -->
+                  
+                </span>
               </td>
               <td width="400px" valign="top" class="bodyContent">
                 <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-4.png" width="45" height="45" alt="Rate" />
@@ -115,7 +120,7 @@
             <tr>
               <td width="50px"></td>
               <td width="800px" class="padding-bottom">
-                <span class="list-header">BUILDING HIGHLIGHTS</span>
+                <span class="list-header">HIGHLIGHTS</span>
                 <ul class="newsletter-highlights">
                   
                   <li>A Free-Standing, Two-Story Office Building  </li>
@@ -175,5 +180,21 @@
         </td>
       </tr>
     </table>
+    <script>
+      (function() {
+        listingAvailable();
+      })();
+
+      function listingAvailable() {
+        var dateDiv = document.getElementById('available-date')
+        var availableDate = new Date(dateDiv.dataset.date)
+        var today = new Date()
+        var availableNow = today > availableDate
+
+        if (availableNow) {
+          dateDiv.innerHTML = " Immediately"
+        }
+      }
+    </script>
   </body>
 </html>
