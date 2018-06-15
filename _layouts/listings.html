@@ -62,16 +62,16 @@
               </select>
               <input class="listings__filter" id="min-size" type="text" placeholder=" Min. Size" class="subdued">
               <input class="listings__filter" id="max-price" type="text" placeholder=" Price" class="subdued">
+              <select name="type" id="type-filter" class="listings__filter">
+                <option value="n/a">Any Type</option>
+                <option value="lease">Lease</option>
+                <option value="sublease">Sublease</option>
+              </select>
               <!-- Disabled filters... to enable, uncomment and alter the JS filter -->
               <!-- <select name="status" id="status-filter">
                 <option value="n/a">Any Status</option>
                 <option value="true">Available Now</option>
                 <option value="false">Not Available</option>
-              </select> -->
-              <!-- <select name="type" id="type-filter">
-                <option value="n/a">Any Type</option>
-                <option value="lease">Lease</option>
-                <option value="buy">Buy</option>
               </select> -->
               <!-- <select name="min-rooms" id="min-rooms">
                 <option value="1">Min. Rooms</option>
@@ -90,7 +90,7 @@
           <div id="properties" class="flexbox listings">
             {% assign listings = site.listings | where: "layout", "listing" | where: "hidden", "false" %}
             {% for listing in listings %}
-              <div class="listing-preview" data-location="{{listing.address-line-2}}" data-available="{{listing.available}}" data-lease="{{listing.lease}}" data-buy="{{listing.buy}}" data-rooms="{{listing.rooms}}" data-size="{{listing.sq-footage}}" data-price="{{listing.price}}">
+              <div class="listing-preview" data-location="{{listing.address-line-2}}" data-available="{{listing.available}}" data-lease="{{listing.lease}}" data-sublease="{{listing.sublease}}" data-buy="{{listing.buy}}" data-rooms="{{listing.rooms}}" data-size="{{listing.sq-footage}}" data-price="{{listing.price}}">
                 <a href={{listing.url}}>
                   {% if listing.property-preview-image %}
                     <div class="header" style="background-image:url({{listing.property-preview-image}})">
@@ -116,6 +116,9 @@
                             {% else %}
                               {% if listing.lease %}
                                 <div class="listing-label lease-label">For Lease</div>
+                              {% endif %}
+                              {% if listing.sublease %}
+                                <div class="listing-label sublease-label">For Sublease</div>
                               {% endif %}
                               {% if listing.sale %}
                                 <div class="listing-label rent-label">For Sale</div>

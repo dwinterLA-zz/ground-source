@@ -36,6 +36,9 @@
                 {% if page.lease %}
                 <div class="listing-label-newsletter lease-label">FOR LEASE</div>
                 {% endif %}
+                {% if page.sublease %}
+                <div class="listing-label-newsletter lease-label">FOR SUBLEASE</div>
+                {% endif %}
                 {% if page.sale %}
                 <div class="listing-label-newsletter rent-label">FOR SALE</div>
                 {% endif %}
@@ -96,7 +99,14 @@
               <td width="50px"></td>
               <td width="400px" valign="top" class="bodyContent border-right">
                 <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-3.png" width="45" height="45" alt="Rate" />
-                <span class="amenities__text"><span class="strong">Available:</span> {{ page.date | date: "%m/%d/%Y" }}</span>
+                <span class="amenities__text">
+                  <div><span class="strong">Available:</span><span id="available-date" data-date="{{ page.date }}"> {{ page.date | date: "%m/%d/%Y" }}</div>
+                  <!-- dont try to display terms if it's just an empty string -->
+                  {% if page.terms == '' %}
+                  {% elsif page.terms %}
+                    <div><span class="strong">Terms:</span><span id="available-date" data-date="{{ page.date }}"> {{ page.terms}}</div>
+                  {% endif %}
+                </span>
               </td>
               <td width="400px" valign="top" class="bodyContent">
                 <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-4.png" width="45" height="45" alt="Rate" />
@@ -113,7 +123,7 @@
             <tr>
               <td width="50px"></td>
               <td width="800px" class="padding-bottom">
-                <span class="list-header">BUILDING HIGHLIGHTS</span>
+                <span class="list-header">HIGHLIGHTS</span>
                 <ul class="newsletter-highlights">
                   {% for highlight in page.highlights %}
                   <li>{{ highlight }}</li>
@@ -165,5 +175,21 @@
         </td>
       </tr>
     </table>
+    <script>
+      (function() {
+        listingAvailable();
+      })();
+
+      function listingAvailable() {
+        var dateDiv = document.getElementById('available-date')
+        var availableDate = new Date(dateDiv.dataset.date)
+        var today = new Date()
+        var availableNow = today > availableDate
+
+        if (availableNow) {
+          dateDiv.innerHTML = " Immediately"
+        }
+      }
+    </script>
   </body>
 </html>
