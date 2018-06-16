@@ -100,7 +100,11 @@
               <td width="400px" valign="top" class="bodyContent border-right">
                 <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-3.png" width="45" height="45" alt="Rate" />
                 <span class="amenities__text">
-                  <div><span class="strong">Available:</span><span id="available-date" data-date="{{ page.date }}"> {{ page.date | date: "%m/%d/%Y" }}</div>
+                  {% if site.time < page.available %}
+                    <div><span class="strong">Available:</span><span> {{ page.available | date: "%m/%d/%Y" }}</div>
+                  {% else %}
+                    <div><span class="strong">Available:</span><span> Immediately</div>
+                  {% endif %}
                   <!-- dont try to display terms if it's just an empty string -->
                   {% if page.terms == '' %}
                   {% elsif page.terms %}
@@ -175,21 +179,5 @@
         </td>
       </tr>
     </table>
-    <script>
-      (function() {
-        listingAvailable();
-      })();
-
-      function listingAvailable() {
-        var dateDiv = document.getElementById('available-date')
-        var availableDate = new Date(dateDiv.dataset.date)
-        var today = new Date()
-        var availableNow = today > availableDate
-
-        if (availableNow) {
-          dateDiv.innerHTML = " Immediately"
-        }
-      }
-    </script>
   </body>
 </html>
