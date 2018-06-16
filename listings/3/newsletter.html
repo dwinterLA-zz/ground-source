@@ -38,8 +38,8 @@
             <tr>
               <td valign="top" class="headerContent" colspan="5">
                 
-                <div class="listing-label-newsletter lease-label">FOR LEASE</div>
                 
+                <div class="listing-label-newsletter lease-label">FOR SUBLEASE</div>
                 
                 
                 <img src="/images/6534_Sunset_01-4.jpg" class="newsletter-property-header-image" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
@@ -100,8 +100,11 @@
               <td width="400px" valign="top" class="bodyContent border-right">
                 <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-3.png" width="45" height="45" alt="Rate" />
                 <span class="amenities__text">
-                  <div><span class="strong">Available:</span><span id="available-date" data-date="2018-05-02 15:34:41 -0700"> 05/02/2018</div>
+                  
+                    <div><span class="strong">Available:</span><span> Immediately</div>
+                  
                   <!-- dont try to display terms if it's just an empty string -->
+                  
                   
                 </span>
               </td>
@@ -174,21 +177,5 @@
         </td>
       </tr>
     </table>
-    <script>
-      (function() {
-        listingAvailable();
-      })();
-
-      function listingAvailable() {
-        var dateDiv = document.getElementById('available-date')
-        var availableDate = new Date(dateDiv.dataset.date)
-        var today = new Date()
-        var availableNow = today > availableDate
-
-        if (availableNow) {
-          dateDiv.innerHTML = " Immediately"
-        }
-      }
-    </script>
   </body>
 </html>

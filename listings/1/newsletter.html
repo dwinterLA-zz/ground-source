@@ -100,8 +100,11 @@
               <td width="400px" valign="top" class="bodyContent border-right">
                 <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-3.png" width="45" height="45" alt="Rate" />
                 <span class="amenities__text">
-                  <div><span class="strong">Available:</span><span id="available-date" data-date="2017-08-31 15:14:57 -0700"> 08/31/2017</div>
+                  
+                    <div><span class="strong">Available:</span><span> 08/31/2019</div>
+                  
                   <!-- dont try to display terms if it's just an empty string -->
+                  
                   
                 </span>
               </td>
@@ -180,21 +183,5 @@
         </td>
       </tr>
     </table>
-    <script>
-      (function() {
-        listingAvailable();
-      })();
-
-      function listingAvailable() {
-        var dateDiv = document.getElementById('available-date')
-        var availableDate = new Date(dateDiv.dataset.date)
-        var today = new Date()
-        var availableNow = today > availableDate
-
-        if (availableNow) {
-          dateDiv.innerHTML = " Immediately"
-        }
-      }
-    </script>
   </body>
 </html>
