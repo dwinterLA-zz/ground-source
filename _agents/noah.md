@@ -1,6 +1,6 @@
 ---
 title: noah
-avatar: "/images/GS_NoahSal_Profile.jpg"
+avatar: "/images/GS_NoahSal_Profile-1"
 date: 2018-05-17 19:17:52 +0000
 first_name: NOAH
 last_name: SALL
