@@ -1,9 +1,9 @@
 ---
 title: noah
-avatar: "/images/agent_placeholder.png"
+avatar: "/images/GS_NoahSal_Profile.jpg"
 date: 2018-05-17 19:17:52 +0000
-first_name: Noah
-last_name: Sall
+first_name: NOAH
+last_name: SALL
 phone: 310.444.6102
 cell: 818.535.3142
 short_bio: 'Noah Sall, a Los Angeles native, earned his Real Estate degree from the
