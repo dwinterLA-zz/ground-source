@@ -1,5 +1,5 @@
 ---
-avatar: "/images/GS_ChrisKeller_Profile.jpg"
+avatar: "/images/GS_ChrisKeller_Profile-1"
 date: 2017-09-08 17:11:24 +0000
 email: ckeller@groundsource.net
 featured_listings: []
