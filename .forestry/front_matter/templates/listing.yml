@@ -1,4 +1,5 @@
 ---
+label: listing
 hide_body: false
 is_partial: false
 fields:
@@ -117,4 +118,4 @@ fields:
 pages:
 - _listings/7.md
 - _listings/6.md
-- _listings/5.md
+- _listings/550 Brand Blvd.md

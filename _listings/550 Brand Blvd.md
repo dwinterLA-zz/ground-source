@@ -32,13 +32,13 @@ info-text: 550 N. Brand is LEED Gold Certified. Nicely built out space for suble
   with perimeter offices, interior workstations, and multiple conference rooms. Furniture,
   fixtures, and equipment are negotiable.
 floorplan-image: "/images/BrandBlvd_Floorplan.jpg"
-available: 2018-06-15 00:00:00 -0700
+available: 2018-06-15 07:00:00 +0000
 lease: false
 buy: false
 property-preview-image: "/images/550-N.-Brand-Blvd-1920x1080.jpg"
 property-header: "/images/550-N.-Brand-Blvd-1920x1080.jpg"
 parking: 3.0/1000 SF
-hidden: true
+hidden: false
 terms: 5/2021 or 10/2024
 date: 2018-06-13 07:00:00 +0000
 sublease: true
