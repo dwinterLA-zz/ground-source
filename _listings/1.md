@@ -6,7 +6,7 @@ amenities:
 - Corner Location
 - Great signage
 - Additional street parking
-available: true
+available: 2019-08-31 22:14:57 +0000
 buy: false
 floorplan-image: "/images/floorplan-2.jpg"
 gallery-images:
@@ -43,6 +43,6 @@ short-caption: Free-standing building for lease in Sherman Oaks.
 sq-footage: 6433
 type: ''
 hidden: false
-available: 2019-08-31 22:14:57 +0000
 terms: ''
+published: false
 ---
