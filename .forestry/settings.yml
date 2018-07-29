@@ -3,23 +3,31 @@ new_page_extension: md
 auto_deploy: true
 admin_path: 
 webhook_url: 
-collections:
-- path: _case_studies
+sections:
+- type: directory
+  path: _case_studies
   label: Case_studies
   create: all
-- path: _listings
+  match: "**/*"
+- type: directory
+  path: _listings
   label: Listings
   create: all
-- path: _testimonials
+  match: "**/*"
+- type: directory
+  path: _testimonials
   label: Testimonials
   create: all
-- path: _agents
+  match: "**/*"
+- type: directory
+  path: _agents
   label: Agents
   create: all
-- path: _posts
+  match: "**/*"
+- type: jekyll-posts
   label: Posts
   create: all
-- path: ''
+- type: jekyll-pages
   label: Pages
   create: all
 upload_dir: images
