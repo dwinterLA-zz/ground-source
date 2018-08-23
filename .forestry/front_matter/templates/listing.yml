@@ -116,6 +116,6 @@ fields:
   label: available
   description: When is the listing available?
 pages:
+- _listings/5.md
 - _listings/7.md
 - _listings/6.md
-- _listings/5.md
