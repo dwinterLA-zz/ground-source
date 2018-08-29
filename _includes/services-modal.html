@@ -16,22 +16,26 @@
 					LEARN MORE
 				</a>
 			</div>
-			{% for example in include.examples %}
-				<div class="service-section service-section--highlights">
-					<div class="service-highlight service-highlight--text">
-						<h5>{{ example.header }}</h5>
-						<ul>
-							{% for highlight in example.highlights %}
-								<li>{{ highlight }}</li>
-							{% endfor %}
-						</ul>
+			<div class="services-carousel">
+				{% for example in include.examples %}
+					<div>
+						<div class="service-section service-section--highlights">
+							<div class="service-highlight service-highlight--text">
+								<h5>{{ example.header }}</h5>
+								<ul>
+									{% for highlight in example.highlights %}
+										<li>{{ highlight }}</li>
+									{% endfor %}
+								</ul>
+							</div>
+							<div
+								class="service-highlight service-highlight--image"
+								style="background-image: url('{{ example.image_1 }}')"
+							></div>
+						</div>
 					</div>
-					<div
-						class="service-highlight service-highlight--image"
-						style="background-image: url('{{ example.image_1 }}')"
-					></div>
-				</div>
-			{% endfor %}
+				{% endfor %}
+			</div>
 		</div>
 	</div>
 </div>
