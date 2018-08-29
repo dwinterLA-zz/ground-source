@@ -1,0 +1,27 @@
+---
+label: Service Example
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Title
+  name: header
+  config:
+    required: true
+- type: list
+  name: highlights
+  label: Highlights
+- type: file
+  name: image_1
+  label: Image 1
+  description: This will be presented on the services modal in the homepage and the
+    left-hand side of the experience page.
+  config:
+    maxSize: '1'
+- type: file
+  name: image_2
+  label: Image 2
+  description: This will be placed on the right-hand side on the experience page (not
+    shown on home page).
+  config:
+    maxSize: '1'
