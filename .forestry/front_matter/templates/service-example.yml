@@ -25,3 +25,5 @@ fields:
     shown on home page).
   config:
     maxSize: '1'
+pages:
+- _examples_tenant/wilshire_courtyard.md
