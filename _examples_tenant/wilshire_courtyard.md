@@ -7,6 +7,5 @@ highlights:
 - 5700 Wilshire - Miracle Mile
 image_1: "/images/550 N. Brand Blvd.jpg"
 image_2: "/images/EG_20180615_D750_752256.jpg"
-published: false
 
 ---
