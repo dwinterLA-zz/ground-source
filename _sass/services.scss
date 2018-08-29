@@ -49,7 +49,31 @@
   padding: 1.5em 0;
 }
 
-.service-learn-more {
-	text-align: center;
-	padding: 40px 0;
+.service-section {
+  padding-bottom: 40px;
+}
+
+.service-section--highlights {
+  display: flex;
+}
+
+.service-section--learn-more {
+  text-align: center;
+}
+
+.service-highlight {
+}
+
+.service-highlight--text {
+  flex-basis: 40%;
+  padding-right: 22px;
+}
+
+.service-highlight--image {
+  flex-basis: 60%;
+  min-height: 300px;
+  max-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
