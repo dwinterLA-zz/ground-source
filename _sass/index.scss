@@ -859,8 +859,11 @@ a {
   }
 }
 
-.learn-more {
-  max-width: 164px;
+.learn-more-btn {
+  padding: 8px 16px;
+  border: medium solid white;
+  font-weight: 600;
+  border-radius: 500px;
   cursor: pointer;
   position: absolute;
   bottom: 2em;
