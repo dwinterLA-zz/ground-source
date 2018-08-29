@@ -48,6 +48,9 @@ collections:
   testimonials:
   agents:
   case_studies:
+  examples_investment:
+  examples_landlord:
+  examples_tenant:
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
