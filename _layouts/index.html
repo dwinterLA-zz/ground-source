@@ -19,13 +19,25 @@
     {% include contact-form.html %}
     <div class="main">
       <div id="tenant-service-modal" class="service-detail">
-        {% include services-modal.html header-text="TENANT REPRESENTATION" body-text=page.tenant_services_text %}
+        {% include services-modal.html
+           header-text="TENANT REPRESENTATION"
+           body-text=page.tenant_services_text
+           link="/experience.html?service=tenant"
+        %}
       </div>
       <div id="landlord-service-modal" class="service-detail">
-        {% include services-modal.html header-text="LANDLORD REPRESENTATION" body-text=page.landlord_services_text %}
+        {% include services-modal.html
+          header-text="LANDLORD REPRESENTATION"
+          body-text=page.landlord_services_text
+          link="/experience.html?service=landlord"
+         %}
       </div>
       <div id="investment-service-modal" class="service-detail">
-        {% include services-modal.html header-text="INVESTMENT SALES" body-text=page.investment_services_text %}
+        {% include services-modal.html
+          header-text="INVESTMENT SALES"
+          body-text=page.investment_services_text
+          link="/experience.html?service=investment"
+        %}
       </div>
       <div id="top-nav">
         <ul>
