@@ -5,6 +5,14 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: _examples_investment
+  label: 'Examples: Investment'
+  create: all
+  match: "**/*"
+  new_doc_ext: ".md"
+  templates:
+  - service-example
+- type: directory
   path: _case_studies
   label: Case_studies
   create: all
