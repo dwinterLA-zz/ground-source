@@ -16,19 +16,22 @@
 					LEARN MORE
 				</a>
 			</div>
-			<div class="service-section service-section--highlights">
-				<div class="service-highlight service-highlight--text">
-					<h5>WILSHIRE COURTYARD</h5>
-					<ul>
-						<li>5700 Wilshire - Miracle Mile</li>
-						<li>1,100,000 SF - RREEF</li>
-					</ul>
+			{% for example in include.examples %}
+				<div class="service-section service-section--highlights">
+					<div class="service-highlight service-highlight--text">
+						<h5>{{ example.header }}</h5>
+						<ul>
+							{% for highlight in example.highlights %}
+								<li>{{ highlight }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div
+						class="service-highlight service-highlight--image"
+						style="background-image: url('{{ example.image_1 }}')"
+					></div>
 				</div>
-				<div
-					class="service-highlight service-highlight--image"
-					style="background-image: url('http://r.ddmcdn.com/s_f/o_1/cx_462/cy_245/cw_1349/ch_1349/w_720/APL/uploads/2015/06/caturday-shutterstock_149320799.jpg')"
-				></div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 </div>
