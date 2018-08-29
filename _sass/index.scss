@@ -98,10 +98,6 @@ a {
   }
 }
 
-.content {
-  position: relative;
-}
-
 .mobile-nav {
   display: none;
 }
@@ -434,9 +430,6 @@ a {
 .service-detail {
   min-width: 420px;
   @include modal;
-  .inner {
-    padding-bottom: 0;
-  }
 }
 
 .services-modal-content {
@@ -445,11 +438,12 @@ a {
   .service-detail-close {
     @include close-button-small;
     top: 28px;
-    right: 25px;
+    right: 35px;
   }
   .header {
     background-color: $primary-color;
-    padding: 25px;
+    // extra right padding is to prevent header text from encroaching on the close button
+    padding: 25px 76px 25px 35px;
     color: white;
     > h1 {
       margin: 0 24px 0 0;
@@ -457,7 +451,7 @@ a {
   }
 
   .content {
-    padding: 25px;
+    padding: 35px;
     font-size: .8em;
   }
 }
