@@ -19,43 +19,13 @@
     {% include contact-form.html %}
     <div class="main">
       <div id="tenant-service-modal" class="service-detail">
-        <div class="inner">
-          <div class="services-modal-content content-tenant">
-            <div class="service-detail-close"></div>
-            <div class="header">
-              <h1>TENANT REPRESENTATION</h1>
-            </div>
-            <div class="content content-tenant">
-              <p>{{page.tenant_services_text}}<p>
-            </div>
-          </div>
-        </div>
+        {% include services-modal.html header-text="TENANT REPRESENTATION" body-text=page.tenant_services_text %}
       </div>
       <div id="landlord-service-modal" class="service-detail">
-        <div class="inner">
-          <div class="services-modal-content content-landlord">
-            <div class="service-detail-close"></div>
-            <div class="header">
-              <h1>LANDLORD REPRESENTATION</h1>
-            </div>
-            <div class="content content-landlord">
-              <p>{{page.landlord_services_text}}<p>
-            </div>
-          </div>
-        </div>
+        {% include services-modal.html header-text="LANDLORD REPRESENTATION" body-text=page.landlord_services_text %}
       </div>
       <div id="investment-service-modal" class="service-detail">
-        <div class="inner">
-          <div class="services-modal-content content-investments">
-            <div class="service-detail-close"></div>
-            <div class="header">
-              <h1>INVESTMENT SALES</h1>
-            </div>
-            <div class="content content-investment">
-              <p>{{page.investment_services_text}}<p>
-            </div>
-          </div>
-        </div>
+        {% include services-modal.html header-text="INVESTMENT SALES" body-text=page.investment_services_text %}
       </div>
       <div id="top-nav">
         <ul>
