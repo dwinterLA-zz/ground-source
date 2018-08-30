@@ -54,46 +54,8 @@
     padding-bottom: 40px;
   }
 
-  .study-carousel {
-    max-width: $page-max-width;
-    width: 40vw;
-    padding: 0 46px;
-    text-align: center;
-    height: 100%;
-    background-color: white;
-    opacity: .85;
-    margin: 0 auto;
-    .slick-track {
-      height: 390px;
-    }
-    .study {
-      vertical-align: middle;
-      padding-top: 50px;
-    }
-    > p {
-      opacity: .9;
-    }
-    .header {
-      text-transform: uppercase;
-      margin-bottom: 22px;
-      > p {
-        margin: 0 0 2px 0;
-        opacity: .9
-      }
-    }
-    .name {
-      font-size: 1.75em;
-      margin-bottom: 0;
-    }
-    .slick-dots {
-      position: absolute;
-      bottom: 16px;
-      left: 42%;
-    }
-  }
-
   .services__links {
-    padding-bottom: 40px;
+    padding-bottom: 4px;
   }
 
   .service__link {
