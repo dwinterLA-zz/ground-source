@@ -34,3 +34,5 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
+pages:
+- experience.md
