@@ -1,4 +1,7 @@
 #container-experience {
+  .state {
+    display: none;
+  }
   .services-carousel {
     .slick-dots {
       position: absolute;
@@ -70,7 +73,7 @@
     padding-bottom: 4px;
   }
 
-  .service__link {
+  .state__link {
     display: inline-block;
     color: $primary-color;
     font-size: 1.4em;
