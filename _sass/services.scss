@@ -109,6 +109,26 @@
   .service-highlight:nth-child(2):nth-last-child(2),
   .service-highlight:nth-child(3):nth-last-child(1) {
     flex-basis: 33.3333%;
+    &.service-highlight--text {
+      padding-right: 0;
+      // prevent overlap with abs positioned slick dots
+      padding-bottom: 56px;
+    }
+  }
+  .service-highlight:nth-child(2):nth-last-child(1) {
+    @media screen and (max-width: $breakpoint-small) {
+      // TODO: why aren't these styles being applied!!
+      .service-highlight--text {
+        .highlight__header {
+          font-size: 1.8em;
+          margin: 10px 0;
+        }
+      }
+      &.service-highlight--image {
+        // image should be the first flex item on index service modal
+        order: -2;
+      }
+    }
   }
   .service-highlight:nth-child(2):nth-last-child(2) {
     text-align: center !important;
