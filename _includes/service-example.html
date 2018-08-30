@@ -8,12 +8,14 @@
 					style="background-image: url('{{ example.image_1 }}')"
 				></div>
 				<div class="service-highlight service-highlight--text">
-					<h5>{{ example.header }}</h5>
-					<ul>
-						{% for highlight in example.highlights %}
-							<li>{{ highlight }}</li>
-						{% endfor %}
-					</ul>
+					<h5 class="highlight__header">{{ example.header }}</h5>
+					<div class="inline-block">
+						<ul class="highlight__list">
+							{% for highlight in example.highlights %}
+								<li>{{ highlight }}</li>
+							{% endfor %}
+						</ul>
+					</div>
 				</div>
 				<div
 					class="service-highlight service-highlight--image"
