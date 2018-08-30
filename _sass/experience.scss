@@ -2,6 +2,29 @@
   .state {
     display: none;
   }
+
+  .experience-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .top {
+    flex-basis: 60vh;
+    flex-grow: 1;
+    background-image: url(../images/experience/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    height: 60vh;
+  }
+  .bottom {
+    position: relative;
+    @media screen and (max-width: $breakpoint-small) {
+      padding: 0 30px 42px 30px;
+    }
+  }
+
   .services-carousel {
     .slick-dots {
       position: absolute;
@@ -31,19 +54,7 @@
     padding: 6px 20px;
     outline: none;
   }
-  .top {
-    background-image: url(../images/experience/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 0;
-    height: 60vh;
-  }
-  .bottom {
-    position: relative;
-    @media screen and (max-width: $breakpoint-small) {
-      padding: 0 30px 42px 30px;
-    }
-  }
+
   .services__hero {
     max-width: $page-max-width;
     position: relative;
