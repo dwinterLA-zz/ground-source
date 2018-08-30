@@ -3,16 +3,21 @@
 	{% for example in include.examples %}
 		<div>
 			<div class="service-section--highlights">
-				<div
-					class="service-highlight service-highlight--image"
-					style="background-image: url('{{ example.image_1 }}')"
-				></div>
+				{% if include.multi-image %}
+					<div
+						class="service-highlight service-highlight--image"
+						style="background-image: url('{{ example.image_1 }}')"
+					></div>
+				{% endif %}
 				<div class="service-highlight service-highlight--text">
 					<h5 class="highlight__header">{{ example.header }}</h5>
 					<div class="inline-block">
 						<ul class="highlight__list">
 							{% for highlight in example.highlights %}
-								<li>{{ highlight }}</li>
+								<li>
+									<div class="highlight__bullet"></div>
+									{{ highlight }}
+								</li>
 							{% endfor %}
 						</ul>
 					</div>

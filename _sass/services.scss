@@ -69,9 +69,17 @@
 
 .highlight__list {
   text-align: left;
+  padding-left: 0;
   > li {
-    list-style-type: square;
+    list-style-type: none;
   }
+}
+
+.highlight__bullet {
+  display: inline-block;
+  padding: 5px;
+  margin-right: 4px;
+  background-color: $primary-color;
 }
 
 .highlight__header {
@@ -97,6 +105,7 @@
     text-align: center !important;
     .highlight__header {
       font-size: 1.5em;
+      margin-bottom: 10px;
     }
   }
 }
