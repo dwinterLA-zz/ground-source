@@ -5,6 +5,9 @@
       left: 50%;
       transform: translateX(-50%);
       bottom: 30px;
+      @media screen and (max-width: $breakpoint-small) {
+        bottom: -20px;
+      }
     }
   }
 
@@ -34,6 +37,9 @@
   }
   .bottom {
     position: relative;
+    @media screen and (max-width: $breakpoint-small) {
+      padding: 0 30px 42px 30px;
+    }
   }
   .services__hero {
     max-width: $page-max-width;
@@ -54,7 +60,10 @@
     margin: 0 auto;
     font-size: 1.1em;
     opacity: .9;
-    padding-bottom: 40px;
+    padding: 40px 0;
+    @media screen and (max-width: $breakpoint-small) {
+      max-width: 80vw;
+    }
   }
 
   .services__links {
@@ -67,29 +76,9 @@
     font-size: 1.4em;
     letter-spacing: 2px;
     text-decoration: none;
-    padding: 0 50px;
+    padding: 12px 50px;
     &.active {
       color: white;
-    }
-  }
-
-  @media screen and (max-height: 900px) {
-    .top {
-      height: 100vh;
-    }
-
-    .bottom {
-      height: 60vh;
-    }
-  }
-
-  @media screen and (max-width: 1080px) {
-    .top {
-      height: 100vh;
-    }
-
-    .bottom {
-      height: 60vh;
     }
   }
 
