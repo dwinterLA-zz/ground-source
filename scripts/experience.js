@@ -17,7 +17,6 @@ $(document).ready(function() {
       default:
         // TODO: create a default state? But what would we place on the bottom?
         setState('.state--tenant')
-        console.log('none found, settting to tenant?')
     }
 
   }
@@ -26,6 +25,8 @@ $(document).ready(function() {
     setActiveLink(state)
     $('.state').hide()
     $(state).show()
+    // slick carousel needs to calc dimensions
+    $(window).trigger('resize');
   }
 
   function setActiveLink(state) {

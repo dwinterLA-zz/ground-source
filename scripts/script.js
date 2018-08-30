@@ -99,6 +99,8 @@ $(document).ready(function() {
   });
 
   $("#tenant-service-modal-button").click(function() {
+    // slick carousel needs to calc dimensions
+    $(window).trigger('resize');
     modalOffset = window.pageYOffset;
     $(".main").addClass('modal-open');
     $(".main").addClass('mobile-bg-hide');
@@ -106,6 +108,8 @@ $(document).ready(function() {
   })
 
   $("#investment-service-modal-button").click(function() {
+    // slick carousel needs to calc dimensions
+    $(window).trigger('resize');
     modalOffset = window.pageYOffset;
     $("#investment-service-modal").fadeIn();
     $(".main").addClass("modal-open");
@@ -113,6 +117,8 @@ $(document).ready(function() {
   })
 
   $("#landlord-service-modal-button").click(function() {
+    // slick carousel needs to calc dimensions
+    $(window).trigger('resize');
     modalOffset = window.pageYOffset;
     $("#landlord-service-modal").fadeIn();
     $(".main").addClass("modal-open");
