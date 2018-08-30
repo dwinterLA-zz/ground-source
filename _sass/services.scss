@@ -76,6 +76,14 @@
   background-repeat: no-repeat;
 }
 
+.service-highlight {
+  li:nth-child(1):nth-last-child(3),
+  li:nth-child(2):nth-last-child(2),
+  li:nth-child(3):nth-last-child(1) {
+    flex-basis: 33.3333%;
+  }
+}
+
 .services-carousel {
   text-align: center;
 }

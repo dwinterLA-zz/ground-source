@@ -270,7 +270,7 @@ function displaySite  () {
   })
   // TODO: Place this somewhere else?
   // TODO: Potentiall might have to loop through and initialize all services carousels separately
-  $('.services-carouse').slick({
+  $('.services-carousel').slick({
     "autoplay": false,
     "draggable": false,
     "dots": true,

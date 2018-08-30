@@ -43,25 +43,41 @@
         <div class="top">
           <img src="images/logo.png" class="logo-upper-left"/>
           <div class="ham-menu"></div>
-          <div class="text">
+          <div class="services__hero">
             <div class="experience-section-header">{{page.text_title}}</div>
-            <p>{{page.text_body}}</p>
-              <button class="contact-us-link-top contact-us-link">CONTACT US</button>
+            <div class="services__links">
+              <a
+                href="/experience?service=tenant"
+                id="tenant-service-link"
+                class="service__link active"
+              >
+                TENANT<br /> REPRESENTATION
+              </a>
+              <a
+                href="/experience?service=landlord"
+                id="tenant-service-link"
+                class="service__link"
+              >
+                LANDLORD<br /> REPRESENTATION
+              </a>
+              <a
+                href="/experience?service=sales"
+                id="tenant-service-link"
+                class="service__link"
+              >
+                INVESTMENT<br /> SALES
+              </a>
+            </div>
+            <p class="services__description">
+              {{page.text_body}}
+            </p>
+            <button class="contact-us-link">CONTACT US</button>
           </div>
         </div>
         <div class="bottom">
-          <div class="study-carousel">
-            {% for study in site.case_studies %}
-              <div class="study">
-                <div class="header">
-                  <p class="name">{{study.name}}</h3>
-                  <p>{{study.address_line_1}}</p>
-                  <p>{{study.address_line_2}}</p>
-                </div>
-                <p>{{study.text}}</p>
-              </div>
-            {% endfor %}
-          </div>
+          {% include service-example.html
+            examples=site.examples_tenant
+          %}
         </div>
 
         {% include footer.html %}

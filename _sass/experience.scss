@@ -1,14 +1,25 @@
 #container-experience {
-  .experience-section-header {
-    @include header;
-    color: white;
+  ul.slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
   }
-  .contact-us-link-top {
+  .experience-section-header {
+    color: white;
+    font-size: 2.4em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-bottom: 40px;
+  }
+  .contact-us-link {
     border-radius: 500px;
+    font-size: 1.3em;
+    font-weight: 600;
     border-style: solid;
-    border-width: thin;
+    border-width: 2px;
     margin-top: 5px;
-    padding: 3px 12px;
+    padding: 6px 20px;
     outline: none;
   }
   .top {
@@ -16,22 +27,15 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
-    height: 100vh;
+    height: 60vh;
   }
   .bottom {
-    display: none;
-    background-image: url(../images/experience/building.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 0;
-    height: 33vh;
     position: relative;
   }
-  .text {
+  .services__hero {
     max-width: $page-max-width;
     position: relative;
     color: white;
-    width: 43vw;
     text-align: center;
     margin: 0 auto;
     transform: translateY(-50%);
@@ -40,6 +44,14 @@
     > h4 {
       font-size: 1.7em;
     }
+  }
+
+  .services__description {
+    max-width: 46vw;
+    margin: 0 auto;
+    font-size: 1.1em;
+    opacity: .9;
+    padding-bottom: 40px;
   }
 
   .study-carousel {
@@ -80,6 +92,22 @@
     }
   }
 
+  .services__links {
+    padding-bottom: 40px;
+  }
+
+  .service__link {
+    display: inline-block;
+    color: $primary-color;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 0 50px;
+    &.active {
+      color: white;
+    }
+  }
+
   @media screen and (max-height: 900px) {
     .top {
       height: 100vh;
@@ -101,7 +129,7 @@
   }
 
   @media screen and (max-width: 1000px) {
-    .text {
+    .services__hero {
       > p {
         font-size: 1.3em;
       }
@@ -119,7 +147,7 @@
     .footer {
       height: 100%;
     }
-    .text {
+    .services__hero {
       position: static;
       transform: translateY(0);
       top: 0%;
