@@ -1,0 +1,36 @@
+---
+label: experience-page
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Page Title
+  name: text_title
+- type: textarea
+  label: Experience Description
+  name: text_body
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: tenant_services_text
+  label: Tenant Services Text
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: landlord_services_text
+  label: Landlord Services Text
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: textarea
+  name: investment_services_text
+  label: Investment Services Text
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
