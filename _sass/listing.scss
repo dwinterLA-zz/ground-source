@@ -260,7 +260,7 @@
   .listings-sidebar__inner {
     position: sticky;
     top: 12px;
-    @media screen and (max-width: $breakpoint-small) {
+    @include mobile {
       position: static;
     }
   }
@@ -353,7 +353,7 @@
     }
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @include mobile {
     #content {
       top: 1062px;
     }

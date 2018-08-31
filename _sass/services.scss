@@ -65,7 +65,7 @@
   flex-basis: 40%;
   padding-right: 22px;
   text-align: left;
-  @media screen and (max-width: $breakpoint-small) {
+  @include mobile {
     order: -1;
   }
 }
@@ -90,7 +90,7 @@
 }
 
 .service-highlight {
-  @media screen and (max-width: $breakpoint-small) {
+  @include mobile {
     margin-bottom: 20px;
   }
 }
@@ -116,7 +116,7 @@
     }
   }
   .service-highlight:nth-child(2):nth-last-child(1) {
-    @media screen and (max-width: $breakpoint-small) {
+    @include mobile {
       // TODO: why aren't these styles being applied!!
       .service-highlight--text {
         .highlight__header {
@@ -137,7 +137,7 @@
       margin-bottom: 10px;
     }
   }
-  @media screen and (max-width: $breakpoint-small) {
+  @include mobile {
     flex-direction: column;
   }
 }

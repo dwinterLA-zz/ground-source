@@ -1038,7 +1038,7 @@ a {
     }
   }
 }
-@media screen and (max-width: $breakpoint-small) {
+@include mobile {
   body {
     font-size: .9em;
   }
