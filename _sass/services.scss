@@ -12,7 +12,6 @@
 
 .service-highlight--text {
   flex-basis: 40%;
-  padding-right: 22px;
   text-align: left;
 }
 
@@ -67,6 +66,9 @@
     }
   }
   .service-highlight:nth-child(1):nth-last-child(2) {
+    &.service-highlight--text {
+      padding-right: 22px;
+    }
     .highlight__header {
       font-size: 1.3em;
       color: $grey;
@@ -75,6 +77,7 @@
     @include mobile {
       &.service-highlight--text {
         order: 1;
+        padding-right: 0;
       }
     }
   }
