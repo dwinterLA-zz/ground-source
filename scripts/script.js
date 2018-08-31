@@ -275,13 +275,12 @@ function displaySite  () {
     "nextArrow": $('.navigation-arrow-right')
   })
   // TODO: Place this somewhere else?
-  // TODO: Potentiall might have to loop through and initialize all services carousels separately
   $('.services-carousel').slick({
     "autoplay": false,
     "draggable": false,
     "dots": true,
     "prevArrow": false,
-    "nextArrow": false,
+    "nextArrow": false
   })
 }
 

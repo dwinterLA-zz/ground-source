@@ -86,7 +86,13 @@
 
 @mixin mobile {
   @media screen and (max-width: $breakpoint-small) {
-    @content
+    @content;
+  }
+}
+
+@mixin small-desktop {
+  @media screen and (max-width: $breakpoint-small-desktop) {
+    @content;
   }
 }
 

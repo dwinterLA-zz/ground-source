@@ -26,13 +26,22 @@ $(document).ready(function() {
     setActiveLink(state)
     $('.state').hide()
     $(state).show(0, function() {
-      // TODO: think of an actual solution
-      setTimeout(function() {
-        $(window).trigger('resize');
-      }, 3000)
+      setupCarousel()
     })
   }
 
+  function setupCarousel() {
+    if ($('.services-carousel:visible').length > 0) {
+      $('.services-carousel').slick('unslick');
+      $('.services-carousel').slick({
+        "autoplay": false,
+        "draggable": false,
+        "dots": true,
+        "prevArrow": false,
+        "nextArrow": false
+      });
+    }
+  }
   function setActiveLink(state) {
     $('.state__link').removeClass('active')
     $(state + '.state__link').addClass('active')
