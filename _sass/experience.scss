@@ -27,6 +27,9 @@
   }
   .bottom {
     position: relative;
+    @include mobile {
+      padding: 0 30px 42px 30px
+    }
   }
 
   .services-carousel {
