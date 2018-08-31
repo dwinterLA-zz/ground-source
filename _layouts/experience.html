@@ -45,7 +45,13 @@
             <img src="images/logo.png" class="logo-upper-left"/>
             <div class="ham-menu"></div>
             <div class="services__hero">
-              <div class="experience-section-header">{{page.text_title}}</div>
+              <a
+                href="/experience.html"
+                id="experience-default-link"
+                class="state__link state__link--header state--default"
+              >
+                {{page.text_title}}
+              </a>
               <div class="services__links">
                 <a
                   href="/experience?service=tenant"
@@ -69,9 +75,9 @@
                   INVESTMENT<br /> SALES
                 </a>
               </div>
-              <!-- <div class="services__description description-default">
+              <div class="state state--default services__description">
                 {{ page.text_body }}
-              </div> -->
+              </div>
               <div class="state state--tenant services__description">
                 {{ page.tenant_services_text }}
               </div>
@@ -125,7 +131,6 @@
         if (compatibleBrowser()) {
           window.sr = ScrollReveal();
           sr.reveal(".top");
-          sr.reveal(".bottom");
         }
       })
     </script>
