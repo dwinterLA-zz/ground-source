@@ -72,7 +72,7 @@
 
 .highlight__list {
   text-align: left;
-  padding-left: 0;
+  padding-left: 15px;
   font-size: 1.2em;
   > li {
     list-style-type: none;
@@ -99,7 +99,6 @@
 .service-highlight--image {
   flex-basis: 60%;
   min-height: 300px;
-  max-height: 400px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,6 +109,15 @@
   .service-highlight:nth-child(2):nth-last-child(2),
   .service-highlight:nth-child(3):nth-last-child(1) {
     flex-basis: 33.3333%;
+  }
+  .service-highlight:nth-child(2):nth-last-child(2) {
+    &.service-highlight--text {
+      // prevent text from overlapping abs positioned dots
+      padding-bottom: 52px;
+      @include mobile {
+        padding-bottom: 0;
+      }
+    }
   }
   .service-highlight:nth-child(2):nth-last-child(1) {
     @include mobile {

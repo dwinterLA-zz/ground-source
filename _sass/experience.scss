@@ -6,7 +6,7 @@
   .experience-main {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     @include mobile {
       display: block;
       height: auto;
@@ -74,6 +74,9 @@
     padding: 40px 0;
     @include mobile {
       max-width: 80vw;
+    }
+    @media screen and (max-width: $breakpoint-small-desktop) {
+      max-width: 70vw;
     }
   }
 
