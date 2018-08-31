@@ -5,7 +5,7 @@ header: WILSHIRE COURTYARD
 highlights:
 - 1,100,000 SF - RREEF
 - 5700 Wilshire - Miracle Mile
-image_1: "/images/550 N. Brand Blvd.jpg"
-image_2: "/images/EG_20180615_D750_752256.jpg"
+image_1: "/images/Wilshire_Courtyard_0286_Wilshire_Courtyard_0286_800X600.jpg"
+image_2: "/images/Wilshire_Courtyard_0388_Wilshire_Courtyard_0388_800X600.jpg"
 
 ---
