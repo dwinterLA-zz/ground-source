@@ -1,5 +1,5 @@
 .service-section {
-  padding-bottom: 40px;
+  padding-bottom: 52px;
 }
 
 .service-section--highlights {
@@ -67,14 +67,14 @@
     }
   }
   .service-highlight:nth-child(1):nth-last-child(2) {
+    .highlight__header {
+      font-size: 1.3em;
+      color: $grey;
+      margin: 10px 0;
+    }
     @include mobile {
       &.service-highlight--text {
         order: 1;
-        .highlight__header {
-          font-size: 1.4em;
-          color: $grey;
-          margin: 10px 0;
-        }
       }
     }
   }
