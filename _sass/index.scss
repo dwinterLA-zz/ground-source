@@ -1368,6 +1368,9 @@ a {
     }
   }
 }
+.slick-slide {
+ outline: none;
+}
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
