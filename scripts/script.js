@@ -233,7 +233,6 @@ function checkCredentials(credentials) {
 
 function displaySite  () {
   $('.main').show();
-  // TODO: Place this somewhere else?
   $('.services-carousel').slick({
     "autoplay": false,
     "draggable": false,
