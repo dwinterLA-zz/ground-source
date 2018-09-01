@@ -94,8 +94,12 @@
     padding-bottom: 4px;
   }
 
-  .state__links {
+  .link__outer {
     @include expanding-hover($primary-color);
+    display: inline-block;
+    @include small-desktop {
+      display: block;
+    }
   }
 
   .state__link {

@@ -46,36 +46,44 @@
             <div class="ham-menu"></div>
             <div class="services__hero">
               <div class="state__links">
-                <a
-                  href="/experience.html"
-                  id="experience-default-link"
-                  class="state__link state__link--header state--default"
-                >
-                  {{page.text_title}}
-                </a>
+                <div class="link__outer">
+                  <a
+                    href="/experience.html"
+                    id="experience-default-link"
+                    class="state__link state__link--header state--default"
+                  >
+                    {{page.text_title}}
+                  </a>
+                </div>
               </div>
               <div class="services__links state__links">
-                <a
-                  href="/experience?service=tenant"
-                  id="tenant-service-link"
-                  class="state__link state--tenant"
-                >
-                  TENANT<br /> REPRESENTATION
-                </a>
-                <a
-                  href="/experience?service=landlord"
-                  id="landlord-service-link"
-                  class="state__link state--landlord"
-                >
-                  LANDLORD<br /> REPRESENTATION
-                </a>
-                <a
-                  href="/experience?service=investment"
-                  id="investment-service-link"
-                  class="state__link state--investment"
-                >
-                  INVESTMENT<br /> SALES
-                </a>
+                <div class="link__outer">
+                  <a
+                    href="/experience?service=tenant"
+                    id="tenant-service-link"
+                    class="state__link state--tenant"
+                  >
+                    TENANT<br /> REPRESENTATION
+                  </a>
+                </div>
+                <div class="link__outer">
+                  <a
+                    href="/experience?service=landlord"
+                    id="landlord-service-link"
+                    class="state__link state--landlord"
+                  >
+                    LANDLORD<br /> REPRESENTATION
+                  </a>
+                </div>
+                <div class="link__outer">
+                  <a
+                    href="/experience?service=investment"
+                    id="investment-service-link"
+                    class="state__link state--investment"
+                  >
+                    INVESTMENT<br /> SALES
+                  </a>
+                </div>
               </div>
               <div class="state state--default services__description">
                 {{ page.text_body }}
