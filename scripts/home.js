@@ -1,8 +1,9 @@
 $(document).ready(function() {
   setClickHandlers()
-  setupCarousel()
+  setupReviewCarousel()
+  setupExampleCarousel()
 
-  function setupCarousel() {
+  function setupExampleCarousel() {
     if ($('.services-carousel:visible').length > 0) {
       $('.services-carousel').slick('unslick');
       $('.services-carousel').slick({
@@ -15,29 +16,39 @@ $(document).ready(function() {
     }
   }
 
+  function setupReviewCarousel() {
+    $('.review-carousel').slick({
+      "autoplay": false,
+      "draggable": false,
+      "dots": true,
+      "prevArrow": $('.navigation-arrow-left'),
+      "nextArrow": $('.navigation-arrow-right')
+    })
+  }
+
   function setClickHandlers() {
     $("#tenant-service-modal-button").click(function() {
-      setupCarousel()
       modalOffset = window.pageYOffset;
       $(".main").addClass('modal-open');
       $(".main").addClass('mobile-bg-hide');
       $("#tenant-service-modal").fadeIn();
+      setupExampleCarousel();
     })
 
     $("#investment-service-modal-button").click(function() {
-      setupCarousel()
       modalOffset = window.pageYOffset;
       $("#investment-service-modal").fadeIn();
       $(".main").addClass("modal-open");
       $(".main").addClass("mobile-bg-hide");
+      setupExampleCarousel()
     })
 
     $("#landlord-service-modal-button").click(function() {
-      setupCarousel()
       modalOffset = window.pageYOffset;
       $("#landlord-service-modal").fadeIn();
       $(".main").addClass("modal-open");
       $('.main').addClass('mobile-bg-hide');
+      setupExampleCarousel()
     })
 
     $('.service-detail-close').click(function() {
