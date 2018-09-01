@@ -95,7 +95,7 @@
   }
 
   .state__links {
-    @include expanding-hover(white);
+    @include expanding-hover($primary-color);
   }
 
   .state__link {
