@@ -26,6 +26,7 @@ fields:
   config:
     maxSize: '1'
 pages:
+- _examples_tenant/united-business-management.md
 - _examples_tenant/national-teleconsultants.md
 - _examples_tenant/red-bull-records-grace.md
 - _examples_tenant/fuel-cycle.md
