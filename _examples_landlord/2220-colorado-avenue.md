@@ -7,6 +7,5 @@ highlights:
 - 201,000 SF
 image_1: "/images/2220-Colorado-2.jpg"
 image_2: "/images/2220-Colorado-1.jpg"
-published: false
 
 ---
