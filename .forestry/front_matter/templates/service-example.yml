@@ -26,5 +26,6 @@ fields:
   config:
     maxSize: '1'
 pages:
+- _examples_landlord/2220-colorado-avenue.md
 - _examples_landlord/11859-wilshire.md
 - _examples_tenant/wilshire_courtyard.md
