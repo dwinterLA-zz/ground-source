@@ -7,6 +7,5 @@ highlights:
 - 29,600 SF
 image_1: "/images/6550-Sunset-2.jpg"
 image_2: "/images/6550-Sunset-4.jpg"
-published: false
 
 ---
