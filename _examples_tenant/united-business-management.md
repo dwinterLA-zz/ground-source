@@ -7,6 +7,5 @@ highlights:
 - 33,500 SF
 image_1: "/images/F1.jpg"
 image_2: "/images/F2.jpg"
-published: false
 
 ---
