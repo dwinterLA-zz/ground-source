@@ -5,8 +5,8 @@ header: National TeleConsultants
 highlights:
 - 550 N. Brand Boulevard, Glendale
 - 36,000 SF
-image_1: ''
-image_2: ''
+image_1: "/images/E3.jpg"
+image_2: "/images/E1.jpg"
 published: false
 
 ---
