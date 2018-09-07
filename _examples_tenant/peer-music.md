@@ -5,8 +5,7 @@ header: Peer Music
 highlights:
 - 901 W. Alameda Avenue, Burbank
 - 11,000 SF
-image_1: ''
-image_2: ''
-published: false
+image_1: "/images/F1-1.jpg"
+image_2: "/images/F2-1.jpg"
 
 ---
