@@ -5,8 +5,8 @@ header: BUG Music
 highlights:
 - 6100 Wilshire Boulevard, Miracle Mile
 - 23,000 SF
-image_1: ''
-image_2: ''
+image_1: "/images/B2.jpg"
+image_2: "/images/B1.jpg"
 published: false
 
 ---
