@@ -5,8 +5,8 @@ header: United Business Management
 highlights:
 - 2901 28th Street, Santa Monica
 - 33,500 SF
-image_1: ''
-image_2: ''
+image_1: "/images/F1.jpg"
+image_2: "/images/F2.jpg"
 published: false
 
 ---
