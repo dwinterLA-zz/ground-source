@@ -5,8 +5,8 @@ header: LKP Global Law
 highlights:
 - 1901 Avenue of the Stars, Century City
 - 7,500SF
-image_1: ''
-image_2: ''
+image_1: "/images/D1.jpg"
+image_2: "/images/D3.jpg"
 published: false
 
 ---
