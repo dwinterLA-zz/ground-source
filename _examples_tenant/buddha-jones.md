@@ -5,8 +5,8 @@ header: Buddha Jones
 highlights:
 - 1741 N. Ivar Avenue, Hollywood
 - 29,400 SF
-image_1: ''
-image_2: ''
+image_1: "/images/1A.jpg"
+image_2: "/images/1C.jpg"
 published: false
 
 ---
