@@ -5,7 +5,7 @@ header: Rethink Leisure & Entertainment
 highlights:
 - 9,300 SF
 - 1715 N. Gower Street, Hollywood
-image_1: "/images/8d5fd6dff71011c6bef0df9f60bf5c377f9d602c.jpg"
-image_2: ''
+image_1: "/images/G1.jpg"
+image_2: "/images/G2.jpg"
 
 ---
