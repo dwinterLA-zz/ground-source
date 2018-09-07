@@ -7,6 +7,5 @@ highlights:
 - 7,500SF
 image_1: "/images/D1.jpg"
 image_2: "/images/D3.jpg"
-published: false
 
 ---
