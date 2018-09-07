@@ -7,6 +7,5 @@ highlights:
 - 18,000 SF
 image_1: "/images/G1-1.jpg"
 image_2: ''
-published: false
 
 ---
