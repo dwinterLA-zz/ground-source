@@ -26,6 +26,7 @@ fields:
   config:
     maxSize: '1'
 pages:
+- _examples_landlord/6550-w-sunset-boulevard.md
 - _examples_tenant/peer-music.md
 - _examples_tenant/buddha-jones.md
 - _examples_tenant/bug-music.md
@@ -36,7 +37,6 @@ pages:
 - _examples_tenant/lkp-global-law.md
 - _examples_tenant/rethink-leisure-entertainment.md
 - _examples_landlord/1150-n-highland-avenue.md
-- _examples_landlord/6550-w-sunset-boulevard.md
 - _examples_landlord/5700-5750-wilshire-boulevard.md
 - _examples_landlord/2220-colorado-avenue.md
 - _examples_landlord/11859-wilshire.md
