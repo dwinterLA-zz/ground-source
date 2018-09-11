@@ -1,7 +1,7 @@
 ---
 title: 1150 N. Highland Avenue
 date: 2018-09-06 13:50:17 -0700
-header: N. Highland Avenue
+header: Privately Held
 highlights:
 - 1150 N. Highland Avenue, Hollywood
 - 9,500 SF
