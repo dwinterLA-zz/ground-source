@@ -1,0 +1,24 @@
+<div class="inner">
+	<div class="services-modal-content">
+		<div class="service-detail-close"></div>
+		<div class="header">
+			<h1>{{ include.header-text }}</h1>
+		</div>
+		<div class="content">
+			<div class="service-section">
+				<p>{{ include.body-text }}<p>
+			</div>
+			<div class="service-section service-section--learn-more">
+				<a
+					href="{{ include.link }}"
+					class="btn-learn-more btn-learn-more--orange"
+				>
+					LEARN MORE
+				</a>
+			</div>
+			{% include service-example.html
+				examples=include.examples
+			%}
+		</div>
+	</div>
+</div>

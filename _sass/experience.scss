@@ -1,134 +1,151 @@
 #container-experience {
-  .experience-section-header {
-    @include header;
-    color: white;
+  .state {
+    display: none;
   }
-  .contact-us-link-top {
-    border-radius: 500px;
-    border-style: solid;
-    border-width: thin;
-    margin-top: 5px;
-    padding: 3px 12px;
-    outline: none;
+
+  .experience-main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    @include mobile {
+      display: block;
+      height: auto;
+    }
   }
+
   .top {
-    background-image: url(../images/experience/bg.jpg);
+    position: relative;
+    flex-basis: 60vh;
+    flex-grow: 1;
+    background-image: url('../images/experience/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
-    height: 100vh;
+    height: 60vh;
+    @media screen and (max-height: 1000px) {
+      flex-basis: 100vh;
+      height: 100vh;
+    }
+    @include small-desktop {
+      flex-basis: 100vh;
+      height: 100vh;
+    }
   }
   .bottom {
-    display: none;
-    background-image: url(../images/experience/building.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 0;
-    height: 33vh;
     position: relative;
+    @include mobile {
+      padding: 0 30px 42px 30px
+    }
   }
-  .text {
-    max-width: $page-max-width;
-    position: relative;
+
+  .services-carousel {
+    .slick-dots {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+      @include mobile {
+        bottom: -20px;
+      }
+    }
+  }
+
+  .contact-us-button {
+    border-radius: 500px;
+    font-size: 1.3em;
+    font-weight: 600;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 5px;
+    padding: 6px 20px;
+    outline: none;
+  }
+
+  .services__hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    max-width: 100%;
+    width: $page-max-width;
     color: white;
-    width: 43vw;
     text-align: center;
     margin: 0 auto;
-    transform: translateY(-50%);
-    top: 50%;
-    padding-top: 1%;
     > h4 {
       font-size: 1.7em;
     }
   }
 
-  .study-carousel {
-    max-width: $page-max-width;
-    width: 40vw;
-    padding: 0 46px;
-    text-align: center;
-    height: 100%;
-    background-color: white;
-    opacity: .85;
+  .services__description {
+    max-width: 46vw;
     margin: 0 auto;
-    .slick-track {
-      height: 390px;
+    font-size: 1.1em;
+    opacity: .9;
+    padding: 40px 0;
+    @include small-desktop {
+      max-width: 70vw;
     }
-    .study {
-      vertical-align: middle;
-      padding-top: 50px;
-    }
-    > p {
-      opacity: .9;
-    }
-    .header {
-      text-transform: uppercase;
-      margin-bottom: 22px;
-      > p {
-        margin: 0 0 2px 0;
-        opacity: .9
-      }
-    }
-    .name {
-      font-size: 1.75em;
-      margin-bottom: 0;
-    }
-    .slick-dots {
-      position: absolute;
-      bottom: 16px;
-      left: 42%;
+    @include mobile {
+      max-width: 80vw;
     }
   }
 
-  @media screen and (max-height: 900px) {
-    .top {
-      height: 100vh;
-    }
+  .services__links {
+    padding-bottom: 4px;
+  }
 
-    .bottom {
-      height: 60vh;
+  .link__outer {
+    @include expanding-hover($primary-color);
+    display: inline-block;
+    @include small-desktop {
+      display: block;
     }
   }
 
-  @media screen and (max-width: 1080px) {
-    .top {
-      height: 100vh;
+  .state__link {
+    display: inline-block;
+    position: relative;
+    color: $primary-color;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    margin: 12px 32px;
+    padding-bottom: 3px;
+    &.active {
+      color: white;
     }
+  }
 
-    .bottom {
-      height: 60vh;
-    }
+  .state__link--header {
+    color: white;
+    font-size: 2.4em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
+
+  .hero__container {
+    width: 100%;
+    height: 100%;
+    margin-top: 88px;
+    position: relative;
+  }
+
+  .hero__spacer {
+    position: absolute;
+    padding-bottom: 800px;
   }
 
   @media screen and (max-width: 1000px) {
-    .text {
+    .services__hero {
       > p {
         font-size: 1.3em;
       }
     }
   }
-  @media screen and (max-width: $breakpoint-small) {
-    .top {
-      height: 100%;
-    }
-
-    .bottom {
-      height: 100%;
-    }
-
+  @include mobile {
     .footer {
       height: 100%;
-    }
-    .text {
-      position: static;
-      transform: translateY(0);
-      top: 0%;
-      width: 94vw;
-      height: 100%;
-      padding: 80px 20px 40px 20px;
-    }
-    .study-carousel {
-      width: 100vw;
     }
   }
 }

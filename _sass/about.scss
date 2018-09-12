@@ -312,7 +312,7 @@
     }
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @include mobile {
     .rounded-red-button {
       margin-bottom: 12px;
     }

@@ -19,43 +19,28 @@
     {% include contact-form.html %}
     <div class="main">
       <div id="tenant-service-modal" class="service-detail">
-        <div class="inner">
-          <div class="services-modal-content content-tenant">
-            <div class="service-detail-close"></div>
-            <div class="header">
-              <h1>TENANT REPRESENTATION</h1>
-            </div>
-            <div class="content content-tenant">
-              <p>{{page.tenant_services_text}}<p>
-            </div>
-          </div>
-        </div>
+        {% include services-modal.html
+           header-text="TENANT REPRESENTATION"
+           body-text=page.tenant_services_text
+           examples=site.examples_tenant
+           link="/experience.html?service=tenant"
+        %}
       </div>
       <div id="landlord-service-modal" class="service-detail">
-        <div class="inner">
-          <div class="services-modal-content content-landlord">
-            <div class="service-detail-close"></div>
-            <div class="header">
-              <h1>LANDLORD REPRESENTATION</h1>
-            </div>
-            <div class="content content-landlord">
-              <p>{{page.landlord_services_text}}<p>
-            </div>
-          </div>
-        </div>
+        {% include services-modal.html
+          header-text="LANDLORD REPRESENTATION"
+          body-text=page.landlord_services_text
+          examples=site.examples_landlord
+          link="/experience.html?service=landlord"
+         %}
       </div>
       <div id="investment-service-modal" class="service-detail">
-        <div class="inner">
-          <div class="services-modal-content content-investments">
-            <div class="service-detail-close"></div>
-            <div class="header">
-              <h1>INVESTMENT SALES</h1>
-            </div>
-            <div class="content content-investment">
-              <p>{{page.investment_services_text}}<p>
-            </div>
-          </div>
-        </div>
+        {% include services-modal.html
+          header-text="INVESTMENT SALES"
+          body-text=page.investment_services_text
+          examples=site.examples_investment
+          link="/experience.html?service=investment"
+        %}
       </div>
       <div id="top-nav">
         <ul>
@@ -141,21 +126,36 @@
                   <div class="service-description">
                     {{ page.tenant_services_blurb }}
                   </div>
-                  <img src="images/learnmore_cta.png" id="tenant-service-modal-button"class="learn-more"/>
+                  <div
+                    class="btn-learn-more btn-services"
+                    id="tenant-service-modal-button"
+                  >
+                    LEARN MORE
+                  </div>
                 </div>
               <div class="services-2 services-text">
                 <div class="medium-white-text"><strong>LANDLORD</strong> REPRESENTATION</div>
                 <div class="service-description">
                     {{ page.landlord_services_blurb }}
                 </div>
-                <img src="images/learnmore_cta.png" id="landlord-service-modal-button" class="learn-more"/>
+                <div
+                    class="btn-learn-more btn-services"
+                    id="landlord-service-modal-button"
+                  >
+                    LEARN MORE
+                  </div>
               </div>
               <div class="services-text">
                 <div class="medium-white-text"><strong>INVESTMENT</strong> SALES</div>
                 <div class="service-description">
                   {{ page.investment_services_blurb }}
                 </div>
-                <img src="images/learnmore_cta.png" id="investment-service-modal-button" class="learn-more"/>
+                <div
+                    class="btn-learn-more btn-services"
+                    id="investment-service-modal-button"
+                  >
+                    LEARN MORE
+                  </div>
               </div>
             </div>
           </div>
@@ -186,6 +186,7 @@
       </div>
    </div>
     {% include include-scripts.html %}
+    <script type="text/javascript" src="/scripts/home.js"></script>
     <script>
       $(document).ready(function() {
         $(".services-home-button").click(function() {

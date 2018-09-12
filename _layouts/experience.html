@@ -40,27 +40,85 @@
     {% include contact-form.html %}
     <div class="main">
       <div id="container-experience">
-        <div class="top">
-          <img src="images/logo.png" class="logo-upper-left"/>
-          <div class="ham-menu"></div>
-          <div class="text">
-            <div class="experience-section-header">{{page.text_title}}</div>
-            <p>{{page.text_body}}</p>
-              <button class="contact-us-link-top contact-us-link">CONTACT US</button>
-          </div>
-        </div>
-        <div class="bottom">
-          <div class="study-carousel">
-            {% for study in site.case_studies %}
-              <div class="study">
-                <div class="header">
-                  <p class="name">{{study.name}}</h3>
-                  <p>{{study.address_line_1}}</p>
-                  <p>{{study.address_line_2}}</p>
+        <div class="experience-main">
+          <div class="top">
+            <img src="images/logo.png" class="logo-upper-left"/>
+            <div class="ham-menu"></div>
+            <div class="services__hero">
+              <div class="state__links">
+                <div class="link__outer">
+                  <a
+                    href="/experience.html"
+                    id="experience-default-link"
+                    class="state__link state__link--header state--default"
+                  >
+                    {{page.text_title}}
+                  </a>
                 </div>
-                <p>{{study.text}}</p>
               </div>
-            {% endfor %}
+              <div class="services__links state__links">
+                <div class="link__outer">
+                  <a
+                    href="/experience?service=tenant"
+                    id="tenant-service-link"
+                    class="state__link state--tenant"
+                  >
+                    TENANT<br /> REPRESENTATION
+                  </a>
+                </div>
+                <div class="link__outer">
+                  <a
+                    href="/experience?service=landlord"
+                    id="landlord-service-link"
+                    class="state__link state--landlord"
+                  >
+                    LANDLORD<br /> REPRESENTATION
+                  </a>
+                </div>
+                <div class="link__outer">
+                  <a
+                    href="/experience?service=investment"
+                    id="investment-service-link"
+                    class="state__link state--investment"
+                  >
+                    INVESTMENT<br /> SALES
+                  </a>
+                </div>
+              </div>
+              <div class="state state--default services__description">
+                {{ page.text_body }}
+              </div>
+              <div class="state state--tenant services__description">
+                {{ page.tenant_services_text }}
+              </div>
+              <div class="state state--landlord services__description">
+                {{ page.landlord_services_text }}
+              </div>
+              <div class="state state--investment services__description">
+                {{ page.investment_services_text }}
+              </div>
+              <button class="contact-us-link contact-us-button">CONTACT US</button>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="state state--tenant">
+              {% include service-example.html
+                examples=site.examples_tenant
+                multi-image=true
+              %}
+            </div>
+            <div class="state state--landlord">
+              {% include service-example.html
+                examples=site.examples_landlord
+                multi-image=true
+              %}
+            </div>
+            <div class="state state--investment">
+              {% include service-example.html
+                examples=site.examples_investment
+                multi-image=true
+              %}
+            </div>
           </div>
         </div>
 
@@ -68,27 +126,21 @@
       </div>
     </div>
     {% include include-scripts.html %}
+    <script type="text/javascript" src="/scripts/experience.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
 
-      var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
+        var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
 
-      if (sectionQuery === "studies") {
-        window.setTimeout(function() {
-          window.scrollTo(0, $('.bottom').offset().top);
-        }, 500)
-      }
+        if (sectionQuery === "studies") {
+          window.setTimeout(function() {
+            window.scrollTo(0, $('.bottom').offset().top);
+          }, 500)
+        }
 
-        $('.study-carousel').slick({
-        "autoplay": true,
-        "draggable": false,
-        "dots": true,
-        "arrows": false
-        });
         if (compatibleBrowser()) {
           window.sr = ScrollReveal();
           sr.reveal(".top");
-          sr.reveal(".bottom");
         }
       })
     </script>

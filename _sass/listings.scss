@@ -341,7 +341,7 @@
    }
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @include mobile {
     #listings-text-search {
       width: 90%;
     }

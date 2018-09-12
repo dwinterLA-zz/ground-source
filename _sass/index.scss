@@ -49,6 +49,7 @@ form.login {
 
 .main {
   display: none;
+  overflow-x: hidden;
 }
 
 .modal-open {
@@ -96,10 +97,6 @@ a {
       cursor: pointer;
     }
   }
-}
-
-.content {
-  position: relative;
 }
 
 .mobile-nav {
@@ -332,6 +329,7 @@ a {
     white-space: nowrap;
     margin: 30px 30px 0 0;
     > li {
+      @include expanding-hover(white);
       display: inline-block;
       font-size: 1.2em;
       padding: 8px;
@@ -343,25 +341,6 @@ a {
       }
       > a:hover {
         color: white;
-      }
-      > a:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: white;
-        visibility: hidden;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s;
-        transition: all 0.3s ease-in-out 0s;
-      }
-      > a:hover:before {
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
       }
     }
   }
@@ -406,6 +385,11 @@ a {
   -webkit-animation: load8 1.1s infinite linear;
   animation: load8 1.1s infinite linear;
 }
+
+.inline-block {
+  display: inline-block;
+}
+
 @-webkit-keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -434,9 +418,6 @@ a {
 .service-detail {
   min-width: 420px;
   @include modal;
-  .inner {
-    padding-bottom: 0;
-  }
 }
 
 .services-modal-content {
@@ -445,11 +426,12 @@ a {
   .service-detail-close {
     @include close-button-small;
     top: 28px;
-    right: 25px;
+    right: 35px;
   }
   .header {
     background-color: $primary-color;
-    padding: 25px;
+    // extra right padding is to prevent header text from encroaching on the close button
+    padding: 25px 76px 25px 35px;
     color: white;
     > h1 {
       margin: 0 24px 0 0;
@@ -457,7 +439,7 @@ a {
   }
 
   .content {
-    padding: 25px;
+    padding: 35px;
     font-size: .8em;
   }
 }
@@ -554,6 +536,7 @@ a {
       text-align: center;
       margin: 0;
       li {
+        @include expanding-hover($primary-color);
         > a {
           color: #888;
           line-height: 2;
@@ -566,25 +549,6 @@ a {
         }
         > a:hover {
           color: #888;
-        }
-        > a:before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          bottom: 0;
-          left: 0;
-          background-color: $primary-color;
-          visibility: hidden;
-          -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-          -webkit-transition: all 0.3s ease-in-out 0s;
-          transition: all 0.3s ease-in-out 0s;
-        }
-        > a:hover:before {
-          visibility: visible;
-          -webkit-transform: scaleX(1);
-          transform: scaleX(1);
         }
       }
     }
@@ -865,11 +829,27 @@ a {
   }
 }
 
-.learn-more {
-  max-width: 164px;
+.btn-services {
   cursor: pointer;
   position: absolute;
+  display: inline-block;
   bottom: 2em;
+  @include mobile {
+    position: static;
+  }
+}
+
+.btn-learn-more {
+  padding: 8px 16px;
+  border: medium solid white;
+  font-weight: 600;
+  border-radius: 500px;
+  text-decoration: none;
+}
+
+.btn-learn-more--orange {
+  color: $primary-color;
+  border-color: $primary-color;
 }
 
 .services-info {
@@ -903,14 +883,6 @@ a {
 .service-description {
   padding: 1.5em 0;
 }
-
-// .services-1 {
-//   background-color: $primary-color-darker-darker;
-// }
-
-// .services-2 {
-//   background-color: $primary-color-lighter;
-// }
 
 .footer {
   .inner {
@@ -1086,7 +1058,7 @@ a {
     }
   }
 }
-@media screen and (max-width: $breakpoint-small) {
+@include mobile {
   body {
     font-size: .9em;
   }
@@ -1199,8 +1171,8 @@ a {
   .slick-dots {
     margin-top: 0;
     > li {
-      width: 10px;
-      height: 10px;
+      width: 14px;
+      height: 14px;
     }
   }
 
@@ -1450,6 +1422,9 @@ a {
       }
     }
   }
+}
+.slick-slide {
+ outline: none;
 }
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
