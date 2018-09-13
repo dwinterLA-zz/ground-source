@@ -6,7 +6,7 @@ highlights:
 - 9044 Melrose Avenue, West Hollywood
 - 18,000 SF
 image_1: "/images/G1-1.jpg"
-image_2: ''
+image_2: "/images/G2-1.jpg"
 published: false
 
 ---
