@@ -15,7 +15,8 @@ full_bio: 'Noah Sall, a Los Angeles native, earned his Real Estate degree from t
   then interned for Related Companies and the Howard Hughes Corporation, two high-volume
   real estate developers. His diverse experience in the real estate industry, coupled
   with his knowledge of Los Angeles, make him a valuable asset to Groundsource.'
-position: SALES
+position: ASSOCIATE
 email: nsall@groundsource.net
 featured_listings: []
+
 ---
