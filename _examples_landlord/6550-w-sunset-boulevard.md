@@ -1,7 +1,7 @@
 ---
 title: 6550 W. Sunset Boulevard
 date: 2018-09-06 20:49:00 +0000
-header: Branch Properties, LLC
+header: Branch Properties
 highlights:
 - 6550 W. Sunset Boulevard, Hollywood
 - 29,600 SF
