@@ -26,6 +26,7 @@ fields:
   config:
     maxSize: '1'
 pages:
+- _examples_investment/1635-n.-cahuenga-blvd.md
 - _examples_investment/11859-wilshire.md
 - _examples_tenant/bug-music.md
 - _examples_tenant/united-business-management.md
