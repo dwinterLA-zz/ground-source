@@ -7,6 +7,5 @@ highlights:
 - 47,700 SF
 image_1: "/images/11859_wilshire_03-1.jpg"
 image_2: "/images/11859-Wilshire.jpg"
-published: false
 
 ---
