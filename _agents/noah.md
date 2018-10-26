@@ -6,16 +6,18 @@ first_name: NOAH
 last_name: SALL
 phone: 310.444.6102
 cell: 818.535.3142
-short_bio: 'Noah Sall, a Los Angeles native, earned his Real Estate degree from the
-  Wisconsin School of Business. He interned multiple summers at Avison Young’s downtown
-  Los Angeles office: cold calling, marketing and providing financial analysis.     '
-full_bio: 'Noah Sall, a Los Angeles native, earned his Real Estate degree from the
-  Wisconsin School of Business. He interned multiple summers at Avison Young’s downtown
-  Los Angeles office: cold calling, marketing and providing financial analysis. He
-  then interned for Related Companies and the Howard Hughes Corporation, two high-volume
-  real estate developers. His diverse experience in the real estate industry, coupled
-  with his knowledge of Los Angeles, make him a valuable asset to Groundsource.'
-position: ASSOCIATE
+short_bio: 'Noah Sall, a Los Angeles native, earned his Real Estate and Urban Land
+  Economics degree from the Wisconsin School of Business. He interned multiple summers
+  at Avison Young’s downtown Los Angeles office: cold calling, marketing and providing
+  financial analysis.'
+full_bio: 'Noah Sall, a Los Angeles native, earned his Real Estate and Urban Land
+  Economics degree from the Wisconsin School of Business. He interned multiple summers
+  at Avison Young’s downtown Los Angeles office: cold calling, marketing and providing
+  financial analysis. He then interned for Related Companies and the Howard Hughes
+  Corporation, two high-volume real estate developers. His diverse experience in the
+  real estate industry, coupled with his knowledge of Los Angeles, make him a valuable
+  asset to Groundsource.'
+position: ''
 email: nsall@groundsource.net
 featured_listings: []
 
