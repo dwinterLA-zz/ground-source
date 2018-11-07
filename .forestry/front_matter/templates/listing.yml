@@ -68,11 +68,6 @@ fields:
   type: textarea
   hidden: false
   default: ''
-- name: floorplan-image
-  label: Floorplan image
-  type: file
-  hidden: false
-  default: ''
 - type: text
   name: terms
   label: terms
@@ -115,6 +110,9 @@ fields:
   name: available
   label: available
   description: When is the listing available?
+- type: image_gallery
+  name: floorplans
+  label: Floorplans
 pages:
 - _listings/5.md
 - _listings/7.md
