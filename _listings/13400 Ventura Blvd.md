@@ -8,7 +8,8 @@ amenities:
 - Additional street parking
 available: 2019-08-31 22:14:57 +0000
 buy: false
-floorplan-image: "/images/floorplan-2.jpg"
+floorplans:
+  - "/images/floorplan-2.jpg"
 gallery-images:
 - "/images/1.jpg"
 - "/images/2.jpg"
