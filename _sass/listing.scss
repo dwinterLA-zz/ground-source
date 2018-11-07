@@ -130,6 +130,9 @@ $listing-padding: 30px;
 
   .floorplan {
     padding-bottom: $listing-padding;
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   .container {
