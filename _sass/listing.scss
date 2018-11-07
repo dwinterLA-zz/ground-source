@@ -1,3 +1,5 @@
+$listing-padding: 30px;
+
 .subdued {
   opacity: .9;
 }
@@ -124,6 +126,13 @@
     position: relative;
     margin: -25vh auto 0 auto;
     max-width: $page-max-width;
+  }
+
+  .floorplan {
+    padding-bottom: $listing-padding;
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   .container {
@@ -279,7 +288,7 @@
 
   .menu-top {
     background-image: url(../images/listings-cta-bg.jpg);
-    padding: 30px;
+    padding: $listing-padding;
   }
 
   .menu {
@@ -315,7 +324,7 @@
     color: $background-color;
     font-family: $font-brand;
     letter-spacing: $title-letter-spacing;
-    padding: 30px;
+    padding: $listing-padding;
   }
 
   .info-text {
@@ -328,7 +337,7 @@
   .info-box {
     background-color: $bg-color-listing;
     display: block;
-    padding: 30px;
+    padding: $listing-padding;
     color: white;
     overflow: hidden;
     margin-bottom: 24px;

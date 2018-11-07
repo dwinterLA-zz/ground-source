@@ -72,12 +72,14 @@
             </div>
           </div>
         </div>
-        <div class="floorplan">
-          {% if page.floorplan-image != "" and page.floorplan-image != null %}
-            <h4 class="sidebar-header"><strong>FLOOR PLAN</strong></h4>
-            <img src="{{ page.floorplan-image }}" class="printout__floorplan" />
-          {% endif %}
-        </div>
+        {% if page.floorplans.size > 0 %}
+          <h4 class="sidebar-header">FLOORPLAN{% if page.floorplans.size > 1 %}S{% endif %}</strong></h4>
+          {% for floorplan in page.floorplans %}
+            <div class="floorplan">
+              <img src="{{ floorplan }}" class="printout__floorplan" />
+            </div>
+          {% endfor %}
+        {% endif %}
       </div>
     </div>
     <div class="web">
@@ -172,16 +174,20 @@
                     {% endif %}
                   </div>
                 </div>
-                {% if (page.latitude and page.longitude) or page.floorplan-image %}
+                {% if (page.latitude and page.longitude) or page.floorplans.size > 0 %}
                   <div class="info-box">
                     {% if page.latitude and page.longitude %}
                       <h2 class="title">LOCATION</h2>
                       <div id="about-google-map"></div>
                     {% endif %}
 
-                    {% if page.floorplan-image != "" and page.floorplan-image != null %}
-                      <h2 class="title">FLOORPLAN</h2>
-                      <img src="{{ page.floorplan-image }}" class="img-responsive" />
+                    {% if page.floorplans.size > 0 %}
+                      <h2 class="title">FLOORPLAN{% if page.floorplans.size > 1 %}S{% endif %}</h2>
+                      {% for floorplan in page.floorplans %}
+                        <div class="floorplan">
+                          <img src="{{ floorplan }}" class="img-responsive" />
+                        </div>
+                      {% endfor %}
                     {% endif %}
                   </div>
                 {% endif %}
