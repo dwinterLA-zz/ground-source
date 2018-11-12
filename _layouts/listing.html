@@ -73,7 +73,6 @@
           </div>
         </div>
         {% if page.floorplans.size > 0 %}
-          <h4 class="sidebar-header">FLOORPLAN{% if page.floorplans.size > 1 %}S{% endif %}</strong></h4>
           {% for floorplan in page.floorplans %}
             <div class="floorplan">
               <img src="{{ floorplan }}" class="printout__floorplan" />
