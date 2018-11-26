@@ -19,6 +19,6 @@ fields:
   label: Text
   name: text
 pages:
-- _case_studies/3.md
 - _case_studies/2.md
+- _case_studies/3.md
 - _case_studies/1.md
