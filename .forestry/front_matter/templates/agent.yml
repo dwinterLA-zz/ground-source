@@ -51,5 +51,5 @@ fields:
   description: Place the title of each listing you would like to be featured here
     (must match exactly).
 pages:
-- _agents/noah.md
 - _agents/chris.md
+- _agents/noah.md

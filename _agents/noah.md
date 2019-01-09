@@ -17,7 +17,7 @@ full_bio: 'Noah Sall, a Los Angeles native, earned his Real Estate and Urban Lan
   Corporation, two high-volume real estate developers. His diverse experience in the
   real estate industry, coupled with his knowledge of Los Angeles, make him a valuable
   asset to Groundsource.'
-position: ''
+position: Sales Associate - Lic. 02081749
 email: nsall@groundsource.net
 featured_listings: []
 
