@@ -14,5 +14,6 @@ fields:
   label: Author Image
 pages:
 - _testimonials/5-md-1.md
+- _testimonials/8.md
 - _testimonials/6.md
 - _testimonials/7.md
