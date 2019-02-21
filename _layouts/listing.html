@@ -127,14 +127,16 @@
                       <div>{{page.address-line-1}}</div>
                       <div>{{page.address-line-2}}</div>
                     </div>
-                    <h2 class="sidebar-header"><strong>AVAILABILITIES</strong></h2>
-                    <hr class ="light-line">
-                    <ul class="amenity-list">
-                      {% for unit in page.availabilities %}
-                        <li class="listing-info">{{ unit }}</li>
-                        <hr>
-                      {% endfor %}
-                    </ul>
+                    {% if page.availabilities.size > 0 %}
+                      <h2 class="sidebar-header"><strong>AVAILABILITIES</strong></h2>
+                      <hr class ="light-line">
+                      <ul class="amenity-list">
+                        {% for unit in page.availabilities %}
+                          <li class="listing-info">{{ unit }}</li>
+                          <hr>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
                     <h2 class="sidebar-header"><strong>HIGHLIGHTS</strong></h2>
                     <hr class ="light-line">
                     <ul class="amenity-list">
