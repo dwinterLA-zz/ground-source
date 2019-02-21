@@ -113,6 +113,14 @@ fields:
 - type: image_gallery
   name: floorplans
   label: Floorplans
+- type: list
+  name: availabilities
+  label: 'Availabilities '
+  description: List vacancies here
+  config:
+    use_select: false
+    source:
+      type: documents
 pages:
 - _listings/7.md
 - _listings/6.md
