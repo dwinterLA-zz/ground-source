@@ -130,9 +130,10 @@
                     <h2 class="sidebar-header"><strong>AVAILABILITIES</strong></h2>
                     <hr class ="light-line">
                     <ul class="amenity-list">
-                        <li class="listing-info">- Suite 600: 9,148 SF (divisible)</li>
+                      {% for unit in page.availabilities %}
+                        <li class="listing-info">{{ unit }}</li>
                         <hr>
-                        <li class="listing-info">- Suite 510: 3,294 SF (not divisible)</li>
+                      {% endfor %}
                     </ul>
                     <h2 class="sidebar-header"><strong>HIGHLIGHTS</strong></h2>
                     <hr class ="light-line">
