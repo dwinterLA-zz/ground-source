@@ -61,6 +61,17 @@
                 {% endfor %}
               </ul>
             </div>
+            {% if page.availabilities.size > 0 %}
+              <div class="amenities">
+                <h2 class="sidebar-header"><strong>AVAILABILITIES</strong></h2>
+                <ul class="list">
+                  {% for unit in page.availabilities %}
+                  <li>{{ unit }}</li>
+                  <hr>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
             <div class="amenities">
               <h2 class="sidebar-header"><strong>AMENITIES</strong></h2>
               <ul class="list">
