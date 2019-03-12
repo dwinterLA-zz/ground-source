@@ -1,6 +1,6 @@
 ---
-first_name: Isaac
-last_name: Abginesaz
+first_name: ISAAC
+last_name: ABGINESAZ
 email: isaac@groundsource.net
 full_bio: Isaac Abginesaz, born and raised in Los Angeles, CA, graduated cum laude
   from the University of Southern California with a B.S. in Business Administration
@@ -18,5 +18,10 @@ short_bio: Isaac Abginesaz, born and raised in Los Angeles, CA, graduated cum la
   and an emphasis in Real Estate Finance.
 avatar: "/images/GS_IsaacAbginesaz_Profile.jpg"
 date: 2019-03-11 18:38:18 -0700
+phone: ''
+cell: ''
+title: ''
+position: ''
+featured_listings: []
 
 ---
