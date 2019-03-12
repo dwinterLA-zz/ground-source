@@ -1,6 +1,6 @@
 ---
-first_name: Daniela
-last_name: Winter
+first_name: DANIELA
+last_name: WINTER
 email: dwinter@groundsource.net
 avatar: "/images/GS_DanielaWinter_Profile.jpg"
 full_bio: Daniela Winter brings over 30 years of experience in office administration
@@ -13,5 +13,10 @@ full_bio: Daniela Winter brings over 30 years of experience in office administra
 short_bio: Daniela Winter brings over 30 years of experience in office administration
   in the legal, interior design, restaurant, branding and non-profit fields.
 date: 2019-03-11 18:39:38 -0700
+phone: ''
+cell: ''
+title: ''
+position: ''
+featured_listings: []
 
 ---
