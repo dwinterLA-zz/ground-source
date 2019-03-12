@@ -1,7 +1,6 @@
 ---
 label: agent
 hide_body: false
-is_partial: false
 fields:
 - type: text
   name: first_name
