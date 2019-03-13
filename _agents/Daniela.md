@@ -13,7 +13,7 @@ full_bio: Daniela Winter brings over 30 years of experience in office administra
 short_bio: Daniela Winter brings over 30 years of experience in office administration
   in the legal, interior design, restaurant, branding and non-profit fields.
 date: 2019-03-11 18:39:38 -0700
-phone: ''
+phone: 310.444.6103
 cell: ''
 title: ''
 position: ''
