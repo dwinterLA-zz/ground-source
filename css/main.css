@@ -521,7 +521,10 @@ body {
   width: 100%;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   color: #858585;
-  letter-spacing: .5px; }
+  letter-spacing: 0.5px; }
+
+.text-decoration-none {
+  text-decoration: none; }
 
 .hidden {
   display: none; }
@@ -558,7 +561,8 @@ form.login > input {
 .overflow-hidden {
   overflow: hidden; }
 
-strong, b {
+strong,
+b {
   font-weight: 700; }
 
 a {
@@ -593,7 +597,7 @@ a {
   display: none; }
 
 .subdued {
-  opacity: .5; }
+  opacity: 0.5; }
 
 #contact-us-gmap {
   width: 100%;
@@ -635,7 +639,7 @@ a {
     #contact-us-home-section .contact-content .contact-header {
       font-size: 34px;
       background-color: white;
-      padding: .5em 18px; }
+      padding: 0.5em 18px; }
     #contact-us-home-section .contact-content .contact-body {
       font-size: 16px;
       background: rgba(255, 255, 255, 0.9);
@@ -653,7 +657,7 @@ a {
             text-decoration: none; }
 
 .contact-info-body {
-  font-size: .9em;
+  font-size: 0.9em;
   background: rgba(255, 255, 255, 0.9);
   padding: 15px 0;
   color: #858585;
@@ -673,7 +677,7 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-size: .7em;
+    font-size: 0.7em;
     text-align: left;
     padding-bottom: 9px; }
     .contact-info-body .contact-row > div {
@@ -732,7 +736,7 @@ a {
   font-size: 1.5em; }
 
 .preview-text {
-  font-size: .75em;
+  font-size: 0.75em;
   font-weight: lighter;
   color: #858585; }
 
@@ -950,7 +954,7 @@ a {
       margin: 0 24px 0 0; }
   .services-modal-content .content {
     padding: 35px;
-    font-size: .8em; }
+    font-size: 0.8em; }
 
 .contact-labels {
   display: none; }
@@ -1016,7 +1020,7 @@ a {
       display: block;
       margin: 0 auto 18px auto;
       width: 80%;
-      opacity: .8;
+      opacity: 0.8;
       display: none;
       text-align: left;
       color: #d46049; }
@@ -1025,7 +1029,7 @@ a {
       margin: 0 auto 18px auto;
       width: 80%;
       height: 2.8em;
-      opacity: .8;
+      opacity: 0.8;
       text-indent: 18px;
       border-style: solid;
       border-width: thin;
@@ -1153,8 +1157,8 @@ a {
 #header-text {
   -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: .4s;
-          transition-duration: .4s; }
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s; }
 
 #header-logo {
   height: 47px; }
@@ -1167,13 +1171,13 @@ a {
     top: 0;
     -webkit-transition-property: all;
     transition-property: all;
-    -webkit-transition-duration: .6s;
-            transition-duration: .6s; }
+    -webkit-transition-duration: 0.6s;
+            transition-duration: 0.6s; }
 
 .scroll-arrow {
   cursor: pointer;
   position: absolute;
-  opacity: .8;
+  opacity: 0.8;
   width: 54px;
   margin-left: -27px;
   bottom: 10%;
@@ -1181,8 +1185,8 @@ a {
   .scroll-arrow:hover {
     -webkit-animation-name: scrollDown;
             animation-name: scrollDown;
-    -webkit-animation-duration: .4s;
-            animation-duration: .4s;
+    -webkit-animation-duration: 0.4s;
+            animation-duration: 0.4s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards; }
 
@@ -1343,7 +1347,7 @@ a {
     max-width: 1200px;
     margin: 0 auto; }
   .review-slideshow .review::before {
-    content: '';
+    content: "";
     display: inline-block;
     vertical-align: middle;
     height: 100%; }
@@ -1356,7 +1360,7 @@ a {
     .review-slideshow .review p {
       max-width: 800px;
       vertical-align: middle;
-      font-size: .7em;
+      font-size: 0.7em;
       padding: 12px;
       text-align: left;
       display: inline-block; }
@@ -1460,7 +1464,7 @@ a {
       position: absolute;
       bottom: 0;
       padding: 15px 0;
-      opacity: .7;
+      opacity: 0.7;
       font-size: 0.7em; }
     .footer .column.social {
       position: absolute;
@@ -1584,7 +1588,7 @@ a {
               transform: scale(1); } }
 @media screen and (max-width: 768px) {
   body {
-    font-size: .9em; }
+    font-size: 0.9em; }
 
   .arrow-up {
     bottom: 330px; }
@@ -1618,7 +1622,7 @@ a {
     height: 0; }
 
   .contact-info-body {
-    font-size: .9em;
+    font-size: 0.9em;
     margin-top: 12px;
     width: 100%; }
     .contact-info-body .contact-row {
@@ -1684,7 +1688,7 @@ a {
     height: 29px; }
 
   #contact-us-home-section {
-    font-size: .9em;
+    font-size: 0.9em;
     position: relative; }
     #contact-us-home-section .contact-us-gmap-container {
       display: none; }
@@ -1703,7 +1707,7 @@ a {
           font-size: 52px; }
         #contact-us-home-section .contact-subcontainer .contact-content .contact-body {
           padding-left: 12px;
-          font-size: .95em; }
+          font-size: 0.95em; }
           #contact-us-home-section .contact-subcontainer .contact-content .contact-body > ul {
             padding-left: 0; }
 
@@ -1743,7 +1747,7 @@ a {
       z-index: 30;
       padding: 21px; }
     .services-modal-content .header {
-      font-size: .8em; }
+      font-size: 0.8em; }
       .services-modal-content .header > h1 {
         padding-right: 30px; }
     .services-modal-content .content {
@@ -1850,7 +1854,7 @@ a {
       margin-right: 6%;
       margin-bottom: 10px;
       margin-left: 0%;
-      opacity: .9; }
+      opacity: 0.9; }
       .footer .column .title {
         font-weight: bold; }
       .footer .column.copyright {
@@ -2542,7 +2546,7 @@ a {
     border-radius: 500px;
     margin-top: 22px;
     font-weight: 500;
-    font-size: .7em;
+    font-size: 0.7em;
     color: #c04d3a;
     border-color: #c04d3a;
     border-style: solid;
@@ -2557,7 +2561,7 @@ a {
     border-width: thin;
     margin-top: 4px;
     font-weight: 500;
-    font-size: .6em;
+    font-size: 0.6em;
     padding: 3px 18px; }
   #container-about .bio-pic-mobile {
     display: none; }
@@ -2633,13 +2637,13 @@ a {
           #container-about .agent-details .content .header .contact .email {
             padding-top: 69px; }
           #container-about .agent-details .content .header .contact .secondary-contact {
-            font-size: .7em;
+            font-size: 0.7em;
             font-weight: bold; }
           #container-about .agent-details .content .header .contact > p {
             margin-top: 0;
             margin-bottom: 0;
             text-transform: uppercase;
-            font-size: .85em; }
+            font-size: 0.85em; }
             #container-about .agent-details .content .header .contact > p > a {
               text-decoration: underline; }
           #container-about .agent-details .content .header .contact > h4 {
@@ -2652,9 +2656,9 @@ a {
         margin: 0 31px;
         padding-bottom: 12px;
         color: black;
-        opacity: .55;
+        opacity: 0.55;
         line-height: 110%;
-        font-size: .9em; }
+        font-size: 0.9em; }
         #container-about .agent-details .content .bio > h2 {
           font-size: 1.8em;
           opacity: 1;
@@ -2725,7 +2729,7 @@ a {
     -ms-flex-item-align: center;
         align-self: center;
     color: #858585;
-    letter-spacing: .5px; }
+    letter-spacing: 0.5px; }
     #container-about .description > p {
       padding-top: 15px; }
     #container-about .description .head-title {
@@ -2737,17 +2741,15 @@ a {
   #container-about .agent-listing {
     display: inherit;
     position: relative; }
-  #container-about .agents {
-    text-align: center; }
-    #container-about .agents .flex-agents {
-      padding: 0 60px 1em 60px; }
+  #container-about .agents .flex-agents {
+    padding: 0 60px 1em 60px; }
   #container-about .agent {
     display: inline-block;
     width: 23%;
     min-width: 235px;
     text-align: center;
     margin-top: 12px;
-    margin: .3em;
+    margin: 0.3em;
     box-shadow: 0px 0px 2em gainsboro;
     border: 1px solid #c7c7c7; }
     #container-about .agent .agent-info-bottom {
@@ -2771,21 +2773,23 @@ a {
       margin: 1em 1em;
       padding: 28px 0 12px 0;
       text-align: left;
-      font-size: .85em;
+      font-size: 0.85em;
       min-height: 90px;
       min-height: 120px; }
     #container-about .agent .bio-button {
       display: inline-block;
+      margin-bottom: 1em;
       color: #d46049;
       border: 1px solid #d46049;
-      font-size: .9em;
+      font-size: 0.9em;
       padding: 0.4em 1em;
       border-radius: 500px;
-      margin-bottom: 1em;
       cursor: pointer; }
     #container-about .agent .bio-contact {
-      margin-bottom: 1em;
-      font-size: .9em; }
+      display: inline-block;
+      text-align: left;
+      margin-bottom: 0.9em;
+      font-size: 0.9em; }
   #container-about .section-header {
     padding: 5% 1%;
     background: #d46049;
@@ -2852,7 +2856,7 @@ a {
       #container-about .agents .agent-info-bottom .bio-contact {
         display: none; }
       #container-about .agents .agent-info-bottom .bio-button {
-        font-size: .8em;
+        font-size: 0.8em;
         margin: 14px 0; }
     #container-about #header-about .header-image {
       display: none; }
@@ -2873,7 +2877,6 @@ a {
       overflow: scroll;
       background-color: white; }
       #container-about .agent-details .content {
-        background-color: white;
         width: 100%;
         margin: 0;
         box-shadow: none; }
@@ -2894,7 +2897,7 @@ a {
           margin: 25px;
           padding: 0;
           color: black;
-          opacity: .55;
+          opacity: 0.55;
           line-height: 110%; }
           #container-about .agent-details .content .bio > p {
             padding-bottom: 30px; }
