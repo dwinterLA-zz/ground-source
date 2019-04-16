@@ -58,7 +58,11 @@
                     {{agent.short_bio}}
                   </div>
                   <div class="agent-info-bottom">
-                    <div class="bio-button" data-agent="{{forloop.index}}">VIEW FULL BIO</div>
+                    <div>
+                      <div class="bio-button" data-agent="{{forloop.index}}">
+                        VIEW FULL BIO
+                      </div>
+                    </div>
                     <div class="bio-contact">
                       {% if agent.email.size > 0 %}
                         <span class="black">

@@ -257,12 +257,12 @@
 
     .bio-button {
       display: inline-block;
+      margin-bottom: 1em;
       color: $primary-color;
       border: 1px solid $primary-color;
       font-size: 0.9em;
       padding: 0.4em 1em;
       border-radius: 500px;
-      margin-bottom: 1em;
       cursor: pointer;
     }
     .bio-contact {
@@ -272,7 +272,6 @@
       font-size: 0.9em;
     }
   }
-
   .section-header {
     padding: 5% 1%;
     background: $primary-color;
