@@ -1,65 +1,65 @@
 ---
 new_page_extension: md
 auto_deploy: true
-admin_path:
-webhook_url:
+admin_path: 
+webhook_url: 
 sections:
-  - type: directory
-    path: _examples_tenant
-    label: "Examples: Tenant"
-    create: all
-    match: "**/*"
-    new_doc_ext: md
-    templates:
-      - service-example
-  - type: directory
-    path: _examples_landlord
-    label: "Examples: Landlord"
-    create: all
-    match: "**/*"
-    new_doc_ext: md
-    templates:
-      - service-example
-  - type: directory
-    path: _examples_investment
-    label: "Examples: Investment"
-    create: all
-    match: "**/*"
-    new_doc_ext: md
-    templates:
-      - service-example
-  - type: directory
-    path: _case_studies
-    label: Case_studies
-    create: all
-    match: "**/*"
-  - type: directory
-    path: _listings
-    label: Listings
-    create: all
-    match: "**/*"
-  - type: directory
-    path: _testimonials
-    label: Testimonials
-    create: all
-    match: "**/*"
-  - type: directory
-    path: _agents
-    label: Agents
-    create: all
-    match: "**/*"
-  - type: jekyll-posts
-    label: Postss
-    create: all
-  - type: jekyll-pages
-    label: Pages
-    create: all
-  - type: directory
-    path: _data
-    label: Data
-    match: "*.yml"
-    new_doc_ext: ".yml"
-    create: all
+- type: directory
+  path: _examples_tenant
+  label: 'Examples: Tenant'
+  create: all
+  match: "**/*"
+  new_doc_ext: md
+  templates:
+  - service-example
+- type: directory
+  path: _examples_landlord
+  label: 'Examples: Landlord'
+  create: all
+  match: "**/*"
+  new_doc_ext: md
+  templates:
+  - service-example
+- type: directory
+  path: _examples_investment
+  label: 'Examples: Investment'
+  create: all
+  match: "**/*"
+  new_doc_ext: md
+  templates:
+  - service-example
+- type: directory
+  path: _case_studies
+  label: Case_studies
+  create: all
+  match: "**/*"
+- type: directory
+  path: _listings
+  label: Listings
+  create: all
+  match: "**/*"
+- type: directory
+  path: _testimonials
+  label: Testimonials
+  create: all
+  match: "**/*"
+- type: directory
+  path: _agents
+  label: Agents
+  create: all
+  match: "**/*"
+- type: jekyll-posts
+  label: Postss
+  create: all
+- type: jekyll-pages
+  label: Pages
+  create: all
+- type: directory
+  path: _data
+  label: Data
+  create: all
+  match: "*.yml"
+  new_doc_ext: yml
 upload_dir: images
 public_path: "/images"
 front_matter_path: "/images"
@@ -69,11 +69,10 @@ build:
   preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
   publish_command: bundle exec jekyll build -d _site
   preview_env:
-    - JEKYLL_ENV=staging
+  - JEKYLL_ENV=staging
   publish_env:
-    - JEKYLL_ENV=production
+  - JEKYLL_ENV=production
   preview_output_directory: _site
   output_directory: _site
-  instant_preview_command:
-    bundle exec jekyll serve --drafts --unpublished --future
+  instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
     --port 8080 --host 0.0.0.0 -d _site
