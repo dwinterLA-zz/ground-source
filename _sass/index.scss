@@ -8,7 +8,11 @@ body {
   width: 100%;
   font-family: $font-brand;
   color: #858585;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
+}
+
+.text-decoration-none {
+  text-decoration: none;
 }
 
 .hidden {
@@ -36,7 +40,7 @@ form.login {
 }
 
 .success {
-  color: green
+  color: green;
 }
 
 .error {
@@ -60,8 +64,9 @@ form.login {
   overflow: hidden;
 }
 
-strong, b {
-  font-weight: 700
+strong,
+b {
+  font-weight: 700;
 }
 
 a {
@@ -104,15 +109,13 @@ a {
 }
 
 .subdued {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 #contact-us-gmap {
   width: 100%;
   height: 100%;
 }
-
-
 
 .contact-table {
   text-align: left;
@@ -154,7 +157,7 @@ a {
     .contact-header {
       font-size: 34px;
       background-color: white;
-      padding: .5em 18px;
+      padding: 0.5em 18px;
     }
     .contact-body {
       font-size: 16px;
@@ -182,7 +185,7 @@ a {
 }
 
 .contact-info-body {
-  font-size: .9em;
+  font-size: 0.9em;
   background: rgba(255, 255, 255, 0.9);
   padding: 15px 0;
   color: #858585;
@@ -194,7 +197,7 @@ a {
     flex-direction: row;
     flex-flow: row wrap;
     justify-content: center;
-    font-size: .7em;
+    font-size: 0.7em;
     text-align: left;
     padding-bottom: 9px;
     > div {
@@ -251,7 +254,6 @@ a {
   width: 230px;
   position: absolute;
   margin-top: -30px;
-
 }
 
 .preview-title {
@@ -268,7 +270,7 @@ a {
 }
 
 .preview-text {
-  font-size: .75em;
+  font-size: 0.75em;
   font-weight: lighter;
   color: #858585;
 }
@@ -440,7 +442,7 @@ a {
 
   .content {
     padding: 35px;
-    font-size: .8em;
+    font-size: 0.8em;
   }
 }
 
@@ -473,7 +475,7 @@ a {
       display: block;
       margin: 0 auto 18px auto;
       width: 80%;
-      opacity: .8;
+      opacity: 0.8;
       display: none;
       text-align: left;
       color: $primary-color;
@@ -483,7 +485,7 @@ a {
       margin: 0 auto 18px auto;
       width: 80%;
       height: 2.8em;
-      opacity: .8;
+      opacity: 0.8;
       text-indent: 18px;
       border-style: solid;
       border-width: thin;
@@ -522,7 +524,8 @@ a {
     .modal-logo {
       width: 278px;
       position: absolute;
-      top: 35px; left: 35px;
+      top: 35px;
+      left: 35px;
     }
     .menu-close {
       z-index: 10;
@@ -605,7 +608,7 @@ a {
 
 #header-text {
   transition-property: all;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
 }
 
 #header-logo {
@@ -620,21 +623,21 @@ a {
     opacity: 1;
     top: 0;
     transition-property: all;
-    transition-duration: .6s;
+    transition-duration: 0.6s;
   }
 }
 
 .scroll-arrow {
   cursor: pointer;
   position: absolute;
-  opacity: .8;
+  opacity: 0.8;
   width: 54px;
   margin-left: -(54px/2);
   bottom: 10%;
   left: 50%;
   &:hover {
     animation-name: scrollDown;
-    animation-duration: .4s;
+    animation-duration: 0.4s;
     animation-fill-mode: forwards;
   }
 }
@@ -647,7 +650,6 @@ a {
     bottom: 8.5%;
   }
 }
-
 
 #header-text {
   position: relative;
@@ -792,7 +794,7 @@ a {
   }
 
   .review::before {
-    content: '';
+    content: "";
     display: inline-block;
     vertical-align: middle;
     height: 100%;
@@ -809,7 +811,7 @@ a {
     p {
       max-width: 800px;
       vertical-align: middle;
-      font-size: .7em;
+      font-size: 0.7em;
       padding: 12px;
       text-align: left;
       display: inline-block;
@@ -824,7 +826,7 @@ a {
       border-style: solid;
       border-radius: 500px;
       border-color: white;
-      box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -876,7 +878,7 @@ a {
 .services-text {
   display: inline-block;
   padding: 3em 3em 6em 80px;
-  opacity: .9 ;
+  opacity: 0.9;
   width: 33%;
 }
 
@@ -895,7 +897,9 @@ a {
   min-height: 170px;
   background: $primary-color;
   color: white;
-  & > * { line-height: 2.2; }
+  & > * {
+    line-height: 2.2;
+  }
   .column {
     font-size: 1.2em;
     display: inline-block;
@@ -927,7 +931,7 @@ a {
       position: absolute;
       bottom: 0;
       padding: 15px 0;
-      opacity: .7;
+      opacity: 0.7;
       font-size: 0.7em;
     }
     &.social {
@@ -971,7 +975,6 @@ a {
   background-size: 18px 18px;
   padding: 31px;
   cursor: pointer;
-
 }
 
 .to-top {
@@ -1010,7 +1013,7 @@ a {
     padding: 12px;
     .inner {
       img {
-        margin-top: 3px;;
+        margin-top: 3px;
         max-width: 35%;
       }
       p {
@@ -1060,7 +1063,7 @@ a {
 }
 @include mobile {
   body {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   .arrow-up {
@@ -1105,7 +1108,7 @@ a {
   }
 
   .contact-info-body {
-    font-size: .9em;
+    font-size: 0.9em;
     margin-top: 12px;
     width: 100%;
     .contact-row {
@@ -1189,7 +1192,7 @@ a {
   }
 
   #contact-us-home-section {
-    font-size: .9em;
+    font-size: 0.9em;
     position: relative;
     .contact-us-gmap-container {
       display: none;
@@ -1210,7 +1213,7 @@ a {
         }
         .contact-body {
           padding-left: 12px;
-          font-size: .95em;
+          font-size: 0.95em;
           > ul {
             padding-left: 0;
           }
@@ -1250,7 +1253,7 @@ a {
       padding: 21px;
     }
     .header {
-      font-size: .8em;
+      font-size: 0.8em;
       > h1 {
         padding-right: 30px;
       }
@@ -1318,7 +1321,7 @@ a {
   }
 
   #header-home {
-   height: 80vh;
+    height: 80vh;
   }
 
   .home-intro {
@@ -1393,7 +1396,7 @@ a {
         font-weight: bold;
       }
       margin-left: 0%;
-      opacity: .9;
+      opacity: 0.9;
       &.copyright {
         margin-top: 10%;
         margin-bottom: 0;
@@ -1424,7 +1427,7 @@ a {
   }
 }
 .slick-slide {
- outline: none;
+  outline: none;
 }
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject

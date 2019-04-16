@@ -62,7 +62,12 @@
                     <div class="bio-contact">
                       {% if agent.email.size > 0 %}
                         <span class="black">
-                          {{agent.email}}
+                          <a
+                            href="mailto:{{agent.email}}"
+                            class="text-decoration-none"
+                          >
+                            {{agent.email}}
+                          </a>
                         </span>
                         <br />
                       {% endif %}
