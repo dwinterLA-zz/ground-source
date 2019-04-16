@@ -58,13 +58,30 @@
                     {{agent.short_bio}}
                   </div>
                   <div class="agent-info-bottom">
-                    <div class="bio-button" data-agent="{{forloop.index}}">VIEW FULL BIO</div>
+                    <div>
+                      <div class="bio-button" data-agent="{{forloop.index}}">
+                        VIEW FULL BIO
+                      </div>
+                    </div>
                     <div class="bio-contact">
-                      <span class="black">{{agent.email}}</span>
-                      <br />
-                      Land Line: {{agent.phone}}
-                      <br />
-                      Cell: {{agent.cell}}
+                      {% if agent.email.size > 0 %}
+                        <span class="black">
+                          <a
+                            href="mailto:{{agent.email}}"
+                            class="text-decoration-none"
+                          >
+                            {{agent.email}}
+                          </a>
+                        </span>
+                        <br />
+                      {% endif %}
+                      {% if agent.phone.size > 0 %}
+                        Land Line: {{agent.phone}}
+                        <br />
+                      {% endif %}
+                      {% if agent.cell.size > 0 %}
+                        Cell: {{agent.cell}}
+                      {% endif %}
                     </div>
                   </div>
                 </div>
@@ -84,10 +101,30 @@
                 <h4>{{agent.first_name}} {{agent.last_name}}</h4>
                 <p class="no-margin position">{{agent.position}}</p>
                 <br />
-                <p class="no-margin email secondary-contact"><a href="mailto:{{agent.email}}">{{agent.email}}</a></p>
-                <p class="no-margin secondary-contact">Land Line: {{agent.phone}}</p>
-                <p class="no-margin secondary-contact">Cell: {{agent.cell}}</p>
-                <a href="mailto:{{agent.email}}"><button class="rounded-red-button">work with {{agent.first_name}}</buton></a>
+                {% if agent.email.size > 0 %}
+                  <p class="no-margin email secondary-contact">
+                    <a href="mailto:{{agent.email}}">
+                      {{agent.email}}
+                    </a>
+                  </p>
+                {% endif %}
+                {% if agent.phone.size > 0 %}
+                  <p class="no-margin secondary-contact">
+                    Land Line: {{agent.phone}}
+                  </p>
+                {% endif %}
+                {% if agent.cell.size > 0 %}
+                  <p class="no-margin secondary-contact">
+                    Cell: {{agent.cell}}
+                  </p>
+                {% endif %}
+                {% if agent.email.size > 0 %}
+                  <a href="mailto:{{agent.email}}">
+                    <button class="rounded-red-button">
+                      work with {{agent.first_name}}
+                    </buton>
+                  </a>
+                {% endif %}
               </div>
             </div>
             <div class="bio">
