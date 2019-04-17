@@ -49,7 +49,10 @@ layout:
 - listing
 ```
 
-You can find all collections at the root (left-hand navigation) menu within Forestry.
+If you want to create a new collection, you'll need to add it to the `collections` list in `config.yml`, and there may be some
+additional setup as well. You can read more about collections here: <a href="https://jekyllrb.com/docs/collections/">jekyll collections</a>.
+
+Data (markdown files) for existing collections can by found at the root (left-hand navigation) menu within Forestry.
 
 ## Front Matter
 
