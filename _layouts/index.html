@@ -1,66 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>GROUNDSOURCE</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=no"
+    />
     {% include header-links.html %}
 
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-    <script type="text/javascript">WebFont.load({
-    google: {
-        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"]
-    }
-    });</script>
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [
+            "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic",
+            "Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic"
+          ]
+        }
+      });
+    </script>
   </head>
   <body>
-    {% include login.html %}
-    {% include contact-form.html %}
+    {% include login.html %} {% include contact-form.html %}
     <div class="main">
-
       <div id="tenant-service-modal" class="service-detail">
-        {% include services-modal.html
-           header-text="TENANT REPRESENTATION"
-           body-text=page.tenant_services_text
-           examples=site.examples_tenant
-           link="/experience.html?service=tenant"
-        %}
+        {% include services-modal.html header-text="TENANT REPRESENTATION"
+        body-text=page.tenant_services_text examples=site.examples_tenant
+        link="/experience.html?service=tenant" %}
       </div>
 
       <div id="landlord-service-modal" class="service-detail">
-        {% include services-modal.html
-          header-text="LANDLORD REPRESENTATION"
-          body-text=page.landlord_services_text
-          examples=site.examples_landlord
-          link="/experience.html?service=landlord"
-         %}
+        {% include services-modal.html header-text="LANDLORD REPRESENTATION"
+        body-text=page.landlord_services_text examples=site.examples_landlord
+        link="/experience.html?service=landlord" %}
       </div>
 
       <div id="investment-service-modal" class="service-detail">
-        {% include services-modal.html
-          header-text="INVESTMENT SALES"
-          body-text=page.investment_services_text
-          examples=site.examples_investment
-          link="/experience.html?service=investment"
-        %}
+        {% include services-modal.html header-text="INVESTMENT SALES"
+        body-text=page.investment_services_text
+        examples=site.examples_investment
+        link="/experience.html?service=investment" %}
       </div>
 
       <div id="top-nav">
         <ul>
+          <li>
+            <a class="services-home-button">SERVICES</a>
+          </li>
 
-          <li><a class="services-home-button">SERVICES</a></li>
+          <li>
+            <a href="listings.html">LISTINGS</a>
+          </li>
 
-          <li><a href="listings.html">LISTINGS</a></li>
+          <li>
+            <a href="experience.html">EXPERIENCE</a>
+          </li>
 
-          <li><a href="experience.html">EXPERIENCE</a></li>
+          <li>
+            <a href="about.html">ABOUT</a>
+          </li>
 
-          <li><a href="about.html">ABOUT</a></li>
+          <li>
+            <a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a>
+          </li>
 
-          <li><a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a></li>
-
-          <li><a class="contact-us-link">CONTACT</a></li>
-
+          <li>
+            <a class="contact-us-link">CONTACT</a>
+          </li>
         </ul>
       </div>
 
@@ -68,156 +76,164 @@
 
       <div class="nav-modal">
         <div class="inner">
-
-          <img src="images/logo.png" class="modal-logo"/>
+          <img src="images/logo.png" class="modal-logo" />
 
           <div class="menu-close"></div>
 
           <ul class="nav ham-nav">
+            <li>
+              <a class="active" href="/">HOME </a>
+            </li>
 
-            <li><a class="active" href="/">HOME</a></li>
+            <li>
+              <a class="services-ham-home" href="index.html?section=services">
+                SERVICES
+              </a>
+            </li>
 
-            <li><a class="services-ham-home" href="index.html?section=services">SERVICES</a></li>
+            <li>
+              <a href="listings.html">
+                LISTINGS
+              </a>
+            </li>
 
-            <li><a href="listings.html">LISTINGS</a></li>
+            <li>
+              <a href="experience.html">
+                EXPERIENCE
+              </a>
+            </li>
 
-            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li>
+              <a href="about.html">
+                ABOUT
+              </a>
+            </li>
 
-            <li><a href="about.html">ABOUT</a></li>
+            <li>
+              <a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a>
+            </li>
 
-            <li><a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a</li>
-
-            <li><a class="contact-us-link">CONTACT</a></li>
-
+            <li>
+              <a class="contact-us-link">
+                CONTACT
+              </a>
+            </li>
           </ul>
-
         </div>
       </div>
 
       <div id="header-home">
-
         <div id="header-content">
-
-          <img id="header-logo" src="images/home-logo.png" alt=""/>
+          <img id="header-logo" src="images/home-logo.png" alt="" />
 
           <div id="header-text">LOCAL BY CHOICE, NOT BY CHANCE</div>
-
         </div>
 
-        <img src="images/scroll-arrow.png" class="scroll-arrow"/>
-
+        <img src="images/scroll-arrow.png" class="scroll-arrow" />
       </div>
 
       <div class="content">
-
         <div class="flexbox">
-
           <div class="home-intro-left">
-
             <div>
-
               <div class="section-header">
-                ABOUT <span><b>GROUND</b></span>SOURCE
+                ABOUT <span><b>GROUND</b></span
+                >SOURCE
               </div>
 
               <p>
-                {{page.intro_paragraph}}
+                {{ page.intro_paragraph }}
               </p>
-
             </div>
-
           </div>
 
-          <div class="home-intro-right" style="background-image: url('{{page.intro_image}}');"></div>
-
+          <div
+            class="home-intro-right"
+            style="background-image: url('{{ page.intro_image }}');"
+          ></div>
         </div>
 
         <div class="review-slideshow">
           <div class="inner">
-
             <div class="navigation-arrow-left navigation-arrows"></div>
 
             <div class="carousel-container">
               <div class="review-carousel">
                 {% for testimonial in site.testimonials %}
-                  <div class="review">
-                    <div class="inner-review">
-                      {% if testimonial.userImg == "" or testimonial.userImg == nil or testimonial.userImg == blank %}
-                      {% else %}
-                        <img src="{{ testimonial.userImg }}" />
-                      {% endif %}
-                      <p>
+                <div class="review">
+                  <div class="inner-review">
+                    {% if testimonial.userImg == "" or testimonial.userImg ==
+                    nil or testimonial.userImg == blank %} {% else %}
+                    <img src="{{ testimonial.userImg }}" />
+                    {% endif %}
+                    <p>
+                      <span class="testimonial-text">{{
+                        testimonial.text
+                      }}</span>
 
-                        <span class="testimonial-text">{{ testimonial.text }}</span>
+                      <br />
 
-                        <br />
+                      <br />
 
-                        <br />
-
-                        <strong>- {{ testimonial.name }}</strong>
-
-                      </p>
-                    </div>
+                      <strong>- {{ testimonial.name }}</strong>
+                    </p>
                   </div>
+                </div>
                 {% endfor %}
               </div>
             </div>
 
             <div class="navigation-arrow-right navigation-arrows"></div>
-
           </div>
         </div>
 
         <div class="services-info">
           <div class="services-content">
-
             <div class="services-row">
-              <div class="services-header"><p><strong>OUR</strong> SERVICES</p></div>
+              <div class="services-header">
+                <p><strong>OUR</strong> SERVICES</p>
+              </div>
             </div>
 
             <div class="services-row">
-
               <div class="services-1 services-text">
+                <div class="medium-white-text">
+                  <strong>TENANT</strong> REPRESENTATION
+                </div>
 
-                  <div class="medium-white-text">
-                    <strong>TENANT</strong> REPRESENTATION
-                  </div>
+                <div class="service-description">
+                  {{ page.tenant_services_blurb }}
+                </div>
 
-                  <div class="service-description">
-                    {{ page.tenant_services_blurb }}
-                  </div>
-
-                  <div
-                    class="btn-learn-more btn-services"
-                    id="tenant-service-modal-button"
-                  >
-                    LEARN MORE
-                  </div>
-
+                <div
+                  class="btn-learn-more btn-services"
+                  id="tenant-service-modal-button"
+                >
+                  LEARN MORE
+                </div>
               </div>
 
               <div class="services-2 services-text">
-
                 <div class="medium-white-text">
                   <strong>LANDLORD</strong> REPRESENTATION
                 </div>
 
                 <div class="service-description">
-                    {{ page.landlord_services_blurb }}
+                  {{ page.landlord_services_blurb }}
                 </div>
 
                 <div
-                    class="btn-learn-more btn-services"
-                    id="landlord-service-modal-button"
-                  >
-                    LEARN MORE
+                  class="btn-learn-more btn-services"
+                  id="landlord-service-modal-button"
+                >
+                  LEARN MORE
                 </div>
-
               </div>
 
               <div class="services-text">
-
-                <div class="medium-white-text"><strong>INVESTMENT</strong> SALES</div>
+                <div class="medium-white-text">
+                  <strong>INVESTMENT</strong> SALES
+                </div>
 
                 <div class="service-description">
                   {{ page.investment_services_blurb }}
@@ -229,11 +245,8 @@
                 >
                   LEARN MORE
                 </div>
-
               </div>
-
             </div>
-
           </div>
         </div>
 
@@ -241,28 +254,46 @@
           <div class="contact-container">
             <div class="contact-subcontainer">
               <div class="contact-content">
-
-                <div class="contact-header">
-                  <strong>CONTACT</strong> US
-                </div>
+                <div class="contact-header"><strong>CONTACT</strong> US</div>
 
                 <div class="contact-body">
                   <ul>
+                    <li>
+                      <img
+                        src="images/phone-icon.png"
+                        class="icon-small"
+                      /><span>{{ site.data.contact.phone }}</span>
+                    </li>
 
-                    <li><img src="images/phone-icon.png" class="icon-small"/><span>{{site.data.contact.phone}}</span></li>
+                    <li>
+                      <img src="images/email-icon.png" class="icon-small" /><a
+                        href="mailto:{{ site.data.email }}"
+                        >{{ site.data.contact.email }}</a
+                      >
+                    </li>
 
-                    <li><img src="images/email-icon.png" class="icon-small"/><a href="mailto:{{site.data.email}}">{{site.data.contact.email}}</a></li>
+                    <li>
+                      <img
+                        src="images/location-icon.png"
+                        class="icon-small"
+                      /><span class="underline">{{
+                        site.data.contact.address
+                      }}</span>
+                    </li>
 
-                    <li><img src="images/location-icon.png" class="icon-small"/><span class="underline">{{site.data.contact.address}}</span></li>
-
-                    <li><img src="images/ig-icon.png" class="icon-small"/><a href="https://www.instagram.com/{{site.data.instagram}}">{{site.data.contact.instagram}}</a></li>
-
+                    <li>
+                      <img src="images/ig-icon.png" class="icon-small" /><a
+                        href="https://www.instagram.com/{{
+                          site.data.instagram
+                        }}"
+                        >{{ site.data.contact.instagram }}</a
+                      >
+                    </li>
                   </ul>
                 </div>
-
               </div>
             </div>
-           </div>
+          </div>
           <div class="contact-us-gmap-container">
             <div id="contact-us-gmap"></div>
           </div>
@@ -270,7 +301,7 @@
 
         {% include footer.html %}
       </div>
-   </div>
+    </div>
     {% include include-scripts.html %}
     <script type="text/javascript" src="/scripts/home.js"></script>
     <script>
@@ -347,7 +378,10 @@
       }
     </script>
     <!-- TODO replace API key -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoAiw62lFQnHpIqeqYJVu1KfRkcitEN0&callback=initHomeMap">
-    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoAiw62lFQnHpIqeqYJVu1KfRkcitEN0&callback=initHomeMap"
+    ></script>
   </body>
+</html>
