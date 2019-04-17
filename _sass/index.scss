@@ -130,14 +130,10 @@ a {
   width: 100%;
   height: 100%;
   z-index: 4;
-}
-
-.contact-subcontainer {
-  width: 100%;
-  margin: 0 auto;
   padding-left: 80px;
   max-width: $page-max-width;
 }
+
 #contact-us-home-section {
   position: relative;
   color: $grey;
@@ -160,24 +156,23 @@ a {
       padding: 0.5em 18px;
     }
     .contact-body {
+      padding: 11px;
+      margin: 0;
       font-size: 16px;
       background: rgba(255, 255, 255, 0.9);
-      padding: 15px 0;
-      > ul {
-        list-style-type: none;
-        margin: 0;
-        padding-left: 11px;
-        > li {
-          padding: 6px;
-          cursor: pointer;
-          &:hover {
-            > * {
-              text-decoration: underline;
-            }
-          }
+      list-style-type: none;
+      > a {
+        display: flex;
+        align-items: center;
+        padding: 6px;
+        cursor: pointer;
+        &:hover {
           > * {
-            text-decoration: none;
+            text-decoration: underline;
           }
+        }
+        > * {
+          text-decoration: none;
         }
       }
     }
@@ -279,6 +274,9 @@ a {
   .slick-track {
     height: 250px;
   }
+}
+
+.testimonial-text {
 }
 
 .review {
@@ -560,17 +558,15 @@ a {
 
 .home-intro-left {
   width: 50%;
+  padding: 80px;
   background-color: white;
   font-family: $font-brand;
   color: #b4b3b3;
   letter-spacing: 0.5px;
   color: #858585;
   overflow: hidden;
-  > div {
-    padding: 80px;
-    > p {
-      margin-top: 26px;
-    }
+  > p {
+    margin-top: 26px;
   }
 }
 
@@ -673,6 +669,7 @@ a {
   color: #858585;
   > span {
     color: $primary-color;
+    font-weight: 700;
   }
 }
 
@@ -858,11 +855,9 @@ a {
   position: relative;
   background-color: $primary-color;
   color: white;
-  .services-content {
-    max-width: 1800px;
-    margin: 0 auto;
-    height: 100%;
-  }
+  max-width: 1800px;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .services-header {
@@ -1197,7 +1192,7 @@ a {
     .contact-us-gmap-container {
       display: none;
     }
-    .contact-subcontainer {
+    .contact-container {
       padding-left: 0;
       .contact-content {
         position: static;
@@ -1212,11 +1207,7 @@ a {
           font-size: 52px;
         }
         .contact-body {
-          padding-left: 12px;
           font-size: 0.95em;
-          > ul {
-            padding-left: 0;
-          }
         }
       }
     }
@@ -1288,9 +1279,7 @@ a {
   .home-intro-left {
     display: inline-block;
     width: 100%;
-    > div {
-      padding: 80px 20px 0 20px;
-    }
+    padding: 80px 20px 0 20px;
   }
 
   .home-intro-right {
@@ -1299,9 +1288,7 @@ a {
 
   .services-info {
     width: 100%;
-    .services-content {
-      margin-left: 0;
-    }
+    margin-left: 0;
   }
 
   .services-row {
@@ -1367,10 +1354,7 @@ a {
         text-align: center;
       }
       .contact-body {
-        padding: 0;
-        > ul {
-          padding-left: 20px;
-        }
+        padding: 0 0 0 20px;
       }
     }
   }
