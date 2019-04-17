@@ -49,7 +49,7 @@ sections:
   create: all
   match: "**/*"
 - type: jekyll-posts
-  label: Postss
+  label: Posts
   create: all
 - type: jekyll-pages
   label: Pages
