@@ -91,7 +91,7 @@
             </li>
 
             <li>
-              <a class="services-ham-home" href="index.html?section=services">
+              <a class="services-ham-home" href="index.html#services">
                 SERVICES
               </a>
             </li>
@@ -207,7 +207,11 @@
           </div>
         </div>
 
-        <div class="services-info">
+        <a name="services"></a>
+        <div
+          id="services-content"
+          class="services-info"
+        >
 
           <div class="services-row">
             <div class="services-header">
@@ -371,6 +375,7 @@
     <script>
       $(document).ready(function() {
         $(".services-home-button").click(function() {
+          window.history.pushState(null, null, '#services')
           scrollToServices();
         })
 
@@ -386,20 +391,15 @@
           }
         });
 
-        var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
-
-        if (sectionQuery === "testimonials") {
-          window.setTimeout(function() {
-            window.scrollTo(0, $('.review-slideshow').offset().top);
-          }, 500)
-        } else if (sectionQuery === "contact") {
-          $('.main').addClass('modal-open');
-          $('.contact-us-modal').fadeIn();
-          $('.nav-modal').fadeOut();
-        } else if (sectionQuery === "services") {
-          window.setTimeout(function() {
-            scrollToServices()
-          }, 500)
+        switch(window.location.hash) {
+          case '#contact':
+            $('.main').addClass('modal-open');
+            $('.contact-us-modal').fadeIn();
+            $('.nav-modal').fadeOut();
+            break;
+          case '#services':
+            setActiveNavClass($('.services-ham-home'))
+            break
         }
 
         $(logo).addClass("prepareSlideUp");
@@ -427,7 +427,7 @@
           zoom: 14,
           scrollwheel: false,
           disableDefaultUI: true,
-          center: {lat: {{site.data.contact.latitude}}, lng: {{site.data.contact.longitude}}}
+          center: { lat: {{ site.data.contact.latitude }}, lng: {{ site.data.contact.longitude }} }
         });
 
         var marker = new google.maps.Marker({
@@ -436,9 +436,17 @@
         });
       }
       function scrollToServices() {
+        setActiveNavClass($('.services-ham-home'))
+        window.scrollTo({
+          top: $('#services-content').offset().top,
+          left: 0,
+          behavior: 'smooth'
+        });
+      }
+
+      function setActiveNavClass(newActive) {
         $(".active").removeClass("active");
-        $('.services-ham-home').addClass('active')
-        window.scrollTo(0, $('.services-content').offset().top);
+        newActive.addClass('active')
       }
     </script>
     <!-- TODO replace API key -->
