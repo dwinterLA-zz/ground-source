@@ -16,203 +16,343 @@
   </head>
   <body>
     {% include login.html %}
+
     {% include contact-form.html %}
+
     <div class="main">
+
       {% include nav-modal.html active-section="listings" %}
+
       <div id="container-listings">
-        <img src="images/logo.png" class="logo-upper-left"/>
+
+        <img
+          src="images/logo.png"
+          class="logo-upper-left"
+        />
+
         <div class="ham-menu"></div>
+
         <div class="content">
+
           <div class="header">
-            <h4>{{page.header}}</h4>
+
+            <h4>
+              {{page.header}}
+            </h4>
+
             <p>
               {{page.subheader}}
             </p>
 
-            <input type="text" placeholder="Search properties" class="listings-search" id="listings-text-search">
+            <input
+              id="listings-text-search"
+              type="text"
+              placeholder="Search properties"
+              class="listings-search"
+            >
+
             <div class="submenu">
-              <div id="features-toggle" class="plus-sign"></div>
-              <span id="show-more-filters" class="subdued">OPTIONS</span>
-              <span id="show-less-filters" class="subdued">LESS OPTIONS</span>
+
+              <div
+                id="features-toggle"
+                class="plus-sign"
+              ></div>
+
+              <span
+                id="show-more-filters"
+                class="subdued"
+              >
+                OPTIONS
+              </span>
+
+              <span
+                id="show-less-filters"
+                class="subdued"
+              >
+                LESS OPTIONS
+              </span>
+
             </div>
-            <div class="filter-container">
-            <div class="flexbox listings filters">
+
+            <div class="listings filters">
+
               {% assign locations = site.listings |map: "address-line-2"| |uniq| %}
+
               {% assign statuses = site.listings |map: "status"| |uniq| %}
+
               {% assign type = site.listings |map: "type"| |uniq| %}
-              <select class="listings__filter" name="location" id="location-filter">
+
+              <select
+                id="location-filter"
+                class="listings__filter"
+                name="location"
+              >
+
                 <option value="n/a">Any Location</option>
+
                 {% for location in locations %}
                   <option value="{{location}}">{{location}}</option>
                 {% endfor %}
+
               </select>
-              <input class="listings__filter" id="min-size" type="text" placeholder=" Min. Size" class="subdued">
-              <input class="listings__filter" id="max-price" type="text" placeholder=" Price" class="subdued">
-              <select name="type" id="type-filter" class="listings__filter">
+
+              <input
+                id="min-size"
+                class="listings__filter subdued"
+                type="text"
+                placeholder=" Min. Size"
+              >
+
+              <input
+                id="max-price"
+                class="listings__filter"
+                type="text"
+                placeholder=" Price"
+                class="subdued"
+              >
+
+              <select
+                id="type-filter"
+                name="type"
+                class="listings__filter"
+              >
+
                 <option value="n/a">Any Type</option>
+
                 <option value="lease">Lease</option>
+
                 <option value="sublease">Sublease</option>
+
               </select>
-              <!-- Disabled filters... to enable, uncomment and alter the JS filter -->
-              <!-- <select name="status" id="status-filter">
-                <option value="n/a">Any Status</option>
-                <option value="true">Available Now</option>
-                <option value="false">Not Available</option>
-              </select> -->
-              <!-- <select name="min-rooms" id="min-rooms">
-                <option value="1">Min. Rooms</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select> -->
+
               <div>
-                <button class="listings__button listings__filter" type"submit" id="listing-clear-filters">CLEAR OPTIONS</button>
-                <button class="listings__button listings__filter" type"submit" id="listing-search">SEARCH</button>
+
+                <button
+                  id="listing-clear-filters"
+                  class="listings__button listings__filter"
+                  type"submit"
+                >
+                  CLEAR OPTIONS
+                </button>
+
+                <button
+                  id="listing-search"
+                  class="listings__button listings__filter"
+                  type"submit"
+                >
+                  SEARCH
+                </button>
+
               </div>
+
             </div>
           </div>
-          </div>
-          <div id="properties" class="flexbox listings">
+
+          <div
+            id="properties"
+            class="flexbox listings"
+          >
+
             {% assign listings = site.listings | where: "layout", "listing" | where: "hidden", "false" %}
+
             {% for listing in listings %}
-              <div class="listing-preview" data-location="{{listing.address-line-2}}" data-available="{{listing.available}}" data-lease="{{listing.lease}}" data-sublease="{{listing.sublease}}" data-buy="{{listing.buy}}" data-rooms="{{listing.rooms}}" data-size="{{listing.sq-footage}}" data-price="{{listing.price}}">
-                <a href={{listing.url}}>
-                  {% if listing.property-preview-image %}
-                    <div class="header" style="background-image:url({{listing.property-preview-image}})">
-                  {% else %}
-                    <div class="header">
-                  {% endif %}
+              <a
+                href={{listing.url}}
+                class="listing-preview"
+                data-location="{{listing.address-line-2}}"
+                data-available="{{listing.available}}"
+                data-lease="{{listing.lease}}"
+                data-sublease="{{listing.sublease}}"
+                data-buy="{{listing.buy}}"
+                data-rooms="{{listing.rooms}}"
+                data-size="{{listing.sq-footage}}"
+                data-price="{{listing.price}}"
+              >
+
+                <div
+                  class="header"
+                  {% if listing.property-preview-image %} style="background-image:url({{listing.property-preview-image}})" {% endif %}
+                >
                   <div class="address">
+
                     <div>{{listing.address-line-1}}</div>
+
                     <div>{{listing.address-line-2}}</div>
+
                   </div>
-                  </div>
-                  <div class="listing-content">
-                    <p class="short-caption">
-                      {{listing.short-caption}}
-                    </p>
-                    <div class="amenities">
-                      <div class="amenity__table">
-                        <div class="amenity__row">
-                          <div class="amenity__cell">
-                            {% if listing.lease and listing.buy %}
-                              <div class="listing-label rent-label">For Sale</div>
-                              <div class="label lease-label" style="top: 40px">For Lease</div>
-                            {% else %}
-                              {% if listing.lease %}
-                                <div class="listing-label lease-label">For Lease</div>
-                              {% endif %}
-                              {% if listing.sublease %}
-                                <div class="listing-label sublease-label">For Sublease</div>
-                              {% endif %}
-                              {% if listing.sale %}
-                                <div class="listing-label rent-label">For Sale</div>
-                              {% endif %}
-                            {% endif %}
+                </div>
+
+                <div class="listing-content">
+
+                  <p class="short-caption">
+                    {{listing.short-caption}}
+                  </p>
+
+                  <div class="amenities">
+
+                    <div class="amenity__row">
+
+                      <div class="amenity__cell">
+
+                        {% if listing.lease and listing.buy %}
+
+                          <div class="listing-label rent-label">
+                            For Sale
                           </div>
-                          <div class="amenity__cell">
-                            {% if listing.rate == 0 or listing.rate == "0" or listing.rate == nil %}
-                              <img src="images/icons/money.svg"/>
-                              <span>Please Call</span>
-                            {% else %}
-                              <img class="amenity__icon" src="images/icons/money.svg"/>
-                              <span class="amenity__detail">{{listing.rate}}/month</span>
-                            {% endif %}
+
+                          <div class="label lease-label">
+                            For Lease
                           </div>
-                        </div>
-                        <div class="amenity__row">
-                          <div class="amenity__cell">
-                            <img class="amenity__icon" src="images/icons/square.svg" />
-                            <span class="amenity__detail">{{listing.sq-footage}} Sq. ft.</span>
-                          </div>
-                          <div class="amenity__cell">
-                            <img class="amenity__icon" src="images/icons/car.svg" />
-                            <span class="amenity__detail">{{listing.parking}}</span>
-                          </div>
-                        </div>
+
+                        {% else %}
+
+                          {% if listing.lease %}
+                            <div class="listing-label lease-label">
+                              For Lease
+                            </div>
+                          {% endif %}
+
+                          {% if listing.sublease %}
+                            <div class="listing-label sublease-label">
+                              For Sublease
+                            </div>
+                          {% endif %}
+
+                          {% if listing.sale %}
+                            <div class="listing-label rent-label">
+                              For Sale
+                            </div>
+                          {% endif %}
+
+                        {% endif %}
+
                       </div>
-                      <!-- <table class="amenity-table">
-                        <tr>
-                          <td>
-                            {% if listing.lease and listing.buy %}
-                              <div class="listing-label rent-label">For Sale</div>
-                              <div class="label lease-label" style="top: 40px">For Lease</div>
-                            {% else %}
-                              {% if listing.lease %}
-                                <div class="listing-label lease-label">For Lease</div>
-                              {% endif %}
-                              {% if listing.sale %}
-                                <div class="listing-label rent-label">For Sale</div>
-                              {% endif %}
-                            {% endif %}
-                          </td>
-                          <td>
-                            {% if listing.rate == 0 or listing.rate == "0" or listing.rate == nil %}
-                              <img src="images/icons/money.svg"/>
-                              <span>Please Call</span>
-                            {% else %}
-                              <img class="amenity__icon" src="images/icons/money.svg"/>
-                              <span class="amenity__detail">{{listing.rate}}/month</span>
-                            {% endif %}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img class="amenity__icon" src="images/icons/square.svg" />
-                            <span class="amenity__detail">{{listing.sq-footage}} Sq. ft.</span>
-                          </td>
-                          <td>
-                            <img class="amenity__icon" src="images/icons/car.svg" />
-                            <span class="amenity__detail">{{listing.parking}}</span>
-                          </td>
-                        </tr>
-                      </table> -->
+
+                      <div class="amenity__cell">
+
+                        {% if listing.rate == 0 or listing.rate == "0" or listing.rate == nil %}
+
+                          <img src="images/icons/money.svg"/>
+
+                          <span>
+                            Please Call
+                          </span>
+
+                        {% else %}
+
+                          <img
+                            class="amenity__icon"
+                            src="images/icons/money.svg"
+                          />
+
+                          <span class="amenity__detail">
+                            {{ listing.rate }}/month
+                          </span>
+
+                        {% endif %}
+
+                      </div>
+
                     </div>
+
+                    <div class="amenity__row">
+
+                      <div class="amenity__cell">
+
+                        <img class="amenity__icon" src="images/icons/square.svg" />
+
+                        <span class="amenity__detail">
+                          {{listing.sq-footage}} Sq. ft.
+                        </span>
+
+                      </div>
+
+                      <div class="amenity__cell">
+
+                        <img
+                          class="amenity__icon"
+                          src="images/icons/car.svg"
+                        />
+
+                        <span class="amenity__detail">
+                          {{listing.parking}}
+                        </span>
+
+                      </div>
+
+                    </div>
+
                   </div>
-                </a>
-              </div>
+
+                </div>
+
+              </a>
             {% endfor %}
+
           </div>
+
           <div class="paginator">
-            <div id="listings-prev" class="navigate-page scroll-listings-top">
+
+            <div
+              id="listings-prev"
+              class="navigate-page scroll-listings-top"
+            >
               <div class="navigation-arrow-left navigation-arrows"></div>
             </div>
+
             <div class="pages">
-              <a id="1" class="selected scroll-listings-top">1</a>
+              <a
+                id="1"
+                class="selected scroll-listings-top"
+              >
+                1
+              </a>
             </div>
-            <div id="listings-next" class="navigate-page scroll-listings-top">
-              <div class="navigation-arrow-right navigation-arrows"></div>
+
+            <div
+              id="listings-next"
+              class="navigate-page scroll-listings-top"
+            >
+              <div
+                class="navigation-arrow-right navigation-arrows"
+              ></div>
             </div>
+
           </div>
+
         </div>
+
         {% include footer.html %}
+
       </div>
+
     </div>
-      {% include include-scripts.html %}
-      <script type="text/javascript">
-        $(document).ready(function() {
-          var typeQuery = (location.search.match(new RegExp('type' + "=(.*?)($|\&)", "i")) || [])[1]
 
-          if (typeQuery) {
-            showFilters();
-            $("#type-filter").val(typeQuery);
-            listingsSearch();
-          }
+    {% include include-scripts.html %}
 
-          if (compatibleBrowser()) {
-            window.sr = ScrollReveal();
-            sr.reveal(".listing-preview");
-          }
-        })
-        function showFilters() {
-          $('#show-more-filters').hide();
-          $('#show-less-filters').show();
-          $(".filters").show();
-          var toggleBtn = $("#features-toggle")
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var typeQuery = (location.search.match(new RegExp('type' + "=(.*?)($|\&)", "i")) || [])[1]
 
-          toggleBtn.removeClass("plus-sign")
-          toggleBtn.addClass("minus-sign")
+        if (typeQuery) {
+          showFilters();
+          $("#type-filter").val(typeQuery);
+          listingsSearch();
         }
-      </script>
-    </body>
+
+        if (compatibleBrowser()) {
+          window.sr = ScrollReveal();
+          sr.reveal(".listing-preview");
+        }
+      })
+      function showFilters() {
+        $('#show-more-filters').hide();
+        $('#show-less-filters').show();
+        $(".filters").show();
+        var toggleBtn = $("#features-toggle")
+
+        toggleBtn.removeClass("plus-sign")
+        toggleBtn.addClass("minus-sign")
+      }
+    </script>
+  </body>
