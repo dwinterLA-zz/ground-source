@@ -516,41 +516,59 @@ a {
   background: white;
   z-index: 101;
   text-align: center;
-  .inner {
-    padding: 15px;
-    position: relative;
-    .modal-logo {
-      width: 278px;
-      position: absolute;
-      top: 35px;
-      left: 35px;
+  padding: 15px;
+  .active-section-home {
+    .link-home {
+      color: $primary-color;
     }
-    .menu-close {
-      z-index: 10;
-      @include close-button;
+  }
+  .active-section-services {
+    .link-services {
+      color: $primary-color;
     }
+  }
+  .active-section-about {
+    .link-about {
+      color: $primary-color;
+    }
+  }
+  .active-section-experience {
+    .link-experience {
+      color: $primary-color;
+    }
+  }
+  .active-section-listings {
+    .link-listings {
+      color: $primary-color;
+    }
+  }
+  .modal-logo {
+    width: 278px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+  }
+  .menu-close {
+    z-index: 10;
+    @include close-button;
+  }
 
-    ul.nav {
-      padding: 8% 0 0;
-      list-style: none;
-      font-size: 2em;
-      text-align: center;
-      margin: 0;
-      li {
-        @include expanding-hover($primary-color);
-        > a {
-          color: #888;
-          line-height: 2;
-          font-size: 1.125em;
-          text-decoration: none;
-          position: relative;
-          &.active {
-            color: $primary-color;
-          }
-        }
-        > a:hover {
-          color: #888;
-        }
+  ul.nav {
+    padding: 8% 0 0;
+    list-style: none;
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    li {
+      @include expanding-hover($primary-color);
+      > a {
+        line-height: 2;
+        font-size: 1.125em;
+        text-decoration: none;
+        position: relative;
+      }
+      > a:hover {
+        color: #888;
       }
     }
   }
@@ -1090,10 +1108,8 @@ a {
   }
 
   .nav-modal {
-    .inner {
-      .menu-close {
-        padding: 21px;
-      }
+    .menu-close {
+      padding: 21px;
     }
   }
 
@@ -1156,13 +1172,11 @@ a {
     display: none !important;
   }
   .nav-modal {
-    .inner {
-      .modal-logo {
-        @include mobile-logo;
-      }
-      ul.nav {
-        margin-top: 42px;
-      }
+    .modal-logo {
+      @include mobile-logo;
+    }
+    ul.nav {
+      margin-top: 42px;
     }
   }
 

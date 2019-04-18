@@ -15,21 +15,7 @@
           <img src="images/logo.png" class="logo-upper-left"/>
           {% include contact-form.html %}
           <div class="ham-menu"></div>
-          <div class="nav-modal">
-            <div class="inner">
-              <img src="images/logo.png" class="modal-logo"/>
-              <div class="menu-close"></div>
-              <ul class="nav">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html#services">SERVICES</a></li>
-                <li><a href="listings.html">LISTINGS</a></li>
-                <li><a href="experience.html">EXPERIENCE</a></li>
-                <li><a class="active" href="about.html">ABOUT</a></li>
-                <li><a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a></li>
-                <li><a class="contact-us-link">CONTACT</a></li>
-              </ul>
-            </div>
-          </div>
+          {% include nav-modal.html active-section="about" %}
         </div>
       <div id="container-about">
         <div class="main">
