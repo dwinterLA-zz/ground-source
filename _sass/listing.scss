@@ -273,16 +273,10 @@ $listing-padding: 30px;
     margin-bottom: 22px;
   }
 
-  #listings-info {
+  .listings-info {
     display: inline-block;
     width: 66%;
     padding: 0 12px;
-  }
-
-  .sidebar-header {
-    margin: 0;
-    padding: 10px 0;
-    font-weight: lighter;
   }
 
   .menu-top {
@@ -296,27 +290,29 @@ $listing-padding: 30px;
     font-weight: lighter;
   }
 
-  .light-line {
-    border-style: solid;
-    opacity: 0.9;
-  }
-
-  .amenity-list {
-    list-style-type: none;
+  .menu__header {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.9);
     margin: 0;
-    padding: 0;
-    > hr {
-      border-color: #c35440;
-      opacity: 0.5;
-      border-style: solid;
-    }
+    padding: 10px 0;
+    font-weight: lighter;
   }
 
-  .listing-info {
+  .menu__section {
     padding: 14px;
     font-size: 1em;
     font-weight: lighter;
     opacity: 1;
+  }
+
+  .menu__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    > li {
+      border-bottom: 2px solid rgba(195, 84, 64, 0.5);
+      font-weight: lighter;
+      padding: 14px 0;
+    }
   }
 
   .menu {
@@ -366,13 +362,13 @@ $listing-padding: 30px;
       top: 1062px;
     }
 
-    #listings-sidebar {
+    .listings-sidebar {
       width: 100%;
       margin: 10px 0 0 0;
       padding: 0;
     }
 
-    #listings-info {
+    .listings-info {
       width: 100%;
       margin: 0;
       padding: 0;

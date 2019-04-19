@@ -179,7 +179,7 @@
                 {{ amenity }}
               </li>
 
-              <hr>
+              <hr />
 
             {% endfor %}
           </ul>
@@ -248,97 +248,99 @@
 
                 <div class="menu">
 
-                  <h2 class="sidebar-header">
+                  <h2 class="menu__header">
                     <strong>
                       ADDRESS
                     </strong>
                   </h2>
 
-                  <hr class="light-line">
+                  <div class="menu__section">
 
-                  <div class="listing-info">
+                    {{page.address-line-1}}
 
-                    <div>
-                      {{page.address-line-1}}
-                    </div>
+                    <br />
 
-                    <div>
-                      {{page.address-line-2}}
-                    </div>
+                    {{page.address-line-2}}
 
                   </div>
 
                   {% if page.availabilities.size > 0 %}
 
-                    <h2 class="sidebar-header">
+                    <h2 class="menu__header">
                       <strong>
                         AVAILABILITIES
                       </strong>
                     </h2>
 
-                    <hr class="light-line">
+                    <div class="menu__section">
+                      <ul class="menu__list">
+                        {% for unit in page.availabilities %}
 
-                    <ul class="amenity-list">
-                      {% for unit in page.availabilities %}
+                          <li
+                            class="menu__item"
+                          >
+                            {{ unit }}
+                          </li>
 
-                        <li
-                          class="listing-info"
-                        >
-                          {{ unit }}
-                        </li>
-
-                        <hr>
-
-                      {% endfor %}
-                    </ul>
+                        {% endfor %}
+                      </ul>
+                    </div>
 
                   {% endif %}
 
-                  <h2 class="sidebar-header">
-                    <strong>
-                      HIGHLIGHTS
-                    </strong>
-                  </h2>
+                  {% if page.highlights.size > 0 %}
 
-                  <hr class="light-line">
+                    <h2 class="menu__header">
+                      <strong>
+                        HIGHLIGHTS
+                      </strong>
+                    </h2>
 
-                  <ul class="amenity-list">
-                    {% for highlight in page.highlights %}
+                    <div class="menu__section">
+                      <ul class="menu__list">
+                        {% for unit in page.highlights %}
 
-                      <li class="listing-info">
-                        {{ highlight }}
-                      </li>
+                          <li
+                            class="menu__item"
+                          >
+                            {{ unit }}
+                          </li>
 
-                      <hr>
+                        {% endfor %}
+                      </ul>
+                    </div>
 
-                    {% endfor %}
-                  </ul>
+                  {% endif %}
 
-                  <h2 class="sidebar-header">
-                    <strong>
-                      AMENITIES
-                    </strong>
-                  </h2>
+                  {% if page.amenities.size > 0 %}
 
-                  <hr class="light-line">
+                    <h2 class="menu__header">
+                      <strong>
+                        AMENITIES
+                      </strong>
+                    </h2>
 
-                  <ul class="amenity-list">
-                    {% for amenity in page.amenities %}
+                    <div class="menu__section">
+                      <ul class="menu__list">
+                        {% for unit in page.amenities %}
 
-                    <li class="listing-info">
-                      {{ amenity }}
-                    </li>
+                          <li
+                            class="menu__item"
+                          >
+                            {{ unit }}
+                          </li>
 
-                    <hr>
+                        {% endfor %}
+                      </ul>
+                    </div>
 
-                    {% endfor %}
-                  </ul>
+                  {% endif %}
 
                 </div>
 
               </div>
 
-              <div id="listings-info">
+              <div class="listings-info">
 
                 <div class="info-box">
 
@@ -415,6 +417,7 @@
 
             </div>
           </div>
+        </div>
       </div>
 
         {% include footer.html %}
