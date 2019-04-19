@@ -3,7 +3,6 @@
 # only Main files contain this front matter, not partials.
 ---
 
-
 @import "vendor/sanitize.scss";
 @import "variables.scss";
 @import "mixins.scss";
@@ -14,6 +13,19 @@
 @import "experience.scss";
 @import "newsletter.scss";
 @import "services.scss";
+@import "agent-card.scss";
+
+.modal {
+  @include modal;
+}
+
+.modal__close {
+  @include close-button;
+  position: absolute;
+  color: $primary-color;
+  cursor: pointer;
+  padding: 21px;
+}
 
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject

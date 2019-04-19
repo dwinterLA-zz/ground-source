@@ -91,17 +91,19 @@ $(document).ready(function() {
     window.scrollTo(0, $('#header-home').height());
   });
 
-  $('.contact-close').click(function() {
+  $('.modal__close').click(function() {
     $('.main').removeClass('modal-open');
     $('body').removeClass('overflow-hidden');
-    $('.contact-us-modal').fadeOut();
+    $('.modal').fadeOut();
     window.scrollTo(0, modalOffset);
   });
 
-  $('.contact-us-link').click(function() {
-    $('.main').addClass('modal-open');
-    $('.contact-us-modal').fadeIn();
-    $('.nav-modal').fadeOut();
+  $(".contact-us-link").click(function() {
+    $(".main").addClass("modal-open");
+    $(".modal--active").fadeOut();
+    $(".contact-us-modal").fadeIn();
+    $(".contact-us-modal").addClass("modal--active");
+    $(".nav-modal").fadeOut();
   });
 
   $('.ham-menu').click(function(){

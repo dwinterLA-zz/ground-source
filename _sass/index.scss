@@ -454,13 +454,6 @@ a {
     width: 67%;
     overflow-y: auto;
   }
-  .contact-close {
-    @include close-button;
-    position: absolute;
-    color: $primary-color;
-    cursor: pointer;
-    padding: 21px;
-  }
   .form {
     margin: 36px;
     > p {
