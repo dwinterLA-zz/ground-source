@@ -1,0 +1,65 @@
+.agent-modal {
+  .hero {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .hero__avatar {
+    position: relative;
+    left: -10px;
+    width: 268px;
+  }
+
+  .hero__text {
+    flex-grow: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 25px;
+  }
+
+  .agent-name {
+    > h4 {
+      color: #3e3e3e;
+      font-weight: 100;
+      font-size: 1.8em;
+      margin-bottom: 0;
+      margin-top: 12px;
+    }
+  }
+
+  .agent-contact {
+    font-size: 0.7em;
+    font-weight: bold;
+    > p {
+      margin-top: 0;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      font-size: 0.85em;
+      > a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .about {
+    text-align: left;
+    margin: 0 31px;
+    padding-bottom: 12px;
+    padding: 20px 0;
+    color: black;
+    opacity: 0.55;
+    line-height: 110%;
+    font-size: 0.9em;
+    > p {
+      font-size: 0.8em;
+    }
+    > h2 {
+      font-size: 1.8em;
+      opacity: 1;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+  }
+}

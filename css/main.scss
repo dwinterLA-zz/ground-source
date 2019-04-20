@@ -14,6 +14,7 @@
 @import "newsletter.scss";
 @import "services.scss";
 @import "agent-card.scss";
+@import "agent-modal.scss";
 
 .modal {
   @include modal;
@@ -25,6 +26,20 @@
   color: $primary-color;
   cursor: pointer;
   padding: 21px;
+}
+
+.rounded-red-button {
+  border-radius: 500px;
+  margin-top: 22px;
+  font-weight: 500;
+  font-size: 0.7em;
+  color: $primary-color-darker-darker;
+  border-color: $primary-color-darker-darker;
+  border-style: solid;
+  border-width: thin;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
 /**

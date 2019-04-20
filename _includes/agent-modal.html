@@ -1,0 +1,72 @@
+<div
+	id="agent-{{ include.agent-index }}"
+	class="modal agent-modal"
+>
+	<div class="inner">
+
+		<div class="modal__close"></div>
+
+		<div class="hero">
+
+			<div>
+				<img
+					src="{{ include.agent.avatar }}"
+					class="hero__avatar"
+				/>
+			</div>
+
+			<div class="hero__text">
+				<div class="agent-name">
+					<h4>
+						{{include.agent.first_name}} {{include.agent.last_name}}
+						<!-- {{include.agent.position}} -->
+					</h4>
+				</div>
+
+				<div class="agent-contact">
+
+					{% if include.agent.email.size > 0 %}
+						<p>
+							<a href="mailto:{{include.agent.email}}">
+								{{include.agent.email}}
+							</a>
+						</p>
+					{% endif %}
+
+					{% if include.agent.phone.size > 0 %}
+						<p>
+							Land Line: {{include.agent.phone}}
+						</p>
+					{% endif %}
+
+					{% if include.agent.cell.size > 0 %}
+						<p>
+							Cell: {{include.agent.cell}}
+						</p>
+					{% endif %}
+
+					{% if include.agent.email.size > 0 %}
+						<a href="mailto:{{include.agent.email}}">
+							<button class="rounded-red-button">
+								work with {{include.agent.first_name}}
+							</button>
+						</a>
+					{% endif %}
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="about">
+			<h2>
+				ABOUT {{agent.first_name}}
+			</h2>
+			<p>
+				{{ agent.full_bio }}
+			</p>
+		</div>
+
+	</div>
+
+</div>

@@ -9,152 +9,48 @@
 
   </head>
   <body>
-    {% include login.html %}
-    <div class="main">
-      <div id="about-header">
-          <img src="images/logo.png" class="logo-upper-left"/>
-          {% include contact-form.html %}
-          <div class="ham-menu"></div>
-          {% include nav-modal.html active-section="about" %}
+    <div id="about-container">
+      {% include site-header.html %}
+      <div class="info">
+
+        <div class="info__image">
+          <img src="images/about/hero.jpg" />
         </div>
-      <div id="container-about">
-        <div class="main">
-          <div id="header-about">
-            <div class="about-text">
-              <div class="header-image">
-                <img class="image-left" src="images/about/hero.jpg" />
-              </div>
-              <div class="description">
-                <div class="title head-title">ABOUT <span>GROUND</span>SOURCE</div>
-                <p class="about-main-text">
-                  {{page.main_text}}
-                </p>
-              </div>
-            </div>
+
+        <div class="info__description">
+          <div class="section-header">
+            ABOUT <span>GROUND</span>SOURCE
           </div>
-          <div class="agents">
-            <div class="flexbox flex-agents">
-              {% for agent in site.agents %}
-                <div class="agent">
-                  <div class="bio-image">
-                    <img src="{{agent.avatar}}"/>
-                    <div class="image-title"><span>{{agent.first_name}}</span> {{agent.last_name}}</div>
-                  </div>
-                  <div class="short-bio">
-                    {{agent.short_bio}}
-                  </div>
-                  <div class="agent-info-bottom">
-                    <div>
-                      <div class="bio-button" data-agent="{{forloop.index}}">
-                        VIEW FULL BIO
-                      </div>
-                    </div>
-                    <div class="bio-contact">
-                      {% if agent.email.size > 0 %}
-                        <span class="black">
-                          <a
-                            href="mailto:{{agent.email}}"
-                            class="text-decoration-none"
-                          >
-                            {{agent.email}}
-                          </a>
-                        </span>
-                        <br />
-                      {% endif %}
-                      {% if agent.phone.size > 0 %}
-                        Land Line: {{agent.phone}}
-                        <br />
-                      {% endif %}
-                      {% if agent.cell.size > 0 %}
-                        Cell: {{agent.cell}}
-                      {% endif %}
-                    </div>
-                  </div>
-                </div>
-              {% endfor %}
-            </div>
-          </div>
-          {% include footer.html %}
+          <p>
+            {{ page.main_text }}
+          </p>
         </div>
-        {% for agent in site.agents %}
-        <div class="agent-details" id="agent-{{forloop.index}}">
-          <div class="inner content">
-            <div class="close-agent-detail"></div>
-            <div class="header">
-              <img src="{{agent.avatar}}" class="bio-pic"/>
-              <div class="contact">
-                <img src="{{agent.avatar}}" class="bio-pic-mobile"/>
-                <h4>{{agent.first_name}} {{agent.last_name}}</h4>
-                <p class="no-margin position">{{agent.position}}</p>
-                <br />
-                {% if agent.email.size > 0 %}
-                  <p class="no-margin email secondary-contact">
-                    <a href="mailto:{{agent.email}}">
-                      {{agent.email}}
-                    </a>
-                  </p>
-                {% endif %}
-                {% if agent.phone.size > 0 %}
-                  <p class="no-margin secondary-contact">
-                    Land Line: {{agent.phone}}
-                  </p>
-                {% endif %}
-                {% if agent.cell.size > 0 %}
-                  <p class="no-margin secondary-contact">
-                    Cell: {{agent.cell}}
-                  </p>
-                {% endif %}
-                {% if agent.email.size > 0 %}
-                  <a href="mailto:{{agent.email}}">
-                    <button class="rounded-red-button">
-                      work with {{agent.first_name}}
-                    </buton>
-                  </a>
-                {% endif %}
-              </div>
-            </div>
-            <div class="bio">
-              <h2>about {{agent.first_name}}</h2>
-              <p>{{agent.full_bio}}</p>
-            </div>
-            {% if agent.featured_listings[0] %}
-            <div class="footer">
-              {% if agent.featured_listings[1] %}
-                <p>FEATURED LISTINGS</p>
-              {% else %}
-                <p>FEATURED LISTING</p>
-              {% endif %}
-              <div class="featured-listings">
-                {% for agent_listing in agent.featured_listings %}
-                  {% assign listing = site.listings | where: "title", agent_listing | first %}
-                  {% if listing.property-preview-image %}
-                    <div class="agent-featured-listing" style="background-image: url('{{listing.property-preview-image}}')">
-                  {% else %}
-                    <div class="agent-featured-listing">
-                  {% endif %}
-                    <a class="view-listing-button" href="{{listing.url}}">View Property</a>
-                  </div>
-                {% endfor %}
-              </div>
-            </div>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
+
       </div>
+
+      <div class="agents">
+        {% for agent in site.agents %}
+          {% include agent-card.html agent=agent agent-index=forloop.index %}
+        {% endfor %}
+      </div>
+
+      {% include footer.html %}
+
+      {% for agent in site.agents %}
+          {% include agent-modal.html agent=agent agent-index=forloop.index %}
+        {% endfor %}
     </div>
+
     {% include include-scripts.html %}
   </body>
   <script type="text/javascript">
     $(document).ready(function() {
       var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
-
       if (sectionQuery === "team") {
         window.setTimeout(function() {
           window.scrollTo(0, $('.agents').offset().top);
         }, 500)
       }
-
       if (compatibleBrowser()) {
         window.sr = ScrollReveal();
         sr.reveal(".header-image");
@@ -163,14 +59,17 @@
         sr.reveal(".agents");
       }
 
-      $(".short-bio").each(function() {
-        var cutoff = 200
-        var text = $(this).text();
-        if (text.length > cutoff) {
-          var shortenedText = $(this).text().slice(0,cutoff);
-          shortenedText += " ..."
-          $(this).text(shortenedText);
-        }
+      $('.close-agent-detail').click(function () {
+        $('.agent-details').fadeOut();
+        $('.main').removeClass('mobile-bg-hide');
+        window.scrollTo(0, modalOffset);
+      });
+
+      $('.agent-modal-link').click(function () {
+        modalOffset = window.pageYOffset;
+        var agent = $(this).data('agent');
+        $("#agent-" + agent).fadeIn();
+        $('.main').addClass('mobile-bg-hide');
       });
     })
   </script>

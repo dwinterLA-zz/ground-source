@@ -95,7 +95,6 @@ $(document).ready(function() {
     $('.main').removeClass('modal-open');
     $('body').removeClass('overflow-hidden');
     $('.modal').fadeOut();
-    window.scrollTo(0, modalOffset);
   });
 
   $(".contact-us-link").click(function() {
