@@ -8,6 +8,9 @@
     position: relative;
     left: -10px;
     width: 268px;
+    @include mobile {
+      position: static;
+    }
   }
 
   .hero__text {
@@ -20,18 +23,21 @@
   }
 
   .agent-name {
-    > h4 {
-      color: #3e3e3e;
-      font-weight: 100;
-      font-size: 1.8em;
-      margin-bottom: 0;
-      margin-top: 12px;
-    }
+    color: #3e3e3e;
+    font-weight: 100;
+    font-size: 1.8em;
+    margin-bottom: 0;
+    margin-top: 12px;
+  }
+
+  .agent-position {
+    margin: 0;
   }
 
   .agent-contact {
     font-size: 0.7em;
     font-weight: bold;
+    padding-top: 20px;
     > p {
       margin-top: 0;
       margin-bottom: 0;

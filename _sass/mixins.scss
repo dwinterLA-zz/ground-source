@@ -46,12 +46,6 @@
   z-index: 2;
 }
 
-@mixin mobile-logo {
-  width: 46%;
-  top: 18px;
-  left: 14px;
-}
-
 @mixin modal {
   position: fixed;
   display: none;

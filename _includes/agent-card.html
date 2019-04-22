@@ -38,15 +38,14 @@
 		>
 
 			{% if include.agent.email.size > 0 %}
-				<span class="black">
+				<div class="black">
 					<a
 						href="mailto:{{include.agent.email}}"
 						class="text-decoration-none"
 					>
 						{{include.agent.email}}
 					</a>
-				</span>
-				<br />
+				</div>
 			{% endif %}
 
 			{% if include.agent.phone.size > 0 %}
@@ -62,5 +61,7 @@
 			{% endif %}
 
 		</div>
+
 	</div>
+
 </div>

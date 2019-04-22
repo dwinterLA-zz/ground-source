@@ -16,11 +16,17 @@
 			</div>
 
 			<div class="hero__text">
-				<div class="agent-name">
-					<h4>
+
+				<div>
+
+					<h4 class="agent-name">
 						{{include.agent.first_name}} {{include.agent.last_name}}
-						<!-- {{include.agent.position}} -->
 					</h4>
+
+					<h6 class="agent-position">
+						{{include.agent.position}}
+					</h6>
+
 				</div>
 
 				<div class="agent-contact">
@@ -54,17 +60,21 @@
 					{% endif %}
 
 				</div>
+
 			</div>
 
 		</div>
 
 		<div class="about">
+
 			<h2>
 				ABOUT {{agent.first_name}}
 			</h2>
+
 			<p>
 				{{ agent.full_bio }}
 			</p>
+
 		</div>
 
 	</div>

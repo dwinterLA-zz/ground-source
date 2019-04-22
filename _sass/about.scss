@@ -1,28 +1,49 @@
 #about-container {
+  $about-page-gutter: 60px;
+  $about-page-gutter-mobile: 10px;
+  // TODO: fix mobile footer and remove
+  overflow: hidden;
   .info {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    padding: 78px 66px;
+    align-items: flex-start;
     background-image: url(../images/about/fs-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    > div {
-      width: 50%;
+    padding: $pt-site-header $about-page-gutter 5em $about-page-gutter;
+    @include mobile {
+      padding: $pt-site-header-mobile $about-page-gutter-mobile 0
+        $about-page-gutter-mobile;
     }
   }
   .info__image {
-    padding-right: 40px;
+    width: 47%;
     > img {
       width: 100%;
     }
+    @include mobile {
+      display: none;
+    }
   }
   .info__description {
+    width: 50%;
     padding-left: 40px;
+    align-self: center;
+    > p {
+      font-size: 0.9em;
+    }
+    @include mobile {
+      width: 100%;
+      padding-left: 0;
+    }
   }
   .agents {
     display: flex;
     justify-content: center;
-    padding: 1em 60px;
+    flex-wrap: wrap;
+    padding: 1em $about-page-gutter;
+    @include mobile {
+      padding: 5px $about-page-gutter-mobile;
+    }
   }
 }

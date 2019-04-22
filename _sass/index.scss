@@ -276,9 +276,6 @@ a {
   }
 }
 
-.testimonial-text {
-}
-
 .review {
   outline: none;
   padding: 6px 60px;
@@ -302,14 +299,17 @@ a {
 }
 
 .logo-upper-left {
-  @include mobile-logo;
   cursor: pointer;
   position: absolute;
   top: 35px;
   left: 35px;
-  width: 278px;
-  height: auto;
   z-index: 2;
+  width: 278px;
+  @include mobile {
+    max-width: 46%;
+    top: 18px;
+    left: 14px;
+  }
 }
 
 .ham-menu {
@@ -536,10 +536,13 @@ a {
     }
   }
   .modal-logo {
-    width: 278px;
     position: absolute;
     top: 35px;
     left: 35px;
+    max-width: 278px;
+    @include mobile {
+      max-width: 46%;
+    }
   }
   .menu-close {
     z-index: 10;
@@ -1075,15 +1078,6 @@ a {
   .arrow-up {
     bottom: 330px;
   }
-  .logo-upper-left {
-    @include mobile-logo;
-    position: absolute;
-    top: 18px;
-    left: 14px;
-    width: 46%;
-    height: auto;
-    z-index: 2;
-  }
 
   .review img {
     display: block;
@@ -1165,9 +1159,6 @@ a {
     display: none !important;
   }
   .nav-modal {
-    .modal-logo {
-      @include mobile-logo;
-    }
     ul.nav {
       margin-top: 42px;
     }

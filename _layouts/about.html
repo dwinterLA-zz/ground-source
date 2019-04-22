@@ -9,8 +9,11 @@
 
   </head>
   <body>
+
     <div id="about-container">
+
       {% include site-header.html %}
+
       <div class="info">
 
         <div class="info__image">
@@ -18,12 +21,15 @@
         </div>
 
         <div class="info__description">
+
           <div class="section-header">
             ABOUT <span>GROUND</span>SOURCE
           </div>
+
           <p>
             {{ page.main_text }}
           </p>
+
         </div>
 
       </div>
@@ -37,8 +43,8 @@
       {% include footer.html %}
 
       {% for agent in site.agents %}
-          {% include agent-modal.html agent=agent agent-index=forloop.index %}
-        {% endfor %}
+        {% include agent-modal.html agent=agent agent-index=forloop.index %}
+      {% endfor %}
     </div>
 
     {% include include-scripts.html %}
