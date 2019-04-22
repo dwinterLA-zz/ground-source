@@ -3,6 +3,10 @@
   $about-page-gutter-mobile: 10px;
   // TODO: fix mobile footer and remove
   overflow: hidden;
+  .section-header {
+    text-align: center;
+  }
+
   .info {
     display: flex;
     justify-content: space-evenly;
@@ -12,10 +16,11 @@
     background-repeat: no-repeat;
     padding: $pt-site-header $about-page-gutter 5em $about-page-gutter;
     @include mobile {
-      padding: $pt-site-header-mobile $about-page-gutter-mobile 0
+      padding: $pt-site-header $about-page-gutter-mobile 0
         $about-page-gutter-mobile;
     }
   }
+
   .info__image {
     width: 47%;
     > img {
@@ -25,6 +30,7 @@
       display: none;
     }
   }
+
   .info__description {
     width: 50%;
     padding-left: 40px;
@@ -37,6 +43,7 @@
       padding-left: 0;
     }
   }
+
   .agents {
     display: flex;
     justify-content: center;

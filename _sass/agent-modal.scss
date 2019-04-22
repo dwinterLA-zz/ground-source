@@ -2,14 +2,26 @@
   .hero {
     display: flex;
     justify-content: space-between;
+    @include mobile {
+      display: block;
+    }
   }
 
   .hero__avatar {
-    position: relative;
-    left: -10px;
     width: 268px;
+    > img {
+      position: relative;
+      left: -10px;
+      width: 100%;
+    }
     @include mobile {
-      position: static;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 76px;
+      display: inline-block;
+      > img {
+        left: 0;
+      }
     }
   }
 
@@ -20,6 +32,11 @@
     flex-direction: column;
     justify-content: space-between;
     padding-left: 25px;
+    @include mobile {
+      padding: 0;
+      text-align: center;
+      margin: 0;
+    }
   }
 
   .agent-name {
@@ -32,6 +49,8 @@
 
   .agent-position {
     margin: 0;
+    text-transform: uppercase;
+    font-weight: 100;
   }
 
   .agent-contact {
@@ -58,8 +77,11 @@
     opacity: 0.55;
     line-height: 110%;
     font-size: 0.9em;
+    @include mobile {
+      margin: 0;
+    }
     > p {
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
     > h2 {
       font-size: 1.8em;
