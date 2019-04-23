@@ -158,7 +158,7 @@
                 {% for testimonial in site.testimonials %}
                   <div class="review">
                     <div class="inner-review">
-                      {% if testimonial.userImg != blank %}
+                      {% if testimonial.userImg.size > 0 %}
                         <img src="{{ testimonial.userImg }}" />
                       {% endif %}
 
