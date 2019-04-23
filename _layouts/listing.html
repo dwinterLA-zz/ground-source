@@ -201,9 +201,7 @@
 
     <div class="web">
 
-      <div class="ham-menu"></div>
-
-      {% include contact-form.html %}
+      {% include site-header.html %}
 
       {% include nav-modal.html active-section="listings" %}
 
@@ -211,14 +209,10 @@
         <!-- TODO: move this container to above the print section -->
         <div id="container-listing">
 
-          <img
-            src="/images/home-logo.png"
-            class="logo-upper-left"
-          />
-
           {% if page.property-header %}
             <div id="header-listings" class="background-header" style="background-image:url({{page.property-header}})"></div>
           {% else %}
+
             <div id="header-listings" class="background-header"></div>
           {% endif %}
 
