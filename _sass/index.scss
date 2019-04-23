@@ -166,6 +166,7 @@ a {
         align-items: center;
         padding: 6px;
         cursor: pointer;
+        text-decoration: none;
         &:hover {
           > * {
             text-decoration: underline;
