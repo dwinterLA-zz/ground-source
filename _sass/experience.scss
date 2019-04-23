@@ -3,7 +3,7 @@
     display: none;
   }
 
-  .main {
+  .hero {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -12,10 +12,9 @@
       height: auto;
     }
   }
-
-  .top {
+  .hero__top {
     position: relative;
-    flex-basis: 60vh;
+    height: 60vh;
     flex-grow: 1;
     background-image: url("../images/experience/bg.jpg");
     background-size: cover;
@@ -31,7 +30,7 @@
       height: 100vh;
     }
   }
-  .bottom {
+  .hero__bottom {
     position: relative;
     @include mobile {
       padding: 0 30px 42px 30px;
