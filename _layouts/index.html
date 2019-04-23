@@ -31,49 +31,69 @@
     <div class="main">
 
       <div id="tenant-service-modal" class="service-detail">
-        {% include services-modal.html header-text="TENANT REPRESENTATION"
-        body-text=page.tenant_services_text examples=site.examples_tenant
-        link="/experience.html?service=tenant" %}
+        {% include services-modal.html
+          header-text="TENANT REPRESENTATION"
+          body-text=page.tenant_services_text
+          examples=site.examples_tenant
+          link="/experience.html?service=tenant"
+         %}
       </div>
 
       <div id="landlord-service-modal" class="service-detail">
-        {% include services-modal.html header-text="LANDLORD REPRESENTATION"
-        body-text=page.landlord_services_text examples=site.examples_landlord
-        link="/experience.html?service=landlord" %}
+        {% include services-modal.html
+          header-text="LANDLORD REPRESENTATION"
+          body-text=page.landlord_services_text
+          examples=site.examples_landlord
+          link="/experience.html?service=landlord"
+         %}
       </div>
 
       <div id="investment-service-modal" class="service-detail">
-        {% include services-modal.html header-text="INVESTMENT SALES"
-        body-text=page.investment_services_text
-        examples=site.examples_investment
-        link="/experience.html?service=investment" %}
+        {% include services-modal.html
+          header-text="INVESTMENT SALES"
+          body-text=page.investment_services_text
+          examples=site.examples_investment
+          link="/experience.html?service=investment"
+        %}
       </div>
 
       <div id="top-nav">
         <ul>
 
           <li>
-            <a class="services-home-button">SERVICES</a>
+            <a class="services-home-button">
+              SERVICES
+            </a>
           </li>
 
           <li>
-            <a href="listings.html">LISTINGS</a>
+            <a href="listings.html">
+              LISTINGS
+            </a>
           </li>
 
           <li>
-            <a href="experience.html">EXPERIENCE</a>
+            <a href="experience.html">
+              EXPERIENCE
+            </a>
           </li>
 
           <li>
-            <a href="about.html">ABOUT</a>
+            <a href="about.html">
+              ABOUT
+            </a>
           </li>
 
           <li>
-            <a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a>
+            <a href="https://ws.onehub.com/" target="_blank">
+              CLIENT ACCESS
+            </a>
           </li>
 
           <li>
-            <a class="contact-us-link">CONTACT</a>
+            <a class="contact-us-link">
+              CONTACT
+            </a>
           </li>
 
         </ul>
@@ -93,11 +113,16 @@
             alt=""
           />
 
-          <div id="header-text">LOCAL BY CHOICE, NOT BY CHANCE</div>
+          <div id="header-text">
+            LOCAL BY CHOICE, NOT BY CHANCE
+          </div>
 
         </div>
 
-        <img src="images/scroll-arrow.png" class="scroll-arrow" />
+        <img
+          src="images/scroll-arrow.png"
+          class="scroll-arrow"
+        />
 
       </div>
 
@@ -252,12 +277,10 @@
                 <a href="tel:{{ site.data.contact.phone }}">
 
                     <div>
-
                       <img
                         src="images/phone-icon.png"
                         class="icon-small"
                       />
-
                     </div>
 
                     <div>
