@@ -865,13 +865,15 @@ a {
   border-color: $primary-color;
 }
 
-.services-info {
+.services-container {
   position: relative;
   background-color: $primary-color;
-  color: white;
-  max-width: 1800px;
-  margin: 0 auto;
-  height: 100%;
+  > div {
+    color: white;
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 100%;
+  }
 }
 
 .services-header {
