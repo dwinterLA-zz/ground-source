@@ -325,7 +325,7 @@
     <script>
       $(document).ready(function() {
         $(".services-home-button").click(function(event) {
-          $('.main').removeClass('modal-open');
+          $('.body').removeClass('overflow-hidden');
           window.history.pushState(null, null, '#services')
           scrollToServices();
         })
@@ -344,7 +344,7 @@
 
         switch(window.location.hash) {
           case '#contact':
-            $('.main').addClass('modal-open');
+            $('body').addClass('overflow-hidden');
             $('.contact-us-modal').fadeIn();
             $('.nav-modal').fadeOut();
             break;
@@ -388,7 +388,6 @@
       }
       function scrollToServices() {
         $('body').removeClass('overflow-hidden');
-        $('.main').removeClass('modal-open')
         $('.nav-modal').fadeOut();
         navActivateSection("active-section-services")
         window.scrollTo({

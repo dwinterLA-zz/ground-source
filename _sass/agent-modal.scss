@@ -1,4 +1,9 @@
 .agent-modal {
+  .inner {
+    @include mobile {
+      padding: 0 18px;
+    }
+  }
   .hero {
     display: flex;
     justify-content: space-between;

@@ -65,17 +65,10 @@
         sr.reveal(".agents");
       }
 
-      $('.close-agent-detail').click(function () {
-        $('.agent-details').fadeOut();
-        $('.main').removeClass('mobile-bg-hide');
-        window.scrollTo(0, modalOffset);
-      });
-
       $('.agent-modal-link').click(function () {
-        modalOffset = window.pageYOffset;
         var agent = $(this).data('agent');
         $("#agent-" + agent).fadeIn();
-        $('.main').addClass('mobile-bg-hide');
+        $('body').addClass('overflow-hidden');
       });
     })
   </script>
