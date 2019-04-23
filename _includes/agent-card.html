@@ -1,0 +1,67 @@
+<div class="agent-card">
+
+	<div
+		class="hero"
+		style="background-image: url('{{ include.agent.avatar }}')"
+	>
+		<div class="hero__name">
+
+			<strong>
+				{{include.agent.first_name}}
+			</strong>
+
+			{{include.agent.last_name}}
+
+		</div>
+
+	</div>
+
+	<div class="about">
+
+		<div class="about__bio">
+			<p>
+				{{ include.agent.short_bio }}
+			</p>
+		</div>
+
+		<div
+			class="about__button agent-modal-link"
+			data-agent="{{ include.agent-index }}"
+		>
+			<div>
+				VIEW FULL BIO
+			</div>
+		</div>
+
+		<div
+			class="about__contact"
+		>
+
+			{% if include.agent.email.size > 0 %}
+				<div class="black">
+					<a
+						href="mailto:{{include.agent.email}}"
+						class="text-decoration-none"
+					>
+						{{include.agent.email}}
+					</a>
+				</div>
+			{% endif %}
+
+			{% if include.agent.phone.size > 0 %}
+
+				Land Line: {{include.agent.phone}}
+
+				<br />
+
+			{% endif %}
+
+			{% if include.agent.cell.size > 0 %}
+				Cell: {{include.agent.cell}}
+			{% endif %}
+
+		</div>
+
+	</div>
+
+</div>

@@ -11,7 +11,6 @@ $(document).ready(function() {
     $('.contact-labels').show();
   }
   authenticate();
-  var modalOffset = 0;
   paginate($('#properties').children());
 
   $('.logo-upper-left').click(function() {
@@ -91,45 +90,28 @@ $(document).ready(function() {
     window.scrollTo(0, $('#header-home').height());
   });
 
-  $('.contact-close').click(function() {
-    $('.main').removeClass('modal-open');
+  $('.modal__close').click(function() {
     $('body').removeClass('overflow-hidden');
-    $('.contact-us-modal').fadeOut();
-    window.scrollTo(0, modalOffset);
+    $('.modal').fadeOut();
   });
 
-  $('.contact-us-link').click(function() {
-    $('.main').addClass('modal-open');
-    $('.contact-us-modal').fadeIn();
-    $('.nav-modal').fadeOut();
+  $(".contact-us-link").click(function() {
+    $('body').addClass('overflow-hidden')
+    $(".modal--active").fadeOut();
+    $(".contact-us-modal").fadeIn();
+    $(".contact-us-modal").addClass("modal--active");
+    $(".nav-modal").fadeOut();
   });
 
   $('.ham-menu').click(function(){
-    modalOffset = window.pageYOffset;
     $('body').addClass('overflow-hidden');
-    $('.main').addClass('modal-open')
     $('.nav-modal').fadeIn();
   });
 
   $('.menu-close').click(function(){
     $('body').removeClass('overflow-hidden');
-    $('.main').removeClass('modal-open')
     $('.nav-modal').fadeOut();
-    window.scrollTo(0, modalOffset)
   });
-
-  $('.close-agent-detail').click(function() {
-    $('.agent-details').fadeOut();
-    $('.main').removeClass('mobile-bg-hide');
-    window.scrollTo(0, modalOffset);
-  })
-
-  $('.bio-button').click(function() {
-    modalOffset = window.pageYOffset;
-    let agent = $(this).data('agent');
-    $("#agent-" + agent).fadeIn();
-    $('.main').addClass('mobile-bg-hide');
-  })
 
   function initMap() {
     var uluru = {lat: -25.363, lng: 131.044};

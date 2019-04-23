@@ -1,0 +1,97 @@
+.agent-modal {
+  .inner {
+    @include mobile {
+      padding: 0 18px;
+    }
+  }
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    @include mobile {
+      display: block;
+    }
+  }
+
+  .hero__avatar {
+    width: 268px;
+    > img {
+      position: relative;
+      left: -10px;
+      width: 100%;
+    }
+    @include mobile {
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 76px;
+      display: inline-block;
+      > img {
+        left: 0;
+      }
+    }
+  }
+
+  .hero__text {
+    flex-grow: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 25px;
+    @include mobile {
+      padding: 0;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .agent-name {
+    color: #3e3e3e;
+    font-weight: 100;
+    font-size: 1.8em;
+    margin-bottom: 0;
+    margin-top: 12px;
+  }
+
+  .agent-position {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+
+  .agent-contact {
+    font-size: 0.7em;
+    font-weight: bold;
+    padding-top: 20px;
+    > p {
+      margin-top: 0;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      font-size: 0.85em;
+      > a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .about {
+    text-align: left;
+    margin: 0 31px;
+    padding: 20px 0;
+    color: black;
+    opacity: 0.55;
+    line-height: 110%;
+    font-size: 0.9em;
+    @include mobile {
+      margin: 0;
+    }
+    > p {
+      font-size: 0.9em;
+    }
+    > h2 {
+      font-size: 1.8em;
+      opacity: 1;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+  }
+}

@@ -3,7 +3,7 @@
     display: none;
   }
 
-  .experience-main {
+  .hero {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -12,12 +12,11 @@
       height: auto;
     }
   }
-
-  .top {
+  .hero__top {
     position: relative;
-    flex-basis: 60vh;
+    height: 60vh;
     flex-grow: 1;
-    background-image: url('../images/experience/bg.jpg');
+    background-image: url("../images/experience/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 0;
@@ -31,10 +30,10 @@
       height: 100vh;
     }
   }
-  .bottom {
+  .hero__bottom {
     position: relative;
     @include mobile {
-      padding: 0 30px 42px 30px
+      padding: 0 30px 42px 30px;
     }
   }
 
@@ -45,7 +44,7 @@
       transform: translateX(-50%);
       bottom: 30px;
       @include mobile {
-        bottom: -20px;
+        bottom: -28px;
       }
     }
   }
@@ -62,17 +61,21 @@
   }
 
   .services__hero {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-    max-width: 100%;
-    width: $page-max-width;
-    color: white;
-    text-align: center;
-    margin: 0 auto;
-    > h4 {
-      font-size: 1.7em;
+    padding-bottom: 80px;
+    height: 100%;
+    > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      max-width: 100%;
+      width: $page-max-width;
+      color: white;
+      text-align: center;
+      margin: 0 auto;
+      > h4 {
+        font-size: 1.7em;
+      }
     }
   }
 
@@ -80,7 +83,7 @@
     max-width: 46vw;
     margin: 0 auto;
     font-size: 1.1em;
-    opacity: .9;
+    opacity: 0.9;
     padding: 40px 0;
     @include small-desktop {
       max-width: 70vw;
@@ -88,10 +91,6 @@
     @include mobile {
       max-width: 80vw;
     }
-  }
-
-  .services__links {
-    padding-bottom: 4px;
   }
 
   .link__outer {

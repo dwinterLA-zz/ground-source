@@ -20,19 +20,18 @@ $listings-text: #de6c62;
 $brand-blue: #387ac8;
 $left-align-home: 80px;
 $left-align-home-mobile: 25px;
-
+$pt-site-header: 85px;
 
 $browser-context: 16; // Default
 
 @function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em
+  @return #{$pixels/$context}em;
 }
 
 @function px($ems, $context: $browser-context) {
-  @return #{$ems * $context}px
+  @return #{$ems * $context}px;
 }
 
 @function contact-home-padding($em-padding) {
-  @return (px($em-padding) - $left-align-home)
+  @return (px($em-padding) - $left-align-home);
 }
-

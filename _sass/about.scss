@@ -1,471 +1,59 @@
-#about-header {
-  .ham-menu {
-    display: block;
+#about-container {
+  $about-page-gutter: 60px;
+  $about-page-gutter-mobile: 16px;
+  // TODO: fix mobile footer and remove
+  overflow: hidden;
+  .section-header {
+    @include mobile {
+      text-align: center;
+      margin-bottom: 20px;
+    }
   }
-}
-#container-about {
-  margin: 0 auto;
-  #header-about {
-    margin-top: -3%;
+
+  .info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
     background-image: url(../images/about/fs-bg.jpg);
     background-size: cover;
-    width: 100%;
+    background-repeat: no-repeat;
+    padding: $pt-site-header $about-page-gutter 5em $about-page-gutter;
+    @include mobile {
+      padding: $pt-site-header $about-page-gutter-mobile 0
+        $about-page-gutter-mobile;
+    }
+  }
 
-    img.image-left {
-      display: inline-block;
+  .info__image {
+    width: 47%;
+    > img {
       width: 100%;
     }
-
-    .mobile-bg-hide {
+    @include mobile {
       display: none;
     }
-
-    .header-image {
-      width: 40%;
-    }
   }
 
-  .rounded-red-button {
-    border-radius: 500px;
-    margin-top: 22px;
-    font-weight: 500;
-    font-size: 0.7em;
-    color: $primary-color-darker-darker;
-    border-color: $primary-color-darker-darker;
-    border-style: solid;
-    border-width: thin;
-    padding: 5px 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-
-  .view-listing-button {
-    border-radius: 500px;
-    color: white;
-    border-style: solid;
-    border-width: thin;
-    margin-top: 4px;
-    font-weight: 500;
-    font-size: 0.6em;
-    padding: 3px 18px;
-  }
-
-  .bio-pic-mobile {
-    display: none;
-  }
-
-  .close-agent-detail {
-    @include close-button;
-    position: absolute;
-    color: $primary-color;
-    cursor: pointer;
-    padding: 21px;
-  }
-  .agent-details {
-    @include modal;
-    .content {
-      max-width: 1400px;
-      width: 65vw;
-      font-size: 1.2em;
-      text-align: left;
-      .header {
-        position: relative;
-        margin-bottom: 5%;
-        .bio-pic {
-          position: absolute;
-          left: -10px;
-          height: 267px;
-        }
-        .contact {
-          margin-left: 293px;
-          display: inline-block;
-          h4 {
-            padding-top: 16px;
-            font-weight: bold;
-          }
-          a {
-            text-decoration: none;
-          }
-          .position {
-            color: $primary-color;
-          }
-          .email {
-            padding-top: 69px;
-          }
-          .secondary-contact {
-            font-size: 0.7em;
-            font-weight: bold;
-          }
-          > p {
-            margin-top: 0;
-            margin-bottom: 0;
-            text-transform: uppercase;
-            font-size: 0.85em;
-            > a {
-              text-decoration: underline;
-            }
-          }
-          > h4 {
-            color: #3e3e3e;
-            font-weight: 100;
-            font-size: 1.8em;
-            margin-bottom: 0;
-            margin-top: 12px;
-          }
-        }
-      }
-      .bio {
-        margin: 0 31px;
-        padding-bottom: 12px;
-        color: black;
-        opacity: 0.55;
-        line-height: 110%;
-        font-size: 0.9em;
-        > h2 {
-          font-size: 1.8em;
-          opacity: 1;
-          text-transform: uppercase;
-          margin-bottom: 25px;
-          margin-top: 0;
-        }
-      }
-      .footer {
-        background-color: $primary-color;
-        color: white;
-        text-align: center;
-        padding: 1px 0 0 0;
-        line-height: 1.5;
-        > p {
-          margin: 7px;
-          font-size: 1.4em;
-        }
-        .featured-listings {
-          width: 100%;
-          height: 100%;
-          margin: 0 auto;
-          display: flex;
-          justify-content: center;
-          .agent-featured-listing {
-            width: 33.33%;
-            height: 140px;
-            position: relative;
-            background-image: url("/images/placeholder-thumbnail.jpg");
-            background-size: cover;
-            .view-listing-button {
-              position: absolute;
-              text-decoration: none;
-              left: 24%;
-              top: 54px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .about-text {
-    display: flex;
-    justify-content: space-between;
-    padding: 5em 60px;
-    position: relative;
-    flex-direction: row;
-    flex-flow: row wrap;
-    margin: 0 auto;
-    max-width: $page-max-width;
-
-    width: 100%;
-    max-width: $page-max-width;
-    padding-top: 132px;
-    margin: 0 auto;
-    position: relative;
-    .header-image {
-      width: 47% !important;
-      display: inline-block;
-      vertical-align: bottom;
-    }
-  }
-
-  .description {
-    width: 47%;
-    display: inline-block;
-    text-align: left;
-    vertical-align: middle;
+  .info__description {
+    width: 50%;
+    padding-left: 40px;
     align-self: center;
-    color: #858585;
-    letter-spacing: 0.5px;
-
     > p {
-      padding-top: 15px;
+      font-size: 0.9em;
     }
-    .head-title {
-      @include header;
-      span {
-        font-weight: bold;
-        color: $primary-color;
-      }
+    @include mobile {
+      width: 100%;
+      padding-left: 0;
     }
   }
 
-  .agent-listing {
-    display: inherit;
-    position: relative;
-  }
   .agents {
-    .flex-agents {
-      padding: 0 60px 1em 60px;
-    }
-  }
-  .agent {
-    display: inline-block;
-    width: 23%;
-    min-width: 235px;
-    text-align: center;
-    margin-top: 12px;
-    margin: 0.3em;
-    box-shadow: 0px 0px 2em gainsboro;
-    border: 1px solid #c7c7c7;
-    .agent-info-bottom {
-      margin-top: auto;
-      padding-bottom: 4px;
-      padding-top: 4px;
-    }
-    .bio-image {
-      font-size: 1.4em;
-      position: relative;
-      > img {
-        width: 100%;
-      }
-      .image-title {
-        span {
-          font-weight: bold;
-        }
-        color: white;
-        position: absolute;
-        bottom: 1em;
-        text-align: left;
-        margin-left: 1em;
-      }
-    }
-    .short-bio {
-      margin: 1em 1em;
-      padding: 28px 0 12px 0;
-      text-align: left;
-      font-size: 0.85em;
-      min-height: 90px;
-      min-height: 120px;
-    }
-
-    .bio-button {
-      display: inline-block;
-      margin-bottom: 1em;
-      color: $primary-color;
-      border: 1px solid $primary-color;
-      font-size: 0.9em;
-      padding: 0.4em 1em;
-      border-radius: 500px;
-      cursor: pointer;
-    }
-    .bio-contact {
-      display: inline-block;
-      text-align: left;
-      margin-bottom: 0.9em;
-      font-size: 0.9em;
-    }
-  }
-  .section-header {
-    padding: 5% 1%;
-    background: $primary-color;
-    text-align: center;
-    color: white;
-    .title {
-      max-width: $page-max-width;
-      margin: 0 auto;
-      font-weight: bold;
-      font-size: 1.4em;
-    }
-  }
-
-  .specialty {
-    background: white;
-    margin-top: 3em;
-    background: white;
-    width: 100%;
-  }
-
-  .section-content {
-    margin-top: -3%;
-    margin-bottom: 142px;
-    .about {
-      position: relative;
-      margin: 0 auto;
-      width: 874px;
-
-      .about-pic {
-        display: block;
-        width: 100%;
-      }
-      .map {
-        position: absolute;
-        top: 418px;
-        left: 575px;
-        width: 400px;
-      }
-    }
-  }
-
-  @include mobile {
-    .rounded-red-button {
-      margin-bottom: 12px;
-    }
-
-    .about-text {
-      margin-bottom: -120px;
-      padding: 5em 5px;
-    }
-
-    .description {
-      padding-top: 0 !important;
-    }
-
-    .section-content {
-      margin: 0;
-      .about {
-        width: 100%;
-        .map {
-          position: static;
-          width: 100%;
-        }
-      }
-    }
-
-    .section-header {
-      .title {
-        font-size: 1em;
-      }
-    }
-    .mobile-bg-hide {
-      height: 0;
-      overflow: hidden;
-    }
-    .ham-menu {
-      background-size: 94%;
-    }
-
-    .agent {
-      width: 98%;
-    }
-
-    .agents {
-      padding: 1em;
-      .flex-agents {
-        padding: 5em 5px;
-        .agent {
-          width: 93%;
-          margin-left: 14px;
-        }
-      }
-      .short-bio {
-        display: none;
-      }
-      .agent-info-bottom {
-        .bio-contact {
-          display: none;
-        }
-        .bio-button {
-          font-size: 0.8em;
-          margin: 14px 0;
-        }
-      }
-    }
-
-    #header-about {
-      .header-image {
-        display: none;
-      }
-
-      .description {
-        width: 100%;
-        padding: 115px 30px 0 30px;
-        .head-title {
-          text-align: center;
-        }
-      }
-    }
-
-    .agent {
-      width: 43%;
-    }
-
-    .bio-pic-mobile {
-      display: block;
-      width: 88%;
-      margin: 52px auto 0 auto;
-    }
-
-    .bio-pic {
-      display: none;
-    }
-
-    .agent-details {
-      overflow: scroll;
-      background-color: white;
-      .content {
-        width: 100%;
-        margin: 0;
-        box-shadow: none;
-        .header {
-          margin-bottom: 5%;
-          .bio-pic {
-            display: none;
-          }
-          .contact {
-            width: 100%;
-            margin: 0 auto;
-            text-align: center;
-            margin-top: 25px;
-            .secondary-contact {
-              padding-top: 5px;
-            }
-            > h4 {
-              color: black;
-            }
-          }
-        }
-        .bio {
-          margin: 25px;
-          padding: 0;
-          color: black;
-          opacity: 0.55;
-          line-height: 110%;
-          > p {
-            padding-bottom: 30px;
-          }
-          > h2 {
-            opacity: 1;
-          }
-        }
-        .footer {
-          background-color: $primary-color;
-          color: white;
-          text-align: center;
-          padding-top: 1px;
-          .featured-listings {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            display: flex;
-            flex-direction: row;
-            flex-flow: row wrap;
-            justify-content: center;
-            .agent-featured-listing {
-              width: 100%;
-              .view-listing-button {
-                left: 32%;
-              }
-            }
-          }
-        }
-      }
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1em $about-page-gutter;
+    @include mobile {
+      padding: 5px $about-page-gutter-mobile;
     }
   }
 }
