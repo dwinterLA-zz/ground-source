@@ -18,10 +18,14 @@
 
       {% include nav-modal.html active-section="about" %}
 
+      {% for agent in site.agents %}
+        {% include agent-modal.html agent=agent agent-index=forloop.index %}
+      {% endfor %}
+
       <div class="info">
 
         <div class="info__image">
-          <img src="images/about/hero.jpg" />
+          <img src="/images/about/hero.jpg" />
         </div>
 
         <div class="info__description">
@@ -46,9 +50,6 @@
 
       {% include footer.html %}
 
-      {% for agent in site.agents %}
-        {% include agent-modal.html agent=agent agent-index=forloop.index %}
-      {% endfor %}
     </div>
 
     {% include include-scripts.html %}
