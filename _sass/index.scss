@@ -511,27 +511,27 @@ a {
   z-index: 101;
   text-align: center;
   padding: 15px;
-  .active-section-home {
+  &#active-section-home {
     .link-home {
       color: $primary-color;
     }
   }
-  .active-section-services {
+  &#active-section-services {
     .link-services {
       color: $primary-color;
     }
   }
-  .active-section-about {
+  &#active-section-about {
     .link-about {
       color: $primary-color;
     }
   }
-  .active-section-experience {
+  &#active-section-experience {
     .link-experience {
       color: $primary-color;
     }
   }
-  .active-section-listings {
+  &#active-section-listings {
     .link-listings {
       color: $primary-color;
     }

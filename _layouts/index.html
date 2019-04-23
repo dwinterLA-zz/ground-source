@@ -428,7 +428,7 @@
       }
 
       function navActivateSection(section) {
-        $("[class^=active-section-]")[0].classList = section
+        $("[id^=active-section-]").attr('id', section)
       }
     </script>
     <!-- TODO replace API key -->
