@@ -29,9 +29,103 @@
   </form>
 </div>
 
-    <div class="contact-us-modal">
+
+    <div class="main">
+
+      <div
+	id="active-section-listings"
+	class="nav-modal"
+>
+
+	<img
+		src="/images/logo.png"
+		class="modal-logo"
+	/>
+
+	<div class="menu-close"></div>
+
+	<ul class="nav ham-nav">
+
+		<li>
+			<a
+				href="/"
+				class="link-home"
+			>
+				HOME
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/#services"
+				class="link-services services-home-button"
+			>
+				SERVICES
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/listings.html"
+				class="link-listings"
+			>
+				LISTINGS
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/experience.html"
+				class="link-experience"
+			>
+				EXPERIENCE
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/about.html"
+				class="link-about"
+			>
+				ABOUT
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="https://ws.onehub.com/"
+				target="_blank"
+			>
+				CLIENT ACCESS
+			</a>
+		</li>
+
+		<li>
+			<a class="contact-us-link">
+				CONTACT
+			</a>
+		</li>
+
+	</ul>
+
+</div>
+
+
+      <div class="site-header">
+
+	<img
+		src="/images/logo.png"
+		class="logo-upper-left"
+	/>
+
+	<div class="ham-menu"></div>
+
+</div>
+
+
+      <div class="modal contact-us-modal">
   <div class="inner">
-    <div class="contact-close"></div>
+    <div class="modal__close"></div>
     <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
       <div class="contact-info-body">
@@ -97,246 +191,383 @@
   </div>
 </div>
 
-    <div class="main">
-      <div class="nav-modal">
-        <div class="inner">
-          <img src="images/logo.png" class="modal-logo"/>
-          <div class="menu-close"></div>
-          <ul class="nav">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="index.html?section=services">SERVICES</a></li>
-            <li><a class="active" href="listings.html">LISTINGS</a></li>
-            <li><a href="experience.html">EXPERIENCE</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a></li>
-            <li><a class="contact-us-link">CONTACT</a></li>
-          </ul>
-        </div>
-      </div>
+
       <div id="container-listings">
-        <img src="images/logo.png" class="logo-upper-left"/>
-        <div class="ham-menu"></div>
+
         <div class="content">
+
           <div class="header">
-            <h4>LISTINGS</h4>
+
+            <h4>
+              LISTINGS
+            </h4>
+
             <p>
               Find our listings here…
             </p>
 
-            <input type="text" placeholder="Search properties" class="listings-search" id="listings-text-search">
+            <input
+              id="listings-text-search"
+              type="text"
+              placeholder="Search properties"
+              class="listings-search"
+            >
+
             <div class="submenu">
-              <div id="features-toggle" class="plus-sign"></div>
-              <span id="show-more-filters" class="subdued">OPTIONS</span>
-              <span id="show-less-filters" class="subdued">LESS OPTIONS</span>
+
+              <div
+                id="features-toggle"
+                class="plus-sign"
+              ></div>
+
+              <span
+                id="show-more-filters"
+                class="subdued"
+              >
+                OPTIONS
+              </span>
+
+              <span
+                id="show-less-filters"
+                class="subdued"
+              >
+                LESS OPTIONS
+              </span>
+
             </div>
-            <div class="filter-container">
-            <div class="flexbox listings filters">
+
+            <div class="listings filters">
+
               
+
               
+
               
-              <select class="listings__filter" name="location" id="location-filter">
+
+              <select
+                id="location-filter"
+                class="listings__filter"
+                name="location"
+              >
+
                 <option value="n/a">Any Location</option>
+
                 
                   <option value="Burbank, CA 91502">Burbank, CA 91502</option>
                 
                   <option value="Los Angeles, CA 90025">Los Angeles, CA 90025</option>
                 
+
               </select>
-              <input class="listings__filter" id="min-size" type="text" placeholder=" Min. Size" class="subdued">
-              <input class="listings__filter" id="max-price" type="text" placeholder=" Price" class="subdued">
-              <select name="type" id="type-filter" class="listings__filter">
+
+              <input
+                id="min-size"
+                class="listings__filter subdued"
+                type="text"
+                placeholder=" Min. Size"
+              >
+
+              <input
+                id="max-price"
+                class="listings__filter"
+                type="text"
+                placeholder=" Price"
+                class="subdued"
+              >
+
+              <select
+                id="type-filter"
+                name="type"
+                class="listings__filter"
+              >
+
                 <option value="n/a">Any Type</option>
+
                 <option value="lease">Lease</option>
+
                 <option value="sublease">Sublease</option>
+
               </select>
-              <!-- Disabled filters... to enable, uncomment and alter the JS filter -->
-              <!-- <select name="status" id="status-filter">
-                <option value="n/a">Any Status</option>
-                <option value="true">Available Now</option>
-                <option value="false">Not Available</option>
-              </select> -->
-              <!-- <select name="min-rooms" id="min-rooms">
-                <option value="1">Min. Rooms</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select> -->
+
               <div>
-                <button class="listings__button listings__filter" type"submit" id="listing-clear-filters">CLEAR OPTIONS</button>
-                <button class="listings__button listings__filter" type"submit" id="listing-search">SEARCH</button>
+
+                <button
+                  id="listing-clear-filters"
+                  class="listings__button listings__filter"
+                  type"submit"
+                >
+                  CLEAR OPTIONS
+                </button>
+
+                <button
+                  id="listing-search"
+                  class="listings__button listings__filter"
+                  type"submit"
+                >
+                  SEARCH
+                </button>
+
               </div>
+
             </div>
           </div>
-          </div>
-          <div id="properties" class="flexbox listings">
+
+          <div
+            id="properties"
+            class="flexbox listings"
+          >
+
             
+
             
-              <div class="listing-preview" data-location="Burbank, CA 91502" data-available="2018-05-02 22:34:41 +0000" data-lease="false" data-sublease="true" data-buy="false" data-rooms="" data-size="4,354" data-price="">
-                <a href=/listings/3/listing.html>
+              <a
+                href=/listings/3/listing.html
+                class="listing-preview"
+                data-location="Burbank, CA 91502"
+                data-available="2018-05-02 22:34:41 +0000"
+                data-lease="false"
+                data-sublease="true"
+                data-buy="false"
+                data-rooms=""
+                data-size="4,354"
+                data-price=""
+              >
+
+                <div
+                  class="header"
                   
-                    <div class="header" style="background-image:url(/images/250_Olive_Hero.jpg)">
+                    style="background-image:url(/images/250_Olive_Hero.jpg)"
                   
+                >
                   <div class="address">
+
                     <div>250 E. Olive Avenue, Suite 202</div>
+
                     <div>Burbank, CA 91502</div>
+
                   </div>
-                  </div>
-                  <div class="listing-content">
-                    <p class="short-caption">
-                      Burbank Sublease
-                    </p>
-                    <div class="amenities">
-                      <div class="amenity__table">
-                        <div class="amenity__row">
-                          <div class="amenity__cell">
-                            
-                              
-                              
-                                <div class="listing-label sublease-label">For Sublease</div>
-                              
-                              
-                            
-                          </div>
-                          <div class="amenity__cell">
-                            
-                              <img class="amenity__icon" src="images/icons/money.svg"/>
-                              <span class="amenity__detail">Negotiable/month</span>
-                            
-                          </div>
-                        </div>
-                        <div class="amenity__row">
-                          <div class="amenity__cell">
-                            <img class="amenity__icon" src="images/icons/square.svg" />
-                            <span class="amenity__detail">4,354 Sq. ft.</span>
-                          </div>
-                          <div class="amenity__cell">
-                            <img class="amenity__icon" src="images/icons/car.svg" />
-                            <span class="amenity__detail">3.0/1,000 SF</span>
-                          </div>
-                        </div>
+                </div>
+
+                <div class="listing-content">
+
+                  <p class="short-caption">
+                    Burbank Sublease
+                  </p>
+
+                  <div class="amenities">
+
+                    <div class="amenity__row">
+
+                      <div class="amenity__cell">
+
+                        
+
+                          
+
+                          
+                            <div class="listing-label sublease-label">
+                              For Sublease
+                            </div>
+                          
+
+                          
+
+                        
+
                       </div>
-                      <!-- <table class="amenity-table">
-                        <tr>
-                          <td>
-                            
-                              
-                              
-                            
-                          </td>
-                          <td>
-                            
-                              <img class="amenity__icon" src="images/icons/money.svg"/>
-                              <span class="amenity__detail">Negotiable/month</span>
-                            
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img class="amenity__icon" src="images/icons/square.svg" />
-                            <span class="amenity__detail">4,354 Sq. ft.</span>
-                          </td>
-                          <td>
-                            <img class="amenity__icon" src="images/icons/car.svg" />
-                            <span class="amenity__detail">3.0/1,000 SF</span>
-                          </td>
-                        </tr>
-                      </table> -->
+
+                      <div class="amenity__cell">
+
+                        
+
+                          <img
+                            class="amenity__icon"
+                            src="images/icons/money.svg"
+                          />
+
+                          <span class="amenity__detail">
+                            Negotiable/month
+                          </span>
+
+                        
+
+                      </div>
+
                     </div>
+
+                    <div class="amenity__row">
+
+                      <div class="amenity__cell">
+
+                        <img class="amenity__icon" src="images/icons/square.svg" />
+
+                        <span class="amenity__detail">
+                          4,354 Sq. ft.
+                        </span>
+
+                      </div>
+
+                      <div class="amenity__cell">
+
+                        <img
+                          class="amenity__icon"
+                          src="images/icons/car.svg"
+                        />
+
+                        <span class="amenity__detail">
+                          3.0/1,000 SF
+                        </span>
+
+                      </div>
+
+                    </div>
+
                   </div>
-                </a>
-              </div>
+
+                </div>
+
+              </a>
             
-              <div class="listing-preview" data-location="Los Angeles, CA 90025" data-available="2018-05-02 00:00:00 +0000" data-lease="true" data-sublease="" data-buy="false" data-rooms="" data-size="47,698 SF" data-price="">
-                <a href=/listings/4/listing.html>
+              <a
+                href=/listings/4/listing.html
+                class="listing-preview"
+                data-location="Los Angeles, CA 90025"
+                data-available="2018-05-02 00:00:00 +0000"
+                data-lease="true"
+                data-sublease=""
+                data-buy="false"
+                data-rooms=""
+                data-size="47,698 SF"
+                data-price=""
+              >
+
+                <div
+                  class="header"
                   
-                    <div class="header" style="background-image:url(/images/11859_wilshire_.jpg)">
+                    style="background-image:url(/images/11859_wilshire_.jpg)"
                   
+                >
                   <div class="address">
+
                     <div>11859 Wilshire Blvd,</div>
+
                     <div>Los Angeles, CA 90025</div>
+
                   </div>
-                  </div>
-                  <div class="listing-content">
-                    <p class="short-caption">
-                      Creative office space for lease in Brentwood
-                    </p>
-                    <div class="amenities">
-                      <div class="amenity__table">
-                        <div class="amenity__row">
-                          <div class="amenity__cell">
-                            
-                              
-                                <div class="listing-label lease-label">For Lease</div>
-                              
-                              
-                              
-                            
-                          </div>
-                          <div class="amenity__cell">
-                            
-                              <img class="amenity__icon" src="images/icons/money.svg"/>
-                              <span class="amenity__detail">Negotiable/month</span>
-                            
-                          </div>
-                        </div>
-                        <div class="amenity__row">
-                          <div class="amenity__cell">
-                            <img class="amenity__icon" src="images/icons/square.svg" />
-                            <span class="amenity__detail">47,698 SF Sq. ft.</span>
-                          </div>
-                          <div class="amenity__cell">
-                            <img class="amenity__icon" src="images/icons/car.svg" />
-                            <span class="amenity__detail">3.0 / 1,000 RSF</span>
-                          </div>
-                        </div>
+                </div>
+
+                <div class="listing-content">
+
+                  <p class="short-caption">
+                    Creative office space for lease in Brentwood
+                  </p>
+
+                  <div class="amenities">
+
+                    <div class="amenity__row">
+
+                      <div class="amenity__cell">
+
+                        
+
+                          
+                            <div class="listing-label lease-label">
+                              For Lease
+                            </div>
+                          
+
+                          
+
+                          
+
+                        
+
                       </div>
-                      <!-- <table class="amenity-table">
-                        <tr>
-                          <td>
-                            
-                              
-                                <div class="listing-label lease-label">For Lease</div>
-                              
-                              
-                            
-                          </td>
-                          <td>
-                            
-                              <img class="amenity__icon" src="images/icons/money.svg"/>
-                              <span class="amenity__detail">Negotiable/month</span>
-                            
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <img class="amenity__icon" src="images/icons/square.svg" />
-                            <span class="amenity__detail">47,698 SF Sq. ft.</span>
-                          </td>
-                          <td>
-                            <img class="amenity__icon" src="images/icons/car.svg" />
-                            <span class="amenity__detail">3.0 / 1,000 RSF</span>
-                          </td>
-                        </tr>
-                      </table> -->
+
+                      <div class="amenity__cell">
+
+                        
+
+                          <img
+                            class="amenity__icon"
+                            src="images/icons/money.svg"
+                          />
+
+                          <span class="amenity__detail">
+                            Negotiable/month
+                          </span>
+
+                        
+
+                      </div>
+
                     </div>
+
+                    <div class="amenity__row">
+
+                      <div class="amenity__cell">
+
+                        <img class="amenity__icon" src="images/icons/square.svg" />
+
+                        <span class="amenity__detail">
+                          47,698 SF Sq. ft.
+                        </span>
+
+                      </div>
+
+                      <div class="amenity__cell">
+
+                        <img
+                          class="amenity__icon"
+                          src="images/icons/car.svg"
+                        />
+
+                        <span class="amenity__detail">
+                          3.0 / 1,000 RSF
+                        </span>
+
+                      </div>
+
+                    </div>
+
                   </div>
-                </a>
-              </div>
+
+                </div>
+
+              </a>
             
+
           </div>
+
           <div class="paginator">
-            <div id="listings-prev" class="navigate-page scroll-listings-top">
+
+            <div
+              id="listings-prev"
+              class="navigate-page scroll-listings-top"
+            >
               <div class="navigation-arrow-left navigation-arrows"></div>
             </div>
+
             <div class="pages">
-              <a id="1" class="selected scroll-listings-top">1</a>
+              <a
+                id="1"
+                class="selected scroll-listings-top"
+              >
+                1
+              </a>
             </div>
-            <div id="listings-next" class="navigate-page scroll-listings-top">
+
+            <div
+              id="listings-next"
+              class="navigate-page scroll-listings-top"
+            >
               <div class="navigation-arrow-right navigation-arrows"></div>
             </div>
+
           </div>
+
         </div>
+
         <div class="footer">
   <div class="inner">
     <div class="column">
@@ -379,9 +610,12 @@
   </div>
 </div>
 
+
       </div>
+
     </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/formSubmit.js"></script>
@@ -389,29 +623,30 @@
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 <script type="text/javascript" src="/scripts/flexibility.js"></script>
 
-      <script type="text/javascript">
-        $(document).ready(function() {
-          var typeQuery = (location.search.match(new RegExp('type' + "=(.*?)($|\&)", "i")) || [])[1]
 
-          if (typeQuery) {
-            showFilters();
-            $("#type-filter").val(typeQuery);
-            listingsSearch();
-          }
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var typeQuery = (location.search.match(new RegExp('type' + "=(.*?)($|\&)", "i")) || [])[1]
 
-          if (compatibleBrowser()) {
-            window.sr = ScrollReveal();
-            sr.reveal(".listing-preview");
-          }
-        })
-        function showFilters() {
-          $('#show-more-filters').hide();
-          $('#show-less-filters').show();
-          $(".filters").show();
-          var toggleBtn = $("#features-toggle")
-
-          toggleBtn.removeClass("plus-sign")
-          toggleBtn.addClass("minus-sign")
+        if (typeQuery) {
+          showFilters();
+          $("#type-filter").val(typeQuery);
+          listingsSearch();
         }
-      </script>
-    </body>
+
+        if (compatibleBrowser()) {
+          window.sr = ScrollReveal();
+          sr.reveal(".listing-preview");
+        }
+      })
+      function showFilters() {
+        $('#show-more-filters').hide();
+        $('#show-less-filters').show();
+        $(".filters").show();
+        var toggleBtn = $("#features-toggle")
+
+        toggleBtn.removeClass("plus-sign")
+        toggleBtn.addClass("minus-sign")
+      }
+    </script>
+  </body>

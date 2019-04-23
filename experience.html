@@ -25,6 +25,7 @@
     <!-- endbuild -->
   </head>
   <body>
+
     <div id="dialog">
   <p>Please enter user credentials...</p>
   <form class="login">
@@ -35,24 +36,101 @@
   </form>
 </div>
 
-    <div class="nav-modal">
-      <div class="inner">
-        <img src="images/logo.png" class="modal-logo"/>
-        <div class="menu-close"></div>
-        <ul class="nav">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="index.html?section=services">SERVICES</a></li>
-          <li><a href="listings.html">LISTINGS</a></li>
-          <li><a class="active" href="experience.html">EXPERIENCE</a></li>
-          <li><a href="about.html">ABOUT</a></li>
-          <li><a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a></li>
-          <li><a class="contact-us-link">CONTACT</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="contact-us-modal">
+
+    <div
+	id="active-section-experience"
+	class="nav-modal"
+>
+
+	<img
+		src="/images/logo.png"
+		class="modal-logo"
+	/>
+
+	<div class="menu-close"></div>
+
+	<ul class="nav ham-nav">
+
+		<li>
+			<a
+				href="/"
+				class="link-home"
+			>
+				HOME
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/#services"
+				class="link-services services-home-button"
+			>
+				SERVICES
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/listings.html"
+				class="link-listings"
+			>
+				LISTINGS
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/experience.html"
+				class="link-experience"
+			>
+				EXPERIENCE
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/about.html"
+				class="link-about"
+			>
+				ABOUT
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="https://ws.onehub.com/"
+				target="_blank"
+			>
+				CLIENT ACCESS
+			</a>
+		</li>
+
+		<li>
+			<a class="contact-us-link">
+				CONTACT
+			</a>
+		</li>
+
+	</ul>
+
+</div>
+
+
+    <div class="site-header">
+
+	<img
+		src="/images/logo.png"
+		class="logo-upper-left"
+	/>
+
+	<div class="ham-menu"></div>
+
+</div>
+
+
+    <div class="modal contact-us-modal">
   <div class="inner">
-    <div class="contact-close"></div>
+    <div class="modal__close"></div>
     <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
       <div class="contact-info-body">
@@ -118,14 +196,17 @@
   </div>
 </div>
 
-    <div class="main">
-      <div id="container-experience">
-        <div class="experience-main">
-          <div class="top">
-            <img src="images/logo.png" class="logo-upper-left"/>
-            <div class="ham-menu"></div>
-            <div class="services__hero">
-              <div class="state__links">
+
+    <div
+      id="container-experience"
+      class="main"
+    >
+      <div class="hero">
+
+        <div class="hero__top">
+          <div class="services__hero">
+            <div>
+              <div>
                 <div class="link__outer">
                   <a
                     href="/experience.html"
@@ -136,7 +217,9 @@
                   </a>
                 </div>
               </div>
-              <div class="services__links state__links">
+
+              <div>
+
                 <div class="link__outer">
                   <a
                     href="/experience?service=tenant"
@@ -146,6 +229,7 @@
                     TENANT<br /> REPRESENTATION
                   </a>
                 </div>
+
                 <div class="link__outer">
                   <a
                     href="/experience?service=landlord"
@@ -155,6 +239,7 @@
                     LANDLORD<br /> REPRESENTATION
                   </a>
                 </div>
+
                 <div class="link__outer">
                   <a
                     href="/experience?service=investment"
@@ -164,30 +249,42 @@
                     INVESTMENT<br /> SALES
                   </a>
                 </div>
+
               </div>
+
               <div class="state state--default services__description">
                 Groundsource prides itself on the impact it has on the market. It brings experience to the table, specializing in the greater Los Angeles area. Its founder, Chris Keller, has twice been named Broker of the Year With a transaction history that includes Comcast Entertainment Group, Universal Music Group, Warner Brothers Entertainment, and many more, Groundsource has earned a reputation for quality and unmatched service.
 
               </div>
+
               <div class="state state--tenant services__description">
                 Effective tenant representation is based on experience, relationships and knowledge. Groundsource Los Angeles knows market conditions, infrastructures, comparable deals and the people who make them. This is Groundsource’s city – it listens to clients to understand their needs and goals. The process is multifold: it includes investing time to see how space is used and how to identify areas of improvement.  
   
 Further, occupancy costs are discussed to determine mitigating risk to a new location as well as renewal or disposition of an existing lease. Proven data and experience drive every decision Groundsource makes. Its job is turning your real estate challenge into an opportunity.
               </div>
+
               <div class="state state--landlord services__description">
                 Groundsource provides efficient, effective landlord representation, ensuring each transaction is hands-on, locally informed and detail- oriented.  It knows a broker’s value lies in integrity and commitment to a seamless experience.  
   
 Clients deserve a broker who is one hundred percent invested in the market of their property’s location. Groundsource uses neighborhood expertise to determine and deliver the highest yield, and at the same time, offer consistent accessibility. It addresses a comprehensive lease-up of the space, building or project in order to effect a smooth execution of objectives. It provides a pro-active asset strategy to determine and implement a marketing plan, to create a competitive environment for space, to determine a tenant’s credit worthiness and to execute a lease based on predetermined goals.
               </div>
+
               <div class="state state--investment services__description">
                 Market intelligence and personal relationships are the catalysts which drive investment service decisions. Groundsource provides in-depth investment advisory and capitalization strategies over a broad spectrum of property types based on comprehensive market insight and a research-centered approach to risk mitigation. Strategy and analysis are key factors when determining the best course of action, whether divesting from distressed or well-positioned assets, or determining the short and/or long-term value of an acquisition. Groundsource works hand-in-hand with investors who are looking to achieve maximum value for their interests in the marketplace. This results in long lasting partnerships and a reputation of trust. 
               </div>
-              <button class="contact-us-link contact-us-button">CONTACT US</button>
+
+              <button class="contact-us-link contact-us-button">
+                CONTACT US
+              </button>
+
             </div>
           </div>
-          <div class="bottom">
-            <div class="state state--tenant">
-              
+        </div>
+
+        <div class="hero__bottom">
+
+          <div class="state state--tenant">
+            
 	<div class="services__examples">
 		<div class="services-carousel">
 			
@@ -492,9 +589,10 @@ Clients deserve a broker who is one hundred percent invested in the market of th
 	</div>
 
 
-            </div>
-            <div class="state state--landlord">
-              
+          </div>
+
+          <div class="state state--landlord">
+            
 	<div class="services__examples">
 		<div class="services-carousel">
 			
@@ -667,9 +765,10 @@ Clients deserve a broker who is one hundred percent invested in the market of th
 	</div>
 
 
-            </div>
-            <div class="state state--investment">
-              
+          </div>
+
+          <div class="state state--investment">
+            
 	<div class="services__examples">
 		<div class="services-carousel">
 			
@@ -743,11 +842,13 @@ Clients deserve a broker who is one hundred percent invested in the market of th
 	</div>
 
 
-            </div>
           </div>
+
         </div>
 
-        <div class="footer">
+      </div>
+
+      <div class="footer">
   <div class="inner">
     <div class="column">
       <div class="title"><a href="/index.html?section=services">SERVICES</a></div>
@@ -789,7 +890,7 @@ Clients deserve a broker who is one hundred percent invested in the market of th
   </div>
 </div>
 
-      </div>
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>

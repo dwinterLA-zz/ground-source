@@ -13,22 +13,24 @@
 
   </head>
   <body>
-    <div id="dialog">
-  <p>Please enter user credentials...</p>
-  <form class="login">
-    <label for="user">User</label>
-    <input type="text" id="user" />
-    <label for="password">Password</label>
-    <input type="password" id="password" />
-  </form>
+
+    <div id="about-container">
+
+      <div class="site-header">
+
+	<img
+		src="/images/logo.png"
+		class="logo-upper-left"
+	/>
+
+	<div class="ham-menu"></div>
+
 </div>
 
-    <div class="main">
-      <div id="about-header">
-          <img src="images/logo.png" class="logo-upper-left"/>
-          <div class="contact-us-modal">
+
+      <div class="modal contact-us-modal">
   <div class="inner">
-    <div class="contact-close"></div>
+    <div class="modal__close"></div>
     <form id="gform" class="form" method="POST">
       <p class="contact-us">CONTACT US</p>
       <div class="contact-info-body">
@@ -94,153 +96,557 @@
   </div>
 </div>
 
-          <div class="ham-menu"></div>
-          <div class="nav-modal">
-            <div class="inner">
-              <img src="images/logo.png" class="modal-logo"/>
-              <div class="menu-close"></div>
-              <ul class="nav">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="index.html?section=services">SERVICES</a></li>
-                <li><a href="listings.html">LISTINGS</a></li>
-                <li><a href="experience.html">EXPERIENCE</a></li>
-                <li><a class="active" href="about.html">ABOUT</a></li>
-                <li><a href="https://ws.onehub.com/" target="_blank">CLIENT ACCESS</a></li>
-                <li><a class="contact-us-link">CONTACT</a></li>
-              </ul>
-            </div>
-          </div>
+
+      <div
+	id="active-section-about"
+	class="nav-modal"
+>
+
+	<img
+		src="/images/logo.png"
+		class="modal-logo"
+	/>
+
+	<div class="menu-close"></div>
+
+	<ul class="nav ham-nav">
+
+		<li>
+			<a
+				href="/"
+				class="link-home"
+			>
+				HOME
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/#services"
+				class="link-services services-home-button"
+			>
+				SERVICES
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/listings.html"
+				class="link-listings"
+			>
+				LISTINGS
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/experience.html"
+				class="link-experience"
+			>
+				EXPERIENCE
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="/about.html"
+				class="link-about"
+			>
+				ABOUT
+			</a>
+		</li>
+
+		<li>
+			<a
+				href="https://ws.onehub.com/"
+				target="_blank"
+			>
+				CLIENT ACCESS
+			</a>
+		</li>
+
+		<li>
+			<a class="contact-us-link">
+				CONTACT
+			</a>
+		</li>
+
+	</ul>
+
+</div>
+
+
+      
+        <div
+	id="agent-1"
+	class="modal agent-modal"
+>
+	<div class="inner">
+
+		<div class="modal__close"></div>
+
+		<div class="hero">
+
+			<div class="hero__avatar">
+				<img src="/images/GS_ChrisKeller_Profile-1" />
+			</div>
+
+			<div class="hero__text">
+
+				<div>
+
+					<h4 class="agent-name">
+						CHRIS KELLER
+					</h4>
+
+					<h6 class="agent-position">
+						
+					</h6>
+
+				</div>
+
+				<div class="agent-contact">
+
+					
+						<p>
+							<a href="mailto:ckeller@groundsource.net">
+								ckeller@groundsource.net
+							</a>
+						</p>
+					
+
+					
+						<p>
+							Land Line: 310.444.6100
+						</p>
+					
+
+					
+						<p>
+							Cell: 310.367.4336
+						</p>
+					
+
+					
+						<a href="mailto:ckeller@groundsource.net">
+							<button class="rounded-red-button">
+								work with CHRIS
+							</button>
+						</a>
+					
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="about">
+
+			<h2>
+				ABOUT CHRIS
+			</h2>
+
+			<p>
+				Chris Keller has represented tenants and landlords in Los Angeles for over 17 years, between Madison Partners and Cushman and Wakefield, an international commercial real estate firm.<br><br>He has twice been awarded Broker of the Year in Los Angeles. Relocation, renewal/lease/sale negotiations, subleasing and expansion are among his areas of expertise. A native of Los Angeles and fifth-generation Californian, Chris’s knowledge of the local market is unparalleled.
+			</p>
+
+		</div>
+
+	</div>
+
+</div>
+
+      
+        <div
+	id="agent-2"
+	class="modal agent-modal"
+>
+	<div class="inner">
+
+		<div class="modal__close"></div>
+
+		<div class="hero">
+
+			<div class="hero__avatar">
+				<img src="/images/GS_IsaacAbginesaz_Profile.jpg" />
+			</div>
+
+			<div class="hero__text">
+
+				<div>
+
+					<h4 class="agent-name">
+						ISAAC ABGINESAZ
+					</h4>
+
+					<h6 class="agent-position">
+						
+					</h6>
+
+				</div>
+
+				<div class="agent-contact">
+
+					
+						<p>
+							<a href="mailto:isaac@groundsource.net">
+								isaac@groundsource.net
+							</a>
+						</p>
+					
+
+					
+						<p>
+							Land Line: 310.444.6102
+						</p>
+					
+
+					
+						<p>
+							Cell: 310.309.1479
+						</p>
+					
+
+					
+						<a href="mailto:isaac@groundsource.net">
+							<button class="rounded-red-button">
+								work with ISAAC
+							</button>
+						</a>
+					
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="about">
+
+			<h2>
+				ABOUT ISAAC
+			</h2>
+
+			<p>
+				Isaac Abginesaz, born and raised in Los Angeles, CA, graduated cum laude from the University of Southern California with a B.S. in Business Administration and an emphasis in Real Estate Finance. <span class="s1">He has been a licensed real estate agent since 2017</span>and has held previous experience <span class="s2">representing</span> clients in the Greater Los Angeles Area across all property types including office, multifamily and retail. <span class="s3">Isaac also </span><span class="s4">assists managing the administration side of Chris’s business, involving marketing, contract processing, listing management, due diligence &amp; client relations.</span><span class="s1"> Isaac’s main priority is ensuring each transaction is facilitated to the highest degree while providing clients with incomparable professionalism and personal service.</span>
+			</p>
+
+		</div>
+
+	</div>
+
+</div>
+
+      
+        <div
+	id="agent-3"
+	class="modal agent-modal"
+>
+	<div class="inner">
+
+		<div class="modal__close"></div>
+
+		<div class="hero">
+
+			<div class="hero__avatar">
+				<img src="/images/GS_DanielaWinter_Profile.jpg" />
+			</div>
+
+			<div class="hero__text">
+
+				<div>
+
+					<h4 class="agent-name">
+						DANIELA WINTER
+					</h4>
+
+					<h6 class="agent-position">
+						
+					</h6>
+
+				</div>
+
+				<div class="agent-contact">
+
+					
+						<p>
+							<a href="mailto:dwinter@groundsource.net">
+								dwinter@groundsource.net
+							</a>
+						</p>
+					
+
+					
+						<p>
+							Land Line: 310.444.6103
+						</p>
+					
+
+					
+
+					
+						<a href="mailto:dwinter@groundsource.net">
+							<button class="rounded-red-button">
+								work with DANIELA
+							</button>
+						</a>
+					
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="about">
+
+			<h2>
+				ABOUT DANIELA
+			</h2>
+
+			<p>
+				Daniela Winter brings over 30 years of experience in office administration in the legal, interior design, restaurant, branding and non-profit fields.<span class="Apple-converted-space"> </span>Daniela grew up in Los Angeles, attended U.C.L.A. for her undergraduate education, has lived and raised her family on the Westside and is a member of multiple community organizations.<span class="Apple-converted-space"> </span>Daniela brings <span class="s1">(</span>a<span class="s1">)</span> business awareness and attention to all aspects of client service.
+			</p>
+
+		</div>
+
+	</div>
+
+</div>
+
+      
+
+      <div class="info">
+
+        <div class="info__image">
+          <img src="/images/about/hero.jpg" />
         </div>
-      <div id="container-about">
-        <div class="main">
-          <div id="header-about">
-            <div class="about-text">
-              <div class="header-image">
-                <img class="image-left" src="images/about/hero.jpg" />
-              </div>
-              <div class="description">
-                <div class="title head-title">ABOUT <span>GROUND</span>SOURCE</div>
-                <p class="about-main-text">
-                  GROUNDSOURCE is a Los Angeles based full-service commercial real estate firm that specializes in representing tenants, landlords and investors. Experience in the L.A. marketplace lets it combine extensive insider knowledge with trusted partnerships to create unparalleled value. A boutique firm, it offers clients prestigious service with an intimate, hands-on approach.<br><br>It isn’t just about satisfied clients. It’s about repeat clients. Therefore, Groundsource spends whatever time it takes to close the deal the right way. Good business is about a connection, not a commission, which is why Groundsource is by the client’s side from fact-finding to lease execution to signing of a purchase and sale agreement. 
-                </p>
-              </div>
-            </div>
+
+        <div class="info__description">
+
+          <div class="section-header">
+            ABOUT <span>GROUND</span>SOURCE
           </div>
-          <div class="agents">
-            <div class="flexbox flex-agents">
-              
-                <div class="agent">
-                  <div class="bio-image">
-                    <img src="/images/GS_ChrisKeller_Profile-1"/>
-                    <div class="image-title"><span>CHRIS</span> KELLER</div>
-                  </div>
-                  <div class="short-bio">
-                    Chris Keller has represented tenants and landlords in Los Angeles for over 17 years, between Madison Partners and Cushman and Wakefield, an international commercial real estate firm.
-                  </div>
-                  <div class="agent-info-bottom">
-                    <div>
-                      <div class="bio-button" data-agent="1">
-                        VIEW FULL BIO
-                      </div>
-                    </div>
-                    <div class="bio-contact">
-                      
-                        <span class="black">
-                          <a
-                            href="mailto:ckeller@groundsource.net"
-                            class="text-decoration-none"
-                          >
-                            ckeller@groundsource.net
-                          </a>
-                        </span>
-                        <br />
-                      
-                      
-                        Land Line: 310.444.6100
-                        <br />
-                      
-                      
-                        Cell: 310.367.4336
-                      
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="agent">
-                  <div class="bio-image">
-                    <img src="/images/GS_IsaacAbginesaz_Profile.jpg"/>
-                    <div class="image-title"><span>ISAAC</span> ABGINESAZ</div>
-                  </div>
-                  <div class="short-bio">
-                    Isaac Abginesaz, born and raised in Los Angeles, CA, graduated cum laude from the University of Southern California with a B.S. in Business Administration and an emphasis in Real Estate Finance.
-                  </div>
-                  <div class="agent-info-bottom">
-                    <div>
-                      <div class="bio-button" data-agent="2">
-                        VIEW FULL BIO
-                      </div>
-                    </div>
-                    <div class="bio-contact">
-                      
-                        <span class="black">
-                          <a
-                            href="mailto:isaac@groundsource.net"
-                            class="text-decoration-none"
-                          >
-                            isaac@groundsource.net
-                          </a>
-                        </span>
-                        <br />
-                      
-                      
-                        Land Line: 310.444.6102
-                        <br />
-                      
-                      
-                        Cell: 310.309.1479
-                      
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="agent">
-                  <div class="bio-image">
-                    <img src="/images/GS_DanielaWinter_Profile.jpg"/>
-                    <div class="image-title"><span>DANIELA</span> WINTER</div>
-                  </div>
-                  <div class="short-bio">
-                    Daniela Winter brings over 30 years of experience in office administration in the legal, interior design, restaurant, branding and non-profit fields.
-                  </div>
-                  <div class="agent-info-bottom">
-                    <div>
-                      <div class="bio-button" data-agent="3">
-                        VIEW FULL BIO
-                      </div>
-                    </div>
-                    <div class="bio-contact">
-                      
-                        <span class="black">
-                          <a
-                            href="mailto:dwinter@groundsource.net"
-                            class="text-decoration-none"
-                          >
-                            dwinter@groundsource.net
-                          </a>
-                        </span>
-                        <br />
-                      
-                      
-                        Land Line: 310.444.6103
-                        <br />
-                      
-                      
-                    </div>
-                  </div>
-                </div>
-              
-            </div>
-          </div>
-          <div class="footer">
+
+          <p>
+            GROUNDSOURCE is a Los Angeles based full-service commercial real estate firm that specializes in representing tenants, landlords and investors. Experience in the L.A. marketplace lets it combine extensive insider knowledge with trusted partnerships to create unparalleled value. A boutique firm, it offers clients prestigious service with an intimate, hands-on approach.<br><br>It isn’t just about satisfied clients. It’s about repeat clients. Therefore, Groundsource spends whatever time it takes to close the deal the right way. Good business is about a connection, not a commission, which is why Groundsource is by the client’s side from fact-finding to lease execution to signing of a purchase and sale agreement. 
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="agents">
+        
+          <div class="agent-card">
+
+	<div
+		class="hero"
+		style="background-image: url('/images/GS_ChrisKeller_Profile-1')"
+	>
+		<div class="hero__name">
+
+			<strong>
+				CHRIS
+			</strong>
+
+			KELLER
+
+		</div>
+
+	</div>
+
+	<div class="about">
+
+		<div class="about__bio">
+			<p>
+				Chris Keller has represented tenants and landlords in Los Angeles for over 17 years, between Madison Partners and Cushman and Wakefield, an international commercial real estate firm.
+			</p>
+		</div>
+
+		<div
+			class="about__button agent-modal-link"
+			data-agent="1"
+		>
+			<div>
+				VIEW FULL BIO
+			</div>
+		</div>
+
+		<div
+			class="about__contact"
+		>
+
+			
+				<div class="black">
+					<a
+						href="mailto:ckeller@groundsource.net"
+						class="text-decoration-none"
+					>
+						ckeller@groundsource.net
+					</a>
+				</div>
+			
+
+			
+
+				Land Line: 310.444.6100
+
+				<br />
+
+			
+
+			
+				Cell: 310.367.4336
+			
+
+		</div>
+
+	</div>
+
+</div>
+
+        
+          <div class="agent-card">
+
+	<div
+		class="hero"
+		style="background-image: url('/images/GS_IsaacAbginesaz_Profile.jpg')"
+	>
+		<div class="hero__name">
+
+			<strong>
+				ISAAC
+			</strong>
+
+			ABGINESAZ
+
+		</div>
+
+	</div>
+
+	<div class="about">
+
+		<div class="about__bio">
+			<p>
+				Isaac Abginesaz, born and raised in Los Angeles, CA, graduated cum laude from the University of Southern California with a B.S. in Business Administration and an emphasis in Real Estate Finance.
+			</p>
+		</div>
+
+		<div
+			class="about__button agent-modal-link"
+			data-agent="2"
+		>
+			<div>
+				VIEW FULL BIO
+			</div>
+		</div>
+
+		<div
+			class="about__contact"
+		>
+
+			
+				<div class="black">
+					<a
+						href="mailto:isaac@groundsource.net"
+						class="text-decoration-none"
+					>
+						isaac@groundsource.net
+					</a>
+				</div>
+			
+
+			
+
+				Land Line: 310.444.6102
+
+				<br />
+
+			
+
+			
+				Cell: 310.309.1479
+			
+
+		</div>
+
+	</div>
+
+</div>
+
+        
+          <div class="agent-card">
+
+	<div
+		class="hero"
+		style="background-image: url('/images/GS_DanielaWinter_Profile.jpg')"
+	>
+		<div class="hero__name">
+
+			<strong>
+				DANIELA
+			</strong>
+
+			WINTER
+
+		</div>
+
+	</div>
+
+	<div class="about">
+
+		<div class="about__bio">
+			<p>
+				Daniela Winter brings over 30 years of experience in office administration in the legal, interior design, restaurant, branding and non-profit fields.
+			</p>
+		</div>
+
+		<div
+			class="about__button agent-modal-link"
+			data-agent="3"
+		>
+			<div>
+				VIEW FULL BIO
+			</div>
+		</div>
+
+		<div
+			class="about__contact"
+		>
+
+			
+				<div class="black">
+					<a
+						href="mailto:dwinter@groundsource.net"
+						class="text-decoration-none"
+					>
+						dwinter@groundsource.net
+					</a>
+				</div>
+			
+
+			
+
+				Land Line: 310.444.6103
+
+				<br />
+
+			
+
+			
+
+		</div>
+
+	</div>
+
+</div>
+
+        
+      </div>
+
+      <div class="footer">
   <div class="inner">
     <div class="column">
       <div class="title"><a href="/index.html?section=services">SERVICES</a></div>
@@ -282,138 +688,9 @@
   </div>
 </div>
 
-        </div>
-        
-        <div class="agent-details" id="agent-1">
-          <div class="inner content">
-            <div class="close-agent-detail"></div>
-            <div class="header">
-              <img src="/images/GS_ChrisKeller_Profile-1" class="bio-pic"/>
-              <div class="contact">
-                <img src="/images/GS_ChrisKeller_Profile-1" class="bio-pic-mobile"/>
-                <h4>CHRIS KELLER</h4>
-                <p class="no-margin position"></p>
-                <br />
-                
-                  <p class="no-margin email secondary-contact">
-                    <a href="mailto:ckeller@groundsource.net">
-                      ckeller@groundsource.net
-                    </a>
-                  </p>
-                
-                
-                  <p class="no-margin secondary-contact">
-                    Land Line: 310.444.6100
-                  </p>
-                
-                
-                  <p class="no-margin secondary-contact">
-                    Cell: 310.367.4336
-                  </p>
-                
-                
-                  <a href="mailto:ckeller@groundsource.net">
-                    <button class="rounded-red-button">
-                      work with CHRIS
-                    </buton>
-                  </a>
-                
-              </div>
-            </div>
-            <div class="bio">
-              <h2>about CHRIS</h2>
-              <p>Chris Keller has represented tenants and landlords in Los Angeles for over 17 years, between Madison Partners and Cushman and Wakefield, an international commercial real estate firm.<br><br>He has twice been awarded Broker of the Year in Los Angeles. Relocation, renewal/lease/sale negotiations, subleasing and expansion are among his areas of expertise. A native of Los Angeles and fifth-generation Californian, Chris’s knowledge of the local market is unparalleled.</p>
-            </div>
-            
-          </div>
-        </div>
-      
-        <div class="agent-details" id="agent-2">
-          <div class="inner content">
-            <div class="close-agent-detail"></div>
-            <div class="header">
-              <img src="/images/GS_IsaacAbginesaz_Profile.jpg" class="bio-pic"/>
-              <div class="contact">
-                <img src="/images/GS_IsaacAbginesaz_Profile.jpg" class="bio-pic-mobile"/>
-                <h4>ISAAC ABGINESAZ</h4>
-                <p class="no-margin position"></p>
-                <br />
-                
-                  <p class="no-margin email secondary-contact">
-                    <a href="mailto:isaac@groundsource.net">
-                      isaac@groundsource.net
-                    </a>
-                  </p>
-                
-                
-                  <p class="no-margin secondary-contact">
-                    Land Line: 310.444.6102
-                  </p>
-                
-                
-                  <p class="no-margin secondary-contact">
-                    Cell: 310.309.1479
-                  </p>
-                
-                
-                  <a href="mailto:isaac@groundsource.net">
-                    <button class="rounded-red-button">
-                      work with ISAAC
-                    </buton>
-                  </a>
-                
-              </div>
-            </div>
-            <div class="bio">
-              <h2>about ISAAC</h2>
-              <p>Isaac Abginesaz, born and raised in Los Angeles, CA, graduated cum laude from the University of Southern California with a B.S. in Business Administration and an emphasis in Real Estate Finance. <span class="s1">He has been a licensed real estate agent since 2017</span>and has held previous experience <span class="s2">representing</span> clients in the Greater Los Angeles Area across all property types including office, multifamily and retail. <span class="s3">Isaac also </span><span class="s4">assists managing the administration side of Chris’s business, involving marketing, contract processing, listing management, due diligence &amp; client relations.</span><span class="s1"> Isaac’s main priority is ensuring each transaction is facilitated to the highest degree while providing clients with incomparable professionalism and personal service.</span></p>
-            </div>
-            
-          </div>
-        </div>
-      
-        <div class="agent-details" id="agent-3">
-          <div class="inner content">
-            <div class="close-agent-detail"></div>
-            <div class="header">
-              <img src="/images/GS_DanielaWinter_Profile.jpg" class="bio-pic"/>
-              <div class="contact">
-                <img src="/images/GS_DanielaWinter_Profile.jpg" class="bio-pic-mobile"/>
-                <h4>DANIELA WINTER</h4>
-                <p class="no-margin position"></p>
-                <br />
-                
-                  <p class="no-margin email secondary-contact">
-                    <a href="mailto:dwinter@groundsource.net">
-                      dwinter@groundsource.net
-                    </a>
-                  </p>
-                
-                
-                  <p class="no-margin secondary-contact">
-                    Land Line: 310.444.6103
-                  </p>
-                
-                
-                
-                  <a href="mailto:dwinter@groundsource.net">
-                    <button class="rounded-red-button">
-                      work with DANIELA
-                    </buton>
-                  </a>
-                
-              </div>
-            </div>
-            <div class="bio">
-              <h2>about DANIELA</h2>
-              <p>Daniela Winter brings over 30 years of experience in office administration in the legal, interior design, restaurant, branding and non-profit fields.<span class="Apple-converted-space"> </span>Daniela grew up in Los Angeles, attended U.C.L.A. for her undergraduate education, has lived and raised her family on the Westside and is a member of multiple community organizations.<span class="Apple-converted-space"> </span>Daniela brings <span class="s1">(</span>a<span class="s1">)</span> business awareness and attention to all aspects of client service.</p>
-            </div>
-            
-          </div>
-        </div>
-      
-      </div>
+
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -426,13 +703,11 @@
   <script type="text/javascript">
     $(document).ready(function() {
       var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
-
       if (sectionQuery === "team") {
         window.setTimeout(function() {
           window.scrollTo(0, $('.agents').offset().top);
         }, 500)
       }
-
       if (compatibleBrowser()) {
         window.sr = ScrollReveal();
         sr.reveal(".header-image");
@@ -441,14 +716,10 @@
         sr.reveal(".agents");
       }
 
-      $(".short-bio").each(function() {
-        var cutoff = 200
-        var text = $(this).text();
-        if (text.length > cutoff) {
-          var shortenedText = $(this).text().slice(0,cutoff);
-          shortenedText += " ..."
-          $(this).text(shortenedText);
-        }
+      $('.agent-modal-link').click(function () {
+        var agent = $(this).data('agent');
+        $("#agent-" + agent).fadeIn();
+        $('body').addClass('overflow-hidden');
       });
     })
   </script>
