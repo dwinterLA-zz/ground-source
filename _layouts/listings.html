@@ -166,7 +166,9 @@
 
                 <div
                   class="header"
-                  {% if listing.property-preview-image %} style="background-image:url({{listing.property-preview-image}})" {% endif %}
+                  {% if listing.property-preview-image != blank %}
+                    style="background-image:url({{listing.property-preview-image}})"
+                  {% endif %}
                 >
                   <div class="address">
 

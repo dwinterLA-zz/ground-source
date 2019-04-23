@@ -1,4 +1,4 @@
-
+<!-- The page specially formatted for email -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
@@ -17,177 +17,534 @@
     </style>
   </head>
 
-  <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="color: black; font-size: 16px; font-family: Helvetica, Arial; background-color:white;">
-    <table border="0" cellpadding="0" cellspacing="0" width="900px" height="100%" align="center" class="container-table">
+  <body
+    leftmargin="0"
+    marginwidth="0"
+    topmargin="0"
+    marginheight="0"
+    offset="0"
+    style="color: black; font-size: 16px; font-family: Helvetica, Arial; background-color:white;"
+  >
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="900px"
+      height="100%"
+      align="center"
+      class="container-table"
+    >
+
       <tr>
         <td>
-          <table border="0" cellpadding="0" cellspacing="0" width="900px" align="center">
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="900px"
+            align="center"
+          >
+
             <tr>
-              <td width="50" height="54"></td>
-              <td width="362" height="54"><img src="/images/newsletter/img/gs-newsletter-s1.jpg" width="362" height="54" alt="Groundsource Logo" /></td>
-              <td width="438" class="newsletter-phone bodyContent" valign="top" height="54">
-                <img src="/images/newsletter/img/gs-newsletter-s2.jpg" class="phone-icon" width="31" height="31" alt="Phone Icon" />
+
+              <td
+                width="50"
+                height="54"
+              ></td>
+
+              <td
+                width="362"
+                height="54"
+              >
+                <img
+                  src="/images/newsletter/img/gs-newsletter-s1.jpg"
+                  width="362"
+                  height="54"
+                  alt="Groundsource Logo"
+                />
+              </td>
+
+              <td
+                width="438"
+                height="54"
+                class="newsletter-phone"
+                valign="top"
+              >
+
+                <img
+                  src="/images/newsletter/img/gs-newsletter-s2.jpg"
+                  width="31"
+                  height="31"
+                  class="phone-icon"
+                  alt="Phone Icon"
+                 />
+
                 {{site.data.contact.phone}}
+
               </td>
-              <td width="50px" height="54">&nbsp;</td>
+
+              <td
+                width="50px"
+                height="54"
+              >
+                &nbsp;
+              </td>
+
             </tr>
+
             <tr>
-              <td valign="top" class="headerContent" colspan="5">
+              <td
+                valign="top"
+                colspan="5"
+                class="headerContent"
+              >
+
                 {% if page.lease %}
-                <div class="listing-label-newsletter lease-label">FOR LEASE</div>
+                <div class="listing-label-newsletter lease-label">
+                  FOR LEASE
+                </div>
                 {% endif %}
+
                 {% if page.sublease %}
-                <div class="listing-label-newsletter lease-label">FOR SUBLEASE</div>
+                <div class="listing-label-newsletter lease-label">
+                  FOR SUBLEASE
+                </div>
                 {% endif %}
+
                 {% if page.sale %}
-                <div class="listing-label-newsletter rent-label">FOR SALE</div>
+                <div class="listing-label-newsletter rent-label">
+                  FOR SALE
+                </div>
                 {% endif %}
-                <img src="{{page.property-header}}" class="newsletter-property-header-image" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
+
+                <img
+                  src="{{page.property-header}}"
+                  class="newsletter-property-header-image"
+                  mc:label="header_image"
+                  mc:edit="header_image"
+                  mc:allowdesigner mc:allowtext
+                 />
+
               </td>
             </tr>
+
           </table>
         </td>
       </tr>
+
       <tr>
-        <td align="center" valign="top">
-          <table border="0" cellpadding="0" cellspacing="0" width="900px" class="table table__caption">
+        <td
+          align="center"
+          valign="top"
+        >
+          <table
+            width="900px"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            class="table table__caption"
+          >
+
             <tr>
               <td width="50px"></td>
-              <td width="800px" valign="top">
-              <a href="{{site.data.contact.url}}/listings/{{page.title}}/listing.html">
-                <div class="details-button">View Details</div>
-              </a>
-              <span class="address-newsletter newsletter-address"><a>{{page.address-line-1}}</a></span>
-              <span class="address_city newsletter-address"><a><b>{{page.address-line-2}}</b></a></span>
-                <div class="newsletter-info-text">{{page.info-text}}</div>
+
+              <td
+                width="800px"
+                valign="top"
+              >
+
+                <a href="{{site.data.contact.url}}/listings/{{page.title}}/listing.html">
+                  <div class="details-button">
+                    View Details
+                  </div>
+                </a>
+
+                <span class="address-newsletter newsletter-address">
+                  <a>
+                    {{page.address-line-1}}
+                  </a>
+                </span>
+
+                <span class="address_city newsletter-address">
+                  <a>
+                    <b>{{page.address-line-2}}</b>
+                  </a>
+                </span>
+
+                <div class="newsletter-info-text">
+                  {{page.info-text}}
+                </div>
+
               </td>
+
               <td width="50px"></td>
+
             </tr>
+
             <tr>
               <td width="50px"></td>
+
               <td width="800px">
+
                 {% if page.gallery-images[0] %}
                 <span class="column_image2">
-                  <img src="{{ page.gallery-images[0] }}" width="398" height="300" class="2column_image" />
+                  <img
+                    src="{{ page.gallery-images[0] }}"
+                    width="398"
+                    height="300"
+                    class="2column_image"
+                  />
                 </span>
                 {% endif %}
+
                 {% if page.gallery-images[1] %}
-                <img src="{{ page.gallery-images[1] }}" width="398" height="300" />
+                <img
+                  src="{{ page.gallery-images[1] }}"
+                  width="398"
+                  height="300"
+                 />
                 {% endif %}
+
               </td>
+
               <td width="50px"></td>
+
             </tr>
+
           </table>
         </td>
       </tr>
+
       <tr>
-        <td align="center" valign="top">
-          <table class="table amenities__table" border="0" cellpadding="0" cellspacing="0" width="900px">
+        <td
+          align="center"
+          valign="top"
+        >
+          <table
+            class="table amenities__table"
+            width="900px"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+          >
+
             <tr>
+
               <td width="50px"></td>
-              <td width="400px" valign="top" class="bodyContent border-right border-bottom">
-                <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-1.png" width="45" height="45" alt="Rate" />
-                <span class="amenities__text"><span class="strong">{{page.rate}}</span></span>
-              </td>
-              <td width="400px" valign="top" class="bodyContent border-bottom">
-                <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-2.png" width="45" height="45" alt="Rate" />
-                <span class="amenities__text"><span class="strong">{{page.sq-footage}}</span> Square Feet</span>
-              </td>
-              <td width="50px"></td>
-            </tr>
-            <tr>
-              <td width="50px"></td>
-              <td width="400px" valign="top" class="bodyContent border-right">
-                <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-3.png" width="45" height="45" alt="Rate" />
+
+              <td
+                width="400px"
+                valign="top"
+                class="border-right border-bottom"
+              >
+
+                <img
+                  src="/images/newsletter/img/gs-newsletter-icon-1.png"
+                  class="amenities__icon"
+                  width="45"
+                  height="45"
+                  alt="Rate"
+                />
+
                 <span class="amenities__text">
+                  <span class="strong">
+                    {{page.rate}}
+                  </span>
+                </span>
+
+              </td>
+
+              <td
+                width="400px"
+                valign="top"
+                class="border-bottom"
+              >
+
+                <img
+                  src="/images/newsletter/img/gs-newsletter-icon-2.png"
+                  width="45"
+                  height="45"
+                  class="amenities__icon"
+                  alt="Rate"
+                />
+
+                <span class="amenities__text">
+
+                  <span class="strong">
+                    {{page.sq-footage}}
+                  </span>
+
+                  Square Feet
+
+                </span>
+
+              </td>
+
+              <td width="50px"></td>
+
+            </tr>
+
+            <tr>
+
+              <td width="50px"></td>
+
+              <td
+                width="400px"
+                valign="top"
+                class="border-right"
+              >
+
+                <img
+                  src="/images/newsletter/img/gs-newsletter-icon-3.png"
+                  width="45"
+                  height="45"
+                  class="amenities__icon"
+                  alt="Rate"
+                />
+
+                <span class="amenities__text">
+
                   {% if site.time < page.available %}
-                    <div><span class="strong">Available:</span><span> {{ page.available | date: "%m/%d/%Y" }}</div>
+                    <div>
+
+                      <span class="strong">
+                        Available:
+                      </span>
+
+                      <span>
+                        {{ page.available | date: "%m/%d/%Y" }}
+                      </span>
+
+                    </div>
                   {% else %}
-                    <div><span class="strong">Available:</span><span> Immediately</div>
+
+                    <div>
+                      <span class="strong">
+                        Available:
+                      </span>
+
+                      <span>
+                        Immediately
+                      </span>
+
+                    </div>
                   {% endif %}
-                  <!-- dont try to display terms if it's just an empty string -->
-                  {% if page.terms == '' %}
-                  {% elsif page.terms %}
-                    <div><span class="strong">Term:</span><span id="available-date" data-date="{{ page.date }}"> {{ page.terms}}</div>
+
+                  {% if page.terms != blank %}
+                    <div>
+
+                      <span class="strong">
+                        Term:
+                      </span>
+
+                      <span
+                        id="available-date"
+                        data-date="{{ page.date }}"
+                      >
+                        {{ page.terms}}
+                      </span>
+
+                    </div>
                   {% endif %}
                 </span>
               </td>
-              <td width="400px" valign="top" class="bodyContent">
-                <img class="amenities__icon" src="/images/newsletter/img/gs-newsletter-icon-4.png" width="45" height="45" alt="Rate" />
-                <span class="amenities__text"><strong><span class="strong">{{page.parking}}</span>
-                </td>
-                <td width="50px"></td>
-              </tr>
+
+              <td
+                width="400px"
+                valign="top"
+              >
+                <img
+                  src="/images/newsletter/img/gs-newsletter-icon-4.png"
+                  width="45"
+                  height="45"
+                  class="amenities__icon"
+                  alt="Rate"
+                />
+                <span class="amenities__text">
+                  <strong>{{page.parking}}</strong>
+                </span>
+              </td>
+
+              <td width="50px"></td>
+
+            </tr>
+
           </table>
         </td>
       </tr>
+
       <tr>
         <td>
-          <table border="0" cellpadding="0" cellspacing="0" width="900px" class="table highlights__table">
+          <table
+            class="table highlights__table"
+            width="900px"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+          >
+
             <tr>
+
               <td width="75px"></td>
-              <td style="vertical-align: top" width="365px" class="padding-bottom">
-                <span class="list-header">HIGHLIGHTS</span>
+
+              <td
+                style="vertical-align: top"
+                width="365px"
+                class="padding-bottom"
+              >
+                <span class="list-header">
+                  HIGHLIGHTS
+                </span>
+
                 <ul class="newsletter-highlights">
                   {% for highlight in page.highlights %}
-                  <li>{{ highlight }}</li>
+                    <li>
+                      {{ highlight }}
+                    </li>
                   {% endfor %}
                 </ul>
+
               </td>
+
               <td width="20px"></td>
-              <td style="vertical-align: top" width="365px">
-                <span class="list-header">AMENITIES</span>
+
+              <td
+                style="vertical-align: top"
+                width="365px"
+              >
+
+                <span class="list-header">
+                  AMENITIES
+                </span>
+
                 <ul class="newsletter-highlights">
                   {% for amenity in page.amenities %}
-                  <li>{{ amenity }}</li>
+                    <li>
+                      {{ amenity }}
+                    </li>
                   {% endfor %}
                 </ul>
+
               </td>
+
               <td width="75px"></td>
+
             </tr>
+
             {% if page.availabilities.size > 0 %}
               <tr>
+
                 <td width="75px"></td>
-                <td style="vertical-align: top" width="365px">
-                  <span class="list-header">AVAILABILITIES</span>
+
+                <td
+                  style="vertical-align: top"
+                  width="365px"
+                >
+                  <span class="list-header">
+                    AVAILABILITIES
+                  </span>
+
                   <ul class="newsletter-highlights">
                     {% for unit in page.availabilities %}
-                    <li>{{ unit }}</li>
+                      <li>
+                        {{ unit }}
+                      </li>
                     {% endfor %}
                   </ul>
+
                 </td>
+
               </tr>
             {% endif %}
+
           </table>
         </td>
       </tr>
+
       <tr>
-        <td align="center" valign="top">
-          <table border="0" cellpadding="0" cellspacing="0" width="900px" class="table table__map">
+        <td
+          align="center"
+          valign="top"
+        >
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="900px"
+            class="table table__map"
+          >
             <tr>
+
               <td width="50px"></td>
+
               <td width="800px">
-                <img class="static-g-map" src="https://maps.googleapis.com/maps/api/staticmap?center={{page.latitude}}+{{page.longitude}}&zoom=13&scale=2&size=640x300&maptype=roadmap&format=png&visual_refresh=true&key={{site.data.contact.staticGMap}}" />
+                <img
+                  src="https://maps.googleapis.com/maps/api/staticmap?center={{page.latitude}}+{{page.longitude}}&zoom=13&scale=2&size=640x300&maptype=roadmap&format=png&visual_refresh=true&key={{site.data.contact.staticGMap}}"
+                  class="static-g-map"
+                />
               </td>
+
               <td width="50px"></td>
+
             </tr>
           </table>
         </td>
       </tr>
+
       <tr>
         <td align="center" valign="top">
-          <table border="0" cellspacing="0" width="900px" class="table table__footer">
+          <table
+            border="0"
+            cellspacing="0"
+            width="900px"
+            class="table table__footer"
+          >
+
             <tr>
-              <td class="newsletter-footer-header" align="center" valign="top"><a class="email-link" href="{{site.contact.url}}/index.html#contact">CONTACT US</a></td>
+              <td
+                class="newsletter-footer-header"
+                align="center"
+                valign="top"
+              >
+                <a
+                  href="{{site.contact.url}}/index.html#contact"
+                  class="email-link"
+                >
+                  CONTACT US
+                </a>
+              </td>
             </tr>
+
             <tr>
-              <td class="newsletter-footer-bottom" align="center">
-                <a class="email-link">{{site.data.contact.address}}</a> | <a class="newsletter-home-link email-link" href="{{site.data.contact.url}}">GROUNDSOURCE.NET</a>
-                <div style="margin-top: 4px;">Chris Keller: {{site.data.contact.phone}}</div>
+              <td
+                class="newsletter-footer-bottom"
+                align="center"
+              >
+
+                <a class="email-link">
+                  {{site.data.contact.address}}
+                </a>
+
+                |
+
+                <a
+                  href="{{site.data.contact.url}}"
+                  class="newsletter-home-link email-link"
+                >
+                  GROUNDSOURCE.NET
+                </a>
+
+                <div style="margin-top: 4px;">
+                  Chris Keller: {{site.data.contact.phone}}
+                </div>
+
+              </td>
             </tr>
+
           </table>
         </td>
       </tr>
+
     </table>
   </body>
 </html>
