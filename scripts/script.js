@@ -10,7 +10,16 @@ $(document).ready(function () {
     // show labels on ie9 because it doesnt support placeholder text
     $('.contact-labels').show();
   }
-  authenticate();
+
+  $('.main').show();
+  $('.services-carousel').slick({
+    "autoplay": false,
+    "draggable": false,
+    "dots": true,
+    "prevArrow": false,
+    "nextArrow": false
+  });
+
   paginate($('#properties').children());
 
   $('.logo-upper-left').click(function () {
@@ -190,66 +199,6 @@ function addScrollListener() {
     var top = $(".header").offset().top;
 
     $('html, body').animate({ scrollTop: top }, 250);
-  });
-}
-
-function authenticate() {
-  $("#dialog").hide();
-  displaySite();
-  // $("#dialog").css("opacity", 1);
-  // var storeCredentials = localStorage.getItem("credentials")
-
-  // if (checkCredentials(storeCredentials)) {
-  //   $("#dialog").hide();
-  //   displaySite();
-  // } else {
-  //   login();
-  //   return;
-  // }
-}
-
-function checkCredentials(credentials) {
-  return PASSWORDS.indexOf(credentials) >= 0;
-}
-
-function displaySite() {
-  $('.main').show();
-  $('.services-carousel').slick({
-    "autoplay": false,
-    "draggable": false,
-    "dots": true,
-    "prevArrow": false,
-    "nextArrow": false
-  });
-}
-
-function login() {
-  $("#dialog").keypress(function (e) {
-    if (e.keyCode === 13) {
-      $("#dialog").dialog("close");
-    }
-  });
-  $("#dialog").dialog({
-    buttons: [{
-      text: "Submit",
-      type: "submit",
-      click: function click() {
-        $(this).dialog("close");
-      }
-    }],
-    close: function close(event, ui) {
-      var credentials = $("#user").val() + "+" + $("#password").val();
-
-      if (checkCredentials(credentials)) {
-        localStorage.setItem("credentials", credentials);
-        $("#dialog").hide();
-        displaySite();
-        return;
-      } else {
-        alert("Invalid Credentials");
-        login();
-      }
-    }
   });
 }
 
