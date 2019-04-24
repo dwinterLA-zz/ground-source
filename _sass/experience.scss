@@ -6,15 +6,13 @@
   }
 
   .hero__top {
-    $hero-margin-top: 80px;
-
     @include bg-cover-center;
     text-align: center;
     min-height: 60vh;
     flex-grow: 1;
     background-image: url("../images/experience/bg.jpg");
     width: 100%;
-    padding-top: $hero-margin-top;
+    padding-top: $pt-site-header;
     height: 100%;
     display: flex;
     align-items: center;
