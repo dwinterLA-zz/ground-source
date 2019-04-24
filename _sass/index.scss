@@ -321,11 +321,11 @@ a {
     white-space: nowrap;
     margin: 30px 30px 0 0;
     > li {
-      @include expanding-hover(white);
       display: inline-block;
       font-size: 1.2em;
       padding: 8px;
       > a {
+        @include expanding-hover(white);
         position: relative;
         color: white;
         text-decoration: none;
@@ -550,8 +550,8 @@ a {
     text-align: center;
     margin: 0;
     li {
-      @include expanding-hover($primary-color);
       > a {
+        @include expanding-hover;
         line-height: 2;
         font-size: 1.125em;
         text-decoration: none;

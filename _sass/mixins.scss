@@ -90,13 +90,14 @@
   }
 }
 
-@mixin expanding-hover($color) {
-  > a:before {
+@mixin expanding-hover($color: $primary-color) {
+  position: relative;
+  &:before {
     content: "";
     position: absolute;
     width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     background-color: $color;
     visibility: hidden;
@@ -105,10 +106,12 @@
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
   }
-  > a:hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
+  &:hover {
+    &:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
   }
 }
 
