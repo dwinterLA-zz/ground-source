@@ -9,8 +9,6 @@
   </head>
   <body>
 
-    {% include login.html %}
-
     <div class="print">
 
       <div class="header">
@@ -207,209 +205,207 @@
 
       {% include nav-modal.html active-section="listings" %}
 
-      <div class="main">
-        <!-- TODO: move this container to above the print section -->
-        <div id="container-listing">
+      <!-- TODO: move this container to above the print section -->
+      <div id="container-listing">
 
-          {% if page.property-header %}
-            <div id="header-listings" class="background-header" style="background-image:url({{page.property-header}})"></div>
-          {% else %}
+        {% if page.property-header %}
+          <div id="header-listings" class="background-header" style="background-image:url({{page.property-header}})"></div>
+        {% else %}
 
-            <div id="header-listings" class="background-header"></div>
-          {% endif %}
+          <div id="header-listings" class="background-header"></div>
+        {% endif %}
 
-          <div class="listings-content">
-            <div class="header-text-listings">
-              <div>
-                {{ page.location }}
-              </div>
+        <div class="listings-content">
+          <div class="header-text-listings">
+            <div>
+              {{ page.location }}
             </div>
-            <div class="container">
+          </div>
+          <div class="container">
 
-              <div class="listings-sidebar">
+            <div class="listings-sidebar">
 
-                <div class="menu-top">
-                  <div class="buttons">
+              <div class="menu-top">
+                <div class="buttons">
 
-                    <a class="cool-button contact-us-link">
-                      CHECK AVAILABILITY
-                    </a>
+                  <a class="cool-button contact-us-link">
+                    CHECK AVAILABILITY
+                  </a>
 
-                    <a
-                      href="#"
-                      id="print-brochure"
-                      class="cool-button"
-                    >
-                      PRINT BROCHURE
-                    </a>
+                  <a
+                    href="#"
+                    id="print-brochure"
+                    class="cool-button"
+                  >
+                    PRINT BROCHURE
+                  </a>
 
-                  </div>
+                </div>
+              </div>
+
+              <div class="menu">
+
+                <h2 class="menu__header">
+                  <strong>
+                    ADDRESS
+                  </strong>
+                </h2>
+
+                <div class="menu__section">
+
+                  {{page.address-line-1}}
+
+                  <br />
+
+                  {{page.address-line-2}}
+
                 </div>
 
-                <div class="menu">
+                {% if page.availabilities.size > 0 %}
 
                   <h2 class="menu__header">
                     <strong>
-                      ADDRESS
+                      AVAILABILITIES
                     </strong>
                   </h2>
 
                   <div class="menu__section">
+                    <ul class="menu__list">
+                      {% for unit in page.availabilities %}
 
-                    {{page.address-line-1}}
+                        <li  class="menu__item">
+                          {{ unit }}
+                        </li>
 
-                    <br />
-
-                    {{page.address-line-2}}
-
-                  </div>
-
-                  {% if page.availabilities.size > 0 %}
-
-                    <h2 class="menu__header">
-                      <strong>
-                        AVAILABILITIES
-                      </strong>
-                    </h2>
-
-                    <div class="menu__section">
-                      <ul class="menu__list">
-                        {% for unit in page.availabilities %}
-
-                          <li  class="menu__item">
-                            {{ unit }}
-                          </li>
-
-                        {% endfor %}
-                      </ul>
-                    </div>
-
-                  {% endif %}
-
-                  {% if page.highlights.size > 0 %}
-
-                    <h2 class="menu__header">
-                      <strong>
-                        HIGHLIGHTS
-                      </strong>
-                    </h2>
-
-                    <div class="menu__section">
-                      <ul class="menu__list">
-                        {% for unit in page.highlights %}
-
-                          <li class="menu__item">
-                            {{ unit }}
-                          </li>
-
-                        {% endfor %}
-                      </ul>
-                    </div>
-
-                  {% endif %}
-
-                  {% if page.amenities.size > 0 %}
-
-                    <h2 class="menu__header">
-                      <strong>
-                        AMENITIES
-                      </strong>
-                    </h2>
-
-                    <div class="menu__section">
-                      <ul class="menu__list">
-                        {% for unit in page.amenities %}
-
-                          <li class="menu__item">
-                            {{ unit }}
-                          </li>
-
-                        {% endfor %}
-                      </ul>
-                    </div>
-
-                  {% endif %}
-
-                </div>
-
-              </div>
-
-              <div class="listings-info">
-
-                <div class="info-box">
-
-                  <div class="info-text">
-
-                    <h2 class="title">
-                      {{ page.info-title }}
-                    </h2>
-
-                    <p>
-                      {{ page.info-text }}
-                    </p>
-
-                  </div>
-
-                  <div class="listing-image-gallery">
-
-                    <div class="listing-carousel">
-                      {% for img-src in page.gallery-images %}
-                        <div class="listing-image-slide">
-                          <div
-                            style="background-image: url('{{ img-src }}')"
-                            class="listing-image"
-                          ></div>
-                        </div>
                       {% endfor %}
-                    </div>
-
-                    {% if page.gallery-images[1] %}
-                      <div class="gallery-arrow-container">
-
-                        <div class="gallery-arrow-left gallery-navigation"></div>
-
-                        <div class="gallery-arrow-right gallery-navigation"></div>
-
-                      </div>
-                    {% endif %}
-
+                    </ul>
                   </div>
 
-                </div>
-
-                {% if (page.latitude and page.longitude) or page.floorplans.size > 0 %}
-                  <div class="info-box">
-                    {% if page.latitude and page.longitude %}
-
-                      <h2 class="title">
-                        LOCATION
-                      </h2>
-
-                      <div id="about-google-map"></div>
-
-                    {% endif %}
-
-                    {% if page.floorplans.size > 0 %}
-
-                      <h2 class="title">
-                        FLOORPLAN{% if page.floorplans.size > 1 %}S{% endif %}
-                      </h2>
-
-                      {% for floorplan in page.floorplans %}
-                        <div class="floorplan">
-                          <img
-                            src="{{ floorplan }}"
-                            class="img-responsive"
-                           />
-                        </div>
-                      {% endfor %}
-
-                    {% endif %}
-                  </div>
                 {% endif %}
+
+                {% if page.highlights.size > 0 %}
+
+                  <h2 class="menu__header">
+                    <strong>
+                      HIGHLIGHTS
+                    </strong>
+                  </h2>
+
+                  <div class="menu__section">
+                    <ul class="menu__list">
+                      {% for unit in page.highlights %}
+
+                        <li class="menu__item">
+                          {{ unit }}
+                        </li>
+
+                      {% endfor %}
+                    </ul>
+                  </div>
+
+                {% endif %}
+
+                {% if page.amenities.size > 0 %}
+
+                  <h2 class="menu__header">
+                    <strong>
+                      AMENITIES
+                    </strong>
+                  </h2>
+
+                  <div class="menu__section">
+                    <ul class="menu__list">
+                      {% for unit in page.amenities %}
+
+                        <li class="menu__item">
+                          {{ unit }}
+                        </li>
+
+                      {% endfor %}
+                    </ul>
+                  </div>
+
+                {% endif %}
+
               </div>
 
             </div>
+
+            <div class="listings-info">
+
+              <div class="info-box">
+
+                <div class="info-text">
+
+                  <h2 class="title">
+                    {{ page.info-title }}
+                  </h2>
+
+                  <p>
+                    {{ page.info-text }}
+                  </p>
+
+                </div>
+
+                <div class="listing-image-gallery">
+
+                  <div class="listing-carousel">
+                    {% for img-src in page.gallery-images %}
+                      <div class="listing-image-slide">
+                        <div
+                          style="background-image: url('{{ img-src }}')"
+                          class="listing-image"
+                        ></div>
+                      </div>
+                    {% endfor %}
+                  </div>
+
+                  {% if page.gallery-images[1] %}
+                    <div class="gallery-arrow-container">
+
+                      <div class="gallery-arrow-left gallery-navigation"></div>
+
+                      <div class="gallery-arrow-right gallery-navigation"></div>
+
+                    </div>
+                  {% endif %}
+
+                </div>
+
+              </div>
+
+              {% if (page.latitude and page.longitude) or page.floorplans.size > 0 %}
+                <div class="info-box">
+                  {% if page.latitude and page.longitude %}
+
+                    <h2 class="title">
+                      LOCATION
+                    </h2>
+
+                    <div id="about-google-map"></div>
+
+                  {% endif %}
+
+                  {% if page.floorplans.size > 0 %}
+
+                    <h2 class="title">
+                      FLOORPLAN{% if page.floorplans.size > 1 %}S{% endif %}
+                    </h2>
+
+                    {% for floorplan in page.floorplans %}
+                      <div class="floorplan">
+                        <img
+                          src="{{ floorplan }}"
+                          class="img-responsive"
+                          />
+                      </div>
+                    {% endfor %}
+
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+
           </div>
         </div>
       </div>

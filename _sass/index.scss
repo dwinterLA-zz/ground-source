@@ -19,10 +19,6 @@ body {
   display: none;
 }
 
-#dialog {
-  opacity: 0;
-}
-
 .services-home-button {
   cursor: pointer;
 }
@@ -49,11 +45,6 @@ form.login {
 
 .ui-dialog {
   width: 450px;
-}
-
-.main {
-  display: none;
-  overflow-x: hidden;
 }
 
 .modal-open {
