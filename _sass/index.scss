@@ -900,69 +900,6 @@ a {
   padding: 1.5em 0;
 }
 
-.footer {
-  .inner {
-    max-width: $page-max-width;
-    margin: 0 auto;
-    padding-left: $left-align-home;
-  }
-  position: relative;
-  width: 100%;
-  min-height: 170px;
-  background: $primary-color;
-  color: white;
-  & > * {
-    line-height: 2.2;
-  }
-  .column {
-    font-size: 1.2em;
-    display: inline-block;
-    vertical-align: top;
-    margin: 1% 5% 0 0;
-    .title {
-      font-weight: bold;
-      > a {
-        text-decoration: none;
-        color: white;
-        display: block;
-        font-size: 100%;
-        opacity: 1;
-        font-weight: bold;
-      }
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      font-size: 85%;
-      img {
-        color: white;
-        width: 1em;
-      }
-    }
-    &.copyright {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      padding: 15px 0;
-      opacity: 0.7;
-      font-size: 0.7em;
-    }
-    &.social {
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-size: 1.5em;
-      text-align: right;
-      line-height: 1;
-      a {
-        padding: 0.5em;
-        padding-right: 0;
-      }
-    }
-  }
-}
-
 .icon-small {
   width: 38px;
   margin-right: 8px;
@@ -1358,57 +1295,6 @@ a {
       }
       .contact-body {
         padding: 0 0 0 20px;
-      }
-    }
-  }
-  .footer {
-    background: $primary-color;
-    padding: 0;
-    padding: $left-align-home-mobile 0 0 $left-align-home-mobile;
-    color: white;
-    min-height: 290px;
-    .inner {
-      margin-left: 0;
-      padding-left: 0;
-    }
-    & > * {
-      line-height: 2.2;
-    }
-    .column {
-      display: inline-block;
-      width: 43%;
-      margin-right: 6%;
-      margin-bottom: 10px;
-      .title {
-        font-weight: bold;
-      }
-      margin-left: 0%;
-      opacity: 0.9;
-      &.copyright {
-        margin-top: 10%;
-        margin-bottom: 0;
-        width: 100%;
-      }
-      &.social {
-        margin: 25px 0 0 -9px;
-        display: block;
-        right: auto;
-        bottom: 60px;
-        top: auto;
-        left: 25px;
-        > a {
-          float: left;
-          padding-right: 12px;
-        }
-      }
-      a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        img {
-          color: white;
-          width: 1em;
-        }
       }
     }
   }
