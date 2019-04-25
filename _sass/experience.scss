@@ -1,39 +1,41 @@
 #container-experience {
-  .state {
-    display: none;
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
-  .hero {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    @include mobile {
-      display: block;
-      height: auto;
-    }
-  }
-  .hero__top {
-    position: relative;
-    height: 60vh;
+  .info {
+    @include bg-cover-center;
+    text-align: center;
+    min-height: 60vh;
     flex-grow: 1;
     background-image: url("../images/experience/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 0;
-    height: 60vh;
-    @media screen and (max-height: 1000px) {
-      flex-basis: 100vh;
-      height: 100vh;
-    }
-    @include small-desktop {
-      flex-basis: 100vh;
-      height: 100vh;
+    width: 100%;
+    padding-top: $pt-site-header;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .info__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    padding: 0 15px;
+    margin: 0 auto;
+    > * {
+      margin-bottom: 60px;
     }
   }
-  .hero__bottom {
+
+  .slideshow {
     position: relative;
-    @include mobile {
-      padding: 0 30px 42px 30px;
+    overflow: hidden;
+    .state {
+      @include mobile {
+        padding: 0 20px 42px 20px;
+      }
     }
   }
 
@@ -49,7 +51,32 @@
     }
   }
 
+  .title {
+    @include expanding-hover($primary-color);
+    text-decoration: none;
+    color: white;
+    font-size: 2.4em;
+    font-weight: 600;
+  }
+  .link {
+    @include expanding-hover($primary-color);
+    display: inline-block;
+    color: $primary-color;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    margin: 15px;
+    &.active {
+      color: white;
+    }
+  }
+  .description {
+    color: white;
+    font-size: 1.1em;
+    opacity: 0.9;
+  }
   .contact-us-button {
+    color: white;
     border-radius: 500px;
     font-size: 1.3em;
     font-weight: 600;
@@ -58,88 +85,5 @@
     margin-top: 5px;
     padding: 6px 20px;
     outline: none;
-  }
-
-  .services__hero {
-    padding-bottom: 80px;
-    height: 100%;
-    > div {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      max-width: 100%;
-      width: $page-max-width;
-      color: white;
-      text-align: center;
-      margin: 0 auto;
-      > h4 {
-        font-size: 1.7em;
-      }
-    }
-  }
-
-  .services__description {
-    max-width: 46vw;
-    margin: 0 auto;
-    font-size: 1.1em;
-    opacity: 0.9;
-    padding: 40px 0;
-    @include small-desktop {
-      max-width: 70vw;
-    }
-    @include mobile {
-      max-width: 80vw;
-    }
-  }
-
-  .link__outer {
-    @include expanding-hover($primary-color);
-    display: inline-block;
-    @include small-desktop {
-      display: block;
-    }
-  }
-
-  .state__link {
-    display: inline-block;
-    position: relative;
-    color: $primary-color;
-    font-size: 1.4em;
-    letter-spacing: 2px;
-    text-decoration: none;
-    margin: 12px 32px;
-    padding-bottom: 3px;
-    &.active {
-      color: white;
-    }
-  }
-
-  .state__link--header {
-    color: white;
-    font-size: 2.4em;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-  }
-
-  .hero__container {
-    width: 100%;
-    height: 100%;
-    margin-top: 88px;
-    position: relative;
-  }
-
-  .hero__spacer {
-    position: absolute;
-    padding-bottom: 800px;
-  }
-
-  @media screen and (max-width: 1000px) {
-    .services__hero {
-      > p {
-        font-size: 1.3em;
-      }
-    }
   }
 }
