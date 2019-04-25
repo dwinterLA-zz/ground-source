@@ -3014,7 +3014,6 @@ a {
   .footer .link {
     display: inline-block;
     padding: 0 22px 24px 22px;
-    min-width: 182px;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold; }
