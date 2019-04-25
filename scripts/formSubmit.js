@@ -57,26 +57,30 @@ function getFormData() {
 }
 
 function handleFormSubmit(event) {
-  // handles form submit withtout any jquery
-  event.preventDefault(); // we are submitting via xhr below
-  var data = getFormData(); // get the values submitted in the form
+  event.preventDefault();
+  var data = getFormData();
   $("#gform").hide();
   $("#form-submit-loader").show();
-  /* OPTION: Remove this comment to enable SPAM prexvention, see README.md
-  if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
-    return false;
+
+  // This is the 'Honey Pot' method of detecting SPAM:
+  // 1. Include a hidden field on your form.
+  // 2. If the hidden field somehow becomes populated, it's probably SPAM.
+
+  // The field is named "albuquerque" because I imagine that spammers
+  // are becoming privy to the customary 'honeypot'.
+
+  if (data.albuquerque.length > 0) {
+    showFailedState();
+    return;
   }
-  */
 
   if (!validEmail(data.email)) {
-    // if email is not valid show error
     $("#gform").show();
     $("#form-submit-loader").hide();
     $("#email-invalid").show();
     return false;
   } else {
-    var url =
-      "https://script.google.com/a/groundsource.net/macros/s/AKfycbyVOqoUIi-StxIdFR2Ff2AkQ7n2rLXfk012yeIqBJGDAcjvoiOc/exec";
+    var url = "GOOG_SCRIPT_HERE";
     var encoded = Object.keys(data)
       .map(function(k) {
         return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
@@ -89,13 +93,17 @@ function handleFormSubmit(event) {
       data: encoded
     })
       .fail(function() {
-        document.getElementById("form-submit-loader").style.display = "none";
-        document.getElementById("error_message").style.display = "block";
+        showFailedState();
       })
       .success(function() {
         document.getElementById("form-submit-loader").style.display = "none";
         document.getElementById("thankyou_message").style.display = "block";
       });
+  }
+
+  function showFailedState() {
+    document.getElementById("form-submit-loader").style.display = "none";
+    document.getElementById("error_message").style.display = "block";
   }
 }
 function loaded() {

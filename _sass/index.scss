@@ -436,59 +436,6 @@ a {
   }
 }
 
-.contact-labels {
-  display: none;
-}
-
-.contact-us-modal {
-  @include modal;
-  .inner {
-    width: 67%;
-    overflow-y: auto;
-  }
-  .form {
-    margin: 36px;
-    > p {
-      font-weight: 50;
-      margin-bottom: 42px;
-      color: #777777;
-      font-size: 2em;
-    }
-    .validation {
-      display: block;
-      margin: 0 auto 18px auto;
-      width: 80%;
-      opacity: 0.8;
-      display: none;
-      text-align: left;
-      color: $primary-color;
-    }
-    > input {
-      display: block;
-      margin: 0 auto 18px auto;
-      width: 80%;
-      height: 2.8em;
-      opacity: 0.8;
-      text-indent: 18px;
-      border-style: solid;
-      border-width: thin;
-      border-color: #efefef;
-      background-color: #fcfcfc !important;
-    }
-    > button {
-      width: 80%;
-      height: 2em;
-      border-radius: 500px;
-      margin-top: 8px;
-      font-weight: 800;
-      color: $primary-color-darker-darker;
-      border-color: $primary-color-darker-darker;
-      border-style: solid;
-      margin-top: 20px;
-    }
-  }
-}
-
 .nav-modal {
   display: none;
   position: fixed;
@@ -1145,27 +1092,6 @@ a {
   }
   .small-hidden {
     display: none;
-  }
-
-  .contact-us-modal {
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    .inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      margin-top: 0;
-      .form {
-        margin: 0;
-        > p {
-          padding-top: 20px;
-          font-size: 1.8em;
-        }
-      }
-    }
   }
 
   .services-modal-content {
