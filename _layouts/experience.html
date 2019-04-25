@@ -30,101 +30,95 @@
 
     <div id="container-experience">
 
-      <div class="hero">
+      <div class="info">
+        <div class="info__content">
 
-        <div class="hero__top">
-          <div>
+          <a
+            href="/experience"
+            id="experience-default-link"
+            class="title state__link"
+          >
+            {{page.text_title}}
+          </a>
 
+          <div class="links">
             <a
-              href="/experience"
-              id="experience-default-link"
-              class="hero-title state__link"
+              href="/experience?service=tenant"
+              id="tenant-service-link"
+              class="state__link state--tenant link"
             >
-              {{page.text_title}}
+              TENANT<br /> REPRESENTATION
+            </a>
+            <a
+              href="/experience?service=landlord"
+              id="landlord-service-link"
+              class="state__link state--landlord link"
+            >
+              LANDLORD<br /> REPRESENTATION
+            </a>
+            <a
+              href="/experience?service=investment"
+              id="investment-service-link"
+              class="state__link state--investment link"
+            >
+              INVESTMENT<br /> REPRESENTATION
             </a>
 
-            <div class="links">
-              <a
-                href="/experience?service=tenant"
-                id="tenant-service-link"
-                class="state__link state--tenant link"
-              >
-                TENANT<br /> REPRESENTATION
-              </a>
-              <a
-                href="/experience?service=landlord"
-                id="landlord-service-link"
-                class="state__link state--landlord link"
-              >
-                LANDLORD<br /> REPRESENTATION
-              </a>
-              <a
-                href="/experience?service=investment"
-                id="investment-service-link"
-                class="state__link state--investment link"
-              >
-                INVESTMENT<br /> REPRESENTATION
-              </a>
+          </div>
 
+          <div class="description">
+
+            <div class="state state--default services__description">
+              {{ page.text_body }}
             </div>
 
-            <div class="text">
-
-              <div class="state state--default services__description">
-                {{ page.text_body }}
-              </div>
-
-              <div class="state state--tenant services__description">
-                  {{ page.tenant_services_text }}
-              </div>
-
-              <div class="state state--landlord services__description">
-                {{ page.landlord_services_text }}
-              </div>
-
-              <div class="state state--investment services__description">
-                {{ page.investment_services_text }}
-              </div>
-
+            <div class="state state--tenant services__description">
+                {{ page.tenant_services_text }}
             </div>
 
-            <div>
-              <button class="contact-us-link contact-us-button">
-                CONTACT US
-              </button>
+            <div class="state state--landlord services__description">
+              {{ page.landlord_services_text }}
+            </div>
+
+            <div class="state state--investment services__description">
+              {{ page.investment_services_text }}
             </div>
 
           </div>
+
+          <div>
+            <button class="contact-us-link contact-us-button">
+              CONTACT US
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="slideshow">
+
+        <div class="state state--tenant">
+          {% include service-example.html
+            examples=site.examples_tenant
+            multi-image=true
+          %}
         </div>
 
-        <div class="hero__bottom">
+        <div class="state state--landlord">
+          {% include service-example.html
+            examples=site.examples_landlord
+            multi-image=true
+          %}
+        </div>
 
-          <div class="state state--tenant">
-            {% include service-example.html
-              examples=site.examples_tenant
-              multi-image=true
-            %}
-          </div>
-
-          <div class="state state--landlord">
-            {% include service-example.html
-              examples=site.examples_landlord
-              multi-image=true
-            %}
-          </div>
-
-          <div class="state state--investment">
-            {% include service-example.html
-              examples=site.examples_investment
-              multi-image=true
-            %}
-          </div>
-
+        <div class="state state--investment">
+          {% include service-example.html
+            examples=site.examples_investment
+            multi-image=true
+          %}
         </div>
 
       </div>
-
-
 
     </div>
 
