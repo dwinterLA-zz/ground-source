@@ -33,8 +33,6 @@
   .link {
     display: inline-block;
     padding: 0 22px 24px 22px;
-    // longest link is about 182px, so setting this as min-width helps to keep the links lined when they wrap
-    min-width: 182px;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
