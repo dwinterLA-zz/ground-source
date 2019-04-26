@@ -14,7 +14,7 @@
 
       {% include site-header.html %}
 
-      {% include contact-form.html %}
+      {% include contact-us-modal.html %}
 
       {% include nav-modal.html active-section="about" %}
 
@@ -62,13 +62,12 @@
           window.scrollTo(0, $('.agents').offset().top);
         }, 500)
       }
-      if (compatibleBrowser()) {
-        window.sr = ScrollReveal();
-        sr.reveal(".header-image");
-        sr.reveal(".head-title");
-        sr.reveal(".about-main-text");
-        sr.reveal(".agents");
-      }
+
+      window.sr = ScrollReveal();
+      sr.reveal(".header-image");
+      sr.reveal(".head-title");
+      sr.reveal(".about-main-text");
+      sr.reveal(".agents");
 
       $('.agent-modal-link').click(function () {
         var agent = $(this).data('agent');

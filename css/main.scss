@@ -6,6 +6,7 @@
 @import "vendor/sanitize.scss";
 @import "variables.scss";
 @import "mixins.scss";
+@import "home.scss";
 @import "index.scss";
 @import "listing.scss";
 @import "listings.scss";
@@ -16,6 +17,8 @@
 @import "agent-card.scss";
 @import "agent-modal.scss";
 @import "footer.scss";
+@import "contact-us-modal.scss";
+@import "contact-info.scss";
 
 .modal {
   @include modal;

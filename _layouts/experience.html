@@ -26,7 +26,7 @@
 
     {% include site-header.html %}
 
-    {% include contact-form.html %}
+    {% include contact-us-modal.html %}
 
     <div id="container-experience">
 
@@ -87,7 +87,7 @@
           </div>
 
           <div>
-            <button class="contact-us-link contact-us-button">
+            <button class="cursor-pointer contact-us-button contact-us-link">
               CONTACT US
             </button>
           </div>
@@ -137,10 +137,8 @@
           }, 500)
         }
 
-        if (compatibleBrowser()) {
-          window.sr = ScrollReveal();
-          sr.reveal(".top");
-        }
+        window.sr = ScrollReveal();
+        sr.reveal(".top");
       })
     </script>
   </body>

@@ -201,7 +201,7 @@
 
       {% include site-header.html %}
 
-      {% include contact-form.html %}
+      {% include contact-us-modal.html %}
 
       {% include nav-modal.html active-section="listings" %}
 
@@ -228,7 +228,7 @@
               <div class="menu-top">
                 <div class="buttons">
 
-                  <a class="cool-button contact-us-link">
+                  <a class="cool-button cursor-pointer contact-us-link">
                     CHECK AVAILABILITY
                   </a>
 
@@ -422,11 +422,10 @@
           "nextArrow": $('.gallery-arrow-right')
         })
 
-        if (compatibleBrowser()) {
-          window.sr = ScrollReveal();
-          sr.reveal(".info-box");
-          sr.reveal(".img-responsive");
-        }
+        window.sr = ScrollReveal();
+        sr.reveal(".info-box");
+        sr.reveal(".img-responsive");
+
       })
       function initListingMap() {
         {% if page.latitude and page.longitude %}

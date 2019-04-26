@@ -20,7 +20,7 @@
 
     {% include site-header.html %}
 
-    {% include contact-form.html %}
+    {% include contact-us-modal.html %}
 
     <div id="container-listings">
 
@@ -330,10 +330,9 @@
           listingsSearch();
         }
 
-        if (compatibleBrowser()) {
-          window.sr = ScrollReveal();
-          sr.reveal(".listing-preview");
-        }
+        window.sr = ScrollReveal();
+        sr.reveal(".listing-preview");
+
       })
       function showFilters() {
         $('#show-more-filters').hide();

@@ -6,11 +6,6 @@ const PER_PAGE = 6;
 const PASSWORDS = ["keller+groundsource2017"];
 
 $(document).ready(function() {
-  if (!compatibleBrowser()) {
-    // show labels on ie9 because it doesnt support placeholder text
-    $('.contact-labels').show();
-  }
-
   $('.main').show();
   $('.services-carousel').slick({
     "autoplay": false,
@@ -235,6 +230,3 @@ function listingsSearch() {
   //     (parseInt($(this).data("price").toString().replace(",", "")) <= maxPriceFilter || isNaN(maxPriceFilter))
 }
 
-function compatibleBrowser() {
-  return !(navigator.userAgent.indexOf("MSIE 9") > -1);
-}
