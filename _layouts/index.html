@@ -89,7 +89,7 @@
           </li>
 
           <li>
-            <a class="contact-us-link">
+            <a class="cursor-pointer">
               CONTACT
             </a>
           </li>
@@ -262,7 +262,11 @@
           </div>
         </div>
 
-        <div class="contact-us">
+        <div class="location">
+
+          <div class="gmap-container">
+            <div id="gmap-home-page"></div>
+          </div>
 
           <div class="contact-container">
             <div class="contact-content contact-info-container">
@@ -272,10 +276,6 @@
               {% include contact-info.html%}
 
             </div>
-          </div>
-
-          <div class="contact-us-gmap-container">
-            <div id="contact-us-gmap"></div>
           </div>
 
         </div>
@@ -337,7 +337,7 @@
       })
       function initHomeMap() {
         var uluru = {lat: 33.979449, lng: -118.413002};
-        var map = new google.maps.Map(document.getElementById('contact-us-gmap'), {
+        var map = new google.maps.Map(document.getElementById('gmap-home-page'), {
           zoom: 14,
           scrollwheel: false,
           disableDefaultUI: true,
