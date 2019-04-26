@@ -62,7 +62,7 @@ function handleFormSubmit(event) {
   $("#gform").hide();
   $("#form-submit-loader").show();
 
-  // This is the 'Honey Pot' method of detecting SPAM:
+  // This is the 'Honey Pot' method of SPAM detection:
   // 1. Include a hidden field on your form.
   // 2. If the hidden field somehow becomes populated, it's probably SPAM.
 
