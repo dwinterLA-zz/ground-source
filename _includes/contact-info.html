@@ -1,10 +1,10 @@
-<div class="contact-info-body">
+<div class="contact-info">
 
-   <div class="contact-row">
-
-    <div>
-
-      <div class="icon-holder">
+  <a
+    href="tel:{{ site.data.contact.phone }}"
+    class="contact__link"
+  >
+      <div>
         <img
           src="/images/phone-icon.png"
           class="icon-small"
@@ -12,86 +12,63 @@
       </div>
 
       <div>
-        <span>
-          {{site.data.contact.phone}}
-        </span>
+        {{ site.data.contact.phone }}
       </div>
 
+  </a>
+
+  <a
+    href="mailto:{{ site.data.contact.email }}"
+    class="contact__link"
+  >
+
+    <div>
+      <img src="/images/email-icon.png" class="icon-small" />
+    </div>
+
+      <div>
+        {{ site.data.contact.email }}
+      </div>
+
+  </a>
+
+  <a
+    href="https://maps.google.com/maps?daddr={{ site.data.contact.latitude }}, {{ site.data.contact.longitude }}&amp;ll="
+    target="_blank"
+    class="contact__link"
+  >
+
+    <div>
+      <img
+        src="/images/location-icon.png"
+        class="icon-small"
+      />
     </div>
 
     <div>
-
-      <div class="icon-holder">
-        <img
-          src="/images/location-icon.png"
-          class="icon-small address"
-        />
-      </div>
-
-      <div>
-
-        <span class="underline address-line">
-          {{site.data.contact.address1}}
-        </span>
-
-        <br />
-
-        <span class="underline address-line">
-          {{site.data.contact.address2}}
-        </span>
-
-        <br />
-
-        <span class="underline address-line">
-          {{site.data.contact.address3}}
-        </span>
-
-      </div>
-
+      {{site.data.contact.address}}
     </div>
 
-  </div>
+  </a>
 
-  <div class="contact-row">
+  <a
+    href="https://www.instagram.com/{{site.data.instagram}}"
+    target="_blank"
+    class="contact__link"
+  >
 
     <div>
-
-      <div class="icon-holder">
-        <img
-          src="/images/email-icon.png"
-          class="icon-small"
+      <img
+        src="/images/ig-icon.png"
+        class="icon-small"
         />
-      </div>
-
-      <div>
-        <span>
-          <a href="mailto:{{site.data.email}}">
-            {{site.data.contact.email}}
-          </a>
-        </span>
-      </div>
-
     </div>
 
     <div>
-
-      <div class="icon-holder">
-        <img
-          src="/images/ig-icon.png"
-          class="icon-small"
-        />
-      </div>
-
-      <div>
-        <span>
-          <a href="https://www.instagram.com/{{site.data.instagram}}">
-            {{site.data.contact.instagram}}
-          </a>
-        </span>
-      </div>
-
+      {{ site.data.contact.instagram }}
     </div>
 
-  </div>
+  </a>
 
 </div>
+

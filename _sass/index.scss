@@ -125,52 +125,6 @@ a {
   max-width: $page-max-width;
 }
 
-#contact-us-home-section {
-  position: relative;
-  color: $grey;
-  min-height: 349px;
-  .contact-us-gmap-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  .contact-content {
-    width: 42%;
-    padding: 44px 0;
-    margin-left: -18px;
-    .contact-header {
-      font-size: 34px;
-      background-color: white;
-      padding: 0.5em 18px;
-    }
-    .contact-body {
-      padding: 11px;
-      margin: 0;
-      font-size: 16px;
-      background: rgba(255, 255, 255, 0.9);
-      list-style-type: none;
-      > a {
-        display: flex;
-        align-items: center;
-        padding: 6px;
-        cursor: pointer;
-        text-decoration: none;
-        &:hover {
-          > * {
-            text-decoration: underline;
-          }
-        }
-        > * {
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
-
 .contact-info-body {
   font-size: 0.9em;
   background: rgba(255, 255, 255, 0.9);
@@ -235,6 +189,14 @@ a {
 
 .underline {
   text-decoration: underline;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.font-weight-light {
+  font-weight: 100;
 }
 
 .preview-map {
@@ -1084,7 +1046,7 @@ a {
           background: rgba(255, 255, 255, 0.8);
           font-size: 52px;
         }
-        .contact-body {
+        .contact-info {
           font-size: 0.95em;
         }
       }
@@ -1210,7 +1172,7 @@ a {
       .contact-header {
         text-align: center;
       }
-      .contact-body {
+      .contact-info {
         padding: 0 0 0 20px;
       }
     }

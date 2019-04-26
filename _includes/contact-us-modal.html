@@ -3,17 +3,17 @@
 
     <div class="modal__close"></div>
 
+    <h1 class="text-centered font-weight-light">
+      CONTACT US
+    </h1>
+
+    {% include contact-info.html %}
+
     <form
       id="gform"
       class="form"
       method="POST"
     >
-
-      <p class="contact-us">
-        CONTACT US
-      </p>
-
-      {% include contact-info.html %}
 
       <!-- this input is for spam prevention -->
       <input
@@ -34,6 +34,7 @@
         name="name"
         type="text"
         placeholder="Name"
+        class="input"
       >
 
       <label
@@ -47,6 +48,7 @@
         name="email"
         type="text"
         placeholder="Email"
+        class="input"
       >
 
       <div
@@ -67,10 +69,12 @@
         name="phone"
         type="text"
         placeholder="Phone Number"
+        class="input"
       >
 
       <button
         id="submit-contact-form"
+        class="submit"
       >
         SUBMIT
       </button>
