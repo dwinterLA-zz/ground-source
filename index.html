@@ -33,23 +33,17 @@
 
     <div class="modal__close"></div>
 
-    <form
-      id="gform"
-      class="form"
-      method="POST"
-    >
+    <h1 class="text-centered font-weight-light">
+      CONTACT US
+    </h1>
 
-      <p class="contact-us">
-        CONTACT US
-      </p>
+    <div class="contact-info">
 
-      <div class="contact-info-body">
-
-   <div class="contact-row">
-
-    <div>
-
-      <div class="icon-holder">
+  <a
+    href="tel:310-444-6100"
+    class="contact__link"
+  >
+      <div>
         <img
           src="/images/phone-icon.png"
           class="icon-small"
@@ -57,94 +51,88 @@
       </div>
 
       <div>
-        <span>
-          310-444-6100
-        </span>
+        310-444-6100
       </div>
 
+  </a>
+
+  <a
+    href="mailto:ckeller@groundsource.net"
+    class="contact__link"
+  >
+
+    <div>
+      <img
+        src="/images/email-icon.png"
+        class="icon-small"
+      />
+    </div>
+
+      <div>
+        ckeller@groundsource.net
+      </div>
+
+  </a>
+
+  <a
+    href="https://maps.google.com/maps?daddr=34.047651, -118.464022&amp;ll="
+    target="_blank"
+    class="contact__link"
+  >
+
+    <div>
+      <img
+        src="/images/location-icon.png"
+        class="icon-small"
+      />
     </div>
 
     <div>
-
-      <div class="icon-holder">
-        <img
-          src="/images/location-icon.png"
-          class="icon-small address"
-        />
-      </div>
-
-      <div>
-
-        <span class="underline address-line">
-          11859 Wilshire Blvd.
-        </span>
-
-        <br />
-
-        <span class="underline address-line">
-          Suite 602
-        </span>
-
-        <br />
-
-        <span class="underline address-line">
-          Los Angeles, CA 90025
-        </span>
-
-      </div>
-
+      11859 Wilshire, Suite 602, Los Angeles, CA 90025
     </div>
 
-  </div>
+  </a>
 
-  <div class="contact-row">
+  <a
+    href="https://www.instagram.com/@groundsourcela"
+    target="_blank"
+    class="contact__link"
+  >
 
     <div>
-
-      <div class="icon-holder">
-        <img
-          src="/images/email-icon.png"
-          class="icon-small"
+      <img
+        src="/images/ig-icon.png"
+        class="icon-small"
         />
-      </div>
-
-      <div>
-        <span>
-          <a href="mailto:">
-            ckeller@groundsource.net
-          </a>
-        </span>
-      </div>
-
     </div>
 
     <div>
-
-      <div class="icon-holder">
-        <img
-          src="/images/ig-icon.png"
-          class="icon-small"
-        />
-      </div>
-
-      <div>
-        <span>
-          <a href="https://www.instagram.com/">
-            @groundsourcela
-          </a>
-        </span>
-      </div>
-
+      @groundsourcela
     </div>
 
-  </div>
+  </a>
 
 </div>
 
 
+
+    <form
+      id="gform"
+      class="form"
+      method="POST"
+    >
+
+      <!-- this input is for spam prevention -->
+      <input
+        name="albuquerque"
+        type="text"
+        placeholder="Took a wrong turn"
+        class="hidden"
+      >
+
       <label
         for="name"
-        class="contact-labels"
+        class="hidden"
       >
         Name
       </label>
@@ -153,11 +141,12 @@
         name="name"
         type="text"
         placeholder="Name"
+        class="input"
       >
 
       <label
         for="email"
-        class="contact-labels"
+        class="hidden"
       >
         Email
       </label>
@@ -166,6 +155,7 @@
         name="email"
         type="text"
         placeholder="Email"
+        class="input"
       >
 
       <div
@@ -177,7 +167,7 @@
 
       <label
         for="phone"
-        class="contact-labels"
+        class="hidden"
       >
         Phone
       </label>
@@ -186,10 +176,12 @@
         name="phone"
         type="text"
         placeholder="Phone Number"
+        class="input"
       >
 
       <button
         id="submit-contact-form"
+        class="submit"
       >
         SUBMIT
       </button>
@@ -228,8 +220,10 @@
 </div>
 
 
-    <div id="tenant-service-modal" class="service-detail">
-      <div class="inner">
+    <div id="home-container">
+
+      <div id="tenant-service-modal" class="service-detail">
+        <div class="inner">
 	<div class="services-modal-content">
 
 		<div class="service-detail-close"></div>
@@ -585,10 +579,10 @@
 	</div>
 </div>
 
-    </div>
+      </div>
 
-    <div id="landlord-service-modal" class="service-detail">
-      <div class="inner">
+      <div id="landlord-service-modal" class="service-detail">
+        <div class="inner">
 	<div class="services-modal-content">
 
 		<div class="service-detail-close"></div>
@@ -804,10 +798,10 @@
 	</div>
 </div>
 
-    </div>
+      </div>
 
-    <div id="investment-service-modal" class="service-detail">
-      <div class="inner">
+      <div id="investment-service-modal" class="service-detail">
+        <div class="inner">
 	<div class="services-modal-content">
 
 		<div class="service-detail-close"></div>
@@ -918,53 +912,53 @@
 	</div>
 </div>
 
-    </div>
+      </div>
 
-    <div id="top-nav">
-      <ul>
+      <div id="top-nav">
+        <ul>
 
-        <li>
-          <a class="services-home-button">
-            SERVICES
-          </a>
-        </li>
+          <li>
+            <a class="services-home-button">
+              SERVICES
+            </a>
+          </li>
 
-        <li>
-          <a href="listings.html">
-            LISTINGS
-          </a>
-        </li>
+          <li>
+            <a href="listings.html">
+              LISTINGS
+            </a>
+          </li>
 
-        <li>
-          <a href="experience.html">
-            EXPERIENCE
-          </a>
-        </li>
+          <li>
+            <a href="experience.html">
+              EXPERIENCE
+            </a>
+          </li>
 
-        <li>
-          <a href="about.html">
-            ABOUT
-          </a>
-        </li>
+          <li>
+            <a href="about.html">
+              ABOUT
+            </a>
+          </li>
 
-        <li>
-          <a href="https://ws.onehub.com/" target="_blank">
-            CLIENT ACCESS
-          </a>
-        </li>
+          <li>
+            <a href="https://ws.onehub.com/" target="_blank">
+              CLIENT ACCESS
+            </a>
+          </li>
 
-        <li>
-          <a class="contact-us-link">
-            CONTACT
-          </a>
-        </li>
+          <li>
+            <a class="cursor-pointer contact-us-link">
+              CONTACT
+            </a>
+          </li>
 
-      </ul>
-    </div>
+        </ul>
+      </div>
 
-    <div class="ham-menu ham-menu-home"></div>
+      <div class="ham-menu ham-menu-home"></div>
 
-    <div
+      <div
 	id="active-section-home"
 	class="nav-modal"
 >
@@ -1033,7 +1027,7 @@
 		</li>
 
 		<li>
-			<a class="contact-us-link">
+			<a class="cursor-pointer contact-us-link">
 				CONTACT
 			</a>
 		</li>
@@ -1043,301 +1037,317 @@
 </div>
 
 
-    <div id="header-home">
+      <div id="header-home">
 
-      <div id="header-content">
+        <div id="header-content">
+
+          <img
+            id="header-logo"
+            src="/images/home-logo.png"
+          />
+
+          <div id="header-text">
+            LOCAL BY CHOICE, NOT BY CHANCE
+          </div>
+
+        </div>
 
         <img
-          id="header-logo"
-          src="/images/home-logo.png"
+          src="/images/scroll-arrow.png"
+          class="scroll-arrow"
         />
 
-        <div id="header-text">
-          LOCAL BY CHOICE, NOT BY CHANCE
-        </div>
-
       </div>
 
-      <img
-        src="/images/scroll-arrow.png"
-        class="scroll-arrow"
-      />
+      <div class="content">
 
+        <div class="flexbox">
+
+          <div class="home-intro-left">
+
+            <div class="section-header">
+              ABOUT <span>GROUND</span>SOURCE
+            </div>
+
+            <p>
+              GROUNDSOURCE is a Los Angeles based full-service commercial real estate firm that specializes in representing tenants, landlords and investors. Experience in the L.A. marketplace lets it combine extensive insider knowledge with trusted partnerships to create unparalleled value. A boutique firm, it offers clients prestigious service with an intimate, hands-on approach.<br><br>It isn’t just about satisfied clients. It’s about repeat clients. Therefore, Groundsource spends whatever time it takes to close the deal the right way. Good business is about a connection, not a commission, which is why Groundsource is by the client’s side from fact-finding to lease execution to signing of a purchase and sale agreement.
+            </p>
+
+          </div>
+
+          <div
+            class="home-intro-right"
+            style="background-image: url('/images/mobile-about-img-1.png');"
+          ></div>
+
+        </div>
+
+        <div class="review-slideshow">
+          <div class="inner">
+
+            <div class="navigation-arrow-left navigation-arrows"></div>
+
+            <div class="carousel-container">
+              <div class="review-carousel">
+                
+                  <div class="review">
+                    <div class="inner-review">
+                      
+                        <img src="/images/seth_phillips.jpg" />
+                      
+
+                      <p>
+                        I work with GROUNDSOURCE because they deliver — the best market insight, the most direct relationships, and, ultimately, the best deal.
+
+                        <br />
+
+                        <br />
+
+                        <strong>- Seth Phillips Althoff, Owner, BOND</strong>
+
+                      </p>
+
+                    </div>
+                  </div>
+                
+                  <div class="review">
+                    <div class="inner-review">
+                      
+
+                      <p>
+                        Chris’s knowledge of the market, endless attention to details and relationships ensured I completed a thorough review of all aspects of the lease transaction beginning with a market search to final lease negotiations. …I continue to benefit from his availability long after I executed the lease. 
+
+                        <br />
+
+                        <br />
+
+                        <strong>- Christina Cade</strong>
+
+                      </p>
+
+                    </div>
+                  </div>
+                
+                  <div class="review">
+                    <div class="inner-review">
+                      
+
+                      <p>
+                        As a Director of Administration of law firms for over 25 years, both international and regional, I have worked with a number of real estate brokers. Not only did I enjoy working with Chris, I found his expertise, relationships in the industry, and professionalism preeminent.
+
+                        <br />
+
+                        <br />
+
+                        <strong>- Sue Eisner</strong>
+
+                      </p>
+
+                    </div>
+                  </div>
+                
+                  <div class="review">
+                    <div class="inner-review">
+                      
+
+                      <p>
+                        I have worked with Chris for a number of years and found that I can rely on him, and most importantly trust him.  He is responsive to my requests even after the lease is signed.  What sets Chris apart from other brokers is his strong negotiation skills and ability to protect the interests of the tenant.
+
+                        <br />
+
+                        <br />
+
+                        <strong>- Brian P. Kamel, Esq., BRIAN P. KAMEL & ASSOCIATES</strong>
+
+                      </p>
+
+                    </div>
+                  </div>
+                
+              </div>
+            </div>
+
+            <div class="navigation-arrow-right navigation-arrows"></div>
+
+          </div>
+        </div>
+
+        <a
+          id="services-content"
+          name="services"
+        ></a>
+
+        <div class="services-container">
+          <div>
+
+            <div class="services-row">
+              <div class="services-header">
+                <p>
+                  <strong>OUR</strong> SERVICES
+                </p>
+              </div>
+            </div>
+
+            <div class="services-row">
+
+              <div class="services-1 services-text">
+
+                <div class="medium-white-text">
+                  <strong>TENANT</strong> REPRESENTATION
+                </div>
+
+                <div class="service-description">
+                  Effective tenant representation is based on experience, relationships and knowledge. Groundsource Los Angeles knows market conditions, infrastructures, comparable deals and the people who make them. This is Groundsource’s city -- it listens to clients to understand their needs and goals.
+                </div>
+
+                <div
+                  id="tenant-service-modal-button"
+                  class="btn-learn-more btn-services"
+                >
+                  LEARN MORE
+                </div>
+
+              </div>
+
+              <div class="services-2 services-text">
+
+                <div class="medium-white-text">
+                  <strong>LANDLORD</strong> REPRESENTATION
+                </div>
+
+                <div class="service-description">
+                  Groundsource provides efficient, effective landlord representation, ensuring each transaction is hands-on, locally informed and detail- oriented.&nbsp; It knows a broker’s value lies in integrity and commitment to a seamless experience.<br>
+                </div>
+
+                <div
+                  id="landlord-service-modal-button"
+                  class="btn-learn-more btn-services"
+                >
+                  LEARN MORE
+                </div>
+
+              </div>
+
+              <div class="services-text">
+
+                <div class="medium-white-text">
+                  <strong>INVESTMENT</strong> SALES
+                </div>
+
+                <div class="service-description">
+                  Market intelligence and personal relationships are the catalysts which drive investment service decisions. Groundsource provides in-depth investment advisory and capitalization strategies over a broad spectrum of property types based on comprehensive market insight and a research-centered approach to risk mitigation.
+                </div>
+
+                <div
+                  id="investment-service-modal-button"
+                  class="btn-learn-more btn-services"
+                >
+                  LEARN MORE
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <div class="location">
+
+          <div class="gmap-container">
+            <div id="gmap-home-page"></div>
+          </div>
+
+          <div class="contact-container">
+            <div class="contact-content contact-info-container">
+
+              <div class="contact-header"><strong>CONTACT</strong> US</div>
+
+              <div class="contact-info">
+
+  <a
+    href="tel:310-444-6100"
+    class="contact__link"
+  >
+      <div>
+        <img
+          src="/images/phone-icon.png"
+          class="icon-small"
+        />
+      </div>
+
+      <div>
+        310-444-6100
+      </div>
+
+  </a>
+
+  <a
+    href="mailto:ckeller@groundsource.net"
+    class="contact__link"
+  >
+
+    <div>
+      <img
+        src="/images/email-icon.png"
+        class="icon-small"
+      />
     </div>
 
-    <div class="content">
-
-      <div class="flexbox">
-
-        <div class="home-intro-left">
-
-          <div class="section-header">
-            ABOUT <span>GROUND</span>SOURCE
-          </div>
-
-          <p>
-            GROUNDSOURCE is a Los Angeles based full-service commercial real estate firm that specializes in representing tenants, landlords and investors. Experience in the L.A. marketplace lets it combine extensive insider knowledge with trusted partnerships to create unparalleled value. A boutique firm, it offers clients prestigious service with an intimate, hands-on approach.<br><br>It isn’t just about satisfied clients. It’s about repeat clients. Therefore, Groundsource spends whatever time it takes to close the deal the right way. Good business is about a connection, not a commission, which is why Groundsource is by the client’s side from fact-finding to lease execution to signing of a purchase and sale agreement.
-          </p>
-
-        </div>
-
-        <div
-          class="home-intro-right"
-          style="background-image: url('/images/mobile-about-img-1.png');"
-        ></div>
-
+      <div>
+        ckeller@groundsource.net
       </div>
 
-      <div class="review-slideshow">
-        <div class="inner">
+  </a>
 
-          <div class="navigation-arrow-left navigation-arrows"></div>
+  <a
+    href="https://maps.google.com/maps?daddr=34.047651, -118.464022&amp;ll="
+    target="_blank"
+    class="contact__link"
+  >
 
-          <div class="carousel-container">
-            <div class="review-carousel">
-              
-                <div class="review">
-                  <div class="inner-review">
-                    
-                      <img src="/images/seth_phillips.jpg" />
-                    
+    <div>
+      <img
+        src="/images/location-icon.png"
+        class="icon-small"
+      />
+    </div>
 
-                    <p>
-                      I work with GROUNDSOURCE because they deliver — the best market insight, the most direct relationships, and, ultimately, the best deal.
+    <div>
+      11859 Wilshire, Suite 602, Los Angeles, CA 90025
+    </div>
 
-                      <br />
+  </a>
 
-                      <br />
+  <a
+    href="https://www.instagram.com/@groundsourcela"
+    target="_blank"
+    class="contact__link"
+  >
 
-                      <strong>- Seth Phillips Althoff, Owner, BOND</strong>
+    <div>
+      <img
+        src="/images/ig-icon.png"
+        class="icon-small"
+        />
+    </div>
 
-                    </p>
+    <div>
+      @groundsourcela
+    </div>
 
-                  </div>
-                </div>
-              
-                <div class="review">
-                  <div class="inner-review">
-                    
+  </a>
 
-                    <p>
-                      Chris’s knowledge of the market, endless attention to details and relationships ensured I completed a thorough review of all aspects of the lease transaction beginning with a market search to final lease negotiations. …I continue to benefit from his availability long after I executed the lease. 
+</div>
 
-                      <br />
 
-                      <br />
 
-                      <strong>- Christina Cade</strong>
-
-                    </p>
-
-                  </div>
-                </div>
-              
-                <div class="review">
-                  <div class="inner-review">
-                    
-
-                    <p>
-                      As a Director of Administration of law firms for over 25 years, both international and regional, I have worked with a number of real estate brokers. Not only did I enjoy working with Chris, I found his expertise, relationships in the industry, and professionalism preeminent.
-
-                      <br />
-
-                      <br />
-
-                      <strong>- Sue Eisner</strong>
-
-                    </p>
-
-                  </div>
-                </div>
-              
-                <div class="review">
-                  <div class="inner-review">
-                    
-
-                    <p>
-                      I have worked with Chris for a number of years and found that I can rely on him, and most importantly trust him.  He is responsive to my requests even after the lease is signed.  What sets Chris apart from other brokers is his strong negotiation skills and ability to protect the interests of the tenant.
-
-                      <br />
-
-                      <br />
-
-                      <strong>- Brian P. Kamel, Esq., BRIAN P. KAMEL & ASSOCIATES</strong>
-
-                    </p>
-
-                  </div>
-                </div>
-              
             </div>
           </div>
 
-          <div class="navigation-arrow-right navigation-arrows"></div>
-
-        </div>
-      </div>
-
-      <a
-        id="services-content"
-        name="services"
-      ></a>
-
-      <div class="services-container">
-        <div>
-
-          <div class="services-row">
-            <div class="services-header">
-              <p>
-                <strong>OUR</strong> SERVICES
-              </p>
-            </div>
-          </div>
-
-          <div class="services-row">
-
-            <div class="services-1 services-text">
-
-              <div class="medium-white-text">
-                <strong>TENANT</strong> REPRESENTATION
-              </div>
-
-              <div class="service-description">
-                Effective tenant representation is based on experience, relationships and knowledge. Groundsource Los Angeles knows market conditions, infrastructures, comparable deals and the people who make them. This is Groundsource’s city -- it listens to clients to understand their needs and goals.
-              </div>
-
-              <div
-                id="tenant-service-modal-button"
-                class="btn-learn-more btn-services"
-              >
-                LEARN MORE
-              </div>
-
-            </div>
-
-            <div class="services-2 services-text">
-
-              <div class="medium-white-text">
-                <strong>LANDLORD</strong> REPRESENTATION
-              </div>
-
-              <div class="service-description">
-                Groundsource provides efficient, effective landlord representation, ensuring each transaction is hands-on, locally informed and detail- oriented.&nbsp; It knows a broker’s value lies in integrity and commitment to a seamless experience.<br>
-              </div>
-
-              <div
-                id="landlord-service-modal-button"
-                class="btn-learn-more btn-services"
-              >
-                LEARN MORE
-              </div>
-
-            </div>
-
-            <div class="services-text">
-
-              <div class="medium-white-text">
-                <strong>INVESTMENT</strong> SALES
-              </div>
-
-              <div class="service-description">
-                Market intelligence and personal relationships are the catalysts which drive investment service decisions. Groundsource provides in-depth investment advisory and capitalization strategies over a broad spectrum of property types based on comprehensive market insight and a research-centered approach to risk mitigation.
-              </div>
-
-              <div
-                id="investment-service-modal-button"
-                class="btn-learn-more btn-services"
-              >
-                LEARN MORE
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div id="contact-us-home-section">
-
-        <div class="contact-container">
-          <div class="contact-content">
-
-            <div class="contact-header"><strong>CONTACT</strong> US</div>
-
-            <div class="contact-body">
-              <a href="tel:310-444-6100">
-
-                  <div>
-                    <img
-                      src="/images/phone-icon.png"
-                      class="icon-small"
-                    />
-                  </div>
-
-                  <div>
-                    310-444-6100
-                  </div>
-
-              </a>
-
-              <a href="mailto:ckeller@groundsource.net">
-
-                <div>
-                  <img src="/images/email-icon.png" class="icon-small" />
-                </div>
-
-                  <div>
-                    ckeller@groundsource.net
-                  </div>
-
-              </a>
-
-              <a
-                href="https://maps.google.com/maps?daddr=34.047651, -118.464022&amp;ll="
-                target="_blank"
-              >
-
-                <div>
-                  <img
-                    src="/images/location-icon.png"
-                    class="icon-small"
-                  />
-                </div>
-
-                <div>
-                  11859 Wilshire, Suite 602, Los Angeles, CA 90025
-                </div>
-
-              </a>
-
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-              >
-
-                <div>
-                  <img src="/images/ig-icon.png" class="icon-small" />
-                </div>
-
-                <div>
-                  @groundsourcela
-                </div>
-
-              </a>
-
-            </div>
-
-          </div>
         </div>
 
-        <div class="contact-us-gmap-container">
-          <div id="contact-us-gmap"></div>
-        </div>
-
-      </div>
-
-      <div class="footer">
+        <div class="footer">
 
   <div class="main">
 
@@ -1371,7 +1381,7 @@
         ABOUT
       </a>
 
-      <a class="title contact-us-link link">
+      <a class="title cursor-pointer contact-us-link link">
         CONTACT
       </a>
 
@@ -1427,6 +1437,7 @@
 
 </div>
 
+      </div>
 
     </div>
 
@@ -1479,19 +1490,17 @@
           $("#header-text").css("opacity", 1);
         }, 700);
 
-        if (compatibleBrowser()) {
-          window.sr = ScrollReveal();
-          sr.reveal(".home-intro-left");
-          sr.reveal(".home-intro-right");
-          sr.reveal(".services-header");
-          sr.reveal(".review-slideshow");
-          sr.reveal(".services-text");
-          sr.reveal("#contact-us-home-section");
-        }
+        window.sr = ScrollReveal();
+        sr.reveal(".home-intro-left");
+        sr.reveal(".home-intro-right");
+        sr.reveal(".services-header");
+        sr.reveal(".review-slideshow");
+        sr.reveal(".services-text");
+        sr.reveal("#contact-us-home-section");
       })
       function initHomeMap() {
         var uluru = {lat: 33.979449, lng: -118.413002};
-        var map = new google.maps.Map(document.getElementById('contact-us-gmap'), {
+        var map = new google.maps.Map(document.getElementById('gmap-home-page'), {
           zoom: 14,
           scrollwheel: false,
           disableDefaultUI: true,

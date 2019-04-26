@@ -95,7 +95,7 @@
 		</li>
 
 		<li>
-			<a class="contact-us-link">
+			<a class="cursor-pointer contact-us-link">
 				CONTACT
 			</a>
 		</li>
@@ -122,23 +122,17 @@
 
     <div class="modal__close"></div>
 
-    <form
-      id="gform"
-      class="form"
-      method="POST"
-    >
+    <h1 class="text-centered font-weight-light">
+      CONTACT US
+    </h1>
 
-      <p class="contact-us">
-        CONTACT US
-      </p>
+    <div class="contact-info">
 
-      <div class="contact-info-body">
-
-   <div class="contact-row">
-
-    <div>
-
-      <div class="icon-holder">
+  <a
+    href="tel:310-444-6100"
+    class="contact__link"
+  >
+      <div>
         <img
           src="/images/phone-icon.png"
           class="icon-small"
@@ -146,94 +140,88 @@
       </div>
 
       <div>
-        <span>
-          310-444-6100
-        </span>
+        310-444-6100
       </div>
 
+  </a>
+
+  <a
+    href="mailto:ckeller@groundsource.net"
+    class="contact__link"
+  >
+
+    <div>
+      <img
+        src="/images/email-icon.png"
+        class="icon-small"
+      />
+    </div>
+
+      <div>
+        ckeller@groundsource.net
+      </div>
+
+  </a>
+
+  <a
+    href="https://maps.google.com/maps?daddr=34.047651, -118.464022&amp;ll="
+    target="_blank"
+    class="contact__link"
+  >
+
+    <div>
+      <img
+        src="/images/location-icon.png"
+        class="icon-small"
+      />
     </div>
 
     <div>
-
-      <div class="icon-holder">
-        <img
-          src="/images/location-icon.png"
-          class="icon-small address"
-        />
-      </div>
-
-      <div>
-
-        <span class="underline address-line">
-          11859 Wilshire Blvd.
-        </span>
-
-        <br />
-
-        <span class="underline address-line">
-          Suite 602
-        </span>
-
-        <br />
-
-        <span class="underline address-line">
-          Los Angeles, CA 90025
-        </span>
-
-      </div>
-
+      11859 Wilshire, Suite 602, Los Angeles, CA 90025
     </div>
 
-  </div>
+  </a>
 
-  <div class="contact-row">
+  <a
+    href="https://www.instagram.com/@groundsourcela"
+    target="_blank"
+    class="contact__link"
+  >
 
     <div>
-
-      <div class="icon-holder">
-        <img
-          src="/images/email-icon.png"
-          class="icon-small"
+      <img
+        src="/images/ig-icon.png"
+        class="icon-small"
         />
-      </div>
-
-      <div>
-        <span>
-          <a href="mailto:">
-            ckeller@groundsource.net
-          </a>
-        </span>
-      </div>
-
     </div>
 
     <div>
-
-      <div class="icon-holder">
-        <img
-          src="/images/ig-icon.png"
-          class="icon-small"
-        />
-      </div>
-
-      <div>
-        <span>
-          <a href="https://www.instagram.com/">
-            @groundsourcela
-          </a>
-        </span>
-      </div>
-
+      @groundsourcela
     </div>
 
-  </div>
+  </a>
 
 </div>
 
 
+
+    <form
+      id="gform"
+      class="form"
+      method="POST"
+    >
+
+      <!-- this input is for spam prevention -->
+      <input
+        name="albuquerque"
+        type="text"
+        placeholder="Took a wrong turn"
+        class="hidden"
+      >
+
       <label
         for="name"
-        class="contact-labels"
+        class="hidden"
       >
         Name
       </label>
@@ -242,11 +230,12 @@
         name="name"
         type="text"
         placeholder="Name"
+        class="input"
       >
 
       <label
         for="email"
-        class="contact-labels"
+        class="hidden"
       >
         Email
       </label>
@@ -255,6 +244,7 @@
         name="email"
         type="text"
         placeholder="Email"
+        class="input"
       >
 
       <div
@@ -266,7 +256,7 @@
 
       <label
         for="phone"
-        class="contact-labels"
+        class="hidden"
       >
         Phone
       </label>
@@ -275,10 +265,12 @@
         name="phone"
         type="text"
         placeholder="Phone Number"
+        class="input"
       >
 
       <button
         id="submit-contact-form"
+        class="submit"
       >
         SUBMIT
       </button>
@@ -381,7 +373,7 @@ Clients deserve a broker who is one hundred percent invested in the market of th
           </div>
 
           <div>
-            <button class="contact-us-link contact-us-button">
+            <button class="cursor-pointer contact-us-button contact-us-link">
               CONTACT US
             </button>
           </div>
@@ -1102,7 +1094,7 @@ Clients deserve a broker who is one hundred percent invested in the market of th
         ABOUT
       </a>
 
-      <a class="title contact-us-link link">
+      <a class="title cursor-pointer contact-us-link link">
         CONTACT
       </a>
 
@@ -1179,10 +1171,8 @@ Clients deserve a broker who is one hundred percent invested in the market of th
           }, 500)
         }
 
-        if (compatibleBrowser()) {
-          window.sr = ScrollReveal();
-          sr.reveal(".top");
-        }
+        window.sr = ScrollReveal();
+        sr.reveal(".top");
       })
     </script>
   </body>

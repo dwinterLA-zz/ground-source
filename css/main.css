@@ -512,6 +512,57 @@ textarea,
 [aria-disabled] {
   cursor: default; }
 
+#home-container .contact-container {
+  position: relative;
+  padding-left: 80px;
+  max-width: 1800px; }
+  @media screen and (max-width: 768px) {
+    #home-container .contact-container {
+      padding: 20px; } }
+#home-container .contact-info {
+  padding: 11px; }
+#home-container .contact__link {
+  width: 100%; }
+#home-container .location {
+  position: relative;
+  color: #858585;
+  min-height: 349px; }
+  @media screen and (max-width: 768px) {
+    #home-container .location {
+      font-size: 0.9em;
+      position: relative; } }
+#home-container .gmap-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+  #home-container .gmap-container > div {
+    width: 100%;
+    height: 100%; }
+  @media screen and (max-width: 768px) {
+    #home-container .gmap-container {
+      display: none; } }
+#home-container .contact-content {
+  width: 42%;
+  padding: 44px 0; }
+  @media screen and (max-width: 768px) {
+    #home-container .contact-content {
+      position: static;
+      width: 100%;
+      padding: 0; } }
+#home-container .contact-header {
+  font-size: 34px;
+  background-color: white;
+  padding: 0.5em 18px; }
+  @media screen and (max-width: 768px) {
+    #home-container .contact-header {
+      padding: 23px 0 14px 0;
+      margin-left: 0;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.8);
+      font-size: 52px; } }
+
 html {
   font-family: Montserrat, Helvetica, Arial, sans-serif; }
 
@@ -592,102 +643,6 @@ a {
 .subdued {
   opacity: 0.5; }
 
-#contact-us-gmap {
-  width: 100%;
-  height: 100%; }
-
-.contact-table {
-  text-align: left;
-  margin-left: 52px; }
-  .contact-table > td {
-    width: 50%; }
-
-.contact-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 4;
-  padding-left: 80px;
-  max-width: 1800px; }
-
-#contact-us-home-section {
-  position: relative;
-  color: #858585;
-  min-height: 349px; }
-  #contact-us-home-section .contact-us-gmap-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; }
-  #contact-us-home-section .contact-content {
-    width: 42%;
-    padding: 44px 0;
-    margin-left: -18px; }
-    #contact-us-home-section .contact-content .contact-header {
-      font-size: 34px;
-      background-color: white;
-      padding: 0.5em 18px; }
-    #contact-us-home-section .contact-content .contact-body {
-      padding: 11px;
-      margin: 0;
-      font-size: 16px;
-      background: rgba(255, 255, 255, 0.9);
-      list-style-type: none; }
-      #contact-us-home-section .contact-content .contact-body > a {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        padding: 6px;
-        cursor: pointer;
-        text-decoration: none; }
-        #contact-us-home-section .contact-content .contact-body > a:hover > * {
-          text-decoration: underline; }
-        #contact-us-home-section .contact-content .contact-body > a > * {
-          text-decoration: none; }
-
-.contact-info-body {
-  font-size: 0.9em;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 15px 0;
-  color: #858585;
-  width: 80%;
-  text-align: center;
-  margin: 0 auto; }
-  .contact-info-body .contact-row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 0.7em;
-    text-align: left;
-    padding-bottom: 9px; }
-    .contact-info-body .contact-row > div {
-      position: relative;
-      float: left;
-      display: table;
-      width: 50%;
-      overflow: hidden;
-      word-wrap: break-word; }
-      .contact-info-body .contact-row > div > div {
-        display: table-cell;
-        vertical-align: middle;
-        width: 100%; }
-      .contact-info-body .contact-row > div > .icon-holder {
-        width: 46px; }
-
 .black {
   color: black; }
 
@@ -701,7 +656,7 @@ a {
   width: 49%;
   padding-left: 1px; }
 
-.contact-us-link {
+.cursor-pointer {
   cursor: pointer; }
 
 .property-slideshow {
@@ -712,6 +667,12 @@ a {
 
 .underline {
   text-decoration: underline; }
+
+.text-centered {
+  text-align: center; }
+
+.font-weight-light {
+  font-weight: 100; }
 
 .preview-map {
   width: 230px;
@@ -911,7 +872,6 @@ a {
     width: 70%;
     max-width: 1000px;
     font-size: 1.3em;
-    text-align: center;
     background-color: white; }
     @media screen and (max-width: 768px) {
       .service-detail .inner {
@@ -951,80 +911,6 @@ a {
   .services-modal-content .content {
     padding: 35px;
     font-size: 0.8em; }
-
-.contact-labels {
-  display: none; }
-
-.contact-us-modal {
-  position: fixed;
-  display: none;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 101;
-  background: rgba(0, 0, 0, 0.7); }
-  .contact-us-modal .inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    width: 70%;
-    max-width: 1000px;
-    font-size: 1.3em;
-    text-align: center;
-    background-color: white; }
-    @media screen and (max-width: 768px) {
-      .contact-us-modal .inner {
-        position: absolute;
-        top: 0;
-        left: 0;
-        -webkit-transform: none;
-                transform: none;
-        width: 100%;
-        height: 100%;
-        max-height: 100%;
-        overflow-y: auto; } }
-  .contact-us-modal .inner {
-    width: 67%;
-    overflow-y: auto; }
-  .contact-us-modal .form {
-    margin: 36px; }
-    .contact-us-modal .form > p {
-      font-weight: 50;
-      margin-bottom: 42px;
-      color: #777777;
-      font-size: 2em; }
-    .contact-us-modal .form .validation {
-      display: block;
-      margin: 0 auto 18px auto;
-      width: 80%;
-      opacity: 0.8;
-      display: none;
-      text-align: left;
-      color: #d46049; }
-    .contact-us-modal .form > input {
-      display: block;
-      margin: 0 auto 18px auto;
-      width: 80%;
-      height: 2.8em;
-      opacity: 0.8;
-      text-indent: 18px;
-      border-style: solid;
-      border-width: thin;
-      border-color: #efefef;
-      background-color: #fcfcfc !important; }
-    .contact-us-modal .form > button {
-      width: 80%;
-      height: 2em;
-      border-radius: 500px;
-      margin-top: 8px;
-      font-weight: 800;
-      color: #c04d3a;
-      border-color: #c04d3a;
-      border-style: solid;
-      margin-top: 20px; }
 
 .nav-modal {
   display: none;
@@ -1193,6 +1079,7 @@ a {
     bottom: 8.5%; } }
 #header-text {
   position: relative;
+  opacity: 0;
   z-index: 2;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
   color: white;
@@ -1549,24 +1436,6 @@ a {
     display: none;
     height: 0; }
 
-  .contact-info-body {
-    font-size: 0.9em;
-    margin-top: 12px;
-    width: 100%; }
-    .contact-info-body .contact-row {
-      padding-left: 0;
-      margin: 0 auto;
-      width: 80%; }
-      .contact-info-body .contact-row > div {
-        width: 100%;
-        margin-bottom: 8px; }
-        .contact-info-body .contact-row > div > img {
-          float: left;
-          margin-top: -12px;
-          margin-bottom: 8px; }
-        .contact-info-body .contact-row > div > span {
-          margin-top: 10px; }
-
   .navigation-arrow-right {
     right: 5%; }
 
@@ -1611,46 +1480,8 @@ a {
   #header-logo {
     height: 29px; }
 
-  #contact-us-home-section {
-    font-size: 0.9em;
-    position: relative; }
-    #contact-us-home-section .contact-us-gmap-container {
-      display: none; }
-    #contact-us-home-section .contact-container {
-      padding-left: 0; }
-      #contact-us-home-section .contact-container .contact-content {
-        position: static;
-        width: 100%;
-        padding-top: 0;
-        margin-left: 0; }
-        #contact-us-home-section .contact-container .contact-content .contact-header {
-          padding: 23px 0 14px 0;
-          margin-left: 0;
-          text-align: center;
-          background: rgba(255, 255, 255, 0.8);
-          font-size: 52px; }
-        #contact-us-home-section .contact-container .contact-content .contact-body {
-          font-size: 0.95em; }
-
   .small-hidden {
     display: none; }
-
-  .contact-us-modal {
-    width: 100%;
-    height: 100%;
-    overflow-y: auto; }
-    .contact-us-modal .inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      margin-top: 0; }
-      .contact-us-modal .inner .form {
-        margin: 0; }
-        .contact-us-modal .inner .form > p {
-          padding-top: 20px;
-          font-size: 1.8em; }
 
   .services-modal-content {
     height: 100%; }
@@ -1739,20 +1570,7 @@ a {
     width: 2em; }
 
   .services-info {
-    width: 100%; }
-
-  #contact-us {
-    background-color: white;
-    background-image: none;
-    height: 340px; }
-    #contact-us .contact-content {
-      width: 100%;
-      top: 0;
-      left: 0; }
-      #contact-us .contact-content .contact-header {
-        text-align: center; }
-      #contact-us .contact-content .contact-body {
-        padding: 0 0 0 20px; } }
+    width: 100%; } }
 .slick-slide {
   outline: none; }
 
@@ -3071,6 +2889,100 @@ a {
       .footer .copyright--mobile {
         display: block; } }
 
+.contact-us-modal {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  background: rgba(0, 0, 0, 0.7); }
+  .contact-us-modal .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 1000px;
+    font-size: 1.3em;
+    background-color: white; }
+    @media screen and (max-width: 768px) {
+      .contact-us-modal .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-transform: none;
+                transform: none;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto; } }
+  .contact-us-modal .inner {
+    padding: 2em 6em; }
+    @media screen and (max-width: 768px) {
+      .contact-us-modal .inner {
+        margin: 0; }
+        .contact-us-modal .inner > p {
+          padding-top: 20px; } }
+  .contact-us-modal .form {
+    margin: 20px 0 0.67em 0; }
+  .contact-us-modal .validation {
+    display: none;
+    margin: 0 auto 18px auto;
+    width: 100%;
+    opacity: 0.8;
+    text-align: left;
+    color: #d46049; }
+  .contact-us-modal .input {
+    margin: 0 auto 18px auto;
+    width: 100%;
+    height: 2.8em;
+    opacity: 0.8;
+    text-indent: 18px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #efefef;
+    background-color: #fcfcfc; }
+  .contact-us-modal .submit {
+    width: 100%;
+    margin-top: 20px;
+    height: 2em;
+    border-radius: 500px;
+    font-weight: 800;
+    color: #c04d3a;
+    border-color: #c04d3a;
+    border-style: solid; }
+
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  list-style-type: none; }
+
+.contact__link {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6px;
+  cursor: pointer;
+  text-decoration: none; }
+  .contact__link:hover > * {
+    text-decoration: underline; }
+  @media screen and (max-width: 1200px) {
+    .contact__link {
+      width: 100%; } }
+
 .modal {
   position: fixed;
   display: none;
@@ -3089,7 +3001,6 @@ a {
     width: 70%;
     max-width: 1000px;
     font-size: 1.3em;
-    text-align: center;
     background-color: white; }
     @media screen and (max-width: 768px) {
       .modal .inner {
