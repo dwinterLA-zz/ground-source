@@ -39,18 +39,6 @@
     }
   }
 
-  .services-carousel {
-    .slick-dots {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 30px;
-      @include mobile {
-        bottom: -28px;
-      }
-    }
-  }
-
   .title {
     @include expanding-hover($primary-color);
     text-decoration: none;
@@ -58,6 +46,7 @@
     font-size: 2.4em;
     font-weight: 600;
   }
+
   .link {
     @include expanding-hover($primary-color);
     display: inline-block;
@@ -70,11 +59,13 @@
       color: white;
     }
   }
+
   .description {
     color: white;
     font-size: 1.1em;
     opacity: 0.9;
   }
+
   .contact-us-button {
     color: white;
     border-radius: 500px;
@@ -85,5 +76,41 @@
     margin-top: 5px;
     padding: 6px 20px;
     outline: none;
+  }
+
+  .services-carousel {
+    padding-top: 0;
+    .slick-dots {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+
+      @include mobile {
+        bottom: -28px;
+      }
+    }
+
+    .slide__text {
+      text-align: center;
+      flex-basis: 33.33%;
+      // don't allow text to overlap slick dots
+      padding: 24px 12px 52px 12px;
+      @include mobile {
+        order: -1;
+        padding: 0;
+        margin: 20px 0;
+      }
+    }
+
+    .slide__image {
+      flex-basis: 33.33%;
+    }
+
+    .example-header {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: $primary-color;
+    }
   }
 }

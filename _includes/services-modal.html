@@ -1,7 +1,10 @@
-<div class="inner">
-	<div class="services-modal-content">
+<div
+	id="{{ include.id }}"
+	class="service-modal modal"
+>
+	<div class="modal__inner modal__inner--floating">
 
-		<div class="service-detail-close"></div>
+		<div class="service-detail-close modal__close"></div>
 
 		<div class="header">
 			<h1>
@@ -11,13 +14,13 @@
 
 		<div class="content">
 
-			<div class="service-section">
+			<div class="description">
 				<p>
 					{{ include.body-text }}
 				<p>
 			</div>
 
-			<div class="service-section service-section--learn-more">
+			<div class="learn-more">
 				<a
 					href="{{ include.link }}"
 					class="btn-learn-more btn-learn-more--orange"

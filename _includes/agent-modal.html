@@ -1,8 +1,8 @@
 <div
 	id="agent-{{ include.agent-index }}"
-	class="modal agent-modal"
+	class="agent-modal modal"
 >
-	<div class="inner">
+	<div class="modal__inner modal__inner--floating">
 
 		<div class="modal__close"></div>
 
@@ -29,27 +29,34 @@
 				<div class="agent-contact">
 
 					{% if include.agent.email.size > 0 %}
-						<p>
-							<a href="mailto:{{include.agent.email}}">
-								{{include.agent.email}}
-							</a>
-						</p>
+						<a href="mailto:{{include.agent.email}}">
+							{{include.agent.email}}
+						</a>
 					{% endif %}
 
 					{% if include.agent.phone.size > 0 %}
-						<p>
+						<a
+							href="tel:{{include.agent.phone}}"
+							class="text-decoration-none"
+						>
 							Land Line: {{include.agent.phone}}
-						</p>
+						</a>
 					{% endif %}
 
 					{% if include.agent.cell.size > 0 %}
-						<p>
+						<a
+							href="tel:{{include.agent.cell}}"
+							class="text-decoration-none"
+						>
 							Cell: {{include.agent.cell}}
-						</p>
+						</a>
 					{% endif %}
 
 					{% if include.agent.email.size > 0 %}
-						<a href="mailto:{{include.agent.email}}">
+						<a
+							href="mailto:{{include.agent.email}}"
+							class="text-decoration-none"
+						>
 							<button class="rounded-red-button">
 								work with {{include.agent.first_name}}
 							</button>

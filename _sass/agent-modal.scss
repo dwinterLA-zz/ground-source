@@ -1,9 +1,13 @@
 .agent-modal {
-  .inner {
+  @include modal;
+  .modal__inner {
+    overflow: visible;
     @include mobile {
       padding: 0 18px;
+      overflow: auto;
     }
   }
+
   .hero {
     display: flex;
     justify-content: space-between;
@@ -14,16 +18,19 @@
 
   .hero__avatar {
     width: 268px;
+
     > img {
       position: relative;
       left: -10px;
       width: 100%;
     }
+
     @include mobile {
       width: 100%;
       margin: 0 auto;
       padding-top: 76px;
       display: inline-block;
+
       > img {
         left: 0;
       }
@@ -37,6 +44,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding-left: 25px;
+
     @include mobile {
       padding: 0;
       text-align: center;
@@ -62,14 +70,18 @@
     font-size: 0.7em;
     font-weight: bold;
     padding-top: 20px;
-    > p {
+    line-height: 1.4;
+
+    @include mobile {
+      line-height: 1.8;
+    }
+
+    > a {
+      display: block;
       margin-top: 0;
       margin-bottom: 0;
       text-transform: uppercase;
       font-size: 0.85em;
-      > a {
-        text-decoration: underline;
-      }
     }
   }
 
@@ -81,12 +93,15 @@
     opacity: 0.55;
     line-height: 110%;
     font-size: 0.9em;
+
     @include mobile {
       margin: 0;
     }
+
     > p {
       font-size: 0.9em;
     }
+
     > h2 {
       font-size: 1.8em;
       opacity: 1;
