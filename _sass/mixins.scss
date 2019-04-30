@@ -55,14 +55,17 @@
   bottom: 0;
   z-index: 101;
   background: rgba(0, 0, 0, 0.7);
+
   .modal__inner {
     font-size: 1.3em;
     background-color: white;
     overflow-y: auto;
   }
+
   .modal__inner--full {
     height: 100%;
   }
+
   .modal__inner--floating {
     position: absolute;
     top: 50%;
@@ -71,6 +74,7 @@
     width: 70%;
     max-width: 1000px;
     max-height: 100vh;
+
     @include mobile {
       position: absolute;
       top: 0;
@@ -111,6 +115,7 @@
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
   }
+
   &:hover {
     &:before {
       visibility: visible;
