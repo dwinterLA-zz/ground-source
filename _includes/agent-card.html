@@ -50,14 +50,24 @@
 
 			{% if include.agent.phone.size > 0 %}
 
-				Land Line: {{include.agent.phone}}
+				<a
+					href="tel:{{include.agent.phone}}"
+					class="text-decoration-none"
+				>
+					Land Line: {{include.agent.phone}}
+				</a>
 
 				<br />
 
 			{% endif %}
 
 			{% if include.agent.cell.size > 0 %}
-				Cell: {{include.agent.cell}}
+				<a
+					href="tel:{{include.agent.cell}}"
+					class="text-decoration-none"
+				>
+					Cell: {{include.agent.cell}}
+				</a>
 			{% endif %}
 
 		</div>
