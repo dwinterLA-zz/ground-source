@@ -1,9 +1,13 @@
 .agent-modal {
-  .inner {
+  @include modal;
+  .modal__inner {
+    overflow: visible;
     @include mobile {
       padding: 0 18px;
+      overflow: auto;
     }
   }
+
   .hero {
     display: flex;
     justify-content: space-between;
@@ -62,14 +66,16 @@
     font-size: 0.7em;
     font-weight: bold;
     padding-top: 20px;
-    > p {
+    line-height: 1.4;
+    @include mobile {
+      line-height: 1.8;
+    }
+    > a {
+      display: block;
       margin-top: 0;
       margin-bottom: 0;
       text-transform: uppercase;
       font-size: 0.85em;
-      > a {
-        text-decoration: underline;
-      }
     }
   }
 

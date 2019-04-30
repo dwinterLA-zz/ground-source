@@ -1,9 +1,10 @@
 .contact-us-modal {
   @include modal;
-  .inner {
+  .modal__inner {
     padding: 2em 6em;
     @include mobile {
       margin: 0;
+      padding: 1em;
       > p {
         padding-top: 20px;
       }

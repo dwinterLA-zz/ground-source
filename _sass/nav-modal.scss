@@ -1,0 +1,67 @@
+.nav-modal {
+  @include modal;
+  &#active-section-home {
+    .link-home {
+      color: $primary-color;
+    }
+  }
+  &#active-section-services {
+    .link-services {
+      color: $primary-color;
+    }
+  }
+  &#active-section-about {
+    .link-about {
+      color: $primary-color;
+    }
+  }
+  &#active-section-experience {
+    .link-experience {
+      color: $primary-color;
+    }
+  }
+  &#active-section-listings {
+    .link-listings {
+      color: $primary-color;
+    }
+  }
+  .modal-logo {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    max-width: 278px;
+    @include mobile {
+      max-width: 46%;
+      top: 18px;
+      left: 14px;
+    }
+  }
+  .menu-close {
+    z-index: 10;
+    @include close-button;
+  }
+
+  .nav {
+    padding: 8% 0 0;
+    list-style: none;
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    @include mobile {
+      margin-top: 42px;
+    }
+    > a {
+      display: block;
+      line-height: 2;
+      font-size: 1.125em;
+      text-decoration: none;
+      position: relative;
+      &:hover {
+        color: #888;
+      }
+      > span {
+        @include expanding-hover;
+      }
+    }
+  }
+}
