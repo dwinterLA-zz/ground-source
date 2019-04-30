@@ -86,4 +86,28 @@
     padding: 6px 20px;
     outline: none;
   }
+
+  .service-slide__text {
+    text-align: center;
+    flex-basis: 33.33%;
+    // don't let text overlap slick dots
+    padding: 0 12px 52px 12px;
+    @include mobile {
+      order: -1;
+      padding: 0;
+    }
+  }
+
+  .service-slide__image {
+    flex-basis: 33.33%;
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  .service-header {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: $primary-color;
+  }
 }

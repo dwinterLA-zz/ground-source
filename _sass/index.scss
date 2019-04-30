@@ -312,35 +312,6 @@ a {
   cursor: pointer;
 }
 
-.service-detail {
-  min-width: 420px;
-  @include modal;
-}
-
-.services-modal-content {
-  color: #858585;
-  text-align: left;
-  .service-detail-close {
-    @include close-button-small;
-    top: 28px;
-    right: 35px;
-  }
-  .header {
-    background-color: $primary-color;
-    // extra right padding is to prevent header text from encroaching on the close button
-    padding: 25px 76px 25px 35px;
-    color: white;
-    > h1 {
-      margin: 0 24px 0 0;
-    }
-  }
-
-  .content {
-    padding: 35px;
-    font-size: 0.8em;
-  }
-}
-
 .home-intro-left {
   width: 50%;
   padding: 80px;
@@ -870,23 +841,6 @@ a {
 
   .small-hidden {
     display: none;
-  }
-
-  .services-modal-content {
-    height: 100%;
-    .service-detail-close {
-      @include close-button;
-      padding: 21px;
-    }
-    .header {
-      font-size: 0.8em;
-      > h1 {
-        padding-right: 30px;
-      }
-    }
-    .content {
-      background-color: white;
-    }
   }
 
   .service-detail {

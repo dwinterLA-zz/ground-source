@@ -28,32 +28,30 @@
 
     <div id="home-container">
 
-      <div id="tenant-service-modal" class="service-detail">
-        {% include services-modal.html
-          header-text="TENANT REPRESENTATION"
-          body-text=page.tenant_services_text
-          examples=site.examples_tenant
-          link="/experience.html?service=tenant"
-          %}
-      </div>
 
-      <div id="landlord-service-modal" class="service-detail">
-        {% include services-modal.html
-          header-text="LANDLORD REPRESENTATION"
-          body-text=page.landlord_services_text
-          examples=site.examples_landlord
-          link="/experience.html?service=landlord"
-          %}
-      </div>
+      {% include services-modal.html
+        id="tenant-service-modal"
+        header-text="TENANT REPRESENTATION"
+        body-text=page.tenant_services_text
+        examples=site.examples_tenant
+        link="/experience.html?service=tenant"
+      %}
 
-      <div id="investment-service-modal" class="service-detail">
-        {% include services-modal.html
-          header-text="INVESTMENT SALES"
-          body-text=page.investment_services_text
-          examples=site.examples_investment
-          link="/experience.html?service=investment"
-        %}
-      </div>
+      {% include services-modal.html
+        id="landlord-service-modal"
+        header-text="LANDLORD REPRESENTATION"
+        body-text=page.landlord_services_text
+        examples=site.examples_landlord
+        link="/experience.html?service=landlord"
+      %}
+
+      {% include services-modal.html
+        id="investment-service-modal"
+        header-text="INVESTMENT SALES"
+        body-text=page.investment_services_text
+        examples=site.examples_investment
+        link="/experience.html?service=investment"
+      %}
 
       <div id="top-nav">
         <ul>

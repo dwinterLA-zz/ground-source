@@ -6,6 +6,12 @@
 @import "vendor/sanitize.scss";
 @import "variables.scss";
 @import "mixins.scss";
+@import "nav-modal.scss";
+@import "agent-card.scss";
+@import "agent-modal.scss";
+@import "footer.scss";
+@import "contact-us-modal.scss";
+@import "contact-info.scss";
 @import "home.scss";
 @import "index.scss";
 @import "listing.scss";
@@ -14,16 +20,7 @@
 @import "experience.scss";
 @import "newsletter.scss";
 @import "services.scss";
-@import "agent-card.scss";
-@import "agent-modal.scss";
-@import "footer.scss";
-@import "contact-us-modal.scss";
-@import "contact-info.scss";
-@import "nav-modal.scss";
-
-.modal {
-  @include modal;
-}
+@import "services-modal.scss";
 
 .modal__close {
   @include close-button;
@@ -45,6 +42,7 @@
   padding: 5px 20px;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
   @include mobile {
     font-size: 1em;
   }
@@ -52,6 +50,13 @@
 
 .pt-site-header {
   padding-top: $pt-site-header;
+}
+
+.bullet-square {
+  display: inline-block;
+  padding: 5px;
+  margin-right: 4px;
+  background-color: $primary-color;
 }
 
 /**

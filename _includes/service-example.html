@@ -3,24 +3,26 @@
 		<div class="services-carousel">
 			{% for example in include.examples %}
 				<div>
-					<div class="service-section--highlights">
+					<div class="service-slide">
 
 						{% if include.multi-image %}
 							<div
-								class="service-highlight service-highlight--image"
+								class="service-slide__image"
 								style="background-image: url('{{ example.image_1 }}')"
 							></div>
 						{% endif %}
 
-						<div class="service-highlight service-highlight--text">
+						<div class="service-slide__text">
 
-							<h5 class="highlight__header">{{ example.header }}</h5>
+							<h5 class="service-header">
+								{{ example.header }}
+							</h5>
 
 							<div class="inline-block">
-								<ul class="highlight__list">
+								<ul class="highlight-list">
 									{% for highlight in example.highlights %}
 										<li>
-											<div class="highlight__bullet"></div>
+											<div class="bullet-square"></div>
 											{{ highlight }}
 										</li>
 									{% endfor %}
@@ -30,7 +32,7 @@
 						</div>
 
 						<div
-							class="service-highlight service-highlight--image"
+							class="service-slide__image"
 							style="background-image: url('{{ example.image_2 }}')"
 						></div>
 
