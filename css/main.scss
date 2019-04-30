@@ -12,6 +12,8 @@
 @import "footer.scss";
 @import "contact-us-modal.scss";
 @import "contact-info.scss";
+@import "services.scss";
+@import "services.scss";
 @import "home.scss";
 @import "index.scss";
 @import "listing.scss";
@@ -19,8 +21,6 @@
 @import "about.scss";
 @import "experience.scss";
 @import "newsletter.scss";
-@import "services.scss";
-@import "services-modal.scss";
 
 .modal__close {
   @include close-button;

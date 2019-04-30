@@ -1,56 +1,104 @@
-.service-section {
-  padding-bottom: 52px;
-}
+.service-modal {
+  @include modal;
 
-.service-slide {
-  display: flex;
+  .modal__inner--floating {
+    width: 80%;
+    @include mobile {
+      width: 100%;
+    }
+  }
+  min-width: 420px;
   @include mobile {
-    flex-direction: column;
+    min-width: 0;
   }
-}
-
-.service-learn-more {
-  text-align: center;
-}
-
-.service-slide__text {
-  flex-basis: 40%;
-  padding-left: 22px;
-  text-align: left;
-  @include mobile {
-    order: 1;
-    padding: 0;
+  .service-detail-close {
+    @include close-button-small;
+    top: 28px;
+    right: 35px;
+    @include mobile {
+      @include close-button;
+      padding: 21px;
+    }
   }
-}
-
-.service-slide__image {
-  @include bg-cover-center;
-  flex-basis: 60%;
-  min-height: 300px;
-  @include mobile {
-    margin-bottom: 20px;
+  .header {
+    background-color: $primary-color;
+    // extra right padding is to prevent header text from encroaching on the close button
+    padding: 25px 76px 25px 35px;
+    color: white;
+    > h1 {
+      margin: 0 24px 0 0;
+    }
+    @include mobile {
+      font-size: 0.8em;
+      > h1 {
+        padding-right: 30px;
+      }
+    }
   }
-}
 
-.highlight-list {
-  text-align: left;
-  padding-left: 15px;
-  font-size: 1.2em;
-  > li {
-    list-style-type: none;
+  .content {
+    padding: 35px;
+    font-size: 0.8em;
+    background-color: white;
+    @include mobile {
+      background-color: white;
+    }
   }
-}
+  .description {
+    padding-top: 1.5em;
+  }
 
-.service-header {
-  color: $primary-color;
-  font-size: 1.3em;
-  color: $grey;
-  margin: 10px 0;
+  .learn-more {
+    text-align: center;
+    padding-top: 1.5em;
+  }
 }
 
 .services-carousel {
   text-align: center;
+  padding-top: 3em;
   .slick-dots {
     margin-top: 24px;
+  }
+  .slide {
+    display: flex;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  .slide__text {
+    flex-basis: 40%;
+    padding-left: 22px;
+    text-align: left;
+    @include mobile {
+      order: 1;
+      padding: 0;
+    }
+  }
+
+  .slide__image {
+    @include bg-cover-center;
+    flex-basis: 60%;
+    min-height: 300px;
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  .highlights {
+    text-align: left;
+    padding-left: 15px;
+    font-size: 1.2em;
+    > li {
+      list-style-type: none;
+    }
+  }
+
+  .example-header {
+    color: $primary-color;
+    font-size: 1.3em;
+    color: $grey;
+    margin: 10px 0;
   }
 }
