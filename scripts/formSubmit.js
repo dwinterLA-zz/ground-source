@@ -1,17 +1,11 @@
+const VALID_MAILER_KEYS = ["name", "email", "phone"];
+const GOOGLE_WEB_APP_URL =
+  "https://script.google.com/macros/s/AKfycbzfbEoLceZY6ZVXRjwOJU5J_iu4gW15y9vSSLuwXjGEk0w7ojg/exec";
+
 function validEmail(email) {
   // see:
   var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   return re.test(email);
-}
-
-function validateHuman(honeypot) {
-  if (honeypot) {
-    //if hidden form filled up
-    console.log("Robot Detected!");
-    return true;
-  } else {
-    console.log("Welcome Human!");
-  }
 }
 
 // get all data in form and return object
@@ -52,7 +46,6 @@ function getFormData() {
       }
     }
   });
-  console.log(data);
   return data;
 }
 
@@ -62,14 +55,11 @@ function handleFormSubmit(event) {
   $("#gform").hide();
   $("#form-submit-loader").show();
 
-  // This is the 'Honey Pot' method of SPAM detection:
-  // 1. Include a hidden field on your form.
-  // 2. If the hidden field somehow becomes populated, it's probably SPAM.
-
-  // The field is named "albuquerque" because I imagine that spammers
-  // are becoming privy to the customary 'honeypot'.
-
-  if (data.albuquerque.length > 0) {
+  // This is the 'honeypot' method of spam dection.
+  // I've chosen 'albuquerque', instead of the standard 'honeypot' field name because
+  // I fear that spammers will catch on to this technique and eventually they just won't enter a value if
+  // if the name of the field is 'honeypot'
+  if (data.albuquerque) {
     showFailedState();
     return;
   }
@@ -80,11 +70,19 @@ function handleFormSubmit(event) {
     $("#email-invalid").show();
     return false;
   } else {
-    var url = "GOOG_SCRIPT_HERE";
+    var url = GOOGLE_WEB_APP_URL;
     var encoded = Object.keys(data)
-      .map(function(k) {
-        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-      })
+      .reduce(function(encodedData, currentKey) {
+        if (VALID_MAILER_KEYS.includes(currentKey)) {
+          encodedData.push(
+            encodeURIComponent(currentKey) +
+              "=" +
+              encodeURIComponent(data[currentKey])
+          );
+        }
+
+        return encodedData;
+      }, [])
       .join("&");
 
     $.ajax({
@@ -106,6 +104,7 @@ function handleFormSubmit(event) {
     document.getElementById("error_message").style.display = "block";
   }
 }
+
 function loaded() {
   // bind to the submit event of our form
   var form = document.getElementById("gform");
