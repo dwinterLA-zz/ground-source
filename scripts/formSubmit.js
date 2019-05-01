@@ -1,18 +1,11 @@
 const VALID_MAILER_KEYS = ["name", "email", "phone"];
+const GOOGLE_WEB_APP_URL =
+  "https://script.google.com/macros/s/AKfycbzfbEoLceZY6ZVXRjwOJU5J_iu4gW15y9vSSLuwXjGEk0w7ojg/exec";
 
 function validEmail(email) {
   // see:
   var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   return re.test(email);
-}
-
-function validHuman(honeypot) {
-  if (honeypot) {
-    //if hidden form filled up
-    return false;
-  } else {
-    return true;
-  }
 }
 
 // get all data in form and return object
@@ -62,11 +55,11 @@ function handleFormSubmit(event) {
   $("#gform").hide();
   $("#form-submit-loader").show();
 
-  // I've chosen 'albuquerque', instead of the standard 'honeypot' field name (for spam detection), because
-  // I fear that spammers will catch on to this technique and eventually, their software just won't enter a value
+  // This is the 'honeypot' method of spam dection.
+  // I've chosen 'albuquerque', instead of the standard 'honeypot' field name because
+  // I fear that spammers will catch on to this technique and eventually they just won't enter a value if
   // if the name of the field is 'honeypot'
-
-  if (!validHuman(data.albuquerque)) {
+  if (data.albuquerque) {
     showFailedState();
     return;
   }
@@ -77,8 +70,7 @@ function handleFormSubmit(event) {
     $("#email-invalid").show();
     return false;
   } else {
-    var url =
-      "https://script.google.com/macros/s/AKfycbzfbEoLceZY6ZVXRjwOJU5J_iu4gW15y9vSSLuwXjGEk0w7ojg/exec";
+    var url = GOOGLE_WEB_APP_URL;
     var encoded = Object.keys(data)
       .reduce(function(encodedData, currentKey) {
         if (VALID_MAILER_KEYS.includes(currentKey)) {

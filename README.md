@@ -21,8 +21,8 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 1. Branch off of `groundsource-dev`.
 2. When you create a pull request, remember to create it into `groundsource-dev`, not master!
 3. After you push the branch, Forestry will automatically detect any changes, build and deploy.
-   The deploy usually only takes a few minutes, but I've seen it take up to 30. You can check the status of the deploy
-   by logging into <a href="https://forestry.io/" target="_blank">Forestry.io</a>. There will be a spinner icon in the upper-left hand corner of the page if it's still working, or potentially an error message.
+  The deploy usually only takes a few minutes, but I've seen it take up to 30. You can check the status of the deploy
+  by logging into <a href="https://forestry.io/" target="_blank">Forestry.io</a>. There will be a spinner icon in the upper-left hand corner of the page if it's still working, or potentially an error message.
 
 ## Managing Content
 
@@ -77,8 +77,38 @@ are sourced from completely different HTML files.
 ## Site Data
 
 Jekyll has a concept of 'site data'. Any `.yml` file you place within the `_data` folder becomes
-accesible on the `site.data` key with the name of the folder included in the path.
+accessible on the `site.data` key with the name of the folder included in the path.
 
 So far we only have `contact.yml`. You can edit the values via the `Data` link on the left-nav
 in Forestry, or by directly editing this file: `/ground-source/_data/contact.yml`.
-Site data is accesible within the liquid templates in the following manner: `site.data.contact.instagram`.
+Site data is accessible within the liquid templates in the following manner: `site.data.contact.instagram`.
+
+## The Contact Us form
+
+An interesting implementation. The form that's part of the 'Contat Us' modal makes a POST request to a Google script
+that is 'deployed as web app'.
+
+The script lives within this gmail account: `groundsourcemailer@gmail.com` . As of this writing, the script does two things:
+
+1. Adds a row to this associated google sheet: 'GroundSource - Request`
+2. Sends an email to: `info@groundsource.net` with the information from the form
+
+
+If you need to update the Google script:
+1. Login to `groundsourcemailer@gmail.com`
+2. Go to Drive, and click on `GroundSource - Request`
+3. Select `Tools -> Script Editor
+4. After you make your edits:
+  A. Publish -> Deploy as Web App
+  B. Under `Project Version`, select `New`
+  C. Make sure that `Execute the app as` = `Me`
+  D. Make sure that `Who has access to the app` = `Anyone, even anonymous`
+  E. Press `Update` .. you'll then be presented with a new app URL, copy it
+  F. Now, you need to update the `POST` url within this repository:
+    1. Within `formSubmit.js` you'll find this constant at the top of the file: `GOOGLE_WEB_APP_URL`,
+       update it with the new URL that Google provided when you updated the script
+
+Note that if the mailer ever stops working, we may need to increment the version (steps 4A - 4E) and republish to
+get it working again.
+
+
