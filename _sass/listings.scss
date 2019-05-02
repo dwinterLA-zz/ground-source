@@ -112,6 +112,7 @@
 
   .listings__button {
     background-color: $primary-color-darker;
+    min-width: 120px;
     color: white;
     border: none;
     cursor: pointer;
