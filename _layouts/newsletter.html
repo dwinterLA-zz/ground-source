@@ -20,6 +20,17 @@
       </style>
   </head>
   <body yahoo bgcolor="#f6f8f1">
+    <!--[if (gte mso 9)|(IE)]>
+      <table
+        width="600"
+        align="center"
+        cellpadding="0"
+        cellspacing="0"
+        border="0"
+      >
+        <tr>
+          <td>
+            <![endif]-->
             <table
               width="100%"
               border="0"
@@ -90,525 +101,529 @@
 
                     </tr>
 
-                      <table
-                        class="content"
-                        bgcolor="white"
-                        align="center"
-                        cellpadding="8"
-                        cellspacing="0"
-                        border="0"
+                  </table>
+
+                  <table
+                    class="content"
+                    bgcolor="white"
+                    align="center"
+                    cellpadding="8"
+                    cellspacing="0"
+                    border="0"
+                    style="
+                      font-size: 26px;
+                      color: white;
+                    "
+                  >
+                    <tr>
+
+                      {% if page.lease %}
+                        <td
+                          width="100%"
+                          bgcolor="#3678c6"
+                        >
+                          FOR LEASE
+                        </td>
+                      {% endif %}
+
+                      {% if page.sublease %}
+                        <td
+                          width="100%"
+                          bgcolor="#3678c6"
+                        >
+                          FOR SUBLEASE
+                        </td>
+                      {% endif %}
+
+                      {% if page.sale %}
+                        <td
+                          width="100%"
+                          bgcolor="#d46049"
+                        >
+                          FOR SALE
+                        </td>
+                      {% endif %}
+
+                    </tr>
+                  </table>
+
+                  <table
+                    class="content"
+                    bgcolor="white"
+                    align="center"
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                  >
+                    <tr>
+                      <td>
+                        <img
+                          src="{{ gs_url }}{{page.property-header}}"
+                          mc:label="header_image"
+                          mc:edit="header_image"
+                          mc:allowdesigner
+                          mc:allowtext
+                          style="width: 100%;"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table
+                    class="content"
+                    bgcolor="white"
+                    align="center"
+                    cellpadding="8"
+                    cellspacing="0"
+                    border="0"
+                    style="background: linear-gradient(to bottom, #d4d2d3, white 50%);"
+                  >
+
+                    <tr>
+                      <td width="100%">
+
+                        <a
+                          href="{{ gs_url }}/listings/{{page.title}}/listing.html"
+                          target="_blank"
+                          style="text-decoration: none"
+                        >
+                          <div
+                            style="
+                              width: 140px;
+                              padding: 8px 16px;
+                              margin-top: 1em;
+                              border-radius: 500px;
+                              font-weight: 500;
+                              font-size: 16px;
+                              background-color: #d85744;
+                              border-color: #d85744;
+                              border-style: solid;
+                              border-width: thin;
+                              text-align: center;
+                              color: white;
+                            "
+                          >
+                            VIEW DETAILS
+                          </div>
+                        </a>
+
+                        <a
+                          href="https://maps.google.com/?ll={{ page.latitude }},{{ page.longitude}}"
+                          target="_blank"
+                          style="
+                            text-decoration: none;
+                            color: black;
+                          "
+                        >
+
+                          <h3 style="text-transform: uppercase">
+                            {{ page.address-line-1 }}
+                          </h3>
+
+                          <h1 style="text-transform: uppercase">
+                            {{ page.address-line-2 }}
+                          </h1>
+                        </a>
+
+                        <p>
+                          {{ page.info-text }}
+                        </p>
+
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table
+                    class="content"
+                    bgcolor="white"
+                    align="center"
+                    cellpadding="8"
+                    cellspacing="2"
+                    border="0"
+                  >
+
+                    <tr>
+
+                      {% if page.gallery-images[0] %}
+                        <td
+                          width="50%"
+                          style="position: relative;"
+                        >
+                          <img
+                            src="{{ gs_url }}{{ page.gallery-images[0] }}"
+                            width="100%"
+                            height="100%"
+                            style="
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                            "
+                          />
+                          <div style="padding-bottom: 75%;"></div>
+                        </td>
+                      {% endif %}
+
+                      {% if page.gallery-images[1] %}
+                        <td
+                          width="50%"
+                          style="position: relative;"
+                        >
+                          <img
+                            src="{{ gs_url }}{{ page.gallery-images[1] }}"
+                            width="100%"
+                            height="100%;"
+                            style="
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                            "
+                          />
+                          <div style="padding-bottom: 75%;"></div>
+                        </td>
+                      {% endif %}
+
+                    </tr>
+
+                  </table>
+
+                  <table
+                    class="content"
+                    bgcolor="white"
+                    align="center"
+                    cellpadding="26"
+                    cellspacing="0"
+                    border="0"
+                    style="text-align: center;"
+                  >
+
+                    <tr>
+
+                      <td
+                        width="50%"
+                        style="border-bottom: solid thin #dcdcdc;"
+                      >
+
+                        <img
+                          src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-1.png"
+                          width="45"
+                          height="45"
+                          alt="Rate"
+                          style="
+                            vertical-align: middle;
+                            margin-right: 24px;
+                          "
+                        />
+
+                        <span
+                          style="
+                            vertical-align: middle;
+                            line-height: 1.2;
+                          "
+                        >
+                          <strong>{{ page.rate }}</strong>
+                        </span>
+
+                      </td>
+
+                      <td
+                        width="50%"
                         style="
-                          font-size: 26px;
-                          color: white;
+                          border-bottom: solid thin #dcdcdc;
+                          border-left: solid thin #dcdcdc;
                         "
                       >
-                        <tr>
 
-                          {% if page.lease %}
-                            <td
-                              width="100%"
-                              bgcolor="#3678c6"
-                            >
-                              FOR LEASE
-                            </td>
-                          {% endif %}
+                        <img
+                          src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-2.png"
+                          width="45"
+                          height="45"
+                          alt="Size"
+                          style="
+                            vertical-align: middle;
+                            margin-right: 24px;
+                          "
+                        />
 
-                          {% if page.sublease %}
-                            <td
-                              width="100%"
-                              bgcolor="#3678c6"
-                            >
-                              FOR SUBLEASE
-                            </td>
-                          {% endif %}
+                        <span
+                          style="
+                            vertical-align: middle;
+                            line-height: 1.2;
+                          "
+                        >
+                          <strong>{{ page.sq-footage }}</strong> Square Feet
+                        </span>
 
-                          {% if page.sale %}
-                            <td
-                              width="100%"
-                              bgcolor="#d46049"
-                            >
-                              FOR SALE
-                            </td>
-                          {% endif %}
+                      </td>
 
-                        </tr>
-                      </table>
+                    </tr>
 
-                      <table
-                        class="content"
-                        bgcolor="white"
-                        align="center"
-                        cellpadding="0"
-                        cellspacing="0"
-                        border="0"
-                      >
-                        <tr>
-                          <td>
-                            <img
-                              src="{{ gs_url }}{{page.property-header}}"
-                              mc:label="header_image"
-                              mc:edit="header_image"
-                              mc:allowdesigner
-                              mc:allowtext
-                              style="width: 100%;"
-                            />
-                          </td>
-                        </tr>
-                      </table>
+                    <tr>
 
-                      <table
-                        class="content"
-                        bgcolor="white"
-                        align="center"
-                        cellpadding="8"
-                        cellspacing="0"
-                        border="0"
-                        style="background: linear-gradient(to bottom, #d4d2d3, white 50%);"
-                      >
+                        <td width="50%">
 
-                        <tr>
-                          <td width="100%">
-
-                            <a
-                              href="{{ gs_url }}/listings/{{page.title}}/listing.html"
-                              target="_blank"
-                              style="text-decoration: none"
-                            >
-                              <div
-                                class="details-button"
-                                style="
-                                  width: 140px;
-                                  padding: 8px 16px;
-                                  margin-top: 1em;
-                                  border-radius: 500px;
-                                  font-weight: 500;
-                                  font-size: 16px;
-                                  background-color: #d85744;
-                                  border-color: #d85744;
-                                  border-style: solid;
-                                  border-width: thin;
-                                  text-align: center;
-                                  color: white;
-                                "
-                              >
-                                VIEW DETAILS
-                              </div>
-                            </a>
-
-                            <a
-                              href="https://maps.google.com/?ll={{ page.latitude }},{{ page.longitude}}"
-                              target="_blank"
-                              style="
-                                text-decoration: none;
-                                color: black;
-                              "
-                            >
-
-                              <h3 style="text-transform: uppercase">
-                                {{ page.address-line-1 }}
-                              </h3>
-
-                              <h1 style="text-transform: uppercase">
-                                {{ page.address-line-2 }}
-                              </h1>
-                            </a>
-
-                            <p>
-                              {{ page.info-text }}
-                            </p>
-
-                          </td>
-                        </tr>
-                      </table>
-
-                      <table
-                        class="content"
-                        bgcolor="white"
-                        align="center"
-                        cellpadding="8"
-                        cellspacing="2"
-                        border="0"
-                      >
-
-                        <tr>
-
-                          {% if page.gallery-images[0] %}
-                            <td
-                              width="50%"
-                              style="position: relative;"
-                            >
-                              <img
-                                src="{{ gs_url }}{{ page.gallery-images[0] }}"
-                                width="100%"
-                                height="100%"
-                                style="
-                                  position: absolute;
-                                  top: 0;
-                                  left: 0;
-                                "
-                              />
-                              <div style="padding-bottom: 75%;"></div>
-                            </td>
-                          {% endif %}
-
-                          {% if page.gallery-images[1] %}
-                            <td
-                              width="50%"
-                              style="position: relative;"
-                            >
-                              <img
-                                src="{{ gs_url }}{{ page.gallery-images[1] }}"
-                                width="100%"
-                                height="100%;"
-                                style="
-                                  position: absolute;
-                                  top: 0;
-                                  left: 0;
-                                "
-                              />
-                              <div style="padding-bottom: 75%;"></div>
-                            </td>
-                          {% endif %}
-
-                        </tr>
-
-                      </table>
-
-                      <table
-                        class="content"
-                        bgcolor="white"
-                        align="center"
-                        cellpadding="26"
-                        cellspacing="0"
-                        border="0"
-                        style="text-align: center;"
-                      >
-
-                        <tr>
-
-                          <td
-                            width="50%"
-                            style="border-bottom: solid thin #dcdcdc;"
-                          >
-
-                            <img
-                              src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-1.png"
-                              width="45"
-                              height="45"
-                              alt="Rate"
-                              style="
-                                vertical-align: middle;
-                                margin-right: 24px;
-                              "
-                            />
-
-                            <span
-                              style="
-                                vertical-align: middle;
-                                line-height: 1.2;
-                              "
-                            >
-                              <strong>{{ page.rate }}</strong>
-                            </span>
-
-                          </td>
-
-                          <td
-                            width="50%"
+                          <img
+                            src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-3.png"
+                            width="45"
+                            height="45"
+                            alt="Available"
                             style="
-                              border-bottom: solid thin #dcdcdc;
-                              border-left: solid thin #dcdcdc;
+                              vertical-align: middle;
+                              margin-right: 24px;
+                            "
+                          />
+
+                          <div
+                            style="
+                              vertical-align: middle;
+                              text-align: left;
+                              line-height: 1.2;
+                              display: inline-block;
+                            "
+                          >
+                            <strong>Available: </strong>
+                            {% if site.time < page.available %}
+                              {{ page.available | date: "%m/%d/%Y" }}
+                            {% else %}
+                              Immediately
+                            {% endif %}
+                            <br />
+                            {% if page.terms.size > 0 %}
+                              <strong>Term: </strong> {{ page.terms }}
+                            {% endif %}
+                          </div>
+
+                        </td>
+
+                        <td
+                          width="50%"
+                          style="border-left: solid thin #dcdcdc;"
+                        >
+
+                          <img
+                            src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-4.png"
+                            width="45"
+                            height="45"
+                            alt="Parking"
+                            style="
+                              vertical-align: middle;
+                              margin-right: 24px;
+                            "
+                          />
+
+                          <span
+                            style="
+                              vertical-align: middle;
+                              line-height: 1.2;
+                            "
+                          >
+                            <strong>{{ page.parking }}</strong>
+                          </span>
+
+                        </td>
+
+                      </tr>
+
+                  </table>
+
+                  <table
+                    class="content"
+                    bgcolor="white"
+                    align="center"
+                    cellpadding="8"
+                    cellspacing="0"
+                    border="0"
+                  >
+
+                    <tr>
+
+                      <td
+                        width="50%"
+                        valign="top"
+                      >
+
+                        <h4>HIGHLIGHTS</h4>
+
+                        <ul>
+                          {% for highlight in page.highlights %}
+                            <li style="color: #666666;">
+                              {{ highlight }}
+                            </li>
+                          {% endfor %}
+                        </ul>
+
+                      </td>
+
+                      <td
+                        width="50%"
+                        valign="top"
+                      >
+
+                        <h4>AMENITIES</h4>
+
+                        <ul>
+                          {% for amenity in page.amenities %}
+                            <li style="color: #666666;">
+                              {{ amenity }}
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      </td>
+
+                    </tr>
+
+                    {% if page.availabilities.size > 0 %}
+                      <td
+                        width="50%"
+                        valign="top"
+                      >
+
+                        <h4>AVAILABILITIES</h4>
+
+                        <ul>
+                          {% for unit in page.availabilities %}
+                            <li style="color: #666666;">
+                              {{ unit }}
+                            </li>
+                          {% endfor %}
+                        </ul>
+
+                      </td>
+                    {% endif %}
+                  </table>
+
+                  <table
+                    class="content"
+                    bgcolor="white"
+                    align="center"
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                  >
+                    <tr>
+                      <td
+                        width="100%"
+                        style="padding-bottom: 1em;"
+                      >
+                        <img
+                          src="https://maps.googleapis.com/maps/api/staticmap?center={{page.latitude}}+{{page.longitude}}&zoom=13&scale=2&size=640x300&maptype=roadmap&format=png&visual_refresh=true&key={{site.data.contact.staticGMap}}"
+                          style="width: 100%;"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+
+                  <table
+                    class="content"
+                    bgcolor="#d85744"
+                    align="center"
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                  >
+
+                    <tr style="text-align: center;">
+                      <td
+                        width="100%"
+                        style="padding: 0 8px;"
+                      >
+                        <a
+                          href="{{ gs_url }}/index.html#contact"
+                          target="_blank"
+                          style="
+                            color: white;
+                            text-decoration: none;
+                          "
+
+                        >
+                          <h3>
+                            CONTACT US
+                          <h3>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr
+                      style="
+                        text-align: center;
+                        line-height: 1.5;
+                      "
+                    >
+                        <td
+                          width="100%"
+                          style="padding: 0 8px 1em 8px;"
+                        >
+                          <div
+                            style="
+                              display: inline-block;
+                              vertical-align: middle;
+                              font-size: .9em;
                             "
                           >
 
-                            <img
-                              src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-2.png"
-                              width="45"
-                              height="45"
-                              alt="Size"
-                              style="
-                                vertical-align: middle;
-                                margin-right: 24px;
-                              "
-                            />
-
-                            <span
-                              style="
-                                vertical-align: middle;
-                                line-height: 1.2;
-                              "
-                            >
-                              <strong>{{ page.sq-footage }}</strong> Square Feet
+                            <span style="color: white;">
+                              {{site.data.contact.address}} |
                             </span>
 
-                          </td>
-
-                        </tr>
-
-                        <tr>
-
-                            <td width="50%">
-
-                              <img
-                                src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-3.png"
-                                width="45"
-                                height="45"
-                                alt="Available"
-                                style="
-                                  vertical-align: middle;
-                                  margin-right: 24px;
-                                "
-                              />
-
-                              <div
-                                style="
-                                  vertical-align: middle;
-                                  text-align: left;
-                                  line-height: 1.2;
-                                  display: inline-block;
-                                "
-                              >
-                                <strong>Available: </strong>
-                                {% if site.time < page.available %}
-                                  {{ page.available | date: "%m/%d/%Y" }}
-                                {% else %}
-                                  Immediately
-                                {% endif %}
-                                <br />
-                                {% if page.terms.size > 0 %}
-                                  <strong>Term: </strong> {{ page.terms }}
-                                {% endif %}
-                              </div>
-
-                            </td>
-
-                            <td
-                              width="50%"
-                              style="border-left: solid thin #dcdcdc;"
-                            >
-
-                              <img
-                                src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-4.png"
-                                width="45"
-                                height="45"
-                                alt="Parking"
-                                style="
-                                  vertical-align: middle;
-                                  margin-right: 24px;
-                                "
-                              />
-
-                              <span
-                                style="
-                                  vertical-align: middle;
-                                  line-height: 1.2;
-                                "
-                              >
-                                <strong>{{ page.parking }}</strong>
-                              </span>
-
-                            </td>
-
-                          </tr>
-
-                      </table>
-
-                      <table
-                        class="content"
-                        bgcolor="white"
-                        align="center"
-                        cellpadding="8"
-                        cellspacing="0"
-                        border="0"
-                      >
-
-                        <tr>
-
-                          <td
-                            width="50%"
-                            valign="top"
-                          >
-
-                            <h4>HIGHLIGHTS</h4>
-
-                            <ul>
-                              {% for highlight in page.highlights %}
-                                <li style="color: #666666;">
-                                  {{ highlight }}
-                                </li>
-                              {% endfor %}
-                            </ul>
-
-                          </td>
-
-                          <td
-                            width="50%"
-                            valign="top"
-                          >
-
-                            <h4>AMENITIES</h4>
-
-                            <ul>
-                              {% for amenity in page.amenities %}
-                                <li style="color: #666666;">
-                                  {{ amenity }}
-                                </li>
-                              {% endfor %}
-                            </ul>
-                          </td>
-
-                        </tr>
-
-                        {% if page.availabilities.size > 0 %}
-                          <td
-                            width="50%"
-                            valign="top"
-                          >
-
-                            <h4>AVAILABILITIES</h4>
-
-                            <ul>
-                              {% for unit in page.availabilities %}
-                                <li style="color: #666666;">
-                                  {{ unit }}
-                                </li>
-                              {% endfor %}
-                            </ul>
-
-                          </td>
-                        {% endif %}
-                      </table>
-
-                      <table
-                        class="content"
-                        bgcolor="white"
-                        align="center"
-                        cellpadding="0"
-                        cellspacing="0"
-                        border="0"
-                      >
-                        <tr>
-                          <td
-                            width="100%"
-                            style="padding-bottom: 1em;"
-                          >
-                            <img
-                              src="https://maps.googleapis.com/maps/api/staticmap?center={{page.latitude}}+{{page.longitude}}&zoom=13&scale=2&size=640x300&maptype=roadmap&format=png&visual_refresh=true&key={{site.data.contact.staticGMap}}"
-                              style="width: 100%;"
-                            />
-                          </td>
-                        </tr>
-                      </table>
-
-                      <table
-                        class="content"
-                        bgcolor="#d85744"
-                        align="center"
-                        cellpadding="0"
-                        cellspacing="0"
-                        border="0"
-                      >
-
-                        <tr style="text-align: center;">
-                          <td
-                            width="100%"
-                            style="padding: 0 8px;"
-                          >
                             <a
-                              href="{{ gs_url }}/index.html#contact"
+                              href="{{ gs_url }}"
                               target="_blank"
                               style="
                                 color: white;
                                 text-decoration: none;
+                                font-size: .9em;
                               "
-
                             >
-                              <h3>
-                                CONTACT US
-                              <h3>
+                              GROUNDSOURCE.NET
                             </a>
-                          </td>
-                        </tr>
 
-                        <tr
+                            <br />
+
+                            <a
+                              href="tel:{{site.data.contact.phone}}"
+                              style="
+                                color: white;
+                                text-decoration: none;
+                                font-size: .9em;
+                              "
+                            >
+                              Chris Keller: {{site.data.contact.phone}}
+                            </a>
+
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td
                           style="
-                            text-align: center;
-                            line-height: 1.5;
+                            text-align: right;
+                            padding: 5px;
                           "
                         >
-                            <td
-                              width="100%"
-                              style="padding: 0 8px 1em 8px;"
-                            >
-                              <div
-                                style="
-                                  display: inline-block;
-                                  vertical-align: middle;
-                                  font-size: .9em;
-                                "
-                              >
-
-                                <span style="color: white;">
-                                  {{site.data.contact.address}} |
-                                </span>
-
-                                <a
-                                  href="{{ gs_url }}"
-                                  target="_blank"
-                                  style="
-                                    color: white;
-                                    text-decoration: none;
-                                    font-size: .9em;
-                                  "
-                                >
-                                  GROUNDSOURCE.NET
-                                </a>
-
-                                <br />
-
-                                <a
-                                  href="tel:{{site.data.contact.phone}}"
-                                  style="
-                                    color: white;
-                                    text-decoration: none;
-                                    font-size: .9em;
-                                  "
-                                >
-                                  Chris Keller: {{site.data.contact.phone}}
-                                </a>
-
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td
-                              style="
-                                text-align: right;
-                                padding: 5px;
-                              "
-                            >
-                            <!-- TODO: It's a mailchimp *requirement* to have an unsubscribe link in the body of a mailer
-                            template. Since this newsletter isn't used in production yet, the link just goes to GroundSource homepage.
-                            If we are ever to create a mailer, we will need to creat a hook / mechanism which will allow users to unsubscribe. -->
-                              <a
-                                href="{{ gs_url }}"
-                                target="_blank"
-                                style="
-                                  font-size: .8em;
-                                  color: black;
-                                "
-                              >
-                                Unsubscribe
-                              </a>
-                            </td>
-                          </tr>
-
-                      </table>
+                        <!-- TODO: It's a mailchimp *requirement* to have an unsubscribe link in the body of a mailer
+                        template. Since this newsletter isn't used in production yet, the link just goes to GroundSource homepage.
+                        If we are ever to create a mailer, we will need to creat a hook / mechanism which will allow users to unsubscribe. -->
+                          <a
+                            href="{{ gs_url }}"
+                            target="_blank"
+                            style="
+                              font-size: .8em;
+                              color: black;
+                            "
+                          >
+                            Unsubscribe
+                          </a>
+                        </td>
+                      </tr>
 
                   </table>
                 </td>
               </tr>
             </table>
+            <!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+    <![endif]-->
   </body>
 </html>
