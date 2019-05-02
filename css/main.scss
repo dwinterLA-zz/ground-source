@@ -21,47 +21,6 @@
 @import "about.scss";
 @import "experience.scss";
 
-.modal__close {
-  @include close-button;
-  position: absolute;
-  color: $primary-color;
-  cursor: pointer;
-  padding: 21px;
-}
-
-.rounded-red-button {
-  border-radius: 500px;
-  margin-top: 22px;
-  font-weight: 500;
-  font-size: 0.7em;
-  color: $primary-color-darker-darker;
-  border-color: $primary-color-darker-darker;
-  border-style: solid;
-  border-width: thin;
-  padding: 5px 20px;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  @include mobile {
-    font-size: 1em;
-  }
-}
-
-.pt-site-header {
-  padding-top: $pt-site-header;
-}
-
-.bullet-square {
-  display: inline-block;
-  padding: 5px;
-  margin-right: 4px;
-  background-color: $primary-color;
-}
-
-.mx-auto {
-  margin: 0 auto;
-}
-
 /**
  *  Do not remove the comment below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

@@ -1,12 +1,5 @@
 $listing-padding: 30px;
 
-.subdued {
-  opacity: 0.9;
-}
-
-.more-subdued {
-  opacity: 0.6;
-}
 // print only
 .print {
   display: none;
@@ -419,6 +412,10 @@ $listing-padding: 30px;
         margin-bottom: 20px;
       }
     }
+  }
+  .item {
+    width: $col-width;
+    margin: 16px;
   }
 }
 
