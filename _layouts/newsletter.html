@@ -1,3 +1,5 @@
+{% assign gs_url = site.data.contact.url %}
+
 <!-- The page specially formatted for email (inline styles ;) -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -52,11 +54,16 @@
                         width="50%"
                         height="54"
                       >
-                        <img
-                          src="/images/newsletter/img/logo.png"
-                          alt="Groundsource Logo"
-                          style="width: 100%"
-                        />
+                        <a
+                          href="{{ gs_url }}"
+                          target="_blank"
+                        >
+                          <img
+                            src="{{ gs_url }}/images/newsletter/img/logo.png"
+                            alt="Groundsource Logo"
+                            style="width: 100%"
+                          />
+                        </a>
                       </td>
 
                       <td
@@ -69,7 +76,7 @@
                           style="text-decoration: none"
                         >
                           <img
-                            src="/images/newsletter/img/gs-newsletter-s2.jpg"
+                            src="{{ gs_url }}/images/newsletter/img/gs-newsletter-s2.jpg"
                             width="31"
                             height="31"
                             class="phone-icon"
@@ -149,7 +156,7 @@
                         <tr>
                           <td>
                             <img
-                              src="{{page.property-header}}"
+                              src="{{ gs_url }}{{page.property-header}}"
                               mc:label="header_image"
                               mc:edit="header_image"
                               mc:allowdesigner
@@ -174,7 +181,7 @@
                           <td width="100%">
 
                             <a
-                              href="{{site.data.contact.url}}/listings/{{page.title}}/listing.html"
+                              href="{{ gs_url }}/listings/{{page.title}}/listing.html"
                               target="_blank"
                               style="text-decoration: none"
                             >
@@ -242,7 +249,7 @@
                               style="position: relative;"
                             >
                               <img
-                                src="{{ page.gallery-images[0] }}"
+                                src="{{ gs_url }}{{ page.gallery-images[0] }}"
                                 width="100%"
                                 height="100%"
                                 style="
@@ -261,7 +268,7 @@
                               style="position: relative;"
                             >
                               <img
-                                src="{{ page.gallery-images[1] }}"
+                                src="{{ gs_url }}{{ page.gallery-images[1] }}"
                                 width="100%"
                                 height="100%;"
                                 style="
@@ -296,7 +303,7 @@
                           >
 
                             <img
-                              src="/images/newsletter/img/gs-newsletter-icon-1.png"
+                              src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-1.png"
                               width="45"
                               height="45"
                               alt="Rate"
@@ -326,7 +333,7 @@
                           >
 
                             <img
-                              src="/images/newsletter/img/gs-newsletter-icon-2.png"
+                              src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-2.png"
                               width="45"
                               height="45"
                               alt="Size"
@@ -354,7 +361,7 @@
                             <td width="50%">
 
                               <img
-                                src="/images/newsletter/img/gs-newsletter-icon-3.png"
+                                src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-3.png"
                                 width="45"
                                 height="45"
                                 alt="Available"
@@ -392,7 +399,7 @@
                             >
 
                               <img
-                                src="/images/newsletter/img/gs-newsletter-icon-4.png"
+                                src="{{ gs_url }}/images/newsletter/img/gs-newsletter-icon-4.png"
                                 width="45"
                                 height="45"
                                 alt="Parking"
@@ -519,7 +526,7 @@
                             style="padding: 0 8px;"
                           >
                             <a
-                              href="{{site.contact.url}}/index.html#contact"
+                              href="{{ gs_url }}/index.html#contact"
                               target="_blank"
                               style="
                                 color: white;
@@ -557,7 +564,7 @@
                                 </span>
 
                                 <a
-                                  href="{{site.data.contact.url}}"
+                                  href="{{ gs_url }}"
                                   target="_blank"
                                   style="
                                     color: white;
@@ -582,6 +589,29 @@
                                 </a>
 
                               </div>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td
+                              style="
+                                text-align: right;
+                                padding: 5px;
+                              "
+                            >
+                            <!-- TODO: It's a mailchimp *requirement* to have an unsubscribe link in the body of a mailer
+                            template. Since this newsletter isn't used in production yet, the link just goes to GroundSource homepage.
+                            If we are ever to create a mailer, we will need to creat a hook / mechanism which will allow users to unsubscribe. -->
+                              <a
+                                href="{{ gs_url }}"
+                                target="_blank"
+                                style="
+                                  font-size: .8em;
+                                  color: black;
+                                "
+                              >
+                                Unsubscribe
+                              </a>
                             </td>
                           </tr>
 
