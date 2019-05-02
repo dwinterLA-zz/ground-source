@@ -146,14 +146,7 @@ $listing-padding: 30px;
     flex-flow: row wrap;
   }
 
-  .listing-image {
-    padding-top: 56.25%;
-    background-color: black;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .listing-image-gallery {
+  .gallery {
     width: 50%;
     float: right;
     position: relative;
@@ -196,6 +189,14 @@ $listing-padding: 30px;
       transform: translateY(-50%) rotate(135deg);
       -ms-transform: translateY(-50%) rotate(135deg);
     }
+  }
+
+  .gallery__image {
+    padding-top: 56.25%;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .gallery-controls {
@@ -403,7 +404,7 @@ $listing-padding: 30px;
         padding: 7px;
       }
     }
-    .listing-image-gallery {
+    .gallery {
       width: 100%;
     }
     .info-text {
