@@ -415,7 +415,164 @@
                           cellspacing="0"
                           border="0"
                         >
-                          <tr></tr>
+
+                          <tr>
+
+                            <td
+                              width="50%"
+                              valign="top"
+                            >
+
+                              <h4>HIGHLIGHTS</h4>
+
+                              <ul>
+                                {% for highlight in page.highlights %}
+                                  <li style="color: #666666;">
+                                    {{ highlight }}
+                                  </li>
+                                {% endfor %}
+                              </ul>
+
+                            </td>
+
+                            <td
+                              width="50%"
+                              valign="top"
+                            >
+
+                              <h4>AMENITIES</h4>
+
+                              <ul>
+                                {% for amenity in page.amenities %}
+                                  <li style="color: #666666;">
+                                    {{ amenity }}
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            </td>
+
+                          </tr>
+
+                          {% if page.availabilities.size > 0 %}
+                            <td
+                              width="50%"
+                              valign="top"
+                            >
+
+                              <h4>AVAILABILITIES</h4>
+
+                              <ul>
+                                {% for unit in page.availabilities %}
+                                  <li style="color: #666666;">
+                                    {{ unit }}
+                                  </li>
+                                {% endfor %}
+                              </ul>
+
+                            </td>
+                          {% endif %}
+                        </table>
+
+                        <table
+                          class="content"
+                          bgcolor="white"
+                          align="center"
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                        >
+                          <tr>
+                            <td
+                              width="100%"
+                              style="padding-bottom: 1em;"
+                            >
+                              <img
+                                src="https://maps.googleapis.com/maps/api/staticmap?center={{page.latitude}}+{{page.longitude}}&zoom=13&scale=2&size=640x300&maptype=roadmap&format=png&visual_refresh=true&key={{site.data.contact.staticGMap}}"
+                                style="width: 100%;"
+                              />
+                            </td>
+                          </tr>
+                        </table>
+
+                        <table
+                          class="content"
+                          bgcolor="#d85744"
+                          align="center"
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                        >
+
+                          <tr style="text-align: center;">
+                            <td
+                              width="100%"
+                              style="padding: 0 8px;"
+                            >
+                              <a
+                                href="{{site.contact.url}}/index.html#contact"
+                                target="_blank"
+                                style="
+                                  color: white;
+                                  text-decoration: none;
+                                "
+
+                              >
+                                <h3>CONTACT US<h3>
+                              </a>
+                            </td>
+                          </tr>
+
+                          <tr
+                            style="
+                              text-align: center;
+                              line-height: 1.5;
+                            "
+                          >
+                              <td
+                                width="100%"
+                                style="padding: 0 8px 1em 8px;"
+                              >
+                                <div
+                                  style="
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    font-size: .9em;
+                                  "
+                                >
+
+                                  <span style="color: white;">
+                                    {{site.data.contact.address}} |
+                                  </span>
+
+                                  <a
+                                    href="{{site.data.contact.url}}"
+                                    target="_blank"
+                                    style="
+                                      color: white;
+                                      text-decoration: none;
+                                      font-size: .9em;
+                                    "
+                                  >
+                                    GROUNDSOURCE.NET
+                                  </a>
+
+                                  <br />
+
+                                  <a
+                                    href="tel:{{site.data.contact.phone}}"
+                                    style="
+                                      color: white;
+                                      text-decoration: none;
+                                      font-size: .9em;
+                                    "
+                                  >
+                                    Chris Keller: {{site.data.contact.phone}}
+                                  </a>
+
+                                </div>
+                              </td>
+                            </tr>
+
                         </table>
 
                     </table>
