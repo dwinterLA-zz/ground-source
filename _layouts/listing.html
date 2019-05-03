@@ -2,157 +2,126 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>GROUNDSOURCE - {{page.address-line-1}}</title>
+    <title>GROUNDSOURCE - {{ page.address-line-1 }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     {% include header-links.html %}
   </head>
   <body>
+    <div id="container-listing">
 
-    <div class="print">
+      <div class="print">
 
-      <div class="header">
+        <div class="header">
 
-        <img
-          src="/images/logo.png"
-          class="logo"
-        />
+          <img
+            src="/images/logo.png"
+            class="logo"
+          />
 
-        <div class="contact more-subdued">
+          <div class="contact opacity-60">
 
-          <div>
+            <div>
 
-            {{page.address-line-1}}
-
-            <br />
-
-            {{page.address-line-2}}
-
-          </div>
-
-          <div class="contact-phone">
-            Chris Keller: {{site.data.contact.phone}}
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="images">
-
-        <div class="listing-name">
-          {{page.name}}
-        </div>
-
-        <div class="gallery">
-
-          {% if page.gallery-images[0] %}
-            <img
-              src="{{ page.gallery-images[0] }}"
-              class="listing-image"
-            />
-          {% endif %}
-
-          {% if page.gallery-images[1] %}
-            <img
-              src="{{ page.gallery-images[1] }}"
-              class="listing-image"
-            />
-          {% endif %}
-
-          {% if page.gallery-images[2] %}
-            <img
-              src="{{ page.gallery-images[2] }}"
-              class="listing-image"
-            />
-          {% endif %}
-
-        </div>
-
-      </div>
-
-      <div class="information">
-
-        <div class="text">
-
-          <h4>
-            {{page.info-title}}
-          </h4>
-
-          <p>
-            {{page.info-text}}
-          </p>
-
-        </div>
-
-        <div class="location">
-
-          <div class="location-header">
-            Location
-          </div>
-
-          <ul>
-
-            <li>
-
-              {{page.address-line-1}}
+              {{ page.address-line-1 }}
 
               <br />
 
-              {{page.address-line-2}}
+              {{ page.address-line-2 }}
 
-            </li>
+            </div>
 
-            <li>
-              {{page.phone}}
-            </li>
+            <div class="contact-phone">
+              Chris Keller: {{ site.data.contact.phone }}
+            </div>
 
-            <li>
-              {{page.hours}}
-            </li>
-
-          </ul>
+          </div>
 
         </div>
 
-      </div>
-      <div class="features">
+        <div class="images">
 
-        <div class="highlights">
+          <div class="listing-name">
+            {{ page.name }}
+          </div>
 
-          <h2 class="sidebar-header">
-            <strong>
-              HIGHLIGHTS
-            </strong>
-          </h2>
+          <div class="gallery">
 
-          <ul class="list">
-            {% for highlight in page.highlights %}
+            {% if page.gallery-images[0] %}
+              <img src="{{ page.gallery-images[0] }}" />
+            {% endif %}
 
-              <li>{{ highlight }}</li>
+            {% if page.gallery-images[1] %}
+              <img src="{{ page.gallery-images[1] }}" />
+            {% endif %}
 
-              <hr>
+            {% if page.gallery-images[2] %}
+              <img src="{{ page.gallery-images[2] }}" />
+            {% endif %}
 
-            {% endfor %}
-          </ul>
+          </div>
 
         </div>
 
-        {% if page.availabilities.size > 0 %}
-          <div class="amenities">
+        <div class="information">
+
+          <div class="text">
+
+            <h4>
+              {{ page.info-title }}
+            </h4>
+
+            <p>
+              {{ page.info-text }}
+            </p>
+
+          </div>
+
+          <div class="location">
+
+            <div class="location-header">
+              Location
+            </div>
+
+            <ul>
+
+              <li>
+
+                {{ page.address-line-1 }}
+
+                <br />
+
+                {{ page.address-line-2 }}
+
+              </li>
+
+              <li>
+                {{ page.phone }}
+              </li>
+
+              <li>
+                {{ page.hours }}
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+        <div class="features">
+
+          <div class="highlights">
 
             <h2 class="sidebar-header">
               <strong>
-                AVAILABILITIES
+                HIGHLIGHTS
               </strong>
             </h2>
 
             <ul class="list">
-              {% for unit in page.availabilities %}
+              {% for highlight in page.highlights %}
 
-                <li>
-                  {{ unit }}
-                </li>
+                <li>{{ highlight }}</li>
 
                 <hr>
 
@@ -160,58 +129,77 @@
             </ul>
 
           </div>
-        {% endif %}
 
-        <div class="amenities">
+          {% if page.availabilities.size > 0 %}
+            <div class="amenities">
 
-          <h2 class="sidebar-header">
-            <strong>
-              AMENITIES
-            </strong>
-          </h2>
+              <h2 class="sidebar-header">
+                <strong>
+                  AVAILABILITIES
+                </strong>
+              </h2>
 
-          <ul class="list">
-            {% for amenity in page.amenities %}
+              <ul class="list">
+                {% for unit in page.availabilities %}
 
-              <li>
-                {{ amenity }}
-              </li>
+                  <li>
+                    {{ unit }}
+                  </li>
 
-              <hr />
+                  <hr>
 
-            {% endfor %}
-          </ul>
+                {% endfor %}
+              </ul>
+
+            </div>
+          {% endif %}
+
+          <div class="amenities">
+
+            <h2 class="sidebar-header">
+              <strong>
+                AMENITIES
+              </strong>
+            </h2>
+
+            <ul class="list">
+              {% for amenity in page.amenities %}
+
+                <li>
+                  {{ amenity }}
+                </li>
+
+                <hr />
+
+              {% endfor %}
+            </ul>
+
+          </div>
 
         </div>
-
+        {% if page.floorplans.size > 0 %}
+          {% for floorplan in page.floorplans %}
+            <div class="floorplan">
+              <img
+                src="{{ floorplan }}"
+                class="printout__floorplan"
+              />
+            </div>
+          {% endfor %}
+        {% endif %}
       </div>
-      {% if page.floorplans.size > 0 %}
-        {% for floorplan in page.floorplans %}
-          <div class="floorplan">
-            <img
-              src="{{ floorplan }}"
-              class="printout__floorplan"
-            />
-          </div>
-        {% endfor %}
-      {% endif %}
-    </div>
 
-    <div class="web">
+      <div class="web">
 
-      {% include site-header.html %}
+        {% include site-header.html %}
 
-      {% include contact-us-modal.html %}
+        {% include contact-us-modal.html %}
 
-      {% include nav-modal.html active-section="listings" %}
-
-      <!-- TODO: move this container to above the print section -->
-      <div id="container-listing">
+        {% include nav-modal.html active-section="listings" %}
 
         {% if page.property-header %}
           <div id="header-listings" class="background-header" style="background-image:url({{page.property-header}})"></div>
         {% else %}
-
           <div id="header-listings" class="background-header"></div>
         {% endif %}
 
@@ -253,11 +241,11 @@
 
                 <div class="menu__section">
 
-                  {{page.address-line-1}}
+                  {{ page.address-line-1 }}
 
                   <br />
 
-                  {{page.address-line-2}}
+                  {{ page.address-line-2 }}
 
                 </div>
 
@@ -347,14 +335,14 @@
 
                 </div>
 
-                <div class="listing-image-gallery">
+                <div class="gallery">
 
                   <div class="listing-carousel">
                     {% for img-src in page.gallery-images %}
-                      <div class="listing-image-slide">
+                      <div>
                         <div
                           style="background-image: url('{{ img-src }}')"
-                          class="listing-image"
+                          class="gallery__image"
                         ></div>
                       </div>
                     {% endfor %}
@@ -397,7 +385,7 @@
                         <img
                           src="{{ floorplan }}"
                           class="img-responsive"
-                          />
+                        />
                       </div>
                     {% endfor %}
 
@@ -409,11 +397,8 @@
           </div>
         </div>
       </div>
-
-        {% include footer.html %}
-
-      </div>
     </div>
+    {% include footer.html %}
     {% include include-scripts.html %}
     <script>
       $(document).ready(function() {

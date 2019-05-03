@@ -91,7 +91,11 @@ $(document).ready(function() {
     }
   })
   $(".scroll-arrow").click(function() {
-    window.scrollTo(0, $('#header-home').height());
+    window.scrollTo({
+      top: $('#hero-home').height(),
+      left: 0,
+      behavior: 'smooth'
+    });
   });
 
   $('.modal__close').click(function() {

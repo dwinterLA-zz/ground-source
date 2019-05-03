@@ -63,4 +63,285 @@
       font-size: 52px;
     }
   }
+
+  .testimonials {
+    background: linear-gradient(to bottom, #fbf9fa, #d4d2d3);
+    color: gray;
+    font-size: 1.5em;
+    padding: 0 4em;
+    text-align: center;
+    @include mobile {
+      padding: 0 0.5em;
+    }
+    .inner {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 1200px;
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .testimonial {
+    height: 175px;
+    display: flex;
+    padding: 0 8px;
+    margin: 28px 0;
+    overflow: auto;
+    text-align: left;
+    @include mobile {
+      height: 300px;
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 4px 8px;
+    }
+  }
+
+  .testimonial__text {
+    margin: auto;
+    font-size: 0.7em;
+    strong {
+      text-transform: uppercase;
+    }
+  }
+
+  .navigation-arrows {
+    @include mobile {
+      visibility: hidden;
+    }
+  }
+
+  .navigation-arrow-left {
+    left: -4%;
+  }
+
+  .navigation-arrow-right {
+    right: -4%;
+  }
+
+  .testimonial__image {
+    max-width: 100px;
+    border-style: solid;
+    border-radius: 500px;
+    border-color: white;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+    margin: auto 22px auto 0;
+    @include mobile {
+      margin: 0 auto 12px auto;
+    }
+  }
+
+  .services-text {
+    display: inline-block;
+    padding: 3em 3em 6em 80px;
+    opacity: 0.9;
+    width: 33%;
+  }
+
+  .services-container {
+    position: relative;
+    background-color: $primary-color;
+    > div {
+      color: white;
+      max-width: 1800px;
+      margin: 0 auto;
+      height: 100%;
+    }
+  }
+
+  .services-header {
+    font-size: 3em;
+    padding-left: 80px;
+    @include mobile {
+      margin-top: 0;
+      padding-top: 12px;
+      padding-left: 21px;
+    }
+  }
+
+  .services-row {
+    display: flex;
+    align-items: stretch;
+    @include mobile {
+      display: block;
+      .services-text {
+        width: 100%;
+        padding-left: $left-align-home-mobile;
+      }
+    }
+  }
+
+  .service-description {
+    padding: 1.5em 0;
+  }
+
+  .btn-services {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    bottom: 2em;
+    @include mobile {
+      position: static;
+    }
+  }
+
+  .scroll-arrow {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0.8;
+    width: 54px;
+    margin-left: -(54px/2);
+    bottom: 10%;
+    left: 50%;
+    &:hover {
+      animation-name: scrollDown;
+      animation-duration: 0.4s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  .hero {
+    position: relative;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    text-align: center;
+    height: 75vh;
+    @include mobile {
+      margin-top: 0;
+      height: 80vh;
+      > div {
+        padding: 10px;
+      }
+    }
+  }
+
+  #header-content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #header-logo {
+    max-width: 50%;
+    // setup like this in case browser isnt js enabled
+    &.prepareSlideUp {
+      position: relative;
+      top: 104px;
+      opacity: 0;
+    }
+    &.slideUp {
+      opacity: 1;
+      top: 0;
+      transition-property: all;
+      transition-duration: 0.6s;
+    }
+    @include mobile {
+      max-width: 90%;
+    }
+  }
+
+  #header-text {
+    position: relative;
+    opacity: 0;
+    z-index: 2;
+    font-family: $font-montserrat;
+    color: white;
+    font-size: 1.5em;
+    letter-spacing: 0.16em;
+    padding-top: 25px;
+    transition-property: all;
+    transition-duration: 0.4s;
+    @include mobile {
+      font-size: 1.2em;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  .intro-left {
+    width: 50%;
+    padding: 80px;
+    background-color: white;
+    font-family: $font-montserrat;
+    color: #b4b3b3;
+    letter-spacing: 0.5px;
+    color: #858585;
+    overflow: hidden;
+    > p {
+      margin-top: 26px;
+    }
+    @include mobile {
+      display: inline-block;
+      width: 100%;
+      padding: 80px 20px 0 20px;
+    }
+  }
+
+  .intro-right {
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    > img {
+      display: inline-block;
+    }
+    @include mobile {
+      display: none;
+    }
+  }
+
+  .ham-menu-home {
+    display: none;
+  }
+
+  #top-nav {
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    white-space: nowrap;
+    > ul {
+      list-style-type: none;
+      white-space: nowrap;
+      margin: 30px 30px 0 0;
+      > li {
+        display: inline-block;
+        font-size: 1.2em;
+        padding: 8px;
+        > a {
+          @include expanding-hover(white);
+          position: relative;
+          color: white;
+          text-decoration: none;
+          line-height: 2;
+        }
+        > a:hover {
+          color: white;
+        }
+      }
+    }
+    @include mobile {
+      display: none !important;
+    }
+  }
+
+  @keyframes scrollDown {
+    60% {
+      bottom: 7%;
+    }
+    100% {
+      bottom: 8.5%;
+    }
+  }
 }

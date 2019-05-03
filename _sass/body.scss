@@ -1,0 +1,334 @@
+html {
+  font-family: $font-montserrat;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+  width: 100%;
+  font-family: $font-montserrat;
+  color: #858585;
+  letter-spacing: 0.5px;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+}
+
+.modal__close {
+  @include close-button;
+  position: absolute;
+  color: $primary-color;
+  cursor: pointer;
+  padding: 21px;
+}
+
+.rounded-red-button {
+  border-radius: 500px;
+  margin-top: 22px;
+  font-weight: 500;
+  font-size: 0.7em;
+  color: $primary-color-darker-darker;
+  border-color: $primary-color-darker-darker;
+  border-style: solid;
+  border-width: thin;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  @include mobile {
+    font-size: 1em;
+  }
+}
+
+.pt-site-header {
+  padding-top: $pt-site-header;
+}
+
+.bullet-square {
+  display: inline-block;
+  padding: 5px;
+  margin-right: 4px;
+  background-color: $primary-color;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.ui-dialog {
+  width: 450px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.slick-slide {
+  outline: none;
+}
+
+.slick-dots {
+  display: inline-block;
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+  > li {
+    display: inline-block;
+    position: relative;
+    margin: 0 5px;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    &.slick-active {
+      > button {
+        background-color: $primary-color-darker;
+      }
+    }
+    > button {
+      width: 100%;
+      height: 100%;
+      border-radius: 100px;
+      border-style: solid;
+      border-color: $primary-color-darker;
+      color: transparent;
+      padding: 0;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-60 {
+  opacity: 0.6;
+}
+
+.opacity-90 {
+  opacity: 0.9;
+}
+
+.text-black {
+  color: black;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.font-weight-light {
+  font-weight: 100;
+}
+
+.medium-white-text {
+  color: white;
+  font-size: 1.5em;
+}
+
+.logo-upper-left {
+  cursor: pointer;
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  z-index: 2;
+  width: 278px;
+  @include mobile {
+    max-width: 46%;
+    top: 18px;
+    left: 14px;
+  }
+}
+
+.ham-menu {
+  @include hamburger-menu;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.section-header {
+  @include header;
+  font-family: $font-montserrat;
+  color: #b4b3b3;
+  color: #858585;
+  > span {
+    color: $primary-color;
+    font-weight: 700;
+  }
+}
+
+.flexbox {
+  display: flex;
+  position: relative;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: $page-max-width;
+}
+
+.title {
+  letter-spacing: $title-letter-spacing;
+  font-weight: lighter;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+}
+
+.navigation-arrows {
+  position: absolute;
+  top: 49%;
+  border: solid $primary-color;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+  font-size: 4em;
+  width: 18px;
+  height: 18px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.navigation-arrow-left {
+  transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  left: 8%;
+  &:hover {
+    transform: rotate(135deg) scale(1.3);
+  }
+}
+
+@keyframes navigation-arrow-left {
+  50% {
+    left: 7%;
+  }
+  100% {
+    left: 7.5%;
+  }
+}
+
+.navigation-arrow-right {
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  right: 8%;
+  &:hover {
+    transform: rotate(-45deg) scale(1.3);
+  }
+}
+
+@keyframes navigation-arrow-right {
+  50% {
+    right: 7%;
+  }
+  100% {
+    right: 7.5%;
+  }
+}
+
+.btn-learn-more {
+  padding: 8px 16px;
+  border: medium solid white;
+  font-weight: 600;
+  border-radius: 500px;
+  text-decoration: none;
+}
+
+.btn-learn-more--orange {
+  color: $primary-color;
+  border-color: $primary-color;
+}
+
+@media screen and (min-width: $page-max-width) {
+  body {
+    font-size: 18px;
+  }
+  #header-text {
+    letter-spacing: 0.07em;
+  }
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .property-preview {
+    width: 69%;
+    opacity: 1;
+    position: relative;
+    font-size: 1.3em;
+    overflow: scroll;
+    &.selected {
+      transform: scale(1);
+    }
+  }
+}
+@include mobile {
+  body {
+    font-size: 0.9em;
+  }
+
+  .arrow-up {
+    bottom: 330px;
+  }
+
+  .nav-modal {
+    .menu-close {
+      padding: 21px;
+    }
+  }
+
+  .modal-open {
+    display: none;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .navigation-arrow-right {
+    right: 5%;
+  }
+
+  .navigation-arrow-left {
+    left: 5%;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

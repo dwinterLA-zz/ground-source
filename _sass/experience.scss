@@ -3,6 +3,13 @@
   flex-direction: column;
   min-height: 100vh;
 
+  .state {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
   .info {
     @include bg-cover-center;
     text-align: center;

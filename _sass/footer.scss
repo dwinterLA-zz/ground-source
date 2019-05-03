@@ -9,6 +9,9 @@
     display: block;
     padding: 20px 20px 72px 20px;
   }
+  @media print {
+    display: none;
+  }
   .main {
     position: relative;
     flex-grow: 1;
