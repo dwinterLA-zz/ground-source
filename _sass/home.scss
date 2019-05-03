@@ -64,13 +64,6 @@
     }
   }
 
-  .slick-dots {
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   .testimonials {
     background: linear-gradient(to bottom, #fbf9fa, #d4d2d3);
     color: gray;
@@ -85,6 +78,12 @@
       display: inline-block;
       width: 100%;
       max-width: 1200px;
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
