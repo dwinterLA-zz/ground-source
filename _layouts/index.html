@@ -147,35 +147,34 @@
 
         </div>
 
-        <div class="review-slideshow">
+        <div class="testimonials">
           <div class="inner">
 
             <div class="navigation-arrow-left navigation-arrows"></div>
 
-            <div class="carousel-container">
-              <div class="review-carousel">
-                {% for testimonial in site.testimonials %}
-                  <div class="review">
-                    <div class="inner-review">
-                      {% if testimonial.userImg.size > 0 %}
-                        <img src="{{ testimonial.userImg }}" />
-                      {% endif %}
+            <div class="testimonial-carousel">
+              {% for testimonial in site.testimonials %}
+                <div class="testimonial">
+                  {% if testimonial.userImg.size > 0 %}
+                    <img
+                      src="{{ testimonial.userImg }}"
+                      class="testimonial__image"
+                    />
+                  {% endif %}
 
-                      <p>
-                        {{ testimonial.text }}
+                  <div class="testimonial__text">
+                    {{ testimonial.text }}
 
-                        <br />
+                    <br />
 
-                        <br />
+                    <br />
 
-                        <strong>- {{ testimonial.name }}</strong>
+                    <strong>- {{ testimonial.name }}</strong>
 
-                      </p>
-
-                    </div>
                   </div>
-                {% endfor %}
-              </div>
+
+                </div>
+              {% endfor %}
             </div>
 
             <div class="navigation-arrow-right navigation-arrows"></div>
@@ -332,7 +331,7 @@
         sr.reveal(".home-intro-left");
         sr.reveal(".home-intro-right");
         sr.reveal(".services-header");
-        sr.reveal(".review-slideshow");
+        sr.reveal(".testimonial-slideshow");
         sr.reveal(".services-text");
         sr.reveal("#contact-us-home-section");
       })

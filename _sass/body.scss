@@ -93,14 +93,15 @@ a {
   display: inline-block;
   list-style-type: none;
   margin-bottom: 0;
+  margin-top: 0;
   padding-left: 0;
   > li {
     display: inline-block;
     position: relative;
     margin: 0 5px;
     padding: 0;
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
     &.slick-active {
       > button {
         background-color: $primary-color-darker;
@@ -315,14 +316,6 @@ a {
 
   .navigation-arrow-left {
     left: 5%;
-  }
-
-  .slick-dots {
-    margin-top: 0;
-    > li {
-      width: 14px;
-      height: 14px;
-    }
   }
 
   .desktop-nav {

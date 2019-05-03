@@ -17,7 +17,7 @@ $(document).ready(function() {
   }
 
   function setupReviewCarousel() {
-    $(".review-carousel").slick({
+    $(".testimonial-carousel").slick({
       autoplay: false,
       draggable: false,
       dots: true,
