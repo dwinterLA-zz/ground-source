@@ -1,12 +1,12 @@
 html {
-  font-family: $font-brand;
+  font-family: $font-montserrat;
 }
 
 body {
   background-color: #fff;
   margin: 0;
   width: 100%;
-  font-family: $font-brand;
+  font-family: $font-montserrat;
   color: #858585;
   letter-spacing: 0.5px;
 }
@@ -177,7 +177,7 @@ a {
 
 .section-header {
   @include header;
-  font-family: $font-brand;
+  font-family: $font-montserrat;
   color: #b4b3b3;
   color: #858585;
   > span {
