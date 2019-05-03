@@ -233,7 +233,7 @@
   }
 
   #header-logo {
-    height: 47px;
+    max-width: 50%;
     // setup like this in case browser isnt js enabled
     &.prepareSlideUp {
       position: relative;
@@ -247,7 +247,7 @@
       transition-duration: 0.6s;
     }
     @include mobile {
-      height: 29px;
+      max-width: 90%;
     }
   }
 
