@@ -10,6 +10,11 @@
       }
     }
   }
+
+  .header {
+    margin-top: 1.3em;
+  }
+
   .form {
     margin: 20px 0 0.67em 0;
   }
@@ -22,6 +27,7 @@
     text-align: left;
     color: $primary-color;
   }
+
   .input {
     margin: 0 auto 18px auto;
     width: 100%;
@@ -33,6 +39,7 @@
     border-color: #efefef;
     background-color: #fcfcfc;
   }
+
   .submit {
     width: 100%;
     margin-top: 20px;
