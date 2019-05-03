@@ -66,9 +66,11 @@
       &:hover {
         color: #888;
       }
-
       > span {
         @include expanding-hover;
+      }
+      @include mobile {
+        font-size: 0.95em;
       }
     }
   }
