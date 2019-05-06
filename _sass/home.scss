@@ -232,6 +232,7 @@
   }
 
   #header-logo {
+    opacity: 0;
     max-width: 50%;
     // setup like this in case browser isnt js enabled
     &.prepareSlideUp {
