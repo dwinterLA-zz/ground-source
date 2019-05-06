@@ -99,7 +99,6 @@ function heroAnimation() {
 }
 
 function setupGoogMap() {
-  // TODO replace API key
   $.getScript(
     `https://maps.googleapis.com/maps/api/js?key=${gsMap.apiKey}`,
     () => {
