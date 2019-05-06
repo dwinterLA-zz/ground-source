@@ -23,8 +23,9 @@
     </script>
     <script>
       var gsMap = {
-        latitude: {{ site.data.contact.latitude }},
-        longitude: {{ site.data.contact.longitude }}
+        latitude: "{{ site.data.contact.latitude }}",
+        longitude: "{{ site.data.contact.longitude }}",
+        apiKey: "{{ site.data.contact.googleMapsKey }}"
       }
     </script>
   </head>

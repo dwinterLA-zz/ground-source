@@ -101,14 +101,26 @@ function heroAnimation() {
 function setupGoogMap() {
   // TODO replace API key
   $.getScript(
-    "https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoAiw62lFQnHpIqeqYJVu1KfRkcitEN0",
+    `https://maps.googleapis.com/maps/api/js?key=${gsMap.apiKey}`,
     () => {
-      var uluru = { lat: 33.979449, lng: -118.413002 };
-      var map = new google.maps.Map(document.getElementById("gmap-home-page"), {
-        zoom: 14,
-        scrollwheel: false,
-        disableDefaultUI: true,
-        center: { lat: gsMap.latitude, lng: gsMap.longitude }
+      const coords = {
+        lat: parseFloat(gsMap.latitude),
+        lng: parseFloat(gsMap.longitude)
+      };
+
+      const map = new google.maps.Map(
+        document.getElementById("gmap-home-page"),
+        {
+          zoom: 14,
+          scrollwheel: false,
+          disableDefaultUI: true,
+          center: coords
+        }
+      );
+
+      new google.maps.Marker({
+        position: coords,
+        map: map
       });
     }
   );
