@@ -1834,6 +1834,7 @@ a {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
 #home-container #header-logo {
+  opacity: 0;
   max-width: 50%; }
   #home-container #header-logo.prepareSlideUp {
     position: relative;
