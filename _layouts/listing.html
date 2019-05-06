@@ -6,6 +6,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     {% include header-links.html %}
+    <script>
+      var listingMap = {
+        latitude: "{{ site.data.contact.latitude }}",
+        longitude: "{{ site.data.contact.longitude }}",
+        apiKey: "{{ site.data.contact.googleMapsKey }}"
+      }
+    </script>
   </head>
   <body>
     <div id="container-listing">
@@ -370,7 +377,7 @@
                       LOCATION
                     </h2>
 
-                    <div id="about-google-map"></div>
+                    <div id="listing-google-map"></div>
 
                   {% endif %}
 
@@ -399,40 +406,13 @@
       </div>
     </div>
     {% include footer.html %}
+
     {% include include-scripts.html %}
-    <script>
-      $(document).ready(function() {
-        $('.listing-carousel').slick({
-          "prevArrow": $('.gallery-arrow-left'),
-          "nextArrow": $('.gallery-arrow-right')
-        })
 
-        window.sr = ScrollReveal();
-        sr.reveal(".info-box");
-        sr.reveal(".img-responsive");
-
-      })
-      function initListingMap() {
-        {% if page.latitude and page.longitude %}
-          var uluru = {lat: {{page.latitude}}, lng: {{page.longitude}}};
-          var map = new google.maps.Map(document.getElementById('about-google-map'), {
-            zoom: 12,
-            scrollwheel: false,
-            disableDefaultUI: true,
-            center: uluru
-          });
-          var marker = new google.maps.Marker({
-            position: uluru,
-            map: map
-          });
-        {% endif %}
-      }
-    </script>
-    <!-- TODO replace API key -->
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoAiw62lFQnHpIqeqYJVu1KfRkcitEN0&callback=initListingMap">
-    </script>
-
+    <script
+      type="text/javascript"
+      src="/scripts/listing.js"
+    ></script>
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
