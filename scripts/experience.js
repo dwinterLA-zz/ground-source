@@ -2,6 +2,7 @@ $(document).ready(function() {
   stateFromQuery();
   setClickHandlers();
   servicesCarousel();
+  scrollReveal();
 });
 
 function stateFromQuery() {
@@ -88,4 +89,9 @@ function updateQueryParam(state) {
   } else {
     history.pushState(null, "", "/experience.html");
   }
+}
+
+function scrollReveal() {
+  window.sr = ScrollReveal();
+  sr.reveal(".top");
 }

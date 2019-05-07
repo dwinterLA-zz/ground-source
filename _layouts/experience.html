@@ -129,21 +129,6 @@
       type="text/javascript"
       src="/scripts/experience.js">
     </script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
-
-        if (sectionQuery === "studies") {
-          window.setTimeout(function() {
-            window.scrollTo(0, $('.bottom').offset().top);
-          }, 500)
-        }
-
-        window.sr = ScrollReveal();
-        sr.reveal(".top");
-      })
-    </script>
   </body>
 </html>
 
