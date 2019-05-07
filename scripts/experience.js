@@ -1,6 +1,7 @@
 $(document).ready(function() {
   stateFromQuery();
   setClickHandlers();
+  servicesCarousel();
 
   function stateFromQuery() {
     var query = (location.search.match(
@@ -28,6 +29,16 @@ $(document).ready(function() {
     setActiveLink(state);
     $(state).addClass("active");
     setupCarousel();
+  }
+
+  function servicesCarousel() {
+    $(".services-carousel").slick({
+      autoplay: false,
+      draggable: false,
+      dots: true,
+      prevArrow: false,
+      nextArrow: false
+    });
   }
 
   function setupCarousel() {

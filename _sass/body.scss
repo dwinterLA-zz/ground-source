@@ -176,6 +176,10 @@ a {
   display: inline-block;
 }
 
+.align-middle {
+  vertical-align: middle;
+}
+
 .section-header {
   @include header;
   font-family: $font-montserrat;

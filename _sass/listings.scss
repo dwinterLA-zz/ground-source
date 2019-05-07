@@ -1,4 +1,6 @@
 #container-listings {
+  $filter-transition-duration: 0.38s;
+
   background-image: url(../images/about/fs-bg.jpg);
   background-size: cover;
   .listings-header {
@@ -51,50 +53,73 @@
     }
   }
 
-  #features-toggle {
-    border-color: lightgrey;
-    color: $listings-text;
-    border-style: solid;
-    border-width: thin;
-    height: 30px;
-    width: 30px;
-    font-size: 21px;
-    margin-right: 2px;
-    text-align: center;
-    vertical-align: middle;
-    display: inline-block;
-    cursor: pointer;
-  }
-
   #show-less-filters {
     display: none;
-  }
-
-  .plus-sign {
-    &:after {
-      content: "+";
-    }
-  }
-
-  .minus-sign {
-    &:after {
-      content: "-";
-    }
   }
 
   .listings {
     padding-top: 42px;
   }
 
+  .filters-state {
+    transition: all $filter-transition-duration;
+  }
+
+  .filters-state--button {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+    outline: none;
+    vertical-align: middle;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: thin;
+    > div {
+      @include bg-cover-center;
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      width: 10px;
+      height: 10px;
+      background-image: url("/images/menu-close.png");
+      display: inline-block;
+      transform: rotate(45deg);
+      transition: all $filter-transition-duration;
+    }
+    &.open {
+      > div {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .filters-state--label {
+    overflow: hidden;
+    max-width: 0;
+    &.open {
+      max-width: 1000px;
+    }
+  }
+
+  .filters-state--list {
+    display: inline-block;
+    max-height: 0;
+    overflow: hidden;
+    &.open {
+      max-height: 200px;
+      box-shadow: 0px 0px 18px 6px #f2f2f2;
+    }
+  }
+
   .filters {
     justify-content: center;
     background-color: white;
-    display: none;
-    box-shadow: 0px 0px 18px 6px #f2f2f2;
-    padding: 15px 0;
+    margin-top: 42px;
     text-align: center;
     font-size: 0.7em;
-    margin: 42px auto 0;
     width: 70vw;
     max-width: $page-max-width;
     > a {

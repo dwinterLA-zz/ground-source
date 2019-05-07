@@ -1,9 +1,15 @@
 $(document).ready(function() {
+  DOMBindings();
   googleMap();
   gallery();
   scrollReveal();
 });
 
+function DOMBindings() {
+  $("#print-brochure").click(function() {
+    window.print();
+  });
+}
 function googleMap() {
   const coords = {
     lat: parseFloat(listingMap.latitude),

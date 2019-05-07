@@ -4,8 +4,8 @@ $(document).ready(function() {
   activateNavigation();
   scrollReveal();
   setClickHandlers();
-  setupReviewCarousel();
-  setupExampleCarousel();
+  reviewCarousel();
+  // servicesCarousel();
 });
 
 function activateNavigation() {
@@ -22,20 +22,17 @@ function activateNavigation() {
   }
 }
 
-function setupExampleCarousel() {
-  if ($(".services-carousel:visible").length > 0) {
-    $(".services-carousel").slick("unslick");
-    $(".services-carousel").slick({
-      autoplay: false,
-      draggable: false,
-      dots: true,
-      prevArrow: false,
-      nextArrow: false
-    });
-  }
+function slickCarousel($content) {
+  $content.slick({
+    autoplay: false,
+    draggable: false,
+    dots: true,
+    prevArrow: false,
+    nextArrow: false
+  });
 }
 
-function setupReviewCarousel() {
+function reviewCarousel() {
   $(".testimonial-carousel").slick({
     autoplay: false,
     draggable: false,
@@ -46,22 +43,36 @@ function setupReviewCarousel() {
 }
 
 function setClickHandlers() {
+  $(".scroll-arrow").click(function() {
+    window.scrollTo({
+      top: $("#hero-home").height(),
+      left: 0,
+      behavior: "smooth"
+    });
+  });
+
   $("#tenant-service-modal-button").click(function() {
+    const $tenantModal = $("#tenant-service-modal");
+
     $("body").addClass("overflow-hidden");
-    $("#tenant-service-modal").fadeIn();
-    setupExampleCarousel();
+    $tenantModal.fadeIn();
+    slickCarousel($tenantModal.find(".services-carousel"));
   });
 
   $("#investment-service-modal-button").click(function() {
-    $("#investment-service-modal").fadeIn();
+    const $investmentModal = $("#investment-service-modal");
+
+    $investmentModal.fadeIn();
     $("body").addClass("overflow-hidden");
-    setupExampleCarousel();
+    slickCarousel($investmentModal.find(".services-carousel"));
   });
 
   $("#landlord-service-modal-button").click(function() {
-    $("#landlord-service-modal").fadeIn();
+    const $landlordModal = $("#landlord-service-modal");
+
+    $landlordModal.fadeIn();
     $("body").addClass("overflow-hidden");
-    setupExampleCarousel();
+    slickCarousel($landlordModal.find(".services-carousel"));
   });
 
   $(".service-detail-close").click(function() {
