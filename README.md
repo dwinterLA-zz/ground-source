@@ -80,11 +80,11 @@ To load a map via the Google maps api, a valid api key is required.
 
 The key has been generated based on the same Google account that's been setup for the
 newsletter: `groundsourcemailer@gmail.com`. To maintain these keys, login to the
-<a href="https://console.cloud.google.com/google/maps-apis/">Google Cloud Platform console</a>. Then
-APIs -> Credentials.
+<a href="https://console.cloud.google.com/google/maps-apis/">Google Cloud Platform console</a> (then
+APIs -> Credentials).
 
-The same api key is used for the javascript maps api (used on the home and inner listing page)
-as well as the static map api (used on the email newsletter).
+The same api key is used for the javascript api (used on the home and inner listing page)
+as well as the static api (used on the email newsletter).
 
 To prevent abuse of our token, the refferer has been restricted to groundsource.net and localhost.
 
