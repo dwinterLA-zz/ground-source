@@ -111,11 +111,11 @@ function heroAnimation() {
 
 function setupGoogMap() {
   $.getScript(
-    `https://maps.googleapis.com/maps/api/js?key=${gsMap.apiKey}`,
+    `https://maps.googleapis.com/maps/api/js?key=${homeMapMeta.apiKey}`,
     () => {
       const coords = {
-        lat: parseFloat(gsMap.latitude),
-        lng: parseFloat(gsMap.longitude)
+        lat: parseFloat(homeMapMeta.latitude),
+        lng: parseFloat(homeMapMeta.longitude)
       };
 
       const map = new google.maps.Map(

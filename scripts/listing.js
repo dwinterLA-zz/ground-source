@@ -12,8 +12,8 @@ function DOMBindings() {
 }
 function googleMap() {
   const coords = {
-    lat: parseFloat(listingMap.latitude),
-    lng: parseFloat(listingMap.longitude)
+    lat: parseFloat(listingMapMeta.latitude),
+    lng: parseFloat(listingMapMeta.longitude)
   };
 
   if (!coords.lat || !coords.lng) {
@@ -21,13 +21,8 @@ function googleMap() {
   }
 
   $.getScript(
-    `https://maps.googleapis.com/maps/api/js?key=${listingMap.apiKey}`,
+    `https://maps.googleapis.com/maps/api/js?key=${listingMapMeta.apiKey}`,
     () => {
-      const coords = {
-        lat: parseFloat(listingMap.latitude),
-        lng: parseFloat(listingMap.longitude)
-      };
-
       const map = new google.maps.Map(
         document.getElementById("listing-google-map"),
         {
