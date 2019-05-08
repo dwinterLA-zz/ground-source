@@ -1,13 +1,13 @@
 $(document).ready(function() {
   heroAnimation();
-  setupGoogMap();
-  activateNavigation();
+  gmap();
+  navigation();
   scrollReveal();
-  setClickHandlers();
+  DOMBindings();
   reviewCarousel();
 });
 
-function activateNavigation() {
+function navigation() {
   switch (window.location.hash) {
     case "#contact":
       // TODO: we should have a global method for the state when the modal is open
@@ -22,6 +22,10 @@ function activateNavigation() {
 }
 
 function slickCarousel($content) {
+  try {
+    $content.slick("unslick");
+  } catch (e) {}
+
   $content.slick({
     autoplay: false,
     draggable: false,
@@ -41,7 +45,7 @@ function reviewCarousel() {
   });
 }
 
-function setClickHandlers() {
+function DOMBindings() {
   $(".scroll-arrow").click(function() {
     window.scrollTo({
       top: $("#hero-home").height(),
@@ -108,7 +112,7 @@ function heroAnimation() {
   }, 700);
 }
 
-function setupGoogMap() {
+function gmap() {
   $.getScript(
     `https://maps.googleapis.com/maps/api/js?key=${homeMapMeta.apiKey}`,
     () => {

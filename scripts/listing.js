@@ -1,6 +1,6 @@
 $(document).ready(function() {
   DOMBindings();
-  googleMap();
+  gMap();
   gallery();
   scrollReveal();
 });
@@ -10,7 +10,7 @@ function DOMBindings() {
     window.print();
   });
 }
-function googleMap() {
+function gMap() {
   const coords = {
     lat: parseFloat(listingMapMeta.latitude),
     lng: parseFloat(listingMapMeta.longitude)

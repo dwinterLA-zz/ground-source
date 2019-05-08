@@ -9,9 +9,6 @@ function stateFromQuery() {
     new RegExp("service" + "=(.*?)($|&)", "i")
   ) || [])[1];
   switch (query) {
-    case undefined:
-      setState($(".state--default"));
-      break;
     case "tenant":
       setState($(".state--tenant"));
       break;
