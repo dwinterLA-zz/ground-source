@@ -74,6 +74,21 @@ The newsletter was intended to be hooked into Mailchimp (styling and markup is e
 To clarify some potential confusion: There's also a print layout on the `listing.html` page. The GroundSouce team often creates a PDF from the print layout and (manually) attaches this to emails. They usually refer to this as the 'flyer'. The flyer and newsletter contain mostly the same information, but
 are sourced from completely different HTML files.
 
+## Google Maps API integration
+
+To load a map via the Google maps api, a valid api key is required.
+
+The key has been generated based on the same Google account that's been setup for the
+newsletter: `groundsourcemailer@gmail.com`. To maintain these keys, login to the
+<a href="https://console.cloud.google.com/google/maps-apis/">Google Cloud Platform console</a> (then
+APIs -> Credentials).
+
+The same api key is used for the javascript api (used on the home and inner listing page)
+as well as the static api (used on the email newsletter).
+
+To prevent abuse of our token, the refferer has been restricted to groundsource.net and localhost.
+
+
 ## Site Data
 
 Jekyll has a concept of 'site data'. Any `.yml` file you place within the `_data` folder becomes

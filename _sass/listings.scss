@@ -1,4 +1,5 @@
 #container-listings {
+  $filter-transition-duration: 0.38s;
   @include bg-cover-center;
   background-image: url(../images/about/fs-bg.jpg);
   .listings-header {
@@ -34,71 +35,125 @@
       margin: 0 15% 0 15%;
       color: gray;
     }
+  }
+
+  .listings-search {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
     > input {
-      margin-top: 30px;
       border-radius: 30px;
+      border-style: solid;
+      border-color: lightgray;
+      text-indent: 18px;
+      outline: none;
       width: 420px;
       height: 50px;
+      @include mobile {
+        width: 90%;
+        margin-top: 30px;
+      }
+      &::-webkit-input-placeholder {
+        color: $listings-text;
+        font-size: 1.1em;
+        font-family: $font-montserrat;
+        line-height: 110%;
+        opacity: 0.7;
+      }
+    }
+    @include mobile {
+      display: block;
     }
   }
 
   .submenu {
-    display: inline;
+    position: absolute;
+    top: 50%;
+    right: -108px;
+    transform: translateY(-50%);
     color: grey;
     font-size: 0.8em;
     > span {
       vertical-align: middle;
     }
-  }
-
-  #features-toggle {
-    border-color: lightgrey;
-    color: $listings-text;
-    border-style: solid;
-    border-width: thin;
-    height: 30px;
-    width: 30px;
-    font-size: 21px;
-    margin-right: 2px;
-    text-align: center;
-    vertical-align: middle;
-    display: inline-block;
-    cursor: pointer;
+    @include mobile {
+      position: static;
+      margin-top: 30px;
+    }
   }
 
   #show-less-filters {
     display: none;
   }
 
-  .plus-sign {
-    &:after {
-      content: "+";
+  .filters-state {
+    transition: all $filter-transition-duration;
+  }
+
+  .filters-state--button {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+    outline: none;
+    vertical-align: middle;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: thin;
+    > div {
+      @include bg-cover-center;
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      width: 10px;
+      height: 10px;
+      background-image: url("/images/menu-close.png");
+      display: inline-block;
+      transform: rotate(45deg);
+      transition: all $filter-transition-duration;
+    }
+    &.open {
+      > div {
+        transform: rotate(0);
+      }
     }
   }
 
-  .minus-sign {
-    &:after {
-      content: "-";
+  .filters-state--list {
+    display: inline-block;
+    max-height: 0;
+    overflow: hidden;
+    &.open {
+      max-height: 200px;
+      box-shadow: 0px 0px 18px 6px #f2f2f2;
+      margin-top: 2em;
+      @include mobile {
+        margin-top: 0;
+      }
     }
-  }
-
-  .listings {
-    padding-top: 42px;
   }
 
   .filters {
     justify-content: center;
     background-color: white;
-    display: none;
-    box-shadow: 0px 0px 18px 6px #f2f2f2;
-    padding: 15px 0;
     text-align: center;
     font-size: 0.7em;
-    margin: 42px auto 0;
     width: 70vw;
     max-width: $page-max-width;
     > a {
       text-decoration: none;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .listings {
+    padding: 2em 0;
+    @include mobile {
+      padding: 1em 0;
     }
   }
 
@@ -112,7 +167,8 @@
 
   .listings__button {
     background-color: $primary-color-darker;
-    min-width: 120px;
+    min-width: 130px;
+    padding: 4px;
     color: white;
     border: none;
     cursor: pointer;
@@ -260,21 +316,6 @@
     }
   }
 
-  .listings-search {
-    border-style: solid;
-    border-color: lightgray;
-    text-indent: 18px;
-    outline: none;
-  }
-
-  input.listings-search::-webkit-input-placeholder {
-    color: $listings-text;
-    font-size: 1.1em;
-    font-family: $font-montserrat;
-    line-height: 110%;
-    opacity: 0.7;
-  }
-
   .paginator {
     text-align: center;
     position: relative;
@@ -324,15 +365,8 @@
       display: none;
     }
 
-    .submenu {
-      display: block;
-      margin-top: 18px;
-    }
-
     .listings {
       width: 100%;
-      margin-top: 18px;
-      margin-bottom: 22px;
     }
 
     .paginator {

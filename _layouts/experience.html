@@ -33,33 +33,35 @@
       <div class="info">
         <div class="info__content">
 
-          <a
-            href="/experience"
-            id="experience-default-link"
-            class="title state__link"
-          >
-            {{page.text_title}}
-          </a>
+          <div>
+            <a
+              href="/experience"
+              id="experience-default-link"
+              class="title state__link state"
+            >
+              {{page.text_title}}
+            </a>
+          </div>
 
           <div class="links">
             <a
               href="/experience?service=tenant"
               id="tenant-service-link"
-              class="state__link state--tenant link"
+              class="state__link state--tenant link state"
             >
               TENANT<br /> REPRESENTATION
             </a>
             <a
               href="/experience?service=landlord"
               id="landlord-service-link"
-              class="state__link state--landlord link"
+              class="state__link state--landlord link state"
             >
               LANDLORD<br /> REPRESENTATION
             </a>
             <a
               href="/experience?service=investment"
               id="investment-service-link"
-              class="state__link state--investment link"
+              class="state__link state--investment link state"
             >
               INVESTMENT<br /> REPRESENTATION
             </a>
@@ -97,21 +99,21 @@
 
       <div class="slideshow">
 
-        <div class="state state--tenant">
+        <div class="state state--tenant examples">
           {% include service-example.html
             examples=site.examples_tenant
             multi-image=true
           %}
         </div>
 
-        <div class="state state--landlord">
+        <div class="state state--landlord examples">
           {% include service-example.html
             examples=site.examples_landlord
             multi-image=true
           %}
         </div>
 
-        <div class="state state--investment">
+        <div class="state state--investment examples">
           {% include service-example.html
             examples=site.examples_investment
             multi-image=true
@@ -125,21 +127,9 @@
     {% include footer.html %}
 
     {% include include-scripts.html %}
-    <script type="text/javascript" src="/scripts/experience.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
-
-        if (sectionQuery === "studies") {
-          window.setTimeout(function() {
-            window.scrollTo(0, $('.bottom').offset().top);
-          }, 500)
-        }
-
-        window.sr = ScrollReveal();
-        sr.reveal(".top");
-      })
+    <script
+      type="text/javascript"
+      src="/scripts/experience.js">
     </script>
   </body>
 </html>

@@ -1,8 +1,7 @@
 #about-container {
   $about-page-gutter: 60px;
   $about-page-gutter-mobile: 16px;
-  // TODO: fix mobile footer and remove
-  overflow: hidden;
+
   .section-header {
     @include mobile {
       text-align: center;

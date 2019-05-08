@@ -36,37 +36,32 @@
             {{page.subheader}}
           </p>
 
-          <input
-            id="listings-text-search"
-            type="text"
-            placeholder="Search properties"
-            class="listings-search"
-          >
+          <div>
+            <div class="listings-search">
+              <input
+                id="listings-text-search"
+                type="text"
+                placeholder="Search properties"
+              >
 
-          <div class="submenu">
+              <div class="submenu">
 
-            <div
-              id="features-toggle"
-              class="plus-sign"
-            ></div>
+                <div
+                  id="filters-toggle"
+                  class="filters-state filters-state--button"
+                >
+                  <div></div>
+                </div>
 
-            <span
-              id="show-more-filters"
-              class="opacity-50"
-            >
-              OPTIONS
-            </span>
+                <span class="opacity-50">
+                  OPTIONS
+                </span>
 
-            <span
-              id="show-less-filters"
-              class="opacity-50"
-            >
-              LESS OPTIONS
-            </span>
-
+              </div>
+            </div>
           </div>
 
-          <div class="listings filters">
+          <div class="filters filters-state filters-state--list">
 
             {% assign locations = site.listings |map: "address-line-2"| |uniq| %}
 
@@ -83,7 +78,9 @@
               <option value="n/a">Any Location</option>
 
               {% for location in locations %}
-                <option value="{{location}}">{{location}}</option>
+                <option value="{{location}}">
+                  {{location}}
+                </option>
               {% endfor %}
 
             </select>
@@ -295,14 +292,8 @@
             <div class="navigation-arrow-left navigation-arrows"></div>
           </div>
 
-          <div class="pages">
-            <a
-              id="1"
-              class="selected scroll-listings-top"
-            >
-              1
-            </a>
-          </div>
+          <!-- javascript will append pagination links to this div -->
+          <div class="pages"></div>
 
           <div
             id="listings-next"
@@ -321,28 +312,8 @@
 
     {% include include-scripts.html %}
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-        var typeQuery = (location.search.match(new RegExp('type' + "=(.*?)($|\&)", "i")) || [])[1]
-
-        if (typeQuery) {
-          showFilters();
-          $("#type-filter").val(typeQuery);
-          listingsSearch();
-        }
-
-        window.sr = ScrollReveal();
-        sr.reveal(".listing-preview");
-
-      })
-      function showFilters() {
-        $('#show-more-filters').hide();
-        $('#show-less-filters').show();
-        $(".filters").show();
-        var toggleBtn = $("#features-toggle")
-
-        toggleBtn.removeClass("plus-sign")
-        toggleBtn.addClass("minus-sign")
-      }
+    <script
+      type="text/javascript"
+      src="/scripts/listings.js">
     </script>
   </body>

@@ -53,29 +53,13 @@
     </div>
 
     {% include include-scripts.html %}
+
+    <script
+      type="text/javascript"
+      src="/scripts/about.js"
+    ></script>
+
   </body>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
-      if (sectionQuery === "team") {
-        window.setTimeout(function() {
-          window.scrollTo(0, $('.agents').offset().top);
-        }, 500)
-      }
-
-      window.sr = ScrollReveal();
-      sr.reveal(".header-image");
-      sr.reveal(".head-title");
-      sr.reveal(".about-main-text");
-      sr.reveal(".agents");
-
-      $('.agent-modal-link').click(function () {
-        var agent = $(this).data('agent');
-        $("#agent-" + agent).fadeIn();
-        $('body').addClass('overflow-hidden');
-      });
-    })
-  </script>
 </html>
 
 

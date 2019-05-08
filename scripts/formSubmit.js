@@ -1,3 +1,8 @@
+---
+---
+// do not remove the dashes above, they are required for babel to work
+
+
 const VALID_MAILER_KEYS = ["name", "email", "phone"];
 const GOOGLE_WEB_APP_URL =
   "https://script.google.com/macros/s/AKfycbzfbEoLceZY6ZVXRjwOJU5J_iu4gW15y9vSSLuwXjGEk0w7ojg/exec";

@@ -90,6 +90,7 @@
   .testimonial {
     height: 175px;
     display: flex;
+    align-items: center;
     padding: 0 8px;
     margin: 28px 0;
     overflow: auto;
@@ -107,6 +108,7 @@
   .testimonial__text {
     margin: auto;
     font-size: 0.7em;
+    max-width: 100%;
     strong {
       text-transform: uppercase;
     }
@@ -127,6 +129,7 @@
   }
 
   .testimonial__image {
+    display: inline-block;
     max-width: 100px;
     border-style: solid;
     border-radius: 500px;
