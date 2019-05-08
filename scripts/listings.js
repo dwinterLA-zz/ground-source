@@ -1,4 +1,4 @@
-const PER_PAGE = 1;
+const PER_PAGE = 6;
 
 $(document).ready(function() {
   DOMBindings();

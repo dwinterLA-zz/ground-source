@@ -10,29 +10,27 @@ function stateFromQuery() {
   ) || [])[1];
   switch (query) {
     case undefined:
-      setState(".state--default");
+      setState($(".state--default"));
       break;
     case "tenant":
-      setState(".state--tenant");
+      setState($(".state--tenant"));
       break;
     case "landlord":
-      setState(".state--landlord");
+      setState($(".state--landlord"));
       break;
     case "investment":
-      setState(".state--investment");
+      setState($(".state--investment"));
       break;
     default:
-      setState(".state--default");
+      setState($(".state--default"));
   }
 }
 
-function setState(state) {
-  setActiveLink(state);
-  const newState = $(state);
-  newState.addClass("active");
-  if (state != ".state--default") {
-    slickCarousel(newState.find(".services-carousel"));
-  }
+function setState($newState) {
+  $(".state").removeClass("active");
+  $newState.addClass("active");
+
+  slickCarousel($(".examples.active").find(".services-carousel"));
 }
 
 function slickCarousel($content) {
@@ -50,31 +48,25 @@ function slickCarousel($content) {
   }
 }
 
-function setActiveLink(state) {
-  $(".state").removeClass("active");
-  $(".state__link").removeClass("active");
-  $(state + ".state__link").addClass("active");
-}
-
 function setClickHandlers() {
   $(".state__link").on("click", function(event) {
     event.preventDefault();
   });
   $("#experience-default-link").on("click", function() {
     updateQueryParam();
-    setState(".state--default");
+    setState($(".state--default"));
   });
   $("#tenant-service-link").on("click", function() {
     updateQueryParam("tenant");
-    setState(".state--tenant");
+    setState($(".state--tenant"));
   });
   $("#landlord-service-link").on("click", function() {
     updateQueryParam("landlord");
-    setState(".state--landlord");
+    setState($(".state--landlord"));
   });
   $("#investment-service-link").on("click", function() {
     updateQueryParam("investment");
-    setState(".state--investment");
+    setState($(".state--investment"));
   });
 }
 

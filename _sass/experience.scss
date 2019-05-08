@@ -3,7 +3,14 @@
   flex-direction: column;
   min-height: 100vh;
 
-  .state {
+  .services__description {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  .examples {
     display: none;
     &.active {
       display: block;
