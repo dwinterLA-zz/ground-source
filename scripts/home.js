@@ -1,3 +1,7 @@
+---
+---
+// do not remove the dashes above, they are required for babel to work
+
 $(document).ready(function() {
   heroAnimation();
   gmap();
@@ -10,7 +14,6 @@ $(document).ready(function() {
 function navigation() {
   switch (window.location.hash) {
     case "#contact":
-      // TODO: we should have a global method for the state when the modal is open
       $("body").addClass("overflow-hidden");
       $(".contact-us-modal").fadeIn();
       $(".nav-modal").fadeOut();

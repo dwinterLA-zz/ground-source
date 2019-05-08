@@ -1,3 +1,7 @@
+---
+---
+// do not remove the dashes above, they are required for babel to work
+
 const PER_PAGE = 6;
 
 $(document).ready(function() {

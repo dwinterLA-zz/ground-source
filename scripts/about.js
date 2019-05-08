@@ -1,3 +1,7 @@
+---
+---
+// do not remove the dashes above, they are required for babel to work
+
 $(document).ready(function() {
   bindDOM();
   scrollReveal();
