@@ -10,6 +10,13 @@
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"/>
 <link rel="stylesheet" href="/css/main.css">
 
+    <script>
+      var listingMapMeta = {
+        latitude: "34.047651",
+        longitude: "-118.464022",
+        apiKey: "AIzaSyDoik8cTjwGcs2j51JGcicC61TBL7g2Iu0"
+      }
+    </script>
   </head>
   <body>
     <div id="container-listing">
@@ -146,10 +153,12 @@
 
         <div class="site-header">
 
-	<img
-		src="/images/logo.png"
-		class="logo-upper-left"
-	/>
+	<a href="/">
+		<img
+			src="/images/logo.png"
+			class="logo-upper-left"
+		/>
+	</a>
 
 	<div class="ham-menu"></div>
 
@@ -524,6 +533,7 @@
         </div>
       </div>
     </div>
+
     <div class="footer">
 
   <div class="main">
@@ -579,32 +589,41 @@
 
   <div class="social">
 
-    <a
-      href="https://www.instagram.com/@groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img src="/images/social/instagram.svg" />
-    </a>
+    <div>
+      <a
+        href="https://www.instagram.com/@groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/instagram.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
-    <a
-      href="https://www.twitter.com/groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img
-        src="/images/social/twitter.svg" />
-    </a>
+    <div>
+      <a
+        href="https://www.twitter.com/groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/twitter.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
-    <a
-      href="https://www.facebook.com/groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img
-        src="/images/social/facebook.svg"
-      />
-    </a>
+    <div>
+      <a
+        href="https://www.facebook.com/groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/facebook.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
   </div>
 
@@ -614,35 +633,19 @@
 
 </div>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="/scripts/formSubmit.js"></script>
 <script type="text/javascript" src="/scripts/script.js"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script type="text/javascript" src="/scripts/flexibility.js"></script>
 
-    <script>
-      $(document).ready(function() {
-        $('.listing-carousel').slick({
-          "prevArrow": $('.gallery-arrow-left'),
-          "nextArrow": $('.gallery-arrow-right')
-        })
 
-        window.sr = ScrollReveal();
-        sr.reveal(".info-box");
-        sr.reveal(".img-responsive");
-
-      })
-      function initListingMap() {
-        
-      }
-    </script>
-    <!-- TODO replace API key -->
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoAiw62lFQnHpIqeqYJVu1KfRkcitEN0&callback=initListingMap">
-    </script>
-
+    <script
+      type="text/javascript"
+      src="/scripts/listing.js"
+    ></script>
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->

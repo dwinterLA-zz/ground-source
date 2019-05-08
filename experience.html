@@ -109,10 +109,12 @@
 
     <div class="site-header">
 
-	<img
-		src="/images/logo.png"
-		class="logo-upper-left"
-	/>
+	<a href="/">
+		<img
+			src="/images/logo.png"
+			class="logo-upper-left"
+		/>
+	</a>
 
 	<div class="ham-menu"></div>
 
@@ -316,33 +318,35 @@
       <div class="info">
         <div class="info__content">
 
-          <a
-            href="/experience"
-            id="experience-default-link"
-            class="title state__link"
-          >
-            EXPERIENCE
-          </a>
+          <div>
+            <a
+              href="/experience"
+              id="experience-default-link"
+              class="title state__link state"
+            >
+              EXPERIENCE
+            </a>
+          </div>
 
           <div class="links">
             <a
               href="/experience?service=tenant"
               id="tenant-service-link"
-              class="state__link state--tenant link"
+              class="state__link state--tenant link state"
             >
               TENANT<br /> REPRESENTATION
             </a>
             <a
               href="/experience?service=landlord"
               id="landlord-service-link"
-              class="state__link state--landlord link"
+              class="state__link state--landlord link state"
             >
               LANDLORD<br /> REPRESENTATION
             </a>
             <a
               href="/experience?service=investment"
               id="investment-service-link"
-              class="state__link state--investment link"
+              class="state__link state--investment link state"
             >
               INVESTMENT<br /> REPRESENTATION
             </a>
@@ -385,7 +389,7 @@ Clients deserve a broker who is one hundred percent invested in the market of th
 
       <div class="slideshow">
 
-        <div class="state state--tenant">
+        <div class="state state--tenant examples">
           
 	<div class="services-carousel">
 		
@@ -772,7 +776,7 @@ Clients deserve a broker who is one hundred percent invested in the market of th
 
         </div>
 
-        <div class="state state--landlord">
+        <div class="state state--landlord examples">
           
 	<div class="services-carousel">
 		
@@ -991,7 +995,7 @@ Clients deserve a broker who is one hundred percent invested in the market of th
 
         </div>
 
-        <div class="state state--investment">
+        <div class="state state--investment examples">
           
 	<div class="services-carousel">
 		
@@ -1143,32 +1147,41 @@ Clients deserve a broker who is one hundred percent invested in the market of th
 
   <div class="social">
 
-    <a
-      href="https://www.instagram.com/@groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img src="/images/social/instagram.svg" />
-    </a>
+    <div>
+      <a
+        href="https://www.instagram.com/@groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/instagram.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
-    <a
-      href="https://www.twitter.com/groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img
-        src="/images/social/twitter.svg" />
-    </a>
+    <div>
+      <a
+        href="https://www.twitter.com/groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/twitter.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
-    <a
-      href="https://www.facebook.com/groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img
-        src="/images/social/facebook.svg"
-      />
-    </a>
+    <div>
+      <a
+        href="https://www.facebook.com/groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/facebook.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
   </div>
 
@@ -1185,23 +1198,10 @@ Clients deserve a broker who is one hundred percent invested in the market of th
 <script type="text/javascript" src="/scripts/formSubmit.js"></script>
 <script type="text/javascript" src="/scripts/script.js"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script type="text/javascript" src="/scripts/flexibility.js"></script>
 
-    <script type="text/javascript" src="/scripts/experience.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-
-        var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
-
-        if (sectionQuery === "studies") {
-          window.setTimeout(function() {
-            window.scrollTo(0, $('.bottom').offset().top);
-          }, 500)
-        }
-
-        window.sr = ScrollReveal();
-        sr.reveal(".top");
-      })
+    <script
+      type="text/javascript"
+      src="/scripts/experience.js">
     </script>
   </body>
 </html>

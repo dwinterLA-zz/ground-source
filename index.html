@@ -25,6 +25,13 @@
         }
       });
     </script>
+    <script>
+      var homeMapMeta = {
+        latitude: "34.047651",
+        longitude: "-118.464022",
+        apiKey: "AIzaSyDoik8cTjwGcs2j51JGcicC61TBL7g2Iu0"
+      }
+    </script>
   </head>
   <body>
 
@@ -1375,7 +1382,11 @@
 
         </div>
 
-        <div class="footer">
+      </div>
+
+    </div>
+
+    <div class="footer">
 
   <div class="main">
 
@@ -1430,32 +1441,41 @@
 
   <div class="social">
 
-    <a
-      href="https://www.instagram.com/@groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img src="/images/social/instagram.svg" />
-    </a>
+    <div>
+      <a
+        href="https://www.instagram.com/@groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/instagram.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
-    <a
-      href="https://www.twitter.com/groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img
-        src="/images/social/twitter.svg" />
-    </a>
+    <div>
+      <a
+        href="https://www.twitter.com/groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/twitter.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
-    <a
-      href="https://www.facebook.com/groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img
-        src="/images/social/facebook.svg"
-      />
-    </a>
+    <div>
+      <a
+        href="https://www.facebook.com/groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/facebook.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
   </div>
 
@@ -1465,9 +1485,6 @@
 
 </div>
 
-      </div>
-
-    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
@@ -1475,91 +1492,12 @@
 <script type="text/javascript" src="/scripts/formSubmit.js"></script>
 <script type="text/javascript" src="/scripts/script.js"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script type="text/javascript" src="/scripts/flexibility.js"></script>
 
-    <script type="text/javascript" src="/scripts/home.js"></script>
-    <script>
-      $(document).ready(function() {
-        $(".services-home-button").click(function(event) {
-          $('.body').removeClass('overflow-hidden');
-          window.history.pushState(null, null, '#services')
-          scrollToServices();
-        })
 
-        var logo = $("#header-logo");
-
-        $(".testimonial-text").each(function() {
-          var textLimit = 300
-          var text = $(this).text();
-          if (text.length > textLimit) {
-            var shortenedText = $(this).text().slice(0,textLimit);
-            shortenedText += " ..."
-            $(this).text(shortenedText);
-          }
-        });
-
-        switch(window.location.hash) {
-          case '#contact':
-            $('body').addClass('overflow-hidden');
-            $('.contact-us-modal').fadeIn();
-            $('.nav-modal').fadeOut();
-            break;
-          case '#services':
-            navActivateSection("active-section-services")
-            break
-        }
-
-        $(logo).addClass("prepareSlideUp");
-        $("#header-text").css("opacity", 0);
-        setTimeout(function () {
-          $("#header-logo").addClass("slideUp");
-        }, 50);
-        setTimeout(function () {
-          $("#header-text").css("opacity", 1);
-        }, 700);
-
-        window.sr = ScrollReveal();
-        sr.reveal(".home-intro-left");
-        sr.reveal(".home-intro-right");
-        sr.reveal(".services-header");
-        sr.reveal(".testimonial-slideshow");
-        sr.reveal(".services-text");
-        sr.reveal("#contact-us-home-section");
-      })
-      function initHomeMap() {
-        var uluru = {lat: 33.979449, lng: -118.413002};
-        var map = new google.maps.Map(document.getElementById('gmap-home-page'), {
-          zoom: 14,
-          scrollwheel: false,
-          disableDefaultUI: true,
-          center: { lat: 34.047651, lng: -118.464022 }
-        });
-
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-      function scrollToServices() {
-        $('body').removeClass('overflow-hidden');
-        $('.nav-modal').fadeOut();
-        navActivateSection("active-section-services")
-        window.scrollTo({
-          top: $('#services-content').offset().top,
-          left: 0,
-          behavior: 'smooth'
-        });
-      }
-
-      function navActivateSection(section) {
-        $("[id^=active-section-]").attr('id', section)
-      }
-    </script>
-    <!-- TODO replace API key -->
     <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhoAiw62lFQnHpIqeqYJVu1KfRkcitEN0&callback=initHomeMap"
-    ></script>
+      type="text/javascript"
+      src="/scripts/home.js">
+    </script>
+
   </body>
 </html>

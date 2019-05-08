@@ -18,10 +18,12 @@
 
       <div class="site-header">
 
-	<img
-		src="/images/logo.png"
-		class="logo-upper-left"
-	/>
+	<a href="/">
+		<img
+			src="/images/logo.png"
+			class="logo-upper-left"
+		/>
+	</a>
 
 	<div class="ham-menu"></div>
 
@@ -869,32 +871,41 @@
 
   <div class="social">
 
-    <a
-      href="https://www.instagram.com/@groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img src="/images/social/instagram.svg" />
-    </a>
+    <div>
+      <a
+        href="https://www.instagram.com/@groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/instagram.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
-    <a
-      href="https://www.twitter.com/groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img
-        src="/images/social/twitter.svg" />
-    </a>
+    <div>
+      <a
+        href="https://www.twitter.com/groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/twitter.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
-    <a
-      href="https://www.facebook.com/groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img
-        src="/images/social/facebook.svg"
-      />
-    </a>
+    <div>
+      <a
+        href="https://www.facebook.com/groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/facebook.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
   </div>
 
@@ -913,31 +924,14 @@
 <script type="text/javascript" src="/scripts/formSubmit.js"></script>
 <script type="text/javascript" src="/scripts/script.js"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script type="text/javascript" src="/scripts/flexibility.js"></script>
+
+
+    <script
+      type="text/javascript"
+      src="/scripts/about.js"
+    ></script>
 
   </body>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var sectionQuery = (location.search.match(new RegExp('section' + "=(.*?)($|\&)", "i")) || [])[1]
-      if (sectionQuery === "team") {
-        window.setTimeout(function() {
-          window.scrollTo(0, $('.agents').offset().top);
-        }, 500)
-      }
-
-      window.sr = ScrollReveal();
-      sr.reveal(".header-image");
-      sr.reveal(".head-title");
-      sr.reveal(".about-main-text");
-      sr.reveal(".agents");
-
-      $('.agent-modal-link').click(function () {
-        var agent = $(this).data('agent');
-        $("#agent-" + agent).fadeIn();
-        $('body').addClass('overflow-hidden');
-      });
-    })
-  </script>
 </html>
 
 

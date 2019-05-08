@@ -103,10 +103,12 @@
 
     <div class="site-header">
 
-	<img
-		src="/images/logo.png"
-		class="logo-upper-left"
-	/>
+	<a href="/">
+		<img
+			src="/images/logo.png"
+			class="logo-upper-left"
+		/>
+	</a>
 
 	<div class="ham-menu"></div>
 
@@ -319,37 +321,32 @@
             Find our listings here…
           </p>
 
-          <input
-            id="listings-text-search"
-            type="text"
-            placeholder="Search properties"
-            class="listings-search"
-          >
+          <div>
+            <div class="listings-search">
+              <input
+                id="listings-text-search"
+                type="text"
+                placeholder="Search properties"
+              >
 
-          <div class="submenu">
+              <div class="submenu">
 
-            <div
-              id="features-toggle"
-              class="plus-sign"
-            ></div>
+                <div
+                  id="filters-toggle"
+                  class="filters-state filters-state--button"
+                >
+                  <div></div>
+                </div>
 
-            <span
-              id="show-more-filters"
-              class="opacity-50"
-            >
-              OPTIONS
-            </span>
+                <span class="opacity-50">
+                  OPTIONS
+                </span>
 
-            <span
-              id="show-less-filters"
-              class="opacity-50"
-            >
-              LESS OPTIONS
-            </span>
-
+              </div>
+            </div>
           </div>
 
-          <div class="listings filters">
+          <div class="filters filters-state filters-state--list">
 
             
 
@@ -366,9 +363,13 @@
               <option value="n/a">Any Location</option>
 
               
-                <option value="Burbank, CA 91502">Burbank, CA 91502</option>
+                <option value="Burbank, CA 91502">
+                  Burbank, CA 91502
+                </option>
               
-                <option value="Los Angeles, CA 90025">Los Angeles, CA 90025</option>
+                <option value="Los Angeles, CA 90025">
+                  Los Angeles, CA 90025
+                </option>
               
 
             </select>
@@ -663,14 +664,8 @@
             <div class="navigation-arrow-left navigation-arrows"></div>
           </div>
 
-          <div class="pages">
-            <a
-              id="1"
-              class="selected scroll-listings-top"
-            >
-              1
-            </a>
-          </div>
+          <!-- javascript will append pagination links to this div -->
+          <div class="pages"></div>
 
           <div
             id="listings-next"
@@ -738,32 +733,41 @@
 
   <div class="social">
 
-    <a
-      href="https://www.instagram.com/@groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img src="/images/social/instagram.svg" />
-    </a>
+    <div>
+      <a
+        href="https://www.instagram.com/@groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/instagram.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
-    <a
-      href="https://www.twitter.com/groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img
-        src="/images/social/twitter.svg" />
-    </a>
+    <div>
+      <a
+        href="https://www.twitter.com/groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/twitter.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
-    <a
-      href="https://www.facebook.com/groundsourcela"
-      target="_blank"
-      class="social-icon"
-    >
-      <img
-        src="/images/social/facebook.svg"
-      />
-    </a>
+    <div>
+      <a
+        href="https://www.facebook.com/groundsourcela"
+        target="_blank"
+      >
+        <img
+          src="/images/social/facebook.svg"
+          class="social-icon"
+        />
+      </a>
+    </div>
 
   </div>
 
@@ -782,31 +786,10 @@
 <script type="text/javascript" src="/scripts/formSubmit.js"></script>
 <script type="text/javascript" src="/scripts/script.js"></script>
 <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script type="text/javascript" src="/scripts/flexibility.js"></script>
 
 
-    <script type="text/javascript">
-      $(document).ready(function() {
-        var typeQuery = (location.search.match(new RegExp('type' + "=(.*?)($|\&)", "i")) || [])[1]
-
-        if (typeQuery) {
-          showFilters();
-          $("#type-filter").val(typeQuery);
-          listingsSearch();
-        }
-
-        window.sr = ScrollReveal();
-        sr.reveal(".listing-preview");
-
-      })
-      function showFilters() {
-        $('#show-more-filters').hide();
-        $('#show-less-filters').show();
-        $(".filters").show();
-        var toggleBtn = $("#features-toggle")
-
-        toggleBtn.removeClass("plus-sign")
-        toggleBtn.addClass("minus-sign")
-      }
+    <script
+      type="text/javascript"
+      src="/scripts/listings.js">
     </script>
   </body>
