@@ -36,20 +36,50 @@
       margin: 0 15% 0 15%;
       color: gray;
     }
+  }
+
+  .listings-search {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
     > input {
-      margin-top: 30px;
       border-radius: 30px;
+      border-style: solid;
+      border-color: lightgray;
+      text-indent: 18px;
+      outline: none;
       width: 420px;
       height: 50px;
+      @include mobile {
+        width: 90%;
+        margin-top: 30px;
+      }
+      &::-webkit-input-placeholder {
+        color: $listings-text;
+        font-size: 1.1em;
+        font-family: $font-montserrat;
+        line-height: 110%;
+        opacity: 0.7;
+      }
+    }
+    @include mobile {
+      display: block;
     }
   }
 
   .submenu {
-    display: inline;
+    position: absolute;
+    top: 50%;
+    right: -108px;
+    transform: translateY(-50%);
     color: grey;
     font-size: 0.8em;
     > span {
       vertical-align: middle;
+    }
+    @include mobile {
+      position: static;
+      margin-top: 30px;
     }
   }
 
@@ -100,6 +130,9 @@
       max-height: 200px;
       box-shadow: 0px 0px 18px 6px #f2f2f2;
       margin-top: 2em;
+      @include mobile {
+        margin-top: 0;
+      }
     }
   }
 
@@ -120,6 +153,9 @@
 
   .listings {
     padding: 2em 0;
+    @include mobile {
+      padding: 1em 0;
+    }
   }
 
   .listings__filter {
@@ -132,7 +168,8 @@
 
   .listings__button {
     background-color: $primary-color-darker;
-    min-width: 120px;
+    min-width: 130px;
+    padding: 4px;
     color: white;
     border: none;
     cursor: pointer;
@@ -280,21 +317,6 @@
     }
   }
 
-  .listings-search {
-    border-style: solid;
-    border-color: lightgray;
-    text-indent: 18px;
-    outline: none;
-  }
-
-  input.listings-search::-webkit-input-placeholder {
-    color: $listings-text;
-    font-size: 1.1em;
-    font-family: $font-montserrat;
-    line-height: 110%;
-    opacity: 0.7;
-  }
-
   .paginator {
     text-align: center;
     position: relative;
@@ -342,11 +364,6 @@
     }
     .short-caption {
       display: none;
-    }
-
-    .submenu {
-      display: block;
-      margin-top: 18px;
     }
 
     .listings {
