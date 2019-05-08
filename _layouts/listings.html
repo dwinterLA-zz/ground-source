@@ -145,8 +145,7 @@
           {% assign listings = site.listings | where: "layout", "listing" | where: "hidden", "false" %}
 
           {% for listing in listings %}
-            <a
-              href={{listing.url}}
+            <div
               class="listing-preview"
               data-location="{{listing.address-line-2}}"
               data-available="{{listing.available}}"
@@ -157,117 +156,120 @@
               data-size="{{listing.sq-footage}}"
               data-price="{{listing.price}}"
             >
+              <a href={{listing.url}}>
 
-              <div
-                class="header"
-                {% if listing.property-preview-image != blank %}
-                  style="background-image:url({{listing.property-preview-image}})"
-                {% endif %}
-              >
-                <div class="address">
+                <div
+                  class="header"
+                  {% if listing.property-preview-image != blank %}
+                    style="background-image:url({{listing.property-preview-image}})"
+                  {% endif %}
+                >
+                  <div class="address">
 
-                  <div>{{listing.address-line-1}}</div>
+                    <div>{{listing.address-line-1}}</div>
 
-                  <div>{{listing.address-line-2}}</div>
+                    <div>{{listing.address-line-2}}</div>
 
+                  </div>
                 </div>
-              </div>
 
-              <div class="listing-content">
+                <div class="listing-content">
 
-                <p class="short-caption">
-                  {{listing.short-caption}}
-                </p>
+                  <p class="short-caption">
+                    {{listing.short-caption}}
+                  </p>
 
-                <div class="amenities">
+                  <div class="amenities">
 
-                  <div class="amenity__row">
+                    <div class="amenity__row">
 
-                    <div class="amenity__cell">
+                      <div class="amenity__cell">
 
-                      {% if listing.lease and listing.buy %}
+                        {% if listing.lease and listing.buy %}
 
-                        <div class="listing-label rent-label">
-                          For Sale
-                        </div>
-
-                        <div class="label lease-label">
-                          For Lease
-                        </div>
-
-                      {% else %}
-
-                        {% if listing.lease %}
-                          <div class="listing-label lease-label">
-                            For Lease
-                          </div>
-                        {% endif %}
-
-                        {% if listing.sublease %}
-                          <div class="listing-label sublease-label">
-                            For Sublease
-                          </div>
-                        {% endif %}
-
-                        {% if listing.sale %}
                           <div class="listing-label rent-label">
                             For Sale
                           </div>
+
+                          <div class="label lease-label">
+                            For Lease
+                          </div>
+
+                        {% else %}
+
+                          {% if listing.lease %}
+                            <div class="listing-label lease-label">
+                              For Lease
+                            </div>
+                          {% endif %}
+
+                          {% if listing.sublease %}
+                            <div class="listing-label sublease-label">
+                              For Sublease
+                            </div>
+                          {% endif %}
+
+                          {% if listing.sale %}
+                            <div class="listing-label rent-label">
+                              For Sale
+                            </div>
+                          {% endif %}
+
                         {% endif %}
 
-                      {% endif %}
+                      </div>
+
+                      <div class="amenity__cell">
+
+                        {% if listing.rate == 0 or listing.rate == "0" or listing.rate == nil %}
+
+                          <img src="images/icons/money.svg"/>
+
+                          <span>
+                            Please Call
+                          </span>
+
+                        {% else %}
+
+                          <img
+                            class="amenity__icon"
+                            src="images/icons/money.svg"
+                          />
+
+                          <span class="amenity__detail">
+                            {{ listing.rate }}/month
+                          </span>
+
+                        {% endif %}
+
+                      </div>
 
                     </div>
 
-                    <div class="amenity__cell">
+                    <div class="amenity__row">
 
-                      {% if listing.rate == 0 or listing.rate == "0" or listing.rate == nil %}
+                      <div class="amenity__cell">
 
-                        <img src="images/icons/money.svg"/>
+                        <img class="amenity__icon" src="images/icons/square.svg" />
 
-                        <span>
-                          Please Call
+                        <span class="amenity__detail">
+                          {{listing.sq-footage}} Sq. ft.
                         </span>
 
-                      {% else %}
+                      </div>
+
+                      <div class="amenity__cell">
 
                         <img
                           class="amenity__icon"
-                          src="images/icons/money.svg"
+                          src="images/icons/car.svg"
                         />
 
                         <span class="amenity__detail">
-                          {{ listing.rate }}/month
+                          {{listing.parking}}
                         </span>
 
-                      {% endif %}
-
-                    </div>
-
-                  </div>
-
-                  <div class="amenity__row">
-
-                    <div class="amenity__cell">
-
-                      <img class="amenity__icon" src="images/icons/square.svg" />
-
-                      <span class="amenity__detail">
-                        {{listing.sq-footage}} Sq. ft.
-                      </span>
-
-                    </div>
-
-                    <div class="amenity__cell">
-
-                      <img
-                        class="amenity__icon"
-                        src="images/icons/car.svg"
-                      />
-
-                      <span class="amenity__detail">
-                        {{listing.parking}}
-                      </span>
+                      </div>
 
                     </div>
 
@@ -275,9 +277,8 @@
 
                 </div>
 
-              </div>
-
-            </a>
+              </a>
+            </div>
           {% endfor %}
 
         </div>

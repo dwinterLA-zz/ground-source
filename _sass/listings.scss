@@ -1,8 +1,7 @@
 #container-listings {
   $filter-transition-duration: 0.38s;
-
+  @include bg-cover-center;
   background-image: url(../images/about/fs-bg.jpg);
-  background-size: cover;
   .listings-header {
     @include header;
   }
