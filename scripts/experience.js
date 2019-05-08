@@ -1,7 +1,6 @@
 $(document).ready(function() {
   stateFromQuery();
   setClickHandlers();
-  servicesCarousel();
   scrollReveal();
 });
 
@@ -29,24 +28,19 @@ function stateFromQuery() {
 
 function setState(state) {
   setActiveLink(state);
-  $(state).addClass("active");
-  setupCarousel();
+  const newState = $(state);
+  newState.addClass("active");
+  if (state != ".state--default") {
+    slickCarousel(newState.find(".services-carousel"));
+  }
 }
 
-function servicesCarousel() {
-  $(".services-carousel").slick({
-    autoplay: false,
-    draggable: false,
-    dots: true,
-    prevArrow: false,
-    nextArrow: false
-  });
-}
-
-function setupCarousel() {
-  if ($(".services-carousel:visible").length > 0) {
-    $(".services-carousel").slick("unslick");
-    $(".services-carousel").slick({
+function slickCarousel($content) {
+  // dont't re-slick if we already setup a carousel
+  try {
+    $content.slick("getSlick");
+  } catch (e) {
+    $content.slick({
       autoplay: false,
       draggable: false,
       dots: true,
@@ -55,6 +49,7 @@ function setupCarousel() {
     });
   }
 }
+
 function setActiveLink(state) {
   $(".state").removeClass("active");
   $(".state__link").removeClass("active");
