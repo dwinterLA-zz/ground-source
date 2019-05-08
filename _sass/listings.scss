@@ -92,14 +92,6 @@
     }
   }
 
-  .filters-state--label {
-    overflow: hidden;
-    max-width: 0;
-    &.open {
-      max-width: 1000px;
-    }
-  }
-
   .filters-state--list {
     display: inline-block;
     max-height: 0;
