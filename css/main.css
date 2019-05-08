@@ -2277,8 +2277,10 @@ a {
     margin: 16px; }
 
 #container-listings {
-  background-image: url(../images/about/fs-bg.jpg);
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/about/fs-bg.jpg); }
   #container-listings .listings-header {
     font-size: 1.8em;
     letter-spacing: 2px; }
