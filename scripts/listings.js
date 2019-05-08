@@ -1,7 +1,6 @@
-const PER_PAGE = 6;
+const PER_PAGE = 1;
 
 $(document).ready(function() {
-  scrollReveal();
   DOMBindings();
   paginate($("#properties").children());
 });
@@ -24,6 +23,7 @@ function DOMBindings() {
     $("#min-rooms").val("1");
     $("#min-size").val("");
     $("#max-price").val("");
+
     paginate(listings);
   });
 
@@ -32,14 +32,15 @@ function DOMBindings() {
       // remove focus if user presses enter
       $(that).blur();
     }
-    var listings = $(".listing-preview");
-    $(listings).hide();
 
-    var searchContent = $(this)
+    const $listings = $(".listing-preview");
+    $listings.hide();
+
+    const searchContent = $(this)
       .val()
       .toLowerCase();
 
-    var filteredListings = $(".listing-preview").filter(function() {
+    const filteredListings = $(".listing-preview").filter(function() {
       return (
         $(this)
           .text()
@@ -47,101 +48,77 @@ function DOMBindings() {
           .indexOf(searchContent) > 0 || searchContent === ""
       );
     });
-
     paginate(filteredListings);
   });
-
-  $(".scroll-listings-top").click(function() {
-    var top = $(".header").offset().top;
-
-    $("html, body").animate({ scrollTop: top }, 250);
-  });
 }
 
-function scrollReveal() {
-  window.sr = ScrollReveal();
-  sr.reveal(".listing-preview");
-}
-
-function paginate(properties) {
-  var page = 0;
-  var totalPages = parseInt(properties.length / PER_PAGE);
-
+function paginate($properties) {
+  // cleanup from prior paginations
+  $properties.hide();
+  $(".pages")
+    .children()
+    .remove();
   $("#listings-next").off("click");
   $("#listings-prev").off("click");
-  $(".pages").html(
-    '<a data-page="1" id="page-1" class="scroll-listings-top selected">1</a>'
-  );
 
-  $(properties).hide();
-  $(properties)
-    .slice(page, PER_PAGE)
-    .show();
+  const totalPages = Math.ceil($properties.length / PER_PAGE);
 
-  // create page buttons
-  for (var i = 0; i < totalPages; i++) {
-    // we start at page 2 because page 1 already exists
-    var unit = i + 2;
-    var newPage =
-      "<a class=scroll-listings-top id=page-" +
-      unit +
-      " data-page=" +
-      unit +
-      ">" +
-      unit +
-      "</a>";
-    $(".pages").append(newPage);
-    $("#page-" + unit).click(function() {
+  // show page 1
+  $properties.slice(0, PER_PAGE).show();
+
+  // create pagination buttons
+  for (var pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+    var $newPage = $("<a></a>")
+      .text(pageNumber)
+      .data("page", pageNumber);
+
+    if (pageNumber === 1) {
+      $newPage.addClass("selected");
+    }
+
+    $(".pages").append($newPage);
+
+    $newPage.click(function() {
       pageClickListener(this);
     });
   }
 
-  $("#page-1").click(function() {
-    pageClickListener(this);
-  });
-
   function pageClickListener(clickedPage) {
-    $(".pages")
-      .children()
-      .eq(page)
-      .removeClass("selected");
-    page = $(clickedPage).data("page") - 1;
-    paginateHelper(page);
+    clearSelected();
+    goToPage($(clickedPage).data("page"));
   }
 
-  $(properties).hide();
-  $(properties)
-    .slice(page, PER_PAGE)
-    .show();
-
   $("#listings-next").click(function() {
-    $(".pages")
-      .children()
-      .eq(page)
-      .removeClass("selected");
-    page = page === totalPages ? 0 : (page += 1);
-    paginateHelper(page);
+    let pageNext = clearSelected(true) + 1;
+    pageNext = pageNext > totalPages ? 1 : pageNext;
+
+    goToPage(pageNext);
   });
 
   $("#listings-prev").click(function() {
-    $(".pages")
-      .children()
-      .eq(page)
-      .removeClass("selected");
-    page = page === 0 ? totalPages : (page -= 1);
-    properties.hide();
-    paginateHelper(page);
+    let pagePrev = clearSelected(true) - 1;
+
+    pagePrev = pagePrev <= 0 ? totalPages : pagePrev;
+
+    goToPage(pagePrev);
   });
 
-  function paginateHelper(newPage) {
-    properties.hide();
-    var start = newPage * PER_PAGE;
-    properties.slice(start, start + PER_PAGE).show();
-    // highlight the selected page number
+  function goToPage(newPage) {
+    $properties.hide();
     $(".pages")
       .children()
-      .eq(newPage)
+      .eq(newPage - 1)
       .addClass("selected");
+
+    const start = (newPage - 1) * PER_PAGE;
+
+    $properties.slice(start, start + PER_PAGE).show();
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
   }
 }
 
@@ -187,4 +164,13 @@ function search() {
   });
 
   paginate(filteredListings);
+}
+
+function clearSelected(returnCleared) {
+  const selectedPage = $(".pages").find(".selected");
+  selectedPage.removeClass("selected");
+
+  if (returnCleared) {
+    return parseInt(selectedPage.data("page"));
+  }
 }

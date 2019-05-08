@@ -5,7 +5,6 @@ $(document).ready(function() {
   scrollReveal();
   setClickHandlers();
   reviewCarousel();
-  // servicesCarousel();
 });
 
 function activateNavigation() {
