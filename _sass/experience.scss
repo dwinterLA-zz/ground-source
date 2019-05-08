@@ -21,6 +21,8 @@
     @include bg-cover-center;
     text-align: center;
     min-height: 60vh;
+    // flex grow doesn't work in ie10
+    -ms-flex-preferred-size: 100vh;
     flex-grow: 1;
     background-image: url("../images/experience/bg.jpg");
     width: 100%;
@@ -75,6 +77,8 @@
   }
 
   .description {
+    // ie 10 flexbox quirk
+    max-width: 100%;
     color: white;
     font-size: 1.1em;
     opacity: 0.9;
