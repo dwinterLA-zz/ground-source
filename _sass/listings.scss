@@ -1,6 +1,6 @@
 #container-listings {
+  @include bg-cover-center;
   background-image: url(../images/about/fs-bg.jpg);
-  background-size: cover;
   .listings-header {
     @include header;
   }
