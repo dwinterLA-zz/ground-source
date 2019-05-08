@@ -31,18 +31,17 @@ function setState($newState) {
 }
 
 function slickCarousel($content) {
-  // dont't re-slick if we already setup a carousel
   try {
-    $content.slick("getSlick");
-  } catch (e) {
-    $content.slick({
-      autoplay: false,
-      draggable: false,
-      dots: true,
-      prevArrow: false,
-      nextArrow: false
-    });
-  }
+    $content.slick("unslick");
+  } catch (e) {}
+
+  $content.slick({
+    autoplay: false,
+    draggable: false,
+    dots: true,
+    prevArrow: false,
+    nextArrow: false
+  });
 }
 
 function setClickHandlers() {
