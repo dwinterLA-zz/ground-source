@@ -62,7 +62,7 @@ Front matter templates exist in Forestry, which allow you to easily add, remove,
 
 Go to `Site -> Front matter` (on left-nav) if you'd like to make a change to any of the existing templates. You can also add new templates on this page.
 
-Jankiness can sometimes happen when adding or removing fields for existing collections. For example, you might add a new field for the front matter template for `listing`, but then not see it as a valid editable field within the CMS itself. When this has happened in the past, I've directly edited
+Jankiness can sometimes happen when adding or removing fields for existing collections. For example, you might add a new field for the front matter template for `listing`, but then not see it as a valid, editable field within the CMS itself. When this has happened in the past, I've directly edited
 the corresponding markdown file, and committed to `groundsource-dev`. Every collection is included as a folder at the root of the repo. Within each collection folder, each item is represented by a markdown file. Example path for Listing number 3: `ground-source/_listings/3.md`.
 
 ## Newsletter & Flyer
