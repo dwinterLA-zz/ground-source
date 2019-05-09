@@ -37,29 +37,30 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 structured within Jekyll/Forestry, with a dev focus.
 However, Christian's created some <a href="https://www.groundsource.net/documentation/forestry-documentation.pdf">literature</a> that describes the actual content (what should go where and how), from a CMS user's perspective.
 
-....
 
 Jekyll has two main content concepts: pages and collections.
 
-Pages includes contents (mostly text, some images) that are specific to one of the main pages: index (home), services, about, experience, listing, and listings. To edit,look for the `Pages` link within the left navigation on Forestry.
+  - A Page includes contents (mostly text, some images) that are specific to that specific page on the website, either: index/home, about, listings, listing, or experience.
 
-Collections are arrays of data that can be consumed on any page. Collections can also be setup so that an item in the collection maps to a specific page via the `layout` key in the front matter.
+  To edit,look for the `Pages` link within the left navigation on Forestry.
 
-For example, the `Agents` collection is used on the `About` page like this: `{% for agent in site.agents %}`, while each `listing` within the `Listings` collection
-is the primary data used within the `listing.html` and `newsletter.html` templates:
+  - Collections are arrays of data that can be consumed on any page. Collections can also be setup so that an item in the collection maps to a specific page via the `layout` key in the front matter.
 
-`ground-source/_listings/2.md`
+  For example, the `Agents` collection is used on the `About` page like this: `{% for agent in site.agents %}`, while each `listing` within the `Listings` collection
+  is the primary data used within the `listing.html` and `newsletter.html` templates:
 
-```
-layout:
-- newsletter
-- listing
-```
+  `ground-source/_listings/2.md`
 
-If you want to create a new collection, you'll need to add it to the `collections` list in `_config.yml`, and there may be some
-additional setup as well. You can read more about collections here: <a href="https://jekyllrb.com/docs/collections/">jekyll collections</a>.
+  ```
+  layout:
+  - newsletter
+  - listing
+  ```
 
-Data (markdown files) for existing collections can by found at the root (left-hand navigation) menu within Forestry.
+  If you want to create a new collection, you'll need to add it to the `collections` list in `_config.yml`, and there may be some
+  additional setup as well. You can read more about collections here: <a href="https://jekyllrb.com/docs/collections/">jekyll collections</a>.
+
+  Data (markdown files) for existing collections can by found at the root (left-hand navigation) menu within Forestry.
 
 ## Front Matter
 
