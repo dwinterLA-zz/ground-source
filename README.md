@@ -8,17 +8,14 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 
 <a href="https://forestry.io/" target="_blank">Forestry.io</a> has been setup as the CMS for the site.
 
-## Running Locally
-
-1. Clone and `cd` into this repo
-2. Install the Jekyll and bundler ruby gems: `gem install jekyll bundler`
-3. `bundle exec jekyll serve` (installs required ruby gems and starts the dev server)
-4. The website will be served here: `http://localhost:4000`
-
 ## Developing
 
-1. Create a feature branch off of `master`
-2. When you're ready, create a pull request back into `master`
+1. Clone and `cd` into this repo
+2. Install the Jekyll and Bundler ruby gems: `gem install jekyll bundler`
+3. `bundle exec jekyll serve` (installs required ruby gems and starts the dev server)
+4. The website will be served here: `http://localhost:4000`
+5. Create a feature branch off of `master`
+6. When you're ready, create a pull request back into `master`
 
 ## Deploying
 - The production branch for this project is: `groundsouce-dev`. A poor name for a production branch, but Forestry
@@ -26,16 +23,16 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 
 - Merge the latest `master` into `groundsource-dev`. Forestry will:
     - Automatically detect any changes made to `groundsource-dev`.
-    - Built the site, and commit the build to the Github Pages branch: `gh-pages-branch`.
+    - Build the site and commit to the Github Pages branch: `gh-pages-branch`.
 
 - Within a few minutes, your changes should be live at <a href="https://groundsource.net">groundsource.net</a>. If not, logging into Forestry should illuminate potential build errors (look for the status indicator at the top of the left navigation bar).
 
 
 ## Managing Content
 
-<a href="https://forestry.io/" target="_blank">Forestry.io</a> is a CMS for static sites. Below is a basic overview of how content and data is
-structured within Jekyll/Forestry, with a dev focus.
-However, Christian's created some <a href="https://www.groundsource.net/documentation/forestry-documentation.pdf">literature</a> that describes the actual content (what should go where and how), from a CMS user's perspective.
+<a href="https://forestry.io/" target="_blank">Forestry.io</a> is a CMS for static sites. Below is a brief technical overview of how Jekyll/Forestry handles content.
+
+Christian's also created some <a href="https://www.groundsource.net/documentation/forestry-documentation.pdf">literature</a> that describes the data entry process.
 
 
 Jekyll has two main content concepts:
@@ -57,10 +54,7 @@ Jekyll has two main content concepts:
 
 ## Front Matter
 
-Front matter are a special kind of file that dictates the type of data a page or collection can support.
-Front matter templates exist in Forestry, which allow you to easily add, remove, or change the data fields available to pages and collections.
-
-Go to `Site -> Front matter` (on left-nav) if you'd like to make a change to any of the existing templates. You can also add new templates on this page.
+Front matter in Jekyll projects consist of a YAML block of variables at the top of an HTML or MD file. Essentially, these variables create the context for liquid templating. Forestry has the concept of "front matter templates". When adding a new page or item in a collection, choosing the appropriate template will automatically setup the proper front matter for the corresponding markdown file. You can create new (or change existing) front matter templates in Forestry: `Site -> Front matter` within the left navigation.
 
 Jankiness can sometimes happen when adding or removing fields for existing collections. For example, you might add a new field for the front matter template for `listing` but then not see it as a valid, editable field within the CMS itself. When this has happened in the past, I've directly edited
 the corresponding markdown file, and committed to `groundsource-dev`. Collection are included as folders at the root of the repo.
