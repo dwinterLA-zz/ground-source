@@ -35,7 +35,7 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 
 <a href="https://forestry.io/" target="_blank">Forestry.io</a> is a CMS for static sites. Below is a basic overview of how content and data is
 structured within Jekyll/Forestry, with a dev focus.
-However, Christian's created some literature that describes the actual content (what should go where and how), from a CMS user's perspective. You can find that here: `ground-source/documentation/forestry-documentation.pdf`.
+However, Christian's created some <a href="https://www.groundsource.net/documentation/forestry-documentation.pdf">literature</a> that describes the actual content (what should go where and how), from a CMS user's perspective.
 
 ....
 
