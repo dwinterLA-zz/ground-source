@@ -53,9 +53,26 @@ Jekyll has two main content concepts:
 
 ## Front Matter
 
-Front matter in Jekyll projects consist of a YAML block of variables at the top of an HTML or MD file. Essentially, these variables create the context for liquid templating. Forestry has the concept of "front matter templates". When adding a new page or item in a collection, choosing the appropriate template will automatically setup the proper front matter for the corresponding markdown file. You can create new (or change existing) front matter templates in Forestry: `Site -> Front matter` within the left navigation.
+Front matter in Jekyll projects consist of a YAML block of variables at the top of content file (we use MD, but they can also be HTML). Essentially, these variables make up the context that will be available within your Liquid templates. Front matter also dictates which fields /options will be available for data entry within the CMS.
 
-Jankiness can sometimes happen when adding or removing fields for existing collections. For example, you might add a new field for the front matter template for `listing` but then not see it as a valid, editable field within the CMS itself. When this has happened in the past, I've directly edited
+An admin section of Forestry (`Site -> Front matter` within the left navigation) gives us the ability to create "Front Matter Templates". These templates allow us to control the data that users of the CMS are able to upload for each page / collection.
+
+For example, an "agent" front matter template exists, and has been designated as the front matter template for the Agent collection. The template dictates the following fields:
+
+  - First Name: Text Field
+  - Last Name: Text Field
+  - Email: Text Field
+  - Highlights: Sortable List
+  - Avatar: Image / File Upload
+    ... ...
+  
+If I were to add an Agent to the collection (Agents -> Create New), I'd then see all of the fields above as options, and be able to enter data and upload files for each.
+
+The front matter template section should really only be used by devs. Adding fields here is pointless if you can't update the codebase to actually set the pages up to utilize these fields.
+
+If GroundSouce were to upgrade their Forestry account, I'd recommend hiding this section from non-devs.
+
+Note: Jankiness can sometimes happen when adding or removing fields for existing collections. For example, you might add a new field for the front matter template for `listing` but then not see it as a valid, editable field within the CMS itself. When this has happened in the past, I've directly edited
 the corresponding markdown file, and committed to `groundsource-dev`. Collection are included as folders at the root of the repo.
 
 ## Newsletter & Flyer
