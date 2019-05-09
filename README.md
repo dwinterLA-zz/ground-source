@@ -62,17 +62,19 @@ Front matter templates exist in Forestry, which allow you to easily add, remove,
 
 Go to `Site -> Front matter` (on left-nav) if you'd like to make a change to any of the existing templates. You can also add new templates on this page.
 
-Jankiness can sometimes happen when adding or removing fields for existing collections. For example, you might add a new field for the front matter template for `listing`, but then not see it as a valid, editable field within the CMS itself. When this has happened in the past, I've directly edited
-the corresponding markdown file, and committed to `groundsource-dev`. Every collection is included as a folder at the root of the repo. Within each collection folder, each item is represented by a markdown file. Example path for Listing number 3: `ground-source/_listings/3.md`.
+Jankiness can sometimes happen when adding or removing fields for existing collections. For example, you might add a new field for the front matter template for `listing` but then not see it as a valid, editable field within the CMS itself. When this has happened in the past, I've directly edited
+the corresponding markdown file, and committed to `groundsource-dev`. Collection are included as folders at the root of the repo.
 
 ## Newsletter & Flyer
 
 A 'newsletter' template was setup that utilizes the listing collection, meaning Jekyll generates a newsletter for each listing. You can
 access a listing's newsletter by visiting: `https://www.groundsource.net/listings/{LISTING_LABEL}/newsletter.html .
 
+The newsletter shares the same page data as `listing.html`. This has been made possible by the `jekyll-multipost` gem.
+
 The newsletter was intended to be hooked into Mailchimp (styling and markup is email-friendly), so there aren't any links to the newsletter from the website.
 
-To clarify some potential confusion: There's also a print layout on the `listing.html` page. The GroundSouce team often creates a PDF from the print layout and (manually) attaches this to emails. They usually refer to this as the 'flyer'. The flyer and newsletter contain mostly the same information, but
+Potential point of confusion: There's also a print layout on the `listing.html` page. The GroundSouce team often creates a PDF from the print layout and (manually) attaches this to emails. They usually refer to this as the 'flyer'. The flyer and newsletter contain mostly the same information, but
 are sourced from completely different HTML files.
 
 ## Google Maps API integration
@@ -84,7 +86,7 @@ newsletter: `groundsourcemailer@gmail.com`. To maintain these keys, login to the
 <a href="https://console.cloud.google.com/google/maps-apis/">Google Cloud Platform console</a> (then
 APIs -> Credentials).
 
-The same api key is used for the javascript api (used on the home and inner listing page)
+The api key is used for the javascript api (used on the home and inner listing page)
 as well as the static api (used on the email newsletter).
 
 To prevent abuse of our token, the refferer has been restricted to groundsource.net and localhost.
