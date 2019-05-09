@@ -10,19 +10,25 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 
 ## Running Locally
 
-1. Clone and `cd` into this repo.
-2. `git checkout groundsource-dev`. Consider `groundsource-dev` as the `master` branch for this project.
-3. Install the Jekyll and bundler ruby gems: `gem install jekyll bundler`.
-4. `bundle exec jekyll serve`.
-5. The website will be served here: `http://localhost:4000`.
+1. Clone and `cd` into this repo
+2. Install the Jekyll and bundler ruby gems: `gem install jekyll bundler`
+3. `bundle exec jekyll serve` (installs required ruby gems and starts the dev server)
+4. The website will be served here: `http://localhost:4000`
 
 ## Developing
 
-1. Branch off of `groundsource-dev`.
-2. When you create a pull request, remember to create it into `groundsource-dev`, not master!
-3. After you push the branch, Forestry will automatically detect any changes, build and deploy.
-  The deploy usually only takes a few minutes, but I've seen it take up to 30. You can check the status of the deploy
-  by logging into <a href="https://forestry.io/" target="_blank">Forestry.io</a>. There will be a spinner icon in the upper-left hand corner of the page if it's still working, or potentially an error message.
+1. Create a feature branch off of `master`
+2. When you're ready, create a pull request back into `master`
+
+## Deploying
+- The production branch for this project is: `groundsouce-dev`. A poor name for a production branch, but Forestry
+   doesn't allow us to change the deployment branch (yet... they're working on it).
+
+- Merge the latest `master` into `groundsource-dev`. Forestry will: A. Automatically detect that a change has been made to `groundsource-dev` B. Built the site, and commit the changes
+  to this Github Pages branch: `gh-pages-branch.
+
+- Within a few minutes, your changes should be live at `groundsource.net`. If not, logging into Forestry should illuminate any possible build errors.
+
 
 ## Managing Content
 
