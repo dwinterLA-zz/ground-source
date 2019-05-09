@@ -9,12 +9,12 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 <a href="https://forestry.io/" target="_blank">Forestry.io</a> has been setup as the CMS for the site.
 
 ## Developing
-1. Clone and `cd` into this repo
-2. Install the Jekyll and Bundler ruby gems: `gem install jekyll bundler`
-3. `bundle exec jekyll serve` (installs required ruby gems and starts the dev server)
-4. The website will be served here: `http://localhost:4000`
+1. Clone and `cd` into this repo.
+2. Install the Jekyll and Bundler ruby gems: `gem install jekyll bundler`.
+3. `bundle exec jekyll serve` (installs required ruby gems and starts the dev server).
+4. The website will be served here: `http://localhost:4000`.
 5. Create a feature branch off of `master`. Note: `groundsource-dev` and `gh-pages` branches are special (see below), so don't use either as your feature branch.
-6. When you're ready, create a pull request back into `master`
+6. When you're ready, create a pull request back into `master`.
 
 ## Deploying
 - The production branch for this project is: `groundsouce-dev`. A poor name for a production branch, but Forestry
