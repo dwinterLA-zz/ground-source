@@ -9,6 +9,9 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 <a href="https://forestry.io/" target="_blank">Forestry.io</a> has been setup as the CMS for the site.
 
 ## Developing
+Note: This project is using the Jekyll version 3.5.2 and was setup with Ruby version 2.3.
+You should have RVM installed. RVM will ensure that you're running the correct Ruby version (thanks to the .ruby-version file).
+
 1. Clone and `cd` into this repo.
 2. Install the Jekyll and Bundler ruby gems: `gem install jekyll bundler`.
 3. `bundle exec jekyll serve` (installs required ruby gems and starts the dev server).
@@ -22,7 +25,7 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 
 - Merge the latest `master` into `groundsource-dev`. Forestry will:
     - Automatically detect any changes made to `groundsource-dev`.
-    - Build the site and commit to the Github Pages branch: `gh-pages-branch`.
+    - Build the site and commit to the Github Pages branch: `gh-pages`.
 
 - Within a few minutes, your changes should be live at <a href="https://groundsource.net">groundsource.net</a>. If not, logging into Forestry should illuminate potential build errors (look for the status indicator at the top of the left navigation bar).
 
@@ -46,7 +49,7 @@ Jekyll has two main content concepts:
 > Collections are arrays of data that can be consumed on any page. Collections can also be setup so that an item in the collection maps to a specific page via the `layout` key in the front matter.
 > For example, the `Agents` collection is used on the `About` page like this: `{% for agent in site.agents %}`, while each `listing` within the `Listings` collection
   is the primary data used within the `listing.html` and `newsletter.html`.
-  
+
 > If you want to create a new collection, you'll need to add it to the `collections` list in `_config.yml`. You can read more about collections here: <a href="https://jekyllrb.com/docs/collections/">jekyll collections</a>.
 
 > Data (markdown files) for existing collections can be found at the root (left-hand navigation) menu within Forestry.
@@ -65,7 +68,7 @@ For example, an "agent" front matter template exists, and has been designated as
   - Highlights: Sortable List
   - Avatar: Image / File Upload
     ... ...
-  
+
 If I were to add an Agent to the collection (Agents -> Create New), I'd then see all of the fields above as options, and be able to enter data and upload files for each.
 
 The front matter template section should really only be used by devs. Adding fields here is pointless if you can't update the codebase to actually set the pages up to utilize these fields.
