@@ -28,7 +28,7 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
     - Automatically detect any changes made to `groundsource-dev`.
     - Built the site, and commit the build to the Github Pages branch: `gh-pages-branch`.
 
-- Within a few minutes, your changes should be live at `groundsource.net`. If not, logging into Forestry should illuminate any possible build errors.
+- Within a few minutes, your changes should be live at <a href="https://groundsource.net>groundsource.net</a>. If not, logging into Forestry should illuminate any possible build errors.
 
 
 ## Managing Content
