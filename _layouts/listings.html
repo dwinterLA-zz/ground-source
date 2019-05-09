@@ -63,11 +63,11 @@
 
           <div class="filters filters-state filters-state--list">
 
-            {% assign locations = site.listings |map: "address-line-2"| |uniq| %}
+            {% assign locations = site.listings | map: "address-line-2" | uniq %}
 
-            {% assign statuses = site.listings |map: "status"| |uniq| %}
+            {% assign statuses = site.listings | map: "status" | uniq %}
 
-            {% assign type = site.listings |map: "type"| |uniq| %}
+            {% assign type = site.listings | map: "type" | uniq %}
 
             <select
               id="location-filter"

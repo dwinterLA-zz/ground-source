@@ -8,8 +8,8 @@
     {% include header-links.html %}
     <script>
       var listingMapMeta = {
-        latitude: "{{ site.data.contact.latitude }}",
-        longitude: "{{ site.data.contact.longitude }}",
+        latitude: "{{ page.latitude }}",
+        longitude: "{{ page.longitude }}",
         apiKey: "{{ site.data.contact.googleMapsKey }}"
       }
     </script>
@@ -368,37 +368,34 @@
                 </div>
 
               </div>
+              <div class="info-box">
+                {% if page.latitude and page.longitude %}
 
-              {% if (page.latitude and page.longitude) or page.floorplans.size > 0 %}
-                <div class="info-box">
-                  {% if page.latitude and page.longitude %}
+                  <h2 class="title">
+                    LOCATION
+                  </h2>
 
-                    <h2 class="title">
-                      LOCATION
-                    </h2>
+                  <div id="listing-google-map"></div>
 
-                    <div id="listing-google-map"></div>
+                {% endif %}
 
-                  {% endif %}
+                {% if page.floorplans.size > 0 %}
 
-                  {% if page.floorplans.size > 0 %}
+                  <h2 class="title">
+                    FLOORPLAN{% if page.floorplans.size > 1 %}S{% endif %}
+                  </h2>
 
-                    <h2 class="title">
-                      FLOORPLAN{% if page.floorplans.size > 1 %}S{% endif %}
-                    </h2>
+                  {% for floorplan in page.floorplans %}
+                    <div class="floorplan">
+                      <img
+                        src="{{ floorplan }}"
+                        class="img-responsive"
+                      />
+                    </div>
+                  {% endfor %}
 
-                    {% for floorplan in page.floorplans %}
-                      <div class="floorplan">
-                        <img
-                          src="{{ floorplan }}"
-                          class="img-responsive"
-                        />
-                      </div>
-                    {% endfor %}
-
-                  {% endif %}
-                </div>
-              {% endif %}
+                {% endif %}
+              </div>
             </div>
 
           </div>
