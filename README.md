@@ -13,7 +13,7 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 2. Install the Jekyll and Bundler ruby gems: `gem install jekyll bundler`
 3. `bundle exec jekyll serve` (installs required ruby gems and starts the dev server)
 4. The website will be served here: `http://localhost:4000`
-5. Create a feature branch off of `master`. Note: `groundsource-dev` and `gh-pages` branches serve a special purpose, so don't use either of these for your feature branch.
+5. Create a feature branch off of `master`. Note: `groundsource-dev` and `gh-pages` branches are special (see below), so don't use either as your feature branch.
 6. When you're ready, create a pull request back into `master`
 
 ## Deploying
