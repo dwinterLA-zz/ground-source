@@ -117,13 +117,13 @@ If you need to update the Google script:
 2. Go to Drive, and click on `GroundSource - Request`
 3. Select `Tools -> Script Editor
 4. After you make your edits:
-  A. Publish -> Deploy as Web App
-  B. Under `Project Version`, select `New`
-  C. Make sure that `Execute the app as` = `Me`
-  D. Make sure that `Who has access to the app` = `Anyone, even anonymous`
-  E. Press `Update` .. you'll then be presented with a new app URL, copy it
-  F. Now, you need to update the `POST` url within this repository:
-    1. Within `formSubmit.js` you'll find this constant at the top of the file: `GOOGLE_WEB_APP_URL`,
+  - Publish -> Deploy as Web App
+  - Under `Project Version`, select `New`
+  - Make sure that `Execute the app as` = `Me`
+  - Make sure that `Who has access to the app` = `Anyone, even anonymous`
+  - Press `Update` .. you'll then be presented with a new app URL, copy it
+  - Now, you need to update the `POST` url within this repository:
+    - Within `formSubmit.js` you'll find this constant at the top of the file: `GOOGLE_WEB_APP_URL`,
        update it with the new URL that Google provided when you updated the script
 
 Note that if the mailer ever stops working, we may need to increment the version (steps 4A - 4E) and republish to
