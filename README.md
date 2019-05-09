@@ -24,8 +24,9 @@ We're using Jekyll's default templating language: <a href="https://shopify.githu
 - The production branch for this project is: `groundsouce-dev`. A poor name for a production branch, but Forestry
    doesn't allow us to change the deployment branch (yet... they're working on it).
 
-- Merge the latest `master` into `groundsource-dev`. Forestry will: A. Automatically detect that a change has been made to `groundsource-dev` B. Built the site, and commit the changes
-  to this Github Pages branch: `gh-pages-branch.
+- Merge the latest `master` into `groundsource-dev`. Forestry will:
+    - Automatically detect that a change has been made to `groundsource-dev`.
+    - Built the site, and commit the build to the Github Pages branch: `gh-pages-branch`.
 
 - Within a few minutes, your changes should be live at `groundsource.net`. If not, logging into Forestry should illuminate any possible build errors.
 
