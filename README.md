@@ -53,7 +53,7 @@ Jekyll has two main content concepts:
   
 > If you want to create a new collection, you'll need to add it to the `collections` list in `_config.yml`. You can read more about collections here: <a href="https://jekyllrb.com/docs/collections/">jekyll collections</a>.
 
-> Data (markdown files) for existing collections can by found at the root (left-hand navigation) menu within Forestry.
+> Data (markdown files) for existing collections can be found at the root (left-hand navigation) menu within Forestry.
 
 ## Front Matter
 
@@ -89,7 +89,7 @@ APIs -> Credentials).
 The api key is used for the javascript api (used on the home and inner listing page)
 as well as the static api (used on the email newsletter).
 
-To prevent abuse of our token, the refferer has been restricted to groundsource.net and localhost.
+To prevent abuse of our token, the referer has been restricted to groundsource.net and localhost.
 
 
 ## Site Data
@@ -103,7 +103,7 @@ Site data is accessible within the liquid templates in the following manner: `si
 
 ## The Contact Us form
 
-An interesting implementation. The form that's part of the 'Contat Us' modal makes a POST request to a Google script
+An interesting implementation. The form that's part of the 'Contact Us' modal makes a POST request to a Google script
 that is 'deployed as web app'.
 
 The script lives within this gmail account: `groundsourcemailer@gmail.com` . As of this writing, the script does two things:
