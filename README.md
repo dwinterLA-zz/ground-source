@@ -71,7 +71,7 @@ For example, an "agent" front matter template exists, and has been designated as
 
 If I were to add an Agent to the collection (Agents -> Create New), I'd then see all of the fields above as options, and be able to enter data and upload files for each.
 
-The front matter template section should really only be used by devs. Adding fields here is pointless if you can't update the codebase to actually set the pages up to utilize these fields.
+The front matter template section should really only be used by devs. Adding fields here is pointless if you can't update the codebase to utilize new or changed fields.
 
 If GroundSouce were to upgrade their Forestry account, I'd recommend hiding this section from non-devs.
 
