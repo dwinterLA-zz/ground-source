@@ -2080,14 +2080,17 @@ a {
     #container-listing .web .gallery .gallery-arrow-container {
       position: absolute;
       width: 19%;
+      min-width: 58px;
+      max-width: 72px;
       height: 17%;
+      min-height: 40px;
+      max-height: 45px;
       font-size: 0.5em;
       opacity: 0.88;
-      bottom: 3px;
-      right: 8px;
-      margin: 12px;
+      bottom: 6px;
+      right: 6px;
       border: solid;
-      border-width: 0.35em; }
+      border-width: 0.1rem; }
     #container-listing .web .gallery .gallery-navigation {
       position: absolute;
       cursor: pointer;
@@ -2104,12 +2107,12 @@ a {
       vertical-align: middle;
       z-index: 200; }
     #container-listing .web .gallery .gallery-arrow-right {
-      right: 27%;
+      right: 12px;
       -webkit-transform: translateY(-50%) rotate(-45deg);
               transform: translateY(-50%) rotate(-45deg);
       -ms-transform: translateY(-50%) rotate(-45deg); }
     #container-listing .web .gallery .gallery-arrow-left {
-      left: 27%;
+      left: 12px;
       top: 50%;
       -webkit-transform: translateY(-50%) rotate(135deg);
               transform: translateY(-50%) rotate(135deg);
