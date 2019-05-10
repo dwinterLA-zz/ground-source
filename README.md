@@ -73,8 +73,6 @@ If I were to add an Agent to the collection (Agents -> Create New), I'd then see
 
 The front matter template section should really only be used by devs. Adding fields here is pointless if you can't update the codebase to utilize new or changed fields.
 
-If GroundSouce were to upgrade their Forestry account, I'd recommend hiding this section from non-devs.
-
 Note: Jankiness can sometimes happen when adding or removing fields for existing collections. For example, you might add a new field for the front matter template for `listing` but then not see it as a valid, editable field within the CMS itself. When this has happened in the past, I've directly edited
 the corresponding markdown file, and committed to `groundsource-dev`. Collection are included as folders at the root of the repo.
 
