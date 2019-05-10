@@ -56,7 +56,7 @@ Jekyll has two main content concepts:
 
 ## Front Matter
 
-Front matter in Jekyll projects consist of a YAML block of variables at the top of content file (we use MD, but they can also be HTML). Essentially, these variables make up the context that will be available within your Liquid templates. Front matter also dictates which fields /options will be available for data entry within the CMS.
+Front matter in Jekyll projects consist of a YAML block of variables at the top of content files (we use MD, but they can also be HTML). Essentially, these variables make up the context that will be available within your Liquid templates. Front matter also dictates which fields /options will be available for data entry within the CMS.
 
 An admin section of Forestry (`Site -> Front matter` within the left navigation) gives us the ability to create "Front Matter Templates". These templates allow us to control the data that users of the CMS are able to upload for each page / collection.
 
