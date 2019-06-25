@@ -18,7 +18,7 @@ short_bio: Isaac Abginesaz, born and raised in Los Angeles, CA, graduated cum la
   and an emphasis in Real Estate Finance.
 avatar: "/images/GS_IsaacAbginesaz_Profile.jpg"
 date: '2019-03-12T01:38:18.000+00:00'
-phone: 310.444.6102
+phone: ''
 cell: 310.309.1479
 title: ''
 position: ''
