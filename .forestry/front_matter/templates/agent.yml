@@ -50,7 +50,6 @@ fields:
   description: Place the title of each listing you would like to be featured here
     (must match exactly).
 pages:
-- _agents/file.md
 - _agents/Isaac.md
 - _agents/Daniela.md
 - _agents/chris.md
