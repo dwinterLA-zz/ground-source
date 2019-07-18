@@ -17,6 +17,5 @@ full_bio: <span class="s1">Mark Dalton, born and raised in Rancho Palos Verdes, 
   Professionalism and top client service is Mark’s goal on every transaction.</span>
 position: ''
 featured_listings: []
-published: false
 
 ---
