@@ -1,7 +1,7 @@
 ---
 avatar: "/images/GS_MarkDalton_Profile.jpg"
-first_name: Mark
-last_name: Dalton
+first_name: MARK
+last_name: DALTON
 email: mdalton@groundsource.net
 phone: 310.444.6102
 cell: 310.947.9093
