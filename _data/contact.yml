@@ -1,8 +1,8 @@
 ---
-address: 11859 Wilshire, Suite 602, Los Angeles, CA 90025
-address1: 11859 Wilshire Blvd.
-address2: Suite 602
-address3: Los Angeles, CA 90025
+address: 2716 Ocean Park Boulevard, Suite 1005 Santa Monica, CA  90405
+address1: 2716 Ocean Park Boulevard
+address2: Suite 1005
+address3: Santa Monica, CA  90405
 email: ckeller@groundsource.net
 facebook: groundsourcela
 instagram: "@groundsourcela"
@@ -10,5 +10,5 @@ phone: 310-444-6100
 googleMapsKey: AIzaSyDoik8cTjwGcs2j51JGcicC61TBL7g2Iu0
 twitter: groundsourcela
 url: https://www.groundsource.net
-latitude: 34.047651
-longitude: -118.464022
+latitude: "34.047651"
+longitude: "-118.464022"
