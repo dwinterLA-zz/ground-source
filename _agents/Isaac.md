@@ -1,7 +1,7 @@
 ---
 avatar: "/images/img_5403.JPG"
-first_name: Isaac
-last_name: Abginesaz
+first_name: ISAAC
+last_name: ABGINESAZ
 email: iabginesaz@groundsource.net
 phone: ''
 cell: ''
