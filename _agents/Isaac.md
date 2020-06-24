@@ -20,6 +20,5 @@ full_bio: Isaac Abginesaz, born and raised in Los Angeles, CA, graduated cum lau
   degree while providing clients with incomparable professionalism and personal service.
 position: ''
 featured_listings: []
-published: false
 
 ---
