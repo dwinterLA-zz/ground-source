@@ -4,7 +4,7 @@ first_name: ISAAC
 last_name: ABGINESAZ
 email: iabginesaz@groundsource.net
 phone: ''
-cell: 310-309-1479
+cell: 310.309.1479
 title: ''
 short_bio: Isaac Abginesaz, born and raised in Los Angeles, CA, graduated cum laude
   from the University of Southern California with a B.S. in Business Administration
