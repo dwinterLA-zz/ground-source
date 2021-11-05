@@ -8,9 +8,7 @@ full_bio: Chris Keller has represented tenants and landlords in Los Angeles for 
 last_name: KELLER
 phone: 310.444.6100
 position: ''
-short_bio: Chris Keller has represented tenants and landlords in Los Angeles for over
-  19 years, between Madison Partners and Cushman and Wakefield, an international commercial
-  real estate firm.
+short_bio: Chris Keller has represented tenants and landlords in Los Angeles for over 20 years, both with Madison Partners and Cushman and Wakefield, an international commercial real estate firm.
 title: ''
 cell: 310.367.4336
 
