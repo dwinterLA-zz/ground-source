@@ -18,6 +18,5 @@ short_bio: Chris Keller has represented tenants and landlords in Los Angeles for
   commercial real estate firm.
 title: ''
 cell: 310.367.4336
-published: false
 
 ---
