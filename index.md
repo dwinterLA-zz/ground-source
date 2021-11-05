@@ -8,7 +8,7 @@ intro_paragraph: GROUNDSOURCE is a Los Angeles based full-service commercial rea
   clients. It’s about repeat clients. Therefore, Groundsource spends whatever time
   it takes to close the deal the right way. Good business is about a connection, not
   a commission, which is why Groundsource is by the client’s side from fact-finding
-  to lease execution to signing of a purchase and sale agreement .
+  to lease execution to signing of a purchase and sale agreement.
 investment_services_blurb: Market intelligence and personal relationships are the
   catalysts which drive investment service decisions. Groundsource provides in-depth
   investment advisory and capitalization strategies over a broad spectrum of property
