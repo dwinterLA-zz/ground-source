@@ -56,6 +56,5 @@ tennant_services_text: Effective tenant representation is based on experience an
   knowledge and at GROUNDSOURCE we know more about Los Angeles than anyone else --
   we know the market conditions, the infrastructures, comparable deals and the people
   who made them. This is our city.
+
 ---
-
-
